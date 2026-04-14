@@ -1,0 +1,7 @@
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/workspace.json
+__pycache__/
+*.pyc
+manifest/*.tmp
+manifest/content-manifest.json

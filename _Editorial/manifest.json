@@ -1,0 +1,2088 @@
+{
+  "total_notes": 124,
+  "domains": [
+    "00_Mapas",
+    "10_Fundamentos_e_Projeto",
+    "20_Baterias_e_Armazenamento",
+    "30_Energia_e_Conversao",
+    "40_Distribuicao_Protecao_e_Aterramento",
+    "50_Navegacao_Instrumentacao_e_Comunicacao",
+    "55_Iluminacao_e_Sinalizacao",
+    "60_Automacao_Conectividade_e_Monitoramento",
+    "70_Hidraulica_Climatizacao_e_Utilidades",
+    "80_Seguranca_e_Corrosao",
+    "90_Revisao_Manual"
+  ],
+  "notes": [
+    {
+      "title": "AIS (Automatic Identification System)",
+      "source_file": "AIS (Automatic Identification System) 33a19734f7fb81b4b75ffe1f6db19c78.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\AIS (Automatic Identification System).md",
+      "related_notes": [
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Alarme de Alagamento / Sensor de Porão",
+      "source_file": "ALARME DE ALAGAMENTO SENSOR DE PORÃO 33a19734f7fb81d2ba97e64f015d6859.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "component",
+      "path": "80_Seguranca_e_Corrosao\\Alarme de Alagamento - Sensor de Porão.md",
+      "related_notes": [
+        "Anôdo",
+        "Correntes Parasitas — Stray Currents",
+        "Detector de CO — Monóxido de Carbono",
+        "Detector de Gás GLP / GN",
+        "Eletrólise",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas",
+        "Bomba de Porão",
+        "Bússola Eletrônica (Compass / HDG Sensor)"
+      ]
+    },
+    {
+      "title": "Alternador (DC)",
+      "source_file": "ALTERNADOR (DC) e2819734f7fb8224ab728189f1ab5518.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "component",
+      "path": "30_Energia_e_Conversao\\Alternador (DC).md",
+      "related_notes": [
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Anôdo",
+      "source_file": "ANÔDO 8e019734f7fb829abd3e01f8fcef8de0.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Anôdo.md",
+      "related_notes": [
+        "Alarme de Alagamento / Sensor de Porão",
+        "Correntes Parasitas — Stray Currents",
+        "Detector de CO — Monóxido de Carbono",
+        "Detector de Gás GLP / GN",
+        "Eletrólise",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+      ]
+    },
+    {
+      "title": "Aquecedor de Bordo / Cabin Heater",
+      "source_file": "AQUECEDOR DE BORDO CABIN HEATER 33a19734f7fb8137aacfe93747ded890.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Aquecedor de Bordo - Cabin Heater.md",
+      "related_notes": [
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada"
+      ]
+    },
+    {
+      "title": "Ar-Condicionado Marine — Sistema Completo",
+      "source_file": "AR-CONDICIONADO MARINE — SISTEMA COMPLETO 33a19734f7fb81b6b5b9e1055d981535.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "system",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Ar-Condicionado Marine — Sistema Completo.md",
+      "related_notes": [
+        "Bomba Ar Condicionado",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada"
+      ]
+    },
+    {
+      "title": "Arranque",
+      "source_file": "ARRANQUE 26519734f7fb8343900c015a28ddc9c8.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Arranque.md",
+      "related_notes": [
+        "Alternador (DC)",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Aterramento",
+      "source_file": "ATERRAMENTO 62019734f7fb83ed822d818740bfe4cb.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Aterramento.md",
+      "related_notes": [
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Atuador Linear",
+      "source_file": "ATUADOR LINEAR 5a319734f7fb8392ad8b81db5fd17f98.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "technical-note",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Atuador Linear.md",
+      "related_notes": [
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "Automação de Bordo — Sistemas Domoticos",
+      "source_file": "AUTOMAÇÃO DE BORDO — SISTEMAS DOMOTICOS 33a19734f7fb81b99e7fcd10258cd8f3.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Automação de Bordo — Sistemas Domoticos.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "BMS — Battery Management System",
+      "source_file": "BMS — BATTERY MANAGEMENT SYSTEM 33a19734f7fb81519181fa235e718c78.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "technical-note",
+      "path": "20_Baterias_e_Armazenamento\\BMS — Battery Management System.md",
+      "related_notes": [
+        "Bancos de Bateria",
+        "Carregador de Bateria (AC To DC)",
+        "Lítio LiFePO4 — Instalação e Cuidados Específicos",
+        "Monitor de Bateria / BMV / Shunt",
+        "Tipos de Bateria",
+        "AIS (Automatic Identification System)"
+      ]
+    },
+    {
+      "title": "Bancos de Bateria",
+      "source_file": "BANCOS DE BATERIA 8ec19734f7fb83e584780174466db4de.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "technical-note",
+      "path": "20_Baterias_e_Armazenamento\\Bancos de Bateria.md",
+      "related_notes": [
+        "Carregador de Bateria (AC To DC)",
+        "Monitor de Bateria / BMV / Shunt",
+        "Tipos de Bateria",
+        "BMS — Battery Management System",
+        "Lítio LiFePO4 — Instalação e Cuidados Específicos"
+      ]
+    },
+    {
+      "title": "Barramento DC / Bus Bar / Distribuição DC",
+      "source_file": "BARRAMENTO DC BUS BAR DISTRIBUIÇÃO DC 33a19734f7fb8164a172ccbe349aec67.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Barramento DC - Bus Bar - Distribuição DC.md",
+      "related_notes": [
+        "Quadro Elétrico e Painel de Distribuição AC/DC",
+        "Aterramento",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Blower",
+      "source_file": "BLOWER f1f19734f7fb822596ae81cfdf33b3bd.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Blower.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada"
+      ]
+    },
+    {
+      "title": "Boiler",
+      "source_file": "BOILER 7ae19734f7fb8302934f01801d82dbdd.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Boiler.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada"
+      ]
+    },
+    {
+      "title": "Bomba Ar Condicionado",
+      "source_file": "BOMBA AR CONDICIONADO 1c019734f7fb832497ea815983a848a7.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Bomba Ar Condicionado.md",
+      "related_notes": [
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Bomba de Águas Negras",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada",
+        "Macerador / Bomba de Águas Negras",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Blower"
+      ]
+    },
+    {
+      "title": "Bomba de Banheiro",
+      "source_file": "BOMBA DE BANHEIRO 3c119734f7fb8338ace3811fef114aba.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Bomba de Banheiro.md",
+      "related_notes": [
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada",
+        "Macerador / Bomba de Águas Negras",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower"
+      ]
+    },
+    {
+      "title": "Bomba de Porão",
+      "source_file": "BOMBA DE PORÃO b2a19734f7fb83d69a14810e202c2c13.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Bomba de Porão.md",
+      "related_notes": [
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Água Pressurizada",
+        "Macerador / Bomba de Águas Negras",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower"
+      ]
+    },
+    {
+      "title": "Bomba de Água Pressurizada",
+      "source_file": "BOMBA DE ÁGUA PRESSURIZADA 48019734f7fb8270a54301056798e713.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Bomba de Água Pressurizada.md",
+      "related_notes": [
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Caixa de Água Cinza",
+        "Macerador / Bomba de Águas Negras",
+        "Sensor de Nível de Água",
+        "Aquecedor de Bordo / Cabin Heater"
+      ]
+    },
+    {
+      "title": "Bomba de Águas Negras",
+      "source_file": "BOMBA AGUAS NEGRAS 83d19734f7fb8231a914819660234052.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Bomba de Águas Negras.md",
+      "related_notes": [
+        "Macerador / Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower"
+      ]
+    },
+    {
+      "title": "Bonding — Sistema de Interligação de Massas",
+      "source_file": "BONDING — SISTEMA DE INTERLIGAÇÃO DE MASSAS 33a19734f7fb81549c39cdaf6dffb20e.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "system",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Bonding — Sistema de Interligação de Massas.md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Buzina",
+      "source_file": "BUZINA e2519734f7fb835c88cc01ee230c806c.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Buzina.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Bússola Eletrônica (Compass / HDG Sensor)",
+      "source_file": "BÚÓSSOLA ELETRÔNICA — COMPASS E HDG SENSOR 33a19734f7fb816c96d9ced8bfaa4859.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "component",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Bússola Eletrônica (Compass - HDG Sensor).md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "CAIS (Pier) (AC)",
+      "source_file": "CAIS (Pier) (AC) 55219734f7fb834ab92701fecab7a7cb.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "system",
+      "path": "30_Energia_e_Conversao\\CAIS (Pier) (AC).md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Cabeamento Náutico",
+      "source_file": "CABEAMENTO NÁUTICO 33a19734f7fb81a3b4a1c4138078865d.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Cabeamento Náutico.md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Caixa de Água Cinza",
+      "source_file": "CAIXA DE ÁGUA CINZA f6d19734f7fb830884560187fddd7783.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Caixa de Água Cinza.md",
+      "related_notes": [
+        "Bomba de Água Pressurizada",
+        "Sensor de Nível de Água",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado"
+      ]
+    },
+    {
+      "title": "Carregador Elétrico para Tender e Jet Ski",
+      "source_file": "CARREGADOR ELÉTRICO PARA TENDER E JET SKI 33a19734f7fb81feb64fd2ae38481430.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Carregador Elétrico para Tender e Jet Ski.md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Carregador de Bateria (AC To DC)",
+      "source_file": "CARREGADOR DE BATERIA (AC to DC) 64e19734f7fb83f6879701f63709d32e.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "technical-note",
+      "path": "20_Baterias_e_Armazenamento\\Carregador de Bateria (AC To DC).md",
+      "related_notes": [
+        "Bancos de Bateria",
+        "Monitor de Bateria / BMV / Shunt",
+        "Tipos de Bateria",
+        "BMS — Battery Management System",
+        "Lítio LiFePO4 — Instalação e Cuidados Específicos",
+        "Carregador Elétrico para Tender e Jet Ski"
+      ]
+    },
+    {
+      "title": "Casa de Máquinas e Paiol",
+      "source_file": "CASA DE MÁQUINAS E PAIOL fe919734f7fb835a8d728197805a7f96.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Casa de Máquinas e Paiol.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Catraca",
+      "source_file": "CATRACA 93e19734f7fb835188a50199d626ca56.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Catraca.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Chartplotter / GPS / MFD",
+      "source_file": "CHARTPLOTTER GPS MFD 33a19734f7fb8115a2f3e1a2bef2f5e6.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Chartplotter - GPS - MFD.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Chaves Gerais (DC)",
+      "source_file": "CHAVES GERAIS (DC) 15919734f7fb834fbeda01362553ce8a.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Chaves Gerais (DC).md",
+      "related_notes": [
+        "Chaves Seletoras (AC)",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Chaves Seletoras (AC)",
+      "source_file": "CHAVES SELETORAS (AC) 2c919734f7fb83078ff601354dc25bca.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Chaves Seletoras (AC).md",
+      "related_notes": [
+        "Chaves Gerais (DC)",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Contatores (AC)",
+      "source_file": "CONTATORES (AC) f0f19734f7fb820895d40138dc40c1ac.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Contatores (AC).md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Disjuntores (DC) e (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Correntes Parasitas — Stray Currents",
+      "source_file": "CORRENTES PARASITAS — STRAY CURRENTS 33a19734f7fb8174be22f7de6a4170ba.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Correntes Parasitas — Stray Currents.md",
+      "related_notes": [
+        "Alarme de Alagamento / Sensor de Porão",
+        "Anôdo",
+        "Detector de CO — Monóxido de Carbono",
+        "Detector de Gás GLP / GN",
+        "Eletrólise",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+      ]
+    },
+    {
+      "title": "Câmeras de Bordo / Sistema CFTV",
+      "source_file": "CÂMERAS DE BORDO SISTEMA CFTV 33a19734f7fb813ebf9ece9616f73405.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Câmeras de Bordo - Sistema CFTV.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "DC vs AC — Corrente Contínua e Alternada",
+      "source_file": "DC vs AC — CORRENTE CONTÍNUA E ALTERNADA 33a19734f7fb81538f02d8f3158c915f.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "comparison",
+      "path": "10_Fundamentos_e_Projeto\\DC vs AC — Corrente Contínua e Alternada.md",
+      "related_notes": [
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Davit / Munk / Guindaste de Bote / Tender Lift",
+      "source_file": "DAVIT MUNK GUINDASTE DE BOTE TENDER LIFT 33a19734f7fb8192a27ff7744a3de000.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Davit - Munk - Guindaste de Bote - Tender Lift.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Dessanilizador",
+      "source_file": "DESSANILIZADOR 2d619734f7fb83b290ce8195a3c4da0c.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Dessanilizador.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Detector de CO — Monóxido de Carbono",
+      "source_file": "DETECTOR DE CO — MONÓXIDO DE CARBONO 33a19734f7fb8179a514c1c8f11fd5f3.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Detector de CO — Monóxido de Carbono.md",
+      "related_notes": [
+        "Detector de Gás GLP / GN",
+        "Alarme de Alagamento / Sensor de Porão",
+        "Anôdo",
+        "Correntes Parasitas — Stray Currents",
+        "Eletrólise",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+      ]
+    },
+    {
+      "title": "Detector de Gás GLP / GN",
+      "source_file": "DETECTOR DE GÁS GLP GN 33a19734f7fb81b6bb99f3cffadae2fe.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Detector de Gás GLP - GN.md",
+      "related_notes": [
+        "Detector de CO — Monóxido de Carbono",
+        "Alarme de Alagamento / Sensor de Porão",
+        "Anôdo",
+        "Correntes Parasitas — Stray Currents",
+        "Eletrólise",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+      ]
+    },
+    {
+      "title": "Diagrama Unifilar — Documentação do Sistema Elétrico",
+      "source_file": "DIAGRAMA UNIFILAR — DOCUMENTAÇÃO DO SISTEMA ELÉTRI 33a19734f7fb814699bceccc90b97d43.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "system",
+      "path": "10_Fundamentos_e_Projeto\\Diagrama Unifilar — Documentação do Sistema Elétrico.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+      "source_file": "DIMENSIONAMENTO DE BANCO DE BATERIAS — CÁLCULO DE  33a19734f7fb8174ba99e27e7b0fef11.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md",
+      "related_notes": [
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Dimensionamento de Cabos DC — Cálculo Prático",
+      "source_file": "DIMENSIONAMENTO DE CABOS DC — CÁLCULO PRÁTICO 33a19734f7fb81c3b67dd86f9382f27a.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Dimensionamento de Cabos DC — Cálculo Prático.md",
+      "related_notes": [
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Inspeção de Cabos Terminais e Conexões",
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Dimmer — Controle de Intensidade Luminosa",
+      "source_file": "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA 33a19734f7fb810197b3d469666bb573.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Dimmer — Controle de Intensidade Luminosa.md",
+      "related_notes": [
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto",
+        "Strobo"
+      ]
+    },
+    {
+      "title": "Disjuntores (DC) e (AC)",
+      "source_file": "DISJUNTORES (DC) e (AC) 61f19734f7fb820eb39881eaf8483db4.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Disjuntores (DC) e (AC).md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Divisores de Carga (DC)"
+      ]
+    },
+    {
+      "title": "Divisores de Carga (DC)",
+      "source_file": "DIVISORES DE CARGA (DC) 2f419734f7fb831cad5d81f3bc9880ae.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Divisores de Carga (DC).md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Dsc — Chamada Seletiva Digital",
+      "source_file": "DSC — CHAMADA SELETIVA DIGITAL 33a19734f7fb81b9a8a4c4bd78298cb7.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Dsc — Chamada Seletiva Digital.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "EPIRB / Beacon de Emergência",
+      "source_file": "EPIRB BEACON DE EMERGÊNCIA 33a19734f7fb81379431eaec13b474b3.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\EPIRB - Beacon de Emergência.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Eletrólise",
+      "source_file": "ELETRÓLISE bb819734f7fb8373bf6e01246ab6177a.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Eletrólise.md",
+      "related_notes": [
+        "Alarme de Alagamento / Sensor de Porão",
+        "Anôdo",
+        "Correntes Parasitas — Stray Currents",
+        "Detector de CO — Monóxido de Carbono",
+        "Detector de Gás GLP / GN",
+        "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+      ]
+    },
+    {
+      "title": "Estabilizador",
+      "source_file": "ESTABILIZADOR bed19734f7fb83f5b4ae011fe6302611.md",
+      "domain": "90_Revisao_Manual",
+      "note_type": "technical-note",
+      "path": "90_Revisao_Manual\\Estabilizador.md",
+      "related_notes": [
+        "Motor de Trim / Tilt"
+      ]
+    },
+    {
+      "title": "Estação de Vento / Anemômetro",
+      "source_file": "ESTAÇÃO DE VENTO ANEMÔMETRO 33a19734f7fb81259cdac88a695c2ae9.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Estação de Vento - Anemômetro.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Mob — Man Overboard — Sistema de Detecção",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Extintor Automático — Combate a Incêndio na Casa de Máquinas",
+      "source_file": "EXTINTOR AUTOMÁTICO — COMBATE A INCÊNCIO NA CASA D 33a19734f7fb819ca540d12e729e7ba5.md",
+      "domain": "80_Seguranca_e_Corrosao",
+      "note_type": "technical-note",
+      "path": "80_Seguranca_e_Corrosao\\Extintor Automático — Combate a Incêndio na Casa de Máquinas.md",
+      "related_notes": [
+        "Alarme de Alagamento / Sensor de Porão",
+        "Anôdo",
+        "Casa de Máquinas e Paiol",
+        "Correntes Parasitas — Stray Currents",
+        "Detector de CO — Monóxido de Carbono",
+        "Detector de Gás GLP / GN",
+        "Eletrólise",
+        "Piloto Automático"
+      ]
+    },
+    {
+      "title": "Eólico (DC)",
+      "source_file": "EÓLICO (DC) d0b19734f7fb8218b70581ee7f081bf3.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Eólico (DC).md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Farol de Busca",
+      "source_file": "FAROL DE BUSCA bfe19734f7fb83b9becc01589acd8157.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Farol de Busca.md",
+      "related_notes": [
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto",
+        "Strobo"
+      ]
+    },
+    {
+      "title": "Fase e Neutro",
+      "source_file": "FASE E NEUTRO 3fc19734f7fb8307932d81f9a93b33b1.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Fase e Neutro.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Ferramentas do Eletricista Náutico",
+      "source_file": "FERRAMENTAS DO ELETRICISTA NÁUTICO 33a19734f7fb810589f5fdbf4d8ad1f1.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Ferramentas do Eletricista Náutico.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Fitas Led / Iluminação Led",
+      "source_file": "FITAS LED ILUMINAÇÃO LED 33a19734f7fb81b0bd85fc67c4d8583e.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Fitas Led - Iluminação Led.md",
+      "related_notes": [
+        "Iluminação de Emergência a Bordo",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto",
+        "Strobo"
+      ]
+    },
+    {
+      "title": "Flap",
+      "source_file": "FLAP 2de19734f7fb827a83150176909e81e1.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Flap.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Fogão / Cooktop Elétrico / Galley",
+      "source_file": "FOGÃO COOKTOP ELÉTRICO GALLEY 33a19734f7fb81db8d6bec194f4692f3.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Fogão - Cooktop Elétrico - Galley.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Fundamentos da Elétrica Náutica",
+      "source_file": "FUNDAMENTOS DA ELETRICA NÁUTICA 1e419734f7fb80f9abe4d621dcf45570.md",
+      "domain": "00_Mapas",
+      "note_type": "moc",
+      "path": "00_Mapas\\Fundamentos da Elétrica Náutica.md",
+      "related_notes": [
+        "Tipos de Embarcação",
+        "Princípios Náuticos",
+        "Fase e Neutro",
+        "Cabeamento Náutico",
+        "Terminais Conectores e Emendas",
+        "Fusíveis DC — Proteção Contra Sobrecorrente",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Dimensionamento de Cabos DC — Cálculo Prático"
+      ]
+    },
+    {
+      "title": "Fusíveis DC — Proteção Contra Sobrecorrente",
+      "source_file": "FUSÍVEIS DC — PROTEÇÃO CONTRA SOBRECORRENTE 33a19734f7fb816a9ebde48e6f0a601e.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Fusíveis DC — Proteção Contra Sobrecorrente.md",
+      "related_notes": [
+        "Proteção Dr",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)"
+      ]
+    },
+    {
+      "title": "Geladeira / Freezer de Bordo",
+      "source_file": "GELADEIRA FREEZER DE BORDO 33a19734f7fb81f0887cfa7b6b50fe31.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Geladeira - Freezer de Bordo.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Gerador (AC)",
+      "source_file": "GERADOR (AC) 0ee19734f7fb82d89da2817e8a73a815.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "component",
+      "path": "30_Energia_e_Conversao\\Gerador (AC).md",
+      "related_notes": [
+        "Gerador (DC)",
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Gerador (DC)",
+      "source_file": "GERADOR (DC) eb219734f7fb83f0a13481295cd5c8f6.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "component",
+      "path": "30_Energia_e_Conversao\\Gerador (DC).md",
+      "related_notes": [
+        "Gerador (AC)",
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Inversora (DC To AC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Guincho",
+      "source_file": "GUINCHO 50f19734f7fb8338bcfd819cb7823229.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Guincho.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Holding Tank / Y-Valve / Sistema de Esgoto",
+      "source_file": "HOLDING TANK Y-VALVE SISTEMA DE ESGOTO 33a19734f7fb813fad8afd530f1f59aa.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "system",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Holding Tank - Y-Valve - Sistema de Esgoto.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Hotline (DC)",
+      "source_file": "HOTLINE (DC) 77f19734f7fb83e99276817165e87b28.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Hotline (DC).md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Icemaker / Máquina de Gelo",
+      "source_file": "ICEMAKER MÁQUINA DE GELO 33a19734f7fb81df9a98d1565b2937ad.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Icemaker - Máquina de Gelo.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Iluminação de Emergência a Bordo",
+      "source_file": "ILUMINAÇÃO DE EMERGÊNCIA A BORDO 33a19734f7fb8168b037e6556cf0b429.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Iluminação de Emergência a Bordo.md",
+      "related_notes": [
+        "Fitas Led / Iluminação Led",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto",
+        "Strobo"
+      ]
+    },
+    {
+      "title": "Inspeção de Cabos Terminais e Conexões",
+      "source_file": "INSPEÇÃO DE CABOS, TERMINAIS E CONEXÕES 33a19734f7fb818d95e7d8deb70ff9fb.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Inspeção de Cabos Terminais e Conexões.md",
+      "related_notes": [
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Lei de Ohm e Cálculos Básicos",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Interfone / Intercomunicador de Bordo",
+      "source_file": "INTERFONE INTERCOMUNICADOR DE BORDO 33a19734f7fb8108897aec76ca245eb2.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "technical-note",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Interfone - Intercomunicador de Bordo.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "Inversora (DC To AC)",
+      "source_file": "INVERSORA (DC to AC) 8ed19734f7fb836b85828192050b797a.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Inversora (DC To AC).md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Placa Solar (DC)"
+      ]
+    },
+    {
+      "title": "Isolador Galvânico / Transformador de Isolamento",
+      "source_file": "ISOLADOR GALVÂNICO TRANSFORMADOR DE ISOLAMENTO 33a19734f7fb810cb2dcc0a14fa26dbf.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Isolador Galvânico - Transformador de Isolamento.md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Lei de Ohm e Cálculos Básicos",
+      "source_file": "LEI DE OHM E CÁLCULOS BÁSICOS 33a19734f7fb81fbad36ddc9b762e6c4.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Lei de Ohm e Cálculos Básicos.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Leitura de Diagramas e Esquemas Elétricos"
+      ]
+    },
+    {
+      "title": "Leitura de Diagramas e Esquemas Elétricos",
+      "source_file": "LEITURA DE DIAGRAMAS E ESQUEMAS ELÉTRICOS 33a19734f7fb8102b2d8c94af4ea53f0.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Leitura de Diagramas e Esquemas Elétricos.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Limpador de Parabrisas",
+      "source_file": "LIMPADOR DE PARABRISAS 9f419734f7fb83199e2301a78b4b5d06.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Limpador de Parabrisas.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Linha Leve (AC)",
+      "source_file": "LINHA LEVE (AC) f9e19734f7fb82ebb08a01bde9cf45c6.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "system",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Linha Leve (AC).md",
+      "related_notes": [
+        "Linha Pesada (AC)",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)"
+      ]
+    },
+    {
+      "title": "Linha Pesada (AC)",
+      "source_file": "LINHA PESADA (AC) 6bd19734f7fb836e818f01ed1f949d26.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "system",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Linha Pesada (AC).md",
+      "related_notes": [
+        "Linha Leve (AC)",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)"
+      ]
+    },
+    {
+      "title": "Luz Subaquática",
+      "source_file": "LUZ SUBAQUÁTICA d7619734f7fb8311ae0381f72aa1a0c6.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Luz Subaquática.md",
+      "related_notes": [
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz de Tope",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "Luz de Cortesia",
+      "source_file": "LUZ DE CORTESIA 94a19734f7fb82e28ec081bd42c05b94.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Luz de Cortesia.md",
+      "related_notes": [
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luz de Tope",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "Luz de Tope",
+      "source_file": "TOP 95519734f7fb82f593528121a72dcb4e.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Luz de Tope.md",
+      "related_notes": [
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "Luz de Âncora",
+      "source_file": "LUZ DE ÂNCORA 33a19734f7fb818c86f5f3596e5f9406.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Luz de Âncora.md",
+      "related_notes": [
+        "Luz de Cortesia",
+        "Luz Subaquática",
+        "Luz de Tope",
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "Luzes Internas Teto",
+      "source_file": "LUZES INTERNAS TETO c6b19734f7fb82d381578190ac1f6cec.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Luzes Internas Teto.md",
+      "related_notes": [
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Strobo"
+      ]
+    },
+    {
+      "title": "Lítio LiFePO4 — Instalação e Cuidados Específicos",
+      "source_file": "LÍTIO LiFePO4 — INSTALAÇÃO E CUIDADOS ESPECÍFICOS 33a19734f7fb8100a5ade14e95f2692c.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "technical-note",
+      "path": "20_Baterias_e_Armazenamento\\Lítio LiFePO4 — Instalação e Cuidados Específicos.md",
+      "related_notes": [
+        "Bancos de Bateria",
+        "BMS — Battery Management System",
+        "Carregador de Bateria (AC To DC)",
+        "Monitor de Bateria / BMV / Shunt",
+        "Tipos de Bateria"
+      ]
+    },
+    {
+      "title": "Macerador / Bomba de Águas Negras",
+      "source_file": "MACERADOR BOMBA DE ÁGUAS NEGRAS 33a19734f7fb81719839dbb919586c46.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Macerador - Bomba de Águas Negras.md",
+      "related_notes": [
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão",
+        "Bomba de Água Pressurizada",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower"
+      ]
+    },
+    {
+      "title": "Manutenção Preventiva Elétrica — Checklist",
+      "source_file": "MANUTENÇÃO PREVENTIVA ELÉTRICA — CHECKLIST 33a19734f7fb81558880deebb96480b7.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Manutenção Preventiva Elétrica — Checklist.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Mob — Man Overboard — Sistema de Detecção",
+      "source_file": "MOB — MAN OVERBOARD — SISTEMA DE DETECÇÃO 33a19734f7fb81db8ef6d25c8985db66.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "system",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Mob — Man Overboard — Sistema de Detecção.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "NAVEGAÇÃO (BB, BE e Alcançado)"
+      ]
+    },
+    {
+      "title": "Monitor de Bateria / BMV / Shunt",
+      "source_file": "MONITOR DE BATERIA BMV SHUNT 33a19734f7fb81f68a94d4b415eafa95.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "technical-note",
+      "path": "20_Baterias_e_Armazenamento\\Monitor de Bateria - BMV - Shunt.md",
+      "related_notes": [
+        "Bancos de Bateria",
+        "Carregador de Bateria (AC To DC)",
+        "Tipos de Bateria",
+        "BMS — Battery Management System",
+        "Lítio LiFePO4 — Instalação e Cuidados Específicos"
+      ]
+    },
+    {
+      "title": "Monitoramento Remoto — VRM / Telemetria",
+      "source_file": "MONITORAMENTO REMOTO — VRM TELEMETRIA 33a19734f7fb8100b1c2cbedc98aedd6.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Monitoramento Remoto — VRM - Telemetria.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "Motor de Trim / Tilt",
+      "source_file": "MOTOR DE TRIM TILT 33a19734f7fb81b5b54bd17895f75160.md",
+      "domain": "90_Revisao_Manual",
+      "note_type": "technical-note",
+      "path": "90_Revisao_Manual\\Motor de Trim - Tilt.md",
+      "related_notes": [
+        "Estabilizador"
+      ]
+    },
+    {
+      "title": "Multímetro e Instrumentos de Medição",
+      "source_file": "MULTÍMETRO E INSTRUMENTOS DE MEDIÇÃO 33a19734f7fb811e9400c7b0f34bc486.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Multímetro e Instrumentos de Medição.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "NAVEGAÇÃO (BB, BE e Alcançado)",
+      "source_file": "NAVEGAÇÃO (BB, BE e Alcançado) ff119734f7fb8264ba9b01e36f23d896.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\NAVEGAÇÃO (BB, BE e Alcançado).md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "NMEA 2000 / NMEA 0183 — Rede de Instrumentos",
+      "source_file": "NMEA 2000 NMEA 0183 — REDE DE INSTRUMENTOS 33a19734f7fb81769c8be9e14765b8fc.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "system",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "Normas e Regulamentações — Abyc Iso e Brasil",
+      "source_file": "NORMAS E REGULAMENTAÇÕES — ABYC, ISO E BRASIL 33a19734f7fb81cb8e17dd284ca1cc01.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "reference",
+      "path": "10_Fundamentos_e_Projeto\\Normas e Regulamentações — Abyc Iso e Brasil.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Piloto Automático",
+      "source_file": "PILOTO AUTOMÁTICO 4b019734f7fb826ebeac810548e8c64d.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Piloto Automático.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "Placa Solar (DC)",
+      "source_file": "PLACA SOLAR (DC) 16b19734f7fb82709b9501e9ac1e1bca.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Placa Solar (DC).md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)"
+      ]
+    },
+    {
+      "title": "Plataforma de Popa Elétrica / Hidráulica",
+      "source_file": "PLATAFORMA DE POPA ELÉTRICA HIDRÁULICA 33a19734f7fb81d0bc2dffd34c19a0c3.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Plataforma de Popa Elétrica - Hidráulica.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Princípios Náuticos",
+      "source_file": "PRINCIPIOS NÁUTICOS d5819734f7fb834ea646019aef919ea7.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Princípios Náuticos.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Projeto Elétrico de Embarcação — Passo a Passo",
+      "source_file": "PROJETO ELÉTRICO DE EMBARCAÇÃO — PASSO A PASSO 33a19734f7fb816c9ebbcc180815b545.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Projeto Elétrico de Embarcação — Passo a Passo.md",
+      "related_notes": [
+        "Tipos de Embarcação",
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões"
+      ]
+    },
+    {
+      "title": "Proteção Dr",
+      "source_file": "PROTEÇÃO DR 6f319734f7fb82f6b80301582816022e.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Proteção Dr.md",
+      "related_notes": [
+        "Fusíveis DC — Proteção Contra Sobrecorrente",
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)"
+      ]
+    },
+    {
+      "title": "Quadro Elétrico e Painel de Distribuição AC/DC",
+      "source_file": "QUADRO ELÉTRICO E PAINEL DE DISTRIBUIÇÃO AC DC 33a19734f7fb815e8b53fe1822f110f6.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "system",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Quadro Elétrico e Painel de Distribuição AC-DC.md",
+      "related_notes": [
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Aterramento",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Radar",
+      "source_file": "RADAR 0f919734f7fb83d4a90e81c518fd4608.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Radar.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "Relés e Relés de Estado Sólido",
+      "source_file": "RELÉS E RELÉS DE ESTADO SÓLIDO 33a19734f7fb81488f55fb058be47993.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Relés e Relés de Estado Sólido.md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Sensor de Nível Diesel",
+      "source_file": "SENSOR DE NIVEL DIESEL 01a19734f7fb82dc8094811f3a4f0d01.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "component",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Sensor de Nível Diesel.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível de Água",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som"
+      ]
+    },
+    {
+      "title": "Sensor de Nível de Água",
+      "source_file": "SENSOR DE NIVEL ÁGUA fbf19734f7fb83aeb875017afe071612.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "component",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Sensor de Nível de Água.md",
+      "related_notes": [
+        "Bomba de Água Pressurizada",
+        "Caixa de Água Cinza",
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado"
+      ]
+    },
+    {
+      "title": "Simbologia Elétrica Náutica",
+      "source_file": "SIMBOLOGIA ELÉTRICA NÁUTICA 33a19734f7fb81fbbb62e50e4f846193.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "reference",
+      "path": "10_Fundamentos_e_Projeto\\Simbologia Elétrica Náutica.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Sistema de Alarme Geral / Painel de Alarmes",
+      "source_file": "SISTEMA DE ALARME GERAL PAINEL DE ALARMES 33a19734f7fb810dbdc9de9bba0f7e8f.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Sistema de Alarme Geral - Painel de Alarmes.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Som",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "Som",
+      "source_file": "SOM 99519734f7fb82afa0ef81e230098bb2.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "technical-note",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Som.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Starlink / Internet a Bordo"
+      ]
+    },
+    {
+      "title": "Sonda / Profundímetro / Sonar",
+      "source_file": "SONDA PROFUNDÍMETRO SONAR 33a19734f7fb8168ae2befc62906f0a7.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\Sonda - Profundímetro - Sonar.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "Starlink / Internet a Bordo",
+      "source_file": "STARLINK INTERNET A BORDO 33a19734f7fb81018482d2332b9c9d34.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Starlink - Internet a Bordo.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som"
+      ]
+    },
+    {
+      "title": "Strobo",
+      "source_file": "STROBO 83119734f7fb83029a960199efae621e.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "technical-note",
+      "path": "55_Iluminacao_e_Sinalizacao\\Strobo.md",
+      "related_notes": [
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "TV a Bordo / Entretenimento",
+      "source_file": "TV A BORDO ENTRETENIMENTO 33a19734f7fb810d8cd4c12edad5eef8.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "technical-note",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\TV a Bordo - Entretenimento.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som"
+      ]
+    },
+    {
+      "title": "Terminais Conectores e Emendas",
+      "source_file": "TERMINAIS, CONECTORES E EMENDAS 33a19734f7fb81518ee3f81d505d0439.md",
+      "domain": "40_Distribuicao_Protecao_e_Aterramento",
+      "note_type": "technical-note",
+      "path": "40_Distribuicao_Protecao_e_Aterramento\\Terminais Conectores e Emendas.md",
+      "related_notes": [
+        "Aterramento",
+        "Barramento DC / Bus Bar / Distribuição DC",
+        "Bonding — Sistema de Interligação de Massas",
+        "Cabeamento Náutico",
+        "Chaves Gerais (DC)",
+        "Chaves Seletoras (AC)",
+        "Contatores (AC)",
+        "Disjuntores (DC) e (AC)"
+      ]
+    },
+    {
+      "title": "Thruster",
+      "source_file": "THRUSTER 0f519734f7fb82dea40b017c2a10e5ae.md",
+      "domain": "70_Hidraulica_Climatizacao_e_Utilidades",
+      "note_type": "technical-note",
+      "path": "70_Hidraulica_Climatizacao_e_Utilidades\\Thruster.md",
+      "related_notes": [
+        "Aquecedor de Bordo / Cabin Heater",
+        "Ar-Condicionado Marine — Sistema Completo",
+        "Blower",
+        "Boiler",
+        "Bomba de Águas Negras",
+        "Bomba Ar Condicionado",
+        "Bomba de Banheiro",
+        "Bomba de Porão"
+      ]
+    },
+    {
+      "title": "Tipos de Bateria",
+      "source_file": "TIPOS DE BATERIA 17419734f7fb83e38ee80148dae5ba3c.md",
+      "domain": "20_Baterias_e_Armazenamento",
+      "note_type": "comparison",
+      "path": "20_Baterias_e_Armazenamento\\Tipos de Bateria.md",
+      "related_notes": [
+        "Bancos de Bateria",
+        "Carregador de Bateria (AC To DC)",
+        "Monitor de Bateria / BMV / Shunt",
+        "BMS — Battery Management System",
+        "Lítio LiFePO4 — Instalação e Cuidados Específicos",
+        "Tipos de Embarcação",
+        "Tipos de Lâmpadas e LEDs Náuticos"
+      ]
+    },
+    {
+      "title": "Tipos de Embarcação",
+      "source_file": "TIPOS DE EMBARCAÇÃO d8b19734f7fb83f0a5280108ea7c19cc.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "comparison",
+      "path": "10_Fundamentos_e_Projeto\\Tipos de Embarcação.md",
+      "related_notes": [
+        "Projeto Elétrico de Embarcação — Passo a Passo",
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões"
+      ]
+    },
+    {
+      "title": "Tipos de Lâmpadas e LEDs Náuticos",
+      "source_file": "TIPOS DE LÂMPADAS E LEDs NÁUTICOS 33a19734f7fb8172b40ec36bfc926c7e.md",
+      "domain": "55_Iluminacao_e_Sinalizacao",
+      "note_type": "comparison",
+      "path": "55_Iluminacao_e_Sinalizacao\\Tipos de Lâmpadas e LEDs Náuticos.md",
+      "related_notes": [
+        "Dimmer — Controle de Intensidade Luminosa",
+        "Farol de Busca",
+        "Fitas Led / Iluminação Led",
+        "Iluminação de Emergência a Bordo",
+        "Luz de Cortesia",
+        "Luz de Âncora",
+        "Luz Subaquática",
+        "Luzes Internas Teto"
+      ]
+    },
+    {
+      "title": "Transformador Entrada",
+      "source_file": "TRANSFORMADOR ENTRADA 58419734f7fb83baae88811eb7c459cf.md",
+      "domain": "30_Energia_e_Conversao",
+      "note_type": "technical-note",
+      "path": "30_Energia_e_Conversao\\Transformador Entrada.md",
+      "related_notes": [
+        "Alternador (DC)",
+        "Arranque",
+        "CAIS (Pier) (AC)",
+        "Carregador Elétrico para Tender e Jet Ski",
+        "Eólico (DC)",
+        "Gerador (AC)",
+        "Gerador (DC)",
+        "Inversora (DC To AC)"
+      ]
+    },
+    {
+      "title": "Troubleshooting — Diagnóstico de Falhas Elétricas",
+      "source_file": "TROUBLESHOOTING — DIAGNÓSTICO DE FALHAS ELÉTRICAS 33a19734f7fb8102baefeba4e729b7cf.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "procedure",
+      "path": "10_Fundamentos_e_Projeto\\Troubleshooting — Diagnóstico de Falhas Elétricas.md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "USB 12V (Power)",
+      "source_file": "USB (POWER 12V) 49619734f7fb82a48941010bf6384b31.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "technical-note",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\USB 12V (Power).md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som"
+      ]
+    },
+    {
+      "title": "VHF",
+      "source_file": "VHF e5319734f7fb835c9aaa01e0b5de4318.md",
+      "domain": "50_Navegacao_Instrumentacao_e_Comunicacao",
+      "note_type": "technical-note",
+      "path": "50_Navegacao_Instrumentacao_e_Comunicacao\\VHF.md",
+      "related_notes": [
+        "AIS (Automatic Identification System)",
+        "Buzina",
+        "Bússola Eletrônica (Compass / HDG Sensor)",
+        "Chartplotter / GPS / MFD",
+        "Dsc — Chamada Seletiva Digital",
+        "EPIRB / Beacon de Emergência",
+        "Estação de Vento / Anemômetro",
+        "Mob — Man Overboard — Sistema de Detecção"
+      ]
+    },
+    {
+      "title": "Voltímetro / Amperímetro (DC e AC)",
+      "source_file": "VOLTIMETRO AMPERIMETRO (DC) e (AC) e7d19734f7fb827bba7a819fb2653ee0.md",
+      "domain": "10_Fundamentos_e_Projeto",
+      "note_type": "technical-note",
+      "path": "10_Fundamentos_e_Projeto\\Voltímetro - Amperímetro (DC e AC).md",
+      "related_notes": [
+        "DC vs AC — Corrente Contínua e Alternada",
+        "Diagrama Unifilar — Documentação do Sistema Elétrico",
+        "Dimensionamento de Banco de Baterias — Cálculo de Autonomia",
+        "Dimensionamento de Cabos DC — Cálculo Prático",
+        "Fase e Neutro",
+        "Ferramentas do Eletricista Náutico",
+        "Inspeção de Cabos Terminais e Conexões",
+        "Lei de Ohm e Cálculos Básicos"
+      ]
+    },
+    {
+      "title": "Wi-Fi a Bordo — Roteador Marine e Conectividade",
+      "source_file": "WI-FI A BORDO — ROTEADOR MARINE E CONECTIVIDADE 33a19734f7fb8139a6d9c3aa78b1c688.md",
+      "domain": "60_Automacao_Conectividade_e_Monitoramento",
+      "note_type": "system",
+      "path": "60_Automacao_Conectividade_e_Monitoramento\\Wi-Fi a Bordo — Roteador Marine e Conectividade.md",
+      "related_notes": [
+        "Atuador Linear",
+        "Automação de Bordo — Sistemas Domoticos",
+        "Câmeras de Bordo / Sistema CFTV",
+        "Interfone / Intercomunicador de Bordo",
+        "Monitoramento Remoto — VRM / Telemetria",
+        "Sensor de Nível Diesel",
+        "Sistema de Alarme Geral / Painel de Alarmes",
+        "Som"
+      ]
+    }
+  ]
+}
