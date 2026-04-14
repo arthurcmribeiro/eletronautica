@@ -4,6 +4,13 @@ note_type: "system"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "BONDING — SISTEMA DE INTERLIGAÇÃO DE MASSAS 33a19734f7fb81549c39cdaf6dffb20e.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "BONDING — SISTEMA DE INTERLIGAÇÃO DE MASSAS"
 seo_title: "Bonding — Sistema de Interligação de Massas"
@@ -260,7 +267,7 @@ Mais ânodo não é sinônimo de melhor proteção. O potencial precisa ser aval
 - **ABYC E-2** — Prevention of Galvanic Corrosion (mais detalhada sobre bonding)
 - **ABYC E-11** — AC and DC Electrical Systems (SPOG e interação com terra AC)
 - **ABYC A-31** — Lightning Protection (bonding integrado ao pararaios)
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil — referências básicas)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **ISO 10133** — Electrical systems — Extra-low voltage DC installations
 
 ## Como ensinar este tópico

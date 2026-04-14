@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "CHAVES SELETORAS (AC) 2c919734f7fb83078ff601354dc25bca.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "CHAVES SELETORAS (AC)"
 seo_title: "Chaves Seletoras (AC)"

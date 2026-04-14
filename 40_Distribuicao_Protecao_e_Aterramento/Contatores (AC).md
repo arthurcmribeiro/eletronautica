@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "CONTATORES (AC) f0f19734f7fb820895d40138dc40c1ac.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "CONTATORES (AC)"

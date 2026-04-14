@@ -4,6 +4,13 @@ note_type: "component"
 domain: "30_Energia_e_Conversao"
 source_file: "ALTERNADOR (DC) e2819734f7fb8224ab728189f1ab5518.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "ALTERNADOR (DC)"
 seo_title: "Alternador (DC)"
@@ -283,7 +290,7 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 - **ABYC E-11** — AC and DC Electrical Systems on Boats: fusível no cabo B+, separação de bancos, proteção de cabeamento
 - **ABYC A-31** — Battery Chargers: aplicável ao carregamento inteligente via alternador
 - **ISO 13297** — Electrical systems on recreational craft
-- **ABNT NBR 16033** — Instalações elétricas em embarcações (referência geral)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
 - **Compatibilidade com lítio:** não coberta explicitamente por normas antigas — é engenharia de sistema; fabricantes de BMS e reguladores externos publicam guias de instalação específicos
 
 ## Como ensinar este tópico

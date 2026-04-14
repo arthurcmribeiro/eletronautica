@@ -4,6 +4,13 @@ note_type: "system"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "LINHA LEVE (AC) f9e19734f7fb82ebb08a01bde9cf45c6.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "LINHA LEVE (AC)"

@@ -4,6 +4,13 @@ note_type: "component"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "BARRAMENTO DC BUS BAR DISTRIBUIÇÃO DC 33a19734f7fb8164a172ccbe349aec67.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "BARRAMENTO DC BUS BAR DISTRIBUIÇÃO DC"
   - "BARRAMENTO DC / BUS BAR / DISTRIBUIÇÃO DC"

@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "VOLTIMETRO AMPERIMETRO (DC) e (AC) e7d19734f7fb827bba7a819fb2653ee0.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "VOLTIMETRO AMPERIMETRO (DC) e (AC)"
   - "VOLTIMETRO/AMPERIMETRO (DC) e (AC)"
@@ -283,7 +290,7 @@ Voltímetro AC + amperímetro AC (com TC) + frequencímetro para o sistema shore
 
 - **ABYC E-11** — AC and DC Electrical Systems on Boats: instrumentação recomendada, shunts, proteção de circuitos de medição
 - **ISO 13297** — Electrical systems on recreational craft
-- **ABNT NBR 16033** — Instalações elétricas em embarcações
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - Documentação Victron: Application Note "BMV Battery Monitor Installation" — referência prática completa
 
 ## Como ensinar este tópico

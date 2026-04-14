@@ -4,6 +4,12 @@ note_type: "comparison"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "TIPOS DE BATERIA 17419734f7fb83e38ee80148dae5ba3c.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://abycinc.org/news/standardsupdatewebinar/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "TIPOS DE BATERIA"
 seo_title: "Tipos de Bateria"

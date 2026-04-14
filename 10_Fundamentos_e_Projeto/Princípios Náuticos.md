@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "PRINCIPIOS NÁUTICOS d5819734f7fb834ea646019aef919ea7.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "PRINCIPIOS NÁUTICOS"
 seo_title: "Princípios Náuticos"
@@ -92,7 +99,7 @@ Em fibra de vidro, o bonding depende de condutores dedicados. Em cascos metálic
 
 ## Regulamentação básica — NORMAM e Marinha do Brasil
 
-**NORMAM-02:** Normas da Marinha do Brasil para Embarcações de Esporte e Recreio. Define:
+**NORMAM-211:** referencial regulatório hoje citado para amadores, embarcações de esporte e recreio e universo correlato. Na prática, é a primeira referência a confirmar para enquadramento brasileiro. Ela define e organiza o ambiente regulatório, mas não substitui ABYC/ISO para engenharia detalhada. Define:
 
 - Equipamentos obrigatórios de segurança
 - Habilitação de condutores (Arrais, Mestre, Capitão)
@@ -109,7 +116,7 @@ Em fibra de vidro, o bonding depende de condutores dedicados. Em cascos metálic
 
 - Quais sistemas são obrigatórios para o tipo de navegação do barco
 - Que instalações improvisadas podem levar à não conformidade, restrição operacional, autuação ou risco de sinistro
-- Que a NORMAM-02 não é tão detalhada quanto a ABYC — deixa margem para interpretação
+- Que a NORMAM-211 não substitui ABYC/ISO para engenharia detalhada — ela enquadra, mas não projeta a instalação sozinha
 
 ## Linguagem náutica essencial para o eletricista
 
@@ -161,7 +168,7 @@ Cabos e chicotes devem prever folga, suporte e alívio de tração compatíveis 
 
 | Aspecto | Brasil | Internacional |
 | --- | --- | --- |
-| Regulamentação | NORMAM-02 (Marinha do Brasil) | ABYC (EUA) / ISO (Europa) |
+| Regulamentação | NORMAM-211 / enquadramento brasileiro | ABYC (EUA) / ISO (Europa) |
 | Fiscalização | Capitania dos Portos (COMDPB) | Coast Guard (EUA) / autoridades portuárias locais |
 | Habilitação | Arrais Amador (base) | Boating License (EUA, opcional em maioria dos estados) |
 | Documentação obrigatória | Inscrição + Título + IRIN | Documentation (federal, EUA) |
@@ -173,7 +180,7 @@ Cabos e chicotes devem prever folga, suporte e alívio de tração compatíveis 
 
 1. Orientação espacial: desenhar a embarcação de cima e identificar cada direção
 2. Tour virtual (ou real) pelos compartimentos — conectar a teoria ao visual
-3. Explicar a NORMAM-02 de forma prática: o que o eletricista precisa saber
+3. Explicar a NORMAM-211 de forma prática: o que o eletricista precisa saber
 4. Exercício: dado um barco, onde você instalaria o banco de baterias? O painel? O VHF?
 5. Linguagem: usar os termos corretos desde a primeira aula — cria profissionalismo
 
@@ -194,9 +201,9 @@ Cabos e chicotes devem prever folga, suporte e alívio de tração compatíveis 
 
 Não. A habilitação é para conduzir a embarcação. O trabalho técnico a bordo não exige habilitação de condutor, mas exige conhecimento do ambiente.
 
-**Qual a diferença entre NORMAM-02 e ABYC?**
+**Qual a diferença entre NORMAM-211 e ABYC?**
 
-NORMAM-02 é a regulamentação brasileira — define equipamentos obrigatórios e segurança básica. ABYC é o padrão técnico norte-americano — define como os sistemas devem ser projetados e instalados. ABYC é muito mais detalhada tecnicamente; NORMAM-02 é mais focada em segurança mínima.
+NORMAM-211 é o referencial regulatório brasileiro a conferir primeiro para esporte e recreio; ABYC é o referencial técnico de engenharia mais detalhado para projeto, instalação e diagnóstico. Em outras palavras: a NORMAM enquadra, enquanto a ABYC ajuda a projetar e instalar com mais profundidade técnica.
 
 **BB e BE — como memorizar?**
 

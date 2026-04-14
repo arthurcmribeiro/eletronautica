@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "DISJUNTORES (DC) e (AC) 61f19734f7fb820eb39881eaf8483db4.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "DISJUNTORES (DC) e (AC)"
 seo_title: "Disjuntores (DC) e (AC)"
@@ -265,7 +272,7 @@ Um RCBO em cada circuito AC — proteção de sobrecorrente + diferencial indivi
 - **ABYC E-10** — Storage Batteries: proteção de cabos de bateria
 - **ISO 13297** — Electrical systems on recreational craft
 - **IEC 60947-2** — Low-voltage switchgear: disjuntores industriais
-- **ABNT NBR 16033** — Instalações elétricas em embarcações
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **NBR 5410** — Instalações elétricas de baixa tensão: base para aplicação náutica de proteções AC
 
 ## Como ensinar este tópico

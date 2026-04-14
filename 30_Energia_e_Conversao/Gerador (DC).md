@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "GERADOR (DC) eb219734f7fb83f0a13481295cd5c8f6.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "GERADOR (DC)"

@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "EÓLICO (DC) d0b19734f7fb8218b70581ee7f081bf3.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "EÓLICO (DC)"

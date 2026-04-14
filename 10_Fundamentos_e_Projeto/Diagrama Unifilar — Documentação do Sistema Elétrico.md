@@ -4,6 +4,13 @@ note_type: "system"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DIAGRAMA UNIFILAR — DOCUMENTAÇÃO DO SISTEMA ELÉTRI 33a19734f7fb814699bceccc90b97d43.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "DIAGRAMA UNIFILAR — DOCUMENTAÇÃO DO SISTEMA ELÉTRI"
   - "DIAGRAMA UNIFILAR — DOCUMENTAÇÃO DO SISTEMA ELÉTRICO"
@@ -237,8 +244,8 @@ Sem backup digital, o diagrama molha, rasga ou se perde. A versão digital deve 
 
 - **ABYC E-11** — seção de documentação e diagrama unifilar
 - **IEC 60617** — símbolos gráficos para diagramas elétricos
-- **NBR 13885** — instalações elétricas em embarcações
-- **NORMAM-02** — normas de segurança para embarcações de esporte e recreio
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

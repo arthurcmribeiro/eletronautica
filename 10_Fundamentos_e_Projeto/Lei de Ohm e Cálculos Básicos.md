@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "LEI DE OHM E CÁLCULOS BÁSICOS 33a19734f7fb81fbad36ddc9b762e6c4.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "LEI DE OHM E CÁLCULOS BÁSICOS"
 seo_title: "Lei de Ohm e Cálculos Básicos"

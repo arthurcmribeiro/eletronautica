@@ -4,6 +4,13 @@ note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "TROUBLESHOOTING — DIAGNÓSTICO DE FALHAS ELÉTRICAS 33a19734f7fb8102baefeba4e729b7cf.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "TROUBLESHOOTING — DIAGNÓSTICO DE FALHAS ELÉTRICAS"
 seo_title: "Troubleshooting — Diagnóstico de Falhas Elétricas"

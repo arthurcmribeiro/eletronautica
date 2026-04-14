@@ -22,6 +22,7 @@ def note_files(root: Path = ROOT) -> list[Path]:
 
 
 def extract_frontmatter(text: str) -> tuple[str, str]:
+    text = text.lstrip("\ufeff")
     match = FRONTMATTER_RE.match(text)
     if not match:
         return "", text

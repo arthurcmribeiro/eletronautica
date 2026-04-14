@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "BANCOS DE BATERIA 8ec19734f7fb83e584780174466db4de.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://abycinc.org/news/standardsupdatewebinar/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "BANCOS DE BATERIA"
   - "Banco de Baterias"

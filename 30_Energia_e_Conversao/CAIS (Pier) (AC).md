@@ -4,6 +4,13 @@ note_type: "system"
 domain: "30_Energia_e_Conversao"
 source_file: "CAIS (Pier) (AC) 55219734f7fb834ab92701fecab7a7cb.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "CAIS (Pier) (AC)"
 seo_title: "CAIS (Pier) (AC)"
@@ -302,9 +309,9 @@ Resistência de contato elevada → aquecimento progressivo → arco elétrico. 
 - **ABYC E-11** — AC and DC Electrical Systems on Boats (terra, GFCI, polaridade)
 - **ABYC A-28** — Galvanic Isolators (isoladores galvânicos certificados)
 - **NFPA 303** — Fire Protection for Marinas and Boatyards
-- **NBR 13885** — Instalações elétricas em embarcações (referência brasileira)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão e infraestrutura elétrica associada
 - **NBR 5410** — Instalações elétricas de baixa tensão (base para pedestais de marina)
-- **NORMAM-02** — Normas da Marinha do Brasil para embarcações de esporte e recreio
+- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

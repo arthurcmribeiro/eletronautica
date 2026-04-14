@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "CHAVES GERAIS (DC) 15919734f7fb834fbeda01362553ce8a.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "CHAVES GERAIS (DC)"
 seo_title: "Chaves Gerais (DC)"

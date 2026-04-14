@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "BMS — BATTERY MANAGEMENT SYSTEM 33a19734f7fb81519181fa235e718c78.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://abycinc.org/news/standardsupdatewebinar/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "BMS — BATTERY MANAGEMENT SYSTEM"
 seo_title: "BMS — Battery Management System"

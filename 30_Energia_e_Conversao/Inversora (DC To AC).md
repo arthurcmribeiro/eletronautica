@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "INVERSORA (DC to AC) 8ed19734f7fb836b85828192050b797a.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "INVERSORA (DC to AC)"
 seo_title: "Inversora (DC To AC)"
@@ -282,7 +289,7 @@ O inversor tem proteção interna — mas o cabo entre o banco e o inversor não
 
 - **ABYC E-11** — AC Electrical Systems (instalação, proteção, aterramento)
 - **UL 458** — Power Converters/Inverters and Power Converter/Inverter Systems for Land Vehicles and Marine Crafts
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 
 ## Como ensinar este tópico
 

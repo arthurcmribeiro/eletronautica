@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "ATERRAMENTO 62019734f7fb83ed822d818740bfe4cb.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "ATERRAMENTO"
 seo_title: "Aterramento"
@@ -278,10 +285,10 @@ Cria diferença de potencial entre sistemas — risco de arco e danos a equipame
 ## Normas aplicáveis
 
 - **ABYC E-11** — AC and DC Electrical Systems on Boats (referência primária)
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **IEC 60092** — Electrical installations in ships
 - **ABNT NBR 5410** — Instalações elétricas de baixa tensão (base comparativa)
-- **NORMAM-02** — Normas da Marinha do Brasil para embarcações de esporte e recreio
+- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

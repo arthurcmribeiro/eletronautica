@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "TRANSFORMADOR ENTRADA 58419734f7fb83baae88811eb7c459cf.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "TRANSFORMADOR ENTRADA"
 seo_title: "Transformador Entrada"
@@ -277,7 +284,7 @@ Transformador especificado para 60Hz ligado a marina europeia de 50Hz — zumbid
 - **ABYC E-11** — AC Electrical Systems (dimensionamento, proteção, instalação)
 - **NEMA** — padrões americanos de conectores e tensões
 - **IEC 60076** — transformadores de potência (referência técnica)
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 
 ## Como ensinar este tópico
 

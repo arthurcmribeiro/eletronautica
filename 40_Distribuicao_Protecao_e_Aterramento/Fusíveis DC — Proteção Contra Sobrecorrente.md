@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "FUSÍVEIS DC — PROTEÇÃO CONTRA SOBRECORRENTE 33a19734f7fb816a9ebde48e6f0a601e.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "FUSÍVEIS DC — PROTEÇÃO CONTRA SOBRECORRENTE"
 seo_title: "Fusíveis DC — Proteção Contra Sobrecorrente"
@@ -224,7 +231,7 @@ Em bancos de lítio, grandes AGM ou conjuntos próximos à bateria, o problema n
 ## Normas aplicáveis
 
 - **ABYC E-11** — seção de proteção de circuitos (referência primária)
-- **NBR 13885** — proteção de circuitos em embarcações
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para coordenação de proteção e princípios de baixa tensão
 - **SAE J1284** — blade type electric fuses (padrão para fusíveis de lâmina)
 
 ## Como ensinar este tópico

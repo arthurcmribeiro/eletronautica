@@ -4,6 +4,13 @@ note_type: "component"
 domain: "30_Energia_e_Conversao"
 source_file: "GERADOR (AC) 0ee19734f7fb82d89da2817e8a73a815.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "GERADOR (AC)"
 seo_title: "Gerador (AC)"
@@ -307,8 +314,8 @@ Feito para "resolver" o problema do solenóide travado. Sem o solenóide, não �
 - **ABYC E-11** — AC Electrical Systems (instalação do gerador, aterramento, GFCI)
 - **ABYC A-33** — Exhaust Systems (sistema de escape molhado, waterlock, retorno de água)
 - **NFPA 302** — Fire Protection for Pleasure and Commercial Motorcraft
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil)
-- **NORMAM-02** — Normas da Marinha do Brasil
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

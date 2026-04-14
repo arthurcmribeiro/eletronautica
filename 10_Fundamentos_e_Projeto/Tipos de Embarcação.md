@@ -4,6 +4,13 @@ note_type: "comparison"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "TIPOS DE EMBARCAÇÃO d8b19734f7fb83f0a5280108ea7c19cc.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "TIPOS DE EMBARCAÇÃO"
 seo_title: "Tipos de Embarcação"
@@ -110,7 +117,7 @@ Embarcações de esporte e recreio são aquelas destinadas ao lazer, esporte ná
 - Sistema elétrico robusto: frequentemente 24V, com gerador a bordo e, em alguns casos, geração complementar
 - Frequentemente com sistema completo de conforto (AC, dessalinizador, lavadora)
 
-## Classificação por tamanho (NORMAM-02 Brasil)
+## Classificação por tamanho e enquadramento regulatório brasileiro
 
 | Categoria | Comprimento | Habilitação piloto |
 | --- | --- | --- |

@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "CARREGADOR ELÉTRICO PARA TENDER E JET SKI 33a19734f7fb81feb64fd2ae38481430.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "CARREGADOR ELÉTRICO PARA TENDER E JET SKI"

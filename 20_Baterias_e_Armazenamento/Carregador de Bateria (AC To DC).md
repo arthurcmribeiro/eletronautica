@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "CARREGADOR DE BATERIA (AC to DC) 64e19734f7fb83f6879701f63709d32e.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://abycinc.org/news/standardsupdatewebinar/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "CARREGADOR DE BATERIA (AC to DC)"
 seo_title: "Carregador de Bateria (AC To DC)"
@@ -273,7 +279,7 @@ MPPT solar carrega durante o dia; carregador AC carrega à noite e no cais. BMS 
 - **ABYC A-31** — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos
 - **ISO 13297** — Electrical systems on recreational craft
 - **IEC 60335-2-29** — Safety of battery chargers: base normativa para os equipamentos
-- **ABNT NBR 16033** — Instalações elétricas em embarcações (referência geral brasileira)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
 - Compatibilidade com lítio: não explicitamente normatizada — responsabilidade do instalador e do fabricante do BMS
 
 ## Como ensinar este tópico

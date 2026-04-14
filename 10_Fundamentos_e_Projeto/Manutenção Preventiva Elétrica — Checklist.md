@@ -4,6 +4,13 @@ note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "MANUTENÇÃO PREVENTIVA ELÉTRICA — CHECKLIST 33a19734f7fb81558880deebb96480b7.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "MANUTENÇÃO PREVENTIVA ELÉTRICA — CHECKLIST"
 seo_title: "Manutenção Preventiva Elétrica — Checklist"
@@ -245,7 +252,7 @@ O botão de teste verifica o alarme sonoro/visual. Não verifica o sensor. Teste
 
 - **ABYC E-11** — critérios de conformidade e inspeção para sistemas elétricos de bordo
 - **Documentação do fabricante** — periodicidade específica de cada equipamento
-- **NORMAM-02** — normas da Marinha para embarcações de esporte e recreio
+- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 - **Manuais dos fabricantes** — intervalos de manutenção específicos por equipamento
 
 ## Como ensinar este tópico

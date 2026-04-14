@@ -4,9 +4,17 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "ISOLADOR GALVÂNICO TRANSFORMADOR DE ISOLAMENTO 33a19734f7fb810cb2dcc0a14fa26dbf.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "ISOLADOR GALVÂNICO TRANSFORMADOR DE ISOLAMENTO"
   - "ISOLADOR GALVÂNICO / TRANSFORMADOR DE ISOLAMENTO"
+  - "Isolador Galvânico / Transformador de Isolamento"
 seo_title: "Isolador Galvânico / Transformador de Isolamento"
 seo_description: "Isolador galvânico e transformador de isolamento são soluções diferentes para tratar a interface elétrica com o shore power. Um reduz a circulação de potenciais galvânicos pelo PE; o outro cria um sistema AC derivado isolado da marina."
 seo_keywords:
@@ -303,7 +311,7 @@ O LED vermelho indica que o isolador está com falha — os diodos estão em cur
 - **ABYC A-28** — Galvanic Isolators (especificação e certificação de isoladores galvânicos)
 - **ABYC E-11** — AC Electrical Systems (terra, GFCI, transformador de isolamento)
 - **NFPA 303** — Fire Protection for Marinas
-- **NBR 13885** — Instalações elétricas em embarcações (Brasil)
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **ISO 13297** — Electrical systems — Alternating current installations
 
 ## Como ensinar este tópico

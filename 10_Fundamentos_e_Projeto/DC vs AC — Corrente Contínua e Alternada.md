@@ -4,6 +4,13 @@ note_type: "comparison"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DC vs AC — CORRENTE CONTÍNUA E ALTERNADA 33a19734f7fb81538f02d8f3158c915f.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
+  - "https://www.marinha.mil.br/dpc/normas"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "DC vs AC — CORRENTE CONTÍNUA E ALTERNADA"
 seo_title: "DC vs AC — Corrente Contínua e Alternada"
@@ -197,7 +204,7 @@ Ar-condicionado de 1.500W via inversor = 1.500W / 0,9 (eficiência) = 1.667W do 
 ## Normas aplicáveis
 
 - **ABYC E-11** — separação e especificação de sistemas AC e DC
-- **NBR 13885** — instalações elétricas em embarcações
+- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **IEC 60092** — electrical installations in ships
 
 ## Como ensinar este tópico
