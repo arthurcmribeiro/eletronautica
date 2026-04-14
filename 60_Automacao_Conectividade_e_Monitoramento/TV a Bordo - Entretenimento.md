@@ -4,6 +4,13 @@ note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "TV A BORDO ENTRETENIMENTO 33a19734f7fb810d8cd4c12edad5eef8.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://www.nmea.org/standards.html"
+  - "https://www.nmea.org/nmea-0400.html"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "TV A BORDO ENTRETENIMENTO"
   - "TV A BORDO / ENTRETENIMENTO"

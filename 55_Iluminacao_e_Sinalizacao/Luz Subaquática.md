@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "LUZ SUBAQUÁTICA d7619734f7fb8311ae0381f72aa1a0c6.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
 aliases:
   - "LUZ SUBAQUÁTICA"
 seo_title: "Luz Subaquática"

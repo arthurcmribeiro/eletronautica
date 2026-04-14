@@ -4,6 +4,13 @@ note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "SOM 99519734f7fb82afa0ef81e230098bb2.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://www.nmea.org/standards.html"
+  - "https://www.nmea.org/nmea-0400.html"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "SOM"
 seo_title: "Som"

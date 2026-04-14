@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "BUZINA e2519734f7fb835c88cc01ee230c806c.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://www.nmea.org/standards.html"
+  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "BUZINA"
 seo_title: "Buzina"

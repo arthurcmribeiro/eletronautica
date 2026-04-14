@@ -4,6 +4,13 @@ note_type: "component"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "SENSOR DE NIVEL DIESEL 01a19734f7fb82dc8094811f3a4f0d01.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://abycinc.org/standards/"
+  - "https://www.nmea.org/standards.html"
+  - "https://www.nmea.org/nmea-0400.html"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "SENSOR DE NIVEL DIESEL"
 seo_title: "Sensor de Nível Diesel"

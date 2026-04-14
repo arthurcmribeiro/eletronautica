@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "FITAS LED ILUMINAÇÃO LED 33a19734f7fb81b0bd85fc67c4d8583e.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
 aliases:
   - "FITAS LED ILUMINAÇÃO LED"
   - "FITAS LED / ILUMINAÇÃO LED"

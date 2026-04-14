@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "LUZ DE ÂNCORA 33a19734f7fb818c86f5f3596e5f9406.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
 aliases:
   - "LUZ DE ÂNCORA"
 seo_title: "Luz de Âncora"

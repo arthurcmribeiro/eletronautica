@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "80_Seguranca_e_Corrosao"
 source_file: "DETECTOR DE GÁS GLP GN 33a19734f7fb81b6bb99f3cffadae2fe.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 aliases:
   - "DETECTOR DE GÁS GLP GN"
   - "DETECTOR DE GÁS GLP / GN"

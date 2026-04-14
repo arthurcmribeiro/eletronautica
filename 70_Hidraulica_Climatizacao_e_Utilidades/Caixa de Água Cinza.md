@@ -4,6 +4,12 @@ note_type: "system"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "CAIXA DE ÁGUA CINZA f6d19734f7fb830884560187fddd7783.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "CAIXA DE ÁGUA CINZA"

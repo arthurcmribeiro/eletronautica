@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "80_Seguranca_e_Corrosao"
 source_file: "ANÔDO 8e019734f7fb829abd3e01f8fcef8de0.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "ANÔDO"

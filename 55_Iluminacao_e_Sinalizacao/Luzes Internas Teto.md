@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "LUZES INTERNAS TETO c6b19734f7fb82d381578190ac1f6cec.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
 aliases:
   - "LUZES INTERNAS TETO"
 seo_title: "Luzes Internas Teto"

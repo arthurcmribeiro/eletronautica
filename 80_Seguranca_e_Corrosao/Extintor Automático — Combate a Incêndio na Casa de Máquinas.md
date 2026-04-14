@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "80_Seguranca_e_Corrosao"
 source_file: "EXTINTOR AUTOMÁTICO — COMBATE A INCÊNCIO NA CASA D 33a19734f7fb819ca540d12e729e7ba5.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "EXTINTOR AUTOMÁTICO — COMBATE A INCÊNDIO NA CASA DE MÁQUINAS"

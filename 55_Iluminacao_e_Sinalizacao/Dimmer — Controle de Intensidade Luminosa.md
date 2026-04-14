@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA 33a19734f7fb810197b3d469666bb573.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://abycinc.org/standards/"
 aliases:
   - "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA"
 seo_title: "Dimmer — Controle de Intensidade Luminosa"

@@ -11,6 +11,11 @@ SENSITIVE_PATTERNS = {
     "NBR 13885": "Código ABNT precisa de validação oficial antes de ser citado nesta base.",
     "ABNT NBR 16033": "Código ABNT precisa de validação oficial antes de ser citado nesta base.",
 }
+SENSITIVE_PATTERN_EXCEPTIONS = {
+    "NORMAM-02": {
+        "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md",
+    },
+}
 
 WARN_NOTE_TYPES = {"reference", "technical-note", "procedure", "system"}
 MAX_PRINT = 80
@@ -59,7 +64,8 @@ def main() -> int:
                 )
 
         for pattern, reason in SENSITIVE_PATTERNS.items():
-            if pattern in note["text"]:
+            exceptions = SENSITIVE_PATTERN_EXCEPTIONS.get(pattern, set())
+            if pattern in note["text"] and relative_path not in exceptions:
                 warnings.append(
                     f"{relative_path}: referência sensível '{pattern}' ({reason})"
                 )

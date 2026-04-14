@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "BOMBA DE ÁGUA PRESSURIZADA 48019734f7fb8270a54301056798e713.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "BOMBA DE ÁGUA PRESSURIZADA"

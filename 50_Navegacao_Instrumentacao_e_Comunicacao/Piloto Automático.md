@@ -4,6 +4,13 @@ note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "PILOTO AUTOMÁTICO 4b019734f7fb826ebeac810548e8c64d.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://www.marinha.mil.br/dpc/normam-204"
+  - "https://www.nmea.org/standards.html"
+  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "PILOTO AUTOMÁTICO"
 seo_title: "Piloto Automático"

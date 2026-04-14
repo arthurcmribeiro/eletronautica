@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "CATRACA 93e19734f7fb835188a50199d626ca56.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "CATRACA"

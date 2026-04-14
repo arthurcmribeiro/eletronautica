@@ -4,6 +4,12 @@ note_type: "technical-note"
 domain: "90_Revisao_Manual"
 source_file: "MOTOR DE TRIM TILT 33a19734f7fb81b5b54bd17895f75160.md"
 status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+source_urls:
+  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
+  - "https://abycinc.org/standards/"
+  - "https://www.iso.org/standard/83643.html"
 review_level: "engineering-curated"
 aliases:
   - "MOTOR DE TRIM TILT"
