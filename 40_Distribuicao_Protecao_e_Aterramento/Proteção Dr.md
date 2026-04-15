@@ -323,6 +323,16 @@ Sim. O transformador de isolamento isola galvanicamente do aterramento do cais (
 
 Muito provavelmente não. Pela descrição, o mais provável é isolador galvânico ou outro dispositivo ligado ao PE. Para confirmar, é preciso ver a marca, o modelo, o diagrama e se existe botão de teste ou corrente residual nominal marcada em mA.
 
+## Visual didático
+
+![DR: desequilibrio de corrente](../_visuals/generated/dr-desequilibrio-corrente.svg)
+
+Explicar DR como comparador de corrente, nao como disjuntor de sobrecarga.
+
+**Cautela:** Corrente diferencial nominal, seletividade, ELCI/GFCI/DR e topologia variam conforme aplicacao e referencial adotado.
+
+Material de apoio: [DR: desequilibrio de corrente](../_visuals/generated/dr-desequilibrio-corrente.md)
+
 ## Integração com outras notas
 
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]]
@@ -340,3 +350,4 @@ Muito provavelmente não. Pela descrição, o mais provável é isolador galvân
 
 - O que é Proteção Dr em instalações elétricas náuticas?
 - Qual é a função de Proteção Dr na embarcação?
+

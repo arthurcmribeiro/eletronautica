@@ -1,0 +1,29 @@
+{
+  "slug": "shore-power-topologias",
+  "kind": "comparison_cards",
+  "title": "Shore power: topologias de entrada",
+  "summary": "Comparativo visual entre entrada de marina, protecao, transformacao/isolamento e distribuicao AC de bordo.",
+  "didactic_goal": "Mostrar que shore power e uma interface critica entre instalacao externa e sistema AC do barco.",
+  "format": "topologia-comparativa",
+  "priority": "alta",
+  "hero_label": "A ENTRADA AC DO CAIS NAO E SO UMA TOMADA: E UMA INTERFACE DE SEGURANCA",
+  "notes": [
+    "A alimentacao externa precisa ser tratada como origem de risco.",
+    "Protecao diferencial e sobrecorrente devem estar coordenadas com a topologia.",
+    "Transformador de isolamento muda a relacao eletrica com a marina.",
+    "Frequencia e tensao precisam ser verificadas antes de alimentar cargas."
+  ],
+  "caution": "Este quadro nao define esquema normativo completo. Use projeto, NORMAM aplicavel, ABNT/IEC, manual dos fabricantes e vistoria.",
+  "target_notes": [
+    "30_Energia_e_Conversao/CAIS (Pier) (AC).md",
+    "40_Distribuicao_Protecao_e_Aterramento/Protecao Dr.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvanico - Transformador de Isolamento.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "Marina", "detail": "Fonte externa com qualidade, polaridade, aterramento e protecao que variam por local.", "color": "#1D6FD8", "items": ["tensao", "frequencia", "polaridade"]},
+    {"title": "Entrada", "detail": "Conector, cabo, disjuntor, DR/ELCI e ponto inicial de protecao do barco.", "color": "#D9534F", "items": ["conector", "DR", "disjuntor"]},
+    {"title": "Isolamento", "detail": "Isolador galvanico ou transformador alteram o caminho de correntes indesejadas.", "color": "#7C5CC4", "items": ["galvanico", "transformador", "barreira"]},
+    {"title": "Distribuicao", "detail": "Painel AC, linhas leves/pesadas e cargas com protecao por circuito.", "color": "#2A9D57", "items": ["painel", "cargas", "teste"]}
+  ]
+}

@@ -365,6 +365,16 @@ Quando houver dúvida entre neutro, negativo, PE, terra do pier e bonding:
 - [Victron: instalação do Isolation Transformer, incluindo link N-PE de saída](https://www.victronenergy.com/media/pg/Isolation_Transformer_7000W/en/installation.html)
 - [[Normas e Regulamentações — Abyc Iso e Brasil]]
 
+## Visual didático
+
+![Neutro, negativo, PE e bonding](../_visuals/generated/neutro-negativo-pe-bonding.svg)
+
+Evitar a simplificacao perigosa de chamar tudo de terra e misturar funcoes eletricas diferentes.
+
+**Cautela:** As conexoes permitidas dependem da topologia shore/gerador/inversor/transformador. Nao use este visual como diagrama de ligacao.
+
+Material de apoio: [Neutro, negativo, PE e bonding](../_visuals/generated/neutro-negativo-pe-bonding.md)
+
 ## Integração com outras notas
 
 - [[Fase e Neutro]]
@@ -397,3 +407,4 @@ Quando houver dúvida entre neutro, negativo, PE, terra do pier e bonding:
 - Quando preciso de transformador bivolt?
 - Onde existe neutro aterrado?
 - Onde o neutro não existe e não pode ser inventado?
+

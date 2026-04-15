@@ -197,6 +197,16 @@ Os mais perigosos são:
 - confundir corrente parasita DC com risco de choque por AC na água;
 - condenar o metal da peça quando o problema é a arquitetura elétrica.
 
+## Visual didático
+
+![Correntes parasitas: causa, caminho e dano](../_visuals/generated/corrosao-stray-current-causa-efeito.svg)
+
+Mostrar por que pequenas fugas DC podem destruir metais rapidamente em ambiente nautico.
+
+**Cautela:** Diagnostico de corrosao deve diferenciar corrosao galvanica, eletrolise/stray current e problemas mecanicos/quimicos.
+
+Material de apoio: [Correntes parasitas: causa, caminho e dano](../_visuals/generated/corrosao-stray-current-causa-efeito.md)
+
 ## Integração com outras notas
 
 - [[Anôdo]]
@@ -212,3 +222,4 @@ Os mais perigosos são:
 - O que diferencia corrente parasita de corrosão galvânica?
 - Como separar defeito interno, problema de shore power e problema da marina?
 - Por que medir "qualquer milivolt na água" não basta para um diagnóstico profissional?
+

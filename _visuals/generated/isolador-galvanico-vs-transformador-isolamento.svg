@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Isolador galvanico vs transformador de isolamento</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Comparativo entre protecao contra correntes galvanicas e isolamento eletrico completo da entrada AC.</text>
+<rect x="70" y="178" width="1260" height="80" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="208" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">AMBOS REDUZEM PROBLEMAS DO CAIS, MAS NAO FAZEM A MESMA COISA</text>
+<rect x="70.0" y="300" width="618.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="70.0" y="300" width="618.0" height="12" fill="#1D6FD8" rx="10" ry="10"/>
+<text x="94.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Isolador galvanico</text>
+<text x="94.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Bloqueia pequenas tensoes</text>
+<text x="94.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">galvanicas no caminho de protecao,</text>
+<text x="94.0" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">mantendo funcao de seguranca para</text>
+<text x="94.0" y="452" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">falhas maiores conforme</text>
+<text x="94.0" y="472" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">especificacao.</text>
+<rect x="94.0" y="473" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">menor peso</text>
+<rect x="94.0" y="497" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">menor custo</text>
+<rect x="94.0" y="521" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">protege contra corrosao</text>
+<text x="112.0" y="548" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">galvanica</text>
+<rect x="712.0" y="300" width="618.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="712.0" y="300" width="618.0" height="12" fill="#7C5CC4" rx="10" ry="10"/>
+<text x="736.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Transformador de</text>
+<text x="736.0" y="367" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">isolamento</text>
+<text x="736.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Separa eletricamente marina e</text>
+<text x="736.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">barco, criando secundario proprio</text>
+<text x="736.0" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">para o sistema de bordo.</text>
+<rect x="736.0" y="473" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">barreira completa</text>
+<rect x="736.0" y="497" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">maior peso</text>
+<rect x="736.0" y="521" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">topologia propria</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: QUADRO-COMPARATIVO  |  PRIORIDADE: ALTA</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Bancos de bateria: separacao funcional</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Comparacao entre banco de partida, servico e emergencia para evitar misturar funcoes criticas.</text>
+<rect x="70" y="178" width="1260" height="80" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="208" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">PARTIDA, SERVICO E EMERGENCIA NAO DEVEM SER TRATADOS COMO A MESMA COISA</text>
+<rect x="70.0" y="300" width="404.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="70.0" y="300" width="404.0" height="12" fill="#1D6FD8" rx="10" ry="10"/>
+<text x="94.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Partida</text>
+<text x="94.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Entrega pico alto por pouco tempo</text>
+<text x="94.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">para motor de arranque.</text>
+<rect x="94.0" y="473" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">CCA</text>
+<rect x="94.0" y="497" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">curto tempo</text>
+<rect x="94.0" y="521" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">isolamento</text>
+<rect x="498.0" y="300" width="404.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="498.0" y="300" width="404.0" height="12" fill="#2A9D57" rx="10" ry="10"/>
+<text x="522.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Servico</text>
+<text x="522.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Sustenta eletronica, bombas,</text>
+<text x="522.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">iluminacao, geladeira e conforto.</text>
+<rect x="522.0" y="473" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="540.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">ciclo</text>
+<rect x="522.0" y="497" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="540.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">autonomia</text>
+<rect x="522.0" y="521" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="540.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">DoD</text>
+<rect x="926.0" y="300" width="404.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="926.0" y="300" width="404.0" height="12" fill="#DB7C26" rx="10" ry="10"/>
+<text x="950.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Emergencia</text>
+<text x="950.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Reserva protegida para recuperar</text>
+<text x="950.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">partida ou sistema critico.</text>
+<rect x="950.0" y="473" width="8" height="8" fill="#DB7C26" rx="18" ry="18"/>
+<text x="968.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">isolado</text>
+<rect x="950.0" y="497" width="8" height="8" fill="#DB7C26" rx="18" ry="18"/>
+<text x="968.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">testavel</text>
+<rect x="950.0" y="521" width="8" height="8" fill="#DB7C26" rx="18" ry="18"/>
+<text x="968.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">ultimo recurso</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: QUADRO-COMPARATIVO  |  PRIORIDADE: ALTA</text>
+</svg>

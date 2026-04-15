@@ -1,0 +1,34 @@
+{
+  "slug": "monitoramento-remoto-vrm-fluxo",
+  "kind": "flow_diagram",
+  "title": "Monitoramento remoto: fluxo VRM",
+  "summary": "Fluxo de dados entre sensores, equipamentos, gateway, internet e painel remoto.",
+  "didactic_goal": "Mostrar que monitoramento remoto depende de medicao local confiavel, gateway e conectividade estavel.",
+  "format": "fluxo-de-dados",
+  "priority": "media",
+  "hero_label": "TELEMETRIA BOA COMECA NO SENSOR CERTO E TERMINA EM DECISAO UTIL",
+  "notes": [
+    "Sensores e equipamentos geram dados locais.",
+    "Gateway consolida e publica os dados.",
+    "Internet a bordo leva dados para a nuvem.",
+    "Painel remoto ajuda diagnostico, historico e alerta."
+  ],
+  "caution": "Monitoramento remoto nao substitui protecoes locais, alarmes criticos e comissionamento presencial.",
+  "target_notes": [
+    "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md",
+    "60_Automacao_Conectividade_e_Monitoramento/Wi-Fi a Bordo — Roteador Marine e Conectividade.md"
+  ],
+  "nodes": [
+    {"title": "Sensores", "detail": "Tensao, corrente, tanque, temperatura, alarmes e status de equipamentos.", "color": "#1D6FD8", "items": ["tensao", "tanque", "alarme"]},
+    {"title": "Equipamentos", "detail": "Inversor, carregador, MPPT, BMS e monitores geram informacao operacional.", "color": "#168A8A", "items": ["inversor", "MPPT", "BMS"]},
+    {"title": "Gateway", "detail": "Concentra dados locais e publica para plataforma remota.", "color": "#7C5CC4", "items": ["GX", "NMEA", "CAN"]},
+    {"title": "Internet", "detail": "Roteador, 4G/5G, marina Wi-Fi ou satelite conectam o barco.", "color": "#DB7C26", "items": ["4G", "Wi-Fi", "satelite"]},
+    {"title": "Painel", "detail": "Historico, alerta, tendencia e apoio ao diagnostico.", "color": "#2A9D57", "items": ["alertas", "historico", "decisao"]}
+  ],
+  "callout_title": "LIMITES",
+  "callouts": [
+    {"title": "Sem internet", "detail": "O sistema local deve seguir seguro.", "color": "#D9534F"},
+    {"title": "Sensor ruim", "detail": "Dado remoto errado acelera decisao errada.", "color": "#DB7C26"},
+    {"title": "Sem alarme local", "detail": "Nuvem nao substitui protecao fisica.", "color": "#E0A100"}
+  ]
+}

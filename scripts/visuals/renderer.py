@@ -24,6 +24,8 @@ PALETTE = {
     "green": "#2A9D57",
     "yellow": "#E0A100",
     "red": "#D9534F",
+    "purple": "#7C5CC4",
+    "teal": "#168A8A",
     "ink": "#0F172A",
 }
 
@@ -418,14 +420,26 @@ def write_svg(path: Path, payload: str) -> None:
 
 
 def draw_header(canvas, spec: dict) -> None:
-    canvas.text(70, 80, spec["title"], PALETTE["ink"], size=30, weight="700")
+    canvas.rect(50, 38, 1300, 116, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=22)
+    canvas.text(78, 68, "ELETRO NAUTICA / VISUAL TECNICO", PALETTE["muted"], size=12, weight="700")
     canvas.text_block(
-        70,
-        112,
+        78,
+        92,
+        spec["title"],
+        PALETTE["ink"],
+        size=24,
+        max_chars=68,
+        line_gap=6,
+        weight="700",
+    )
+    canvas.text_block(
+        78,
+        128,
         spec["summary"],
         PALETTE["muted"],
-        size=16,
-        max_chars=92,
+        size=13,
+        max_chars=132,
+        line_gap=5,
     )
 
 
@@ -437,6 +451,44 @@ def draw_footer(canvas, spec: dict) -> None:
         PALETTE["muted"],
         size=14,
     )
+
+
+def draw_arrow(canvas, x1: float, y1: float, x2: float, y2: float, color: str, width: int = 3) -> None:
+    canvas.line(x1, y1, x2, y2, color, width=width)
+    angle = math.atan2(y2 - y1, x2 - x1)
+    size = 18
+    for delta in (math.radians(150), math.radians(-150)):
+        canvas.line(
+            x2,
+            y2,
+            x2 + math.cos(angle + delta) * size,
+            y2 + math.sin(angle + delta) * size,
+            color,
+            width=width,
+        )
+
+
+def draw_card(
+    canvas,
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+    title: str,
+    detail: str,
+    color: str,
+    items: list[str] | None = None,
+) -> None:
+    canvas.rect(x, y, width, height, PALETTE["panel"], stroke=PALETTE["grid"], stroke_width=1)
+    canvas.rect(x, y, width, 12, color, radius=10)
+    canvas.text_block(x + 24, y + 44, title, PALETTE["ink"], size=18, max_chars=24, line_gap=5, weight="700")
+    canvas.text_block(x + 24, y + 92, detail, PALETTE["muted"], size=14, max_chars=34, line_gap=6)
+    if items and height >= 220:
+        item_y = y + height - 76
+        for item in items[:3]:
+            canvas.rect(x + 24, item_y - 11, 8, 8, color)
+            canvas.text_block(x + 42, item_y, item, PALETTE["text"], size=12, max_chars=31, line_gap=4)
+            item_y += 24
 
 
 def draw_grid(canvas, x: int, y: int, width: int, height: int) -> None:
@@ -629,6 +681,127 @@ def render_battery_zone(spec: dict) -> tuple[str, RasterCanvas]:
     return svg.finalize(), png
 
 
+def render_flow_diagram(spec: dict) -> tuple[str, RasterCanvas]:
+    width, height = 1400, 900
+    svg = SvgCanvas(width, height)
+    png = RasterCanvas(width, height, PALETTE["background"])
+    nodes = spec["nodes"]
+    callouts = spec.get("callouts", [])
+    node_count = len(nodes)
+    gap = 22
+    node_width = (1260 - gap * (node_count - 1)) / node_count
+    node_height = 190
+    node_y = 300
+
+    for canvas in (svg, png):
+        draw_header(canvas, spec)
+        canvas.rect(70, 178, 1260, 80, "#EEF7FF", stroke="#8CB9F4", stroke_width=2)
+        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        for index, node in enumerate(nodes):
+            x = 70 + index * (node_width + gap)
+            draw_card(
+                canvas,
+                x,
+                node_y,
+                node_width,
+                node_height,
+                node["title"],
+                node["detail"],
+                node.get("color", PALETTE["blue"]),
+                node.get("items"),
+            )
+            if index < node_count - 1:
+                draw_arrow(
+                    canvas,
+                    x + node_width + 4,
+                    node_y + node_height / 2,
+                    x + node_width + gap - 6,
+                    node_y + node_height / 2,
+                    PALETTE["muted"],
+                    width=2,
+                )
+        canvas.rect(70, 560, 1260, 165, PALETTE["panel"], stroke=PALETTE["grid"], stroke_width=1)
+        canvas.text(100, 598, spec.get("callout_title", "PONTOS DE ATENCAO"), PALETTE["ink"], size=18, weight="700")
+        columns = max(1, min(3, len(callouts)))
+        column_width = 1180 / columns
+        for index, callout in enumerate(callouts[:6]):
+            column = index % columns
+            row = index // columns
+            x = 100 + column * column_width
+            y = 635 + row * 54
+            color = callout.get("color", PALETTE["orange"])
+            canvas.rect(x, y - 13, 10, 10, color)
+            canvas.text(x + 24, y, callout["title"], PALETTE["text"], size=15, weight="700")
+            canvas.text_block(x + 24, y + 22, callout["detail"], PALETTE["muted"], size=12, max_chars=36, line_gap=4)
+        draw_footer(canvas, spec)
+    return svg.finalize(), png
+
+
+def render_comparison_cards(spec: dict) -> tuple[str, RasterCanvas]:
+    width, height = 1400, 900
+    svg = SvgCanvas(width, height)
+    png = RasterCanvas(width, height, PALETTE["background"])
+    cards = spec["cards"]
+    columns = min(4, max(2, spec.get("columns", len(cards))))
+    rows = math.ceil(len(cards) / columns)
+    gap = 24
+    card_width = (1260 - gap * (columns - 1)) / columns
+    card_height = 190 if rows == 2 else 260
+
+    for canvas in (svg, png):
+        draw_header(canvas, spec)
+        canvas.rect(70, 178, 1260, 80, "#FFF7E8", stroke="#F0C36D", stroke_width=2)
+        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        for index, card in enumerate(cards):
+            column = index % columns
+            row = index // columns
+            x = 70 + column * (card_width + gap)
+            y = 300 + row * (card_height + 34)
+            draw_card(
+                canvas,
+                x,
+                y,
+                card_width,
+                card_height,
+                card["title"],
+                card["detail"],
+                card.get("color", PALETTE["blue"]),
+                card.get("items"),
+            )
+        draw_footer(canvas, spec)
+    return svg.finalize(), png
+
+
+def render_cause_effect(spec: dict) -> tuple[str, RasterCanvas]:
+    width, height = 1400, 900
+    svg = SvgCanvas(width, height)
+    png = RasterCanvas(width, height, PALETTE["background"])
+    columns = spec["columns"]
+    column_width = 386
+    gap = 42
+    start_x = 70
+
+    for canvas in (svg, png):
+        draw_header(canvas, spec)
+        canvas.rect(70, 178, 1260, 80, "#FFF0F0", stroke="#E9A2A2", stroke_width=2)
+        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        for column_index, column in enumerate(columns):
+            x = start_x + column_index * (column_width + gap)
+            canvas.rect(x, 300, column_width, 425, PALETTE["panel"], stroke=PALETTE["grid"], stroke_width=1)
+            color = column.get("color", PALETTE["red"])
+            canvas.rect(x, 300, column_width, 14, color, radius=10)
+            canvas.text(x + 24, 350, column["title"], PALETTE["ink"], size=20, weight="700")
+            y = 402
+            for item in column["items"]:
+                canvas.rect(x + 24, y - 13, 10, 10, color)
+                canvas.text_block(x + 46, y, item, PALETTE["text"], size=14, max_chars=34, line_gap=5)
+                y += 72
+            if column_index < len(columns) - 1:
+                draw_arrow(canvas, x + column_width + 8, 512, x + column_width + gap - 10, 512, PALETTE["muted"], width=2)
+        draw_footer(canvas, spec)
+    return svg.finalize(), png
+
+
 def render_spec(spec: dict) -> dict[str, str | RasterCanvas]:
     kind = spec["kind"]
     if kind == "wave_compare":
@@ -637,6 +810,12 @@ def render_spec(spec: dict) -> dict[str, str | RasterCanvas]:
         svg_payload, png_canvas = render_frequency_compare(spec)
     elif kind == "battery_zone":
         svg_payload, png_canvas = render_battery_zone(spec)
+    elif kind == "flow_diagram":
+        svg_payload, png_canvas = render_flow_diagram(spec)
+    elif kind == "comparison_cards":
+        svg_payload, png_canvas = render_comparison_cards(spec)
+    elif kind == "cause_effect":
+        svg_payload, png_canvas = render_cause_effect(spec)
     else:
         raise ValueError(f"Unsupported spec kind: {kind}")
 

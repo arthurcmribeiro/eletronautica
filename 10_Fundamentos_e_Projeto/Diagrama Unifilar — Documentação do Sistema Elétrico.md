@@ -300,6 +300,16 @@ O original fica a bordo (no painel ou na pasta de documentos). O técnico que fe
 
 Sim, temporariamente. É melhor que nada e melhor que esperar ter software profissional. O importante é registrar e atualizar.
 
+## Visual didático
+
+![Diagrama unifilar: camadas de leitura](../_visuals/generated/diagrama-unifilar-camadas.svg)
+
+Ensinar a ler o diagrama unifilar como mapa de energia e protecao, nao como desenho decorativo.
+
+**Cautela:** O unifilar simplifica condutores e detalhes fisicos. Ele deve ser complementado por lista de cabos, layout fisico, etiquetas e plano de teste.
+
+Material de apoio: [Diagrama unifilar: camadas de leitura](../_visuals/generated/diagrama-unifilar-camadas.md)
+
 ## Integração com outras notas
 
 - [[DC vs AC — Corrente Contínua e Alternada]]
@@ -315,3 +325,4 @@ Sim, temporariamente. É melhor que nada e melhor que esperar ter software profi
 
 - O que é Diagrama Unifilar — Documentação do Sistema Elétrico em instalações elétricas náuticas?
 - Qual é a função de Diagrama Unifilar — Documentação do Sistema Elétrico na embarcação?
+

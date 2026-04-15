@@ -1,0 +1,29 @@
+{
+  "slug": "neutro-negativo-pe-bonding",
+  "kind": "comparison_cards",
+  "title": "Neutro, negativo, PE e bonding",
+  "summary": "Quadro didatico para separar papeis que costumam ser confundidos em embarcacoes.",
+  "didactic_goal": "Evitar a simplificacao perigosa de chamar tudo de terra e misturar funcoes eletricas diferentes.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "NOMES PARECIDOS, FUNCOES DIFERENTES: NAO MISTURE REFERENCIAS SEM PROJETO",
+  "notes": [
+    "Neutro pertence ao sistema AC e depende da topologia.",
+    "Negativo pertence ao retorno DC.",
+    "PE e condutor de protecao contra falha.",
+    "Bonding interliga massas para reduzir diferencas de potencial e ajudar protecao/corrosao."
+  ],
+  "caution": "As conexoes permitidas dependem da topologia shore/gerador/inversor/transformador. Nao use este visual como diagrama de ligacao.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferencas Criticas.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligacao de Massas.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "Neutro AC", "detail": "Condutor funcional do sistema AC conforme fonte e topologia.", "color": "#1D6FD8", "items": ["AC", "funcional", "topologia"]},
+    {"title": "Negativo DC", "detail": "Retorno do circuito DC para baterias, fontes e cargas.", "color": "#5B6B79", "items": ["DC", "retorno", "banco"]},
+    {"title": "PE", "detail": "Condutor de protecao para falhas de isolacao e choque.", "color": "#2A9D57", "items": ["protecao", "falha", "choque"]},
+    {"title": "Bonding", "detail": "Interligacao de massas e partes metalicas conforme projeto.", "color": "#7C5CC4", "items": ["massas", "equipotencial", "corrosao"]}
+  ]
+}

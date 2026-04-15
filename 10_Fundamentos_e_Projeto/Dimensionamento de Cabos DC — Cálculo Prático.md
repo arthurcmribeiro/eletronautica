@@ -282,6 +282,16 @@ O condutor de bonding não é normalmente dimensionado pelos mesmos critérios d
 
 A fórmula é igual. A diferença: para a mesma potência em Watts, a corrente em 24V é metade da corrente em 12V (I = P/V). Resultado: cabos menores em sistemas 24V para mesma potência — grande vantagem em sistemas de alta potência.
 
+## Visual didático
+
+![Queda de tensao em cabos DC](../_visuals/generated/queda-tensao-cabos-dc.svg)
+
+Mostrar por que sistemas 12 V sofrem mais com cabo fino, distancia e corrente elevada.
+
+**Cautela:** Este visual explica a logica. Bitola real depende de corrente, comprimento ida e volta, temperatura, agrupamento, queda admissivel e norma/fabricante.
+
+Material de apoio: [Queda de tensao em cabos DC](../_visuals/generated/queda-tensao-cabos-dc.md)
+
 ## Integração com outras notas
 
 - [[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]]
@@ -296,3 +306,4 @@ A fórmula é igual. A diferença: para a mesma potência em Watts, a corrente e
 ## Perguntas que esta nota responde
 
 - O que é Dimensionamento de Cabos DC — Cálculo Prático em instalações elétricas náuticas?
+

@@ -1,0 +1,27 @@
+{
+  "slug": "bancos-bateria-separacao-funcional",
+  "kind": "comparison_cards",
+  "title": "Bancos de bateria: separacao funcional",
+  "summary": "Comparacao entre banco de partida, servico e emergencia para evitar misturar funcoes criticas.",
+  "didactic_goal": "Fixar que bancos de bateria devem ser pensados por funcao, regime de corrente e risco operacional.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "PARTIDA, SERVICO E EMERGENCIA NAO DEVEM SER TRATADOS COMO A MESMA COISA",
+  "notes": [
+    "Partida privilegia corrente de pico e confiabilidade imediata.",
+    "Servico privilegia energia acumulada e ciclo profundo.",
+    "Emergencia precisa permanecer isolada e testavel.",
+    "Misturar funcoes aumenta risco de ficar sem partida depois de consumir conforto."
+  ],
+  "caution": "A configuracao exata depende do porte do barco, motor, cargas e estrategia de chaveamento/isolamento.",
+  "target_notes": [
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md",
+    "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+  ],
+  "columns": 3,
+  "cards": [
+    {"title": "Partida", "detail": "Entrega pico alto por pouco tempo para motor de arranque.", "color": "#1D6FD8", "items": ["CCA", "curto tempo", "isolamento"]},
+    {"title": "Servico", "detail": "Sustenta eletronica, bombas, iluminacao, geladeira e conforto.", "color": "#2A9D57", "items": ["ciclo", "autonomia", "DoD"]},
+    {"title": "Emergencia", "detail": "Reserva protegida para recuperar partida ou sistema critico.", "color": "#DB7C26", "items": ["isolado", "testavel", "ultimo recurso"]}
+  ]
+}

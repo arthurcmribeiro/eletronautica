@@ -238,6 +238,16 @@ Para usuário final: bateria com BMS interno (plug-and-play, sem configuração)
 
 BMS com balanceamento passivo equilibra na carga (topo do ciclo). Células com diferença grande de capacidade nunca ficam perfeitamente balanceadas por BMS passivo. BMS ativo equilibra em qualquer ponto do ciclo — solução superior para bancos com células heterogêneas.
 
+## Visual didático
+
+![BMS: camadas de protecao](../_visuals/generated/bms-camadas-protecao.svg)
+
+Mostrar BMS como sistema de seguranca e coordenacao, nao como acessorio opcional.
+
+**Cautela:** BMS nao substitui projeto, fusivel, cabos, ventilacao, configuracao de carregadores e compatibilidade com fabricantes.
+
+Material de apoio: [BMS: camadas de protecao](../_visuals/generated/bms-camadas-protecao.md)
+
 ## Integração com outras notas
 
 - [[Bancos de Bateria]]
@@ -252,3 +262,4 @@ BMS com balanceamento passivo equilibra na carga (topo do ciclo). Células com d
 
 - O que é BMS — Battery Management System em instalações elétricas náuticas?
 - Qual é a função de BMS — Battery Management System na embarcação?
+

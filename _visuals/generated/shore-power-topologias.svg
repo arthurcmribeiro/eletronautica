@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Shore power: topologias de entrada</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Comparativo visual entre entrada de marina, protecao, transformacao/isolamento e distribuicao AC de bordo.</text>
+<rect x="70" y="178" width="1260" height="80" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="208" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">A ENTRADA AC DO CAIS NAO E SO UMA TOMADA: E UMA INTERFACE DE SEGURANCA</text>
+<rect x="70.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="70.0" y="300" width="297.0" height="12" fill="#1D6FD8" rx="10" ry="10"/>
+<text x="94.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Marina</text>
+<text x="94.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Fonte externa com qualidade,</text>
+<text x="94.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">polaridade, aterramento e protecao</text>
+<text x="94.0" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">que variam por local.</text>
+<rect x="94.0" y="473" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">tensao</text>
+<rect x="94.0" y="497" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">frequencia</text>
+<rect x="94.0" y="521" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">polaridade</text>
+<rect x="391.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="391.0" y="300" width="297.0" height="12" fill="#D9534F" rx="10" ry="10"/>
+<text x="415.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Entrada</text>
+<text x="415.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Conector, cabo, disjuntor, DR/ELCI</text>
+<text x="415.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">e ponto inicial de protecao do</text>
+<text x="415.0" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">barco.</text>
+<rect x="415.0" y="473" width="8" height="8" fill="#D9534F" rx="18" ry="18"/>
+<text x="433.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">conector</text>
+<rect x="415.0" y="497" width="8" height="8" fill="#D9534F" rx="18" ry="18"/>
+<text x="433.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">DR</text>
+<rect x="415.0" y="521" width="8" height="8" fill="#D9534F" rx="18" ry="18"/>
+<text x="433.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">disjuntor</text>
+<rect x="712.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="712.0" y="300" width="297.0" height="12" fill="#7C5CC4" rx="10" ry="10"/>
+<text x="736.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Isolamento</text>
+<text x="736.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Isolador galvanico ou</text>
+<text x="736.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">transformador alteram o caminho de</text>
+<text x="736.0" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">correntes indesejadas.</text>
+<rect x="736.0" y="473" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">galvanico</text>
+<rect x="736.0" y="497" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">transformador</text>
+<rect x="736.0" y="521" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="754.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">barreira</text>
+<rect x="1033.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="1033.0" y="300" width="297.0" height="12" fill="#2A9D57" rx="10" ry="10"/>
+<text x="1057.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Distribuicao</text>
+<text x="1057.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Painel AC, linhas leves/pesadas e</text>
+<text x="1057.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">cargas com protecao por circuito.</text>
+<rect x="1057.0" y="473" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="1075.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">painel</text>
+<rect x="1057.0" y="497" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="1075.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">cargas</text>
+<rect x="1057.0" y="521" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="1075.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">teste</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: TOPOLOGIA-COMPARATIVA  |  PRIORIDADE: ALTA</text>
+</svg>

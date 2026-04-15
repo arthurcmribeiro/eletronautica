@@ -1,0 +1,34 @@
+{
+  "slug": "solar-mppt-banco-cargas",
+  "kind": "flow_diagram",
+  "title": "Solar DC: painel, MPPT, banco e cargas",
+  "summary": "Fluxo de energia solar a bordo desde o painel ate o banco e as cargas DC/AC via inversor.",
+  "didactic_goal": "Mostrar que painel solar nao alimenta o barco sozinho; ele passa por controlador, banco e estrategia de consumo.",
+  "format": "fluxo-de-energia",
+  "priority": "alta",
+  "hero_label": "SOLAR AJUDA O BALANCO, MAS O BANCO CONTINUA SENDO O BUFFER DO SISTEMA",
+  "notes": [
+    "O controlador MPPT adapta energia do painel para carregar o banco.",
+    "O banco absorve variacao de sol, sombra e consumo.",
+    "Cargas AC via inversor aumentam demanda sobre o banco.",
+    "Dimensionamento precisa considerar consumo diario e geracao real."
+  ],
+  "caution": "Geracao solar real depende de area, orientacao, sombra, temperatura, eficiencia e perfil de uso.",
+  "target_notes": [
+    "30_Energia_e_Conversao/Placa Solar (DC).md",
+    "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+  ],
+  "nodes": [
+    {"title": "Painel", "detail": "Converte luz em energia DC variavel conforme sol e sombra.", "color": "#E0A100", "items": ["W pico", "sombra", "temperatura"]},
+    {"title": "Protecao", "detail": "Fusiveis, seccionamento e cabos adequados para o circuito fotovoltaico.", "color": "#D9534F", "items": ["fusivel", "chave", "cabo"]},
+    {"title": "MPPT", "detail": "Controla ponto de maxima potencia e perfil de carga do banco.", "color": "#1D6FD8", "items": ["bulk", "absorcao", "float"]},
+    {"title": "Banco", "detail": "Armazena energia e estabiliza o consumo ao longo do dia.", "color": "#2A9D57", "items": ["SoC", "DoD", "shunt"]},
+    {"title": "Cargas", "detail": "DC direto ou AC via inversor, sempre descontando perdas.", "color": "#7C5CC4", "items": ["DC", "inversor", "perdas"]}
+  ],
+  "callout_title": "ATENCOES DE CAMPO",
+  "callouts": [
+    {"title": "Sombra parcial", "detail": "Uma sombra pequena pode derrubar producao.", "color": "#DB7C26"},
+    {"title": "Perfil errado", "detail": "MPPT precisa da quimica correta do banco.", "color": "#D9534F"},
+    {"title": "Expectativa", "detail": "Solar reduz deficit; nao cria energia infinita.", "color": "#E0A100"}
+  ]
+}

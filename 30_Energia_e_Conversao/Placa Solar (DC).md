@@ -199,6 +199,16 @@ Os mais recorrentes são:
 - usar painel flexível sem respeitar limites de instalação térmica;
 - esquecer que produção sem armazenamento utilizável também é perda.
 
+## Visual didático
+
+![Solar DC: painel, MPPT, banco e cargas](../_visuals/generated/solar-mppt-banco-cargas.svg)
+
+Mostrar que painel solar nao alimenta o barco sozinho; ele passa por controlador, banco e estrategia de consumo.
+
+**Cautela:** Geracao solar real depende de area, orientacao, sombra, temperatura, eficiencia e perfil de uso.
+
+Material de apoio: [Solar DC: painel, MPPT, banco e cargas](../_visuals/generated/solar-mppt-banco-cargas.md)
+
 ## Integração com outras notas
 
 - [[Bancos de Bateria]]
@@ -215,3 +225,4 @@ Os mais recorrentes são:
 - Como dimensionar solar para embarcação com critério técnico e não por impulso?
 - Por que sombreamento e integração com o banco pesam tanto no resultado?
 - Quando painel rígido ou flexível faz mais sentido a bordo?
+

@@ -1,0 +1,34 @@
+{
+  "slug": "ar-condicionado-marine-fluxo",
+  "kind": "flow_diagram",
+  "title": "Ar-condicionado marine: energia, agua e controle",
+  "summary": "Fluxo visual entre alimentacao AC, protecao, bomba de agua, condensacao, evaporadora e controle.",
+  "didactic_goal": "Mostrar ar-condicionado nautico como sistema eletromecanico integrado, nao so uma carga AC.",
+  "format": "fluxo-de-sistema",
+  "priority": "media",
+  "hero_label": "AR-CONDICIONADO MARINE DEPENDE DE ENERGIA, AGUA DE RESFRIAMENTO E CONTROLE",
+  "notes": [
+    "Carga AC tem pico de partida e consumo relevante.",
+    "Bomba de agua e fluxo de resfriamento sao parte do sistema.",
+    "Filtro, valvula, sensor e condensador afetam funcionamento.",
+    "Diagnostico precisa olhar eletrica e hidraulica juntas."
+  ],
+  "caution": "Arquiteturas variam entre self-contained, chiller e sistemas maiores. Consulte manual e projeto hidraulico/eletrico.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Marine — Sistema Completo.md",
+    "70_Hidraulica_Climatizacao_e_Utilidades/Bomba Ar Condicionado.md"
+  ],
+  "nodes": [
+    {"title": "Alimentacao AC", "detail": "Shore, gerador ou inversor precisam suportar partida e regime.", "color": "#1D6FD8", "items": ["AC", "pico", "protecao"]},
+    {"title": "Controle", "detail": "Termostato, placa e sensores comandam compressor e bomba.", "color": "#7C5CC4", "items": ["termostato", "placa", "sensor"]},
+    {"title": "Bomba de agua", "detail": "Garante fluxo para troca termica no condensador.", "color": "#168A8A", "items": ["fluxo", "filtro", "valvula"]},
+    {"title": "Unidade", "detail": "Compressor, condensador, evaporador e ventilacao entregam frio.", "color": "#2A9D57", "items": ["compressor", "evaporador", "ventilador"]},
+    {"title": "Rejeicao", "detail": "Calor sai pela agua; falha de fluxo derruba desempenho.", "color": "#DB7C26", "items": ["saida", "calor", "alarme"]}
+  ],
+  "callout_title": "DIAGNOSTICO INTEGRADO",
+  "callouts": [
+    {"title": "Sem agua", "detail": "Pode parecer falha eletrica, mas e hidraulica.", "color": "#D9534F"},
+    {"title": "Pico alto", "detail": "Inversor/gerador pode cair na partida.", "color": "#DB7C26"},
+    {"title": "Filtro sujo", "detail": "Fluxo baixo gera alarme e baixo rendimento.", "color": "#E0A100"}
+  ]
+}

@@ -146,6 +146,16 @@ A documentação oficial informa que o VRM é gratuito; recursos e serviços esp
 
 Não. Ele complementa a operação local com camada remota, histórica e de gestão.
 
+## Visual didático
+
+![Monitoramento remoto: fluxo VRM](../_visuals/generated/monitoramento-remoto-vrm-fluxo.svg)
+
+Mostrar que monitoramento remoto depende de medicao local confiavel, gateway e conectividade estavel.
+
+**Cautela:** Monitoramento remoto nao substitui protecoes locais, alarmes criticos e comissionamento presencial.
+
+Material de apoio: [Monitoramento remoto: fluxo VRM](../_visuals/generated/monitoramento-remoto-vrm-fluxo.md)
+
 ## Integração com outras notas
 
 - [[Atuador Linear]]
@@ -161,3 +171,4 @@ Não. Ele complementa a operação local com camada remota, histórica e de gest
 
 - O que é Monitoramento Remoto — VRM / Telemetria em instalações elétricas náuticas?
 - Qual é a função de Monitoramento Remoto — VRM / Telemetria na embarcação?
+

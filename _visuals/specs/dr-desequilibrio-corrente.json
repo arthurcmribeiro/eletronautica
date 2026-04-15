@@ -1,0 +1,26 @@
+{
+  "slug": "dr-desequilibrio-corrente",
+  "kind": "cause_effect",
+  "title": "DR: desequilibrio de corrente",
+  "summary": "Causa e efeito do disparo de protecao diferencial por corrente que sai por um caminho e retorna por outro.",
+  "didactic_goal": "Explicar DR como comparador de corrente, nao como disjuntor de sobrecarga.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "DR DISPARA QUANDO A CORRENTE QUE SAI NAO VOLTA PELO CAMINHO ESPERADO",
+  "notes": [
+    "DR compara corrente nos condutores ativos monitorados.",
+    "Fuga para massa, agua, PE ou corpo humano cria desequilibrio.",
+    "DR nao substitui disjuntor de sobrecorrente.",
+    "Topologia de neutro/PE influencia funcionamento e testes."
+  ],
+  "caution": "Corrente diferencial nominal, seletividade, ELCI/GFCI/DR e topologia variam conforme aplicacao e referencial adotado.",
+  "target_notes": [
+    "40_Distribuicao_Protecao_e_Aterramento/Protecao Dr.md",
+    "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+  ],
+  "columns": [
+    {"title": "Condicao", "color": "#1D6FD8", "items": ["Corrente sai pela fase", "Retorno esperado passa pelo neutro ou condutor ativo correspondente", "DR mede a soma das correntes", "Sistema equilibrado nao dispara"]},
+    {"title": "Falha", "color": "#D9534F", "items": ["Parte da corrente escapa por outro caminho", "Pode passar por massa, PE, agua ou pessoa", "A soma deixa de fechar", "DR interpreta risco de fuga"]},
+    {"title": "Acao", "color": "#2A9D57", "items": ["DR abre o circuito monitorado", "Disjuntor continua necessario para curto/sobrecarga", "Teste deve considerar a topologia", "Falha deve ser diagnosticada antes de religar"]}
+  ]
+}

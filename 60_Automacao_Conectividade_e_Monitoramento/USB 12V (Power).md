@@ -178,6 +178,16 @@ Como contingência, talvez. Como instalação profissional, não é a solução 
 
 Não necessariamente. O funcionamento aparente não prova que o ramal, a proteção e a dissipação estejam corretos.
 
+## Visual didático
+
+![USB 12 V: queda, ruido e carga instavel](../_visuals/generated/usb-12v-queda-ruido-carga.svg)
+
+Mostrar que USB a bordo e uma conversao DC-DC sensivel a ruido, queda e corrente.
+
+**Cautela:** Perfis USB-C PD, QC e fabricantes variam. Use componentes marinizados e especificados para corrente real.
+
+Material de apoio: [USB 12 V: queda, ruido e carga instavel](../_visuals/generated/usb-12v-queda-ruido-carga.md)
+
 ## Integração com outras notas
 
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]]
@@ -192,3 +202,4 @@ Não necessariamente. O funcionamento aparente não prova que o ramal, a proteç
 - Como instalar USB 12V com critério técnico em embarcações?
 - Quais problemas USB pode causar no sistema elétrico e de rádio?
 - Como dimensionar proteção e cabeamento para portas USB de bordo?
+

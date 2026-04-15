@@ -1,0 +1,26 @@
+{
+  "slug": "usb-12v-queda-ruido-carga",
+  "kind": "cause_effect",
+  "title": "USB 12 V: queda, ruido e carga instavel",
+  "summary": "Causa e efeito de carregadores USB 12 V ruins, cabo longo, conversor fraco e queda de tensao.",
+  "didactic_goal": "Mostrar que USB a bordo e uma conversao DC-DC sensivel a ruido, queda e corrente.",
+  "format": "causa-efeito",
+  "priority": "media",
+  "hero_label": "USB PARECE SIMPLES, MAS E UMA CARGA DC-DC COM CORRENTE, RUIDO E QUEDA",
+  "notes": [
+    "Carregador USB converte 12/24 V em 5 V ou perfis PD/QC.",
+    "Cabo fino e distancia derrubam tensao.",
+    "Conversor ruim injeta ruido em audio, radio ou instrumentos.",
+    "Protecao e identificacao continuam necessarias."
+  ],
+  "caution": "Perfis USB-C PD, QC e fabricantes variam. Use componentes marinizados e especificados para corrente real.",
+  "target_notes": [
+    "60_Automacao_Conectividade_e_Monitoramento/USB 12V (Power).md",
+    "40_Distribuicao_Protecao_e_Aterramento/Linha Leve (AC).md"
+  ],
+  "columns": [
+    {"title": "Causas", "color": "#DB7C26", "items": ["Cabo fino ou longo no lado DC", "Conversor USB sem filtro adequado", "Carga rapida acima do previsto", "Ponto compartilhado com eletronica sensivel"]},
+    {"title": "Sintomas", "color": "#D9534F", "items": ["Celular alterna carregando/descarregando", "Ruido em audio ou VHF", "Aquecimento no adaptador", "Queda de tensao em circuito leve"]},
+    {"title": "Melhorias", "color": "#2A9D57", "items": ["Circuito protegido e identificado", "Conversor DC-DC de qualidade", "Cabo dimensionado e curto", "Separar cargas ruidosas de instrumentos"]}
+  ]
+}

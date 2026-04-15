@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Bomba de porao: energia, acionamento e alarme</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Fluxo de seguranca para bomba de porao com alimentacao protegida, boia/sensor, comando manual e alarme.</text>
+<rect x="70" y="178" width="1260" height="80" fill="#EEF7FF" rx="18" ry="18" stroke="#8CB9F4" stroke-width="2"/>
+<text x="700" y="208" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">BOMBA DE PORAO CRITICA PRECISA FUNCIONAR MESMO QUANDO TODO O RESTO FALHA</text>
+<rect x="70.0" y="300" width="234.4" height="190" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="70.0" y="300" width="234.4" height="12" fill="#1D6FD8" rx="10" ry="10"/>
+<text x="94.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Banco</text>
+<text x="94.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Fonte DC com energia disponivel</text>
+<text x="94.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">mesmo em condicoes adversas.</text>
+<line x1="308.4" y1="395.0" x2="320.4" y2="395.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="320.4" y1="395.0" x2="304.8115427318801" y2="404.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="320.4" y1="395.0" x2="304.8115427318801" y2="386.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<rect x="326.4" y="300" width="234.4" height="190" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="326.4" y="300" width="234.4" height="12" fill="#D9534F" rx="10" ry="10"/>
+<text x="350.4" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Protecao</text>
+<text x="350.4" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Fusivel/disjuntor protege cabo e</text>
+<text x="350.4" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">circuito proximo a fonte.</text>
+<line x1="564.8" y1="395.0" x2="576.8" y2="395.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="576.8" y1="395.0" x2="561.2115427318801" y2="404.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="576.8" y1="395.0" x2="561.2115427318801" y2="386.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<rect x="582.8" y="300" width="234.4" height="190" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="582.8" y="300" width="234.4" height="12" fill="#E0A100" rx="10" ry="10"/>
+<text x="606.8" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Comando</text>
+<text x="606.8" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Boia, sensor automatico e chave</text>
+<text x="606.8" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">manual precisam ser testaveis.</text>
+<line x1="821.1999999999999" y1="395.0" x2="833.1999999999999" y2="395.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="833.1999999999999" y1="395.0" x2="817.61154273188" y2="404.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="833.1999999999999" y1="395.0" x2="817.61154273188" y2="386.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<rect x="839.1999999999999" y="300" width="234.4" height="190" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="839.1999999999999" y="300" width="234.4" height="12" fill="#168A8A" rx="10" ry="10"/>
+<text x="863.1999999999999" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Bomba</text>
+<text x="863.1999999999999" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Remove agua, mas depende de</text>
+<text x="863.1999999999999" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">instalacao mecanica e mangueira</text>
+<text x="863.1999999999999" y="432" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">correta.</text>
+<line x1="1077.6" y1="395.0" x2="1089.6" y2="395.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="1089.6" y1="395.0" x2="1074.0115427318801" y2="404.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="1089.6" y1="395.0" x2="1074.0115427318801" y2="386.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<rect x="1095.6" y="300" width="234.4" height="190" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="1095.6" y="300" width="234.4" height="12" fill="#DB7C26" rx="10" ry="10"/>
+<text x="1119.6" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Alarme</text>
+<text x="1119.6" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Sensor de alto nivel avisa quando</text>
+<text x="1119.6" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">bomba nao da conta ou falhou.</text>
+<rect x="70" y="560" width="1260" height="165" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<text x="100" y="598" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">ERROS DE CAMPO</text>
+<rect x="100.0" y="622" width="10" height="10" fill="#D9534F" rx="18" ry="18"/>
+<text x="124.0" y="635" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">Sem teste</text>
+<text x="124.0" y="657" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Bomba so e descoberta na emergencia.</text>
+<rect x="493.3333333333333" y="622" width="10" height="10" fill="#DB7C26" rx="18" ry="18"/>
+<text x="517.3333333333333" y="635" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">Fusivel longe</text>
+<text x="517.3333333333333" y="657" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Cabo fica desprotegido no trecho</text>
+<text x="517.3333333333333" y="673" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">critico.</text>
+<rect x="886.6666666666666" y="622" width="10" height="10" fill="#E0A100" rx="18" ry="18"/>
+<text x="910.6666666666666" y="635" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">Sem alarme</text>
+<text x="910.6666666666666" y="657" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Falha silenciosa vira alagamento.</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: FLUXO-DE-SEGURANCA  |  PRIORIDADE: ALTA</text>
+</svg>

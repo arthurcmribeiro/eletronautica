@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Neutro, negativo, PE e bonding</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Quadro didatico para separar papeis que costumam ser confundidos em embarcacoes.</text>
+<rect x="70" y="178" width="1260" height="80" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="208" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">NOMES PARECIDOS, FUNCOES DIFERENTES: NAO MISTURE REFERENCIAS SEM PROJETO</text>
+<rect x="70.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="70.0" y="300" width="297.0" height="12" fill="#1D6FD8" rx="10" ry="10"/>
+<text x="94.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Neutro AC</text>
+<text x="94.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Condutor funcional do sistema AC</text>
+<text x="94.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">conforme fonte e topologia.</text>
+<rect x="94.0" y="473" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">AC</text>
+<rect x="94.0" y="497" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">funcional</text>
+<rect x="94.0" y="521" width="8" height="8" fill="#1D6FD8" rx="18" ry="18"/>
+<text x="112.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">topologia</text>
+<rect x="391.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="391.0" y="300" width="297.0" height="12" fill="#5B6B79" rx="10" ry="10"/>
+<text x="415.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Negativo DC</text>
+<text x="415.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Retorno do circuito DC para</text>
+<text x="415.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">baterias, fontes e cargas.</text>
+<rect x="415.0" y="473" width="8" height="8" fill="#5B6B79" rx="18" ry="18"/>
+<text x="433.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">DC</text>
+<rect x="415.0" y="497" width="8" height="8" fill="#5B6B79" rx="18" ry="18"/>
+<text x="433.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">retorno</text>
+<rect x="415.0" y="521" width="8" height="8" fill="#5B6B79" rx="18" ry="18"/>
+<text x="433.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">banco</text>
+<rect x="712.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="712.0" y="300" width="297.0" height="12" fill="#2A9D57" rx="10" ry="10"/>
+<text x="736.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">PE</text>
+<text x="736.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Condutor de protecao para falhas</text>
+<text x="736.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">de isolacao e choque.</text>
+<rect x="736.0" y="473" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="754.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">protecao</text>
+<rect x="736.0" y="497" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="754.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">falha</text>
+<rect x="736.0" y="521" width="8" height="8" fill="#2A9D57" rx="18" ry="18"/>
+<text x="754.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">choque</text>
+<rect x="1033.0" y="300" width="297.0" height="260" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="1033.0" y="300" width="297.0" height="12" fill="#7C5CC4" rx="10" ry="10"/>
+<text x="1057.0" y="344" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Bonding</text>
+<text x="1057.0" y="392" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Interligacao de massas e partes</text>
+<text x="1057.0" y="412" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">metalicas conforme projeto.</text>
+<rect x="1057.0" y="473" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="1075.0" y="484" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">massas</text>
+<rect x="1057.0" y="497" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="1075.0" y="508" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">equipotencial</text>
+<rect x="1057.0" y="521" width="8" height="8" fill="#7C5CC4" rx="18" ry="18"/>
+<text x="1075.0" y="532" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">corrosao</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: QUADRO-COMPARATIVO  |  PRIORIDADE: ALTA</text>
+</svg>

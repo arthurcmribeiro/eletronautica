@@ -1,0 +1,27 @@
+{
+  "slug": "corrosao-stray-current-causa-efeito",
+  "kind": "cause_effect",
+  "title": "Correntes parasitas: causa, caminho e dano",
+  "summary": "Causa e efeito da corrosao por corrente parasita, separando fuga DC, caminho pela agua e dano acelerado.",
+  "didactic_goal": "Mostrar por que pequenas fugas DC podem destruir metais rapidamente em ambiente nautico.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "CORRENTE PARASITA PROCURA CAMINHO E PODE TRANSFORMAR METAL EM ANODO INDESEJADO",
+  "notes": [
+    "Fuga DC e especialmente agressiva para corrosao eletrolitica.",
+    "A agua fecha caminhos que nao existiriam em ambiente seco.",
+    "Bonding, isolamento e medicao sao parte do diagnostico.",
+    "Anodo sacrificial nao corrige fuga eletrica ativa."
+  ],
+  "caution": "Diagnostico de corrosao deve diferenciar corrosao galvanica, eletrolise/stray current e problemas mecanicos/quimicos.",
+  "target_notes": [
+    "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md",
+    "80_Seguranca_e_Corrosao/Eletrolise.md",
+    "80_Seguranca_e_Corrosao/Anodo.md"
+  ],
+  "columns": [
+    {"title": "Origem", "color": "#D9534F", "items": ["Fuga DC por cabo danificado", "Equipamento com isolamento comprometido", "Negativo/bonding mal resolvido", "Marina ou vizinho contaminando ambiente"]},
+    {"title": "Caminho", "color": "#DB7C26", "items": ["Corrente atravessa agua", "Metais submersos entram no circuito", "Diferenca de potencial acelera reacao", "Anodo pode consumir rapido demais"]},
+    {"title": "Dano", "color": "#2A9D57", "items": ["Metal vira anodo indesejado", "Pitting e perda localizada aparecem", "Troca de anodo nao resolve causa", "Medicao e isolamento orientam correcao"]}
+  ]
+}

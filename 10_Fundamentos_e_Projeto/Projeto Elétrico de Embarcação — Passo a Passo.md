@@ -317,6 +317,16 @@ Incêndio elétrico. Segundo estatísticas da BOAT/US (EUA), problemas elétrico
 
 Fotografar todo o sistema, medir correntes com alicate amperímetro, identificar bitolas, mapear fusíveis. É trabalhoso mas viável. A partir daí, gerar o documento de retroengenharia e atualizar com cada intervenção.
 
+## Visual didático
+
+![Projeto eletrico: fluxo de entregaveis](../_visuals/generated/projeto-eletrico-fluxo-entregaveis.svg)
+
+Mostrar que projeto eletrico nautico nao e uma lista de equipamentos, mas uma sequencia auditavel de decisoes tecnicas.
+
+**Cautela:** Este fluxo e uma estrutura editorial e didatica. O projeto real deve considerar normas aplicaveis, manual dos fabricantes, vistoria e condicoes da embarcacao.
+
+Material de apoio: [Projeto eletrico: fluxo de entregaveis](../_visuals/generated/projeto-eletrico-fluxo-entregaveis.md)
+
 ## Integração com outras notas
 
 - [[Tipos de Embarcação]]
@@ -332,3 +342,4 @@ Fotografar todo o sistema, medir correntes com alicate amperímetro, identificar
 
 - O que é Projeto Elétrico de Embarcação — Passo a Passo em instalações elétricas náuticas?
 - Qual é a função de Projeto Elétrico de Embarcação — Passo a Passo na embarcação?
+

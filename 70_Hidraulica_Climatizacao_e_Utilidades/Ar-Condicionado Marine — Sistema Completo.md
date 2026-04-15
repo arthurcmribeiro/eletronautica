@@ -181,6 +181,16 @@ Os mais frequentes são:
 - esconder componentes críticos em locais sem acesso;
 - subdimensionar o sistema porque o critério foi apenas "metragem".
 
+## Visual didático
+
+![Ar-condicionado marine: energia, agua e controle](../_visuals/generated/ar-condicionado-marine-fluxo.svg)
+
+Mostrar ar-condicionado nautico como sistema eletromecanico integrado, nao so uma carga AC.
+
+**Cautela:** Arquiteturas variam entre self-contained, chiller e sistemas maiores. Consulte manual e projeto hidraulico/eletrico.
+
+Material de apoio: [Ar-condicionado marine: energia, agua e controle](../_visuals/generated/ar-condicionado-marine-fluxo.md)
+
 ## Integração com outras notas
 
 - [[Bomba Ar Condicionado]]
@@ -197,3 +207,4 @@ Os mais frequentes são:
 - Quais subsistemas definem o funcionamento do ar-condicionado marine?
 - Por que tanta falha de AC começa fora do circuito frigorífico?
 - Como o sistema de climatização se encaixa na arquitetura elétrica e hidráulica do barco?
+

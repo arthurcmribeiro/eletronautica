@@ -1,0 +1,34 @@
+{
+  "slug": "bms-camadas-protecao",
+  "kind": "flow_diagram",
+  "title": "BMS: camadas de protecao",
+  "summary": "Fluxo visual das funcoes do BMS em LiFePO4: medir, decidir, comunicar, limitar e proteger.",
+  "didactic_goal": "Mostrar BMS como sistema de seguranca e coordenacao, nao como acessorio opcional.",
+  "format": "arquitetura-de-controle",
+  "priority": "alta",
+  "hero_label": "EM LITIO, O BMS E PARTE DO SISTEMA DE SEGURANCA",
+  "notes": [
+    "O BMS monitora celulas, temperatura e corrente.",
+    "Ele pode limitar carga, descarga e desconectar em condicoes perigosas.",
+    "BMS bom tambem comunica limites ao carregador, alternador e inversor.",
+    "Protecao por fusivel continua necessaria para cabos e curto-circuito."
+  ],
+  "caution": "BMS nao substitui projeto, fusivel, cabos, ventilacao, configuracao de carregadores e compatibilidade com fabricantes.",
+  "target_notes": [
+    "20_Baterias_e_Armazenamento/BMS — Battery Management System.md",
+    "20_Baterias_e_Armazenamento/Litio LiFePO4 — Instalacao e Cuidados Especificos.md"
+  ],
+  "nodes": [
+    {"title": "Medir", "detail": "Tensao de celulas, corrente, temperatura e estado interno.", "color": "#1D6FD8", "items": ["celulas", "corrente", "temperatura"]},
+    {"title": "Comparar", "detail": "Verifica limites de carga, descarga, temperatura e desequilibrio.", "color": "#E0A100", "items": ["limites", "alarme", "balanceamento"]},
+    {"title": "Comunicar", "detail": "Envia limites e alarmes para carregador, inversor e monitoramento.", "color": "#168A8A", "items": ["CAN", "NMEA", "monitor"]},
+    {"title": "Limitar", "detail": "Reduz ou corta carga/descarga antes de dano ou condicao insegura.", "color": "#DB7C26", "items": ["carga", "descarga", "temperatura"]},
+    {"title": "Proteger", "detail": "Desconecta em falha critica, mas nao substitui protecao externa.", "color": "#D9534F", "items": ["contator", "fusivel", "procedimento"]}
+  ],
+  "callout_title": "MENSAGEM DIDATICA",
+  "callouts": [
+    {"title": "Nao e opcional", "detail": "LiFePO4 sem BMS e projeto incompleto.", "color": "#D9534F"},
+    {"title": "Nao e magico", "detail": "BMS nao corrige cabo e carregador errados.", "color": "#DB7C26"},
+    {"title": "Integracao importa", "detail": "Fontes precisam respeitar limites informados.", "color": "#2A9D57"}
+  ]
+}

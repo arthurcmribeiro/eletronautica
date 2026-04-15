@@ -158,6 +158,16 @@ Os mais perigosos são:
 - considerar o problema resolvido porque a bomba "liga";
 - não testar o sistema completo em rotina de manutenção.
 
+## Visual didático
+
+![Bomba de porao: energia, acionamento e alarme](../_visuals/generated/bomba-porao-fluxo-alarme.svg)
+
+Mostrar bomba de porao como sistema de seguranca, nao apenas como carga DC simples.
+
+**Cautela:** A topologia exata deve seguir projeto, manual da bomba, capacidade de vazao, protecao e requisitos da embarcacao.
+
+Material de apoio: [Bomba de porao: energia, acionamento e alarme](../_visuals/generated/bomba-porao-fluxo-alarme.md)
+
 ## Integração com outras notas
 
 - [[Alarme de Alagamento - Sensor de Porão]]
@@ -173,3 +183,4 @@ Os mais perigosos são:
 - Por que a bomba de porão automática deve continuar viva com o barco "desligado"?
 - Quando uma instalação perde eficiência mesmo com bomba boa?
 - Por que bomba, sensor e alarme precisam ser pensados como sistema?
+

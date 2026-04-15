@@ -1,0 +1,59 @@
+{
+  "slug": "projeto-eletrico-fluxo-entregaveis",
+  "kind": "flow_diagram",
+  "title": "Projeto eletrico: fluxo de entregaveis",
+  "summary": "Mapa visual do caminho entre levantamento, arquitetura, dimensionamento, protecao, documentacao e revisao de campo.",
+  "didactic_goal": "Mostrar que projeto eletrico nautico nao e uma lista de equipamentos, mas uma sequencia auditavel de decisoes tecnicas.",
+  "format": "fluxo-de-projeto",
+  "priority": "alta",
+  "hero_label": "BOM PROJETO TRANSFORMA NECESSIDADE DE USO EM SISTEMA DOCUMENTADO E TESTAVEL",
+  "notes": [
+    "O levantamento define cargas, perfil de uso, fontes e restricoes fisicas.",
+    "A arquitetura separa bancos, fontes, paineis e dominios AC/DC.",
+    "O dimensionamento fecha cabos, protecoes, barramentos e autonomia antes da instalacao.",
+    "A documentacao torna a manutencao possivel depois que o barco sai do estaleiro."
+  ],
+  "caution": "Este fluxo e uma estrutura editorial e didatica. O projeto real deve considerar normas aplicaveis, manual dos fabricantes, vistoria e condicoes da embarcacao.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Projeto Eletrico de Embarcacao — Passo a Passo.md",
+    "10_Fundamentos_e_Projeto/Diagrama Unifilar — Documentacao do Sistema Eletrico.md"
+  ],
+  "nodes": [
+    {
+      "title": "Levantamento",
+      "detail": "Cargas, fontes, autonomia desejada, perfil de uso e restricoes do barco.",
+      "color": "#1D6FD8",
+      "items": ["lista de cargas", "fontes disponiveis", "modo de uso"]
+    },
+    {
+      "title": "Arquitetura",
+      "detail": "Separacao AC/DC, bancos, paineis, fontes, protecoes principais e interfaces.",
+      "color": "#168A8A",
+      "items": ["AC e DC", "bancos", "shore/gerador"]
+    },
+    {
+      "title": "Calculos",
+      "detail": "Corrente, queda de tensao, autonomia, fusivel, disjuntor e bitola.",
+      "color": "#E0A100",
+      "items": ["I = P/V", "queda", "autonomia"]
+    },
+    {
+      "title": "Documentos",
+      "detail": "Unifilar, lista de cabos, tabela de protecoes, etiquetas e plano de teste.",
+      "color": "#7C5CC4",
+      "items": ["unifilar", "cabos", "testes"]
+    },
+    {
+      "title": "Revisao",
+      "detail": "Inspecao, medicao, comissionamento e atualizacao apos modificacoes.",
+      "color": "#2A9D57",
+      "items": ["checklist", "medicoes", "as built"]
+    }
+  ],
+  "callout_title": "ONDE PROJETOS COSTUMAM FALHAR",
+  "callouts": [
+    {"title": "Carga sem perfil", "detail": "Potencia nominal sem horas de uso nao dimensiona autonomia.", "color": "#D9534F"},
+    {"title": "Protecao depois do cabo", "detail": "Fusivel protege o cabo, nao o equipamento em abstrato.", "color": "#DB7C26"},
+    {"title": "Sem as built", "detail": "Manutencao futura fica dependente de memoria e tentativa.", "color": "#E0A100"}
+  ]
+}

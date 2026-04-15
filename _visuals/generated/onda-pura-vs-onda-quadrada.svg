@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
-<text x="70" y="80" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start">Onda pura vs onda quadrada</text>
-<text x="70" y="112" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Comparativo didático entre forma de onda limpa e forma de onda pobre para explicar por que</text>
-<text x="70" y="136" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">tensao nominal igual nao garante mesma qualidade de energia.</text>
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Onda pura vs onda quadrada</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Comparativo didático entre forma de onda limpa e forma de onda pobre para explicar por que tensao nominal igual nao garante mesma</text>
+<text x="78" y="146" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">qualidade de energia.</text>
 <rect x="70" y="140" width="1260" height="72" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
 <text x="700" y="185" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">MESMA TENSAO NOMINAL NAO IMPLICA MESMA QUALIDADE DE ENERGIA</text>
 <rect x="70" y="245" width="860" height="220" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>

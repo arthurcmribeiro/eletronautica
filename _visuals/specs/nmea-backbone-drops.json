@@ -1,0 +1,34 @@
+{
+  "slug": "nmea-backbone-drops",
+  "kind": "flow_diagram",
+  "title": "NMEA 2000: backbone e drops",
+  "summary": "Arquitetura visual de rede NMEA 2000 com backbone, terminadores, alimentacao e drops para instrumentos.",
+  "didactic_goal": "Mostrar NMEA 2000 como rede estruturada, nao como extensao livre de cabos.",
+  "format": "arquitetura-de-rede",
+  "priority": "alta",
+  "hero_label": "NMEA 2000 TEM ESPINHA DORSAL, TERMINADORES E DROPS COM LIMITES",
+  "notes": [
+    "Backbone e a linha principal da rede.",
+    "Terminadores ficam nas extremidades.",
+    "Drops conectam equipamentos ao backbone.",
+    "Alimentacao da rede deve ser planejada e protegida."
+  ],
+  "caution": "Comprimentos, topologia e carga de rede devem seguir especificacoes NMEA e manuais dos fabricantes.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Chartplotter - GPS - MFD.md"
+  ],
+  "nodes": [
+    {"title": "Terminador", "detail": "Fecha eletricamente uma extremidade do backbone.", "color": "#5B6B79", "items": ["extremo", "resistencia", "teste"]},
+    {"title": "Backbone", "detail": "Linha principal por onde trafegam dados e alimentacao da rede.", "color": "#1D6FD8", "items": ["trunk", "dados", "alimentacao"]},
+    {"title": "Drops", "detail": "Ramais curtos que ligam instrumentos ao backbone.", "color": "#E0A100", "items": ["ramal", "limite", "conector T"]},
+    {"title": "Equipamentos", "detail": "MFD, sensores, piloto, AIS, vento, profundidade e gateways.", "color": "#2A9D57", "items": ["MFD", "sensores", "gateway"]},
+    {"title": "Terminador", "detail": "Fecha a outra extremidade e evita reflexoes de sinal.", "color": "#5B6B79", "items": ["extremo", "rede", "diagnostico"]}
+  ],
+  "callout_title": "ERROS COMUNS",
+  "callouts": [
+    {"title": "Sem terminador", "detail": "Rede fica instavel ou nao comunica.", "color": "#D9534F"},
+    {"title": "Drop longo", "detail": "Ramal vira quase outro backbone.", "color": "#DB7C26"},
+    {"title": "Alimentacao ruim", "detail": "Queda de tensao gera falhas intermitentes.", "color": "#E0A100"}
+  ]
+}

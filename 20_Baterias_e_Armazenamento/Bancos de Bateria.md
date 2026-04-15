@@ -423,6 +423,16 @@ Não há prazo fixo. Troca quando a capacidade real cair abaixo de 70-80% da nom
 
 Para banco de serviço: sim. Voltímetro simples não fornece informação confiável de SoC para chumbo-ácido fora de repouso prolongado. Monitor com shunt é o único jeito de saber com precisão quanto de energia ainda há disponível.
 
+## Visual didático
+
+![Bancos de bateria: separacao funcional](../_visuals/generated/bancos-bateria-separacao-funcional.svg)
+
+Fixar que bancos de bateria devem ser pensados por funcao, regime de corrente e risco operacional.
+
+**Cautela:** A configuracao exata depende do porte do barco, motor, cargas e estrategia de chaveamento/isolamento.
+
+Material de apoio: [Bancos de bateria: separacao funcional](../_visuals/generated/bancos-bateria-separacao-funcional.md)
+
 ## Integração com outras notas
 
 - [[Carregador de Bateria (AC To DC)]]
@@ -438,3 +448,4 @@ Para banco de serviço: sim. Voltímetro simples não fornece informação confi
 
 - O que é Bancos de Bateria em instalações elétricas náuticas?
 - Qual é a função de Bancos de Bateria na embarcação?
+

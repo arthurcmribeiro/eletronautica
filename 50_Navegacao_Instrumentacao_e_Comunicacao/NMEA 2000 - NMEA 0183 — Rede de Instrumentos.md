@@ -332,6 +332,16 @@ A 4800 baud, uma sentence $GPGGA leva ~200ms — atualização máxima ~5Hz. A 3
 
 Com um multímetro: medir resistência entre CAN+ e CAN- (rede desligada) → deve ser ~60Ω. Se for 120Ω falta um terminador. Se for <60Ω tem curto ou dispositivo com problema.
 
+## Visual didático
+
+![NMEA 2000: backbone e drops](../_visuals/generated/nmea-backbone-drops.svg)
+
+Mostrar NMEA 2000 como rede estruturada, nao como extensao livre de cabos.
+
+**Cautela:** Comprimentos, topologia e carga de rede devem seguir especificacoes NMEA e manuais dos fabricantes.
+
+Material de apoio: [NMEA 2000: backbone e drops](../_visuals/generated/nmea-backbone-drops.md)
+
 ## Integração com outras notas
 
 - [[AIS (Automatic Identification System)]]
@@ -347,3 +357,4 @@ Com um multímetro: medir resistência entre CAN+ e CAN- (rede desligada) → de
 
 - O que é NMEA 2000 / NMEA 0183 — Rede de Instrumentos em instalações elétricas náuticas?
 - Qual é a função de NMEA 2000 / NMEA 0183 — Rede de Instrumentos na embarcação?
+

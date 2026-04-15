@@ -366,6 +366,16 @@ As perdas em vazio (sem carga) são de 1–3% da potência nominal — em um tra
 
 Sim. O GFCI protege contra falhas de isolação internas do barco — problema elétrico em equipamento a bordo que leva corrente para a carcaça. O transformador elimina o problema externo (marina). São camadas complementares, não substitutas.
 
+## Visual didático
+
+![Isolador galvanico vs transformador de isolamento](../_visuals/generated/isolador-galvanico-vs-transformador-isolamento.svg)
+
+Diferenciar mitigacao galvanica de barreira eletrica completa na interface com o cais.
+
+**Cautela:** A aplicacao correta depende de norma, fabricante, aterramento, protecao diferencial e topologia de entrada.
+
+Material de apoio: [Isolador galvanico vs transformador de isolamento](../_visuals/generated/isolador-galvanico-vs-transformador-isolamento.md)
+
 ## Integração com outras notas
 
 - [[Aterramento]]
@@ -383,3 +393,4 @@ Sim. O GFCI protege contra falhas de isolação internas do barco — problema e
 
 - O que é Isolador Galvânico / Transformador de Isolamento em instalações elétricas náuticas?
 - Qual é a função de Isolador Galvânico / Transformador de Isolamento na embarcação?
+

@@ -365,6 +365,16 @@ Imediatamente não. Mas coloca tensão de fase no condutor neutro — tocar o ne
 
 60Hz. Equipamentos europeus são projetados para 50Hz — motores giram em velocidade ligeiramente diferente, relógios analógicos podem dessincronizar, transformadores podem aquecer mais.
 
+## Visual didático
+
+![Shore power: topologias de entrada](../_visuals/generated/shore-power-topologias.svg)
+
+Mostrar que shore power e uma interface critica entre instalacao externa e sistema AC do barco.
+
+**Cautela:** Este quadro nao define esquema normativo completo. Use projeto, NORMAM aplicavel, ABNT/IEC, manual dos fabricantes e vistoria.
+
+Material de apoio: [Shore power: topologias de entrada](../_visuals/generated/shore-power-topologias.md)
+
 ## Integração com outras notas
 
 - [[Aterramento]]
@@ -379,3 +389,4 @@ Imediatamente não. Mas coloca tensão de fase no condutor neutro — tocar o ne
 
 - O que é CAIS (Pier) (AC) em instalações elétricas náuticas?
 - Qual é a função de CAIS (Pier) (AC) na embarcação?
+

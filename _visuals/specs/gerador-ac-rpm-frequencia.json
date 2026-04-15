@@ -1,0 +1,26 @@
+{
+  "slug": "gerador-ac-rpm-frequencia",
+  "kind": "cause_effect",
+  "title": "Gerador AC: RPM, frequencia e carga",
+  "summary": "Relacao entre rotacao, frequencia, tensao e comportamento das cargas em geradores AC de bordo.",
+  "didactic_goal": "Mostrar por que gerador deve ser avaliado por frequencia, tensao, carga e estabilidade, nao apenas por kVA.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "NO GERADOR, FREQUENCIA INSTAVEL APARECE COMO PROBLEMA NAS CARGAS",
+  "notes": [
+    "A frequencia depende da rotacao e da arquitetura do gerador.",
+    "Carga excessiva pode derrubar tensao, frequencia ou ambas.",
+    "Equipamentos com motor ou temporizacao sofrem mais com frequencia fora do esperado.",
+    "Diagnostico deve medir tensao e frequencia sob carga."
+  ],
+  "caution": "Geradores inverter e convencionais se comportam de forma diferente. Consulte manual e procedimento do fabricante.",
+  "target_notes": [
+    "30_Energia_e_Conversao/Gerador (AC).md",
+    "10_Fundamentos_e_Projeto/DC vs AC — Corrente Continua e Alternada.md"
+  ],
+  "columns": [
+    {"title": "Causas", "color": "#DB7C26", "items": ["Rotacao fora do ponto", "Carga acima da capacidade real", "Manutencao deficiente do motor", "Regulacao ou AVR com problema"]},
+    {"title": "Sinais", "color": "#D9534F", "items": ["Frequencia oscilando", "Motor AC aquece ou vibra", "Luzes variam com carga", "Equipamentos reiniciam"]},
+    {"title": "Verificacoes", "color": "#2A9D57", "items": ["Medir Hz e V sem carga", "Repetir medicao com carga real", "Comparar com placa/manual", "Reduzir carga antes de concluir falha"]}
+  ]
+}

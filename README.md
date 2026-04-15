@@ -32,6 +32,7 @@ Vault curada de eletrica nautica com foco em Obsidian, governanca editorial e re
 python scripts/validate_vault.py
 python scripts/build_manifest.py
 python scripts/visuals/render_visuals.py
+python scripts/visuals/integrate_visuals.py
 ```
 
 ## O que a validacao verifica
@@ -50,6 +51,8 @@ Cada spec gera:
 - `arquivo.svg` para embedding em notas, GitHub e futura publicacao web;
 - `arquivo.png` para reaproveitamento rapido em apostila, slide ou mensageria;
 - `arquivo.md` com objetivo didatico, cautelas e notas recomendadas para embedding.
+
+O script `scripts/visuals/integrate_visuals.py` insere blocos de "Visual didatico" nas notas-alvo sem duplicar visuais ja integrados.
 
 ## GitHub Actions
 

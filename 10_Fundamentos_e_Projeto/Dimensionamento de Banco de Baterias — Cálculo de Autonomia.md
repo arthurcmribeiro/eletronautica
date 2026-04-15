@@ -265,6 +265,16 @@ Recalcular o consumo diário adicionando o novo equipamento. Se a nova capacidad
 
 Como regra de projeto, não é boa prática formar um banco de serviço permanente com capacidades, idades ou estados de saúde muito diferentes. Em teoria, é possível interligar baterias eletricamente compatíveis; na prática, diferenças de resistência interna, curva de carga e envelhecimento fazem o conjunto trabalhar mal e dificultam balanceamento e diagnóstico. A solução profissional é padronizar o banco.
 
+## Visual didático
+
+![Autonomia do banco: energia por dia](../_visuals/generated/autonomia-banco-energia-dia.svg)
+
+Ensinar autonomia como balanco de energia, nao como numero isolado de Ah no rotulo da bateria.
+
+**Cautela:** Valores reais dependem de temperatura, quimica, envelhecimento, eficiencia dos conversores e perfil de uso. Use datasheets e medicao em campo.
+
+Material de apoio: [Autonomia do banco: energia por dia](../_visuals/generated/autonomia-banco-energia-dia.md)
+
 ## Integração com outras notas
 
 - [[Dimensionamento de Cabos DC — Cálculo Prático]]
@@ -279,3 +289,4 @@ Como regra de projeto, não é boa prática formar um banco de serviço permanen
 ## Perguntas que esta nota responde
 
 - O que é Dimensionamento de Banco de Baterias — Cálculo de Autonomia em instalações elétricas náuticas?
+

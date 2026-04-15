@@ -1,0 +1,25 @@
+{
+  "slug": "queda-tensao-cabos-dc",
+  "kind": "cause_effect",
+  "title": "Queda de tensao em cabos DC",
+  "summary": "Causa e efeito da queda de tensao em baixa tensao DC, com foco em corrente alta, cabo longo e carga critica.",
+  "didactic_goal": "Mostrar por que sistemas 12 V sofrem mais com cabo fino, distancia e corrente elevada.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "EM DC DE BAIXA TENSAO, POUCOS METROS E MUITOS AMPERES MUDAM O RESULTADO",
+  "notes": [
+    "Quanto menor a tensao do sistema, maior a corrente para a mesma potencia.",
+    "Corrente alta em cabo longo aumenta perda e aquecimento.",
+    "A solucao pode ser cabo maior, circuito mais curto, 24 V/48 V ou reducao de carga."
+  ],
+  "caution": "Este visual explica a logica. Bitola real depende de corrente, comprimento ida e volta, temperatura, agrupamento, queda admissivel e norma/fabricante.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Calculo Pratico.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Cabeamento Nautico.md"
+  ],
+  "columns": [
+    {"title": "Causas", "color": "#DB7C26", "items": ["Corrente alta para a mesma potencia em 12 V", "Comprimento real ida e volta ignorado", "Bitola escolhida por habito, nao por calculo", "Conexao oxidada aumentando resistencia"]},
+    {"title": "Efeitos", "color": "#D9534F", "items": ["Equipamento desarma ou perde rendimento", "Cabo aquece e desperdiça energia", "Motor/bomba parte mal ou vibra", "Diagnostico fica confuso por tensao falsa"]},
+    {"title": "Correcoes", "color": "#2A9D57", "items": ["Calcular corrente e comprimento total", "Definir queda admissivel por tipo de carga", "Aumentar bitola ou reduzir percurso", "Considerar 24 V/48 V em cargas grandes"]}
+  ]
+}

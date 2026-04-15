@@ -1,0 +1,34 @@
+{
+  "slug": "bomba-porao-fluxo-alarme",
+  "kind": "flow_diagram",
+  "title": "Bomba de porao: energia, acionamento e alarme",
+  "summary": "Fluxo de seguranca para bomba de porao com alimentacao protegida, boia/sensor, comando manual e alarme.",
+  "didactic_goal": "Mostrar bomba de porao como sistema de seguranca, nao apenas como carga DC simples.",
+  "format": "fluxo-de-seguranca",
+  "priority": "alta",
+  "hero_label": "BOMBA DE PORAO CRITICA PRECISA FUNCIONAR MESMO QUANDO TODO O RESTO FALHA",
+  "notes": [
+    "Circuito critico costuma exigir alimentacao direta e protegida.",
+    "Acionamento automatico e manual cumprem papeis diferentes.",
+    "Alarme de alto nivel alerta antes de a situacao virar emergencia.",
+    "Teste periodico e manutencao mecanica sao tao importantes quanto eletrica."
+  ],
+  "caution": "A topologia exata deve seguir projeto, manual da bomba, capacidade de vazao, protecao e requisitos da embarcacao.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Porao.md",
+    "80_Seguranca_e_Corrosao/Alarme de Alagamento - Sensor de Porao.md"
+  ],
+  "nodes": [
+    {"title": "Banco", "detail": "Fonte DC com energia disponivel mesmo em condicoes adversas.", "color": "#1D6FD8", "items": ["DC", "autonomia", "criticidade"]},
+    {"title": "Protecao", "detail": "Fusivel/disjuntor protege cabo e circuito proximo a fonte.", "color": "#D9534F", "items": ["fusivel", "cabo", "identificacao"]},
+    {"title": "Comando", "detail": "Boia, sensor automatico e chave manual precisam ser testaveis.", "color": "#E0A100", "items": ["auto", "manual", "teste"]},
+    {"title": "Bomba", "detail": "Remove agua, mas depende de instalacao mecanica e mangueira correta.", "color": "#168A8A", "items": ["vazao", "mangueira", "retorno"]},
+    {"title": "Alarme", "detail": "Sensor de alto nivel avisa quando bomba nao da conta ou falhou.", "color": "#DB7C26", "items": ["alto nivel", "sirene", "painel"]}
+  ],
+  "callout_title": "ERROS DE CAMPO",
+  "callouts": [
+    {"title": "Sem teste", "detail": "Bomba so e descoberta na emergencia.", "color": "#D9534F"},
+    {"title": "Fusivel longe", "detail": "Cabo fica desprotegido no trecho critico.", "color": "#DB7C26"},
+    {"title": "Sem alarme", "detail": "Falha silenciosa vira alagamento.", "color": "#E0A100"}
+  ]
+}

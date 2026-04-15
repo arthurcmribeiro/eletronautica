@@ -370,6 +370,16 @@ Mínimo 30–40% da capacidade nominal. Abaixo disso, o motor não atinge temper
 
 Nunca, sem sistema de interlock. Conectar shore power e gerador em paralelo sem sincronização causa dano imediato a ambos (diferença de fase e frequência). O interlock elétrico ou mecânico é obrigatório para prevenir isso.
 
+## Visual didático
+
+![Gerador AC: RPM, frequencia e carga](../_visuals/generated/gerador-ac-rpm-frequencia.svg)
+
+Mostrar por que gerador deve ser avaliado por frequencia, tensao, carga e estabilidade, nao apenas por kVA.
+
+**Cautela:** Geradores inverter e convencionais se comportam de forma diferente. Consulte manual e procedimento do fabricante.
+
+Material de apoio: [Gerador AC: RPM, frequencia e carga](../_visuals/generated/gerador-ac-rpm-frequencia.md)
+
 ## Integração com outras notas
 
 - [[Gerador (DC)]]
@@ -387,3 +397,4 @@ Nunca, sem sistema de interlock. Conectar shore power e gerador em paralelo sem 
 
 - O que é Gerador (AC) em instalações elétricas náuticas?
 - Qual é a função de Gerador (AC) na embarcação?
+

@@ -36,11 +36,16 @@ review_jurisdiction: "Brasil"
 - `[x]` Gerar `onda-pura-vs-onda-quadrada`.
 - `[x]` Gerar `50hz-vs-60hz`.
 - `[x]` Gerar `bateria-zona-util-vs-recarga`.
+- `[x]` Ajustar template visual para melhor alinhamento de título, resumo e cards.
+- `[x]` Criar inventário visual completo por domínio.
+- `[x]` Gerar lote amplo com visuais de projeto, cálculo, baterias, energia, proteção, rede, automação, utilidades e corrosão.
+- `[x]` Criar integrador automático de visuais em notas-alvo.
 - `[ ]` Planejar segunda onda:
-  - `shore-power-topologias`
-  - `neutro-pe-bonding`
-  - `dr-desequilibrio-de-corrente`
-  - `nmea-backbone-e-drops`
+  - pacote de medição e diagnóstico;
+  - pacote de distribuição DC;
+  - pacote de navegação/comunicação;
+  - pacote de segurança e alarmes;
+  - pacote de utilidades eletromecânicas.
 
 ## Criação de analogia
 
@@ -73,3 +78,4 @@ review_jurisdiction: "Brasil"
 - `[ ]` Incluir links transversais entre notas de diagnóstico, inspeção e manutenção.
 - `[x]` Reforçar ligações entre `Tipos de Bateria`, `Monitor de Bateria`, `Bancos de Bateria` e futuros visuais.
 - `[x]` Reforçar ligações entre `DC vs AC`, `Inversora`, `CAIS`, `Gerador (AC)` e visuais de forma de onda/frequência.
+- `[x]` Integrar visualmente notas antes pouco conectadas como `USB 12V (Power)`.

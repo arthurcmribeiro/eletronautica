@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
-<text x="70" y="80" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start">Bateria: zona util vs recarga</text>
-<text x="70" y="112" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Faixa visual de tensao em repouso para apoiar a leitura didatica de baterias de chumbo-acido</text>
-<text x="70" y="136" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">12 V, deixando explicito que se trata de analogia de campo e nao de oraculo universal.</text>
+<rect x="50" y="38" width="1300" height="116" fill="#FFFDF8" rx="22" ry="22" stroke="#E4D8C8" stroke-width="1"/>
+<text x="78" y="68" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">ELETRO NAUTICA / VISUAL TECNICO</text>
+<text x="78" y="92" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Bateria: zona util vs recarga</text>
+<text x="78" y="128" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Faixa visual de tensao em repouso para apoiar a leitura didatica de baterias de chumbo-acido 12 V, deixando explicito que se trata</text>
+<text x="78" y="146" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">de analogia de campo e nao de oraculo universal.</text>
 <rect x="70" y="140" width="1260" height="100" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
 <text x="700" y="180" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">ANALOGIA DIDATICA PARA CHUMBO-ACIDO 12 V EM REPOUSO</text>
 <text x="700" y="210" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">NAO USAR ESTE QUADRO DURANTE CARGA, DESCARGA OU PARA LFP SEM SHUNT</text>

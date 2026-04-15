@@ -1,0 +1,34 @@
+{
+  "slug": "autonomia-banco-energia-dia",
+  "kind": "flow_diagram",
+  "title": "Autonomia do banco: energia por dia",
+  "summary": "Fluxo visual para converter lista de cargas em Wh, Ah, profundidade de descarga e necessidade de recarga.",
+  "didactic_goal": "Ensinar autonomia como balanco de energia, nao como numero isolado de Ah no rotulo da bateria.",
+  "format": "exemplo-calculado",
+  "priority": "alta",
+  "hero_label": "AUTONOMIA = CARGAS X TEMPO X PERDAS X FAIXA UTIL DO BANCO",
+  "notes": [
+    "Some energia diaria antes de escolher bateria.",
+    "Ah so faz sentido junto com tensao do banco.",
+    "Profundidade de descarga muda completamente a capacidade util.",
+    "Fontes de recarga devem fechar o balanco no ciclo real de uso."
+  ],
+  "caution": "Valores reais dependem de temperatura, quimica, envelhecimento, eficiencia dos conversores e perfil de uso. Use datasheets e medicao em campo.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Calculo de Autonomia.md",
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+  ],
+  "nodes": [
+    {"title": "Cargas", "detail": "Liste potencia e horas por dia de cada equipamento.", "color": "#1D6FD8", "items": ["W", "horas", "simultaneidade"]},
+    {"title": "Energia", "detail": "Converta para Wh/dia e depois para Ah na tensao do banco.", "color": "#168A8A", "items": ["Wh/dia", "Ah", "12/24/48 V"]},
+    {"title": "Perdas", "detail": "Inclua inversor, conversores, standby e margem de envelhecimento.", "color": "#E0A100", "items": ["inversor", "standby", "margem"]},
+    {"title": "Faixa util", "detail": "Aplique DoD recomendado conforme AGM, GEL ou LiFePO4.", "color": "#DB7C26", "items": ["AGM", "GEL", "LiFePO4"]},
+    {"title": "Recarga", "detail": "Cheque se alternador, solar, gerador e shore fecham o ciclo.", "color": "#2A9D57", "items": ["solar", "alternador", "shore"]}
+  ],
+  "callout_title": "ERROS QUE DISTORCEM AUTONOMIA",
+  "callouts": [
+    {"title": "Ah sem tensao", "detail": "100 Ah em 12 V nao e igual a 100 Ah em 24 V.", "color": "#D9534F"},
+    {"title": "Sem DoD", "detail": "Banco nominal nao e banco util.", "color": "#DB7C26"},
+    {"title": "Sem perdas", "detail": "Inversor e standby drenam energia real.", "color": "#E0A100"}
+  ]
+}

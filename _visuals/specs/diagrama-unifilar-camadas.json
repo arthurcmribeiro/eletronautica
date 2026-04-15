@@ -1,0 +1,34 @@
+{
+  "slug": "diagrama-unifilar-camadas",
+  "kind": "flow_diagram",
+  "title": "Diagrama unifilar: camadas de leitura",
+  "summary": "Visual para ler um unifilar por fontes, protecoes, distribuicao, cargas e referencias de aterramento/bonding.",
+  "didactic_goal": "Ensinar a ler o diagrama unifilar como mapa de energia e protecao, nao como desenho decorativo.",
+  "format": "fluxo-de-leitura",
+  "priority": "alta",
+  "hero_label": "UNIFILAR BOM MOSTRA DE ONDE A ENERGIA VEM, POR ONDE PASSA E QUEM A PROTEGE",
+  "notes": [
+    "Comece pelas fontes e entradas de energia.",
+    "Siga protecoes principais antes de olhar cargas finais.",
+    "Separe distribuicao AC, distribuicao DC e referencias de protecao.",
+    "Use o unifilar como base para troubleshooting e expansoes futuras."
+  ],
+  "caution": "O unifilar simplifica condutores e detalhes fisicos. Ele deve ser complementado por lista de cabos, layout fisico, etiquetas e plano de teste.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Diagrama Unifilar — Documentacao do Sistema Eletrico.md",
+    "10_Fundamentos_e_Projeto/Leitura de Diagramas e Esquemas Eletricos.md"
+  ],
+  "nodes": [
+    {"title": "Fontes", "detail": "Shore power, gerador, alternador, solar, eolico e banco de baterias.", "color": "#1D6FD8", "items": ["entrada AC", "fontes DC", "banco"]},
+    {"title": "Protecoes", "detail": "Disjuntores, fusiveis, DR/ELCI, chaves gerais e protecao de banco.", "color": "#D9534F", "items": ["fusivel", "DR", "disjuntor"]},
+    {"title": "Distribuicao", "detail": "Paineis AC/DC, barramentos, linhas leves, linhas pesadas e subpaineis.", "color": "#E0A100", "items": ["painel", "bus bar", "subpainel"]},
+    {"title": "Cargas", "detail": "Equipamentos finais agrupados por funcao, criticidade e regime de uso.", "color": "#2A9D57", "items": ["bombas", "eletronica", "conforto"]},
+    {"title": "Referencias", "detail": "PE, bonding, negativo DC, neutro e pontos que nunca devem ser confundidos.", "color": "#7C5CC4", "items": ["PE", "bonding", "negativo"]}
+  ],
+  "callout_title": "LEITURA PRATICA",
+  "callouts": [
+    {"title": "Energia", "detail": "Siga a direcao fonte para carga.", "color": "#1D6FD8"},
+    {"title": "Falha", "detail": "Volte da carga para a fonte.", "color": "#DB7C26"},
+    {"title": "Seguranca", "detail": "Confirme protecao antes de energizar.", "color": "#D9534F"}
+  ]
+}

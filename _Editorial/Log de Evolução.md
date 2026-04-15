@@ -58,3 +58,22 @@ review_jurisdiction: "Brasil"
 - Revisar `USB 12V (Power)` e `Limpador de Parabrisas` para aumentar integração interna.
 - Criar a segunda onda de visuais focada em `shore power`, `bonding`, `DR` e `NMEA`.
 - Estender CI para validar geração mínima dos specs visuais.
+
+## 2026-04-15 — Lote 3 — Varredura visual ampla
+
+- Ajustado o template visual para reduzir desalinhamento em títulos longos, resumo e cards de fluxo.
+- Acrescentados tipos reutilizáveis ao renderer:
+  - `flow_diagram`
+  - `comparison_cards`
+  - `cause_effect`
+- Criadas specs adicionais para cobrir os principais temas visuais da base.
+- Renderizados `21` visuais versionados em `svg`, `png` e `md` no total.
+- Criado `scripts/visuals/integrate_visuals.py` para inserir blocos visuais em notas-alvo sem duplicação.
+- Integrados `18` novos visuais diretamente em notas técnicas.
+- Criado `Inventário Visual da Base` com cobertura atual, candidatos por domínio e fila recomendada.
+
+## Próximo lote recomendado
+
+- Criar pacote de medição e diagnóstico: multímetro, shunt, troubleshooting e inspeção.
+- Criar pacote de distribuição DC: fusíveis, disjuntores, barramento, quadro e chaves.
+- Criar pacote de navegação/comunicação: AIS, VHF, radar, piloto automático e chartplotter.
