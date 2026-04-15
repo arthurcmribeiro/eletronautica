@@ -93,6 +93,20 @@ O inversor elétrico (inversora) é um conversor eletrônico que transforma ener
 
 Motores, transformadores, fontes e eletrônica sensível podem apresentar aquecimento, ruído, menor eficiência ou mau funcionamento com formas de onda pobres. Para cargas críticas e sistemas permanentes de bordo, a forma senoidal pura é a referência preferencial.
 
+## Visual didático — tensão nominal igual não significa energia equivalente
+
+![Onda pura vs onda quadrada](../_visuals/generated/onda-pura-vs-onda-quadrada.svg)
+
+O objetivo deste comparativo é mostrar que dois inversores podem anunciar a mesma tensão nominal e ainda assim entregar qualidades de energia muito diferentes. Em campo, o efeito aparece como aquecimento extra, ruído, vibração, perda de rendimento ou incompatibilidade com determinadas cargas.
+
+Use este visual para discutir:
+
+- por que motores, compressores e transformadores sofrem mais com forma de onda ruim;
+- por que eletrônica de potência e carregadores podem operar fora do esperado;
+- por que inversor senoidal puro é a escolha prudente para instalações permanentes de bordo.
+
+Material de apoio: [Onda pura vs onda quadrada](../_visuals/generated/onda-pura-vs-onda-quadrada.md)
+
 **Eficiência e perdas:**
 
 Um inversor de 12V com 2.000W de carga no output extrai do banco:

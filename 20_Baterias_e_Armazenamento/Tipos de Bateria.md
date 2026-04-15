@@ -97,6 +97,22 @@ Cada tecnologia tem um perfil de tensão diferente durante carga e descarga. Usa
 - **Tensão de corte:** deve ser interpretada com carga, repouso, química e proteção do sistema. Não existe um único número útil para todos os cenários.
 - **SoC (State of Charge):** percentual de carga atual. Monitorar SoC real exige shunt — voltímetro sozinho é impreciso para chumbo.
 
+## Visual didático — zona útil vs momento de recarga
+
+![Bateria 12 V em repouso: zona util vs recarga](../_visuals/generated/bateria-zona-util-vs-recarga.svg)
+
+Este gráfico é uma analogia didática para leitura rápida de tensão em repouso em baterias de chumbo-ácido de 12 V. Ele não substitui ficha técnica do fabricante, medição sob procedimento controlado nem monitor com shunt.
+
+Leitura prática sugerida:
+
+- zona confortável: a bateria ainda está em faixa saudável para operação cotidiana;
+- zona de atenção: vale investigar consumo, tempo sem recarga e estado geral do banco;
+- zona de recarga: a prioridade passa a ser restaurar energia antes de aprofundar a descarga.
+
+Para LiFePO4, esta heurística não serve como medidor confiável de estado de carga, porque a curva de tensão é mais plana.
+
+Material de apoio: [Bateria: zona util vs recarga](../_visuals/generated/bateria-zona-util-vs-recarga.md)
+
 ## Características principais por tecnologia
 
 **Chumbo-ácido inundada (FLA):**

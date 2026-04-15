@@ -52,6 +52,16 @@ Para visão geral da vault:
 - [[Atlas Técnico]]
 - [[Guia da Vault Curada]]
 
+## Hubs transversais para consulta rápida
+
+Use estes atalhos quando a pergunta atravessar mais de um domínio:
+
+- [[MOC — Diagnóstico e Manutenção]]
+- [[MOC — Segurança Integrada]]
+- [[Referência Rápida — Valores de Campo]]
+
+Esses hubs não substituem os MOCs por domínio. Eles servem para encurtar o caminho quando a demanda é prática de campo, segurança operacional ou consulta rápida de valores típicos.
+
 ## Trilha 1 — Base conceitual
 
 Comece aqui se a meta for construir linguagem técnica sólida.

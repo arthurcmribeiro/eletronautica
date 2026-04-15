@@ -1,0 +1,57 @@
+{
+  "slug": "50hz-vs-60hz",
+  "kind": "frequency_compare",
+  "title": "50 Hz vs 60 Hz",
+  "summary": "Comparativo visual para separar frequencia de tensao e mostrar que mudanca de Hz altera ciclos por segundo, nao apenas um numero na etiqueta.",
+  "didactic_goal": "Mostrar que 50 Hz e 60 Hz significam ritmos diferentes de alternancia, com impacto pratico em motores, temporizacao e equipamentos dependentes de frequencia.",
+  "format": "grafico-comparativo",
+  "priority": "alta",
+  "hero_label": "FREQUENCIA NAO E TENSAO: O MESMO VALOR DE VOLTS PODE VIR COM RITMOS DIFERENTES",
+  "notes": [
+    "No mesmo intervalo de tempo, 60 Hz entrega mais ciclos do que 50 Hz.",
+    "Frequencia errada pode alterar RPM, comportamento de motores e temporizacao de certos equipamentos.",
+    "Transformador ou gerador nao corrigem frequencia sozinhos; isso exige arquitetura especifica."
+  ],
+  "caution": "O visual usa uma janela fixa de 100 ms para deixar a diferenca perceptivel. Em projeto real, compatibilidade depende do equipamento, da tensao e da topologia completa da alimentacao.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md",
+    "30_Energia_e_Conversao/CAIS (Pier) (AC).md",
+    "30_Energia_e_Conversao/Gerador (AC).md"
+  ],
+  "panels": [
+    {
+      "label": "50 Hz",
+      "cycles": 5.0,
+      "tag": "5 CICLOS EM 100 MS",
+      "color": "#1D6FD8"
+    },
+    {
+      "label": "60 Hz",
+      "cycles": 6.0,
+      "tag": "6 CICLOS EM 100 MS",
+      "color": "#DB7C26"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Motores",
+      "detail": "RPM e torque de referencia podem mudar quando a frequencia sai do projeto.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Relogios e timers",
+      "detail": "Equipamentos dependentes de frequencia podem dessicronizar.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Compatibilidade",
+      "detail": "A mesma tensao nao garante que o equipamento vai operar bem.",
+      "color": "#2A9D57"
+    },
+    {
+      "title": "Diagnostico",
+      "detail": "Frequencimetro e leitura de gerador/cais evitam suposicoes erradas.",
+      "color": "#1D6FD8"
+    }
+  ]
+}

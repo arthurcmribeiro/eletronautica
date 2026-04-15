@@ -1,0 +1,86 @@
+{
+  "slug": "bateria-zona-util-vs-recarga",
+  "kind": "battery_zone",
+  "title": "Bateria: zona util vs recarga",
+  "summary": "Faixa visual de tensao em repouso para apoiar a leitura didatica de baterias de chumbo-acido 12 V, deixando explicito que se trata de analogia de campo e nao de oraculo universal.",
+  "didactic_goal": "Ajudar iniciantes a interpretar tensao em repouso como faixa de conforto, atencao e necessidade de recarga, sem confundir isso com SoC preciso ou regra valida durante carga e descarga.",
+  "format": "faixa-operacional",
+  "priority": "alta",
+  "hero_label": "ANALOGIA DIDATICA PARA CHUMBO-ACIDO 12 V EM REPOUSO",
+  "caution_short": "NAO USAR ESTE QUADRO DURANTE CARGA, DESCARGA OU PARA LFP SEM SHUNT",
+  "notes": [
+    "Use a tensao em repouso como triagem rapida, nao como medidor preciso de SoC.",
+    "Durante carga ou descarga, a tensao fica distorcida pela condicao instantanea do sistema.",
+    "Em LiFePO4, um voltimetro simples nao substitui monitor com shunt."
+  ],
+  "caution": "Os valores sao tipicos para chumbo-acido 12 V em repouso e servem como analogia didatica. Temperatura, quimica, envelhecimento e historico de carga alteram a leitura. Para LiFePO4, a curva de tensao e plana demais para esse uso.",
+  "target_notes": [
+    "20_Baterias_e_Armazenamento/Tipos de Bateria.md",
+    "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md",
+    "10_Fundamentos_e_Projeto/Voltímetro - Amperímetro (DC e AC).md"
+  ],
+  "voltage_min": 11.8,
+  "voltage_max": 12.8,
+  "zones": [
+    {
+      "label": "Recarga",
+      "range": "11,8 V a 12,2 V",
+      "start": 11.8,
+      "end": 12.2,
+      "color": "#F2B8B5"
+    },
+    {
+      "label": "Atencao",
+      "range": "12,2 V a 12,4 V",
+      "start": 12.2,
+      "end": 12.4,
+      "color": "#F6E3A3"
+    },
+    {
+      "label": "Zona util",
+      "range": "12,4 V a 12,8 V",
+      "start": 12.4,
+      "end": 12.8,
+      "color": "#BDE5C8"
+    }
+  ],
+  "marks": [
+    {
+      "value": 11.8,
+      "label": "11,8 V"
+    },
+    {
+      "value": 12.0,
+      "label": "12,0 V"
+    },
+    {
+      "value": 12.2,
+      "label": "12,2 V"
+    },
+    {
+      "value": 12.4,
+      "label": "12,4 V"
+    },
+    {
+      "value": 12.7,
+      "label": "12,7 V"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Zona util",
+      "detail": "Faixa mais confortavel para banco de chumbo-acido em repouso.",
+      "color": "#2A9D57"
+    },
+    {
+      "title": "Atencao",
+      "detail": "Ainda nao e colapso, mas ja pede planejamento de recarga.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Recarga",
+      "detail": "Faixa que reforca a necessidade de recarregar antes de aprofundar a descarga.",
+      "color": "#D9534F"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<text x="70" y="80" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start">Bateria: zona util vs recarga</text>
+<text x="70" y="112" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Faixa visual de tensao em repouso para apoiar a leitura didatica de baterias de chumbo-acido</text>
+<text x="70" y="136" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">12 V, deixando explicito que se trata de analogia de campo e nao de oraculo universal.</text>
+<rect x="70" y="140" width="1260" height="100" fill="#FFF7E8" rx="18" ry="18" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="180" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">ANALOGIA DIDATICA PARA CHUMBO-ACIDO 12 V EM REPOUSO</text>
+<text x="700" y="210" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">NAO USAR ESTE QUADRO DURANTE CARGA, DESCARGA OU PARA LFP SEM SHUNT</text>
+<rect x="110" y="360" width="1180" height="110" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<rect x="110.0" y="360" width="471.9999999999983" height="110" fill="#F2B8B5" rx="8" ry="8"/>
+<text x="345.99999999999915" y="408" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">Recarga</text>
+<text x="345.99999999999915" y="438" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">11,8 V a 12,2 V</text>
+<rect x="581.9999999999983" y="360" width="236.00000000000125" height="110" fill="#F6E3A3" rx="8" ry="8"/>
+<text x="699.9999999999989" y="408" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">Atencao</text>
+<text x="699.9999999999989" y="438" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,2 V a 12,4 V</text>
+<rect x="817.9999999999995" y="360" width="472.00000000000045" height="110" fill="#BDE5C8" rx="8" ry="8"/>
+<text x="1053.9999999999998" y="408" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">Zona util</text>
+<text x="1053.9999999999998" y="438" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,4 V a 12,8 V</text>
+<line x1="110.0" y1="470" x2="110.0" y2="496" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+<text x="110.0" y="518" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">11,8 V</text>
+<line x1="345.99999999999915" y1="470" x2="345.99999999999915" y2="496" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+<text x="345.99999999999915" y="518" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,0 V</text>
+<line x1="581.9999999999983" y1="470" x2="581.9999999999983" y2="496" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+<text x="581.9999999999983" y="518" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,2 V</text>
+<line x1="817.9999999999995" y1="470" x2="817.9999999999995" y2="496" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+<text x="817.9999999999995" y="518" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,4 V</text>
+<line x1="1171.9999999999984" y1="470" x2="1171.9999999999984" y2="496" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+<text x="1171.9999999999984" y="518" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="center">12,7 V</text>
+<rect x="90" y="560" width="1240" height="160" fill="#FFFDF8" rx="18" ry="18" stroke="#D9E2EC" stroke-width="1"/>
+<text x="120" y="598" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">COMO LER ESTE QUADRO</text>
+<rect x="120" y="624" width="10" height="10" fill="#2A9D57" rx="18" ry="18"/>
+<text x="144" y="636" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start">Zona util</text>
+<text x="144" y="660" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Faixa mais confortavel para banco de chumbo-acido em repouso.</text>
+<rect x="120" y="666" width="10" height="10" fill="#E0A100" rx="18" ry="18"/>
+<text x="144" y="678" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start">Atencao</text>
+<text x="144" y="702" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Ainda nao e colapso, mas ja pede planejamento de recarga.</text>
+<rect x="120" y="708" width="10" height="10" fill="#D9534F" rx="18" ry="18"/>
+<text x="144" y="720" fill="#1F2933" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start">Recarga</text>
+<text x="144" y="744" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Faixa que reforca a necessidade de recarregar antes de aprofundar a descarga.</text>
+<text x="70" y="862" fill="#5B6B79" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">FORMATO: FAIXA-OPERACIONAL  |  PRIORIDADE: ALTA</text>
+</svg>

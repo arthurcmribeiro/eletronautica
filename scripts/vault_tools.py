@@ -9,14 +9,14 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 FRONTMATTER_RE = re.compile(r"(?s)^---\r?\n(.*?)\r?\n---\r?\n?(.*)$")
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)")
+EXCLUDED_PARTS = {".git", ".obsidian", ".claude", "_visuals"}
 
 
 def note_files(root: Path = ROOT) -> list[Path]:
     return sorted(
         path
         for path in root.rglob("*.md")
-        if ".git" not in path.parts
-        and ".obsidian" not in path.parts
+        if not any(part in EXCLUDED_PARTS for part in path.parts)
         and path.parent != root
     )
 

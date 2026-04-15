@@ -24,8 +24,17 @@ jobs:
       - name: Build manifest
         run: python scripts/build_manifest.py
 
+      - name: Render visuals
+        run: python scripts/visuals/render_visuals.py
+
       - name: Upload manifest artifact
         uses: actions/upload-artifact@v4
         with:
           name: content-manifest
           path: manifest/content-manifest.json
+
+      - name: Upload visuals artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-visuals
+          path: _visuals/generated

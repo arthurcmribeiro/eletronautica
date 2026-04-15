@@ -1,20 +1,49 @@
 ---
 title: "Guia da Vault Curada"
 note_type: "guide"
+domain: "00_Mapas"
+status: "technical-review-l1"
+reviewed_on: "2026-04-14"
+review_jurisdiction: "Brasil"
+aliases:
+  - "Guia da Vault"
+seo_title: "Guia da vault curada de elétrica náutica"
+seo_description: "Guia de convenções editoriais, navegação e uso da base curada de elétrica náutica em Obsidian, GitHub e futuras camadas de publicação."
+geo_queries:
+  - "Como usar a vault curada de elétrica náutica?"
+related_notes:
+  - "Atlas Técnico"
+  - "Fundamentos da Elétrica Náutica"
+  - "MOC — Mapas"
 ---
 
 # Guia da Vault Curada
 
 ## Convenções desta camada
 
-- Os exports brutos do Notion permanecem na pasta original; esta vault é a camada curada.
-- Títulos foram canonizados para uso em wikilinks e backlinks.
-- As seções numeradas viraram headings reais, preservando a ordem técnica do texto.
-- Cada nota recebeu metadados editoriais, SEO e GEO para busca humana e recuperação por IA.
-- Os MOCs foram organizados por domínio técnico, não por template.
+- O conteúdo principal é `Markdown-first`.
+- Títulos foram canonizados para wikilinks, backlinks e futura publicação.
+- As notas técnicas maduras privilegiam:
+  - resumo técnico;
+  - estrutura hierárquica clara;
+  - FAQ;
+  - integração com notas correlatas;
+  - utilidade prática de campo.
+- A base já foi preparada para governança editorial, manifesto JSON e validação automática.
+
+## Como navegar
+
+- Comece em [[Fundamentos da Elétrica Náutica]] para visão de conjunto.
+- Use [[Atlas Técnico]] quando quiser enxergar os hubs do projeto.
+- Use [[MOC — Diagnóstico e Manutenção]] e [[MOC — Segurança Integrada]] quando o problema for transversal.
+- Use [[Referência Rápida — Valores de Campo]] quando precisar de triagem rápida, não de leitura longa.
 
 ## Próxima etapa recomendada
 
-- Revisar as notas com sobreposição de escopo e decidir onde fundir ou separar editorialmente.
-- Fazer um pass específico de validação normativa nas notas de normas, proteção, aterramento e segurança.
-- Aprofundar as notas de síntese antes de extrair apostilas, folders, curso e palestra.
+- Expandir a camada visual versionável para notas de topologia, frequência, aterramento e proteção.
+- Continuar reforçando entrypoints e backlinks dos mapas principais.
+- Evoluir a mesma base para:
+  - publicação web;
+  - apostila/PDF;
+  - slides de aula;
+  - materiais premium derivados.

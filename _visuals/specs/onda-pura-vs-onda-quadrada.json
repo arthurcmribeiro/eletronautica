@@ -1,0 +1,58 @@
+{
+  "slug": "onda-pura-vs-onda-quadrada",
+  "kind": "wave_compare",
+  "title": "Onda pura vs onda quadrada",
+  "summary": "Comparativo didático entre forma de onda limpa e forma de onda pobre para explicar por que tensao nominal igual nao garante mesma qualidade de energia.",
+  "didactic_goal": "Mostrar que o impacto da forma de onda aparece em motores, aquecimento, ruido e compatibilidade com eletronica, mesmo quando a tensao nominal parece correta.",
+  "format": "grafico-comparativo",
+  "priority": "alta",
+  "hero_label": "MESMA TENSAO NOMINAL NAO IMPLICA MESMA QUALIDADE DE ENERGIA",
+  "notes": [
+    "A senoide pura tende a ser a referencia prudente para sistemas permanentes de bordo.",
+    "Forma de onda quadrada ou muito pobre aumenta ruido, aquecimento e incompatibilidade em cargas sensiveis.",
+    "Cargas resistivas simples toleram melhor energia ruim do que motores, compressores e transformadores."
+  ],
+  "caution": "Este visual simplifica a forma de onda para fins didaticos. Em campo, inversores baratos costumam produzir ondas modificadas ou com distorcao, nao necessariamente quadradas ideais.",
+  "target_notes": [
+    "30_Energia_e_Conversao/Inversora (DC To AC).md",
+    "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md"
+  ],
+  "panels": [
+    {
+      "label": "Senoidal pura",
+      "wave": "sine",
+      "cycles": 3.0,
+      "tag": "REFERENCIA PARA CARGAS REAIS",
+      "color": "#1D6FD8"
+    },
+    {
+      "label": "Quadrada",
+      "wave": "square",
+      "cycles": 3.0,
+      "tag": "MESMA TENSAO, FORMA PIOR",
+      "color": "#DB7C26"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Motores e compressores",
+      "detail": "Podem aquecer, vibrar mais e partir pior.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Transformadores e fontes",
+      "detail": "Zumbido, calor e menor eficiencia aparecem cedo.",
+      "color": "#DB7C26"
+    },
+    {
+      "title": "Eletronica sensivel",
+      "detail": "Ruido, erro e incompatibilidade ficam mais provaveis.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Cargas resistivas simples",
+      "detail": "Lampadas e resistencias toleram melhor, mas nao legitimam energia ruim no sistema inteiro.",
+      "color": "#2A9D57"
+    }
+  ]
+}

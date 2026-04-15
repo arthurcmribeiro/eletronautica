@@ -1,6 +1,8 @@
 .obsidian/app.json
 .obsidian/appearance.json
+.obsidian/graph.json
 .obsidian/workspace.json
+.claude/
 __pycache__/
 *.pyc
 manifest/*.tmp

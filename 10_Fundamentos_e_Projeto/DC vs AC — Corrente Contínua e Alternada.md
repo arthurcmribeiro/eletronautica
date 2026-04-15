@@ -59,6 +59,20 @@ Em embarcações de recreio, os dois sistemas coexistem: DC para operação aut�
 | Eficiência de transmissão | Baixa em baixas tensões | Alta |
 | Corrosão / fuga | Correntes DC e fugas DC são as mais críticas para eletrólise e stray current corrosion | Fugas AC indicam falha séria de isolação; o mecanismo e o efeito não são equivalentes ao da fuga DC |
 
+## Visual didático — frequência não é tensão
+
+![Comparativo 50 Hz vs 60 Hz](../_visuals/generated/50hz-vs-60hz.svg)
+
+Este visual ajuda a separar duas ideias que iniciantes costumam misturar: tensão e frequência. A tensão diz "quanto" o circuito entrega; a frequência diz "quantas alternâncias por segundo" estão acontecendo.
+
+Use a figura para fixar três pontos:
+
+- 50 Hz e 60 Hz podem existir com a mesma tensão nominal;
+- frequência errada afeta motores, temporização e equipamentos dependentes do ritmo da rede;
+- shore power, gerador e inversor precisam ser avaliados também pela frequência, não só pela tensão.
+
+Material de apoio: [50 Hz vs 60 Hz](../_visuals/generated/50hz-vs-60hz.md)
+
 ## Como coexistem a bordo
 
 **Sistema DC:**
