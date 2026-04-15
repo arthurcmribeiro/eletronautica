@@ -1,0 +1,34 @@
+{
+  "slug": "troubleshooting-funil-diagnostico",
+  "kind": "flow_diagram",
+  "title": "Troubleshooting eletrico: funil de diagnostico",
+  "summary": "Fluxo pratico para sair do sintoma, confirmar alimentacao, isolar circuito, medir queda e chegar a causa provavel.",
+  "didactic_goal": "Ensinar diagnostico como funil de evidencias, nao como troca aleatoria de componentes.",
+  "format": "funil-de-diagnostico",
+  "priority": "alta",
+  "hero_label": "DIAGNOSTICO BOM REDUZ HIPOTESES A CADA MEDICAO",
+  "notes": [
+    "Comece pelo sintoma observavel e pelas condicoes de uso.",
+    "Confirme fonte, protecao e retorno antes de culpar o equipamento.",
+    "Meça sob carga quando a falha aparece.",
+    "Documente achado e correcao para evitar recorrencia."
+  ],
+  "caution": "Em AC ou sistemas criticos, diagnostico deve respeitar bloqueio, ausencia de tensao, EPI e procedimento profissional.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Troubleshooting — Diagnostico de Falhas Eletricas.md",
+    "10_Fundamentos_e_Projeto/Manutencao Preventiva Eletrica — Checklist.md"
+  ],
+  "nodes": [
+    {"title": "Sintoma", "detail": "O que falha, quando falha e em qual condicao de carga.", "color": "#1D6FD8", "items": ["quando", "onde", "carga"]},
+    {"title": "Fonte", "detail": "Banco, shore, gerador, fusivel e disjuntor entregam energia?", "color": "#E0A100", "items": ["tensao", "protecao", "entrada"]},
+    {"title": "Caminho", "detail": "Cabo, conector, chave, barramento e retorno estao integros?", "color": "#DB7C26", "items": ["cabo", "terminal", "retorno"]},
+    {"title": "Carga", "detail": "Equipamento consome corrente esperada e opera sob carga real?", "color": "#7C5CC4", "items": ["corrente", "queda", "temperatura"]},
+    {"title": "Causa", "detail": "Hipotese final precisa explicar sintoma e medicao.", "color": "#2A9D57", "items": ["prova", "correcao", "registro"]}
+  ],
+  "callout_title": "ATALHOS QUE ATRAPALHAM",
+  "callouts": [
+    {"title": "Trocar primeiro", "detail": "Peca nova nao corrige cabo ruim.", "color": "#D9534F"},
+    {"title": "Medir sem carga", "detail": "Pode esconder mau contato.", "color": "#DB7C26"},
+    {"title": "Sem registro", "detail": "Falha volta sem aprendizado.", "color": "#E0A100"}
+  ]
+}

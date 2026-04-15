@@ -182,6 +182,16 @@ Não necessariamente. Interface digital pode complementar comando e monitorament
 
 Só quando houver reserva real de espaço, corrente, proteção e coerência documental. Crescimento sem revisão costuma degradar a confiabilidade.
 
+## Visual didático
+
+![Quadro AC/DC: camadas de distribuicao](../_visuals/generated/quadro-ac-dc-camadas.svg)
+
+Mostrar painel eletrico como arquitetura de distribuicao e protecao, nao como agrupamento de chaves.
+
+**Cautela:** Layout fisico, separacao, cores e protecoes dependem de projeto, norma e fabricante dos componentes.
+
+Material de apoio: [Quadro AC/DC: camadas de distribuicao](../_visuals/generated/quadro-ac-dc-camadas.md)
+
 ## Integração com outras notas
 
 - [[Barramento DC / Bus Bar / Distribuição DC]]

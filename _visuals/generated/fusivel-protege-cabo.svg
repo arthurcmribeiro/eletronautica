@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="0" y="0" width="1400" height="900" fill="#F6F2EA" rx="0" ry="0"/>
+<circle cx="1238" cy="96" r="118" fill="#E8F1FB"/>
+<circle cx="1320" cy="32" r="64" fill="#F8E6CC"/>
+<rect x="50" y="34" width="1300" height="132" fill="#FFFDF8" rx="24" ry="24" stroke="#E4D8C8" stroke-width="1"/>
+<rect x="50" y="34" width="14" height="132" fill="#DB7C26" rx="20" ry="20"/>
+<text x="82" y="64" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">CARTILHA VISUAL | ELETRO NAUTICA</text>
+<text x="82" y="96" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start">Fusivel DC: protege o cabo</text>
+<text x="82" y="138" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Causa e efeito do posicionamento e dimensionamento do fusivel em circuitos DC de bordo.</text>
+<rect x="1130" y="58" width="176" height="58" fill="#0F172A" rx="18" ry="18"/>
+<text x="1218" y="80" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="center">SVG + PNG</text>
+<text x="1218" y="104" fill="#D9E2EC" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="center">versionavel</text>
+<rect x="70" y="188" width="1260" height="74" fill="#FFF0F0" rx="24" ry="24" stroke="#E9A2A2" stroke-width="2"/>
+<text x="700" y="218" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">FUSIVEL LONGE DA FONTE DEIXA UM TRECHO DE CABO SEM PROTECAO</text>
+<rect x="70" y="292" width="1260" height="86" fill="#FFFDF8" rx="26" ry="26" stroke="#E4D8C8" stroke-width="1"/>
+<text x="100" y="330" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start">RACIOCINIO DE DIAGNOSTICO</text>
+<text x="100" y="356" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Fixar que fusivel protege o condutor contra sobrecorrente e curto, nao apenas o equipamento final.</text>
+<line x1="100" y1="428" x2="1280" y2="428" stroke="#E9A2A2" stroke-width="4" stroke-linecap="round"/>
+<line x1="1280" y1="428" x2="1264.4115427318802" y2="437.0" stroke="#E9A2A2" stroke-width="4" stroke-linecap="round"/>
+<line x1="1280" y1="428" x2="1264.4115427318802" y2="419.0" stroke="#E9A2A2" stroke-width="4" stroke-linecap="round"/>
+<polygon points="92,466 456,466 434,682 70,682" fill="#FFF7F7" stroke="#E4D8C8" stroke-width="1"/>
+<circle cx="122" cy="492" r="34" fill="#D9534F"/>
+<text x="122" y="500" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="center">1</text>
+<text x="172" y="492" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start">Erro</text>
+<circle cx="404" cy="504" r="22" fill="#FFFDF8" stroke="#D9534F" stroke-width="3"/>
+<line x1="392" y1="504" x2="416" y2="504" stroke="#D9534F" stroke-width="3" stroke-linecap="round"/>
+<line x1="404" y1="492" x2="404" y2="516" stroke="#D9534F" stroke-width="3" stroke-linecap="round"/>
+<circle cx="112" cy="558" r="9" fill="#D9534F"/>
+<text x="132" y="562" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Fusivel distante da bateria</text>
+<circle cx="112" cy="600" r="9" fill="#D9534F"/>
+<text x="132" y="604" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Valor escolhido pela carga e nao pelo</text>
+<text x="132" y="622" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">cabo</text>
+<circle cx="112" cy="642" r="9" fill="#D9534F"/>
+<text x="132" y="646" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Fusivel AC usado em DC</text>
+<circle cx="112" cy="684" r="9" fill="#D9534F"/>
+<text x="132" y="688" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Cabo sem protecao em trecho inicial</text>
+<line x1="466" y1="572" x2="486" y2="572" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="486" y1="572" x2="470.4115427318801" y2="581.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="486" y1="572" x2="470.4115427318801" y2="563.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<polygon points="520,466 884,466 862,682 498,682" fill="#FFF7E8" stroke="#E4D8C8" stroke-width="1"/>
+<circle cx="550" cy="492" r="34" fill="#DB7C26"/>
+<text x="550" y="500" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="center">2</text>
+<text x="600" y="492" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start">Risco</text>
+<circle cx="832" cy="504" r="22" fill="#FFFDF8" stroke="#DB7C26" stroke-width="3"/>
+<line x1="820" y1="504" x2="844" y2="504" stroke="#DB7C26" stroke-width="3" stroke-linecap="round"/>
+<line x1="832" y1="492" x2="832" y2="516" stroke="#DB7C26" stroke-width="3" stroke-linecap="round"/>
+<circle cx="540" cy="558" r="9" fill="#DB7C26"/>
+<text x="560" y="562" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Arco DC sustentado</text>
+<circle cx="540" cy="600" r="9" fill="#DB7C26"/>
+<text x="560" y="604" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Aquecimento do condutor</text>
+<circle cx="540" cy="642" r="9" fill="#DB7C26"/>
+<text x="560" y="646" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Incendio em curto</text>
+<circle cx="540" cy="684" r="9" fill="#DB7C26"/>
+<text x="560" y="688" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Disparo tardio ou inexistente</text>
+<line x1="894" y1="572" x2="914" y2="572" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="914" y1="572" x2="898.4115427318801" y2="581.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<line x1="914" y1="572" x2="898.4115427318801" y2="563.0" stroke="#5B6B79" stroke-width="2" stroke-linecap="round"/>
+<polygon points="948,466 1312,466 1290,682 926,682" fill="#F1FFF6" stroke="#E4D8C8" stroke-width="1"/>
+<circle cx="978" cy="492" r="34" fill="#2A9D57"/>
+<text x="978" y="500" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="center">3</text>
+<text x="1028" y="492" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start">Correcao</text>
+<circle cx="1260" cy="504" r="22" fill="#FFFDF8" stroke="#2A9D57" stroke-width="3"/>
+<line x1="1248" y1="504" x2="1272" y2="504" stroke="#2A9D57" stroke-width="3" stroke-linecap="round"/>
+<line x1="1260" y1="492" x2="1260" y2="516" stroke="#2A9D57" stroke-width="3" stroke-linecap="round"/>
+<circle cx="968" cy="558" r="9" fill="#2A9D57"/>
+<text x="988" y="562" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Proteger perto da fonte</text>
+<circle cx="968" cy="600" r="9" fill="#2A9D57"/>
+<text x="988" y="604" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Dimensionar pela bitola e carga</text>
+<circle cx="968" cy="642" r="9" fill="#2A9D57"/>
+<text x="988" y="646" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Usar fusivel especificado para DC</text>
+<circle cx="968" cy="684" r="9" fill="#2A9D57"/>
+<text x="988" y="688" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Documentar no unifilar</text>
+<rect x="70" y="720" width="1260" height="102" fill="#FFFDF8" rx="24" ry="24" stroke="#E4D8C8" stroke-width="1"/>
+<text x="94" y="754" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">EVIDENCIA ANTES DE CONCLUSAO</text>
+<circle cx="104.0" cy="792" r="10" fill="#D9534F"/>
+<text x="104.0" y="798" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">1</text>
+<text x="124.0" y="789" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">O cabo entre fonte e fusivel fica exposto a curto</text>
+<text x="124.0" y="805" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">sem protecao.</text>
+<circle cx="506.6666666666667" cy="792" r="10" fill="#D9534F"/>
+<text x="506.6666666666667" y="798" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">2</text>
+<text x="526.6666666666667" y="789" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Fusivel deve ser compatível com tensao DC e</text>
+<text x="526.6666666666667" y="805" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">corrente de interrupcao.</text>
+<circle cx="909.3333333333334" cy="792" r="10" fill="#D9534F"/>
+<text x="909.3333333333334" y="798" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">3</text>
+<text x="929.3333333333334" y="789" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Valor alto demais protege pouco; valor baixo demais</text>
+<text x="929.3333333333334" y="805" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">dispara indevidamente.</text>
+<line x1="70" y1="842" x2="1330" y2="842" stroke="#E4D8C8" stroke-width="1" stroke-linecap="round"/>
+<text x="70" y="868" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">FORMATO: CAUSA-EFEITO | PRIORIDADE: ALTA | USE COMO APOIO DIDATICO, NAO COMO NORMA ISOLADA</text>
+</svg>

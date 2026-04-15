@@ -1,0 +1,34 @@
+{
+  "slug": "holding-tank-y-valve-macerador",
+  "kind": "flow_diagram",
+  "title": "Esgoto a bordo: holding tank, Y-valve e macerador",
+  "summary": "Fluxo operacional do sistema de aguas negras entre vaso, tanque, valvula Y, macerador e descarga.",
+  "didactic_goal": "Mostrar que o sistema de esgoto combina logica hidraulica, acionamento eletrico e decisao operacional.",
+  "format": "fluxo-de-sistema",
+  "priority": "media",
+  "hero_label": "AGUAS NEGRAS EXIGEM CAMINHO CONTROLADO, BOMBA CERTA E USO RESPONSAVEL",
+  "notes": [
+    "Vaso envia efluente para tanque ou rota permitida conforme configuracao.",
+    "Y-valve define caminho e deve ser entendida pela tripulacao.",
+    "Macerador e bomba exigem protecao eletrica e manutencao.",
+    "Sensor de nivel evita transbordo e operacao indevida."
+  ],
+  "caution": "Descarga de efluentes depende de regras ambientais e local de navegacao. Este visual nao autoriza descarte.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Holding Tank - Y-Valve - Sistema de Esgoto.md",
+    "70_Hidraulica_Climatizacao_e_Utilidades/Macerador - Bomba de Aguas Negras.md"
+  ],
+  "nodes": [
+    {"title": "Vaso", "detail": "Origem do efluente e ponto de acionamento pelo usuario.", "color": "#1D6FD8", "items": ["manual", "eletrico", "valvula"]},
+    {"title": "Tanque", "detail": "Armazena aguas negras e exige respiro e sensor.", "color": "#7C5CC4", "items": ["nivel", "respiro", "odor"]},
+    {"title": "Y-valve", "detail": "Define caminho conforme operacao permitida.", "color": "#E0A100", "items": ["posicao", "trava", "rotulo"]},
+    {"title": "Macerador", "detail": "Bomba/tritura e descarrega quando permitido.", "color": "#D9534F", "items": ["corrente", "proteção", "bloqueio"]},
+    {"title": "Descarga", "detail": "Saida controlada ou bombeamento externo em marina.", "color": "#2A9D57", "items": ["deck", "saida", "regra"]}
+  ],
+  "callout_title": "FALHAS COMUNS",
+  "callouts": [
+    {"title": "Valvula errada", "detail": "Caminho indevido gera risco ambiental.", "color": "#D9534F"},
+    {"title": "Tanque cheio", "detail": "Sensor evita transbordo.", "color": "#DB7C26"},
+    {"title": "Bomba travada", "detail": "Corrente sobe e protecao atua.", "color": "#E0A100"}
+  ]
+}

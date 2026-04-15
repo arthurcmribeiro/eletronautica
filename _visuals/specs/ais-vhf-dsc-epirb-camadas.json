@@ -1,0 +1,30 @@
+{
+  "slug": "ais-vhf-dsc-epirb-camadas",
+  "kind": "comparison_cards",
+  "title": "Comunicacao e seguranca: AIS, VHF, DSC e EPIRB",
+  "summary": "Quadro comparativo das camadas de comunicacao, chamada seletiva, identificacao e emergencia.",
+  "didactic_goal": "Mostrar que AIS, VHF, DSC e EPIRB sao complementares, nao substitutos diretos.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "COMUNICAR, IDENTIFICAR E PEDIR SOCORRO SAO FUNCOES DIFERENTES",
+  "notes": [
+    "VHF e comunicacao por voz.",
+    "DSC automatiza chamada seletiva e distress quando integrado corretamente.",
+    "AIS melhora consciencia situacional, mas nao substitui vigia.",
+    "EPIRB e camada de emergencia para busca e salvamento."
+  ],
+  "caution": "Requisitos de licenciamento, MMSI, programacao e uso variam por jurisdicao e equipamento.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/VHF.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/AIS (Automatic Identification System).md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/EPIRB - Beacon de Emergencia.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "VHF", "detail": "Comunicação de voz local e canal de chamada/socorro.", "color": "#1D6FD8", "items": ["voz", "canal", "antena"]},
+    {"title": "DSC", "detail": "Chamada digital seletiva, distress e identificacao via MMSI.", "color": "#7C5CC4", "items": ["MMSI", "distress", "GPS"]},
+    {"title": "AIS", "detail": "Troca posicao, rumo e identificacao com outras embarcacoes.", "color": "#2A9D57", "items": ["alvo", "MMSI", "MFD"]},
+    {"title": "EPIRB", "detail": "Beacon dedicado para emergencia e busca e salvamento.", "color": "#D9534F", "items": ["406 MHz", "GNSS", "SAR"]}
+  ]
+}

@@ -199,6 +199,16 @@ Para esta nota, o ponto mais seguro é sempre remeter ao conjunto:
 - regulamentação aplicável à classe e ao tipo da embarcação;
 - requisitos de integração com motores, geradores e ventilação.
 
+## Visual didático
+
+![Extintor automatico: deteccao e resposta](../_visuals/generated/extintor-automatico-casa-maquinas.svg)
+
+Mostrar extintor automatico como parte de um sistema de resposta, nao como item isolado.
+
+**Cautela:** Sistema de combate a incendio deve seguir fabricante, classe de agente, volume protegido, inspecao e requisitos aplicaveis.
+
+Material de apoio: [Extintor automatico: deteccao e resposta](../_visuals/generated/extintor-automatico-casa-maquinas.md)
+
 ## Integração com outras notas
 
 - [[Blower]]

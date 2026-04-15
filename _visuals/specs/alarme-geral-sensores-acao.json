@@ -1,0 +1,34 @@
+{
+  "slug": "alarme-geral-sensores-acao",
+  "kind": "flow_diagram",
+  "title": "Sistema de alarme: sensor, painel e acao",
+  "summary": "Fluxo de alarme entre sensor, painel, sirene/notificacao, confirmacao e resposta operacional.",
+  "didactic_goal": "Mostrar que alarme bom precisa transformar evento em acao clara e testavel.",
+  "format": "fluxo-de-alarme",
+  "priority": "alta",
+  "hero_label": "ALARME SEM ACAO DEFINIDA VIRA RUIDO; ALARME BOM ENCURTA A RESPOSTA",
+  "notes": [
+    "Sensor detecta condicao anormal.",
+    "Painel interpreta, prioriza e sinaliza.",
+    "Sirene, luz ou telemetria chamam atencao.",
+    "Procedimento define a resposta da tripulacao."
+  ],
+  "caution": "Alarmes criticos devem ser testados periodicamente e nao depender apenas de internet ou app remoto.",
+  "target_notes": [
+    "60_Automacao_Conectividade_e_Monitoramento/Sistema de Alarme Geral - Painel de Alarmes.md",
+    "80_Seguranca_e_Corrosao/Alarme de Alagamento - Sensor de Porao.md"
+  ],
+  "nodes": [
+    {"title": "Sensor", "detail": "Detecta agua, gas, CO, temperatura, tensao ou porta.", "color": "#1D6FD8", "items": ["entrada", "limite", "teste"]},
+    {"title": "Painel", "detail": "Concentra eventos e separa aviso de falha critica.", "color": "#7C5CC4", "items": ["prioridade", "zona", "historico"]},
+    {"title": "Aviso", "detail": "Sirene, luz, display ou notificacao chamam atencao.", "color": "#D9534F", "items": ["sirene", "luz", "app"]},
+    {"title": "Confirmacao", "detail": "Operador identifica origem e checa risco real.", "color": "#E0A100", "items": ["local", "causa", "risco"]},
+    {"title": "Acao", "detail": "Procedimento de corte, ventilacao, bombeamento ou abandono.", "color": "#2A9D57", "items": ["cortar", "ventilar", "responder"]}
+  ],
+  "callout_title": "PONTOS FRACOS",
+  "callouts": [
+    {"title": "Sem teste", "detail": "Sensor morto parece silencio normal.", "color": "#D9534F"},
+    {"title": "Alarme demais", "detail": "Falso alarme reduz resposta.", "color": "#DB7C26"},
+    {"title": "Sem procedimento", "detail": "Tripulacao ouve, mas nao age.", "color": "#E0A100"}
+  ]
+}

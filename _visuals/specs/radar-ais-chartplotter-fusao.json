@@ -1,0 +1,35 @@
+{
+  "slug": "radar-ais-chartplotter-fusao",
+  "kind": "flow_diagram",
+  "title": "Radar, AIS e chartplotter: fusao de situacao",
+  "summary": "Fluxo de dados entre radar, AIS, GPS, sensores e MFD para consciencia situacional.",
+  "didactic_goal": "Mostrar que cada sensor enxerga uma parte diferente do ambiente e o MFD ajuda a integrar, mas nao substitui julgamento.",
+  "format": "fluxo-de-dados",
+  "priority": "alta",
+  "hero_label": "SENSOR DIFERENTE RESPONDE PERGUNTA DIFERENTE SOBRE O AMBIENTE",
+  "notes": [
+    "Radar detecta eco, inclusive alvo sem AIS.",
+    "AIS informa dados transmitidos por outra embarcacao.",
+    "GPS localiza a propria embarcacao no sistema.",
+    "MFD integra camadas, alarmes e apresentacao."
+  ],
+  "caution": "Fusao de dados depende de calibracao, antenas, rede, configuracao e interpretacao correta pelo operador.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Chartplotter - GPS - MFD.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Radar.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/AIS (Automatic Identification System).md"
+  ],
+  "nodes": [
+    {"title": "Radar", "detail": "Detecta ecos e obstaculos conforme alcance e condicao.", "color": "#1D6FD8", "items": ["eco", "chuva", "alcance"]},
+    {"title": "AIS", "detail": "Recebe/transmite identificacao e movimento declarados.", "color": "#2A9D57", "items": ["MMSI", "rumo", "CPA"]},
+    {"title": "GPS", "detail": "Fornece posicao propria para plotagem e navegacao.", "color": "#E0A100", "items": ["posicao", "SOG", "COG"]},
+    {"title": "Rede", "detail": "NMEA/Ethernet integra sensores ao display.", "color": "#7C5CC4", "items": ["NMEA", "Ethernet", "gateway"]},
+    {"title": "MFD", "detail": "Mostra camadas, alarmes e apoio a decisao do operador.", "color": "#D9534F", "items": ["overlay", "alarme", "rota"]}
+  ],
+  "callout_title": "LIMITES",
+  "callouts": [
+    {"title": "AIS ausente", "detail": "Nem todo alvo transmite.", "color": "#D9534F"},
+    {"title": "Radar exige leitura", "detail": "Eco precisa interpretacao.", "color": "#DB7C26"},
+    {"title": "MFD nao decide", "detail": "Operador segue responsavel.", "color": "#E0A100"}
+  ]
+}

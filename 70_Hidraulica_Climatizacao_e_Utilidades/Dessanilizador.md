@@ -201,6 +201,16 @@ Ensaios úteis:
 - achar que qualquer leitura isolada resolve o diagnóstico;
 - ligar o sistema a um arranjo elétrico que não suporta o uso real.
 
+## Visual didático
+
+![Dessalinizador: fluxo de agua e energia](../_visuals/generated/dessalinizador-fluxo-energia-agua.svg)
+
+Mostrar dessalinizador como sistema hidraulico e eletrico de alta demanda, sensivel a filtro, pressao e manutencao.
+
+**Cautela:** Pressao, salinidade, vazao e procedimento de flush/conservacao devem seguir fabricante.
+
+Material de apoio: [Dessalinizador: fluxo de agua e energia](../_visuals/generated/dessalinizador-fluxo-energia-agua.md)
+
 ## Integração com outras notas
 
 - [[Bomba de Água Pressurizada]]

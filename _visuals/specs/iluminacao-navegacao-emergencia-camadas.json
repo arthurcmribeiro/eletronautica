@@ -1,0 +1,30 @@
+{
+  "slug": "iluminacao-navegacao-emergencia-camadas",
+  "kind": "comparison_cards",
+  "title": "Iluminacao: navegacao, emergencia e conforto",
+  "summary": "Quadro visual para separar sinalizacao nautica, luz de ancora, emergencia e iluminacao de conforto.",
+  "didactic_goal": "Evitar que circuitos de conforto sejam tratados com a mesma criticidade ou funcao de luzes de navegacao e emergencia.",
+  "format": "quadro-comparativo",
+  "priority": "media",
+  "hero_label": "LUZ DE NAVEGACAO COMUNICA; LUZ DE CONFORTO ILUMINA; EMERGENCIA ORIENTA",
+  "notes": [
+    "Luzes de navegacao sao parte da comunicacao visual entre embarcacoes.",
+    "Luz de ancora sinaliza condicao de fundeio.",
+    "Emergencia preserva orientacao quando a energia principal falha.",
+    "Conforto e estetica devem ser separados de funcao critica."
+  ],
+  "caution": "Requisitos formais dependem de regras de navegacao, porte, tipo e area de operacao.",
+  "target_notes": [
+    "55_Iluminacao_e_Sinalizacao/Luz de Tope.md",
+    "55_Iluminacao_e_Sinalizacao/Luz de Ancora.md",
+    "55_Iluminacao_e_Sinalizacao/Iluminacao de Emergencia a Bordo.md",
+    "55_Iluminacao_e_Sinalizacao/Tipos de Lampadas e LEDs Nauticos.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "Navegacao", "detail": "Sinaliza presenca, rumo e condicao para outras embarcacoes.", "color": "#1D6FD8", "items": ["tope", "bordos", "alcance"]},
+    {"title": "Ancora", "detail": "Identifica embarcacao fundeada ou parada conforme regra aplicavel.", "color": "#E0A100", "items": ["fundeio", "360", "noite"]},
+    {"title": "Emergencia", "detail": "Ajuda rota de fuga, paineis e resposta a falhas.", "color": "#D9534F", "items": ["backup", "saida", "painel"]},
+    {"title": "Conforto", "detail": "Ilumina cabine, cockpit e areas de uso sem substituir sinalizacao.", "color": "#2A9D57", "items": ["cortesia", "dimmer", "decorativa"]}
+  ]
+}

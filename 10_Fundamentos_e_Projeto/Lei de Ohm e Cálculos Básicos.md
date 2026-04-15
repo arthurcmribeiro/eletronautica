@@ -251,6 +251,16 @@ Convenção histórica. Ah é independente da tensão — uma bateria de 100Ah s
 
 Sim. A resistência do cobre aumenta com a temperatura: +0,4% por grau Celsius. A 60°C vs 20°C, a resistência do cobre é ~16% maior — aumenta a queda de tensão. Por isso os fatores de correção existem no dimensionamento.
 
+## Visual didático
+
+![Lei de Ohm: tensao, corrente, resistencia e potencia](../_visuals/generated/lei-ohm-potencia-relacoes.svg)
+
+Fixar a diferenca entre tensao, corrente, resistencia e potencia antes de aplicar calculos em cabos, fusíveis, autonomia e inversores.
+
+**Cautela:** O visual e conceitual. Medicoes reais dependem de carga, temperatura, estado do cabo, conexoes e instrumento.
+
+Material de apoio: [Lei de Ohm: tensao, corrente, resistencia e potencia](../_visuals/generated/lei-ohm-potencia-relacoes.md)
+
 ## Integração com outras notas
 
 - [[DC vs AC — Corrente Contínua e Alternada]]

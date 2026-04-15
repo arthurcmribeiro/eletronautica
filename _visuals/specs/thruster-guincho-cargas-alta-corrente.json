@@ -1,0 +1,26 @@
+{
+  "slug": "thruster-guincho-cargas-alta-corrente",
+  "kind": "cause_effect",
+  "title": "Thruster e guincho: cargas DC de alta corrente",
+  "summary": "Causa e efeito de quedas, aquecimento e falhas em cargas DC de alta corrente e uso intermitente.",
+  "didactic_goal": "Mostrar que thruster e guincho exigem banco, cabo, protecao e tempo de uso compatíveis com corrente muito alta.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "CARGA DC GRANDE NAO PERDOA CABO FINO, BANCO FRACO OU USO CONTINUO",
+  "notes": [
+    "Corrente de partida e regime pode ser muito alta.",
+    "Queda de tensao derruba desempenho e aumenta aquecimento.",
+    "Uso intermitente precisa respeitar tempo de trabalho.",
+    "Protecao deve considerar cabo, motor e corrente de curto."
+  ],
+  "caution": "Dimensionamento real deve seguir fabricante, corrente nominal/pico, comprimento de cabo e estrategia de banco.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Thruster.md",
+    "70_Hidraulica_Climatizacao_e_Utilidades/Guincho.md"
+  ],
+  "columns": [
+    {"title": "Causas", "color": "#DB7C26", "items": ["Banco subdimensionado", "Cabo longo ou fino", "Terminal aquecendo", "Uso acima do ciclo permitido"]},
+    {"title": "Sintomas", "color": "#D9534F", "items": ["Motor perde forca", "Tensao despenca", "Disjuntor/fusivel atua", "Cheiro ou calor no cabo"]},
+    {"title": "Correcoes", "color": "#2A9D57", "items": ["Medir corrente real", "Reduzir percurso e aumentar bitola", "Revisar banco e conexoes", "Respeitar duty cycle"] }
+  ]
+}

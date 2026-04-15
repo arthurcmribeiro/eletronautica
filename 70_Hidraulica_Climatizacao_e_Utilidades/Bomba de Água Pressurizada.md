@@ -162,6 +162,16 @@ Os mais recorrentes são:
 - deixar a bomba trabalhar a seco repetidamente;
 - montar o sistema de modo que toda pulsação hidráulica vire ruído estrutural.
 
+## Visual didático
+
+![Agua pressurizada: bomba, pressostato e acumulador](../_visuals/generated/agua-pressurizada-bomba-acumulador.svg)
+
+Mostrar que ciclos curtos, ruido e baixa pressao podem vir de eletrica, hidraulica ou pressostato/acumulador.
+
+**Cautela:** Pressao, vazao, fusivel, bitola e acumulador devem seguir especificacao da bomba e layout hidraulico.
+
+Material de apoio: [Agua pressurizada: bomba, pressostato e acumulador](../_visuals/generated/agua-pressurizada-bomba-acumulador.md)
+
 ## Integração com outras notas
 
 - [[Boiler]]

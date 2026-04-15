@@ -1,0 +1,34 @@
+{
+  "slug": "chaves-gerais-seletoras-isolamento",
+  "kind": "flow_diagram",
+  "title": "Chaves gerais e seletoras: isolamento e manobra",
+  "summary": "Fluxo de decisao para entender chave geral, seletora de banco e isolamento de circuitos.",
+  "didactic_goal": "Diferenciar desligar, selecionar banco, paralelar emergencia e isolar para manutencao.",
+  "format": "fluxo-de-manobra",
+  "priority": "alta",
+  "hero_label": "CHAVE NAO E SO LIGA/DESLIGA: ELA DEFINE CAMINHO DE ENERGIA E CONDICAO DE SEGURANCA",
+  "notes": [
+    "Chave geral isola um sistema ou banco.",
+    "Seletora escolhe fonte/banco conforme arquitetura.",
+    "Paralelo de emergencia deve ser controlado e entendido.",
+    "Manobra errada pode deixar carga critica sem energia."
+  ],
+  "caution": "Nunca manobre chaves de bateria ou AC sem entender carga, alternador, inversor e recomendacao do fabricante.",
+  "target_notes": [
+    "40_Distribuicao_Protecao_e_Aterramento/Chaves Gerais (DC).md",
+    "40_Distribuicao_Protecao_e_Aterramento/Chaves Seletoras (AC).md"
+  ],
+  "nodes": [
+    {"title": "Fonte", "detail": "Banco, shore, gerador ou inversor disponivel para alimentar o circuito.", "color": "#1D6FD8", "items": ["banco", "shore", "gerador"]},
+    {"title": "Selecionar", "detail": "Escolher qual fonte/banco entra em operacao.", "color": "#E0A100", "items": ["1", "2", "both"]},
+    {"title": "Isolar", "detail": "Desconectar para manutencao, emergencia ou armazenamento.", "color": "#D9534F", "items": ["off", "bloqueio", "teste"]},
+    {"title": "Distribuir", "detail": "Energia segue para painel, barramento ou carga dedicada.", "color": "#168A8A", "items": ["painel", "bus", "carga"]},
+    {"title": "Verificar", "detail": "Confirmar tensao, alarmes e circuitos criticos antes de operar.", "color": "#2A9D57", "items": ["tensao", "alarme", "critico"]}
+  ],
+  "callout_title": "CUIDADOS",
+  "callouts": [
+    {"title": "Alternador", "detail": "Desconectar sob carga pode danificar sistema.", "color": "#D9534F"},
+    {"title": "Emergencia", "detail": "Paralelo deve ser temporario e consciente.", "color": "#DB7C26"},
+    {"title": "Etiqueta", "detail": "Sem rotulo, manobra vira aposta.", "color": "#E0A100"}
+  ]
+}

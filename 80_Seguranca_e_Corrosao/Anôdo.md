@@ -185,6 +185,16 @@ Os mais frequentes são:
 
 [[Eletrólise]] e [[Correntes Parasitas — Stray Currents]] explicam por que um anodo pode acabar rápido demais. [[Bonding — Sistema de Interligação de Massas]] define como os metais estão eletricamente conectados. [[Isolador Galvânico - Transformador de Isolamento]] entra quando o shore power participa do problema.
 
+## Visual didático
+
+![Anodo, eletrolise e protecao contra corrosao](../_visuals/generated/anodo-eletrolise-protecao.svg)
+
+Evitar que anodo seja tratado como solucao universal para qualquer corrosao submersa.
+
+**Cautela:** Diagnostico de corrosao exige inspecao, historico, medicao e avaliacao do ambiente de marina.
+
+Material de apoio: [Anodo, eletrolise e protecao contra corrosao](../_visuals/generated/anodo-eletrolise-protecao.md)
+
 ## Integração com outras notas
 
 - [[Bonding — Sistema de Interligação de Massas]]

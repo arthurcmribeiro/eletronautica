@@ -259,6 +259,16 @@ Para transom mount: sim. Para in-hull (colado): sim. Para thruhull: não — req
 
 Depende da frequência e do equipamento. 200 kHz: 100–200m. 50 kHz: 300–600m. CHIRP moderno de baixa frequência: > 1.000m em algumas configurações profissionais.
 
+## Visual didático
+
+![Sonda: transdutor, eco e leitura](../_visuals/generated/sonda-transdutor-eco-leitura.svg)
+
+Separar falhas de energia, transdutor, instalacao no casco e interpretacao de leitura.
+
+**Cautela:** Leitura de sonda depende de instalacao, frequencia, velocidade, ganho, fundo e calibracao de offset.
+
+Material de apoio: [Sonda: transdutor, eco e leitura](../_visuals/generated/sonda-transdutor-eco-leitura.md)
+
 ## Integração com outras notas
 
 - [[AIS (Automatic Identification System)]]

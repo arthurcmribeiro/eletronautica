@@ -1,0 +1,34 @@
+{
+  "slug": "agua-pressurizada-bomba-acumulador",
+  "kind": "flow_diagram",
+  "title": "Agua pressurizada: bomba, pressostato e acumulador",
+  "summary": "Fluxo do sistema de agua doce pressurizada, incluindo tanque, filtro, bomba, pressostato, acumulador e consumidores.",
+  "didactic_goal": "Mostrar que ciclos curtos, ruido e baixa pressao podem vir de eletrica, hidraulica ou pressostato/acumulador.",
+  "format": "fluxo-de-sistema",
+  "priority": "media",
+  "hero_label": "BOMBA DE AGUA NAO TRABALHA SOZINHA: PRESSAO, VAZAO E ENERGIA ANDAM JUNTAS",
+  "notes": [
+    "Tanque e filtro alimentam a bomba.",
+    "Pressostato liga/desliga conforme pressao.",
+    "Acumulador reduz ciclos curtos e pulsacao.",
+    "Queda de tensao ou entupimento parecem defeito de bomba."
+  ],
+  "caution": "Pressao, vazao, fusivel, bitola e acumulador devem seguir especificacao da bomba e layout hidraulico.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Agua Pressurizada.md",
+    "70_Hidraulica_Climatizacao_e_Utilidades/Sensor de Nivel de Agua.md"
+  ],
+  "nodes": [
+    {"title": "Tanque", "detail": "Reserva de agua e sensor de nivel quando houver.", "color": "#1D6FD8", "items": ["nivel", "reserva", "respiro"]},
+    {"title": "Filtro", "detail": "Retem particulas antes da bomba.", "color": "#E0A100", "items": ["malha", "limpeza", "restricao"]},
+    {"title": "Bomba", "detail": "Pressuriza o circuito e exige corrente adequada.", "color": "#D9534F", "items": ["A", "fusivel", "cabo"]},
+    {"title": "Acumulador", "detail": "Amortece pulsos e reduz liga/desliga rapido.", "color": "#7C5CC4", "items": ["pressao", "pulso", "ciclo"]},
+    {"title": "Consumo", "detail": "Torneiras, chuveiro e boiler recebem vazao pressurizada.", "color": "#2A9D57", "items": ["torneira", "boiler", "chuveiro"]}
+  ],
+  "callout_title": "DIAGNOSTICO",
+  "callouts": [
+    {"title": "Ciclo curto", "detail": "Cheque acumulador e vazamento.", "color": "#DB7C26"},
+    {"title": "Baixa vazao", "detail": "Filtro ou tensao podem limitar.", "color": "#E0A100"},
+    {"title": "Sem partida", "detail": "Pressostato, fusivel ou bomba.", "color": "#D9534F"}
+  ]
+}

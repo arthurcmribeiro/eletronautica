@@ -266,6 +266,16 @@ Não — você estará acima da escala selecionada. Selecionar escala acima da t
 
 Em circuito próximo da senóide ideal, a diferença pode ser pequena. Em saídas de inversor, cargas não lineares ou sistemas com distorção harmônica, a leitura pode ficar materialmente errada num instrumento não-True RMS. Para diagnóstico confiável de AC a bordo, o True RMS é a referência profissional.
 
+## Visual didático
+
+![Multimetro: sequencia segura de medicao](../_visuals/generated/multimetro-sequencia-medicao.svg)
+
+Reduzir erro de campo ao usar multimetro, separando o que medir, onde conectar e qual escala usar.
+
+**Cautela:** Este visual nao substitui procedimento de seguranca para AC, bloqueio, verificacao de ausencia de tensao e manual do instrumento.
+
+Material de apoio: [Multimetro: sequencia segura de medicao](../_visuals/generated/multimetro-sequencia-medicao.md)
+
 ## Integração com outras notas
 
 - [[DC vs AC — Corrente Contínua e Alternada]]

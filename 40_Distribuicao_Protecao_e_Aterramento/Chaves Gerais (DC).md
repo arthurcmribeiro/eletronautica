@@ -176,6 +176,16 @@ Pode fazer, mas exige projeto e operação claros. Em muitos casos, soluções a
 
 Não necessariamente. Queda de tensão, aquecimento e degradação de contato podem existir mesmo com sensação mecânica aparentemente normal.
 
+## Visual didático
+
+![Chaves gerais e seletoras: isolamento e manobra](../_visuals/generated/chaves-gerais-seletoras-isolamento.svg)
+
+Diferenciar desligar, selecionar banco, paralelar emergencia e isolar para manutencao.
+
+**Cautela:** Nunca manobre chaves de bateria ou AC sem entender carga, alternador, inversor e recomendacao do fabricante.
+
+Material de apoio: [Chaves gerais e seletoras: isolamento e manobra](../_visuals/generated/chaves-gerais-seletoras-isolamento.md)
+
 ## Integração com outras notas
 
 - [[Barramento DC / Bus Bar / Distribuição DC]]

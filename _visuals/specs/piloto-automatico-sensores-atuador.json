@@ -1,0 +1,34 @@
+{
+  "slug": "piloto-automatico-sensores-atuador",
+  "kind": "flow_diagram",
+  "title": "Piloto automatico: sensores, controlador e atuador",
+  "summary": "Fluxo entre bussola/heading, controlador, unidade de potencia, atuador e leme.",
+  "didactic_goal": "Mostrar piloto automatico como sistema de controle em malha fechada, nao apenas como painel de comando.",
+  "format": "arquitetura-de-controle",
+  "priority": "alta",
+  "hero_label": "PILOTO AUTOMATICO MEDE RUMO, DECIDE CORRECAO E MOVE O LEME",
+  "notes": [
+    "Sensor de heading informa orientacao.",
+    "Controlador compara rumo desejado e rumo real.",
+    "Unidade de potencia aciona bomba, motor ou atuador.",
+    "Feedback e calibracao definem estabilidade do controle."
+  ],
+  "caution": "Instalacao e calibracao devem seguir fabricante; falha de sensor, energia ou atuador pode comprometer governabilidade.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Piloto Automatico.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Bussola Eletronica (Compass - HDG Sensor).md"
+  ],
+  "nodes": [
+    {"title": "Heading", "detail": "Bussola/sensor entrega rumo e movimento da embarcacao.", "color": "#1D6FD8", "items": ["HDG", "calibracao", "interferencia"]},
+    {"title": "Controlador", "detail": "Compara rota/rumo desejado com rumo medido.", "color": "#7C5CC4", "items": ["erro", "ganho", "modo"]},
+    {"title": "Potencia", "detail": "Driver fornece energia ao atuador conforme comando.", "color": "#D9534F", "items": ["corrente", "fusivel", "calor"]},
+    {"title": "Atuador", "detail": "Move bomba, cilindro, cabo ou leme conforme arquitetura.", "color": "#E0A100", "items": ["hidraulico", "linear", "rotativo"]},
+    {"title": "Leme", "detail": "Resposta do barco fecha a malha de controle.", "color": "#2A9D57", "items": ["resposta", "feedback", "mar"]}
+  ],
+  "callout_title": "FALHAS TIPICAS",
+  "callouts": [
+    {"title": "Sensor ruim", "detail": "Piloto corrige para dado falso.", "color": "#D9534F"},
+    {"title": "Energia fraca", "detail": "Atuador perde forca sob carga.", "color": "#DB7C26"},
+    {"title": "Calibracao", "detail": "Ganho errado gera oscilacao.", "color": "#E0A100"}
+  ]
+}

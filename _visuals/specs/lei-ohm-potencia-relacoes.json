@@ -1,0 +1,28 @@
+{
+  "slug": "lei-ohm-potencia-relacoes",
+  "kind": "comparison_cards",
+  "title": "Lei de Ohm: tensao, corrente, resistencia e potencia",
+  "summary": "Quadro didatico para relacionar V, I, R e P em calculos basicos de eletrica nautica.",
+  "didactic_goal": "Fixar a diferenca entre tensao, corrente, resistencia e potencia antes de aplicar calculos em cabos, fusíveis, autonomia e inversores.",
+  "format": "quadro-conceitual",
+  "priority": "alta",
+  "hero_label": "TODO CALCULO ELETRICO DE CAMPO VOLTA PARA V, I, R E P",
+  "notes": [
+    "Tensao e a diferenca de potencial disponivel.",
+    "Corrente e o fluxo exigido pela carga.",
+    "Resistencia limita corrente e gera queda/perda.",
+    "Potencia conecta o consumo ao dimensionamento de cabos e banco."
+  ],
+  "caution": "O visual e conceitual. Medicoes reais dependem de carga, temperatura, estado do cabo, conexoes e instrumento.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Lei de Ohm e Calculos Basicos.md",
+    "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Calculo Pratico.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "Tensao V", "detail": "Diferenca de potencial que empurra a corrente pelo circuito.", "color": "#1D6FD8", "items": ["volts", "12/24/220 V", "queda"]},
+    {"title": "Corrente I", "detail": "Fluxo eletrico que a carga exige para operar.", "color": "#D9534F", "items": ["amperes", "cabo", "fusivel"]},
+    {"title": "Resistencia R", "detail": "Oposicao ao fluxo, presente em cabos, conexoes e cargas.", "color": "#E0A100", "items": ["ohms", "perda", "aquecimento"]},
+    {"title": "Potencia P", "detail": "Energia por tempo: base para consumo, autonomia e geracao.", "color": "#2A9D57", "items": ["watts", "Wh", "balanco"]}
+  ]
+}

@@ -77,3 +77,23 @@ review_jurisdiction: "Brasil"
 - Criar pacote de medição e diagnóstico: multímetro, shunt, troubleshooting e inspeção.
 - Criar pacote de distribuição DC: fusíveis, disjuntores, barramento, quadro e chaves.
 - Criar pacote de navegação/comunicação: AIS, VHF, radar, piloto automático e chartplotter.
+
+## 2026-04-15 — Lote 4 — Cartilha visual e segunda onda
+
+- Registrado feedback editorial: os visuais anteriores estavam informativos, mas excessivamente parecidos e com pouca leitura humana aplicada.
+- Redesenhado o renderer para linguagem de cartilha/infográfico técnico:
+  - `flow_diagram` agora usa mapa de processo com eixo visual, estações numeradas, faixa de aplicação e erros comuns;
+  - `comparison_cards` agora usa mapa comparativo radial, painéis de uso prático e leitura rápida;
+  - `cause_effect` agora usa raciocínio diagnóstico em faixas progressivas.
+- Otimizado o rasterizador local:
+  - retângulos passaram a usar escrita por linha em vez de pixel a pixel;
+  - PNG passou a ser gerado em resolução lógica 2x para melhorar leitura quando ajustado à tela.
+- Criadas e renderizadas `24` novas specs, elevando a cobertura para `45` visuais em `svg`, `png` e `md`.
+- Integrados `24` novos visuais em notas-alvo, mantendo idempotência do integrador.
+- Atualizados `Inventário Visual da Base`, `Backlog de Evolução Editorial` e este log.
+
+## Próximo lote recomendado
+
+- Fazer revisão visual fina dos SVGs mais estratégicos para curso/apostila.
+- Criar exemplos calculados específicos com números de campo e cautela explícita.
+- Criar versões verticais/compactas dos melhores infográficos para slide, aula e publicação futura.

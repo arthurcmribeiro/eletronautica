@@ -266,6 +266,16 @@ Em mar calmo: 2–5A (mínimo). Em mar agitado com muitas correções: 10–20A 
 
 São sistemas independentes. Piloto automático é de controle de leme — os outros são de comunicação e navegação. São complementares, não substituíveis.
 
+## Visual didático
+
+![Piloto automatico: sensores, controlador e atuador](../_visuals/generated/piloto-automatico-sensores-atuador.svg)
+
+Mostrar piloto automatico como sistema de controle em malha fechada, nao apenas como painel de comando.
+
+**Cautela:** Instalacao e calibracao devem seguir fabricante; falha de sensor, energia ou atuador pode comprometer governabilidade.
+
+Material de apoio: [Piloto automatico: sensores, controlador e atuador](../_visuals/generated/piloto-automatico-sensores-atuador.md)
+
 ## Integração com outras notas
 
 - [[AIS (Automatic Identification System)]]

@@ -37,15 +37,20 @@ review_jurisdiction: "Brasil"
 - `[x]` Gerar `50hz-vs-60hz`.
 - `[x]` Gerar `bateria-zona-util-vs-recarga`.
 - `[x]` Ajustar template visual para melhor alinhamento de título, resumo e cards.
+- `[x]` Corrigir linguagem visual para padrão de cartilha/infográfico técnico, reduzindo o padrão repetitivo de caixas sequenciais.
 - `[x]` Criar inventário visual completo por domínio.
 - `[x]` Gerar lote amplo com visuais de projeto, cálculo, baterias, energia, proteção, rede, automação, utilidades e corrosão.
 - `[x]` Criar integrador automático de visuais em notas-alvo.
-- `[ ]` Planejar segunda onda:
+- `[x]` Executar segunda onda com 24 novos visuais integrados nas notas-alvo.
+- `[x]` Regenerar os `45` visuais com o novo template de cartilha/infográfico.
+- `[x]` Gerar PNG em resolução lógica 2x para melhorar leitura em visualização ajustada à tela, mantendo SVG como master editável.
+- `[ ]` Planejar terceira onda:
   - pacote de medição e diagnóstico;
   - pacote de distribuição DC;
   - pacote de navegação/comunicação;
   - pacote de segurança e alarmes;
   - pacote de utilidades eletromecânicas.
+  - pacote de exemplos calculados e versões para slide/apostila.
 
 ## Criação de analogia
 
@@ -55,10 +60,11 @@ review_jurisdiction: "Brasil"
 
 ## Criação de exemplo calculado
 
-- `[ ]` Exemplo visual de corrente DC exigida por inversor em 12V/24V.
-- `[ ]` Exemplo visual de queda de tensão em cabo DC.
-- `[ ]` Exemplo visual de autonomia do banco em função da carga.
-- `[ ]` Exemplo visual de RPM x frequência em gerador AC.
+- `[x]` Exemplo visual de queda de tensão em cabo DC.
+- `[x]` Exemplo visual de autonomia do banco em função da carga.
+- `[x]` Exemplo visual de RPM x frequência em gerador AC.
+- `[ ]` Exemplo visual de corrente DC exigida por inversor em 12V versus 24V com cautela de pico/surto.
+- `[ ]` Exemplo visual de leitura de shunt, SoC e corrente líquida.
 
 ## Reforço de fontes
 

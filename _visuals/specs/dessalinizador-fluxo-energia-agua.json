@@ -1,0 +1,33 @@
+{
+  "slug": "dessalinizador-fluxo-energia-agua",
+  "kind": "flow_diagram",
+  "title": "Dessalinizador: fluxo de agua e energia",
+  "summary": "Fluxo entre captacao, pre-filtro, bomba de alta pressao, membrana, agua potavel e rejeito.",
+  "didactic_goal": "Mostrar dessalinizador como sistema hidraulico e eletrico de alta demanda, sensivel a filtro, pressao e manutencao.",
+  "format": "fluxo-de-sistema",
+  "priority": "media",
+  "hero_label": "DESSALINIZADOR CONVERTE ENERGIA E PRESSAO EM AGUA POTAVEL, MAS COBRA MANUTENCAO",
+  "notes": [
+    "Captacao e filtragem protegem bomba e membrana.",
+    "Alta pressao exige energia e componentes adequados.",
+    "Membrana separa permeado e rejeito.",
+    "Qualidade da agua deve ser monitorada antes de consumir."
+  ],
+  "caution": "Pressao, salinidade, vazao e procedimento de flush/conservacao devem seguir fabricante.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Dessanilizador.md"
+  ],
+  "nodes": [
+    {"title": "Captacao", "detail": "Entrada de agua do mar com valvula e passador.", "color": "#1D6FD8", "items": ["seacock", "strainer", "entrada"]},
+    {"title": "Pre-filtro", "detail": "Remove particulas antes da bomba e membrana.", "color": "#E0A100", "items": ["micra", "troca", "pressao"]},
+    {"title": "Alta pressao", "detail": "Bomba exige energia, protecao e monitoramento.", "color": "#D9534F", "items": ["A", "bar", "fusivel"]},
+    {"title": "Membrana", "detail": "Separacao por osmose reversa entre permeado e rejeito.", "color": "#7C5CC4", "items": ["RO", "TDS", "flush"]},
+    {"title": "Saidas", "detail": "Agua potavel segue ao tanque; salmoura retorna ao mar.", "color": "#2A9D57", "items": ["potavel", "rejeito", "tanque"]}
+  ],
+  "callout_title": "PONTOS CRITICOS",
+  "callouts": [
+    {"title": "Filtro sujo", "detail": "Derruba vazao e força bomba.", "color": "#DB7C26"},
+    {"title": "Sem flush", "detail": "Membrana degrada ou contamina.", "color": "#D9534F"},
+    {"title": "Energia alta", "detail": "Inclua no balanco do banco.", "color": "#E0A100"}
+  ]
+}

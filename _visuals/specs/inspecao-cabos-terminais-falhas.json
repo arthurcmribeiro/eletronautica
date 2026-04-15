@@ -1,0 +1,26 @@
+{
+  "slug": "inspecao-cabos-terminais-falhas",
+  "kind": "cause_effect",
+  "title": "Inspecao de cabos e terminais: falhas visiveis",
+  "summary": "Causa e efeito de terminais frouxos, oxidacao, cabo subdimensionado e aquecimento em instalacoes nauticas.",
+  "didactic_goal": "Mostrar que muitas falhas eletricas de bordo sao mecanicas, termicas ou de conexao antes de serem defeito do equipamento.",
+  "format": "causa-efeito",
+  "priority": "alta",
+  "hero_label": "MAU CONTATO VIRA QUEDA DE TENSAO, CALOR E FALHA INTERMITENTE",
+  "notes": [
+    "Oxidacao aumenta resistencia de contato.",
+    "Terminal frouxo aquece e carboniza isolacao.",
+    "Cabo sem alívio mecanico sofre vibracao e fadiga.",
+    "Inspecao visual precisa ser acompanhada de medicao sob carga."
+  ],
+  "caution": "Desenergize antes de apertar, limpar ou desmontar conexoes. Em AC, confirme ausencia de tensao.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Inspecao de Cabos Terminais e Conexoes.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Terminais Conectores e Emendas.md"
+  ],
+  "columns": [
+    {"title": "Causas", "color": "#DB7C26", "items": ["Terminal frouxo", "Oxidacao ou zinabre", "Crimpagem ruim", "Vibracao sem alivio mecanico"]},
+    {"title": "Sinais", "color": "#D9534F", "items": ["Aquecimento localizado", "Isolacao escurecida", "Queda de tensao sob carga", "Falha intermitente"]},
+    {"title": "Acoes", "color": "#2A9D57", "items": ["Desenergizar e inspecionar", "Refazer terminal correto", "Medir queda sob carga", "Registrar e etiquetar"] }
+  ]
+}

@@ -266,6 +266,16 @@ Não. A fotometria, o arco de emissão e o alcance devem ser conformes à ISO 16
 
 Mesmo que ambas sejam brancas: tope = 225°, usado em movimento. Âncora = 360°, usado fundeado. São funções e arcos completamente diferentes.
 
+## Visual didático
+
+![Iluminacao: navegacao, emergencia e conforto](../_visuals/generated/iluminacao-navegacao-emergencia-camadas.svg)
+
+Evitar que circuitos de conforto sejam tratados com a mesma criticidade ou funcao de luzes de navegacao e emergencia.
+
+**Cautela:** Requisitos formais dependem de regras de navegacao, porte, tipo e area de operacao.
+
+Material de apoio: [Iluminacao: navegacao, emergencia e conforto](../_visuals/generated/iluminacao-navegacao-emergencia-camadas.md)
+
 ## Integração com outras notas
 
 - [[Luz de Cortesia]]

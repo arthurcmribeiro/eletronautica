@@ -353,6 +353,16 @@ Depende das condições: ambiente (bilge úmida = deterioração acelerada), mat
 
 Sim: medição de resistência elétrica. Resistência muito alta para o comprimento e bitola indica deterioração interna (oxidação progressiva do cobre). Câmera termográfica sob carga mostra pontos quentes sem abrir o cabo.
 
+## Visual didático
+
+![Inspecao de cabos e terminais: falhas visiveis](../_visuals/generated/inspecao-cabos-terminais-falhas.svg)
+
+Mostrar que muitas falhas eletricas de bordo sao mecanicas, termicas ou de conexao antes de serem defeito do equipamento.
+
+**Cautela:** Desenergize antes de apertar, limpar ou desmontar conexoes. Em AC, confirme ausencia de tensao.
+
+Material de apoio: [Inspecao de cabos e terminais: falhas visiveis](../_visuals/generated/inspecao-cabos-terminais-falhas.md)
+
 ## Integração com outras notas
 
 - [[Dimensionamento de Cabos DC — Cálculo Prático]]

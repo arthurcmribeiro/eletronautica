@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+<rect x="0" y="0" width="1400" height="900" fill="#F6F2EA" rx="0" ry="0"/>
+<circle cx="1238" cy="96" r="118" fill="#E8F1FB"/>
+<circle cx="1320" cy="32" r="64" fill="#F8E6CC"/>
+<rect x="50" y="34" width="1300" height="132" fill="#FFFDF8" rx="24" ry="24" stroke="#E4D8C8" stroke-width="1"/>
+<rect x="50" y="34" width="14" height="132" fill="#DB7C26" rx="20" ry="20"/>
+<text x="82" y="64" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">CARTILHA VISUAL | ELETRO NAUTICA</text>
+<text x="82" y="96" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start">Lei de Ohm: tensao, corrente, resistencia e potencia</text>
+<text x="82" y="138" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Quadro didatico para relacionar V, I, R e P em calculos basicos de eletrica nautica.</text>
+<rect x="1130" y="58" width="176" height="58" fill="#0F172A" rx="18" ry="18"/>
+<text x="1218" y="80" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="center">SVG + PNG</text>
+<text x="1218" y="104" fill="#D9E2EC" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="center">versionavel</text>
+<rect x="70" y="188" width="1260" height="74" fill="#FFF7E8" rx="24" ry="24" stroke="#F0C36D" stroke-width="2"/>
+<text x="700" y="218" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="center">TODO CALCULO ELETRICO DE CAMPO VOLTA PARA V, I, R E P</text>
+<rect x="70" y="292" width="306" height="385" fill="#FFFDF8" rx="24" ry="24" stroke="#E4D8C8" stroke-width="1"/>
+<rect x="92" y="314" width="10" height="28" fill="#DB7C26" rx="6" ry="6"/>
+<text x="112" y="334" fill="#DB7C26" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">IDEIA-CHAVE</text>
+<text x="94" y="370" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start">Compare antes de</text>
+<text x="94" y="394" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start">aplicar.</text>
+<text x="94" y="434" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Fixar a diferenca entre tensao,</text>
+<text x="94" y="453" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">corrente, resistencia e potencia antes</text>
+<text x="94" y="472" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">de aplicar calculos em cabos,</text>
+<text x="94" y="491" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">fusíveis, autonomia e inversores.</text>
+<text x="105" y="636" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">pergunte sempre:</text>
+<text x="105" y="660" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">O que muda? O que nao muda?</text>
+<text x="105" y="677" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Onde isso aparece no barco?</text>
+<rect x="408" y="292" width="612" height="385" fill="#FFFDF8" rx="32" ry="32" stroke="#E4D8C8" stroke-width="1"/>
+<rect x="438" y="322" width="10" height="28" fill="#7C5CC4" rx="6" ry="6"/>
+<text x="458" y="342" fill="#7C5CC4" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">MAPA COMPARATIVO</text>
+<circle cx="714" cy="486" r="74" fill="#0F172A"/>
+<text x="714" y="480" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="center">COMPARE</text>
+<text x="714" y="506" fill="#D9E2EC" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="center">funcoes</text>
+<line x1="714" y1="486" x2="714.0" y2="361.0" stroke="#D9E2EC" stroke-width="2" stroke-linecap="round"/>
+<circle cx="714.0" cy="361.0" r="49" fill="#FFFDF8" stroke="#1D6FD8" stroke-width="4"/>
+<rect x="688.0" y="347.0" width="44" height="28" fill="#FFFDF8" rx="5" ry="5" stroke="#1D6FD8" stroke-width="3"/>
+<rect x="732.0" y="355.0" width="8" height="12" fill="#1D6FD8" rx="2" ry="2"/>
+<line x1="700.0" y1="361.0" x2="712.0" y2="361.0" stroke="#1D6FD8" stroke-width="3" stroke-linecap="round"/>
+<line x1="719.0" y1="361.0" x2="729.0" y2="361.0" stroke="#1D6FD8" stroke-width="3" stroke-linecap="round"/>
+<line x1="724.0" y1="356.0" x2="724.0" y2="366.0" stroke="#1D6FD8" stroke-width="3" stroke-linecap="round"/>
+<text x="640.0" y="314" fill="#1D6FD8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start">Tensao V</text>
+<line x1="714" y1="486" x2="924.0" y2="486.0" stroke="#D9E2EC" stroke-width="2" stroke-linecap="round"/>
+<circle cx="924.0" cy="486.0" r="49" fill="#FFFDF8" stroke="#D9534F" stroke-width="4"/>
+<rect x="900.0" y="462.0" width="48" height="48" fill="#FFFDF8" rx="10" ry="10" stroke="#D9534F" stroke-width="3"/>
+<polyline points="910.0,492.0 919.0,478.0 930.0,488.0 939.0,470.0" fill="none" stroke="#D9534F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="970" y="476.0" fill="#D9534F" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start">Corrente I</text>
+<rect x="970" y="502.0" width="86" height="28" fill="#FFFDF8" rx="14" ry="14" stroke="#D9534F" stroke-width="1"/>
+<circle cx="986" cy="516.0" r="5" fill="#D9534F"/>
+<text x="999" y="520.0" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start">amperes</text>
+<rect x="970" y="532.0" width="86" height="28" fill="#FFFDF8" rx="14" ry="14" stroke="#D9534F" stroke-width="1"/>
+<circle cx="986" cy="546.0" r="5" fill="#D9534F"/>
+<text x="999" y="550.0" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start">cabo</text>
+<line x1="714" y1="486" x2="714.0" y2="611.0" stroke="#D9E2EC" stroke-width="2" stroke-linecap="round"/>
+<circle cx="714.0" cy="611.0" r="49" fill="#FFFDF8" stroke="#E0A100" stroke-width="4"/>
+<circle cx="714.0" cy="611.0" r="22" fill="#FFFDF8" stroke="#E0A100" stroke-width="3"/>
+<line x1="702.0" y1="611.0" x2="726.0" y2="611.0" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/>
+<line x1="714.0" y1="599.0" x2="714.0" y2="623.0" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/>
+<text x="640.0" y="648" fill="#E0A100" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start">Resistencia R</text>
+<line x1="714" y1="486" x2="504.0" y2="486.0" stroke="#D9E2EC" stroke-width="2" stroke-linecap="round"/>
+<circle cx="504.0" cy="486.0" r="49" fill="#FFFDF8" stroke="#2A9D57" stroke-width="4"/>
+<circle cx="504.0" cy="486.0" r="22" fill="#FFFDF8" stroke="#2A9D57" stroke-width="3"/>
+<line x1="492.0" y1="486.0" x2="516.0" y2="486.0" stroke="#2A9D57" stroke-width="3" stroke-linecap="round"/>
+<line x1="504.0" y1="474.0" x2="504.0" y2="498.0" stroke="#2A9D57" stroke-width="3" stroke-linecap="round"/>
+<text x="334.0" y="476.0" fill="#2A9D57" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start">Potencia P</text>
+<rect x="334.0" y="502.0" width="86" height="28" fill="#FFFDF8" rx="14" ry="14" stroke="#2A9D57" stroke-width="1"/>
+<circle cx="350.0" cy="516.0" r="5" fill="#2A9D57"/>
+<text x="363.0" y="520.0" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start">watts</text>
+<rect x="334.0" y="532.0" width="86" height="28" fill="#FFFDF8" rx="14" ry="14" stroke="#2A9D57" stroke-width="1"/>
+<circle cx="350.0" cy="546.0" r="5" fill="#2A9D57"/>
+<text x="363.0" y="550.0" fill="#1F2933" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start">Wh</text>
+<rect x="1052" y="292" width="278" height="385" fill="#FFFDF8" rx="28" ry="28" stroke="#E4D8C8" stroke-width="1"/>
+<rect x="1080" y="322" width="10" height="28" fill="#2A9D57" rx="6" ry="6"/>
+<text x="1100" y="342" fill="#2A9D57" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start">NA PRATICA</text>
+<circle cx="1090" cy="390" r="12" fill="#1D6FD8"/>
+<text x="1090" y="395" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">1</text>
+<text x="1116" y="393" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Tensao e a diferenca de</text>
+<text x="1116" y="410" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">potencial disponivel.</text>
+<circle cx="1090" cy="460" r="12" fill="#D9534F"/>
+<text x="1090" y="465" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">2</text>
+<text x="1116" y="463" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Corrente e o fluxo exigido</text>
+<text x="1116" y="480" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">pela carga.</text>
+<circle cx="1090" cy="530" r="12" fill="#E0A100"/>
+<text x="1090" y="535" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">3</text>
+<text x="1116" y="533" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Resistencia limita corrente</text>
+<text x="1116" y="550" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">e gera queda/perda.</text>
+<circle cx="1090" cy="600" r="12" fill="#2A9D57"/>
+<text x="1090" y="605" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">4</text>
+<text x="1116" y="603" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Potencia conecta o consumo</text>
+<text x="1116" y="620" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">ao dimensionamento de cabos</text>
+<text x="1116" y="637" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">e banco.</text>
+<rect x="70" y="708" width="1260" height="114" fill="#FFFDF8" rx="24" ry="24" stroke="#E4D8C8" stroke-width="1"/>
+<text x="94" y="742" fill="#0F172A" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start">LEITURA RAPIDA DA CARTILHA</text>
+<circle cx="104.0" cy="780" r="10" fill="#DB7C26"/>
+<text x="104.0" y="786" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">1</text>
+<text x="124.0" y="777" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Diferenca de potencial que empurra a</text>
+<text x="124.0" y="793" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">corrente pelo circuito.</text>
+<circle cx="406.0" cy="780" r="10" fill="#DB7C26"/>
+<text x="406.0" y="786" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">2</text>
+<text x="426.0" y="777" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Fluxo eletrico que a carga exige para</text>
+<text x="426.0" y="793" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">operar.</text>
+<circle cx="708.0" cy="780" r="10" fill="#DB7C26"/>
+<text x="708.0" y="786" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">3</text>
+<text x="728.0" y="777" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Oposicao ao fluxo, presente em cabos,</text>
+<text x="728.0" y="793" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">conexoes e cargas.</text>
+<circle cx="1010.0" cy="780" r="10" fill="#DB7C26"/>
+<text x="1010.0" y="786" fill="#FFFDF8" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="center">4</text>
+<text x="1030.0" y="777" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Energia por tempo: base para consumo,</text>
+<text x="1030.0" y="793" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">autonomia e geracao.</text>
+<line x1="70" y1="842" x2="1330" y2="842" stroke="#E4D8C8" stroke-width="1" stroke-linecap="round"/>
+<text x="70" y="868" fill="#5B6B79" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">FORMATO: QUADRO-CONCEITUAL | PRIORIDADE: ALTA | USE COMO APOIO DIDATICO, NAO COMO NORMA ISOLADA</text>
+</svg>

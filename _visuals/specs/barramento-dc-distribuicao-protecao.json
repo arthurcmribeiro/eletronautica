@@ -1,0 +1,34 @@
+{
+  "slug": "barramento-dc-distribuicao-protecao",
+  "kind": "flow_diagram",
+  "title": "Barramento DC: distribuicao e protecao",
+  "summary": "Fluxo entre banco, fusivel principal, chave geral, barramento e circuitos protegidos.",
+  "didactic_goal": "Mostrar barramento como ponto organizado de distribuicao, nao como lugar para empilhar cabos no borne da bateria.",
+  "format": "topologia-dc",
+  "priority": "alta",
+  "hero_label": "BARRAMENTO ORGANIZA CORRENTE; PROTECAO DEFINE O QUE ACONTECE NO CURTO",
+  "notes": [
+    "Banco entrega energia de alta corrente.",
+    "Protecao principal deve proteger o cabo de alimentacao.",
+    "Barramento distribui para circuitos com protecoes individuais.",
+    "Retorno negativo tambem precisa de organizacao e capacidade."
+  ],
+  "caution": "Corrente nominal, material, isolacao, torque e protecao dependem de projeto e fabricante.",
+  "target_notes": [
+    "40_Distribuicao_Protecao_e_Aterramento/Barramento DC - Bus Bar - Distribuicao DC.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Quadro Eletrico e Painel de Distribuicao AC-DC.md"
+  ],
+  "nodes": [
+    {"title": "Banco", "detail": "Energia disponivel com alta corrente de curto-circuito.", "color": "#1D6FD8", "items": ["Ah", "I curto", "bornes"]},
+    {"title": "Fusivel principal", "detail": "Protege o cabo que sai do banco para distribuicao.", "color": "#D9534F", "items": ["cabo", "curto", "proximo"]},
+    {"title": "Chave geral", "detail": "Permite isolamento operacional do sistema DC.", "color": "#E0A100", "items": ["isolamento", "manobra", "rotulo"]},
+    {"title": "Barramento", "detail": "Ponto comum dimensionado para distribuir positivo e negativo.", "color": "#168A8A", "items": ["positivo", "negativo", "torque"]},
+    {"title": "Circuitos", "detail": "Cada carga sai com protecao, bitola e identificacao proprias.", "color": "#2A9D57", "items": ["fusivel", "bitola", "etiqueta"]}
+  ],
+  "callout_title": "BOA PRATICA",
+  "callouts": [
+    {"title": "Nada empilhado", "detail": "Borne da bateria nao deve virar painel.", "color": "#D9534F"},
+    {"title": "Protecao por circuito", "detail": "Cada cabo precisa de protecao adequada.", "color": "#DB7C26"},
+    {"title": "Torque e capa", "detail": "Contato firme e protegido evita calor.", "color": "#2A9D57"}
+  ]
+}

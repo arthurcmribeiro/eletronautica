@@ -162,6 +162,40 @@ class SvgCanvas:
             attrs.append(f'stroke-width="{stroke_width}"')
         self.parts.append(f"<rect {' '.join(attrs)}/>")
 
+    def circle(
+        self,
+        x: float,
+        y: float,
+        radius: float,
+        fill: str,
+        stroke: str | None = None,
+        stroke_width: float = 1,
+    ) -> None:
+        attrs = [
+            f'cx="{x}"',
+            f'cy="{y}"',
+            f'r="{radius}"',
+            f'fill="{fill}"',
+        ]
+        if stroke:
+            attrs.append(f'stroke="{stroke}"')
+            attrs.append(f'stroke-width="{stroke_width}"')
+        self.parts.append(f"<circle {' '.join(attrs)}/>")
+
+    def polygon(
+        self,
+        points: Iterable[tuple[float, float]],
+        fill: str,
+        stroke: str | None = None,
+        stroke_width: float = 1,
+    ) -> None:
+        serialized = " ".join(f"{x},{y}" for x, y in points)
+        attrs = [f'points="{serialized}"', f'fill="{fill}"']
+        if stroke:
+            attrs.append(f'stroke="{stroke}"')
+            attrs.append(f'stroke-width="{stroke_width}"')
+        self.parts.append(f"<polygon {' '.join(attrs)}/>")
+
     def line(
         self,
         x1: float,
@@ -210,7 +244,7 @@ class SvgCanvas:
         self.parts.append(
             (
                 f'<text x="{x}" y="{y}" fill="{color}" '
-                f'font-family="Segoe UI, Arial, sans-serif" font-size="{size}" '
+                f'font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="{size}" '
                 f'font-weight="{weight}" text-anchor="{anchor}">'
                 f"{escape_svg(text)}</text>"
             )
@@ -245,24 +279,27 @@ class SvgCanvas:
 
 
 class RasterCanvas:
-    def __init__(self, width: int, height: int, background: str) -> None:
+    def __init__(self, width: int, height: int, background: str, scale: int = 2) -> None:
         self.width = width
         self.height = height
-        self.buffer = bytearray(width * height * 3)
+        self.scale_factor = scale
+        self.pixel_width = width * scale
+        self.pixel_height = height * scale
+        self.buffer = bytearray(self.pixel_width * self.pixel_height * 3)
         self.fill(background)
 
     def fill(self, color: str) -> None:
         r, g, b = hex_to_rgb(color)
-        row = bytes([r, g, b]) * self.width
-        for y in range(self.height):
-            start = y * self.width * 3
+        row = bytes([r, g, b]) * self.pixel_width
+        for y in range(self.pixel_height):
+            start = y * self.pixel_width * 3
             self.buffer[start : start + len(row)] = row
 
     def set_pixel(self, x: int, y: int, color: str) -> None:
-        if not (0 <= x < self.width and 0 <= y < self.height):
+        if not (0 <= x < self.pixel_width and 0 <= y < self.pixel_height):
             return
         r, g, b = hex_to_rgb(color)
-        index = (y * self.width + x) * 3
+        index = (y * self.pixel_width + x) * 3
         self.buffer[index : index + 3] = bytes((r, g, b))
 
     def rect(
@@ -277,25 +314,112 @@ class RasterCanvas:
         radius: float = 0,
     ) -> None:
         del radius
-        x0 = max(0, int(round(x)))
-        y0 = max(0, int(round(y)))
-        x1 = min(self.width, int(round(x + width)))
-        y1 = min(self.height, int(round(y + height)))
+        scale = self.scale_factor
+        x0 = max(0, int(round(x * scale)))
+        y0 = max(0, int(round(y * scale)))
+        x1 = min(self.pixel_width, int(round((x + width) * scale)))
+        y1 = min(self.pixel_height, int(round((y + height) * scale)))
+        if x1 <= x0 or y1 <= y0:
+            return
+        r, g, b = hex_to_rgb(fill)
+        row = bytes([r, g, b]) * (x1 - x0)
         for py in range(y0, y1):
-            for px in range(x0, x1):
-                self.set_pixel(px, py, fill)
+            start = (py * self.pixel_width + x0) * 3
+            self.buffer[start : start + len(row)] = row
         if stroke:
-            for offset in range(max(1, int(round(stroke_width)))):
-                self.line(x0, y0 + offset, x1 - 1, y0 + offset, stroke)
-                self.line(x0, y1 - 1 - offset, x1 - 1, y1 - 1 - offset, stroke)
-                self.line(x0 + offset, y0, x0 + offset, y1 - 1, stroke)
-                self.line(x1 - 1 - offset, y0, x1 - 1 - offset, y1 - 1, stroke)
+            stroke_px = max(1, int(round(stroke_width * scale)))
+            for offset in range(stroke_px):
+                self.line(x0, y0 + offset, x1 - 1, y0 + offset, stroke, scaled=True)
+                self.line(x0, y1 - 1 - offset, x1 - 1, y1 - 1 - offset, stroke, scaled=True)
+                self.line(x0 + offset, y0, x0 + offset, y1 - 1, stroke, scaled=True)
+                self.line(x1 - 1 - offset, y0, x1 - 1 - offset, y1 - 1, stroke, scaled=True)
 
-    def line(self, x1: float, y1: float, x2: float, y2: float, color: str, width: int = 1) -> None:
-        x1_i = int(round(x1))
-        y1_i = int(round(y1))
-        x2_i = int(round(x2))
-        y2_i = int(round(y2))
+    def circle(
+        self,
+        x: float,
+        y: float,
+        radius: float,
+        fill: str,
+        stroke: str | None = None,
+        stroke_width: float = 1,
+    ) -> None:
+        scale = self.scale_factor
+        cx = int(round(x * scale))
+        cy = int(round(y * scale))
+        outer = int(round(radius * scale))
+        inner = max(0, int(round((radius - stroke_width) * scale)))
+        outer_sq = outer * outer
+        inner_sq = inner * inner
+        for py in range(cy - outer, cy + outer + 1):
+            for px in range(cx - outer, cx + outer + 1):
+                distance_sq = (px - cx) * (px - cx) + (py - cy) * (py - cy)
+                if distance_sq <= outer_sq:
+                    if stroke and distance_sq >= inner_sq:
+                        self.set_pixel(px, py, stroke)
+                    else:
+                        self.set_pixel(px, py, fill)
+
+    def polygon(
+        self,
+        points: Iterable[tuple[float, float]],
+        fill: str,
+        stroke: str | None = None,
+        stroke_width: float = 1,
+    ) -> None:
+        scale = self.scale_factor
+        points = [(x * scale, y * scale) for x, y in points]
+        if len(points) < 3:
+            return
+        min_x = max(0, int(math.floor(min(x for x, _ in points))))
+        max_x = min(self.pixel_width - 1, int(math.ceil(max(x for x, _ in points))))
+        min_y = max(0, int(math.floor(min(y for _, y in points))))
+        max_y = min(self.pixel_height - 1, int(math.ceil(max(y for _, y in points))))
+        for py in range(min_y, max_y + 1):
+            for px in range(min_x, max_x + 1):
+                inside = False
+                j = len(points) - 1
+                for i, point in enumerate(points):
+                    xi, yi = point
+                    xj, yj = points[j]
+                    intersects = (yi > py) != (yj > py) and px < (
+                        (xj - xi) * (py - yi) / ((yj - yi) or 1e-9) + xi
+                    )
+                    if intersects:
+                        inside = not inside
+                    j = i
+                if inside:
+                    self.set_pixel(px, py, fill)
+        if stroke:
+            for index, point in enumerate(points):
+                next_point = points[(index + 1) % len(points)]
+                self.line(
+                    point[0],
+                    point[1],
+                    next_point[0],
+                    next_point[1],
+                    stroke,
+                    max(1, int(stroke_width * scale)),
+                    scaled=True,
+                )
+
+    def line(
+        self,
+        x1: float,
+        y1: float,
+        x2: float,
+        y2: float,
+        color: str,
+        width: int = 1,
+        dash: str | None = None,
+        scaled: bool = False,
+    ) -> None:
+        del dash
+        scale = 1 if scaled else self.scale_factor
+        x1_i = int(round(x1 * scale))
+        y1_i = int(round(y1 * scale))
+        x2_i = int(round(x2 * scale))
+        y2_i = int(round(y2 * scale))
+        width = max(1, int(round(width * scale)))
         dx = abs(x2_i - x1_i)
         sx = 1 if x1_i < x2_i else -1
         dy = -abs(y2_i - y1_i)
@@ -340,27 +464,28 @@ class RasterCanvas:
         weight: str = "400",
     ) -> None:
         del weight
-        scale = max(1, size // 8)
+        logical_scale = max(1, size // 8)
         normalized = normalize_ascii(text)
         if anchor == "center":
-            x = x - self.measure_text(normalized, scale) / 2
+            x = x - self.measure_text(normalized, logical_scale) / 2
         elif anchor == "right":
-            x = x - self.measure_text(normalized, scale)
-        cursor_x = int(round(x))
-        cursor_y = int(round(y))
+            x = x - self.measure_text(normalized, logical_scale)
+        glyph_scale = logical_scale * self.scale_factor
+        cursor_x = int(round(x * self.scale_factor))
+        cursor_y = int(round(y * self.scale_factor))
         for char in normalized:
             glyph = BITMAP_FONT.get(char, BITMAP_FONT[" "])
             for row_index, row in enumerate(glyph):
                 for col_index, bit in enumerate(row):
                     if bit == "1":
-                        for oy in range(scale):
-                            for ox in range(scale):
+                        for oy in range(glyph_scale):
+                            for ox in range(glyph_scale):
                                 self.set_pixel(
-                                    cursor_x + col_index * scale + ox,
-                                    cursor_y + row_index * scale + oy,
+                                    cursor_x + col_index * glyph_scale + ox,
+                                    cursor_y + row_index * glyph_scale + oy,
                                     color,
                                 )
-            cursor_x += 6 * scale
+            cursor_x += 6 * glyph_scale
 
     def text_block(
         self,
@@ -388,8 +513,8 @@ class RasterCanvas:
 
     def save_png(self, path: Path) -> None:
         raw = bytearray()
-        stride = self.width * 3
-        for y in range(self.height):
+        stride = self.pixel_width * 3
+        for y in range(self.pixel_height):
             raw.append(0)
             start = y * stride
             raw.extend(self.buffer[start : start + stride])
@@ -407,7 +532,7 @@ class RasterCanvas:
         png.extend(
             chunk(
                 b"IHDR",
-                struct.pack("!IIBBBBB", self.width, self.height, 8, 2, 0, 0, 0),
+                struct.pack("!IIBBBBB", self.pixel_width, self.pixel_height, 8, 2, 0, 0, 0),
             )
         )
         png.extend(chunk(b"IDAT", payload))
@@ -420,36 +545,44 @@ def write_svg(path: Path, payload: str) -> None:
 
 
 def draw_header(canvas, spec: dict) -> None:
-    canvas.rect(50, 38, 1300, 116, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=22)
-    canvas.text(78, 68, "ELETRO NAUTICA / VISUAL TECNICO", PALETTE["muted"], size=12, weight="700")
+    canvas.rect(0, 0, canvas.width, canvas.height, PALETTE["background"], radius=0)
+    canvas.circle(1238, 96, 118, "#E8F1FB")
+    canvas.circle(1320, 32, 64, "#F8E6CC")
+    canvas.rect(50, 34, 1300, 132, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=24)
+    canvas.rect(50, 34, 14, 132, PALETTE["orange"], radius=20)
+    canvas.text(82, 64, "CARTILHA VISUAL | ELETRO NAUTICA", PALETTE["muted"], size=12, weight="700")
     canvas.text_block(
-        78,
-        92,
+        82,
+        96,
         spec["title"],
         PALETTE["ink"],
-        size=24,
-        max_chars=68,
+        size=25,
+        max_chars=62,
         line_gap=6,
         weight="700",
     )
     canvas.text_block(
-        78,
-        128,
+        82,
+        138,
         spec["summary"],
         PALETTE["muted"],
         size=13,
-        max_chars=132,
+        max_chars=116,
         line_gap=5,
     )
+    canvas.rect(1130, 58, 176, 58, "#0F172A", radius=18)
+    canvas.text(1218, 80, "SVG + PNG", "#FFFDF8", size=14, anchor="center", weight="700")
+    canvas.text(1218, 104, "versionavel", "#D9E2EC", size=11, anchor="center")
 
 
 def draw_footer(canvas, spec: dict) -> None:
+    canvas.line(70, 842, 1330, 842, "#E4D8C8", width=1)
     canvas.text(
         70,
-        862,
-        f"FORMATO: {spec['format'].upper()}  |  PRIORIDADE: {spec['priority'].upper()}",
+        868,
+        f"FORMATO: {spec['format'].upper()} | PRIORIDADE: {spec['priority'].upper()} | USE COMO APOIO DIDATICO, NAO COMO NORMA ISOLADA",
         PALETTE["muted"],
-        size=14,
+        size=12,
     )
 
 
@@ -466,6 +599,113 @@ def draw_arrow(canvas, x1: float, y1: float, x2: float, y2: float, color: str, w
             color,
             width=width,
         )
+
+
+def text_y(canvas, y: float, raster_offset: float = -8) -> float:
+    if isinstance(canvas, RasterCanvas):
+        return y + raster_offset
+    return y
+
+
+def draw_badge(
+    canvas,
+    x: float,
+    y: float,
+    label: str,
+    color: str,
+    radius: float = 34,
+    text_color: str = "#FFFDF8",
+) -> None:
+    canvas.circle(x, y, radius + 5, "#FFFFFF", stroke="#E4D8C8", stroke_width=1)
+    canvas.circle(x, y, radius, color)
+    canvas.text(x, text_y(canvas, y + 7, -10), label, text_color, size=20, anchor="center", weight="700")
+
+
+def draw_pill(canvas, x: float, y: float, text: str, color: str, width: float | None = None) -> None:
+    pill_width = width if width is not None else max(86, min(210, len(text) * 9 + 28))
+    canvas.rect(x, y, pill_width, 28, "#FFFDF8", stroke=color, stroke_width=1, radius=14)
+    canvas.circle(x + 16, y + 14, 5, color)
+    canvas.text_block(x + 29, y + 18, text, PALETTE["text"], size=11, max_chars=max(10, int((pill_width - 42) / 7)), line_gap=2)
+
+
+def draw_section_label(canvas, x: float, y: float, label: str, color: str) -> None:
+    canvas.rect(x, y, 10, 28, color, radius=6)
+    canvas.text(x + 20, y + 20, label.upper(), color, size=13, weight="700")
+
+
+def draw_info_panel(
+    canvas,
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+    label: str,
+    title: str,
+    body: str,
+    color: str,
+) -> None:
+    canvas.rect(x, y, width, height, PALETTE["panel"], stroke="#E4D8C8", stroke_width=1, radius=24)
+    draw_section_label(canvas, x + 22, y + 22, label, color)
+    canvas.text_block(x + 24, y + 78, title, PALETTE["ink"], size=19, max_chars=max(16, int(width / 13)), line_gap=5, weight="700")
+    canvas.text_block(x + 24, y + 142, body, PALETTE["muted"], size=13, max_chars=max(28, int(width / 8)), line_gap=6)
+
+
+def draw_note_strip(
+    canvas,
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+    title: str,
+    notes: list[str],
+    color: str,
+    columns: int = 3,
+) -> None:
+    canvas.rect(x, y, width, height, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=24)
+    canvas.text(x + 24, y + 34, title.upper(), PALETTE["ink"], size=15, weight="700")
+    columns = max(1, columns)
+    column_width = (width - 52) / columns
+    for index, note in enumerate(notes[:columns]):
+        item_x = x + 24 + index * column_width
+        canvas.circle(item_x + 10, y + 72, 10, color)
+        canvas.text(item_x + 10, text_y(canvas, y + 78, -6), str(index + 1), "#FFFDF8", size=10, anchor="center", weight="700")
+        canvas.text_block(item_x + 30, y + 69, note, PALETTE["muted"], size=12, max_chars=max(22, int((column_width - 42) / 7)), line_gap=4)
+
+
+def draw_signal_bars(canvas, x: float, y: float, color: str) -> None:
+    for index, bar_height in enumerate((22, 38, 56, 74)):
+        canvas.rect(x + index * 20, y - bar_height, 12, bar_height, color, radius=5)
+    canvas.line(x - 10, y, x + 92, y, PALETTE["grid"], width=2)
+
+
+def draw_simple_icon(canvas, x: float, y: float, title: str, color: str) -> None:
+    normalized = normalize_ascii(title)
+    if any(token in normalized for token in ("BATERIA", "BANCO", "TENS", "FONTE")):
+        canvas.rect(x - 26, y - 14, 44, 28, "#FFFDF8", stroke=color, stroke_width=3, radius=5)
+        canvas.rect(x + 18, y - 6, 8, 12, color, radius=2)
+        canvas.line(x - 14, y, x - 2, y, color, width=3)
+        canvas.line(x + 5, y, x + 15, y, color, width=3)
+        canvas.line(x + 10, y - 5, x + 10, y + 5, color, width=3)
+    elif any(token in normalized for token in ("AGUA", "BOMBA", "HIDRAUL", "TANQUE")):
+        canvas.circle(x, y - 3, 18, "#FFFDF8", stroke=color, stroke_width=3)
+        canvas.line(x, y - 28, x - 15, y - 5, color, width=3)
+        canvas.line(x, y - 28, x + 15, y - 5, color, width=3)
+    elif any(token in normalized for token in ("RADAR", "AIS", "VHF", "ANTENA", "GPS", "DSC")):
+        canvas.line(x, y + 24, x, y - 24, color, width=4)
+        canvas.line(x - 22, y + 22, x, y - 2, color, width=3)
+        canvas.line(x + 22, y + 22, x, y - 2, color, width=3)
+        canvas.circle(x, y - 2, 6, color)
+    elif any(token in normalized for token in ("FUSIVEL", "DISJUNTOR", "PROTE", "EXTINTOR", "ALARME")):
+        canvas.polygon(((x, y - 30), (x + 26, y - 16), (x + 20, y + 22), (x, y + 32), (x - 20, y + 22), (x - 26, y - 16)), "#FFFDF8", stroke=color, stroke_width=3)
+        canvas.line(x - 10, y - 2, x, y + 10, color, width=3)
+        canvas.line(x, y + 10, x + 14, y - 12, color, width=3)
+    elif any(token in normalized for token in ("MED", "MULT", "CALC", "OHM", "CORRENTE")):
+        canvas.rect(x - 24, y - 24, 48, 48, "#FFFDF8", stroke=color, stroke_width=3, radius=10)
+        canvas.polyline(((x - 14, y + 6), (x - 5, y - 8), (x + 6, y + 2), (x + 15, y - 16)), color, width=3)
+    else:
+        canvas.circle(x, y, 22, "#FFFDF8", stroke=color, stroke_width=3)
+        canvas.line(x - 12, y, x + 12, y, color, width=3)
+        canvas.line(x, y - 12, x, y + 12, color, width=3)
 
 
 def draw_card(
@@ -688,51 +928,68 @@ def render_flow_diagram(spec: dict) -> tuple[str, RasterCanvas]:
     nodes = spec["nodes"]
     callouts = spec.get("callouts", [])
     node_count = len(nodes)
-    gap = 22
-    node_width = (1260 - gap * (node_count - 1)) / node_count
-    node_height = 190
-    node_y = 300
 
     for canvas in (svg, png):
         draw_header(canvas, spec)
-        canvas.rect(70, 178, 1260, 80, "#EEF7FF", stroke="#8CB9F4", stroke_width=2)
-        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        canvas.rect(70, 188, 850, 74, "#EEF7FF", stroke="#8CB9F4", stroke_width=2, radius=24)
+        canvas.text_block(96, 218, spec["hero_label"], PALETTE["ink"], size=18, max_chars=62, weight="700")
+        canvas.rect(950, 188, 380, 74, "#0F172A", radius=24)
+        canvas.text(1140, 217, "LEITURA EM CAMPO", "#FFFDF8", size=15, anchor="center", weight="700")
+        canvas.text(1140, 242, "siga evidencias, nao palpites", "#D9E2EC", size=12, anchor="center")
+
+        canvas.rect(70, 292, 1260, 304, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=30)
+        draw_section_label(canvas, 102, 322, "mapa do processo", PALETTE["teal"])
+        canvas.text_block(102, 356, "Leia como uma sequencia de decisoes: cada etapa deixa uma evidencia para a proxima.", PALETTE["muted"], size=12, max_chars=82, line_gap=5)
+        canvas.line(150, 466, 1250, 466, "#D9E2EC", width=2, dash="8 10")
+
+        positions: list[tuple[float, float]] = []
+        for index in range(node_count):
+            ratio = 0.0 if node_count == 1 else index / (node_count - 1)
+            positions.append((170 + ratio * 1060, 422 if index % 2 == 0 else 514))
+        for index in range(node_count - 1):
+            x1, y1 = positions[index]
+            x2, y2 = positions[index + 1]
+            draw_arrow(canvas, x1 + 40, y1, x2 - 40, y2, PALETTE["muted"], width=2)
+
         for index, node in enumerate(nodes):
-            x = 70 + index * (node_width + gap)
-            draw_card(
-                canvas,
-                x,
-                node_y,
-                node_width,
-                node_height,
-                node["title"],
-                node["detail"],
-                node.get("color", PALETTE["blue"]),
-                node.get("items"),
-            )
-            if index < node_count - 1:
-                draw_arrow(
-                    canvas,
-                    x + node_width + 4,
-                    node_y + node_height / 2,
-                    x + node_width + gap - 6,
-                    node_y + node_height / 2,
-                    PALETTE["muted"],
-                    width=2,
-                )
-        canvas.rect(70, 560, 1260, 165, PALETTE["panel"], stroke=PALETTE["grid"], stroke_width=1)
-        canvas.text(100, 598, spec.get("callout_title", "PONTOS DE ATENCAO"), PALETTE["ink"], size=18, weight="700")
-        columns = max(1, min(3, len(callouts)))
-        column_width = 1180 / columns
-        for index, callout in enumerate(callouts[:6]):
-            column = index % columns
-            row = index // columns
-            x = 100 + column * column_width
-            y = 635 + row * 54
-            color = callout.get("color", PALETTE["orange"])
-            canvas.rect(x, y - 13, 10, 10, color)
-            canvas.text(x + 24, y, callout["title"], PALETTE["text"], size=15, weight="700")
-            canvas.text_block(x + 24, y + 22, callout["detail"], PALETTE["muted"], size=12, max_chars=36, line_gap=4)
+            x, y = positions[index]
+            color = node.get("color", PALETTE["blue"])
+            draw_badge(canvas, x, y, str(index + 1), color, radius=32)
+            draw_simple_icon(canvas, x, y - 66, node["title"], color)
+            label_y = y + 46 if y < 470 else y - 118
+            label_x = min(1220, max(92, x - 92))
+            canvas.rect(label_x, label_y, 184, 78, "#FEFCF5", stroke="#E4D8C8", stroke_width=1, radius=18)
+            canvas.text_block(label_x + 16, label_y + 26, node["title"], PALETTE["ink"], size=14, max_chars=19, line_gap=4, weight="700")
+            lead = node.get("items", [node["detail"]])[0] if node.get("items") else node["detail"]
+            canvas.text_block(label_x + 16, label_y + 52, lead, PALETTE["muted"], size=10, max_chars=24, line_gap=4)
+
+        canvas.rect(70, 622, 388, 82, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=22)
+        draw_section_label(canvas, 96, 642, "pergunta-guia", PALETTE["blue"])
+        canvas.text_block(96, 680, spec["didactic_goal"], PALETTE["muted"], size=11, max_chars=48, line_gap=4)
+
+        canvas.rect(486, 622, 392, 82, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=22)
+        draw_section_label(canvas, 512, 642, "aplique assim", PALETTE["green"])
+        canvas.text_block(512, 680, "Confirme entrada, caminho, protecao, carga e registro antes de concluir.", PALETTE["muted"], size=11, max_chars=48, line_gap=4)
+
+        canvas.rect(906, 622, 424, 82, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=22)
+        draw_section_label(canvas, 932, 642, "atencao", PALETTE["orange"])
+        canvas.text_block(932, 680, spec.get("callout_title", "PONTOS DE ATENCAO"), PALETTE["muted"], size=11, max_chars=52, line_gap=4)
+
+        callout_source = callouts if callouts else [{"title": "Aplique", "detail": note, "color": PALETTE["orange"]} for note in spec.get("notes", [])]
+        strip_notes = [f"{callout['title']}: {callout['detail']}" for callout in callout_source[:4]]
+        if len(strip_notes) < 4:
+            strip_notes.extend(spec.get("notes", [])[: 4 - len(strip_notes)])
+        draw_note_strip(
+            canvas,
+            70,
+            724,
+            1260,
+            98,
+            "erros comuns e leituras uteis",
+            strip_notes,
+            PALETTE["teal"],
+            columns=4,
+        )
         draw_footer(canvas, spec)
     return svg.finalize(), png
 
@@ -742,32 +999,83 @@ def render_comparison_cards(spec: dict) -> tuple[str, RasterCanvas]:
     svg = SvgCanvas(width, height)
     png = RasterCanvas(width, height, PALETTE["background"])
     cards = spec["cards"]
-    columns = min(4, max(2, spec.get("columns", len(cards))))
-    rows = math.ceil(len(cards) / columns)
-    gap = 24
-    card_width = (1260 - gap * (columns - 1)) / columns
-    card_height = 190 if rows == 2 else 260
 
     for canvas in (svg, png):
         draw_header(canvas, spec)
-        canvas.rect(70, 178, 1260, 80, "#FFF7E8", stroke="#F0C36D", stroke_width=2)
-        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        canvas.rect(70, 188, 1260, 74, "#FFF7E8", stroke="#F0C36D", stroke_width=2, radius=24)
+        canvas.text_block(700, 218, spec["hero_label"], PALETTE["ink"], size=18, max_chars=68, anchor="center", weight="700")
+
+        draw_info_panel(
+            canvas,
+            70,
+            292,
+            306,
+            385,
+            "ideia-chave",
+            "Compare antes de aplicar.",
+            spec["didactic_goal"],
+            PALETTE["orange"],
+        )
+        canvas.text(105, 636, "pergunte sempre:", PALETTE["ink"], size=13, weight="700")
+        canvas.text_block(105, 660, "O que muda? O que nao muda? Onde isso aparece no barco?", PALETTE["muted"], size=12, max_chars=31, line_gap=5)
+
+        canvas.rect(408, 292, 612, 385, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=32)
+        draw_section_label(canvas, 438, 322, "mapa comparativo", PALETTE["purple"])
+        center_x, center_y = 714, 486
+        canvas.circle(center_x, center_y, 74, "#0F172A")
+        canvas.text(center_x, text_y(canvas, center_y - 6, -18), "COMPARE", "#FFFDF8", size=16, anchor="center", weight="700")
+        canvas.text(center_x, text_y(canvas, center_y + 20, 4), "funcoes", "#D9E2EC", size=11, anchor="center")
+        radius_x, radius_y = 210, 125
         for index, card in enumerate(cards):
-            column = index % columns
-            row = index // columns
-            x = 70 + column * (card_width + gap)
-            y = 300 + row * (card_height + 34)
-            draw_card(
-                canvas,
-                x,
-                y,
-                card_width,
-                card_height,
-                card["title"],
-                card["detail"],
-                card.get("color", PALETTE["blue"]),
-                card.get("items"),
-            )
+            angle = -math.pi / 2 + math.tau * index / max(1, len(cards))
+            x = center_x + math.cos(angle) * radius_x
+            y = center_y + math.sin(angle) * radius_y
+            color = card.get("color", PALETTE["blue"])
+            canvas.line(center_x, center_y, x, y, "#D9E2EC", width=2)
+            canvas.circle(x, y, 49, "#FFFDF8", stroke=color, stroke_width=4)
+            draw_simple_icon(canvas, x, y, card["title"], color)
+            if y < center_y - 20:
+                label_x, label_y = x - 74, max(314, y - 58)
+                max_chars = 17
+                show_pills = False
+            elif y > center_y + 20:
+                label_x, label_y = x - 74, min(648, y + 58)
+                max_chars = 17
+                show_pills = False
+            elif x < center_x:
+                label_x, label_y = max(330, x - 170), y - 10
+                max_chars = 18
+                show_pills = True
+            else:
+                label_x, label_y = min(970, x + 64), y - 10
+                max_chars = 18
+                show_pills = True
+            canvas.text_block(label_x, label_y, card["title"], color, size=14, max_chars=max_chars, line_gap=4, weight="700")
+            if show_pills:
+                for item_index, item in enumerate(card.get("items", [])[:2]):
+                    draw_pill(canvas, label_x, label_y + 26 + item_index * 30, item, color, width=86)
+
+        canvas.rect(1052, 292, 278, 385, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=28)
+        draw_section_label(canvas, 1080, 322, "na pratica", PALETTE["green"])
+        y = 382
+        for index, note in enumerate(spec.get("notes", [])[:4]):
+            color = cards[index % len(cards)].get("color", PALETTE["green"])
+            canvas.circle(1090, y + 8, 12, color)
+            canvas.text(1090, text_y(canvas, y + 13, -5), str(index + 1), "#FFFDF8", size=10, anchor="center", weight="700")
+            canvas.text_block(1116, y + 11, note, PALETTE["muted"], size=12, max_chars=28, line_gap=5)
+            y += 70
+
+        draw_note_strip(
+            canvas,
+            70,
+            708,
+            1260,
+            114,
+            "leitura rapida da cartilha",
+            [card["detail"] for card in cards[:4]],
+            PALETTE["orange"],
+            columns=min(4, len(cards)),
+        )
         draw_footer(canvas, spec)
     return svg.finalize(), png
 
@@ -783,21 +1091,51 @@ def render_cause_effect(spec: dict) -> tuple[str, RasterCanvas]:
 
     for canvas in (svg, png):
         draw_header(canvas, spec)
-        canvas.rect(70, 178, 1260, 80, "#FFF0F0", stroke="#E9A2A2", stroke_width=2)
-        canvas.text_block(700, 208, spec["hero_label"], PALETTE["ink"], size=18, max_chars=72, anchor="center", weight="700")
+        canvas.rect(70, 188, 1260, 74, "#FFF0F0", stroke="#E9A2A2", stroke_width=2, radius=24)
+        canvas.text_block(700, 218, spec["hero_label"], PALETTE["ink"], size=18, max_chars=68, anchor="center", weight="700")
+        canvas.rect(70, 292, 1260, 86, "#FFFDF8", stroke="#E4D8C8", stroke_width=1, radius=26)
+        canvas.text(100, 330, "RACIOCINIO DE DIAGNOSTICO", PALETTE["ink"], size=16, weight="700")
+        canvas.text_block(100, 356, spec["didactic_goal"], PALETTE["muted"], size=12, max_chars=126, line_gap=5)
+        draw_arrow(canvas, 100, 428, 1280, 428, "#E9A2A2", width=4)
+
+        zone_fills = ("#FFF7F7", "#FFF7E8", "#F1FFF6")
         for column_index, column in enumerate(columns):
             x = start_x + column_index * (column_width + gap)
-            canvas.rect(x, 300, column_width, 425, PALETTE["panel"], stroke=PALETTE["grid"], stroke_width=1)
             color = column.get("color", PALETTE["red"])
-            canvas.rect(x, 300, column_width, 14, color, radius=10)
-            canvas.text(x + 24, 350, column["title"], PALETTE["ink"], size=20, weight="700")
-            y = 402
-            for item in column["items"]:
-                canvas.rect(x + 24, y - 13, 10, 10, color)
-                canvas.text_block(x + 46, y, item, PALETTE["text"], size=14, max_chars=34, line_gap=5)
-                y += 72
+            skew = 22
+            canvas.polygon(
+                (
+                    (x + skew, 466),
+                    (x + column_width, 466),
+                    (x + column_width - skew, 682),
+                    (x, 682),
+                ),
+                zone_fills[column_index % len(zone_fills)],
+                stroke="#E4D8C8",
+                stroke_width=1,
+            )
+            canvas.circle(x + 52, 492, 34, color)
+            canvas.text(x + 52, text_y(canvas, 500, -10), str(column_index + 1), "#FFFDF8", size=19, anchor="center", weight="700")
+            canvas.text_block(x + 102, 492, column["title"], PALETTE["ink"], size=19, max_chars=24, line_gap=5, weight="700")
+            draw_simple_icon(canvas, x + column_width - 52, 504, column["title"], color)
+            y = 554
+            for item in column["items"][:4]:
+                canvas.circle(x + 42, y + 4, 9, color)
+                canvas.text_block(x + 62, y + 8, item, PALETTE["text"], size=13, max_chars=39, line_gap=5)
+                y += 42
             if column_index < len(columns) - 1:
-                draw_arrow(canvas, x + column_width + 8, 512, x + column_width + gap - 10, 512, PALETTE["muted"], width=2)
+                draw_arrow(canvas, x + column_width + 10, 572, x + column_width + gap - 12, 572, PALETTE["muted"], width=2)
+        draw_note_strip(
+            canvas,
+            70,
+            720,
+            1260,
+            102,
+            "evidencia antes de conclusao",
+            spec.get("notes", []) or [spec.get("caution", "")],
+            PALETTE["red"],
+            columns=3,
+        )
         draw_footer(canvas, spec)
     return svg.finalize(), png
 

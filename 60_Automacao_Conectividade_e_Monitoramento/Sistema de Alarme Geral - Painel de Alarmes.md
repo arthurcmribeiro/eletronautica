@@ -162,6 +162,16 @@ Não. Silenciar só reduz o aviso sonoro; a causa continua existindo até ser re
 
 Não. O painel local continua sendo a primeira camada de resposta imediata.
 
+## Visual didático
+
+![Sistema de alarme: sensor, painel e acao](../_visuals/generated/alarme-geral-sensores-acao.svg)
+
+Mostrar que alarme bom precisa transformar evento em acao clara e testavel.
+
+**Cautela:** Alarmes criticos devem ser testados periodicamente e nao depender apenas de internet ou app remoto.
+
+Material de apoio: [Sistema de alarme: sensor, painel e acao](../_visuals/generated/alarme-geral-sensores-acao.md)
+
 ## Integração com outras notas
 
 - [[Atuador Linear]]

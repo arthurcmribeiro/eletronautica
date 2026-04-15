@@ -1,0 +1,34 @@
+{
+  "slug": "multimetro-sequencia-medicao",
+  "kind": "flow_diagram",
+  "title": "Multimetro: sequencia segura de medicao",
+  "summary": "Fluxo de decisao para medir tensao, continuidade e corrente sem trocar escala, borne ou metodo de forma perigosa.",
+  "didactic_goal": "Reduzir erro de campo ao usar multimetro, separando o que medir, onde conectar e qual escala usar.",
+  "format": "procedimento-visual",
+  "priority": "alta",
+  "hero_label": "ANTES DE ENCOSTAR A PONTA DE PROVA, CONFIRME GRANDEZA, ESCALA E BORNE",
+  "notes": [
+    "Tensao se mede em paralelo.",
+    "Corrente exige caminho em serie ou alicate adequado.",
+    "Continuidade deve ser feita em circuito desenergizado.",
+    "Borne errado pode queimar fusivel interno ou criar curto."
+  ],
+  "caution": "Este visual nao substitui procedimento de seguranca para AC, bloqueio, verificacao de ausencia de tensao e manual do instrumento.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Multimetro e Instrumentos de Medicao.md",
+    "10_Fundamentos_e_Projeto/Voltimetro - Amperimetro (DC e AC).md"
+  ],
+  "nodes": [
+    {"title": "Definir grandeza", "detail": "Tensao, continuidade, resistencia ou corrente pedem metodo diferente.", "color": "#1D6FD8", "items": ["V", "ohm", "A"]},
+    {"title": "Escolher escala", "detail": "AC/DC, faixa e categoria devem ser compativeis com o circuito.", "color": "#E0A100", "items": ["VAC/VDC", "faixa", "CAT"]},
+    {"title": "Conferir bornes", "detail": "COM, V/ohm e A/mA nao sao intercambiaveis.", "color": "#D9534F", "items": ["COM", "V", "A"]},
+    {"title": "Medir no ponto", "detail": "Ponta de prova firme, referencia correta e leitura sob condicao real.", "color": "#168A8A", "items": ["referencia", "carga", "queda"]},
+    {"title": "Interpretar", "detail": "Compare com esperado, contexto e historico antes de concluir falha.", "color": "#2A9D57", "items": ["esperado", "desvio", "causa"]}
+  ],
+  "callout_title": "ERROS FREQUENTES",
+  "callouts": [
+    {"title": "A em paralelo", "detail": "Pode criar curto direto.", "color": "#D9534F"},
+    {"title": "AC/DC errado", "detail": "Leitura fica falsa ou zero.", "color": "#DB7C26"},
+    {"title": "Continuidade energizada", "detail": "Pode danificar instrumento.", "color": "#E0A100"}
+  ]
+}

@@ -154,6 +154,16 @@ Ensaios úteis:
 - operar com um lado claramente fora de curso;
 - tratar sistema automático e sistema manual como se fossem equivalentes.
 
+## Visual didático
+
+![Flap e trim: comando, atuador e posicao](../_visuals/generated/flap-trim-atuadores-posicao.svg)
+
+Mostrar que flap e trim combinam eletrica, mecanica, posicao e efeito no comportamento da embarcacao.
+
+**Cautela:** Procedimentos e limites dependem do sistema instalado, fabricante e tipo de casco/motor.
+
+Material de apoio: [Flap e trim: comando, atuador e posicao](../_visuals/generated/flap-trim-atuadores-posicao.md)
+
 ## Integração com outras notas
 
 - [[Motor de Trim - Tilt]]

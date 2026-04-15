@@ -269,6 +269,16 @@ No modo de recepção (RX), o VHF consome ~0,5–1A. Em 10 horas: 5–10Ah — a
 
 Temporariamente sim. Como sistema permanente: potência de 5W vs. 25W do fixo = alcance muito menor. Portátil é backup, não primário.
 
+## Visual didático
+
+![Comunicacao e seguranca: AIS, VHF, DSC e EPIRB](../_visuals/generated/ais-vhf-dsc-epirb-camadas.svg)
+
+Mostrar que AIS, VHF, DSC e EPIRB sao complementares, nao substitutos diretos.
+
+**Cautela:** Requisitos de licenciamento, MMSI, programacao e uso variam por jurisdicao e equipamento.
+
+Material de apoio: [Comunicacao e seguranca: AIS, VHF, DSC e EPIRB](../_visuals/generated/ais-vhf-dsc-epirb-camadas.md)
+
 ## Integração com outras notas
 
 - [[AIS (Automatic Identification System)]]

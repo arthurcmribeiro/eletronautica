@@ -240,6 +240,16 @@ SmartShunt se você usa smartphone para monitoramento (mais barato, mesmo desemp
 
 Sim — configura-se para chumbo-ácido, AGM, GEL ou LiFePO4 mudando os parâmetros (tensão de sync, tail current, eficiência, Peukert). A configuração correta por tipo de bateria é essencial para precisão.
 
+## Visual didático
+
+![Monitor de bateria: shunt e calculo de SoC](../_visuals/generated/monitor-bateria-shunt-fluxo.svg)
+
+Mostrar por que shunt mede corrente real e entrega SoC melhor que voltimetro isolado.
+
+**Cautela:** A posicao do shunt, referencia negativa e configuracao de capacidade/eficiencia devem seguir o fabricante.
+
+Material de apoio: [Monitor de bateria: shunt e calculo de SoC](../_visuals/generated/monitor-bateria-shunt-fluxo.md)
+
 ## Integração com outras notas
 
 - [[Bancos de Bateria]]

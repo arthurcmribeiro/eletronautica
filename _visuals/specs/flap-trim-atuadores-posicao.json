@@ -1,0 +1,34 @@
+{
+  "slug": "flap-trim-atuadores-posicao",
+  "kind": "flow_diagram",
+  "title": "Flap e trim: comando, atuador e posicao",
+  "summary": "Fluxo de comando eletrico para atuadores de flap/trim, feedback de posicao e resposta hidrodinamica.",
+  "didactic_goal": "Mostrar que flap e trim combinam eletrica, mecanica, posicao e efeito no comportamento da embarcacao.",
+  "format": "fluxo-de-comando",
+  "priority": "media",
+  "hero_label": "ATUADOR MOVE; POSICAO INFORMA; BARCO RESPONDE NA AGUA",
+  "notes": [
+    "Comando no painel energiza motor, relé ou modulo.",
+    "Atuador eletrico/hidraulico muda posicao do flap ou trim.",
+    "Feedback evita operar no escuro quando disponivel.",
+    "Falha pode ser eletrica, mecanica, hidraulica ou de sensor."
+  ],
+  "caution": "Procedimentos e limites dependem do sistema instalado, fabricante e tipo de casco/motor.",
+  "target_notes": [
+    "70_Hidraulica_Climatizacao_e_Utilidades/Flap.md",
+    "90_Revisao_Manual/Motor de Trim - Tilt.md"
+  ],
+  "nodes": [
+    {"title": "Comando", "detail": "Botao, joystick ou modulo recebe ordem do operador.", "color": "#1D6FD8", "items": ["painel", "botao", "modulo"]},
+    {"title": "Potencia", "detail": "Relé, reversor ou driver alimenta o motor/atuador.", "color": "#D9534F", "items": ["relé", "fusivel", "corrente"]},
+    {"title": "Atuador", "detail": "Move haste, cilindro, bomba ou motor de trim.", "color": "#E0A100", "items": ["linear", "hidraulico", "motor"]},
+    {"title": "Posicao", "detail": "Sensor ou indicador mostra curso quando instalado.", "color": "#7C5CC4", "items": ["feedback", "fim de curso", "calibracao"]},
+    {"title": "Resposta", "detail": "Casco muda atitude, planeio, arrasto ou conforto.", "color": "#2A9D57", "items": ["planeio", "angulo", "arrasto"]}
+  ],
+  "callout_title": "DIAGNOSTICO",
+  "callouts": [
+    {"title": "Um lado falha", "detail": "Compare comando, tensão e atuador.", "color": "#D9534F"},
+    {"title": "Motor gira sem mover", "detail": "Pode ser mecanico/hidraulico.", "color": "#DB7C26"},
+    {"title": "Indicador errado", "detail": "Sensor/calibracao pode mentir.", "color": "#E0A100"}
+  ]
+}

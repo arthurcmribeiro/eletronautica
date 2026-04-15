@@ -373,6 +373,16 @@ Problemas intermitentes são os mais difíceis. Estratégia: monitorar continuam
 
 Com metodologia correta: 30 minutos a 2 horas para a maioria dos problemas comuns. Sem metodologia, o mesmo problema pode ocupar um dia inteiro sem solução.
 
+## Visual didático
+
+![Troubleshooting eletrico: funil de diagnostico](../_visuals/generated/troubleshooting-funil-diagnostico.svg)
+
+Ensinar diagnostico como funil de evidencias, nao como troca aleatoria de componentes.
+
+**Cautela:** Em AC ou sistemas criticos, diagnostico deve respeitar bloqueio, ausencia de tensao, EPI e procedimento profissional.
+
+Material de apoio: [Troubleshooting eletrico: funil de diagnostico](../_visuals/generated/troubleshooting-funil-diagnostico.md)
+
 ## Integração com outras notas
 
 - [[DC vs AC — Corrente Contínua e Alternada]]

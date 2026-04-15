@@ -213,6 +213,16 @@ Ensaios típicos:
 - usar mangueira inadequada e depois culpar o efluente;
 - operar o sistema sem procedimento definido.
 
+## Visual didático
+
+![Esgoto a bordo: holding tank, Y-valve e macerador](../_visuals/generated/holding-tank-y-valve-macerador.svg)
+
+Mostrar que o sistema de esgoto combina logica hidraulica, acionamento eletrico e decisao operacional.
+
+**Cautela:** Descarga de efluentes depende de regras ambientais e local de navegacao. Este visual nao autoriza descarte.
+
+Material de apoio: [Esgoto a bordo: holding tank, Y-valve e macerador](../_visuals/generated/holding-tank-y-valve-macerador.md)
+
 ## Integração com outras notas
 
 - [[Bomba de Banheiro]]

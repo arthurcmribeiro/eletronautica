@@ -1,0 +1,28 @@
+{
+  "slug": "anodo-eletrolise-protecao",
+  "kind": "comparison_cards",
+  "title": "Anodo, eletrolise e protecao contra corrosao",
+  "summary": "Quadro comparativo para diferenciar protecao sacrificial, corrosao galvanica e corrente parasita.",
+  "didactic_goal": "Evitar que anodo seja tratado como solucao universal para qualquer corrosao submersa.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "ANODO PROTEGE CONTRA ALGUNS MECANISMOS; FUGA ELETRICA EXIGE DIAGNOSTICO",
+  "notes": [
+    "Anodo sacrificial protege metais mais nobres quando corretamente escolhido.",
+    "Corrosao galvanica depende de metais diferentes e eletrólito.",
+    "Corrente parasita envolve fonte eletrica externa ou fuga.",
+    "Trocar anodo sem achar causa pode mascarar problema."
+  ],
+  "caution": "Diagnostico de corrosao exige inspecao, historico, medicao e avaliacao do ambiente de marina.",
+  "target_notes": [
+    "80_Seguranca_e_Corrosao/Anodo.md",
+    "80_Seguranca_e_Corrosao/Eletrolise.md",
+    "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+  ],
+  "columns": 3,
+  "cards": [
+    {"title": "Anodo", "detail": "Metal sacrificial que se consome para proteger componentes submersos.", "color": "#2A9D57", "items": ["zinco", "aluminio", "magnesio"]},
+    {"title": "Galvanica", "detail": "Metais diferentes ligados em eletrólito geram corrente natural.", "color": "#E0A100", "items": ["metais", "agua", "potencial"]},
+    {"title": "Stray current", "detail": "Fuga eletrica ativa acelera dano e nao se resolve so com anodo.", "color": "#D9534F", "items": ["fuga DC", "medicao", "isolamento"]}
+  ]
+}

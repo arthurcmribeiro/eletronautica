@@ -1,0 +1,34 @@
+{
+  "slug": "monitor-bateria-shunt-fluxo",
+  "kind": "flow_diagram",
+  "title": "Monitor de bateria: shunt e calculo de SoC",
+  "summary": "Fluxo de medicao por shunt: corrente entra e sai do banco, monitor integra Ah e estima estado de carga.",
+  "didactic_goal": "Mostrar por que shunt mede corrente real e entrega SoC melhor que voltimetro isolado.",
+  "format": "fluxo-de-medicao",
+  "priority": "alta",
+  "hero_label": "SHUNT FICA NO CAMINHO DA CORRENTE E TRANSFORMA USO REAL EM DADO DE AUTONOMIA",
+  "notes": [
+    "Toda corrente do banco deve passar pelo shunt.",
+    "O monitor integra entrada e saida de Ah.",
+    "Tensao sozinha nao mostra bem SoC, especialmente em LiFePO4.",
+    "Instalacao errada faz o monitor mentir com precisao."
+  ],
+  "caution": "A posicao do shunt, referencia negativa e configuracao de capacidade/eficiencia devem seguir o fabricante.",
+  "target_notes": [
+    "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md",
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+  ],
+  "nodes": [
+    {"title": "Banco", "detail": "Fonte e reserva de energia que precisa ser medida como sistema.", "color": "#1D6FD8", "items": ["Ah", "V", "SoC"]},
+    {"title": "Shunt", "detail": "Resistor de baixa resistencia por onde passa a corrente do banco.", "color": "#D9534F", "items": ["negativo", "corrente", "queda mV"]},
+    {"title": "Monitor", "detail": "Le a queda no shunt, integra Ah e exibe estimativas.", "color": "#7C5CC4", "items": ["Ah", "SoC", "tempo"]},
+    {"title": "Cargas", "detail": "Consumos DC e inversor retiram energia e aparecem no balanco.", "color": "#DB7C26", "items": ["bombas", "inversor", "eletronica"]},
+    {"title": "Fontes", "detail": "Carregador, solar e alternador entram no calculo de recarga.", "color": "#2A9D57", "items": ["MPPT", "shore", "alternador"]}
+  ],
+  "callout_title": "ERROS DE INSTALACAO",
+  "callouts": [
+    {"title": "Bypass no shunt", "detail": "Carga fora do shunt nao entra no SoC.", "color": "#D9534F"},
+    {"title": "Capacidade errada", "detail": "Monitor calcula em cima de parametro falso.", "color": "#DB7C26"},
+    {"title": "Sem sincronizar", "detail": "Estimativa deriva com o tempo.", "color": "#E0A100"}
+  ]
+}

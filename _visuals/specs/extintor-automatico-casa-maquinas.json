@@ -1,0 +1,34 @@
+{
+  "slug": "extintor-automatico-casa-maquinas",
+  "kind": "flow_diagram",
+  "title": "Extintor automatico: deteccao e resposta",
+  "summary": "Fluxo de seguranca para incendio em casa de maquinas: deteccao, disparo, corte e ventilacao controlada.",
+  "didactic_goal": "Mostrar extintor automatico como parte de um sistema de resposta, nao como item isolado.",
+  "format": "fluxo-de-seguranca",
+  "priority": "alta",
+  "hero_label": "INCENDIO EM CASA DE MAQUINAS EXIGE DETECTAR, CONTER, CORTAR E NAO REALIMENTAR",
+  "notes": [
+    "Deteccao termica ou automatica dispara agente extintor.",
+    "Corte de blower/combustivel/energia pode ser parte da resposta.",
+    "Abrir compartimento cedo demais pode realimentar o fogo.",
+    "Indicacao remota ajuda a tripulacao a agir corretamente."
+  ],
+  "caution": "Sistema de combate a incendio deve seguir fabricante, classe de agente, volume protegido, inspecao e requisitos aplicaveis.",
+  "target_notes": [
+    "80_Seguranca_e_Corrosao/Extintor Automatico — Combate a Incendio na Casa de Maquinas.md",
+    "70_Hidraulica_Climatizacao_e_Utilidades/Casa de Maquinas e Paiol.md"
+  ],
+  "nodes": [
+    {"title": "Deteccao", "detail": "Temperatura, chama ou condicao critica no compartimento.", "color": "#D9534F", "items": ["calor", "sensor", "alarme"]},
+    {"title": "Disparo", "detail": "Agente extintor e liberado no volume protegido.", "color": "#DB7C26", "items": ["agente", "volume", "tempo"]},
+    {"title": "Corte", "detail": "Reduz combustivel, ventilacao e energia que sustentam o fogo.", "color": "#E0A100", "items": ["blower", "combustivel", "energia"]},
+    {"title": "Indicacao", "detail": "Painel ou alarme informa disparo e estado do sistema.", "color": "#1D6FD8", "items": ["painel", "sirene", "status"]},
+    {"title": "Resposta", "detail": "Procedimento seguro antes de abrir, ventilar ou religar.", "color": "#2A9D57", "items": ["aguardar", "verificar", "rearmar"]}
+  ],
+  "callout_title": "CUIDADOS",
+  "callouts": [
+    {"title": "Volume errado", "detail": "Agente insuficiente nao extingue.", "color": "#D9534F"},
+    {"title": "Ventilar cedo", "detail": "Oxigenio pode reacender.", "color": "#DB7C26"},
+    {"title": "Sem inspecao", "detail": "Sistema pode estar descarregado.", "color": "#E0A100"}
+  ]
+}

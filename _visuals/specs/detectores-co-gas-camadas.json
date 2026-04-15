@@ -1,0 +1,28 @@
+{
+  "slug": "detectores-co-gas-camadas",
+  "kind": "comparison_cards",
+  "title": "Detectores de CO e gas: riscos diferentes",
+  "summary": "Comparacao entre monoxido de carbono, GLP/GN, sensor, alarme e resposta operacional.",
+  "didactic_goal": "Mostrar que CO e gas combustivel exigem sensores, posicionamento e resposta diferentes.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "CO INTOXICA; GAS COMBUSTIVEL EXPLODE. OS DOIS EXIGEM ALARME SERIO",
+  "notes": [
+    "CO e toxico e pode vir de combustao.",
+    "GLP/GN envolve risco de inflamabilidade/explosao.",
+    "Posicionamento do sensor depende do gas e do fabricante.",
+    "Alarme precisa gerar acao, nao apenas som."
+  ],
+  "caution": "Instalacao, vida util e posicionamento dos sensores devem seguir manual do fabricante e boas praticas de seguranca.",
+  "target_notes": [
+    "80_Seguranca_e_Corrosao/Detector de CO — Monoxido de Carbono.md",
+    "80_Seguranca_e_Corrosao/Detector de Gas GLP - GN.md"
+  ],
+  "columns": 4,
+  "cards": [
+    {"title": "CO", "detail": "Produto de combustao, toxico, inodoro e perigoso em cabine.", "color": "#D9534F", "items": ["combustao", "cabine", "intoxicacao"]},
+    {"title": "Gas", "detail": "GLP/GN podem acumular e criar atmosfera explosiva.", "color": "#DB7C26", "items": ["GLP", "GN", "explosao"]},
+    {"title": "Sensor", "detail": "Tipo, posicao e validade mudam conforme risco monitorado.", "color": "#1D6FD8", "items": ["posicao", "validade", "teste"]},
+    {"title": "Resposta", "detail": "Ventilar, cortar fonte, evacuar e investigar antes de religar.", "color": "#2A9D57", "items": ["ventilar", "cortar", "investigar"]}
+  ]
+}

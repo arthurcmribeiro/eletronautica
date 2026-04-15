@@ -1,0 +1,33 @@
+{
+  "slug": "sonda-transdutor-eco-leitura",
+  "kind": "flow_diagram",
+  "title": "Sonda: transdutor, eco e leitura",
+  "summary": "Fluxo de funcionamento da sonda entre pulso acustico, transdutor, eco, processamento e display.",
+  "didactic_goal": "Separar falhas de energia, transdutor, instalacao no casco e interpretacao de leitura.",
+  "format": "fluxo-de-sinal",
+  "priority": "media",
+  "hero_label": "SONDA TRANSFORMA ECO EM PROFUNDIDADE; INSTALACAO DEFINE A QUALIDADE DO DADO",
+  "notes": [
+    "Transdutor envia e recebe pulsos acusticos.",
+    "Eco retorna do fundo ou de objetos na coluna d'agua.",
+    "Processador calcula profundidade e desenha a leitura.",
+    "Bolhas, turbulencia e posicao do transdutor distorcem o sinal."
+  ],
+  "caution": "Leitura de sonda depende de instalacao, frequencia, velocidade, ganho, fundo e calibracao de offset.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Sonda - Profundimetro - Sonar.md"
+  ],
+  "nodes": [
+    {"title": "Energia", "detail": "Alimentacao limpa e protegida evita reinicio e ruido.", "color": "#1D6FD8", "items": ["DC", "fusivel", "queda"]},
+    {"title": "Transdutor", "detail": "Converte sinal eletrico em pulso acustico e vice-versa.", "color": "#7C5CC4", "items": ["frequencia", "casco", "angulo"]},
+    {"title": "Eco", "detail": "Retorno acustico depende de fundo, bolhas e profundidade.", "color": "#E0A100", "items": ["fundo", "bolhas", "alcance"]},
+    {"title": "Processador", "detail": "Filtra, interpreta e calcula profundidade/sonar.", "color": "#168A8A", "items": ["ganho", "filtro", "offset"]},
+    {"title": "Display", "detail": "Mostra numero, grafico ou imagem para decisao do operador.", "color": "#2A9D57", "items": ["MFD", "alarme", "leitura"]}
+  ],
+  "callout_title": "DIAGNOSTICO",
+  "callouts": [
+    {"title": "Sem fundo", "detail": "Pode ser transdutor, bolha ou ganho.", "color": "#D9534F"},
+    {"title": "Leitura pulando", "detail": "Verifique turbulencia e cabo.", "color": "#DB7C26"},
+    {"title": "Offset errado", "detail": "Numero correto pode ser interpretado errado.", "color": "#E0A100"}
+  ]
+}

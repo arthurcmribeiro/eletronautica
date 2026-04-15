@@ -157,6 +157,16 @@ Não. São dispositivos de finalidade diferente.
 
 Não. O evento precisa ser tratado como indício de condição insegura até que a causa seja entendida.
 
+## Visual didático
+
+![Detectores de CO e gas: riscos diferentes](../_visuals/generated/detectores-co-gas-camadas.svg)
+
+Mostrar que CO e gas combustivel exigem sensores, posicionamento e resposta diferentes.
+
+**Cautela:** Instalacao, vida util e posicionamento dos sensores devem seguir manual do fabricante e boas praticas de seguranca.
+
+Material de apoio: [Detectores de CO e gas: riscos diferentes](../_visuals/generated/detectores-co-gas-camadas.md)
+
 ## Integração com outras notas
 
 - [[Detector de Gás GLP / GN]]

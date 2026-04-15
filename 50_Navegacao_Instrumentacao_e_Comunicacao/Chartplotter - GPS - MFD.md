@@ -276,6 +276,16 @@ Sim, sempre que houver atualização relevante para a área de operação ou alt
 
 SBAS é uma família de sistemas de aumento por satélite que pode melhorar integridade e, em certos cenários, a precisão da solução GNSS. O benefício real depende da cobertura regional, do receptor utilizado e das correções efetivamente suportadas. Não convém tratar um valor fixo de erro como garantia operacional.
 
+## Visual didático
+
+![Radar, AIS e chartplotter: fusao de situacao](../_visuals/generated/radar-ais-chartplotter-fusao.svg)
+
+Mostrar que cada sensor enxerga uma parte diferente do ambiente e o MFD ajuda a integrar, mas nao substitui julgamento.
+
+**Cautela:** Fusao de dados depende de calibracao, antenas, rede, configuracao e interpretacao correta pelo operador.
+
+Material de apoio: [Radar, AIS e chartplotter: fusao de situacao](../_visuals/generated/radar-ais-chartplotter-fusao.md)
+
 ## Integração com outras notas
 
 - [[AIS (Automatic Identification System)]]

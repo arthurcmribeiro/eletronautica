@@ -189,6 +189,16 @@ Não como regra universal. A relação entre negativo, bonding e PE depende da a
 
 Só depois de verificar corrente total, proteção, cabo alimentador, aquecimento e reserva funcional do sistema.
 
+## Visual didático
+
+![Barramento DC: distribuicao e protecao](../_visuals/generated/barramento-dc-distribuicao-protecao.svg)
+
+Mostrar barramento como ponto organizado de distribuicao, nao como lugar para empilhar cabos no borne da bateria.
+
+**Cautela:** Corrente nominal, material, isolacao, torque e protecao dependem de projeto e fabricante.
+
+Material de apoio: [Barramento DC: distribuicao e protecao](../_visuals/generated/barramento-dc-distribuicao-protecao.md)
+
 ## Integração com outras notas
 
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]]

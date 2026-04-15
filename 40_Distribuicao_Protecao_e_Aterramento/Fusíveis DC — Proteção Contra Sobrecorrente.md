@@ -266,6 +266,16 @@ Fusível rápido funde imediatamente ao atingir a corrente nominal — indicado 
 
 Muito tempo — pode levar horas. Fusíveis fundem rapidamente apenas com correntes muito acima do nominal (2–10×). Para sobrecarga leve, a proteção é lenta. Por isso, não usar fusíveis com valor muito próximo à corrente de operação.
 
+## Visual didático
+
+![Fusivel DC: protege o cabo](../_visuals/generated/fusivel-protege-cabo.svg)
+
+Fixar que fusivel protege o condutor contra sobrecorrente e curto, nao apenas o equipamento final.
+
+**Cautela:** Distancias, classes de fusivel e capacidade de interrupcao devem seguir projeto, norma e fabricante.
+
+Material de apoio: [Fusivel DC: protege o cabo](../_visuals/generated/fusivel-protege-cabo.md)
+
 ## Integração com outras notas
 
 - [[Proteção Dr]]

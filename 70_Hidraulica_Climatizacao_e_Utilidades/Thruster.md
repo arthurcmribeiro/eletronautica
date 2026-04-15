@@ -174,6 +174,16 @@ Ensaios úteis:
 - culpar o thruster por problema de contatores ou tensão;
 - usar o equipamento como se fosse propulsão contínua.
 
+## Visual didático
+
+![Thruster e guincho: cargas DC de alta corrente](../_visuals/generated/thruster-guincho-cargas-alta-corrente.svg)
+
+Mostrar que thruster e guincho exigem banco, cabo, protecao e tempo de uso compatíveis com corrente muito alta.
+
+**Cautela:** Dimensionamento real deve seguir fabricante, corrente nominal/pico, comprimento de cabo e estrategia de banco.
+
+Material de apoio: [Thruster e guincho: cargas DC de alta corrente](../_visuals/generated/thruster-guincho-cargas-alta-corrente.md)
+
 ## Integração com outras notas
 
 - [[Bancos de Bateria]]

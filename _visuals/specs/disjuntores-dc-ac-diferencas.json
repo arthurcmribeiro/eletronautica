@@ -1,0 +1,27 @@
+{
+  "slug": "disjuntores-dc-ac-diferencas",
+  "kind": "comparison_cards",
+  "title": "Disjuntores DC e AC: diferencas criticas",
+  "summary": "Comparacao didatica entre protecao em corrente continua e alternada, com foco em arco, tensao e aplicacao.",
+  "didactic_goal": "Evitar troca indevida entre disjuntor AC e DC e reforcar que o arco DC e mais dificil de interromper.",
+  "format": "quadro-comparativo",
+  "priority": "alta",
+  "hero_label": "DISJUNTOR PARECIDO NAO SIGNIFICA CAPACIDADE DE INTERRUPCAO IGUAL",
+  "notes": [
+    "AC passa por zero a cada ciclo, ajudando a extinguir arco.",
+    "DC nao tem passagem natural por zero.",
+    "Tensao, corrente e curva precisam ser compativeis com o circuito.",
+    "Aplicacao errada pode falhar justamente no curto."
+  ],
+  "caution": "Use somente dispositivos especificados para tensao, corrente, curva e capacidade de interrupcao do circuito.",
+  "target_notes": [
+    "40_Distribuicao_Protecao_e_Aterramento/Disjuntores (DC) e (AC).md",
+    "40_Distribuicao_Protecao_e_Aterramento/Fusiveis DC — Protecao Contra Sobrecorrente.md"
+  ],
+  "columns": 3,
+  "cards": [
+    {"title": "AC", "detail": "Corrente alterna e cruza zero, favorecendo extincao do arco.", "color": "#1D6FD8", "items": ["Hz", "passa por zero", "VAC"]},
+    {"title": "DC", "detail": "Corrente mantem sentido e arco pode persistir com mais facilidade.", "color": "#D9534F", "items": ["sem zero", "VDC", "arco"]},
+    {"title": "Aplicacao", "detail": "O dispositivo deve declarar uso, tensao e capacidade para aquele circuito.", "color": "#2A9D57", "items": ["curva", "Icc", "certificacao"]}
+  ]
+}

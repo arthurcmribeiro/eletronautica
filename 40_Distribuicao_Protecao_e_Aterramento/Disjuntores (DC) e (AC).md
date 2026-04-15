@@ -326,6 +326,16 @@ Verificar a causa antes. Se religar e disparar imediatamente: curto-circuito no 
 
 Depende da ampacidade real daquele circuito, do tipo de cabo, da temperatura, do agrupamento e da queda de tensão admissível. Não é seguro responder só pela seção nominal. Primeiro se determina a ampacidade do circuito; depois se escolhe o disjuntor.
 
+## Visual didático
+
+![Disjuntores DC e AC: diferencas criticas](../_visuals/generated/disjuntores-dc-ac-diferencas.svg)
+
+Evitar troca indevida entre disjuntor AC e DC e reforcar que o arco DC e mais dificil de interromper.
+
+**Cautela:** Use somente dispositivos especificados para tensao, corrente, curva e capacidade de interrupcao do circuito.
+
+Material de apoio: [Disjuntores DC e AC: diferencas criticas](../_visuals/generated/disjuntores-dc-ac-diferencas.md)
+
 ## Integração com outras notas
 
 - [[Aterramento]]
