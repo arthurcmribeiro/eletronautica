@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "BÚÓSSOLA ELETRÔNICA — COMPASS E HDG SENSOR"
   - "Bússola Eletrônica (Compass / HDG Sensor)"
@@ -221,7 +221,7 @@ Passo 6: Verificar comunicação NMEA (sentences $IIHDG, $IIHDM ou PGN 127250)
 | GPS Compass | Raro | Presente em lanchas >40' |
 | Calibração pós-instalação | Frequentemente ignorada | Feita como protocolo |
 | Awareness sobre perturbação magnética | Baixo | Maior |
-| Norma de instalação | Sem norma específica | ABYC E-11 (wiring) |
+| Norma de instalação | Sem norma específica | ABYC E-11 (2023) (wiring) |
 
 **Muito comum no Brasil:** Fluxgate Simrad RC42 ou Garmin GMC 010 em lanchas de 25–40'.
 
@@ -229,11 +229,11 @@ Passo 6: Verificar comunicação NMEA (sentences $IIHDG, $IIHDM ou PGN 127250)
 
 ## Normas e referências
 
-- **ABYC E-11:** wiring e instalação de eletrônicos
-- **IEC 60945:** Marine navigation equipment
+- **ABYC E-11 (2023):** wiring e instalação de eletrônicos
+- **IEC 60945 (edição a verificar):** Marine navigation equipment
 - **NMEA 2000 PGN 127250:** Vessel Heading
 - **NMEA 0183 $IIHDG / $IIHDM:** Heading sentences
-- **ISO 11606:** Marine navigation — compass requirements
+- **ISO 11606 (edição a verificar):** Marine navigation — compass requirements
 
 ## Como ensinar este tópico
 

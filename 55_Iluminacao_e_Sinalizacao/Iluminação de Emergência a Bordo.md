@@ -117,7 +117,7 @@ Bateria auxiliar → HOTLINE → fio sempre energizado → LED de baixo consumo
 
 | Marca | Produto | Tipo | Certificação |
 | --- | --- | --- | --- |
-| **Hella Marine** | EasyFit Emergency | LED bateria | IMO / SOLAS |
+| **Hella Marine** | EasyFit Emergency | LED bateria | IMO / SOLAS (edição a verificar) |
 | **Lumitec** | Emergency LED | LED bateria | IP67 |
 | **Fire Angel** | Emergency Light | LED bateria | EN 60598-2-22 |
 | **3M** | Safety Sign | Fosforescente | ISO 3864 |
@@ -213,12 +213,12 @@ Passo 3: Se apagou → não está em HOTLINE — corrigir a instalação
 
 ## Normas e referências
 
-- **SOLAS Chapter II-2 / Reg. 42:** Means of escape (iluminação de emergência — commercial)
+- **SOLAS (edição a verificar) Chapter II-2 / Reg. 42:** Means of escape (iluminação de emergência — commercial)
 - **IMO MSC/Circ.1032:** Emergency lighting (referência técnica)
 - **IEC 60598-2-22:** Luminaires for emergency lighting
 - **EN 1838:** Lighting applications — Emergency lighting
 - **ISO 17631:** Retroreflective and fluorescent material (fosforescente)
-- **NORMAM-01:** equipamentos de segurança (inclui iluminação)
+- **NORMAM-01 (edição a verificar):** equipamentos de segurança (inclui iluminação)
 
 ## Como ensinar este tópico
 

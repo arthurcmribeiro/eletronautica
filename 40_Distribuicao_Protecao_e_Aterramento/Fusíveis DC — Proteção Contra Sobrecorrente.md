@@ -230,8 +230,8 @@ Em bancos de lítio, grandes AGM ou conjuntos próximos à bateria, o problema n
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — seção de proteção de circuitos (referência primária)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para coordenação de proteção e princípios de baixa tensão
+- **ABYC E-11 (2023)** — seção de proteção de circuitos (referência primária)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para coordenação de proteção e princípios de baixa tensão
 - **SAE J1284** — blade type electric fuses (padrão para fusíveis de lâmina)
 
 ## Como ensinar este tópico

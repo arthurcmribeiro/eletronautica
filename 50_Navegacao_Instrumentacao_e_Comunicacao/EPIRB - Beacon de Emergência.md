@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "EPIRB BEACON DE EMERGÊNCIA"
   - "EPIRB / BEACON DE EMERGÊNCIA"
@@ -210,7 +210,7 @@ Passo 4: O falso alerta é responsabilidade do proprietário — reportar é obr
 
 | Aspecto | Brasil | Internacional |
 | --- | --- | --- |
-| EPIRB obrigatório (offshore) | verificar conforme NORMAM e enquadramento da embarcação | SOLAS e demais regras aplicáveis conforme classe/uso |
+| EPIRB obrigatório (offshore) | verificar conforme NORMAM e enquadramento da embarcação | SOLAS (edição a verificar) e demais regras aplicáveis conforme classe/uso |
 | EPIRB registrado | Baixa conformidade | Maior conformidade |
 | GPS integrado | Presente nos novos | Padrão (sem GPS = obsoleto) |
 | Bateria substituída no prazo | Raramente verificado | Verificado em inspeções |

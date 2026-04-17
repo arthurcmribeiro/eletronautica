@@ -150,7 +150,7 @@ No mercado local ainda é comum chamar de "Wi-Fi a bordo" um roteador doméstico
 ## Normas e referências
 
 - **IEEE 802.11 / documentação do fabricante** — padrões e capacidades do equipamento.
-- **ANATEL** — homologação aplicável aos equipamentos de rádio.
+- **ANATEL (edição a verificar)** — homologação aplicável aos equipamentos de rádio.
 - **Boas práticas de instalação elétrica de bordo** — para alimentação DC, proteção e encaminhamento de cabos.
 
 ## FAQ

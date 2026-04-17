@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "AIS (Automatic Identification System)"
 seo_title: "AIS (Automatic Identification System)"
@@ -224,9 +224,9 @@ No Brasil, a obrigatoriedade de AIS para embarcações de recreio não é clara 
 
 ## Normas e referências aplicáveis
 
-- **SOLAS** — AIS Classe A obrigatório para navios > 300 GT em viagens internacionais
+- **SOLAS (edição a verificar)** — AIS Classe A obrigatório para navios > 300 GT em viagens internacionais
 - **ITU Radio Regulations** — frequências AIS 161,975 e 162,025 MHz
-- **NORMAM-01** — regulação nacional (AIS não claramente obrigatório para recreio)
+- **NORMAM-01 (edição a verificar)** — regulação nacional (AIS não claramente obrigatório para recreio)
 - **IALA Guidelines** — boas práticas de instalação e uso
 
 ## Destaques para ensino

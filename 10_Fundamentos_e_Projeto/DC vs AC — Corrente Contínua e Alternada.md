@@ -217,9 +217,9 @@ Ar-condicionado de 1.500W via inversor = 1.500W / 0,9 (eficiência) = 1.667W do 
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — separação e especificação de sistemas AC e DC
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **IEC 60092** — electrical installations in ships
+- **ABYC E-11 (2023)** — separação e especificação de sistemas AC e DC
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **IEC 60092 (edição a verificar)** — electrical installations in ships
 
 ## Como ensinar este tópico
 

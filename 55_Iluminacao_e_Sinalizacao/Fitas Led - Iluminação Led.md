@@ -229,7 +229,7 @@ A diferença de custo entre fita genérica e fita de qualidade em perfil de alum
 
 ## Normas e referências aplicáveis
 
-- **ABYC E-11** — proteção e bitola dos circuitos
+- **ABYC E-11 (2023)** — proteção e bitola dos circuitos
 - **IEC 60529** — classificação IP (referência para proteção)
 
 ## Destaques para ensino

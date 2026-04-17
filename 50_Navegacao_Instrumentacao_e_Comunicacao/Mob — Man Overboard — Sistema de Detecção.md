@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "MOB — MAN OVERBOARD — SISTEMA DE DETECÇÃO"
 seo_title: "Mob — Man Overboard — Sistema de Detecção"
@@ -233,9 +233,9 @@ Passo 6: Testar o procedimento de içamento de pessoa a bordo
 ## Normas e referências
 
 - **COLREGS:** regras de prevenção de colisão (contexto de emergência)
-- **ABYC A-7:** recomendações de segurança (MOB)
+- **ABYC A-7 (edição a verificar):** recomendações de segurança (MOB)
 - **ISO 15085:** Safety equipment — MOB procedures
-- **NORMAM-01:** equipamentos de segurança obrigatórios
+- **NORMAM-01 (edição a verificar):** equipamentos de segurança obrigatórios
 - **IEC 61097-14:** AIS-SART (dispositivos pessoais AIS de socorro)
 - **ISAF OSR (Offshore Special Regulations):** obrigatoriedade de MOB em regatas oceânicas
 

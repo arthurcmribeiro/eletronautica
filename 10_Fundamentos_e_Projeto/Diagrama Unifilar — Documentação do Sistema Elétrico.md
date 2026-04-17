@@ -242,10 +242,10 @@ Sem backup digital, o diagrama molha, rasga ou se perde. A versão digital deve 
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — seção de documentação e diagrama unifilar
+- **ABYC E-11 (2023)** — seção de documentação e diagrama unifilar
 - **IEC 60617** — símbolos gráficos para diagramas elétricos
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

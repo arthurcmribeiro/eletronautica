@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "ESTAÇÃO DE VENTO ANEMÔMETRO"
   - "ESTAÇÃO DE VENTO / ANEMÔMETRO"
@@ -219,7 +219,7 @@ Passo 6: Faça calibração de offset de direção conforme manual
 | Uso em veleiros | muito recomendado | amplamente adotado |
 | Uso em lanchas | Raro, só offshore | Mais comum (EUA/Europa) |
 | Tecnologia dominante | Cups (mecânico) | Ultrassônico crescendo |
-| Norma de instalação | Sem norma específica | ABYC E-11 (wiring) |
+| Norma de instalação | Sem norma específica | ABYC E-11 (2023) (wiring) |
 | Certificação do sensor | Não exigida | CE Mark Europa |
 | Manutenção | Raramente feita | Inspecionado anualmente |
 
@@ -229,8 +229,8 @@ Passo 6: Faça calibração de offset de direção conforme manual
 
 ## Normas e referências
 
-- **ABYC E-11:** Wiring standards (cableamento do sensor)
-- **IEC 60945:** Marine navigation equipment (standard de construção)
+- **ABYC E-11 (2023):** Wiring standards (cableamento do sensor)
+- **IEC 60945 (edição a verificar):** Marine navigation equipment (standard de construção)
 - **NMEA 0183 v4.10:** Sentences MWV, MWD para wind data
 - **NMEA 2000 PGN 130306:** Wind Data (speed + angle)
 - **NMEA 2000 PGN 130310:** Environmental parameters

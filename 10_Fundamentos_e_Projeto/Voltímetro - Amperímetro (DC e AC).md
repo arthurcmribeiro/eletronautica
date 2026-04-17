@@ -288,9 +288,9 @@ Voltímetro AC + amperímetro AC (com TC) + frequencímetro para o sistema shore
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: instrumentação recomendada, shunts, proteção de circuitos de medição
-- **ISO 13297** — Electrical systems on recreational craft
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: instrumentação recomendada, shunts, proteção de circuitos de medição
+- **ISO 13297:2020** — Electrical systems on recreational craft
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - Documentação Victron: Application Note "BMV Battery Monitor Installation" — referência prática completa
 
 ## Como ensinar este tópico

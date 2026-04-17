@@ -209,7 +209,7 @@ Instalar e não usar os dados. O monitor só agrega valor se consultado regularm
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — medição e monitoramento de sistemas DC
+- **ABYC E-11 (2023)** — medição e monitoramento de sistemas DC
 - **Manuais dos fabricantes** — configuração específica por modelo
 
 ## Como ensinar este tópico

@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "PILOTO AUTOMÁTICO"
 seo_title: "Piloto Automático"
@@ -238,7 +238,7 @@ Para cruzeiros costeiros de dia: piloto automático aumenta conforto e seguranç
 
 - **COLREGS** — obriga vigilância permanente — piloto automático não substitui o operador
 - **Manual do fabricante** — calibração e ajuste de ganho (documento essencial)
-- **ABYC E-11** — proteção e bitola do circuito
+- **ABYC E-11 (2023)** — proteção e bitola do circuito
 
 ## Destaques para ensino
 

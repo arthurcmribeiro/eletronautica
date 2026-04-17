@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "SONDA PROFUNDÍMETRO SONAR"
   - "SONDA / PROFUNDÍMETRO / SONAR"
@@ -232,7 +232,7 @@ No Brasil, o uso de sonda é fortemente associado à pesca esportiva — a funç
 ## Normas e referências aplicáveis
 
 - **Manual do fabricante** — instalação do transdutor (documento mais importante)
-- **ABYC A-28** — thruhull fittings (quando transdutor thruhull)
+- **ABYC A-28 (edição a verificar)** — thruhull fittings (quando transdutor thruhull)
 
 ## Destaques para ensino
 

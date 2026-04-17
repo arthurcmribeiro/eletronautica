@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "RADAR"
 seo_title: "Radar"
@@ -220,7 +220,7 @@ Para embarcações que navegam exclusivamente de dia em costas conhecidas: radar
 ## Normas e referências aplicáveis
 
 - **COLREGS** — obriga a uso de todos os meios disponíveis para evitar colisão — radar quando disponível
-- **SOLAS** — obrigatório em embarcações comerciais de porte (referência)
+- **SOLAS (edição a verificar)** — obrigatório em embarcações comerciais de porte (referência)
 - **Manual do fabricante** — instalação e calibração
 
 ## Destaques para ensino

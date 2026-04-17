@@ -4,8 +4,16 @@ note_type: "system"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "BONDING — SISTEMA DE INTERLIGAÇÃO DE MASSAS 33a19734f7fb81549c39cdaf6dffb20e.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-16"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-2 (2020)"
+  - "ABYC E-11 (2023)"
+  - "ABYC A-31 (edição a verificar)"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "ISO 13297:2020"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -84,11 +92,31 @@ O bonding só funciona se os caminhos metálicos e os condutores tiverem continu
 
 | Parâmetro | Valor típico |
 | --- | --- |
-| Bitola do cabo de bonding | Definida pela norma aplicável, comprimento, robustez mecânica e ambiente |
-| Continuidade do sistema | Deve ser estável e verificável em todos os pontos previstos |
-| Cor do cabo de bonding | Verde (ABYC) — não confundir com terra AC |
-| Potencial de proteção catódica | Interpretado por material, tipo de água e norma de referência |
-| Eletrodo de referência para medição | Prata/Cloreto de Prata (Ag/AgCl) |
+| Bitola do cabo de bonding (partida) | AWG 8 (≈ 8 mm²) mínimo para barramento principal em cascos não-metálicos. Ramais, saltos e corrente de falta esperada conforme projeto. Fonte: ABYC E-11 (2023), consultar cláusula vigente. |
+| Continuidade do sistema | Meta de campo: `< 1 Ω` entre o barramento e qualquer ponto metálico previsto. Medir com ohmímetro de baixa resistência. |
+| Cor do cabo de bonding | Verde (convenção ABYC). **Não confundir** com o PE verde-amarelo do AC — mesmo verde, sistemas distintos. |
+| Potencial de proteção catódica | Depende do material, do ânodo e do meio. Ver tabela Ag/AgCl abaixo. |
+| Eletrodo de referência para medição | Prata/Cloreto de Prata (Ag/AgCl) em água salgada; Cu/CuSO₄ em água doce. |
+
+### Potenciais de proteção catódica (referência Ag/AgCl, água salgada)
+
+| Material protegido | Faixa protetora | Observação |
+| --- | --- | --- |
+| Aço carbono / aço inox | `-0,80 V` a `-1,05 V` | Abaixo de `-1,10 V` risco de over-protection (descolamento de tinta, fragilização por hidrogênio em inox). |
+| Alumínio | `-0,90 V` a `-1,10 V` | Faixa estreita; over-protection ataca alumínio. Medir com cuidado e escolher ânodo adequado (AlZnIn, não Zn puro em água salgada fria). |
+| Bronze / latão naval | `-0,60 V` a `-0,80 V` | Risco maior: dealloying (perda de zinco) se potencial cair demais. |
+| Cobre | `-0,50 V` a `-0,60 V` | Protege-se facilmente; atenção à contaminação do meio. |
+
+> Tabela para triagem. Consultar ABYC E-2 (2020) e datasheet do fabricante do ânodo para valores definitivos por aplicação, temperatura e salinidade.
+
+### Comissionamento e teste de continuidade
+
+Após instalação ou revisão do bonding:
+
+1. **Visual:** inspeção de clamps, conexões e cabos verdes — oxidação, soltura, contato com água salgada, terminais corroídos.
+2. **Continuidade:** medir resistência entre o barramento de bonding e cada ponto da malha (eixo, passe-cascos, motor, tanque metálico, âncora). Meta `< 1 Ω`. Valores `> 3 Ω` indicam conexão ruim — investigar.
+3. **Potencial:** medir potencial de cada componente submerso com eletrodo Ag/AgCl. Valores fora da faixa da tabela → revisar ânodo, conexão ou isolação do componente.
+4. **Documentar:** registrar leituras em planilha de comissionamento para comparação em revisões futuras (ver [[MOC — Diagnóstico e Manutenção]]).
 
 ## Configurações comuns
 
@@ -253,7 +281,7 @@ Mais ânodo não é sinônimo de melhor proteção. O potencial precisa ser aval
 
 | Aspecto | Brasil | Internacional (ABYC) |
 | --- | --- | --- |
-| Obrigatoriedade de bonding | Não fiscalizada | ABYC E-2 define padrões |
+| Obrigatoriedade de bonding | Não fiscalizada | ABYC E-2 (2020) define padrões |
 | Conhecimento entre instaladores | Baixo | Treinamento específico disponível |
 | Diagrama de bonding documentado | Raro | Recomendado (embarcações certificadas) |
 | Medição de potencial catódico | Quase inexistente | Padrão em frotas profissionais |
@@ -264,11 +292,12 @@ Mais ânodo não é sinônimo de melhor proteção. O potencial precisa ser aval
 
 ## Normas aplicáveis
 
-- **ABYC E-2** — Prevention of Galvanic Corrosion (mais detalhada sobre bonding)
-- **ABYC E-11** — AC and DC Electrical Systems (SPOG e interação com terra AC)
-- **ABYC A-31** — Lightning Protection (bonding integrado ao pararaios)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **ISO 10133** — Electrical systems — Extra-low voltage DC installations
+- **ABYC E-2 (2020)** — Prevention of Galvanic Corrosion (mais detalhada sobre bonding)
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems (SPOG e interação com terra AC)
+- **ABYC A-31 (edição a verificar)** — Lightning Protection (bonding integrado ao pararaios)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ISO 13297:2020** — Small craft — Electrical systems — Alternating and direct current installations (referência viva para DC em pequenas embarcações; sucedeu a ISO 10133, retirada)
+- **ISO 10133** — *retirada*; manter apenas como contexto histórico conforme nota mestre [[Normas e Regulamentações — Abyc Iso e Brasil]]
 
 ## Como ensinar este tópico
 

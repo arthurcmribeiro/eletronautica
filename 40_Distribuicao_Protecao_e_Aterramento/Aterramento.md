@@ -278,17 +278,17 @@ Cria diferença de potencial entre sistemas — risco de arco e danos a equipame
 | Tensão AC | 220V monofásico | 120V (EUA) / 230V (Europa) |
 | Terra em pedestais de marina | Frequentemente ausente | Obrigatório e fiscalizado |
 | Fiscalização de instalação | Praticamente inexistente | Inspeção por seguradora |
-| GFCI obrigatório | Não regulamentado em náutica | ABYC E-11 exige em shore power |
+| GFCI obrigatório | Não regulamentado em náutica | ABYC E-11 (2023) exige em shore power |
 
 **Realidade brasileira:** A maioria das embarcações de recreio no Brasil tem instalações AC sem terra adequado. O risco de choque é real e subestimado. A solução mais segura é o transformador de isolamento, que elimina a dependência do terra da marina.
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats (referência primária)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **IEC 60092** — Electrical installations in ships
-- **ABNT NBR 5410** — Instalações elétricas de baixa tensão (base comparativa)
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (referência primária)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **IEC 60092 (edição a verificar)** — Electrical installations in ships
+- **ABNT NBR 5410 (2004 + emendas)** — Instalações elétricas de baixa tensão (base comparativa)
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

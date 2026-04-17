@@ -277,7 +277,7 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 | Aspecto | Brasil | Internacional (ABYC/Europa) |
 | --- | --- | --- |
 | Alternadores comuns | Automotivos 50–90A, regulador interno | Náuticos HO 100–200A com regulador externo |
-| Fusível no cabo B+ | Frequentemente ausente | Obrigatório por ABYC E-11 |
+| Fusível no cabo B+ | Frequentemente ausente | Obrigatório por ABYC E-11 (2023) |
 | Uso com lítio | Crescendo — muitos erros de instalação | Bem estabelecido (Wakespeed + BMS) |
 | Reguladores externos | Raros, exceto instalações premium | Comuns em barcos >35 pés |
 | Manutenção preventiva | Reativa | Programada por horas de uso |
@@ -287,10 +287,10 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: fusível no cabo B+, separação de bancos, proteção de cabeamento
-- **ABYC A-31** — Battery Chargers: aplicável ao carregamento inteligente via alternador
-- **ISO 13297** — Electrical systems on recreational craft
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: fusível no cabo B+, separação de bancos, proteção de cabeamento
+- **ABYC A-31 (edição a verificar)** — Battery Chargers: aplicável ao carregamento inteligente via alternador
+- **ISO 13297:2020** — Electrical systems on recreational craft
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
 - **Compatibilidade com lítio:** não coberta explicitamente por normas antigas — é engenharia de sistema; fabricantes de BMS e reguladores externos publicam guias de instalação específicos
 
 ## Como ensinar este tópico

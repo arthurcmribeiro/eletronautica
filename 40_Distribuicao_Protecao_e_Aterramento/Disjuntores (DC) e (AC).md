@@ -261,18 +261,18 @@ Um RCBO em cada circuito AC — proteção de sobrecorrente + diferencial indivi
 | Disjuntores DC mais usados | Genéricos térmicos AC/DC, Blue Sea Systems em instalações de qualidade | Blue Sea Systems, Carlingswitch hidráulico-magnético |
 | Disjuntores residenciais em DC | Comum (prática de risco) | Não aceitável — especificação DC obrigatória |
 | Dimensionamento | Frequentemente por carga, não por cabo | Por cabo — regra fundamental |
-| Identificação de painel | Frequentemente ausente | Exigida por ABYC E-11 |
+| Identificação de painel | Frequentemente ausente | Exigida por ABYC E-11 (2023) |
 | Hidráulico-magnético | Raro | Padrão em instalações de qualidade |
 
 **Realidade brasileira:** o uso de disjuntores residenciais ou de origem predial em circuitos DC ainda é comum, mas isso não o torna prática correta. Em qualquer circuito DC, sobretudo com baterias de baixa impedância, o disjuntor deve ter especificação explícita para tensão DC, orientação de montagem e capacidade de interrupção compatível com a energia disponível no ponto.
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: requisitos de proteção de circuitos, capacidade de interrupção, identificação de painéis
-- **ABYC E-10** — Storage Batteries: proteção de cabos de bateria
-- **ISO 13297** — Electrical systems on recreational craft
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: requisitos de proteção de circuitos, capacidade de interrupção, identificação de painéis
+- **ABYC E-10 (2023)** — Storage Batteries: proteção de cabos de bateria
+- **ISO 13297:2020** — Electrical systems on recreational craft
 - **IEC 60947-2** — Low-voltage switchgear: disjuntores industriais
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **NBR 5410** — Instalações elétricas de baixa tensão: base para aplicação náutica de proteções AC
 
 ## Como ensinar este tópico

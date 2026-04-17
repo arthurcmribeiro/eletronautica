@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "CHARTPLOTTER GPS MFD"
   - "CHARTPLOTTER / GPS / MFD"
@@ -240,7 +240,7 @@ A cobertura cartográfica do Brasil no Navionics e C-MAP varia muito por região
 
 - **COLREGS** — chartplotter é ferramenta de auxílio, não substitui a vigília náutica
 - **NMEA 2000 Standard** — protocolo de rede de instrumentos
-- **IEC 61162** — interface de equipamentos náuticos (NMEA)
+- **IEC 61162 (edição a verificar)** — interface de equipamentos náuticos (NMEA)
 - **Manual do fabricante** — instalação e configuração
 
 ## Destaques para ensino

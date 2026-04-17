@@ -306,12 +306,12 @@ Resistência de contato elevada → aquecimento progressivo → arco elétrico. 
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats (terra, GFCI, polaridade)
-- **ABYC A-28** — Galvanic Isolators (isoladores galvânicos certificados)
-- **NFPA 303** — Fire Protection for Marinas and Boatyards
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão e infraestrutura elétrica associada
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (terra, GFCI, polaridade)
+- **ABYC A-28 (edição a verificar)** — Galvanic Isolators (isoladores galvânicos certificados)
+- **NFPA 303 (edição a verificar)** — Fire Protection for Marinas and Boatyards
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão e infraestrutura elétrica associada
 - **NBR 5410** — Instalações elétricas de baixa tensão (base para pedestais de marina)
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

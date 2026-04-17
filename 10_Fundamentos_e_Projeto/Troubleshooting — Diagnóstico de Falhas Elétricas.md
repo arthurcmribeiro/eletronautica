@@ -318,7 +318,7 @@ Interpretar o resultado com base no padrão adotado, no equipamento e na condiç
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — critérios de instalação e conformidade que orientam o diagnóstico
+- **ABYC E-11 (2023)** — critérios de instalação e conformidade que orientam o diagnóstico
 - **Documentação do fabricante** — sequência correta de testes e limites aceitos por equipamento
 - **Procedimentos internos de manutenção** — histórico e medições comparativas da própria embarcação
 

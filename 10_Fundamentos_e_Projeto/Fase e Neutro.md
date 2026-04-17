@@ -205,10 +205,10 @@ Quando o falso neutro encosta no universo `PE/DC/bonding`, a embarcação perde 
 
 ## Normas e referências de engenharia
 
-- **ABYC E-11**: referência forte para arquitetura AC/DC, mas deve ser aplicada com adaptação à topologia brasileira de alimentação.
-- **ISO 13297**: trata sistemas elétricos AC monofásicos em pequenas embarcações e reforça a importância de definir a arquitetura da fonte.
-- **ABNT NBR 5410**: referência complementar de baixa tensão para identificação de condutores e princípios de proteção, sem substituir norma náutica.
-- **NORMAM-211**: referência regulatória brasileira para o ambiente de embarcações de esporte e recreio; não substitui a engenharia de projeto.
+- **ABYC E-11 (2023)**: referência forte para arquitetura AC/DC, mas deve ser aplicada com adaptação à topologia brasileira de alimentação.
+- **ISO 13297:2020**: trata sistemas elétricos AC monofásicos em pequenas embarcações e reforça a importância de definir a arquitetura da fonte.
+- **ABNT NBR 5410 (2004 + emendas)**: referência complementar de baixa tensão para identificação de condutores e princípios de proteção, sem substituir norma náutica.
+- **NORMAM-211 (2022 rev. aplicável via DPC)**: referência regulatória brasileira para o ambiente de embarcações de esporte e recreio; não substitui a engenharia de projeto.
 
 ## FAQ
 

@@ -217,7 +217,7 @@ Em ancoragens movimentadas (baías populares no verão), a ausência de luz de �
 
 Luz de âncora ausente ou conectada à chave geral. Incandescente antiga consumindo banco. Ausência de verificação de arco.
 
-### Referência COLREGS 30 / NORMAM-01
+### Referência COLREGS 30 / NORMAM-01 (edição a verificar)
 
 O uso e o arranjo devem ser verificados conforme a regra aplicável ao porte e à condição da embarcação fundeada. O ponto operacional aqui é não improvisar luminária nem confundir luz de âncora com luz de tope ou iluminação de convés.
 
@@ -228,8 +228,8 @@ Em ancoragens isoladas sem tráfego, a ausência de luz pode parecer inofensiva 
 ## Normas e referências aplicáveis
 
 - **COLREGS Regra 30** — Embarcações fundeadas e encalhadas
-- **NORMAM-01** — regulação nacional
-- **ISO 16180** — requisitos fotométricos
+- **NORMAM-01 (edição a verificar)** — regulação nacional
+- **ISO 16180:2011** — requisitos fotométricos
 
 ## Destaques para ensino
 

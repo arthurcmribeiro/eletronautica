@@ -250,9 +250,9 @@ O botão de teste verifica o alarme sonoro/visual. Não verifica o sensor. Teste
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — critérios de conformidade e inspeção para sistemas elétricos de bordo
+- **ABYC E-11 (2023)** — critérios de conformidade e inspeção para sistemas elétricos de bordo
 - **Documentação do fabricante** — periodicidade específica de cada equipamento
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 - **Manuais dos fabricantes** — intervalos de manutenção específicos por equipamento
 
 ## Como ensinar este tópico

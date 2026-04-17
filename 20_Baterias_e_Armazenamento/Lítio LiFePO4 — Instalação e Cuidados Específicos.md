@@ -185,9 +185,9 @@ LiFePO4 não gera H₂ como o chumbo — mas gera calor em cargas altas. Ventila
 
 ## Normas aplicáveis
 
-- **IEC 62619** — segurança de baterias de lítio em aplicações industriais
+- **IEC 62619 (edição a verificar)** — segurança de baterias de lítio em aplicações industriais
 - **UN38.3** — transporte de baterias de lítio (importação)
-- **ABYC E-13** — Lithium Ion Batteries
+- **ABYC E-13 (2022)** — Lithium Ion Batteries
 - **Documentação do fabricante da bateria, do BMS e do sistema de carga** — obrigatória para parametrização e limites reais do conjunto
 - **Catálogo ABNT/IEC vigente aplicável à instalação de bordo** — validar sempre o código e a edição antes de citar
 

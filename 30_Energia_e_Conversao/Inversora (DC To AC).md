@@ -301,9 +301,9 @@ O inversor tem proteção interna — mas o cabo entre o banco e o inversor não
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC Electrical Systems (instalação, proteção, aterramento)
+- **ABYC E-11 (2023)** — AC Electrical Systems (instalação, proteção, aterramento)
 - **UL 458** — Power Converters/Inverters and Power Converter/Inverter Systems for Land Vehicles and Marine Crafts
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 
 ## Como ensinar este tópico
 

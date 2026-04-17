@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "VHF"
 seo_title: "VHF"
@@ -233,7 +233,7 @@ O VHF é mais útil que o celular em mar por cobertura, reconhecimento pelas aut
 - **NORMAM / DPC / Marinha do Brasil** — verificar o requisito aplicável conforme tipo de embarcação, área de navegação e enquadramento atualizado
 - **GMDSS (Global Maritime Distress and Safety System)** — sistema global de socorro que o DSC integra
 - **ITU Radio Regulations** — alocação de canais VHF marítimos
-- **ANATEL e demais órgãos competentes** — verificar licenciamento, indicativo e processo vigente para MMSI/estação
+- **ANATEL (edição a verificar) e demais órgãos competentes** — verificar licenciamento, indicativo e processo vigente para MMSI/estação
 
 ## Destaques para ensino
 

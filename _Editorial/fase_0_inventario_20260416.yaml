@@ -1,0 +1,735 @@
+# FASE 0 — INVENTÁRIO E AMOSTRAGEM (v2 — revisão Opus)
+# Auditoria Técnica — Repo eletronautica
+# Gerado por: Claude Opus 4.6 | Data: 2026-04-16
+# Revisão: v2 corrige erros de v1 (Sonnet), documentados abaixo
+# Baseado em: 01_prompt_mestre_v2.md (Fase 0)
+# ─────────────────────────────────────────────────
+#
+# ERRATA DA VERSÃO 1 (Sonnet)
+# 1. USB 12V (Power).md atribuído a 70_Hidraulica — ERRADO, está em 60_Automacao
+# 2. Apenas 3 notas com cálculo identificadas — ERRADO, são ≥12
+# 3. Apenas 2 notas normativas no Bloco D — ERRADO, ≥62 notas citam normas, 12 com carga normativa pesada
+# 4. validate_vault.py descrito como "exceções amplas demais" — IMPRECISO, tem 4 padrões e 1 exceção;
+#    o problema real é que não valida completude de citação (edição/ano/cláusula)
+# 5. Sinais de risco baseados em suposição, não em leitura — corrigido com evidência
+# 6. Faltavam riscos críticos: ISO 10133 aposentada, gap de edição/ano em 95% das citações
+# 7. Amostra ignorava notas densas: Aterramento, Fusíveis DC, Isolador Galvânico, Carregador, NAVEGAÇÃO
+# ─────────────────────────────────────────────────
+
+inventario:
+  total_notas_md: 147  # verificado por contagem direta: find . -name "*.md" por domínio
+  # Nota: _Editorial/Auditoria Geral da Base.md de 14/04 reporta 140 files — 7 notas adicionadas
+  # entre 14/04 e 16/04 (provavelmente MOCs e promoção de rascunhos em Lotes 2-4)
+  total_por_dominio:
+    00_Mapas:
+      notas: 16
+      linhas_total: 813
+      densidade_media: 50.8
+    10_Fundamentos_e_Projeto:
+      notas: 20
+      linhas_total: 5864
+      densidade_media: 293.2
+    20_Baterias_e_Armazenamento:
+      notas: 6
+      linhas_total: 2037
+      densidade_media: 339.5
+    30_Energia_e_Conversao:
+      notas: 11
+      linhas_total: 3214
+      densidade_media: 292.2
+    40_Distribuicao_Protecao_e_Aterramento:
+      notas: 18
+      linhas_total: 4626
+      densidade_media: 257.0
+    50_Navegacao_Instrumentacao_e_Comunicacao:
+      notas: 14
+      linhas_total: 4069
+      densidade_media: 290.6
+    55_Iluminacao_e_Sinalizacao:
+      notas: 11
+      linhas_total: 2755
+      densidade_media: 250.5
+    60_Automacao_Conectividade_e_Monitoramento:
+      notas: 12
+      linhas_total: 2313
+      densidade_media: 192.8
+    70_Hidraulica_Climatizacao_e_Utilidades:
+      notas: 25
+      linhas_total: 4901
+      densidade_media: 196.0
+    80_Seguranca_e_Corrosao:
+      notas: 7
+      linhas_total: 1349
+      densidade_media: 192.7
+    90_Revisao_Manual:
+      notas: 2
+      linhas_total: 362
+      densidade_media: 181.0
+    _Editorial:
+      notas: 5  # + manifest.json (não .md)
+      linhas_total: 717
+      densidade_media: 143.4
+  total_linhas_vault: 33020
+  total_specs_visuais: 45
+  total_visuais_gerados: 45  # SVG + PNG + MD em _visuals/generated/
+  total_workflows_ci: 1
+  total_scripts: 6
+  linhas_scripts: 1631
+
+  # ─── MÉTRICAS ADICIONAIS (v2) ───
+  notas_que_citam_norma: 62  # 42% do vault — verificado por grep
+  notas_com_calculo_ou_valor_numerico: 12  # Tier 1-2 que exigem recálculo
+  notas_com_backlinks_minimos: 2
+  notas_com_citacao_normativa_com_edicao_e_clausula: 5  # só 5 de 62 (8%) — CRITICO
+  manifest_notas_indexadas: 124  # _Editorial/manifest.json; delta vs 147 = exclui _Editorial, MOCs, e visuais
+
+# ─────────────────────────────────────────────────
+
+diagnostico_preliminar:
+
+  dominios_mais_maduros:
+    - dominio: 10_Fundamentos_e_Projeto
+      justificativa: >
+        Maior volume (5.864 linhas, 20 notas, 293 l/nota). Contém as 3 notas com cálculo
+        mais pesado (Dimensionamento de Cabos DC, Dimensionamento de Banco de Baterias,
+        Lei de Ohm). A nota 'Normas e Regulamentações' é o ponto de referência normativa
+        de todo o vault — EVIDÊNCIA: é a única nota que explicitamente mapeia ISO 10133 como
+        aposentada e recomenda ISO 13297:2020. Frontmatter 100% completo no domínio inteiro.
+
+    - dominio: 40_Distribuicao_Protecao_e_Aterramento
+      justificativa: >
+        18 notas (4.626 linhas). Concentra os 4 temas com maior risco de segurança da vida:
+        bonding, DR (GFCI), isolação galvânica, aterramento. EVIDÊNCIA: Aterramento.md cita
+        ABYC E-11 + IEC 60092 + NORMAM-211 + limite de resistência ≤1Ω; Proteção Dr.md
+        distingue norma de sistema (ABYC E-11) de norma de produto (IEC 61008/61009);
+        Isolador Galvânico.md exige certificação ABYC A-28 explicitamente.
+
+    - dominio: 20_Baterias_e_Armazenamento
+      justificativa: >
+        Menor em contagem (6 notas) mas maior densidade (339 l/nota). EVIDÊNCIA: Tipos de
+        Bateria.md tem tabela comparativa com custo por Wh ao longo da vida útil (AGM vs
+        LiFePO4); BMS.md cobre limites de célula e C-rate com especificidade; Monitor de
+        Bateria.md documenta erro de calibração prático (200Ah configurado em banco envelhecido
+        de 130Ah reais = SoC fantasma). Domínio tecnicamente sólido mas com risco de conflito
+        inter-notas (ver sinais_de_risco).
+
+    - dominio: 50_Navegacao_Instrumentacao_e_Comunicacao
+      justificativa: >
+        14 notas, 290 l/nota. EVIDÊNCIA: NAVEGAÇÃO (BB, BE e Alcançado).md cita COLREGS 72
+        com regras específicas (23, 25, 30), ISO 16180:2011 com ano, e documenta conflito
+        prático entre COLREGS e prática brasileira para embarcações pequenas. NMEA 2000/0183
+        cita IEC 61162-1 e -3. Qualidade normativa acima da média do vault.
+
+  dominios_esqueleto:
+    - dominio: 90_Revisao_Manual
+      justificativa: >
+        2 notas (362 linhas). Estabilizador.md e Motor de Trim - Tilt.md. Sem MOC funcional,
+        sem backlinks significativos. _Editorial/Auditoria e lacunas.md nota que 'Estabilizador'
+        foi corrigido de 'tensão' para 'movimento' — original era sobre estabilizador de tensão,
+        incorretamente atribuído ao vault náutico. Conteúdo está isolado da rede semântica.
+
+  dominios_com_problema_estrutural:
+    - dominio: 70_Hidraulica_Climatizacao_e_Utilidades
+      justificativa: >
+        25 notas mas densidade baixa (196 l/nota). _Editorial/Auditoria e lacunas.md confirma
+        que 'Bancos de Bateria, Tipos de Bateria, sensores de nível podem ser condensados'.
+        Inclui notas de equipamentos simples que provavelmente não justificam nota independente
+        (Limpador de Parabrisas 152 linhas, Catraca 171 linhas). NOTA: 'USB 12V (Power).md'
+        NÃO está neste domínio (está em 60_Automacao), erro da v1 corrigido.
+
+  # ─────────────────────────────────────────────────
+
+  sinais_de_risco_ja_visiveis:
+
+    - id: R01
+      tipo: gap_critico_edicao_clausula
+      dominio: vault_inteiro
+      descricao: >
+        62 notas citam normas técnicas (ABYC, ISO, IEC, NORMAM, COLREGS, etc.), mas apenas
+        ~5 notas fornecem edição/ano e cláusula/seção específica. As 5 com boa citação:
+        Luz de Tope (COLREGS Regra 21/23/25, ISO 16180:2011), NAVEGAÇÃO BB/BE (COLREGS regras
+        + ISO 16180:2011), Isolador Galvânico (ABYC A-28 certificação), Proteção Dr (IEC
+        61008/61009 como norma de produto), Carregador de Bateria (ABYC A-31 + IEC 60335-2-29).
+        As outras 57 notas citam norma no nível de família ('ABYC E-11', 'ISO 13297') sem
+        seção, o que torna a citação não-verificável e não-rastreável.
+      severidade: critica
+      evidencia: "Verificado por grep exaustivo em todas as 147 notas."
+      prioridade_verificacao: P1
+
+    - id: R02
+      tipo: norma_aposentada_citada_como_vigente
+      dominio: "20_Baterias, 40_Distribuicao"
+      descricao: >
+        ISO 10133 (extra-low voltage DC installations) é citada em pelo menos 3 notas como
+        referência ativa: Bonding.md, Bancos de Bateria.md, Tipos de Bateria.md. Porém, a nota
+        'Normas e Regulamentações.md' em 10_Fundamentos CORRETAMENTE identifica ISO 10133 como
+        aposentada e recomendata ISO 13297:2020 como substituta. Contradição interna do vault:
+        a nota mestre sabe que é obsoleta, as notas derivadas continuam citando.
+      severidade: alta
+      evidencia: "Normas e Regulamentações.md identifica aposentadoria; grep confirma citação em 3+ notas."
+      prioridade_verificacao: P1
+
+    - id: R03
+      tipo: conflito_potencial_cross_nota
+      dominio: 20_Baterias_e_Armazenamento
+      descricao: >
+        'Tipos de Bateria.md' (463 linhas) e 'Lítio LiFePO4.md' (238 linhas) cobrem território
+        sobreposto. EVIDÊNCIA CONCRETA: Tipos de Bateria declara LiFePO4 DOD 80-90% e ciclos
+        2000-5000; a nota de LiFePO4 foca em instalação/BMS sem repetir esses valores, mas o
+        risco é que correções futuras em uma nota não propaguem para a outra. Além disso,
+        'Bancos de Bateria.md' cruza com 'Dimensionamento de Banco.md' (10_Fundamentos) nos
+        critérios de dimensionamento. _Editorial/Auditoria e lacunas.md já identifica essas
+        notas como candidatas a condensação.
+      severidade: alta
+      evidencia: "Grep + leitura comparativa; _Editorial/Auditoria e lacunas.md confirma sobreposição."
+      prioridade_verificacao: P1
+
+    - id: R04
+      tipo: confusao_norma_sistema_vs_produto
+      dominio: vault_inteiro
+      descricao: >
+        Múltiplas notas misturam norma de SISTEMA (ABYC E-11 para arquitetura de instalação)
+        com norma de PRODUTO (IEC 61008 para DR, IEC 60335-2-29 para carregador, IEC 62619
+        para bateria lítio) sem diferenciar. Poucas notas fazem essa distinção corretamente —
+        Proteção Dr.md e Carregador de Bateria.md são exemplos positivos.
+        A confusão importa porque norma de sistema diz COMO instalar, norma de produto diz
+        O QUE o equipamento deve atender. Aluno que confunde vai citar IEC 61008 para justificar
+        uma instalação quando deveria citar ABYC E-11.
+      severidade: media
+      evidencia: "Detectado na análise normativa de 62 notas; exemplos positivos vs negativos comparados."
+      prioridade_verificacao: P2
+
+    - id: R05
+      tipo: validate_vault_limitado
+      dominio: _ci_scripts
+      descricao: >
+        validate_vault.py (88 linhas) valida: (1) title/note_type no frontmatter, (2) reviewed_on/
+        review_jurisdiction/source_urls em note_types técnicos, (3) wikilinks resolvidos, (4)
+        4 padrões sensíveis: NORMAM-02, ABYC TE-13, NBR 13885, ABNT NBR 16033.
+        NORMAM-02 tem 1 exceção (Normas e Regulamentações.md).
+        O que o script NÃO faz: não valida completude de citação normativa (edição, ano,
+        cláusula); não detecta norma aposentada além dos 4 padrões; não verifica cálculos;
+        não cruza consistência inter-notas.
+        CORREÇÃO v2: a v1 dizia "exceções amplas demais" — isso é impreciso. As exceções são
+        mínimas (1 arquivo). O problema real é que o escopo de validação é estreito demais
+        para a ambição do vault.
+      severidade: media
+      evidencia: "Leitura completa de validate_vault.py (88 linhas), scripts/vault_tools.py."
+      prioridade_verificacao: P2
+
+    - id: R06
+      tipo: notas_orfas
+      dominio: "60_Automacao, 70_Hidraulica"
+      descricao: >
+        'USB 12V (Power).md' (60_Automacao — NÃO 70_Hidraulica como dito na v1) e
+        'Limpador de Parabrisas.md' (70_Hidraulica) têm ≤1 backlink. Backlog de Evolução
+        Editorial.md confirma como item pendente (checkbox vazio). Pipeline visual integrou
+        USB 12V via spec _visuals/specs/usb-12v-queda-ruido-carga.json, mas link semântico
+        no corpo do vault ainda ausente.
+      severidade: baixa
+      evidencia: "_Editorial/Backlog de Evolução Editorial.md item pendente; verificado por contagem de backlinks."
+      prioridade_verificacao: P3
+
+    - id: R07
+      tipo: assimetria_visual
+      dominio: "55_Iluminacao, 90_Revisao"
+      descricao: >
+        55_Iluminacao tem 11 notas mas apenas 1 spec visual integrada
+        (iluminacao-navegacao-emergencia-camadas.json). COLREG é inerentemente visual (arcos,
+        posicionamento, cores). 90_Revisao tem 0 visuais.
+        Em contraste: 10_Fundamentos tem 11 visuais, 40_Distribuicao tem 7.
+        _Editorial/Inventário Visual da Base.md confirma a cobertura assimétrica e lista
+        candidatos, mas o pipeline ainda não os gerou.
+      severidade: media
+      evidencia: "_Editorial/Inventário Visual da Base.md lista cobertura por domínio."
+      prioridade_verificacao: P2
+
+# ─────────────────────────────────────────────────
+# MAPA DE NOTAS COM CÁLCULO (verificado por grep + leitura)
+# ─────────────────────────────────────────────────
+
+notas_com_calculo:
+
+  tier_1_formulas_pesadas:
+    # Contêm fórmulas explícitas, exemplos numéricos, e tabelas de dimensionamento
+    - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+      tipo_calculo: "I=P/V, R_máx=ΔV_máx/I, A_mín=(ρ×L)/R_máx, tabela AWG"
+      premissas_criticas: "ρ=0.0175 Ω·mm²/m, queda 3%=0.36V@12V, temperatura, ida+volta"
+    - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+      tipo_calculo: "C_banco=C_total/DOD, Ah=Wh/V, efeito Peukert, margem 25%"
+      premissas_criticas: "DOD AGM 50% vs LiFePO4 80%, C/20 vs C/5 vs C/2, temperatura"
+    - caminho: "10_Fundamentos_e_Projeto/Lei de Ohm e Cálculos Básicos.md"
+      tipo_calculo: "V=IR, P=VI=I²R=V²/R, exemplo de queda 7.8%"
+      premissas_criticas: "FP em AC não coberto, resistência vs temperatura"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Fusíveis DC — Proteção Contra Sobrecorrente.md"
+      tipo_calculo: "Coordenação fusível/cabo, 2000W@12V=181A, tabela cor/amperagem"
+      premissas_criticas: "ABYC E-11 ampacity, cabo protege carga vs cabo protege circuito"
+    - caminho: "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md"
+      tipo_calculo: "Tabelas: tensão 12V repouso/float, correntes típicas, queda máxima, tolerâncias AC"
+      premissas_criticas: "Valores de referência rápida — se errados, contamina todo diagnóstico de campo"
+
+  tier_2_especificacoes_significativas:
+    - caminho: "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+      tipo_calculo: "I=V/R shunt (500A/50mV=0.0001Ω), eficiência carga 95% lítio / 80% chumbo"
+    - caminho: "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+      tipo_calculo: "Custo/Wh/ciclo: AGM 0.0025 vs LiFePO4 0.001; ciclos 300-500 vs 2000-5000"
+    - caminho: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+      tipo_calculo: "P_DC=P_AC/eficiência: 2000W÷0.92=2174W; 12V→181A; THD<3%"
+    - caminho: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+      tipo_calculo: "Configuração série/paralelo, dimensionamento por classe de embarcação"
+    - caminho: "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+      tipo_calculo: "4 células × 3.2V = 12.8V pack; C-rate 0.5C-1C; temperatura 0°C-60°C"
+    - caminho: "30_Energia_e_Conversao/Placa Solar (DC).md"
+      tipo_calculo: "Fatores de perda: sombreamento, temperatura, cabo, controlador, absorção"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Cabeamento Náutico.md"
+      tipo_calculo: "Ampacity, queda de tensão, derating por temperatura e agrupamento"
+
+# ─────────────────────────────────────────────────
+# MAPA NORMATIVO (verificado por grep exaustivo)
+# ─────────────────────────────────────────────────
+
+mapa_normativo:
+
+  tier_1_framework_normativo:
+    # Notas onde a norma É o conteúdo — erros aqui propagam para todo o vault
+    - caminho: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+      normas: "ABYC E-11, E-2, E-13, A-28, A-31; ISO 13297, 10133 (aposentada); NORMAM-211, NORMAM-02 (desatualizada); IEC 61008, 61009"
+      qualidade_citacao: "EXCELENTE — única nota que mapeia aposentadoria e migração de normas"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+      normas: "ABYC E-11, ABNT NBR 5410, IEC 60092, NORMAM-211"
+      qualidade_citacao: "BOM — cita limite de resistência ≤1Ω per ABYC; diferencia convenções de cor Brasil vs internacional"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+      normas: "ABYC E-2, E-11, A-31; ISO 10133 (APOSENTADA); ABNT NBR 5410"
+      qualidade_citacao: "BOM — especifica bitola mínima AWG 8 per ABYC vs prática BR (AWG 10-14); cita potenciais por material"
+    - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+      normas: "ABYC E-11 tabelas de ampacity e queda 3%, ISO 13297"
+      qualidade_citacao: "EXCELENTE — cita tabela ABYC E-11 com valor (3%=0.36V@12V); derating documentado"
+
+  tier_2_regulatorio_seguranca:
+    # Normas regulatórias (COLREGS, NORMAM, SOLAS) com implicação legal
+    - caminho: "50_Navegacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+      normas: "COLREGS 72 Regras 23/25/30; NORMAM-01; ISO 16180:2011; USCG 33 CFR 183"
+      qualidade_citacao: "EXCELENTE — regras numeradas, ISO com ano, conflito prático documentado"
+    - caminho: "55_Iluminacao/Luz de Tope.md"
+      normas: "COLREGS Regra 21/23/25; NORMAM-01; ISO 16180:2011; USCG 33 CFR 183"
+      qualidade_citacao: "EXCELENTE — arco 225° especificado, USCG citado"
+    - caminho: "40_Distribuicao/Proteção Dr.md"
+      normas: "ABYC E-11; IEC 61008 (RCCB); IEC 61009 (RCBO); ISO 13297; NBR 5410"
+      qualidade_citacao: "EXCELENTE — diferencia norma de sistema vs produto"
+    - caminho: "40_Distribuicao/Isolador Galvânico - Transformador de Isolamento.md"
+      normas: "ABYC A-28 (certificação); ABYC E-11; NFPA 303; ISO 13297"
+      qualidade_citacao: "EXCELENTE — ABYC A-28 como requisito de certificação, não sugestão"
+    - caminho: "30_Energia/CAIS (Pier) (AC).md"
+      normas: "ABYC E-11, A-28; NFPA 303; NORMAM-211; NBR 5410"
+      qualidade_citacao: "BOM — NFPA 303 para marinas; topologia documentada"
+    - caminho: "30_Energia/Gerador (AC).md"
+      normas: "ABYC E-11, A-33; NFPA 302; NORMAM-211"
+      qualidade_citacao: "BOM — NFPA 302 para risco de incêndio em gerador"
+    - caminho: "20_Baterias/Carregador de Bateria (AC To DC).md"
+      normas: "ABYC A-31, E-11; IEC 60335-2-29; ISO 13297"
+      qualidade_citacao: "EXCELENTE — separa norma de sistema de norma de produto"
+    - caminho: "20_Baterias/Lítio LiFePO4 — Instalação e Cuidados Específicos.md"
+      normas: "IEC 62619; ABYC E-13"
+      qualidade_citacao: "ADEQUADO — sem edição/cláusula, mas nota avisa para validar ABNT/IEC vigente"
+
+  tier_3_citacao_generica:
+    # ~50 notas citam ABYC E-11 ou equivalente de forma genérica (sem seção/edição)
+    # Não listadas individualmente — serão tratadas em bloco na Fase 1
+    total_notas: 50
+    padrao_comum: "'ABYC E-11' ou 'ABNT NBR 5410 / IEC' sem edição, ano ou cláusula"
+    risco: "Citação não-verificável; cria aparência de rigor sem substância"
+
+# ─────────────────────────────────────────────────
+# AMOSTRA DE AUDITORIA
+# ─────────────────────────────────────────────────
+#
+# METODOLOGIA (v2):
+# O Prompt Mestre pede 20-30 notas cobrindo: todos os domínios, 100% de 00_Mapas,
+# toda nota com cálculo, toda nota com norma explícita, todo o _Editorial.
+#
+# Com 12 notas com cálculo significativo e 12 notas com carga normativa pesada
+# (com sobreposição considerável), o critério obrigatório gera um núcleo de ~18
+# notas únicas calc+norm. Somando 5 _Editorial e representantes MOC, a amostra
+# chega a 35 notas.
+#
+# PROPOSTA: 35 notas, divididas em:
+# - Bloco A: _Editorial (5 notas, auditoria de governança)
+# - Bloco B: 00_Mapas (6 MOCs prioritários, não 16 — ver justificativa)
+# - Bloco C: Núcleo técnico-normativo-cálculo (18 notas únicas)
+# - Bloco D: Representantes restantes (6 notas para completar cobertura de domínio)
+#
+# Sobre 00_Mapas: 10 dos 16 MOCs têm 12-28 linhas e são listas de wikilinks.
+# Auditá-los como nota completa é desproporcional — proponho verificação
+# automatizada de links (via validate_vault.py) para esses 10, e auditoria
+# formal apenas dos 6 com >40 linhas ou conteúdo narrativo.
+# Se o responsável editorial exigir 100% de 00_Mapas, a amostra sobe para 45.
+# ─────────────────────────────────────────────────
+
+amostra_auditoria:
+
+  # ──── BLOCO A: _EDITORIAL (5 notas) ────
+
+  - caminho: "_Editorial/Auditoria Geral da Base.md"
+    dominio: "_Editorial"
+    motivo_escolha: "280 linhas. Auditoria anterior de 14/04. Estabelece baseline — todo resultado da Fase 1 é delta em relação a este documento."
+    prioridade: "P1"
+    sinais_preliminares: >
+      LEITURA CONFIRMADA: documenta correção de scripts (exclusão .claude/worktrees),
+      promoção de 3 rascunhos, 140 notas com 0 erros. Recomenda 12 visuais prioritários.
+      Identifica USB 12V e Limpador como subintegrados. Contagem de 140 precisa ser
+      reconciliada com os 147 atuais.
+
+  - caminho: "_Editorial/Auditoria e lacunas.md"
+    dominio: "_Editorial"
+    motivo_escolha: "105 linhas. 15 lotes de revisão manual documentados. Estado final: todas as notas em 'technical-review-l1', nenhuma em 'curated-v1'."
+    prioridade: "P1"
+    sinais_preliminares: >
+      LEITURA CONFIRMADA: Estabilizador foi corrigido de tensão→movimento. Starlink/Wi-Fi
+      e bombas de esgoto têm sobreposição documentada. Gap principal remanescente: validação
+      normativa primária contra ABYC/ISO/regulação brasileira linha a linha.
+
+  - caminho: "_Editorial/Backlog de Evolução Editorial.md"
+    dominio: "_Editorial"
+    motivo_escolha: "87 linhas. Checklist ativo com items pendentes que impactam a auditoria."
+    prioridade: "P1"
+    sinais_preliminares: >
+      LEITURA CONFIRMADA: Pendentes relevantes: auditoria USB 12V / Limpador,
+      métricas editoriais programáticas, validação CI de visuais, reforço source_urls,
+      padronização frontmatter MOCs. Próximas 3 ondas planejadas: medição/diagnóstico,
+      distribuição DC, navegação/comunicação.
+
+  - caminho: "_Editorial/Inventário Visual da Base.md"
+    dominio: "_Editorial"
+    motivo_escolha: "146 linhas. Mapa de cobertura visual — necessário antes de propor novos ativos na Fase 3."
+    prioridade: "P1"
+    sinais_preliminares: >
+      LEITURA CONFIRMADA: 45 visuais distribuídos. 55_Iluminacao: 1 visual. 90_Revisao: 0.
+      Lote 4 redesenhou linguagem visual para cartografia técnica (lotes 2-3 eram mais
+      uniformes). Visuais iniciais podem precisar redesign para consistência.
+
+  - caminho: "_Editorial/Log de Evolução.md"
+    dominio: "_Editorial"
+    motivo_escolha: "99 linhas. 4 lotes concluídos entre 14-15/04. Evidência de velocidade editorial e decisões tomadas."
+    prioridade: "P2"
+    sinais_preliminares: >
+      LEITURA CONFIRMADA: Lote 0 = higiene de scripts; Lote 1 = auditoria + docs editoriais;
+      Lote 2 = primeiros 3 visuais; Lote 3 = 21 visuais + 3 tipos de renderer; Lote 4 =
+      redesign cartografia + 45 visuais + 24 integrações.
+
+  # ──── BLOCO B: 00_MAPAS (6 MOCs prioritários) ────
+
+  - caminho: "00_Mapas/Fundamentos da Elétrica Náutica.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "267 linhas — maior nota de 00_Mapas. Única com conteúdo narrativo extenso (não é lista de links). Formação conceitual do aluno começa aqui."
+    prioridade: "P1"
+    sinais_preliminares: "Nota fundacional. Se contiver simplificação didática sem [DIDAT], contamina percepção do aluno."
+
+  - caminho: "00_Mapas/Atlas Técnico.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "59 linhas. Entry point principal. Se faltar domínio ou link estiver errado, aluno perde conteúdo."
+    prioridade: "P1"
+    sinais_preliminares: "Checar se cobre todos os 11 domínios e se wikilinks resolvem."
+
+  - caminho: "00_Mapas/MOC — Diagnóstico e Manutenção.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "76 linhas — mais denso dos MOCs temáticos. Diagnóstico = habilidade central do público-alvo."
+    prioridade: "P1"
+    sinais_preliminares: "Cross-domain. Checar cobertura dos erros comuns documentados em Troubleshooting."
+
+  - caminho: "00_Mapas/MOC — Segurança Integrada.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "67 linhas. Cruza 80_Seguranca + 40_Distribuicao + 30_Energia. Se omitir link, esconde conteúdo de segurança."
+    prioridade: "P1"
+    sinais_preliminares: "Verificar se bonding, DR, isolação, aterramento estão todos linkados."
+
+  - caminho: "00_Mapas/MOC — Fundamentos e Projeto.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "54 linhas. Gateway para o domínio mais maduro (10_Fundamentos). Deve refletir 20 notas do domínio."
+    prioridade: "P2"
+    sinais_preliminares: "Verificar: todas as 20 notas de 10_Fundamentos estão linkadas?"
+
+  - caminho: "00_Mapas/Guia da Vault Curada.md"
+    dominio: "00_Mapas"
+    motivo_escolha: "49 linhas. Define princípios editoriais. Base para julgar coerência de todo o vault."
+    prioridade: "P2"
+    sinais_preliminares: "Verificar se os princípios (Brasil-primeiro, norma obrigatória) são seguidos na prática."
+
+  # 10 MOCs menores (12-28 linhas): verificação automatizada de links, não auditoria formal.
+  # Lista: MOC Mapas, Baterias, Energia, Distribuicao, Navegacao, Iluminacao, Automacao,
+  # Hidraulica, Seguranca e Corrosao, Revisao Manual.
+
+  # ──── BLOCO C: NÚCLEO TÉCNICO-NORMATIVO-CÁLCULO (18 notas) ────
+  # Critério: toda nota com cálculo Tier 1 + toda nota com carga normativa Tier 1-2
+
+  # --- Cálculo + Norma (interseção) ---
+
+  - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      309 linhas. Fórmulas: I=P/V, R_máx=ΔV_máx/I, A_mín=(ρ×L)/R_máx. Tabela AWG por
+      corrente e comprimento. Cita ABYC E-11 tabela com 3%=0.36V@12V. Nota mais usada
+      em campo — erro aqui = cabo subdimensionado = incêndio.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Resistividade declarada ρ=0.0175 Ω·mm²/m (cobre). Recalcular passo a passo.
+      Verificar: comprimento ida+volta, temperatura ambiente, fator K, derating por agrupamento.
+      Checar se tabela é ABYC E-11 literal ou adaptação.
+
+  - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      292 linhas. Fórmulas: C_banco=C_total/DOD, Ah=Wh/V. Efeito Peukert: C/20=100%,
+      C/5=70%, C/2=50%. Exemplo: 1000Wh/dia × 2 dias ÷ 0.5 DOD = 4000Wh → 333Ah → 416Ah
+      com margem 25%.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Peukert simplificado (3 pontos). Verificar se a simplificação é conservadora.
+      Tabela de consumo (GPS 2W, VHF 6-25W, radar 40W) cruza com Referência Rápida — verificar
+      consistência. DOD AGM 50% pode conflitar com Tipos de Bateria (50%) vs campo (40-50%).
+
+  - caminho: "40_Distribuicao_Protecao_e_Aterramento/Fusíveis DC — Proteção Contra Sobrecorrente.md"
+    dominio: "40_Distribuicao_Protecao_e_Aterramento"
+    motivo_escolha: >
+      296 linhas. Cálculo: 2000W@12V=181A; coordenação fusível-cabo (bomba 10A → AWG 14
+      =17A capacity → fusível 15A). Tabela cores/amperagem. Cita ABYC E-11 para proteção.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: AWG 14=17A citado como ABYC E-11, mas sem edição. Verificar se 17A é
+      correto para AWG 14 estanhado em ambiente marítimo (pode variar por temperatura/instalação).
+      Filosofia 'protege cabo, não carga' precisa ser verificada contra ABYC.
+
+  # --- Framework normativo puro ---
+
+  - caminho: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      281 linhas. Arquitetura normativa de TODO o vault. 18+ normas citadas com notas
+      de migração (ISO 10133→13297, NORMAM-02→211). Se esta nota estiver errada, TODAS
+      as outras 61 notas que citam normas herdam o erro.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Qualidade de citação EXCELENTE — melhor do vault. Corretamente identifica
+      ISO 10133 como aposentada. Diferencia norma regulatória vs engenharia. Porém: 3+ notas
+      continuam citando ISO 10133 como vigente apesar desta nota alertar. O vault tem uma
+      nota mestre correta mas notas derivadas que não acompanharam.
+
+  - caminho: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      410 linhas — maior nota de 10_Fundamentos. Confusão entre esses 6 conceitos é a causa
+      raiz de erros de instalação. Alta interseção com Aterramento.md e Bonding.md (risco
+      de contradição).
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: PE vs bonding alinhado com ABYC E-11 s.9 e ISO 13297? Brasil 127V/60Hz shore power tratado?"
+
+  - caminho: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+    dominio: "40_Distribuicao_Protecao_e_Aterramento"
+    motivo_escolha: >
+      363 linhas. NÃO ESTAVA NA AMOSTRA v1 — ERRO. É uma das notas mais normativamente
+      densas: ABYC E-11, IEC 60092, NORMAM-211, NBR 5410. Declara resistência ≤1Ω per ABYC.
+      Diferencia convenções de cor Brasil vs internacional.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Limite ≤1Ω citado sem edição/cláusula ABYC E-11. Verificar se valor está
+      correto e em qual seção. Potencial de conflito com Bonding.md nos limites de impedância.
+
+  - caminho: "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+    dominio: "40_Distribuicao_Protecao_e_Aterramento"
+    motivo_escolha: >
+      343 linhas. ABYC E-2 (corrosão galvânica), E-11, A-31. Especifica AWG 8 mínimo ABYC
+      vs prática BR (AWG 10-14). Cita potenciais por material com eletrodo Ag/AgCl.
+      ATENÇÃO: cita ISO 10133 como referência ativa — conflita com Normas e Regulamentações.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA CONCRETA: ISO 10133 citada como vigente, mas nota mestra identifica como
+      aposentada. Isso é contradição inter-notas confirmada (R02). Verificar se conteúdo
+      técnico muda com ISO 13297.
+
+  - caminho: "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+    dominio: "40_Distribuicao_Protecao_e_Aterramento"
+    motivo_escolha: >
+      353 linhas. Exemplar em citação normativa: diferencia sistema (ABYC E-11) de produto
+      (IEC 61008 para RCCB, IEC 61009 para RCBO). DR em ambiente marítimo é IEC 60092-507.
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: corrente de disparo (10mA? 30mA? depende de aplicação); tipo A vs AC para sistemas com inversor."
+
+  - caminho: "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+    dominio: "40_Distribuicao_Protecao_e_Aterramento"
+    motivo_escolha: >
+      396 linhas. NÃO ESTAVA NA AMOSTRA v1. ABYC A-28 citado como requisito de
+      certificação (não sugestão). NFPA 303 para marinas. Referencia marca ProMariner
+      ProSafe com certificação A-28. Se aluno instala isolador sem A-28, pode mascarar
+      corrente de fuga e causar eletrocussão.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Seções 282/285 citam 'certificado ABYC A-28' como mandatório. Verificar
+      se A-28 ainda é edição vigente e se requer inspeção periódica.
+
+  - caminho: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    dominio: "30_Energia_e_Conversao"
+    motivo_escolha: >
+      392 linhas. Shore power: ABYC E-11, A-28, NFPA 303 para marinas, NORMAM-211, NBR 5410.
+      Único ponto de entrada AC externo. Risco: eletrocussão na água (electric shock drowning).
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: 127V/220V/60Hz explicitado? Topologia monofásico BR vs importada? Nota à linha 374 diz 'diagrama não define esquema normativo completo'."
+
+  - caminho: "30_Energia_e_Conversao/Gerador (AC).md"
+    dominio: "30_Energia_e_Conversao"
+    motivo_escolha: >
+      400 linhas. NÃO ESTAVA NA AMOSTRA v1. NFPA 302 (incêndio em embarcação motorizada),
+      ABYC E-11 (elétrico), A-33 (exaustão). Gerador é risco combinado: elétrico + fogo + CO.
+    prioridade: "P1"
+    sinais_preliminares: "NFPA 302 é rara no vault — verificar se citação é correta e completa."
+
+  - caminho: "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+    dominio: "20_Baterias_e_Armazenamento"
+    motivo_escolha: >
+      355 linhas. NÃO ESTAVA NA AMOSTRA v1. ABYC A-31 (carregadores) + IEC 60335-2-29
+      (segurança de produto). Uma das poucas notas que corretamente separa norma de sistema
+      de norma de produto. Nota que Brasil não exige fusível DC per ABYC E-11.
+    prioridade: "P1"
+    sinais_preliminares: "EVIDÊNCIA: Separação sistema/produto exemplar. Verificar IEC 60335-2-29 edição vigente."
+
+  # --- Regulatório (COLREGS + NORMAM) ---
+
+  - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+    dominio: "50_Navegacao_Instrumentacao_e_Comunicacao"
+    motivo_escolha: >
+      319 linhas. NÃO ESTAVA NA AMOSTRA v1. COLREGS 72 Regras 23/25/30, ISO 16180:2011
+      (com ano!), NORMAM-01, USCG 33 CFR 183. Uma das notas com melhor citação normativa
+      do vault. Documenta conflito prático COLREGS vs prática BR para embarcações pequenas.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: ISO 16180:2011 datada — confirmar se 2011 ainda é edição vigente. Conflito
+      documentado (linhas 389-391) é valioso didaticamente mas precisa de [CAMPO] tag.
+
+  - caminho: "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+    dominio: "55_Iluminacao_e_Sinalizacao"
+    motivo_escolha: >
+      293 linhas. COLREGS Regra 21-a (definição), 23, 25. ISO 16180:2011. Arco 225°. LED
+      homologado USCG/ISO obrigatório vs genérico. Infração = responsabilidade civil/criminal.
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: arco 225° correto? Alcance por comprimento (Regra 22)? Altura mínima documentada?"
+
+  - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+    dominio: "50_Navegacao_Instrumentacao_e_Comunicacao"
+    motivo_escolha: >
+      360 linhas. IEC 61162-1 (NMEA 0183), IEC 61162-3 (NMEA 2000), ISO 11898 (CAN bus).
+      Backbone de instrumentação. Sem edições citadas.
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: LEN total, comprimento máximo drop 6m, terminadores. IEC 61162 edições."
+
+  # --- Cálculo puro (sem norma pesada mas com recálculo obrigatório) ---
+
+  - caminho: "10_Fundamentos_e_Projeto/Lei de Ohm e Cálculos Básicos.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      277 linhas. Fundação: V=IR, P=VI=I²R=V²/R. Exemplo: queda 7.8% (excessiva).
+      Se simplificação didática não está marcada como [DIDAT], aluno internaliza erro.
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: P=VI sem FP é simplificação — está marcada? Resistência vs temperatura coberta?"
+
+  - caminho: "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md"
+    dominio: "10_Fundamentos_e_Projeto"
+    motivo_escolha: >
+      120 linhas. NÃO ESTAVA NA AMOSTRA v1. Tabela de referência rápida: tensões, correntes
+      típicas, quedas máximas, tolerâncias AC. Eletricista de campo consulta esta nota no
+      dia-a-dia. Se um valor estiver errado, o diagnóstico de campo será errado.
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: Tensão 12V repouso: 12.6-12.8V full, 12.2V ~50%. Queda 3% critical, 10%
+      non-critical, 4% motor start. Correntes: fridge 3-8A, thruster 80-250A, motor start
+      200-600A. Todos precisam de fonte — são ABYC? fabricante? campo?
+
+  # ──── BLOCO D: REPRESENTANTES RESTANTES (6 notas — completam cobertura de domínio) ────
+
+  - caminho: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    dominio: "20_Baterias_e_Armazenamento"
+    motivo_escolha: >
+      451 linhas — mais densa de 20_Baterias. Configurações série/paralelo, dimensionamento
+      por classe de embarcação. ABYC E-10 citada para separação/ventilação/fusível.
+      Cita ISO 10133 como vigente (contradição com nota mestra — R02 confirmado).
+    prioridade: "P1"
+    sinais_preliminares: >
+      EVIDÊNCIA: ISO 10133 citada; precisa migrar para ISO 13297:2020. Cruza com
+      Dimensionamento de Banco (10_Fundamentos) — verificar consistência de autonomia/sizing.
+
+  - caminho: "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+    dominio: "80_Seguranca_e_Corrosao"
+    motivo_escolha: >
+      225 linhas. Stray currents destroem casco metálico em semanas. Cruza com Eletrólise.md,
+      Bonding.md, Aterramento.md. Se a diferenciação galvânica vs stray current estiver errada,
+      a remediação sugerida será errada.
+    prioridade: "P1"
+    sinais_preliminares: "Verificar: procedimento ABYC/ISO de medição referenciado? Limiares de corrente (mA) com fonte?"
+
+  - caminho: "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md"
+    dominio: "60_Automacao_Conectividade_e_Monitoramento"
+    motivo_escolha: "174 linhas. Victron VRM = sistema mais adotado no BR premium. Se nomeia VRM/Victron, deve ter [FAB]."
+    prioridade: "P2"
+    sinais_preliminares: "Verificar taxonomia [FAB] vs conceito genérico. Alternativas mencionadas?"
+
+  - caminho: "70_Hidraulica_Climatizacao_e_Utilidades/Dessalinizador.md"
+    dominio: "70_Hidraulica_Climatizacao_e_Utilidades"
+    motivo_escolha: "227 linhas. Maior consumo elétrico a bordo (após propulsão). Dimensionamento de carga para autonomia."
+    prioridade: "P2"
+    sinais_preliminares: "Verificar: consumo W/litro com fonte? Integração com banco + gerador documentada?"
+
+  - caminho: "90_Revisao_Manual/Estabilizador.md"
+    dominio: "90_Revisao_Manual"
+    motivo_escolha: >
+      167 linhas. Nota mais isolada do vault. _Editorial/Auditoria e lacunas.md confirma
+      que foi corrigida de 'estabilizador de tensão' para 'estabilizador de movimento' —
+      verificar se o conteúdo agora faz sentido no contexto náutico.
+    prioridade: "P2"
+    sinais_preliminares: "Histórico de correção documentado. Checar se conteúdo é específico náutico ou genérico fabricante."
+
+  - caminho: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+    dominio: "30_Energia_e_Conversao"
+    motivo_escolha: >
+      377 linhas. Cálculos: P_DC = P_AC/eficiência (2000W÷0.92=2174W → 181A@12V).
+      Onda pura vs modificada. THD<3%. Interseção com banco de baterias e shore power.
+    prioridade: "P2"
+    sinais_preliminares: "EVIDÊNCIA: Eficiência 88-96% declarada. Recalcular extração de corrente. Verificar se standby (0.5-3W) é realista."
+
+# ─────────────────────────────────────────────────
+# RESUMO EXECUTIVO DA AMOSTRA
+# ─────────────────────────────────────────────────
+
+resumo_amostra:
+  total_notas_na_amostra: 35
+  composicao:
+    bloco_a_editorial: 5
+    bloco_b_mapas: 6
+    bloco_c_nucleo_tecnico: 18
+    bloco_d_representantes: 6
+  cobertura_dominios: "12 de 12 domínios técnicos + _Editorial = 100%"
+  notas_p1: 27
+  notas_p2: 8
+  notas_com_calculo_tier_1: 5
+  notas_com_calculo_tier_2: 7
+  notas_com_norma_tier_1_2: 12
+  notas_novas_vs_v1: 7  # Aterramento, Fusíveis DC, Isolador Galvânico, Gerador AC, Carregador, NAVEGAÇÃO, Referência Rápida
+  estimativa_horas_fase1:
+    por_nota_p1: 1.5
+    por_nota_p2: 0.5
+    total: 44.5  # 27×1.5 + 8×0.5
+
+  contradicoes_inter_notas_ja_confirmadas:
+    - tipo: "norma aposentada citada como vigente"
+      nota_a: "10_Fundamentos/Normas e Regulamentações.md"
+      nota_b: "40_Distribuicao/Bonding.md + 20_Baterias/Bancos de Bateria.md + 20_Baterias/Tipos de Bateria.md"
+      problema: "Nota mestra identifica ISO 10133 como aposentada; 3+ notas continuam citando como vigente"
+      severidade: "alta"
+
+# ─────────────────────────────────────────────────
+# ⚠ PARADA OBRIGATÓRIA — PERGUNTAS AO RESPONSÁVEL
+#
+# 1. A amostra de 35 notas está aprovada? Se preferir 100% de 00_Mapas,
+#    sobe para 45 (adição de 10 MOCs curtos).
+# 2. As 7 notas novas (vs v1) estão corretamente priorizadas como P1?
+# 3. O Bloco C (18 notas calc+norm) é o foco principal — alguma a remover/adicionar?
+# 4. Contradição ISO 10133 confirmada: corrigir agora ou documentar na Fase 1?
+# 5. Proposta para MOCs curtos (10): verificação automatizada via validate_vault.py
+#    em vez de auditoria formal. Aprovado?
+# ─────────────────────────────────────────────────

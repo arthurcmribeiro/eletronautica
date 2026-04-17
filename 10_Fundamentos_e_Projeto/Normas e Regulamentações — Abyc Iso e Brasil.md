@@ -4,8 +4,24 @@ note_type: "reference"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "NORMAS E REGULAMENTAÇÕES — ABYC, ISO E BRASIL 33a19734f7fb81cb8e17dd284ca1cc01.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-13"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-16"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC E-2 (2020)"
+  - "ABYC E-10 (2023)"
+  - "ABYC E-13 (2022)"
+  - "ABYC A-28 (edição a verificar)"
+  - "ABYC A-31 (edição a verificar)"
+  - "ISO 13297:2020"
+  - "ISO 10133 (retirada, histórico)"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "NORMAM-02 (substituída, histórico)"
+  - "IEC 61008"
+  - "IEC 61009"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -18,9 +34,9 @@ aliases:
 seo_title: "Normas da elétrica náutica no Brasil: ABYC, ISO, NORMAM, NBR e comparação prática"
 seo_description: "Vademecum técnico de normas para elétrica náutica: o que é regulatório no Brasil, o que é referência de engenharia em ABYC e ISO, onde as filosofias divergem e por que o caso brasileiro exige cuidado especial com shore power, tensões, neutro e aterramento."
 seo_keywords:
-  - "ABYC E-11 Brasil"
-  - "ISO 13297"
-  - "NORMAM-211"
+  - "ABYC E-11 (2023) Brasil"
+  - "ISO 13297:2020"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
   - "NBR 5410 embarcação"
   - "normas elétrica náutica"
   - "10 Fundamentos e Projeto"
@@ -69,7 +85,7 @@ Se o profissional mistura essas camadas, a conclusão costuma ficar juridicament
 
 ### NORMAM
 
-A Marinha do Brasil, por meio da Diretoria de Portos e Costas, passou a referenciar **NORMAM-211** para amadores, embarcações de esporte e/ou recreio e para cadastramento/funcionamento de marinas, clubes e entidades náuticas.
+A Marinha do Brasil, por meio da Diretoria de Portos e Costas, passou a referenciar **NORMAM-211 (2022 rev. aplicável via DPC)** para amadores, embarcações de esporte e/ou recreio e para cadastramento/funcionamento de marinas, clubes e entidades náuticas.
 
 O que isso significa na prática:
 
@@ -81,7 +97,7 @@ O que isso significa na prática:
 
 No lado brasileiro de engenharia elétrica, a referência mais sólida e estável continua sendo:
 
-- **ABNT NBR 5410** para princípios de baixa tensão;
+- **ABNT NBR 5410 (2004 + emendas)** para princípios de baixa tensão;
 - família **IEC / ABNT NBR IEC** para identificação de condutores, dispositivos e conjuntos;
 - adoções brasileiras de normas ISO/IEC específicas, quando aplicáveis ao assunto e disponíveis no catálogo vigente.
 
@@ -95,11 +111,12 @@ ABYC é o corpo técnico mais útil quando o assunto é instalação real, manut
 
 | Documento | Tema |
 | --- | --- |
-| ABYC E-11 | sistemas AC e DC em embarcações |
-| ABYC E-2 | prevenção de corrosão galvânica |
-| ABYC E-13 | baterias de íons de lítio |
-| ABYC A-28 | galvanic isolators |
-| ABYC A-31 | battery chargers and inverter/chargers |
+| ABYC E-11 (2023) | sistemas AC e DC em embarcações |
+| ABYC E-2 (2020) | prevenção de corrosão galvânica |
+| ABYC E-13 (2022) | baterias de íons de lítio |
+| ABYC A-28 (edição a verificar) | galvanic isolators (verificar edição vigente) <!-- TODO-CITAÇÃO --> |
+| ABYC A-31 (edição a verificar) | lightning protection |
+| ABYC A-20 / A-25 | battery chargers e inverter/chargers (verificar cláusula vigente) <!-- TODO-CITAÇÃO --> |
 
 ABYC é uma referência de engenharia. Não é lei brasileira. Ainda assim, ela costuma ser mais útil que a regulação local quando a pergunta é "como projetar e instalar sem improviso".
 
@@ -107,7 +124,7 @@ ABYC é uma referência de engenharia. Não é lei brasileira. Ainda assim, ela 
 
 No universo europeu e internacional, a família ISO small craft continua central. Dois pontos importantes:
 
-- **ISO 13297** é hoje a referência internacional principal para sistemas elétricos em pequenas embarcações;
+- **ISO 13297:2020** é hoje a referência internacional principal para sistemas elétricos em pequenas embarcações;
 - **ISO 10133** foi retirada, e a própria ISO informa que a edição mais nova disponível migra a lógica para **ISO 13297:2020**.
 
 Isso corrige um problema comum de material antigo: citar ISO 10133 como se ainda fosse a referência viva e isolada para DC de pequenas embarcações.
@@ -172,20 +189,31 @@ Essa transposição mal feita pode causar:
 
 Conclusão técnica: **ABYC serve, desde que a alimentação brasileira seja reinterpretada e o projeto seja tropicalizado.**
 
+### Caso específico: `220 V fase-fase sem neutro` em marina brasileira
+
+Esse é o cenário mais perigoso da transposição mal feita de ABYC/ISO (pensados para neutro definido) para a realidade elétrica brasileira. Exemplo comum:
+
+- O barco foi projetado para `L + N + PE` (uma fase viva, um neutro aterrado na origem, um PE).
+- A marina entrega `220 V fase-fase` entre dois ativos (`L1` e `L2`), sem neutro, com PE separado — configuração típica de secundário `220/380` ou `127/220` quando o pedestal expõe só dois ativos.
+- O instalador amarra um dos ativos ao barramento "neutro" do barco, que está interligado ao PE/negativo DC/bonding.
+- Resultado: um dos condutores ativos passa a circular corrente pelo sistema de proteção, elevando o potencial das massas do casco em relação ao meio aquático.
+
+Consequências práticas: tensões de toque anormais em corrimões e costados; risco elevado de eletrocussão de banhistas próximos; corrosão galvânica acelerada; leituras erráticas de DR/ELCI; dano silencioso em eletrônica sensível. A solução certa é **transformador de isolamento** ou **isolador galvânico** correto para o cenário — ver [[Isolador Galvânico / Transformador de Isolamento]] e [[CAIS (Pier) (AC)]].
+
 ## Vademecum por assunto
 
 | Assunto | Referência de engenharia mais útil | Observação prática |
 | --- | --- | --- |
-| Arquitetura AC/DC geral | ABYC E-11 | continua sendo a referência mais acionável de campo |
-| Shore power e interface com marina | ABYC E-11 + ISO 13297 + documentação do equipamento | no Brasil, validar também a topologia real da concessionária/marina |
-| Baterias convencionais | ABYC E-10 / E-11 | cruzar com fabricante e requisitos do equipamento |
-| Lítio | ABYC E-13 + fabricante | sem documentação do sistema, a norma não salva o projeto |
-| Carregadores e inverter/chargers | ABYC A-31 | indispensável cruzar com o manual da plataforma instalada |
-| Corrosão galvânica e bonding | ABYC E-2 + arquitetura do casco | não tratar bonding como extensão casual do terra AC |
-| Galvanic isolators | ABYC A-28 | importante em barcos com shore power sem transformador de isolamento |
+| Arquitetura AC/DC geral | ABYC E-11 (2023) | continua sendo a referência mais acionável de campo |
+| Shore power e interface com marina | ABYC E-11 (2023) + ISO 13297:2020 + documentação do equipamento | no Brasil, validar também a topologia real da concessionária/marina |
+| Baterias convencionais | ABYC E-10 (2023) / E-11 | cruzar com fabricante e requisitos do equipamento |
+| Lítio | ABYC E-13 (2022) + fabricante | sem documentação do sistema, a norma não salva o projeto |
+| Carregadores e inverter/chargers | ABYC A-31 (edição a verificar) | indispensável cruzar com o manual da plataforma instalada |
+| Corrosão galvânica e bonding | ABYC E-2 (2020) + arquitetura do casco | não tratar bonding como extensão casual do terra AC |
+| Galvanic isolators | ABYC A-28 (edição a verificar) | importante em barcos com shore power sem transformador de isolamento |
 | DR / RCD / RCBO | IEC 61008 / 61009 + arquitetura do sistema | o dispositivo certo depende da topologia e das eletrônicas embarcadas |
-| Identificação de condutores e proteção BT | ABNT NBR 5410 e família IEC/ABNT aplicável | complementar, nunca substitutiva da norma náutica |
-| Regulação de esporte e recreio no Brasil | NORMAM-211 | regula o ambiente marítimo, não substitui o detalhamento de instalação |
+| Identificação de condutores e proteção BT | ABNT NBR 5410 (2004 + emendas) e família IEC/ABNT aplicável | complementar, nunca substitutiva da norma náutica |
+| Regulação de esporte e recreio no Brasil | NORMAM-211 (2022 rev. aplicável via DPC) | regula o ambiente marítimo, não substitui o detalhamento de instalação |
 
 ## O que a NORMAM faz e o que ela não faz
 
@@ -197,7 +225,7 @@ Conclusão técnica: **ABYC serve, desde que a alimentação brasileira seja rei
 
 ### O que ela não faz sozinha
 
-- não substitui uma filosofia completa de cabeamento e proteção comparável a ABYC E-11;
+- não substitui uma filosofia completa de cabeamento e proteção comparável a ABYC E-11 (2023);
 - não resolve, por si, a topologia do shore power recebido pelo barco;
 - não elimina a necessidade de diagrama, cálculo, coordenação de proteção e validação de fabricante.
 
@@ -213,7 +241,7 @@ Sempre que possível, cite assim:
 
 Exemplo de postura correta:
 
-> "Projeto de entrada AC analisado à luz da filosofia de proteção da ABYC E-11, complementado por ABNT NBR 5410 para princípios de BT e verificação do enquadramento regulatório brasileiro segundo a NORMAM-211 vigente."
+> "Projeto de entrada AC analisado à luz da filosofia de proteção da ABYC E-11 (2023), complementado por ABNT NBR 5410 (2004 + emendas) para princípios de BT e verificação do enquadramento regulatório brasileiro segundo a NORMAM-211 (2022 rev. aplicável via DPC) vigente."
 
 Exemplo de postura errada:
 
@@ -230,9 +258,9 @@ Exemplo de postura errada:
 ## Fontes institucionais e catálogos oficiais
 
 - [Portal de normas da DPC / Marinha do Brasil](https://www.marinha.mil.br/dpc/normas)
-- [Serviço GOV.BR que já referencia a NORMAM-211 para embarcações de esporte e recreio](https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes)
+- [Serviço GOV.BR que já referencia a NORMAM-211 (2022 rev. aplicável via DPC) para embarcações de esporte e recreio](https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes)
 - [ABYC Standards](https://abycinc.org/standards/)
-- [ISO 13297](https://www.iso.org/standard/69551.html)
+- [ISO 13297:2020](https://www.iso.org/standard/69551.html)
 - [ISO 10133:2012, retirada, com indicação de migração para ISO 13297:2020](https://www.iso.org/standard/45867.html)
 
 ## FAQ
@@ -270,7 +298,7 @@ Na prática de campo, o maior risco está na topologia da alimentação e no tra
 ## Perguntas que esta nota responde
 
 - O que é regulatório no Brasil e o que é referência de engenharia?
-- NORMAM-211 substitui NORMAM-02 para esporte e recreio?
+- NORMAM-211 (2022 rev. aplicável via DPC) substitui NORMAM-02 para esporte e recreio?
 - ABYC serve para o Brasil?
 - Onde ABYC costuma ser mal aplicada no Brasil?
 - ISO 10133 ainda está vigente?

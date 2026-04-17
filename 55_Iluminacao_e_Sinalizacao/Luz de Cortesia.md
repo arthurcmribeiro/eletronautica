@@ -202,7 +202,7 @@ Para uso recreativo, LED azul simples de qualidade razoável cumpre a função. 
 
 ## Normas e referências aplicáveis
 
-- **ABYC E-11** — proteção e bitola dos circuitos
+- **ABYC E-11 (2023)** — proteção e bitola dos circuitos
 - Sem norma específica para luz de cortesia — boa prática é o critério
 
 ## Destaques para ensino

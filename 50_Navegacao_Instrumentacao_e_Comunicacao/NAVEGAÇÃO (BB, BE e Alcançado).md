@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "NAVEGAÇÃO (BB, BE e Alcançado)"
 seo_title: "NAVEGAÇÃO (BB, BE e Alcançado)"
@@ -56,7 +56,7 @@ Os três tipos básicos para embarcações de recreio a motor:
 - Sinalizar a presença, posição e rumo da embarcação para outros navegantes
 - Indicar o lado de aproximação segura (para onde a embarcação está virando)
 - Diferenciar tipo de embarcação (a vela, a motor, rebocando, restrita)
-- Cumprir obrigação legal — COLREGS / NORMAM-01
+- Cumprir obrigação legal — COLREGS / NORMAM-01 (edição a verificar)
 
 Sem luzes de navegação corretas: risco de colisão + infração grave com autuação pela Capitania dos Portos.
 
@@ -102,7 +102,7 @@ Sem luzes de navegação corretas: risco de colisão + infração grave com autu
 | Corrente típica | 0,3–0,8A por luz | 2–5A por luz |
 | Vida útil | 20.000–50.000h | 500–2.000h |
 | Temperatura de cor | 6000–7000K (branco) / filtros RGB | Amarelada |
-| Homologação | USCG / ISO 16180 / ABYC | ISO 16180 |
+| Homologação | USCG / ISO 16180:2011 / ABYC | ISO 16180:2011 |
 | Vibração | Excelente (sem filamento) | Vulnerável |
 | Custo inicial | Maior | Menor |
 
@@ -189,7 +189,7 @@ Sem luzes de navegação corretas: risco de colisão + infração grave com autu
 
 ## Boas práticas
 
-- Usar somente luminárias com homologação USCG ou certificação ISO 16180
+- Usar somente luminárias com homologação USCG ou certificação ISO 16180:2011
 - Inspecionar e limpar conectores externos no início de cada temporada
 - Testar todas as luzes de navegação no checklist pré-saída — sempre
 - Carregar lanterna manual branca de reserva (obrigação legal para embarcações < 7m)
@@ -236,18 +236,18 @@ Sem luzes de navegação corretas: risco de colisão + infração grave com autu
 
 **Prática comum no Brasil:** Luminárias genéricas sem homologação, LED de carro adaptado, verificação ausente no checklist. Muitas embarcações pequenas navegando sem luz de alcançado.
 
-**Referência COLREGS / NORMAM-01:** Obrigação legal absoluta. Multa e responsabilidade civil em caso de abalroamento com luzes incorretas ou ausentes. NORMAM-01 define os requisitos para embarcações miúdas brasileiras.
+**Referência COLREGS / NORMAM-01 (edição a verificar):** Obrigação legal absoluta. Multa e responsabilidade civil em caso de abalroamento com luzes incorretas ou ausentes. NORMAM-01 (edição a verificar) define os requisitos para embarcações miúdas brasileiras.
 
-**Ponto de conflito:** NORMAM-01 e COLREGS definem requisitos mínimos de alcance visual por comprimento de embarcação. Na prática, muitas lanchas pequenas no Brasil usam luminárias subdimensionadas para o porte.
+**Ponto de conflito:** NORMAM-01 (edição a verificar) e COLREGS definem requisitos mínimos de alcance visual por comprimento de embarcação. Na prática, muitas lanchas pequenas no Brasil usam luminárias subdimensionadas para o porte.
 
 **Leitura equilibrada:** Para embarcação ≤ 12m com uso diurno: conjunto combinado de proa + luz de popa LED homologado resolve. Para uso noturno frequente ou embarcações maiores: investir em sistema completo com alcance adequado é obrigação de segurança.
 
 ## Normas e referências aplicáveis
 
 - **COLREGS 72** — Convenção Internacional para Evitar Abalroamentos (Regras 20–31)
-- **NORMAM-01 (DPC/Marinha do Brasil)** — regulamentação nacional de luzes de navegação
+- **NORMAM-01 (edição a verificar) (DPC/Marinha do Brasil)** — regulamentação nacional de luzes de navegação
 - **ISO 16180:2011** — Requisitos fotométricos para luzes de navegação
-- **USCG 33 CFR 183** — padrão americano de homologação
+- **USCG 33 CFR (edição a verificar) 183** — padrão americano de homologação
 
 ## Destaques para ensino
 
@@ -284,7 +284,7 @@ Sem luzes de navegação corretas: risco de colisão + infração grave com autu
 
 **Posso usar LED de carro nas luzes de navegação para economizar?**
 
-Não. LED de automóvel não tem homologação marítima, o arco de emissão é diferente e a cor pode não estar dentro das coordenadas CIE exigidas pela COLREGS. Usar somente LED com certificação ISO 16180 ou USCG.
+Não. LED de automóvel não tem homologação marítima, o arco de emissão é diferente e a cor pode não estar dentro das coordenadas CIE exigidas pela COLREGS. Usar somente LED com certificação ISO 16180:2011 ou USCG.
 
 **A lancha pequena (< 7m) é obrigada a ter luzes fixas?**
 

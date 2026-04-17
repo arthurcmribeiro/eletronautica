@@ -266,7 +266,7 @@ MPPT solar carrega durante o dia; carregador AC carrega à noite e no cais. BMS 
 | --- | --- | --- |
 | Marca dominante | Victron (crescendo) + genéricos | Victron / Mastervolt / ProMariner |
 | Perfil configurado | Frequentemente genérico ou incorreto | Configurado conforme a ficha técnica da bateria |
-| Fusível DC | Frequentemente ausente | Exigido por ABYC E-11 |
+| Fusível DC | Frequentemente ausente | Exigido por ABYC E-11 (2023) |
 | Sonda de temperatura | Raramente usada | Padrão em instalações profissionais |
 | Compatibilidade lítio | Em evolução rápida | Bem documentada, comunicação BMS estabelecida |
 | Inversor/Carregador | Crescendo mas ainda não dominante | Padrão em embarcações europeias acima de 35 pés |
@@ -275,11 +275,11 @@ MPPT solar carrega durante o dia; carregador AC carrega à noite e no cais. BMS 
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: requisitos para carregadores, proteção, localização do fusível DC
-- **ABYC A-31** — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos
-- **ISO 13297** — Electrical systems on recreational craft
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: requisitos para carregadores, proteção, localização do fusível DC
+- **ABYC A-31 (edição a verificar)** — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos
+- **ISO 13297:2020** — Electrical systems on recreational craft
 - **IEC 60335-2-29** — Safety of battery chargers: base normativa para os equipamentos
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
 - Compatibilidade com lítio: não explicitamente normatizada — responsabilidade do instalador e do fabricante do BMS
 
 ## Como ensinar este tópico

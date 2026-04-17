@@ -294,9 +294,9 @@ Cabo armazenado incorretamente (UV, calor) deteriora antes de ser instalado. Ver
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — especificações de cabeamento náutico, inspeção periódica
-- **ABYC A-28** — marine electrical circuit diagrams (identificação de cabos)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABYC E-11 (2023)** — especificações de cabeamento náutico, inspeção periódica
+- **ABYC A-28 (edição a verificar)** — marine electrical circuit diagrams (identificação de cabos)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **UL 1426** — cables for use on boats (padrão de qualidade para cabo náutico)
 - **SAE J1128** — Low Tension Primary Cable (referência para cabos náuticos)
 

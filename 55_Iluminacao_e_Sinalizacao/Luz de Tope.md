@@ -170,7 +170,7 @@ Uma embarcação a motor visto à frente: luz de tope branca (centro) + verde (b
 
 ## Boas práticas
 
-- Usar LED homologado USCG ou ISO 16180 — não adaptar LED de outra aplicação
+- Usar LED homologado USCG ou ISO 16180:2011 — não adaptar LED de outra aplicação
 - Proteger o conector no topo com conector marinizado IP67 ou conector crimp-seal
 - Fixar o cabo ao longo de toda a estrutura com braçadeiras a cada 30–40cm
 - Inspecionar e limpar conector anualmente (início de temporada)
@@ -214,7 +214,7 @@ Uma embarcação a motor visto à frente: luz de tope branca (centro) + verde (b
 
 Luz de tope frequentemente ausente em lanchas pequenas (< 12m), ou instalada em posição incorreta (descentrada, bloqueada). Verificação de conformidade ausente.
 
-### Referência COLREGS / NORMAM-01
+### Referência COLREGS / NORMAM-01 (edição a verificar)
 
 O uso, a altura de instalação e o alcance fotométrico devem ser lidos conforme o porte e a configuração da embarcação. O ponto técnico central é respeitar setor, posicionamento e conjunto correto com luzes de bordo e alcançado.
 
@@ -225,9 +225,9 @@ Para lanchas < 7m, a COLREGS permite alguma simplificação — mas a luz de top
 ## Normas e referências aplicáveis
 
 - **COLREGS Regra 21, 23 e 25** — definição, posicionamento e obrigações
-- **NORMAM-01** — aplicação nacional das COLREGS para embarcações miúdas
+- **NORMAM-01 (edição a verificar)** — aplicação nacional das COLREGS para embarcações miúdas
 - **ISO 16180:2011** — requisitos fotométricos
-- **USCG 33 CFR 183** — homologação americana
+- **USCG 33 CFR (edição a verificar) 183** — homologação americana
 
 ## Destaques para ensino
 
@@ -260,7 +260,7 @@ Deve estar centrada no plano longitudinal. Deslocar para o lado cria arco assim�
 
 **Posso usar um LED de lanterna branca adaptada?**
 
-Não. A fotometria, o arco de emissão e o alcance devem ser conformes à ISO 16180. Lanterna adaptada não garante os 2 milhas de alcance mínimo.
+Não. A fotometria, o arco de emissão e o alcance devem ser conformes à ISO 16180:2011. Lanterna adaptada não garante os 2 milhas de alcance mínimo.
 
 **Qual a diferença entre luz de tope e luz de âncora?**
 

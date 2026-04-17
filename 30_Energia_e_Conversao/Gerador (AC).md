@@ -311,11 +311,11 @@ Feito para "resolver" o problema do solenóide travado. Sem o solenóide, não �
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC Electrical Systems (instalação do gerador, aterramento, GFCI)
-- **ABYC A-33** — Exhaust Systems (sistema de escape molhado, waterlock, retorno de água)
-- **NFPA 302** — Fire Protection for Pleasure and Commercial Motorcraft
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABYC E-11 (2023)** — AC Electrical Systems (instalação do gerador, aterramento, GFCI)
+- **ABYC A-33 (edição a verificar)** — Exhaust Systems (sistema de escape molhado, waterlock, retorno de água)
+- **NFPA 302 (edição a verificar)** — Fire Protection for Pleasure and Commercial Motorcraft
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

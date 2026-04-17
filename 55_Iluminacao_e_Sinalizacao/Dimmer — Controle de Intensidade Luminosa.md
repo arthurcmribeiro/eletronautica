@@ -233,7 +233,7 @@ Para uma lancha com iluminação básica: um dimmer de qualidade para a cabine (
 
 ## Normas e referências aplicáveis
 
-- **ABYC E-11** — Electrical Systems (proteção e bitola)
+- **ABYC E-11 (2023)** — Electrical Systems (proteção e bitola)
 - **IEC 61000** — Emissão EMI (base para filtros de compatibilidade)
 
 ## Destaques para ensino

@@ -281,10 +281,10 @@ Transformador especificado para 60Hz ligado a marina europeia de 50Hz — zumbid
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC Electrical Systems (dimensionamento, proteção, instalação)
+- **ABYC E-11 (2023)** — AC Electrical Systems (dimensionamento, proteção, instalação)
 - **NEMA** — padrões americanos de conectores e tensões
 - **IEC 60076** — transformadores de potência (referência técnica)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 
 ## Como ensinar este tópico
 

@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "DSC — CHAMADA SELETIVA DIGITAL"
 seo_title: "Dsc — Chamada Seletiva Digital"
@@ -129,7 +129,7 @@ Rádios modernos com Micro-C conector recebem posição diretamente do backbone 
 | **Classe D** | Lazer e recreio | Distress + individual + Canal 70 watch |
 | **Classe C** | Legado (raro) | Sem watch automático no C70 |
 | **Classe B** | Comercial menor | Mais funções que D |
-| **Classe A** | Comercial / SOLAS | Funcionalidade completa, GMDSS |
+| **Classe A** | Comercial / SOLAS (edição a verificar) | Funcionalidade completa, GMDSS |
 
 Para embarcações de esporte e recreio: Classe D é o padrão e o suficiente.
 
@@ -212,7 +212,7 @@ Verificação completa do DSC:
 
 - Instalar o VHF sem conectar o GPS (DSC inútil)
 - Não programar o MMSI (DSC inútil)
-- Programar MMSI mas não registrar na Anatel
+- Programar MMSI mas não registrar na ANATEL (edição a verificar)
 - Usar cabo de antena RG-58 em vez de RG-8X (perda de sinal)
 - Inverter TX/RX do NMEA (GPS não chega ao VHF)
 - Instalar a antena VHF próxima à antena de GPS (interferência)
@@ -229,7 +229,7 @@ Verificação completa do DSC:
 
 | Aspecto | Brasil | Internacional |
 | --- | --- | --- |
-| Obrigatoriedade VHF | NORMAM-01 (embarcações ≥8m offshore) | Varies por bandeira |
+| Obrigatoriedade VHF | NORMAM-01 (edição a verificar) (embarcações ≥8m offshore) | Varies por bandeira |
 | MMSI registrado | Maioria não fez | Padrão nos EUA/Europa |
 | GPS integrado ao VHF | Raramente feito por instaladores | Considerado básico |
 | Conhecimento de acionamento DSC | Muito baixo | Maior (treinamento obrigatório) |
@@ -243,9 +243,9 @@ Verificação completa do DSC:
 
 - **ITU-R M.493:** Padrão internacional DSC
 - **ITU-R M.541:** Manutenção de escuta no Canal 70
-- **NORMAM-01/DPC:** Regulamento brasileiro para equipamentos de comunicação
+- **NORMAM-01 (edição a verificar)/DPC:** Regulamento brasileiro para equipamentos de comunicação
 - **GMDSS (Global Maritime Distress and Safety System):** Sistema global onde o DSC está inserido
-- **Anatel:** órgão responsável pelo registro de MMSI no Brasil
+- **ANATEL (edição a verificar):** órgão responsável pelo registro de MMSI no Brasil
 
 ## Como ensinar este tópico
 
@@ -261,7 +261,7 @@ Verificação completa do DSC:
 
 ## Ideias de vídeos
 
-- "Como registrar seu MMSI na Anatel — passo a passo"
+- "Como registrar seu MMSI na ANATEL (edição a verificar) — passo a passo"
 - "Por que seu VHF não vai te salvar se não tiver GPS conectado"
 - "Configurando DSC no VHF: MMSI + integração GPS"
 - "Teste de DSC: o que acontece quando você aperta o botão MAYDAY"
@@ -284,7 +284,7 @@ Sim. Rádios com dual/tri-watch monitoram simultaneamente o Canal 16 e o Canal 7
 
 **Posso registrar o MMSI eu mesmo?**
 
-Sim, diretamente no site da Anatel (gratuito para embarcações de lazer). Em alguns países, associações náuticas também fazem o registro.
+Sim, diretamente no site da ANATEL (edição a verificar) (gratuito para embarcações de lazer). Em alguns países, associações náuticas também fazem o registro.
 
 **Se eu vender minha embarcação, o MMSI vai junto?**
 

@@ -79,7 +79,7 @@ O isolador galvânico é mais barato e mais compacto — útil quando a instala�
 
 **Comum em barcos importados:**
 
-- Isolador galvânico certificado ABYC A-28 instalado no condutor de terra pelo fabricante
+- Isolador galvânico certificado ABYC A-28 (edição a verificar) instalado no condutor de terra pelo fabricante
 - Transformador de isolamento em veleiros de cruzeiro oceânico — independência total de infraestrutura de marina
 - Monitoramento de corrente no terra para detectar falha do isolador
 
@@ -128,7 +128,7 @@ No lado secundário, o projeto precisa definir explicitamente como serão tratad
 **Isolador galvânico (proteção básica):**
 
 - Instalado em série no condutor de terra do shore power, próximo ao inlet
-- Modelo certificado ABYC A-28 com monitor de falha (LED ou alarme)
+- Modelo certificado ABYC A-28 (edição a verificar) com monitor de falha (LED ou alarme)
 - Charles Industries, Promariner, Victron — modelos com teste integrado de continuidade
 
 **Transformador de isolamento fixo (proteção completa):**
@@ -149,7 +149,7 @@ No lado secundário, o projeto precisa definir explicitamente como serão tratad
 
 **Isoladores galvânicos:**
 
-- **Promariner (ProSafe)** — americana, certificada ABYC A-28, com LED de status e monitor de corrente
+- **Promariner (ProSafe)** — americana, certificada ABYC A-28 (edição a verificar), com LED de status e monitor de corrente
 - **Charles Industries (Guardian)** — referência americana, certificada, modelos com alarme integrado
 - **Victron Energy (Galvanic Isolator VGI)** — qualidade premium, com monitoramento via GX
 - **Yandina** — australiana, boa qualidade, menos encontrada no Brasil
@@ -233,7 +233,7 @@ Valor elevado pode indicar fuga real, falha no cais ou limitação do próprio c
 
 ## Boas práticas profissionais
 
-- Instalar no mínimo um isolador galvânico certificado ABYC A-28 em todo barco com shore power
+- Instalar no mínimo um isolador galvânico certificado ABYC A-28 (edição a verificar) em todo barco com shore power
 - Preferir transformador de isolamento em marinas com infraestrutura duvidosa (maioria das marinas brasileiras)
 - Incluir monitor de corrente no terra junto com o isolador galvânico — detecta falha do componente
 - Dimensionar o transformador de isolamento para 125% da carga máxima simultânea
@@ -277,7 +277,7 @@ O isolador vai no terra — apenas no terra. No neutro ou na fase, bloqueia a co
 
 "Com o transformador, não preciso do GFCI." Errado. O transformador elimina a conexão com a marina — mas falhas de isolação internas do barco continuam acontecendo. O GFCI protege contra falhas internas.
 
-**Instalar isolador galvânico sem certificação ABYC A-28:**
+**Instalar isolador galvânico sem certificação ABYC A-28 (edição a verificar):**
 
 Isoladores sem certificação podem ter diodos de especificação inferior, sem capacidade de suportar correntes de falha de alta amplitude — potencial risco de choque.
 
@@ -296,7 +296,7 @@ O LED vermelho indica que o isolador está com falha — os diodos estão em cur
 
 ## Brasil x Internacional
 
-| Aspecto | Brasil | Internacional (ABYC A-28) |
+| Aspecto | Brasil | Internacional (ABYC A-28, edição a verificar) |
 | --- | --- | --- |
 | Isolador galvânico instalado | Raramente | Padrão em novos barcos americanos |
 | Transformador de isolamento | Apenas em premium | Comum em cruzeiros oceânicos |
@@ -308,11 +308,11 @@ O LED vermelho indica que o isolador está com falha — os diodos estão em cur
 
 ## Normas aplicáveis
 
-- **ABYC A-28** — Galvanic Isolators (especificação e certificação de isoladores galvânicos)
-- **ABYC E-11** — AC Electrical Systems (terra, GFCI, transformador de isolamento)
-- **NFPA 303** — Fire Protection for Marinas
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **ISO 13297** — Electrical systems — Alternating current installations
+- **ABYC A-28 (edição a verificar)** — Galvanic Isolators (especificação e certificação de isoladores galvânicos)
+- **ABYC E-11 (2023)** — AC Electrical Systems (terra, GFCI, transformador de isolamento)
+- **NFPA 303 (edição a verificar)** — Fire Protection for Marinas
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ISO 13297:2020** — Electrical systems — Alternating current installations
 
 ## Como ensinar este tópico
 
@@ -352,7 +352,7 @@ Não completamente. O isolador galvânico atua sobre a circulação de potenciai
 
 **O transformador de isolamento protege contra raio?**
 
-Não especificamente. O transformador reduz a probabilidade de dano por raio na marina chegar ao barco via shore power, mas não substitui um sistema de para-raios dedicado (ABYC A-31).
+Não especificamente. O transformador reduz a probabilidade de dano por raio na marina chegar ao barco via shore power, mas não substitui um sistema de para-raios dedicado (ABYC A-31, edição a verificar).
 
 **Posso instalar o isolador galvânico eu mesmo?**
 

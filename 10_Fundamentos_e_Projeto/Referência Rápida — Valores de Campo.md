@@ -3,8 +3,14 @@ title: "Referência Rápida — Valores de Campo"
 note_type: "reference"
 domain: "10_Fundamentos_e_Projeto"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-16"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ISO 13297:2020"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://abycinc.org/standards/"
@@ -60,13 +66,19 @@ related_notes:
 
 ## Queda de tensão — referência rápida
 
+Base normativa: **ABYC E-11 (2023)** — cláusula de queda de tensão em sistemas DC de bordo. ISO 13297:2020 usa critério compatível. Valores típicos:
+
 | Circuito | Queda máxima de referência |
 | --- | --- |
 | Iluminação, instrumentação e circuitos críticos | `3%` |
 | Circuitos de conforto e cargas menos críticas | `10%` |
 | Partida do motor | verificar projeto e fabricante; usar como meta conservadora `4%` para o circuito completo |
 
+> Em 12 V: `3%` = `0,36 V`; em 24 V: `0,72 V`; em 48 V: `1,44 V`. Perda percentual é o que importa, não o valor absoluto.
+
 ## Correntes típicas — sistema 12 V
+
+> Valores para **12 V DC**. Para **24 V** dividir por 2; para **48 V** dividir por 4 (potência constante, corrente inversamente proporcional à tensão).
 
 | Equipamento | Faixa típica |
 | --- | --- |
@@ -81,6 +93,8 @@ related_notes:
 | Arranque do motor | `200–600 A` |
 
 ## Cabos DC — referência de conversa rápida
+
+> Seções **conservadoras para queda ≤ 3% em sistema 12 V** (circuitos críticos). Para cargas não-críticas (até 10%) e tensões maiores (24 V / 48 V), seções podem ser menores — usar [[Dimensionamento de Cabos DC — Cálculo Prático]] para valor exato.
 
 | Corrente máxima | Comprimento total ida + volta | Faixa inicial de seção |
 | --- | --- | --- |

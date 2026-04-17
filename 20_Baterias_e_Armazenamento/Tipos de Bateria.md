@@ -355,13 +355,13 @@ Banco "desaparece" — tensão sobe ao remover carga mas não fornece corrente. 
 
 Bateria automotiva como banco de serviço é extremamente difundida, especialmente em embarcações menores. AGM começa a ser padrão apenas em instalações mais cuidadosas ou em embarcações importadas. Ventilação de compartimento raramente obedece a critérios formais.
 
-**Referência ABYC E-10:**
+**Referência ABYC E-10 (2023):**
 
 Define separação formal de bancos (start / house / emergency), exige baterias marinhas certificadas, compartimento ventilado para FLA com saída exterior, fusível próximo ao terminal positivo, fixação mecânica adequada.
 
-**Referência ISO 10133:**
+**Referência ISO 13297:2020** *(sucede a ISO 10133, retirada):*
 
-Para embarcações menores — aborda proteção do circuito principal, bitolamento de cabos, instalação de baterias e proteção contra curto-circuito.
+Para pequenas embarcações — aborda proteção do circuito principal, bitolamento de cabos, instalação de baterias e proteção contra curto-circuito em sistemas AC e DC. Ver nota mestre [[Normas e Regulamentações — Abyc Iso e Brasil]] para contexto da migração.
 
 **Ponto de conflito:**
 
@@ -375,8 +375,8 @@ Adotar os princípios funcionais da ABYC — separação de bancos, fixação, v
 
 | Referência | O que orienta | Relevância prática | Cuidado no Brasil |
 | --- | --- | --- | --- |
-| ABYC E-10 | Sistemas de bateria em embarcações | Separação de bancos, ventilação, fixação, proteção | Contexto americano — adaptar para realidade local |
-| ISO 10133 | Instalações elétricas DC em embarcações pequenas | Proteção, bitolamento, instalação | Embarcações menores: referência mais aplicável |
+| ABYC E-10 (2023) | Sistemas de bateria em embarcações | Separação de bancos, ventilação, fixação, proteção | Contexto americano — adaptar para realidade local |
+| ISO 13297:2020 | Pequenas embarcações — instalações AC e DC | Proteção, bitolamento, instalação | Sucede a ISO 10133 (retirada); referência viva aplicável |
 | Victron Energy (documentação técnica) | Parâmetros de produto e integração | Muito bem documentado — usar como referência prática | Produto premium — adaptar para outros fabricantes |
 | Datasheets do fabricante | Perfis específicos de carga e descarga | Essencial para configurar carregador e alternador | Sempre consultar antes de qualquer instalação |
 

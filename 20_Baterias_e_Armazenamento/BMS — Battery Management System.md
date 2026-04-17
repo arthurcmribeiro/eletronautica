@@ -205,9 +205,9 @@ BMS sem comunicação desconecta abruptamente. Inversor em carregamento pode sof
 
 ## Normas aplicáveis
 
-- **IEC 62619** — Secondary cells and batteries for use in industrial applications — Safety requirements (inclui BMS)
+- **IEC 62619 (edição a verificar)** — Secondary cells and batteries for use in industrial applications — Safety requirements (inclui BMS)
 - **UN38.3** — transporte de baterias de lítio (para importação/exportação)
-- **ABYC E-11** — referência geral para sistemas elétricos DC
+- **ABYC E-11 (2023)** — referência geral para sistemas elétricos DC
 - **Especificações do fabricante** — parâmetros de configuração por tipo de célula
 
 ## Como ensinar este tópico

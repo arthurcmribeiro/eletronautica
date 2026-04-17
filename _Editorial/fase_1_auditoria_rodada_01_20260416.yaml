@@ -1,0 +1,475 @@
+# ============================================================================
+# FASE 1 — AUDITORIA DE NOTAS — RODADA 01
+# ============================================================================
+# Data: 2026-04-16
+# Modelo: Opus 4.6/4.7
+# Escopo desta rodada: 3 notas do Thread 1-A (Arcabouço Normativo)
+# Contexto: Executada após correções pré-Fase 1 (ISO 10133) e criação de
+#           registro_normas.yaml + convencao_citacao_normativa.md.
+# ============================================================================
+
+meta:
+  fase: "1"
+  rodada: "01"
+  data: "2026-04-16"
+  notas_auditadas: 3
+  thread: "1-A Arcabouço Normativo (parcial)"
+  modelo: "claude-opus-4.7"
+  pre_requisitos_cumpridos:
+    - "ISO 10133 corrigida em Bonding, Bancos de Bateria, Tipos de Bateria"
+    - "_Editorial/registro_normas.yaml criado (fonte única de verdade)"
+    - "_Editorial/convencao_citacao_normativa.md criado (política vigente)"
+  taxonomia_legenda:
+    REG-BR: "peso regulatório Brasil"
+    ENG:    "engenharia/projeto"
+    FAB:    "fabricante/produto"
+    CAMPO:  "prática de campo/diagnóstico"
+    DIDAT:  "valor didático"
+  vereditos:
+    aprovada: "sem ressalvas bloqueantes; merge em produção direto"
+    revisao_menor: "correções pontuais; não muda estrutura"
+    revisao_maior: "reordenação/expansão exige esforço > 1h"
+    refactor: "nota precisa reescrita substancial"
+
+# ============================================================================
+# NOTA 01 — Normas e Regulamentações — Abyc Iso e Brasil
+# ============================================================================
+- nota_id: "10_FUND_NORMAS"
+  caminho: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+  titulo: "Normas e Regulamentações — Abyc Iso e Brasil"
+  note_type: "reference"
+  domain: "10_Fundamentos_e_Projeto"
+  linhas: 280
+  papel_no_vault: "Nota mestre normativa. Referência de desempate para todas as demais notas que citam normas."
+
+  frontmatter_review:
+    campos_obrigatorios_ok: true
+    reviewed_on: "2026-04-13"
+    review_jurisdiction: "Brasil"
+    source_urls_count: 5
+    conformidade_convencao: "parcial"
+    gaps:
+      - "Falta novo campo proposto 'normas_citadas' (ver convencao_citacao_normativa.md)."
+      - "review_jurisdiction deveria ser lista [Brasil, internacional] — a nota cobre ambos."
+      - "source_urls inclui link para ISO 10133 (retirada) e ISO 13297, ok como contexto; falta link direto NORMAM-211 atual e ABYC E-11."
+
+  conteudo_tecnico:
+    forca: |
+      Altamente forte. Faz o trabalho essencial de separar 4 camadas (regulatória BR, projeto
+      náutico, baixa tensão geral, norma de produto) que o público profissional tende a
+      amalgamar. Tabelas comparativas ABYC vs ISO vs Brasil são o melhor material do vault
+      nesse recorte.
+    precisao_cientifica: "alta"
+    profundidade: "adequada para nota-mestre; ramificações ficam em notas filhas (correto)"
+    gaps_tecnicos:
+      - gap: "Tabela 'Identificação de condutores' usa 'preto/vermelho' como convenção ABYC — simplificação excessiva (ABYC E-11 cap. 11 tem convenção cromática detalhada por função DC/AC)."
+        impacto: "baixo"
+        acao: "Adicionar linha explicando que cores detalhadas variam por circuito (DC main, DC accessory, AC hot) e remeter a ABYC E-11 (2023) §11.16."
+      - gap: "Seção sobre shore power no Brasil menciona '220/380' e '127/220' mas não cita explicitamente que `220V fase-fase sem neutro` é o caso mais perigoso para barco configurado L+N+PE."
+        impacto: "médio"
+        acao: "Expandir em 1 parágrafo conectando com [[Isolador Galvânico / Transformador de Isolamento]]."
+
+  conteudo_normativo:
+    normas_citadas:
+      - codigo: "NORMAM-211"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: "Adicionar '(2022)' ou edição atual conforme DPC."
+      - codigo: "NORMAM-02"
+        edicao_ano_presente: false
+        status_real: "substituida por NORMAM-211"
+        acao: "OK — a nota já explica a transição. Manter citação como histórico."
+      - codigo: "ABYC E-11"
+        edicao_ano_presente: false
+        status_real: "vigente (2023)"
+        acao: "Adicionar edição '(2023)' nas 4 menções na nota."
+      - codigo: "ABYC E-2"
+        edicao_ano_presente: false
+        status_real: "vigente (2020)"
+        acao: "Adicionar edição."
+      - codigo: "ABYC E-10"
+        edicao_ano_presente: false
+        status_real: "vigente (2023)"
+        acao: "Adicionar edição."
+      - codigo: "ABYC E-13"
+        edicao_ano_presente: false
+        status_real: "vigente (2022)"
+        acao: "Adicionar edição."
+      - codigo: "ABYC A-28"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: "Texto atual diz 'galvanic isolators' — OK; adicionar ano."
+      - codigo: "ABYC A-31"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: |
+          ATENÇÃO: A nota lista A-31 como 'battery chargers and inverter/chargers'.
+          Isso é ERRO FACTUAL. ABYC A-31 é 'Lightning Protection'. O padrão de
+          carregadores é ABYC A-20 / A-25 (conforme versão). Corrigir imediatamente.
+        severidade: "P0 — erro factual em nota mestre"
+      - codigo: "ISO 13297"
+        edicao_ano_presente: false
+        status_real: "vigente (2020)"
+        acao: "Adicionar ':2020' em todas as menções."
+      - codigo: "ISO 10133"
+        edicao_ano_presente: false
+        status_real: "substituida"
+        acao: "Nota já trata como retirada — OK. É o único arquivo onde citação histórica é autorizada (ver convencao)."
+      - codigo: "ABNT NBR 5410"
+        edicao_ano_presente: false
+        status_real: "vigente (2004 + emendas)"
+        acao: "Adicionar '(2004, Emenda 1:2008)'."
+      - codigo: "IEC 61008 / 61009"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: "Adicionar edição vigente; atualmente 61008-1:2010 + A2:2013."
+    conformidade_convencao: 0.0
+    observacao: "0 de 12 citações seguem a convenção de edição/cláusula. Estado esperado para nota legada, mas é a nota ANCORA — deve ser a primeira a ser padronizada."
+
+  conteudo_didatico:
+    forca_didatica: "alta"
+    estrutura: "progressão 4 camadas → ecossistema BR → ecossistema internacional → comparação → BR mal utilizado → vademecum → FAQ"
+    exemplos: "exemplo concreto de transposição mal feita (L+N+PE em marina 220 fase-fase) é ouro didático"
+    gaps_didaticos:
+      - "FAQ final é forte mas não tem checkpoint de aplicação (ex.: 'qual norma uso para dimensionar fusível de banco?')"
+      - "Falta quadro 'primeiros 30 minutos' para aluno iniciante — qual é a sequência de leitura recomendada"
+
+  sinais_de_risco:
+    P0:
+      - "ABYC A-31 incorretamente rotulada como 'battery chargers and inverter/chargers'. É Lightning Protection. Corrigir agora."
+    P1:
+      - "0 de 12 citações com edição — nota âncora deve ser padronizada primeiro."
+      - "review_jurisdiction: 'Brasil' é insuficiente para uma nota que compara 3 jurisdições."
+    P2:
+      - "Falta referência explícita à NORMAM-211 item/capítulo específico sobre requisitos elétricos (se houver)."
+      - "Falta nota de rodapé sobre ABYC ser paga (USD) — aluno brasileiro não tem acesso direto."
+
+  contradicoes_inter_notas:
+    - contradicao: "Se A-31 for corrigida aqui para 'Lightning Protection', confere com citação em Bonding.md que já usa A-31 nesse sentido."
+      notas_afetadas: ["40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"]
+      acao: "Ver bloco NOTA 02 abaixo — consistência será mantida após correção."
+
+  acoes_recomendadas:
+    P0_imediata:
+      - "Corrigir linha 'ABYC A-31 | battery chargers and inverter/chargers' → 'ABYC A-31 | Lightning Protection'."
+      - "Adicionar 'ABYC A-20 (charger equipment standards)' ou 'ABYC E-11 §11.14' na linha de carregadores do Vademecum."
+    P1_esta_semana:
+      - "Padronizar todas as 12 citações conforme convencao_citacao_normativa.md (edição/ano)."
+      - "Atualizar frontmatter: review_jurisdiction: [Brasil, internacional]."
+      - "Adicionar campo normas_citadas no frontmatter."
+      - "Adicionar 1 parágrafo de risco no caso '220V fase-fase sem neutro' no shore power BR."
+    P2_futuro:
+      - "Criar nota filha [[NORMAM-211 — guia prático para eletricista]] para destrinchar itens específicos."
+      - "Adicionar seção 'Acesso às normas' (ABYC compra, ISO preview, ABNT consulta, DPC aberto)."
+
+  taxonomia:
+    REG-BR: "alta"
+    ENG: "alta"
+    FAB: "baixa"
+    CAMPO: "média"
+    DIDAT: "alta"
+
+  veredito: "revisao_menor"
+  veredito_justificativa: |
+    Apesar do erro P0 em A-31, a nota não precisa de reescrita — 1 linha de correção,
+    padronização de citações e 2 parágrafos de expansão são suficientes. Estrutura,
+    precisão conceitual e valor didático são sólidos.
+
+  tempo_estimado_correcao: "1h30"
+
+# ============================================================================
+# NOTA 02 — Bonding — Sistema de Interligação de Massas
+# ============================================================================
+- nota_id: "40_DISTR_BONDING"
+  caminho: "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+  titulo: "Bonding — Sistema de Interligação de Massas"
+  note_type: "system"
+  domain: "40_Distribuicao_Protecao_e_Aterramento"
+  linhas_aprox: 300
+  papel_no_vault: "Nota central de sistema de aterramento/equipotencialização. Prescritiva para instalação de campo."
+
+  frontmatter_review:
+    campos_obrigatorios_ok: true
+    reviewed_on: "2026-04-14"
+    review_jurisdiction: "Brasil"
+    source_urls_count: 4
+    conformidade_convencao: "parcial"
+    gaps:
+      - "Falta campo normas_citadas."
+      - "source_urls contém link DPC e ABYC mas não ABYC E-2 específica (norma central do tema)."
+
+  conteudo_tecnico:
+    forca: |
+      Excelente separação conceitual entre bonding / terra AC / negativo DC — este é
+      justamente o erro mais comum no campo brasileiro e a nota ataca isso de frente.
+      Inclui casos práticos por tipo de casco (fibra, alumínio, pararaios).
+    precisao_cientifica: "alta após correção ISO 10133 de 2026-04-16"
+    profundidade: "adequada para nota de sistema; cálculos detalhados ficam em notas filhas"
+    gaps_tecnicos:
+      - gap: "Afirma 'Bitola do cabo de bonding: definida pela norma aplicável' sem número de partida."
+        impacto: "médio"
+        acao: "Adicionar: 'ABYC E-11 (2023) recomenda mínimo AWG 8 (≈8 mm²) para bonding principal em cascos não-metálicos; ramificações conforme projeto'."
+      - gap: "Não menciona medição de continuidade do bonding como procedimento de comissionamento."
+        impacto: "médio"
+        acao: "Adicionar seção: teste de continuidade com ohmímetro de baixa resistência, meta típica < 1 Ω entre barramento e qualquer ponto."
+      - gap: "Ânodo não está conectado ao conceito de 'potencial de proteção' medido (Ag/AgCl: -0.85V para aço; -1.0V para alumínio)."
+        impacto: "alto — é o número que o técnico de campo precisa"
+        acao: "Adicionar tabela de potenciais de proteção por material, com fonte explícita."
+
+  conteudo_normativo:
+    normas_citadas:
+      - codigo: "ABYC E-2"
+        edicao_ano_presente: false
+        status_real: "vigente (2020)"
+        acao: "Adicionar edição."
+      - codigo: "ABYC E-11"
+        edicao_ano_presente: false
+        status_real: "vigente (2023)"
+        acao: "Adicionar edição."
+      - codigo: "ABYC A-31"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: "OK — usa corretamente como 'Lightning Protection'. Adicionar edição."
+      - codigo: "ABNT NBR 5410"
+        edicao_ano_presente: false
+        status_real: "vigente"
+        acao: "Adicionar '(2004, Emenda 1:2008)'."
+      - codigo: "ISO 13297:2020"
+        edicao_ano_presente: true
+        status_real: "vigente"
+        acao: "OK após correção de 2026-04-16."
+      - codigo: "ISO 10133"
+        edicao_ano_presente: false
+        status_real: "substituida"
+        acao: "OK após correção — agora tratada como histórica com remissão à nota mestre."
+    conformidade_convencao: 0.17
+    observacao: "1 de 6 citações com edição (ISO 13297:2020). Melhoria significativa após rodada de correção de hoje, mas ainda P1."
+
+  conteudo_didatico:
+    forca_didatica: "alta"
+    estrutura: "definição → função → prática → fundamentos → caracteristicas → configurações → marcas → norma → ensino → vídeos"
+    exemplos: "analogia 'vasos comunicantes' + 'sem bonding cada metal corrói sozinho' são didaticamente fortes"
+    gaps_didaticos:
+      - "Falta caso de falha real — 'barco X passou 2 meses parado e perdeu eixo de bronze porque bonding não estava conectado ao zinc externo'."
+      - "Sequência recomendada (1-6) é boa mas não tem duração estimada por etapa."
+
+  sinais_de_risco:
+    P0: []
+    P1:
+      - "Correção ISO 10133 feita hoje; validar que nenhuma outra nota filha reintroduziu a citação antiga."
+      - "Gap de número de bitola (AWG 8 / 8 mm²) em nota prescritiva de campo é risco real."
+    P2:
+      - "Marcas citadas (Blue Sea, Ancor, Martyr, Perko, Shurlock) — verificar distribuição Brasil atualizada."
+
+  contradicoes_inter_notas:
+    - contradicao: "Potencial ideal de proteção não é citado aqui mas é na nota [[Ânodo]]. Consistência a confirmar."
+      notas_afetadas: ["40_Distribuicao_Protecao_e_Aterramento/Ânodo.md"]
+      acao: "Cross-check na rodada 02 quando [[Ânodo]] for auditada."
+    - contradicao: "Nota mestre Normas cita ABYC A-31 erradamente como 'chargers'; aqui é citada corretamente como 'Lightning Protection'."
+      notas_afetadas: ["10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"]
+      acao: "Corrigir nota mestre (ação P0 registrada em NOTA 01)."
+
+  acoes_recomendadas:
+    P0_imediata: []
+    P1_esta_semana:
+      - "Adicionar bitola de partida AWG 8 / 8 mm² com fonte ABYC E-11 §11.16 (ou cláusula correta)."
+      - "Padronizar 5 citações restantes conforme convencao."
+      - "Adicionar campo normas_citadas no frontmatter."
+      - "Adicionar tabela de potenciais de proteção Ag/AgCl por material."
+    P2_futuro:
+      - "Adicionar seção 'comissionamento e teste de continuidade'."
+      - "Adicionar 1 caso de falha real para didática."
+
+  taxonomia:
+    REG-BR: "média"
+    ENG: "alta"
+    FAB: "média"
+    CAMPO: "alta"
+    DIDAT: "alta"
+
+  veredito: "revisao_menor"
+  veredito_justificativa: |
+    Nota já era forte; correção ISO 10133 de hoje a deixa sem erros factuais bloqueantes.
+    Gaps restantes (bitola, potencial de proteção, comissionamento) são aditivos que
+    ENRIQUECEM sem reescrever. Valor de campo altíssimo.
+
+  tempo_estimado_correcao: "1h45"
+
+# ============================================================================
+# NOTA 03 — Referência Rápida — Valores de Campo
+# ============================================================================
+- nota_id: "10_FUND_REF_RAPIDA"
+  caminho: "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md"
+  titulo: "Referência Rápida — Valores de Campo"
+  note_type: "reference"
+  domain: "10_Fundamentos_e_Projeto"
+  linhas: 120
+  papel_no_vault: "Cheat-sheet de campo. Alta frequência de consulta esperada (público: eletricista em embarcação)."
+  observacao_fase0: |
+    ERRATA: A Fase 0 v2 referenciou essa nota como 'Referência Rápida — Cálculos e
+    Normas'. O nome real é 'Referência Rápida — Valores de Campo'. Ajustar plano.
+
+  frontmatter_review:
+    campos_obrigatorios_ok: true
+    reviewed_on: "2026-04-14"
+    review_jurisdiction: "Brasil"
+    source_urls_count: 3
+    conformidade_convencao: "parcial"
+    gaps:
+      - "Nota é de referência numérica mas source_urls não aponta para ABYC E-11 nem ISO 13297 específicas — aponta para 'standards' (página raiz)."
+      - "Falta campo normas_citadas."
+      - "Falta campo 'ultima_verificacao_numerica' — valores de campo envelhecem."
+
+  conteudo_tecnico:
+    forca: |
+      Nota é enxuta e operacional, que é o PROPÓSITO. Faixas realistas para o mercado
+      brasileiro. Diferencia bem chumbo-ácido vs LiFePO4 em tensões. Avisa sobre
+      queda de tensão 3% crítico vs 10% conforto (alinhado com ABYC e ISO 13297).
+    precisao_cientifica: "boa com ressalvas"
+    profundidade: "proposital — é cheat-sheet, não deve aprofundar"
+    gaps_tecnicos:
+      - gap: "Tensão chumbo-ácido 12,6–12,8V 'cheio' é razoável mas não distingue inundada vs AGM vs GEL (varia 0,1–0,3V)."
+        impacto: "baixo"
+        acao: "Adicionar nota de rodapé 'varia por química; consultar datasheet'."
+      - gap: "Tabela de cabos DC não explicita se as seções são para queda 3% ou 10%."
+        impacto: "alto — é a variável crítica do dimensionamento"
+        acao: |
+          Adicionar coluna ou legenda: 'Seções conservadoras para queda ≤3% (circuitos
+          críticos). Para cargas não-críticas (até 10%), seções podem ser menores — usar
+          [[Dimensionamento de Cabos DC — Cálculo Prático]].'
+      - gap: "Correntes típicas (ex.: inversor 1000W ≈ 90A) não explicita tensão DC (12V)."
+        impacto: "médio"
+        acao: "Explicitar '1000W @ 12V DC, rendimento ~90%' para cada estimativa."
+      - gap: "Não cobre sistema 24V nem 48V (cada vez mais comum em lancha premium e LiFePO4)."
+        impacto: "médio"
+        acao: "Adicionar mini-tabela 24V e 48V ou ao menos fatores de conversão."
+      - gap: "Faixa AC 'monofásica 127/220V' não trata explicitamente split-phase 120/240 de barcos importados."
+        impacto: "médio"
+        acao: "Adicionar linha explicando cenário de barco importado com split-phase em marina BR."
+
+  conteudo_normativo:
+    normas_citadas:
+      - codigo: "(implícito) ABYC E-11 para queda 3%"
+        edicao_ano_presente: false
+        status_real: "vigente (2023)"
+        acao: "Tornar explícita: 'Limite 3% queda em circuitos críticos — ref. ABYC E-11 (2023) §11.6.4.'"
+      - codigo: "(implícito) ISO 13297 para queda"
+        edicao_ano_presente: false
+        acao: "Explicitar se a referência é ABYC ou ISO (valores são parecidos mas não idênticos)."
+    conformidade_convencao: 0.0
+    observacao: "Nota é 100% de valores numéricos sem citação normativa explícita. Paradoxal: os números VÊM de normas mas a norma não aparece. Risco didático grande — aluno memoriza número sem saber a origem."
+
+  conteudo_didatico:
+    forca_didatica: "alta para triagem, média para aprendizado"
+    estrutura: "tensões DC → tensões AC → queda → correntes → cabos → proteção → cautelas"
+    gaps_didaticos:
+      - "Excelente bloco 'Cautelas importantes' no final — mantém nota honesta."
+      - "Falta diagrama de como usar a tabela em uma inspeção de 15 min."
+
+  sinais_de_risco:
+    P0: []
+    P1:
+      - "Tabela de cabos DC sem explicitar queda-base é risco alto em mãos de eletricista iniciante."
+      - "Correntes em amp sem tensão base podem confundir em sistema 24V/48V."
+    P2:
+      - "Valores envelhecem (equipamentos mudam consumo) — falta política de revisão periódica."
+
+  contradicoes_inter_notas:
+    - contradicao: "Precisa cruzar com [[Dimensionamento de Cabos DC — Cálculo Prático]] (Thread 1-B) para verificar se os valores da tabela batem com as fórmulas da nota de cálculo."
+      notas_afetadas: ["10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"]
+      acao: "Validar na auditoria do Thread 1-B."
+
+  acoes_recomendadas:
+    P0_imediata: []
+    P1_esta_semana:
+      - "Adicionar legenda na tabela de cabos especificando 'queda ≤3%'."
+      - "Explicitar tensão DC base (12V) em cada corrente típica, ou adicionar fator 2x para 24V / 4x para 48V."
+      - "Adicionar citação explícita ABYC E-11 (2023) §11.6.4 como origem dos 3%."
+      - "Adicionar campo normas_citadas no frontmatter."
+    P2_futuro:
+      - "Mini-tabela 24V / 48V."
+      - "Linha sobre split-phase 120/240V de barco importado."
+      - "Diagrama 'inspeção de 15 minutos' integrando esta tabela com [[MOC — Diagnóstico e Manutenção]]."
+
+  taxonomia:
+    REG-BR: "baixa"
+    ENG: "média"
+    FAB: "baixa"
+    CAMPO: "alta"
+    DIDAT: "alta"
+
+  veredito: "revisao_menor"
+  veredito_justificativa: |
+    Nota cumpre propósito de cheat-sheet. Gaps são aditivos, não corretivos.
+    Principal risco é didático (números sem norma explícita), não factual.
+
+  tempo_estimado_correcao: "1h15"
+
+# ============================================================================
+# CONSOLIDADO DA RODADA 01
+# ============================================================================
+consolidado:
+  notas_auditadas: 3
+  vereditos:
+    aprovada: 0
+    revisao_menor: 3
+    revisao_maior: 0
+    refactor: 0
+
+  achados_P0: 1
+  achados_P1: 14
+  achados_P2: 11
+
+  tempo_total_correcao_estimado: "4h30"
+
+  achado_critico_unico_rodada:
+    titulo: "ABYC A-31 incorretamente rotulada como 'battery chargers' na nota mestre"
+    localizacao: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md, tabela 'ABYC' e Vademecum"
+    impacto: |
+      Nota âncora com erro factual propaga para qualquer consulta futura e qualquer
+      importação para Base44. Corrigir antes de qualquer outra coisa no próximo ciclo.
+    acao: "Corrigir já na rodada 02 (primeira ação)."
+
+  padrao_sistemico_detectado:
+    gap_de_edicao:
+      valor: "21 de 23 citações normativas sem edição/cláusula nas 3 notas (91%)"
+      alinhamento_fase_0: "Confirma o gap de 95% identificado na Fase 0."
+      acao: "Padronização é inviável mão-a-mão em 62 notas. Propor script auxiliar (ver ideia adicional abaixo)."
+
+  ideia_adicional_emergente_da_rodada:
+    titulo: "Script de padronização assistida de citações normativas"
+    descricao: |
+      Criar scripts/standardize_citations.py (NOVO, não augmenta validate_vault.py):
+      - Lê registro_normas.yaml
+      - Para cada ocorrência de 'ABYC E-11' sem edição, sugere 'ABYC E-11 (2023)'
+      - Gera diff patch para revisão humana (não aplica automaticamente)
+      - Roda em todas as 62 notas de uma vez
+      Estimativa: 3h implementação + 2h revisão de diffs ≈ 5h vs 40h+ de padronização manual.
+    prioridade: "P1 — habilitador da Fase 1 em escala"
+
+  consistencia_entre_notas:
+    validado:
+      - "Bonding usa ABYC A-31 corretamente como Lightning Protection — contradiz nota mestre."
+      - "ISO 10133 agora 100% alinhada: Bonding + Bancos + Tipos corrigidas, mestre explica transição."
+    pendente_validar_em_proximas_rodadas:
+      - "Ânodo × Bonding (potencial de proteção Ag/AgCl)."
+      - "Referência Rápida × Dimensionamento de Cabos DC (fórmulas vs tabela)."
+      - "Normas mestre × Projeto Elétrico Passo-a-Passo (terminologia sistema vs produto)."
+
+  proximas_rodadas:
+    rodada_02_sugerida:
+      thread: "1-A (conclusão) + 1-D"
+      notas:
+        - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md (CORRIGIR A-31 antes)"
+        - "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+        - "10_Fundamentos_e_Projeto/Fase e Neutro.md"
+        - "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+        - "40_Distribuicao_Protecao_e_Aterramento/Ânodo.md (cross-check com Bonding)"
+      tempo_estimado: "7h"
+    rodada_03_sugerida:
+      thread: "1-B (Cálculos Tier-1)"
+      notas:
+        - "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+        - "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+        - "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md (re-check pós-cálculos)"
+      tempo_estimado: "6h"

@@ -257,10 +257,10 @@ Se o componente atua somente no condutor de proteção e os condutores ativos n�
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: proteção diferencial, aterramento, shore power
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: proteção diferencial, aterramento, shore power
 - **IEC 61008** — Residual current operated circuit-breakers (RCCBs): norma de produto do DR
 - **IEC 61009** — Residual current operated circuit-breakers with overcurrent protection (RCBOs)
-- **ISO 13297** — Electrical systems on recreational craft
+- **ISO 13297:2020** — Electrical systems on recreational craft
 - **NBR 5410** — Instalações elétricas de baixa tensão: referência complementar para proteção diferencial em baixa tensão
 - **Documentação do fabricante do DR / RCBO aplicado** — obrigatória para classe, curva, sensibilidade e ensaio corretos
 

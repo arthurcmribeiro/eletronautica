@@ -338,11 +338,11 @@ Etiquetar cada bateria do banco com número e data de instalação. Etiquetar ca
 
 Banco único sem separação partida/serviço é a norma em embarcações menores. Dimensionamento feito empiricamente ("coube dois, então dois"). Ausência de monitor de banco na grande maioria das instalações. Fusível de banco ausente em ~70% das instalações observadas em marinas.
 
-**Referência ABYC E-10:**
+**Referência ABYC E-10 (2023):**
 
 Exige fusível de banco no máximo a 72 polegadas (versões antigas) ou 18 polegadas (versões mais recentes) do terminal positivo. Define que o banco deve ser adequado para a demanda real da embarcação. Requer fixação que resista a 1G de aceleração lateral.
 
-**Referência ABYC E-11 (sistemas AC):**
+**Referência ABYC E-11 (2023) (sistemas AC):**
 
 Para embarcações com sistema AC, complementa E-10 na definição de proteção e interação entre sistemas.
 
@@ -358,8 +358,8 @@ Adotar os princípios técnicos da ABYC — fusível de banco, dimensionamento p
 
 | Referência | O que orienta | Aplicação prática |
 | --- | --- | --- |
-| ABYC E-10 | Sistemas de bateria — separação, proteção, fixação | Fusível de banco, separação partida/serviço, ventilação |
-| ISO 10133 | Instalações elétricas DC em embarcações menores | Proteção, bitolamento, instalação de banco |
+| ABYC E-10 (2023) | Sistemas de bateria — separação, proteção, fixação | Fusível de banco, separação partida/serviço, ventilação |
+| ISO 13297:2020 | Pequenas embarcações — instalações AC e DC | Proteção, bitolamento, instalação de banco (sucede a ISO 10133, retirada) |
 | Victron Energy — application notes | Dimensionamento, integração, boas práticas | Documento prático de alta qualidade para bancos AGM e LiFePO4 |
 | Trojan Battery — tech specs | Parâmetros de ciclo profundo | Referência útil para dimensionamento e condições de carga |
 

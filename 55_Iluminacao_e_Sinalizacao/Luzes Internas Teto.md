@@ -140,7 +140,7 @@ No mercado local ainda aparece muito retrofit feito só pelo preço da lâmpada.
 
 ## Normas e referências aplicáveis
 
-- **ABYC E-11 / normas equivalentes aplicáveis** — verificar requisitos de instalação elétrica de baixa tensão.
+- **ABYC E-11 (2023) / normas equivalentes aplicáveis** — verificar requisitos de instalação elétrica de baixa tensão.
 - **IEC 60529** — referência para grau de proteção IP.
 - **Documentação do fabricante** — temperatura ambiente, EMC, compatibilidade com dimmer e ventilação.
 

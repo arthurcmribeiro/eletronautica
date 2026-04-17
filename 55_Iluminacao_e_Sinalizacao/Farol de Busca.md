@@ -218,7 +218,7 @@ Para embarcações costeiras de uso moderado, farol LED fixo com alcance de 500m
 ## Normas e referências aplicáveis
 
 - **COLREGS** — não define o farol de busca como obrigatório, mas proíbe uso de luz que possa confundir outros navegantes com luzes de navegação
-- **ABYC E-11** — proteção e bitola do circuito elétrico
+- **ABYC E-11 (2023)** — proteção e bitola do circuito elétrico
 
 ## Destaques para ensino
 

@@ -260,11 +260,11 @@ O projeto deve indicar quando inspecionar cabos, terminais, baterias, fusíveis.
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — tabelas de bitola, queda de tensão, proteção (referência técnica mais usada)
-- **ABYC E-2** — bonding (parte do projeto)
-- **NORMAM-211** — enquadramento regulatório brasileiro para amadores, embarcações de esporte e recreio e universo correlato
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referências complementares para princípios de baixa tensão, identificação e proteção
-- **IEC 60092** — Electrical installations in ships (referência internacional)
+- **ABYC E-11 (2023)** — tabelas de bitola, queda de tensão, proteção (referência técnica mais usada)
+- **ABYC E-2 (2020)** — bonding (parte do projeto)
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — enquadramento regulatório brasileiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referências complementares para princípios de baixa tensão, identificação e proteção
+- **IEC 60092 (edição a verificar)** — Electrical installations in ships (referência internacional)
 
 ## Como ensinar este tópico
 

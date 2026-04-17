@@ -63,7 +63,7 @@ A queda de tensão ao longo do cabo não deve exceder o limite para o tipo de ci
 
 **O maior dos dois valores vence.**
 
-## Limites de queda de tensão (ABYC E-11)
+## Limites de queda de tensão (ABYC E-11, 2023)
 
 | Tipo de circuito | Faixa de projeto de referência |
 | --- | --- |
@@ -114,7 +114,7 @@ A_mín = (ρ × L) / R_máx
 A_mín em mm² → converter para AWG mais próximo (acima)
 ```
 
-## Tabela de referência rápida (ABYC E-11)
+## Tabela de referência rápida (ABYC E-11, 2023)
 
 **Sistema 12V, queda máxima 3% (0,36V):**
 
@@ -245,8 +245,8 @@ Dimensionar o cabo corretamente mas colocar fusível maior que a capacidade do c
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — critérios de ampacidade, proteção e queda de tensão para sistemas de bordo
-- **ISO 13297** — referência internacional para instalações elétricas em pequenas embarcações; verificar a edição vigente
+- **ABYC E-11 (2023)** — critérios de ampacidade, proteção e queda de tensão para sistemas de bordo
+- **ISO 13297:2020** — referência internacional para instalações elétricas em pequenas embarcações; verificar a edição vigente
 - **UL 1426** — referência de construção para cabos marinhos
 - **Ancor Wire Size Calculator** — ferramenta prática baseada em critérios amplamente usados no mercado
 
