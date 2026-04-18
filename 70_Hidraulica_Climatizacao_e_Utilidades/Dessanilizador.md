@@ -4,8 +4,9 @@ note_type: "system"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "DESSANILIZADOR 2d619734f7fb83b290ce8195a3c4da0c.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://abycinc.org/standards/"

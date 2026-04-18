@@ -4,8 +4,14 @@ note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "CARREGADOR DE BATERIA (AC to DC) 64e19734f7fb83f6879701f63709d32e.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ISO 13297:2020"
+  - "IEC 60335-2-29"
+  - "ABNT NBR 5410 (2004+emendas)"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
@@ -276,7 +282,7 @@ MPPT solar carrega durante o dia; carregador AC carrega à noite e no cais. BMS 
 ## Normas e referências técnicas
 
 - **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: requisitos para carregadores, proteção, localização do fusível DC
-- **ABYC A-31 (edição a verificar)** — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos
+<!-- TODO-CITAÇÃO: o padrão ABYC específico para battery chargers/inverter-chargers está sob verificação externa (ver _Editorial/registro_normas.yaml). Versão anterior desta nota rotulava como "ABYC A-31"; na nota mestre pós-R01 A-31 consta como Lightning Protection — por isso a referência foi removida aqui até confirmação. -->
 - **ISO 13297:2020** — Electrical systems on recreational craft
 - **IEC 60335-2-29** — Safety of battery chargers: base normativa para os equipamentos
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro

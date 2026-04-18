@@ -4,8 +4,12 @@ note_type: "comparison"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "TIPOS DE BATERIA 17419734f7fb83e38ee80148dae5ba3c.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-10 (2023)"
+  - "ISO 13297:2020"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"

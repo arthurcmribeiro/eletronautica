@@ -10,7 +10,7 @@ source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "EPIRB BEACON DE EMERGÊNCIA"
   - "EPIRB / BEACON DE EMERGÊNCIA"

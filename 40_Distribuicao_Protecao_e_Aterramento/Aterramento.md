@@ -4,8 +4,17 @@ note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "ATERRAMENTO 62019734f7fb83ed822d818740bfe4cb.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC E-2 (2020)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "IEC 60092 (edição a verificar)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -285,9 +294,10 @@ Cria diferença de potencial entre sistemas — risco de arco e danos a equipame
 ## Normas aplicáveis
 
 - **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (referência primária)
+- **ABYC E-2 (2020)** — Cathodic Protection (interface com bonding e controle de potencial das massas)
+- **ISO 13297:2020** — sistemas elétricos AC e DC em pequenas embarcações (sucessora de ISO 10133)
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **IEC 60092 (edição a verificar)** — Electrical installations in ships
-- **ABNT NBR 5410 (2004 + emendas)** — Instalações elétricas de baixa tensão (base comparativa)
 - **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico

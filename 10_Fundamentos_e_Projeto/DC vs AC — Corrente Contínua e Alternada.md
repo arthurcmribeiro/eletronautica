@@ -4,8 +4,15 @@ note_type: "comparison"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DC vs AC — CORRENTE CONTÍNUA E ALTERNADA 33a19734f7fb81538f02d8f3158c915f.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "IEC 60092 (edição a verificar)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"

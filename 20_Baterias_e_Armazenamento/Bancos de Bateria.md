@@ -4,8 +4,14 @@ note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "BANCOS DE BATERIA 8ec19734f7fb83e584780174466db4de.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-10 (2023)"
+  - "ABYC E-11 (2023)"
+  - "ISO 13297:2020"
+  - "NMEA 2000"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"

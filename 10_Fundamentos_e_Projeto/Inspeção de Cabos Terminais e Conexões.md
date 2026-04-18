@@ -4,8 +4,17 @@ note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "INSPEÇÃO DE CABOS, TERMINAIS E CONEXÕES 33a19734f7fb818d95e7d8deb70ff9fb.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC A-28 (edição a verificar)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "UL 1426"
+  - "SAE J1128"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -294,11 +303,12 @@ Cabo armazenado incorretamente (UV, calor) deteriora antes de ser instalado. Ver
 
 ## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — especificações de cabeamento náutico, inspeção periódica
-- **ABYC A-28 (edição a verificar)** — marine electrical circuit diagrams (identificação de cabos)
+- **ABYC E-11 (2023)** — especificações de cabeamento náutico, critérios de inspeção periódica e identificação de condutores (cláusula 11.12)
+- **ISO 13297:2020** — pequenas embarcações, sistemas elétricos (sucessora de ISO 10133)
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **UL 1426** — cables for use on boats (padrão de qualidade para cabo náutico)
-- **SAE J1128** — Low Tension Primary Cable (referência para cabos náuticos)
+- **SAE J1128** — Low Tension Primary Cable (referência para cabos de baixa tensão) <!-- TODO-CITAÇÃO: confirmar edição aplicável para uso náutico -->
+- **ABYC A-28 (edição/tema a verificar)** <!-- TODO-CITAÇÃO: versão anterior desta nota rotulava A-28 como "marine electrical circuit diagrams"; essa associação não está confirmada no registro central e foi removida. Ver _Editorial/registro_normas.yaml -->
 
 ## Como ensinar este tópico
 

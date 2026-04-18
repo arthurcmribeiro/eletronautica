@@ -4,8 +4,15 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "TRANSFORMADOR ENTRADA 58419734f7fb83baae88811eb7c459cf.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "IEC 60076 (edição a verificar)"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NEMA (padrões aplicáveis)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"

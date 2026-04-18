@@ -4,13 +4,20 @@ note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "NAVEGAÇÃO (BB, BE e Alcançado) ff119734f7fb8264ba9b01e36f23d896.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "COLREGS 72 (Regras 20-31)"
+  - "NORMAM-01 (edição a verificar)"
+  - "ISO 16180:2011"
+  - "USCG 33 CFR 183 (edição a verificar)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
-  - "https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
 aliases:
   - "NAVEGAÇÃO (BB, BE e Alcançado)"
 seo_title: "NAVEGAÇÃO (BB, BE e Alcançado)"

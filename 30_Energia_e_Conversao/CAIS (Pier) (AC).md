@@ -4,8 +4,17 @@ note_type: "system"
 domain: "30_Energia_e_Conversao"
 source_file: "CAIS (Pier) (AC) 55219734f7fb834ab92701fecab7a7cb.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC A-28 (edição a verificar)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NORMAM-211 (2022)"
+  - "NFPA 303 (edição a verificar)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -306,12 +315,12 @@ Resistência de contato elevada → aquecimento progressivo → arco elétrico. 
 
 ## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (terra, GFCI, polaridade)
-- **ABYC A-28 (edição a verificar)** — Galvanic Isolators (isoladores galvânicos certificados)
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (terra, proteção diferencial/leakage, polaridade)
+- **ABYC A-28 (edição/tema a verificar)** — citada na literatura como referência para isoladores galvânicos; tópico a confirmar externamente (ver `_Editorial/registro_normas.yaml`)
+- **ISO 13297:2020** — Small craft — Electrical systems — Alternating current installations
 - **NFPA 303 (edição a verificar)** — Fire Protection for Marinas and Boatyards
-- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão e infraestrutura elétrica associada
-- **NBR 5410** — Instalações elétricas de baixa tensão (base para pedestais de marina)
-- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABNT NBR 5410 (2004 + emendas)** — Instalações elétricas de baixa tensão (referência complementar para pedestais de marina e infraestrutura associada)
+- **NORMAM-211 (2022)** — referencial regulatório brasileiro da DPC para amadores, esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 

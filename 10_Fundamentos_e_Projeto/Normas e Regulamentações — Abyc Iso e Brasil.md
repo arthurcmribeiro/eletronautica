@@ -13,6 +13,8 @@ normas_citadas:
   - "ABYC E-2 (2020)"
   - "ABYC E-10 (2023)"
   - "ABYC E-13 (2022)"
+  - "ABYC A-20 (edição a verificar)"
+  - "ABYC A-25 (edição a verificar)"
   - "ABYC A-28 (edição a verificar)"
   - "ABYC A-31 (edição a verificar)"
   - "ISO 13297:2020"

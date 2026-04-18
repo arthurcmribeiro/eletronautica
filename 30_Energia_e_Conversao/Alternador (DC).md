@@ -288,7 +288,7 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 ## Normas e referências técnicas
 
 - **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: fusível no cabo B+, separação de bancos, proteção de cabeamento
-- **ABYC A-31 (edição a verificar)** — Battery Chargers: aplicável ao carregamento inteligente via alternador
+<!-- TODO-CITAÇÃO: a referência ABYC específica para carregamento (alternador com regulador externo, lógica multi-estágio) está sob verificação externa. Versão anterior rotulava como "ABYC A-31 — Battery Chargers"; na nota mestre pós-R01 A-31 consta como Lightning Protection — referência removida até confirmação (ver _Editorial/registro_normas.yaml). -->
 - **ISO 13297:2020** — Electrical systems on recreational craft
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
 - **Compatibilidade com lítio:** não coberta explicitamente por normas antigas — é engenharia de sistema; fabricantes de BMS e reguladores externos publicam guias de instalação específicos

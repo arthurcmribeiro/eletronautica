@@ -4,8 +4,15 @@ note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "TOP 95519734f7fb82f593528121a72dcb4e.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "COLREGS 72 (Regras 21, 23, 25)"
+  - "NORMAM-01 (edição a verificar)"
+  - "ISO 16180:2011"
+  - "USCG 33 CFR 183 (edição a verificar)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"

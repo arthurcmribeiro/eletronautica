@@ -4,8 +4,17 @@ note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "PROJETO ELÉTRICO DE EMBARCAÇÃO — PASSO A PASSO 33a19734f7fb816c9ebbcc180815b545.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-13"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC E-2 (2020)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "IEC 60092 (edição a verificar)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -129,8 +138,8 @@ Seção = (ρ × L) / R_máx
 | Radar | 30–50W | 12V | 4h | 120–200 |
 | Bomba de porão | 5A × 12V = 60W | 12V | 0,25h | 15 |
 | Iluminação LED total | 30–60W | 12V | 5h | 150–300 |
-| Geladeira DC | 40–80Wh/24h | 12V | contínuo | 40–80 |
-| **Total típico veleiro** |  |  |  | **700–1.700 Wh/dia** |
+| Geladeira DC | ~40W médio (ciclo) | 12V | contínuo (duty ~40%) | 400–800 |
+| **Total típico veleiro** |  |  |  | **1.000–2.200 Wh/dia** |
 
 **Etapa 2 — Dimensionamento do banco:**
 
@@ -262,6 +271,7 @@ O projeto deve indicar quando inspecionar cabos, terminais, baterias, fusíveis.
 
 - **ABYC E-11 (2023)** — tabelas de bitola, queda de tensão, proteção (referência técnica mais usada)
 - **ABYC E-2 (2020)** — bonding (parte do projeto)
+- **ISO 13297:2020** — sistemas elétricos AC e DC em pequenas embarcações (sucessora de ISO 10133)
 - **NORMAM-211 (2022 rev. aplicável via DPC)** — enquadramento regulatório brasileiro para amadores, embarcações de esporte e recreio e universo correlato
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referências complementares para princípios de baixa tensão, identificação e proteção
 - **IEC 60092 (edição a verificar)** — Electrical installations in ships (referência internacional)

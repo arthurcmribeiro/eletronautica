@@ -4,8 +4,12 @@ note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "INVERSORA (DC to AC) 8ed19734f7fb836b85828192050b797a.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABNT NBR 5410 (2004+emendas)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"

@@ -4,8 +4,15 @@ note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DIMENSIONAMENTO DE BANCO DE BATERIAS — CÁLCULO DE  33a19734f7fb8174ba99e27e7b0fef11.md"
 status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC E-10 (2023)"
+  - "ABYC E-13 (2022)"
+  - "ISO 13297:2020"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -81,10 +88,10 @@ Dimensionamento de banco é o processo de calcular a capacidade de armazenamento
 | Piloto automático (cruzeiro) | 30W médio | 12V | 2,5A | 8h | 240 |
 | Iluminação LED total | 30W | 12V | 2,5A | 5h | 150 |
 | Bomba de porão | 60W | 12V | 5A | 0,25h | 15 |
-| Geladeira DC | — | 12V | — | contínua | 60Wh/24h |
+| Geladeira DC (compressor) | ~40W médio | 12V | ~3,3A médio | contínua (duty ~40%) | ~400 |
 | Bomba de água doce | 50W | 12V | 4,2A | 0,5h | 25 |
 | Carregador USB | 15W | 12V | 1,25A | 6h | 90 |
-| **TOTAL** |  |  |  |  | **~1.000 Wh/dia** |
+| **TOTAL** |  |  |  |  | **~1.300 Wh/dia** |
 
 ## Cálculo de capacidade
 
@@ -106,6 +113,8 @@ Converter para Ah: Ah = C_banco (Wh) / V_sistema
 ```
 
 **Exemplo — veleiro de cruzeiro (sistema 12V):**
+
+> Valor de 1.000 Wh/dia abaixo é ilustrativo para a aritmética limpa; o total da tabela acima (~1.300 Wh/dia com geladeira DC realista) dá um banco proporcionalmente maior.
 
 ```jsx
 Consumo diário: 1.000 Wh
@@ -232,6 +241,14 @@ R$3.000 / 2.880.000 Wh = R$0,001/Wh
 - **BMS (lítio):** parte integrante do banco LiFePO4
 - **Inversor:** consumo do inversor é a maior carga DC — determina o banco
 - **Projeto elétrico:** dimensionamento de banco é o primeiro cálculo após levantamento de cargas
+
+## Normas aplicáveis
+
+- **ABYC E-10 (2023)** — Storage Batteries (requisitos de instalação, ventilação e retenção)
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (interface de bancos com o sistema de bordo)
+- **ABYC E-13 (2022)** — Lithium Ion Batteries (requisitos específicos para LiFePO4 e química afim)
+- **ISO 13297:2020** — pequenas embarcações, sistemas elétricos (sucessora de ISO 10133)
+- Datasheet e manual do fabricante da bateria — define os DOD, C-rate, temperatura e regime de carga admissíveis para o cálculo acima
 
 ## Como ensinar este tópico
 
