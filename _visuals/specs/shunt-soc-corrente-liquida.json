@@ -1,0 +1,63 @@
+{
+  "slug": "shunt-soc-corrente-liquida",
+  "kind": "fluxo_medicao",
+  "title": "Shunt, SoC e Corrente Liquida",
+  "summary": "Visual que conecta a leitura fisica do shunt (amperagem DC instantanea) ao SoC (estado de carga) calculado pelo monitor de bateria, mostrando a diferenca entre corrente de carga, consumo e saldo liquido.",
+  "didactic_goal": "Tornar claro que o shunt mede corrente bruta em tempo real, e que o SoC e um calculo integral dessa corrente ao longo do tempo, corrigido por eficiencia e limites de carga/descarga.",
+  "format": "fluxo-de-medicao",
+  "priority": "alta",
+  "hero_label": "O SHUNT MEDE A CORRENTE; O MONITOR CALCULA O QUE SOBRA NO BANCO",
+  "notes": [
+    "Corrente liquida = corrente de carga - corrente de consumo; positivo carrega, negativo descarrega.",
+    "SoC nao e medido diretamente pelo shunt; e um acumulado com correcao de eficiencia e Peukert quando aplicavel.",
+    "Desvios entre SoC calculado e SoC real sao comuns e precisam de sincronizacao periodica (100% por tempo determinado)."
+  ],
+  "caution": "SoC baseado somente em tensao instantanea e menos confiavel; o monitor de bateria com shunt e a ferramenta recomendada em bancos de media/alta capacidade. Cautela: eficiencia tipica 90%-99% depende da quimica e do regime.",
+  "target_notes": [
+    "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md",
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md",
+    "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md"
+  ],
+  "panels": [
+    {
+      "label": "CARGA",
+      "corrente_a": 45,
+      "tag": "+45 A entrando (solar + alternador)",
+      "color": "#2A9D57"
+    },
+    {
+      "label": "CONSUMO",
+      "corrente_a": -28,
+      "tag": "-28 A saindo (cargas ativas)",
+      "color": "#D9534F"
+    },
+    {
+      "label": "CORRENTE LIQUIDA",
+      "corrente_a": 17,
+      "tag": "+17 A SALDO POSITIVO (banco carregando)",
+      "color": "#1D6FD8"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Shunt",
+      "detail": "Resistor de precisao no negativo; monitor le queda de tensao e converte em amperes.",
+      "color": "#1D6FD8"
+    },
+    {
+      "title": "SoC (estado de carga)",
+      "detail": "Acumulado de Ah consumidos/restaurados desde o ultimo 100%; nao e leitura instantanea.",
+      "color": "#2A9D57"
+    },
+    {
+      "title": "Sincronizacao",
+      "detail": "Banco precisa atingir tensao/corrente definidas para o SoC voltar a 100% real.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Alerta comum",
+      "detail": "SoC desvia com o tempo se nao houver sincronizacao periodica ou se a eficiencia estiver mal configurada.",
+      "color": "#D9534F"
+    }
+  ]
+}

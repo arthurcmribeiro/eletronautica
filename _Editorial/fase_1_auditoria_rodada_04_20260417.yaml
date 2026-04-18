@@ -1,0 +1,281 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 04
+# Data: 2026-04-17
+# Escopo: thread 1-C (shore power e AC) + pacote transversal (Bloco 7)
+# Formato compacto
+rodada: 4
+data: "2026-04-17"
+notas_auditadas_thread_1c: 4
+notas_tocadas_pacote_transversal: 3
+thread: "1-C + pacote transversal"
+formato: "compacto"
+
+notas:
+
+  - arquivo: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    thread: "1-C"
+    papel: "interface shore power — gateway regulatório crítico"
+    achados:
+      - id: P1-R04-01
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 6 normas"
+        status: "aplicado"
+      - id: P1-R04-02
+        tipo: "duplicata + citação incompleta"
+        descricao: "Seção 'Normas aplicáveis' listava NBR 5410 duas vezes (uma com ano e 'família ABNT/IEC', outra sem ano); NORMAM-211 com nota 'rev. aplicável via DPC' verborrágica"
+        acao: "consolidar NBR 5410 em uma linha; normalizar NORMAM-211 (2022); adicionar ISO 13297:2020"
+        status: "aplicado"
+      - id: P2-R04-03
+        tipo: "citação sob verificação"
+        descricao: "ABYC A-28 citada como 'Galvanic Isolators' — literatura marinha associa A-28 a isoladores galvânicos, mas registro central mantém A-28 como `desconhecido` até verificação externa"
+        acao: "reformulado como 'citada na literatura como referência...tópico a confirmar externamente'"
+        status: "aplicado (conservador)"
+      - id: P2-R04-04
+        tipo: "citação sem ano"
+        descricao: "NFPA 303 sem ano"
+        acao: "confirmar edição"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT", "CAMPO-BR"]
+    veredito: "nota sólida; gateway regulatório explícito; reconciliação de normas feita; pendências externas registradas"
+
+  - arquivo: "30_Energia_e_Conversao/Transformador Entrada.md"
+    thread: "1-C"
+    papel: "nota de adaptação de tensão (distingue-se de transformador de isolamento)"
+    achados:
+      - id: P1-R04-05
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 4 normas (ABYC E-11, IEC 60076, NBR 5410, NEMA)"
+        status: "aplicado"
+      - id: P2-R04-06
+        tipo: "citação sem código específico"
+        descricao: "'NEMA' citado sem código específico (família ampla de padrões)"
+        acao: "em enriquecimento futuro, qualificar qual NEMA (provavelmente WD-6 para conectores ou ST-20 para transformadores)"
+        status: "registrado"
+      - id: P2-R04-07
+        tipo: "citação sem ano"
+        descricao: "IEC 60076 sem ano"
+        acao: "confirmar edição (IEC 60076-1:2011 é a parte geral mais recente)"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT", "CAMPO-BR"]
+    veredito: "nota conceitualmente correta (distinção adaptação vs isolamento); frontmatter alinhado"
+
+  - arquivo: "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+    thread: "1-C"
+    papel: "nota central sobre solução de interface com shore power"
+    achados:
+      - id: P1-R04-08
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 5 normas"
+        status: "aplicado"
+      - id: P2-R04-09
+        tipo: "menção A-28 repetida 8× no corpo"
+        descricao: "ABYC A-28 aparece como 'Galvanic Isolators' em 8 pontos distintos da nota — quando A-28 for finalmente verificada (bug 0003), será preciso atualizar todas as ocorrências"
+        acao: "registrar para atualização em massa pós-verificação"
+        status: "registrado"
+      - id: P2-R04-10
+        tipo: "menção ABYC A-31 em FAQ"
+        descricao: "FAQ cita 'ABYC A-31 (edição a verificar)' para para-raios — alinhado com mestre pós-R01 (A-31 = Lightning Protection); OK"
+        acao: "sem ação"
+        status: "validado"
+    taxonomia: ["DIDAT", "ENG-INT", "CAMPO-BR"]
+    veredito: "nota extensa e tecnicamente sólida; dependente de verificação externa de A-28"
+
+  - arquivo: "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+    thread: "1-C"
+    papel: "proteção diferencial AC — nota Tier-1 de segurança"
+    achados:
+      - id: P1-R04-11
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 5 normas (ABYC E-11, IEC 61008, IEC 61009, ISO 13297:2020, NBR 5410)"
+        status: "aplicado"
+      - id: P2-R04-12
+        tipo: "citação sem ano"
+        descricao: "IEC 61008 e IEC 61009 sem ano"
+        acao: "confirmar edição (IEC 61008-1:2010 e IEC 61009-1:2010 são as partes gerais mais citadas)"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT"]
+    veredito: "nota tecnicamente exemplar; aborda corretamente classes A/AC/B/F, fisiologia, coordenação com transformador de isolamento; frontmatter alinhado"
+
+# ========================================================================
+# PACOTE TRANSVERSAL (Bloco 7) — grep sistêmicos
+# ========================================================================
+
+pacote_transversal:
+
+  grep_abyc_familia_a:
+    executado: true
+    criterio: "rg 'ABYC A-\\d{2}' em todos os .md do vault"
+    ocorrencias_totais: 37
+    resultados_por_norma:
+      A-20:
+        ocorrencias: 1
+        locais: ["nota mestre (TODO edição)"]
+        status_registro_central: "TODO"
+        contradicao: false
+
+      A-25:
+        ocorrencias: 1
+        locais: ["nota mestre (TODO edição)"]
+        status_registro_central: "TODO"
+        contradicao: false
+
+      A-28:
+        ocorrencias: 14
+        locais:
+          - "Normas mestre (galvanic isolators, TODO)"
+          - "Inspeção de Cabos (R03: marcada como tema a verificar via HTML comment)"
+          - "CAIS (Pier) (AC) (R04: literatura; tópico a confirmar)"
+          - "Isolador Galvânico/Transformador (8× como Galvanic Isolators)"
+          - "Sonda-Profundímetro-Sonar (thruhull fittings — rotulagem suspeita)"
+        status_registro_central: "desconhecido (bug 0003)"
+        contradicao: true
+        descricao_contradicao: |
+          Pelo menos 3 rótulos distintos para A-28 no corpus em diferentes momentos:
+          (a) 'galvanic isolators' (nota mestre + Isolador Galvânico) — alinhado à literatura marinha comum
+          (b) 'marine electrical circuit diagrams' (Inspeção de Cabos — corrigido na R03)
+          (c) 'thruhull fittings' (Sonda — corrigido na R04)
+          Conclusão: A-28 permanece `desconhecido` até verificação externa. A família de rótulos distintos confirma o padrão sistêmico previsto em R03.
+
+      A-31:
+        ocorrencias: 11
+        locais:
+          - "Normas mestre (Lightning Protection, corrigido na R01)"
+          - "Bonding (Lightning Protection, alinhado)"
+          - "Carregador de Bateria (R04: era 'Battery Chargers' — P0 corrigido)"
+          - "Alternador DC (R04: era 'Battery Chargers' — P0 corrigido)"
+          - "Isolador Galvânico (para-raios, alinhado)"
+          - "Referências em planos/YAMLs de auditoria"
+        status_registro_central: "Lightning Protection (pós-R01)"
+        contradicao: true
+        descricao_contradicao: |
+          Nota mestre e Bonding afirmam A-31 = Lightning Protection (correto pós-R01).
+          Carregador de Bateria e Alternador DC afirmavam A-31 = Battery Chargers.
+          Contradição interna do corpus — P0 detectado e corrigido em R04.
+
+      A-33:
+        ocorrencias: 1
+        locais: ["Gerador (AC) — 'Exhaust Systems'"]
+        status_registro_central: "ausente no registro"
+        contradicao: false
+        nota: "A-33 é padrão ABYC para sistemas de escape em embarcações; rótulo em Gerador (AC) é consistente com literatura. Registrar no registro central."
+
+  grep_geladeira_dc:
+    executado: true
+    criterio: "rg '[Gg]eladeira DC' em todos os .md do vault"
+    ocorrencias_totais: 8
+    resultados:
+      - arquivo: "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+        linha_chave: 141
+        valor_atual: "~40W médio (ciclo), 12V, contínuo (duty ~40%), 400–800 Wh/dia"
+        status: "corrigido na R02"
+      - arquivo: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+        linha_chave: 91
+        valor_atual: "~40W médio, 12V, ~3,3A médio, duty ~40%, ~400 Wh/dia"
+        status: "corrigido na R03"
+      - arquivo: "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md"
+        linha_chave: 85
+        valor_atual: "3–8 A"
+        status: "correto (faixa de corrente instantânea consistente com 40W médio/duty 40% → pico 8A)"
+      - arquivo: "10_Fundamentos_e_Projeto/Tipos de Embarcação.md"
+        linhas: [62, 88]
+        valor_atual: "menção qualitativa apenas, sem número"
+        status: "correto (sem valor para contradizer)"
+      - arquivo: "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md"
+        linha_chave: 93
+        valor_atual: "menção qualitativa (compressor Danfoss/Secop)"
+        status: "correto"
+    veredito: "Erro numérico 'Geladeira DC 40-80 Wh/dia' estava confinado a 2 notas do thread 1-B (ambas corrigidas). Outras 3 menções do corpus são qualitativas ou usam unidade correta. Padrão fechado."
+
+  frontmatter_legacy:
+    executado: true
+    criterio: "rg '^review_jurisdiction: \"' — scalar em vez de lista"
+    ocorrencias: 120
+    notas_auditadas_fase1_ja_corrigidas: 13
+    notas_legacy_restantes: 107
+    observacao: |
+      120 notas do vault ainda têm `review_jurisdiction` como scalar (padrão legacy).
+      As 13 notas da Fase 1 (R01+R02+R03+R04) foram convertidas.
+      Para migrar o restante (~107 notas), é necessário script.
+      Proposta registrada em 'acoes_para_rodadas_futuras'.
+
+# ========================================================================
+# P0 DETECTADOS PELO GREP TRANSVERSAL — CORRIGIDOS EM R04
+# ========================================================================
+
+p0_transversais_corrigidos:
+
+  - id: P0-R04-TR1
+    nota: "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+    linha: 279
+    erro: "'ABYC A-31 (edição a verificar) — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos'"
+    contradicao: "Nota mestre pós-R01 afirma A-31 = Lightning Protection; afirmar A-31 = Battery Chargers contradiz o registro central"
+    acao_aplicada: "Removida a linha; comentário HTML de rastreabilidade adicionado apontando para o registro"
+    impacto: "alto — esta é justamente uma das 7 notas críticas da Fase 0 v2, era usada como 'exemplar de sistema vs produto'"
+
+  - id: P0-R04-TR2
+    nota: "30_Energia_e_Conversao/Alternador (DC).md"
+    linha: 291
+    erro: "'ABYC A-31 (edição a verificar) — Battery Chargers: aplicável ao carregamento inteligente via alternador'"
+    contradicao: "Mesma contradição sistêmica do TR1"
+    acao_aplicada: "Removida a linha; comentário HTML de rastreabilidade adicionado"
+    impacto: "médio — nota central para alternadores com regulador externo (compatibilidade lítio)"
+
+  - id: P0-R04-TR3
+    nota: "50_Navegacao_Instrumentacao_e_Comunicacao/Sonda - Profundímetro - Sonar.md"
+    linha: 235
+    erro: "'ABYC A-28 (edição a verificar) — thruhull fittings (quando transdutor thruhull)'"
+    contradicao: "A-28 no registro central está `desconhecido`; na nota mestre aparece como 'galvanic isolators'. Rotulá-la como 'thruhull fittings' é um terceiro rótulo distinto (além do erro já corrigido 'marine electrical circuit diagrams' em Inspeção)"
+    acao_aplicada: "Removida a linha; comentário HTML de rastreabilidade; referência reformulada para 'ABYC (padrão específico a verificar) — em literatura costuma-se citar série H (ex.: H-27)'"
+    impacto: "médio — instalação física crítica (furo no casco)"
+
+sinais_de_risco:
+  P0: 3  # todos os 3 corrigidos na R04 via grep transversal
+  P1: 4  # frontmatters thread 1-C
+  P2: 8  # pendências de verificação externa
+  contradicoes_inter_notas_detectadas: 2  # família A-28 (3 rótulos) + família A-31 (2 rótulos)
+  contradicoes_resolvidas_na_rodada: 2
+
+metricas:
+  tempo_real_rodada: "~1h30 (inclui pacote transversal)"
+  notas_com_frontmatter_padronizado_apos_R04: "17 (3 R01 + 5 R02 + 5 R03 + 4 R04)"
+  erros_factuais_corrigidos_fase_1: 5  # A-31 mestre (R01), A-28 Inspeção (R03), A-31 Carregador (R04), A-31 Alternador (R04), A-28 Sonda (R04)
+  erros_numericos_recorrentes_resolvidos: 2
+  contradicoes_inter_notas_resolvidas_fase_1: 3  # 1 em R03 + 2 em R04
+  notas_tocadas_fora_do_escopo_thread: 3  # P0s transversais
+
+acoes_aplicadas_na_rodada:
+  - "4 frontmatters convertidos para padrão (thread 1-C)"
+  - "CAIS: consolidação de NBR 5410 duplicada; +ISO 13297:2020; normalização NORMAM-211"
+  - "Carregador de Bateria: removida atribuição falsa A-31 = Battery Chargers"
+  - "Alternador DC: removida atribuição falsa A-31 = Battery Chargers"
+  - "Sonda: removida atribuição suspeita A-28 = thruhull fittings; sugestão H-27"
+  - "Grep transversal ABYC A-##: 37 ocorrências auditadas, 2 famílias de contradição confirmadas"
+  - "Grep transversal Geladeira DC: 8 ocorrências auditadas, padrão fechado"
+  - "Inventário frontmatter legacy: 120 notas scalar restantes (script em backlog)"
+
+observacoes_sistemicas:
+  - "Padrão 'ABYC A-## mal rotulada' confirmado sistêmico: A-28 teve 3 rótulos distintos no corpus, A-31 teve 2. Provável origem: fonte compartilhada pré-auditoria que atribuía códigos sem verificar; padrão só se dissolve com registro central como fonte única."
+  - "A nota Carregador de Bateria, que era descrita na Fase 0 v2 como 'exemplar sistema vs produto', continha exatamente o tipo de erro que ela deveria ajudar a evitar. Reforça a tese de que rodadas autônomas com grep transversal capturam o que a auditoria por leitura sequencial não captura."
+  - "O erro de geladeira DC NÃO se repetiu fora do thread 1-B. O alcance do erro era menor que o estimado em R03 — a origem foi um template compartilhado entre duas notas de cálculo, não um padrão vault-wide."
+  - "120 notas com frontmatter scalar confirmam que a maior parte do vault (~80% das 147) ainda está em formato legacy. Migração manual custaria ~30h; script ~2h."
+
+acoes_para_rodadas_futuras:
+  - "Considerar auditar 'Gerador (AC)' para confirmar ABYC A-33 como 'Exhaust Systems' (registrar na central se correto)"
+  - "Auditar se existem outras famílias de norma com mesma fragilidade (A-## foi crítico; verificar E-##, H-##)"
+  - "Script de migração em massa de frontmatter legacy (120 notas)"
+  - "Atualizar registro_normas.yaml com os achados R04: A-31 = Lightning Protection (confirmado por 5 notas consistentes), A-28 = desconhecido (confirmado por 3 rótulos inconsistentes)"
+
+proxima_rodada:
+  numero: 5
+  thread: "1-D (regulatório navegação) + 1-E (_Editorial/MOCs)"
+  notas_previstas:
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md (revalidar pós-R04 após toque em Sonda)"
+    - "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+    - "_Editorial/Backlog de Evolução Editorial.md"
+    - "_Editorial/Inventário Visual da Base.md"
+  tempo_estimado: "~1h45 (5 notas, tema heterogêneo regulatório + editorial)"

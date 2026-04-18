@@ -1,0 +1,97 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 07
+# Data: 2026-04-17
+# Escopo: thread 1-F especializados (6 notas heterogêneas)
+rodada: 7
+data: "2026-04-17"
+notas_auditadas: 6
+thread: "1-F especializados"
+formato: "compacto"
+
+notas:
+  - arquivo: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-01
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 4 normas (ABYC E-10/E-11, ISO 13297:2020, NMEA 2000)"
+        status: "aplicado"
+      - id: P2-R07-02
+        tipo: "NMEA 2000 sem ano"
+        descricao: "citação genérica no corpo; registrar edição no registro"
+        status: "registrado"
+    veredito: "nota densa e correta pós-R01; LiFePO4 coberto; fusível de banco OK"
+
+  - arquivo: "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-03
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista; sem normas explícitas no corpo"
+        status: "aplicado"
+      - id: P2-R07-04
+        tipo: "source_urls com normas genéricas"
+        descricao: "abycinc.org/standards/ e iso.org/standard/83643.html no source_urls mas normas não citadas explicitamente no corpo; considerar se é gap de referência ou opção didática"
+        status: "registrado"
+    veredito: "nota diagnóstica pragmática; corpo sem citações diretas — padrão editorial próprio"
+
+  - arquivo: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-05
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 2 normas (ABYC E-11, ABNT NBR 5410)"
+        status: "aplicado"
+      - id: P2-R07-06
+        tipo: "padrão ABYC para inversores específico"
+        descricao: "corpo cita E-11 mas não menciona padrão mais específico para inversores; ABYC A-31 foi removido em R04 por ser Lightning Protection; padrão correto permanece sob verificação externa (bug 0003)"
+        status: "registrado"
+    veredito: "nota extensa e referência central; ligação com CAIS/shore power correta"
+
+  - arquivo: "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-07
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista; sem normas no corpo (NMEA 0400 referenciada só em source_urls)"
+        status: "aplicado"
+      - id: P2-R07-08
+        tipo: "source_urls inclui NMEA 0400 não citada no corpo"
+        descricao: "relação frontmatter/corpo inconsistente — padrão Victron/VRM não é normativo"
+        status: "registrado"
+    veredito: "nota de plataforma fechada (Victron); sem risco normativo direto"
+
+  - arquivo: "70_Hidraulica_Climatizacao_e_Utilidades/Dessanilizador.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-09
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista; sem normas explícitas no corpo"
+        status: "aplicado"
+      - id: P2-R07-10
+        tipo: "typo domain (Dessanilizador vs Dessalinizador)"
+        descricao: "arquivo e source_file usam 'Dessanilizador' (typo do Notion); aliases já corrige; registrar follow-up editorial para renomeação"
+        status: "registrado"
+    veredito: "nota utilitária pragmática; foco em osmose reversa + energia + preservação"
+
+  - arquivo: "90_Revisao_Manual/Estabilizador.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R07-11
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista; sem normas no corpo"
+        status: "aplicado"
+    veredito: "nota de revisão manual; correta mas candidata a expansão de frontmatter/normas futuras"
+
+sinais_de_risco:
+  P0: 0
+  P1: 6
+  P2: 5
+
+observacoes_sistemicas:
+  - "Padrão editorial identificado: notas com `source_urls` genéricos (abycinc.org/standards/, iso.org/standard/83643.html) sem citar normas no corpo são comuns em domínios de segurança/hidráulica/revisão manual — é uma opção didática válida mas cria inconsistência de auditabilidade. Considerar remover source_urls genéricos ou citar explicitamente no corpo."
+  - "Typo 'Dessanilizador' → 'Dessalinizador' persistiu no nome de arquivo por migração do Notion; aliases cobre mas rename futuro é recomendado."
+
+proxima_rodada:
+  numero: 8
+  thread: "1-F Tier 2 baterias/solar (Monitor Bateria, Tipos Bateria, BMS, Placa Solar, Carregador, Inspeção Cabos)"

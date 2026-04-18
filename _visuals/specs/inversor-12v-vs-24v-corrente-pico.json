@@ -1,0 +1,60 @@
+{
+  "slug": "inversor-12v-vs-24v-corrente-pico",
+  "kind": "exemplo_calculado_compare",
+  "title": "Inversor 12V vs 24V — Corrente e Surto",
+  "summary": "Exemplo calculado para mostrar como a mesma carga AC exige correntes DC muito diferentes dependendo da tensao do banco, e por que surto aumenta o risco.",
+  "didactic_goal": "Mostrar que dobrar a tensao do banco reduz pela metade a corrente de regime, aliviando cabos e protecoes, mas o pico de surto ainda precisa ser considerado no dimensionamento.",
+  "format": "exemplo-calculado",
+  "priority": "alta",
+  "hero_label": "A MESMA CARGA AC PEDE CORRENTES DC MUITO DIFERENTES CONFORME A TENSAO DO BANCO",
+  "notes": [
+    "Um inversor de 3000 W em 12 V pode pedir mais de 250 A em regime, enquanto em 24 V fica em torno de 125 A.",
+    "O surto de partida pode dobrar a corrente momentanea, exigindo cabo e fusivel dimensionados para o pico.",
+    "Eficiencia real costuma ficar entre 85% e 92%; ignorar isso subestima a corrente real."
+  ],
+  "caution": "Os numeros usam eficiencia de referencia 90% e fator de surto 2x apenas para fins didaticos. Em projeto real consulte a ficha do inversor e o padrao ABYC E-11 aplicavel.",
+  "target_notes": [
+    "30_Energia_e_Conversao/Inversora (DC To AC).md",
+    "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md",
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+  ],
+  "panels": [
+    {
+      "label": "Inversor 3000 W em 12 V",
+      "regime_a": 278,
+      "surto_a": 556,
+      "tag": "CORRENTE DE REGIME: 278 A   PICO DE SURTO: 556 A",
+      "color": "#D9534F"
+    },
+    {
+      "label": "Inversor 3000 W em 24 V",
+      "regime_a": 139,
+      "surto_a": 278,
+      "tag": "CORRENTE DE REGIME: 139 A   PICO DE SURTO: 278 A",
+      "color": "#2A9D57"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Cabo principal",
+      "detail": "Em 12 V exige bitola muito maior para a mesma perda; 24 V libera bitolas intermediarias.",
+      "color": "#1D6FD8"
+    },
+    {
+      "title": "Protecao DC",
+      "detail": "Fusivel ou disjuntor DC deve cobrir regime E surto; subdimensionar faz o banco entrar em protecao.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Queda de tensao",
+      "detail": "Corrente alta derruba a tensao no inversor, que desarma por baixa.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Decisao de tensao",
+      "detail": "Bancos acima de ~2000 W de cargas continuas tendem a 24 V ou 48 V por conta de corrente, cabo e perda.",
+      "color": "#2A9D57"
+    }
+  ],
+  "formula_text": "I_regime = P_AC / (V_DC * eta)    I_surto = I_regime * fator_surto"
+}

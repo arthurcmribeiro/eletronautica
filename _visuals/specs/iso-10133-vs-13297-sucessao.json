@@ -1,0 +1,56 @@
+{
+  "slug": "iso-10133-vs-13297-sucessao",
+  "kind": "quadro_historico",
+  "title": "ISO 10133 → ISO 13297:2020",
+  "summary": "Quadro que documenta a aposentadoria da ISO 10133 e a sucessao pela ISO 13297:2020 como referencia viva de instalacoes AC e DC em pequenas embarcacoes.",
+  "didactic_goal": "Evitar que a ISO 10133 volte a ser citada como ativa em novas notas, e deixar claro qual e a norma corrente para instalacoes eletricas de embarcacoes menores.",
+  "format": "quadro-historico",
+  "priority": "alta",
+  "hero_label": "ISO 10133 FOI APOSENTADA — A NORMA VIVA PARA ELETRICA EM EMBARCACOES MENORES E A ISO 13297:2020",
+  "notes": [
+    "A ISO 10133 tratava de sistemas DC de baixissima tensao em pequenas embarcacoes; foi retirada e fundida na familia ISO 13297.",
+    "A ISO 13297:2020 cobre instalacoes AC e DC em pequenas embarcacoes, sucedendo explicitamente a 10133 e substituindo seus dispositivos.",
+    "Novas citacoes devem referir diretamente ISO 13297:2020; citacoes antigas devem ser migradas, com nota de transicao quando necessario."
+  ],
+  "caution": "Cautela editorial: uma citacao de ISO 10133 em material novo e um sinal P0 para a auditoria; deve ser substituida ou removida com contexto. O registro central de normas e a fonte unica de verdade sobre status.",
+  "target_notes": [
+    "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md",
+    "20_Baterias_e_Armazenamento/Bancos de Bateria.md",
+    "20_Baterias_e_Armazenamento/Tipos de Bateria.md",
+    "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+  ],
+  "panels": [
+    {
+      "label": "ISO 10133 — APOSENTADA",
+      "tag": "Historico: sistemas DC de baixissima tensao",
+      "color": "#888888"
+    },
+    {
+      "label": "ISO 13297:2020 — VIVA",
+      "tag": "AC e DC em pequenas embarcacoes; sucessao direta",
+      "color": "#2A9D57"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Status",
+      "detail": "ISO 10133 esta retirada; nao deve aparecer como referencia viva em novas notas.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Sucessao",
+      "detail": "ISO 13297:2020 consolida e atualiza o escopo da 10133 com adicao de AC.",
+      "color": "#2A9D57"
+    },
+    {
+      "title": "Registro central",
+      "detail": "`_Editorial/registro_normas.yaml` marca o status; a auditoria usa esse registro para detectar regressao.",
+      "color": "#1D6FD8"
+    },
+    {
+      "title": "Vigilancia",
+      "detail": "Citacoes de 10133 em notas novas sao sinal de que o processo editorial ignorou o registro.",
+      "color": "#E0A100"
+    }
+  ]
+}

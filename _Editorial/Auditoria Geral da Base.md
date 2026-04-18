@@ -3,8 +3,9 @@ title: "Auditoria Geral da Base"
 note_type: "audit-report"
 domain: "_Editorial"
 status: "working-draft"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
 ---
 
 # Auditoria Geral da Base

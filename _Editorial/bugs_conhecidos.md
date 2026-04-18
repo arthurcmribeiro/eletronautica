@@ -45,3 +45,21 @@ Lista curta de pontos que precisam ser atacados fora do ciclo de auditoria edito
 **Ação:** consulta ao catálogo ABNT para confirmar título, número e status.
 
 **Prioridade:** P2 — não é citada ativamente no vault hoje.
+
+## 5. `standardize_citations.py` injetou TODO dentro de URLs com token "ANATEL"
+
+**Sintoma:** URLs no campo `source_urls` contendo o token `ANATEL` receberam a injeção `(edição a verificar)` no meio do caminho, produzindo URLs quebradas como:
+
+```
+https://www.gov.br/ANATEL (edição a verificar)/pt-br/regulado/outorga/servico-movel-maritimo
+```
+
+**Causa:** o matcher de normas do standardizer detectou "ANATEL" como nome de autoridade e anexou o TODO sem filtrar contexto — a substituição ocorreu até mesmo quando a string estava dentro de uma URL.
+
+**Alcance:** **13 notas** afetadas, todas no domínio `50_Navegacao_Instrumentacao_e_Comunicacao` (Sonda, Piloto Automático, Radar, VHF, Estação de Vento, MOB, DSC, EPIRB, AIS, Bússola Eletrônica, Buzina, Chartplotter, NMEA 2000).
+
+**Correção aplicada (2026-04-17, R05):** 2 notas fixadas manualmente + 12 via script Python em batch. Todas normalizadas para `https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo` (lowercase, sem TODO inline).
+
+**Correção pendente no script:** `scripts/standardize_citations.py` precisa de lookbehind regex `(?<!://)(?<!www\.)` — ou, melhor, aplicar a substituição somente fora de spans de URL (detectados por regex prévio `https?://\S+`). Como o script já rodou e foi neutralizado após R01, esta é uma salvaguarda para reativação futura.
+
+**Prioridade:** P2 histórico, P1 se o script for reativado.

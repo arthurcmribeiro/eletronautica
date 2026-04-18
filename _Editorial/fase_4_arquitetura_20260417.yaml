@@ -1,0 +1,171 @@
+---
+# Fase 4 - Arquitetura de Produto (diagnostico das 7 camadas)
+# Data: 2026-04-17
+# Escopo: blueprint do stack + gap por camada + integracao dos 5 scaffolds Fase 3
+# Fonte: agregacao de
+#   - _Editorial/fase_1_auditoria_rodada_09_20260417.yaml
+#   - _Editorial/fase_2_consolidado_20260417.yaml
+#   - _Editorial/fase_3_consolidado_20260417.yaml
+#   - .github/workflows/vault-check.yml
+#   - scripts/ (9 arquivos)
+fase: 4
+data: "2026-04-17"
+status: "em_execucao"
+formato: "compact"
+thread: "4-A — arquitetura + roadmap + matriz de risco"
+
+# =============================================================================
+# 1. BLUEPRINT — DIAGNOSTICO POR CAMADA
+# =============================================================================
+camadas:
+  camada_1_fonte:
+    nome: "Obsidian / GitHub (vault)"
+    estado_atual: "147 notas em 11 dominios + _Editorial; 50 specs visuais JSON"
+    saude: "ALTA"
+    gaps_detectados:
+      - "104 notas com review_jurisdiction em forma escalar (DEC-05 destrava)"
+      - "Nenhum schema formal de frontmatter publicado em _Editorial"
+    acao_fase_4:
+      - "Documentar convencao de frontmatter como _Editorial/convencao_frontmatter.md"
+
+  camada_2_ci:
+    nome: "CI / Scripts Python (QA)"
+    estado_atual: "9 scripts, 3 etapas CI (validate + build_manifest + render_visuals)"
+    saude: "MEDIA — cresceu rapido, CI nao acompanhou"
+    gaps_detectados:
+      - "5 novos scaffolds Fase 3 nao estao no workflow"
+      - "Nao ha job dedicado para .claude/worktrees/ (DEC-03 Fase 2)"
+      - "validate_vault.py nao bloqueia ISO 10133 em notas novas"
+    acao_fase_4:
+      - "Integrar os 5 scaffolds como jobs separados (workflow enxuto)"
+      - "Adicionar etapa 'editorial-audit' rodando validate_audit_yaml"
+      - "Acrescentar regra anti-regressao ISO 10133 no validate_vault"
+
+  camada_3_manifest:
+    nome: "manifest / content-manifest.json"
+    estado_atual: "build_manifest.py emite manifest com path, title, domain, status"
+    saude: "MEDIA — campo faltando: score_roi + audit_acao (DEC-02)"
+    gaps_detectados:
+      - "Score ROI nao propagado do frontmatter para o manifest"
+      - "Sem campo audit_acao para filtrar reescritas pendentes"
+      - "Nenhum consumidor downstream verificado (Base44 e aspiracional)"
+    acao_fase_4:
+      - "Estender build_manifest.py com score_roi e audit_acao (sprint 2 Fase 2)"
+      - "Documentar formato final em _Editorial/schema_manifest.md"
+
+  camada_4_ferramentas:
+    nome: "Ferramentas Python (calculadoras, scaffolds)"
+    estado_atual: "9 scripts operacionais (4 pre-Fase 3 + 5 novos Fase 3)"
+    saude: "ALTA — toolkit completo pos Fase 3"
+    gaps_detectados:
+      - "Calculadora de queda de tensao DC nao existe (ficha Fase 3 identificou P1)"
+      - "Calculadora de autonomia de banco nao existe (ficha Fase 3 identificou P1)"
+    acao_fase_4:
+      - "Registrar calc_queda_tensao_dc.py e calc_autonomia_banco.py como P1 Fase 5+"
+
+  camada_5_interativos:
+    nome: "Interativos HTML/JS (simuladores)"
+    estado_atual: "0 simuladores existentes"
+    saude: "NAO INICIADA"
+    gaps_detectados:
+      - "2 simulacoes P2 identificadas na Fase 3: autonomia banco + queda tensao DC"
+      - "Troubleshooting arvore decisao nao e simulador, e prosa — poderia virar"
+    acao_fase_4:
+      - "Estabelecer padrao tecnico: HTML + vanilla JS + sem build; entrega sprint 3+"
+
+  camada_6_base44:
+    nome: "Base44 App (trilhas do aluno)"
+    estado_atual: "ASPIRACIONAL — nao configurado, sem integracao verificada"
+    saude: "AUSENTE"
+    gaps_detectados:
+      - "Sem Base44 app, o manifest nao tem consumidor downstream"
+      - "Decisao de aposentar Notion (DEC-01) aumenta a pressao para resolver isso"
+    acao_fase_4:
+      - "Decidir: Base44 vs alternativa (static site, Obsidian Publish, etc.)"
+      - "Item de decisao ESCALAR para o responsavel editorial antes de Fase 5"
+
+  camada_7_n8n:
+    nome: "n8n (publicacao, WhatsApp, sync)"
+    estado_atual: "NAO ATIVA — 12 schedules Claude Code em doc, nenhum rodando"
+    saude: "AUSENTE"
+    gaps_detectados:
+      - "Schedules dependem de camada 6 (Base44) para os consumidores"
+      - "Sem orquestrador, auditorias nao geram notificacao"
+    acao_fase_4:
+      - "Adiar ativacao n8n para pos-Fase 5 / horizonte 90 dias"
+
+# =============================================================================
+# 2. ROLLOUT DOS SCAFFOLDS FASE 3 NO CI
+# =============================================================================
+rollout_scaffolds:
+  sprint_1_imediato:
+    - script: "scripts/migrate_frontmatter.py"
+      acao_ci: "nao integrar — rodar manual com revisao humana"
+      justificativa: "migracao batch precisa revisao manual apos dry-run"
+      bloqueador: "sem bloqueador; ja pronto para --apply"
+
+    - script: "scripts/validate_audit_yaml.py"
+      acao_ci: "adicionar como job --strict apenas para YAMLs criados depois de 2026-04-17"
+      justificativa: "legado (R01) tem schema diferente; aceitar como historico"
+      bloqueador: "sem"
+
+    - script: "scripts/detect_abyc_family.py"
+      acao_ci: "job weekly (nao bloqueante); gera relatorio no PR se encontrar variantes"
+      justificativa: "scan de drift normativo; 0 variantes hoje, garantir zero no futuro"
+      bloqueador: "sem"
+
+  sprint_2:
+    - script: "scripts/generate_fase_indice.py"
+      acao_ci: "rodar em push para main; commit indice no _Editorial/"
+      justificativa: "indice automatico substitui manter manualmente"
+      bloqueador: "precisa branch policy para permitir commit de bot"
+
+    - script: "scripts/check_source_urls.py"
+      acao_ci: "job offline em PR; --check-online apenas weekly (rate-limit)"
+      justificativa: "detectar URLs malformadas em PR; link-rot check weekly"
+      bloqueador: "precisa secret para user-agent ou limite de 200 URLs/run"
+
+# =============================================================================
+# 3. ROADMAP — 7 / 30 / 90 DIAS
+# =============================================================================
+roadmap:
+  horizonte_7d:
+    titulo: "Destravamento operacional pos-Fase 3"
+    tarefas:
+      - "Rodar migrate_frontmatter.py --apply (com revisao) — destrava 104 notas"
+      - "Commit do fase_4_* e fase_3_* em branch dedicada"
+      - "Integrar validate_audit_yaml.py no CI como job opt-in"
+      - "Renderizar as 5 novas specs de visuais via render_visuals"
+    esforco: "~6h"
+    entrega: "vault homogeneo + visuais novos disponiveis"
+
+  horizonte_30d:
+    titulo: "Manifest como dashboard + backlog de ferramentas"
+    tarefas:
+      - "DEC-02: estender build_manifest.py com score_roi + audit_acao"
+      - "Publicar calc_queda_tensao_dc.py e calc_autonomia_banco.py"
+      - "Ativar Schedules #3 e #11 (Claude Code schedules, conforme doc)"
+      - "Primeiro relatorio detect_abyc_family weekly"
+    esforco: "~14h"
+    entrega: "manifest consumivel + 2 calculadoras P1 + cadencia automatizada"
+
+  horizonte_90d:
+    titulo: "Reescritas premium + camadas 5/6 operacionais"
+    tarefas:
+      - "Fase 5 completa para 5 das 10 notas (30h estimadas)"
+      - "Decisao e configuracao de camada 6 (Base44 ou alternativa)"
+      - "2 simuladores interativos (HTML/JS) publicados"
+      - "Schedules #1, #2, #4, #5 ativados"
+    esforco: "~40h"
+    entrega: "top-5 reescrito, camada 5 operando, camada 6 decidida"
+
+# =============================================================================
+# 4. OBSERVACOES FINAIS
+# =============================================================================
+observacoes:
+  - "A stack Fase 3 ja e funcional sem camada 6; simplificar 'Base44 obrigatorio' e uma decisao produtiva"
+  - "Roadmap de 90d exige decisao editorial sobre camada 6 ate o dia 30 (senao Fase 5 trava sem consumidor)"
+  - "Os 5 scaffolds Fase 3 resolvem 100% das DECs operacionais da Fase 2; governanca saiu da fila"
+  - "n8n fica fora do horizonte pratico ate ter Base44 ou alternativa em pe"
+
+proxima_etapa: "Matriz esforco x impacto x risco (Fase 4 item 2)"

@@ -1,0 +1,206 @@
+---
+# Fase 3 — Consolidado (MESTRE)
+# Data: 2026-04-17
+# Escopo: ranking de ativos + entrega concreta de visuais e ferramentas
+# Fonte: agregacao de
+#   - _Editorial/fase_3_fichas_ativos_20260417.yaml (ranking)
+#   - _visuals/specs/*.json (5 novas specs)
+#   - scripts/*.py (5 novos scaffolds)
+fase: 3
+data: "2026-04-17"
+status: "concluida"
+
+# =============================================================================
+# 1. ENTREGAVEIS DA FASE 3
+# =============================================================================
+entregaveis:
+  - "fase_3_fichas_ativos_20260417.yaml — fichas de ativo com potencial_X + ranking top-10"
+  - "_visuals/specs/ — 5 novas specs JSON (P1) prontas para render_visuals"
+  - "scripts/migrate_frontmatter.py — scaffold DEC-05 (BLOQUEANTE)"
+  - "scripts/generate_fase_indice.py — indexador automatico de fases"
+  - "scripts/detect_abyc_family.py — scanner de variantes ABYC"
+  - "scripts/validate_audit_yaml.py — validador de schema editorial"
+  - "scripts/check_source_urls.py — scanner de source_urls (bug 0005 detection)"
+  - "fase_3_consolidado_20260417.yaml (este arquivo)"
+
+# =============================================================================
+# 2. RESUMO EXECUTIVO
+# =============================================================================
+resumo:
+  ativos_mapeados:
+    visuais_existentes: 45
+    visuais_novos_p1: 5
+    visuais_novos_p2_candidatos: 3       # simbologia, luz-ancora, quadro-premium (nao spec'dos)
+    ferramentas_existentes: 7            # scripts/*.py pre-Fase 3
+    ferramentas_novas: 5
+    simulacoes_novas_p2: 2               # identificadas, nao implementadas
+
+  ranking_potencial:
+    formula: "potencial_X = 0.35*impacto + 0.25*alcance + 0.25*diferenciacao + 0.15*viabilidade"
+    top_score: 9.8                       # migrate_frontmatter.py
+    min_score_p1: 7.0
+    total_fichas: 15                     # 8 visuais + 5 ferramentas + 2 simulacoes
+
+  entregas_concretas_fase3:
+    visuais_spec_emitidos: 5
+    scaffolds_python_emitidos: 5
+    scaffolds_compilados_ok: 5
+    scaffolds_smoke_tested: 5
+
+# =============================================================================
+# 3. VISUAIS EMITIDOS (P1, potencial >= 7.5)
+# =============================================================================
+visuais_novos:
+  - slug: "inversor-12v-vs-24v-corrente-pico"
+    kind: "exemplo_calculado_compare"
+    potencial_X: 8.6
+    target_notes:
+      - "30_Energia_e_Conversao/Inversora (DC To AC).md"
+      - "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+      - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+
+  - slug: "shunt-soc-corrente-liquida"
+    kind: "fluxo_medicao"
+    potencial_X: 8.4
+    target_notes:
+      - "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+      - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+      - "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md"
+
+  - slug: "iso-10133-vs-13297-sucessao"
+    kind: "quadro_historico"
+    potencial_X: 8.2
+    target_notes:
+      - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+      - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+      - "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+      - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+
+  - slug: "mmsi-dsc-epirb-cartilha"
+    kind: "cartilha_processo"
+    potencial_X: 7.9
+    target_notes:
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md"
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/EPIRB - Beacon de Emergência.md"
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/VHF.md"
+
+  - slug: "ac-dc-pe-bonding-analogia"
+    kind: "analogia_visual_controlada"
+    potencial_X: 7.8
+    target_notes:
+      - "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+      - "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+      - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+      - "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+
+# =============================================================================
+# 4. SCAFFOLDS EMITIDOS (P1/P2)
+# =============================================================================
+ferramentas_novas:
+  - arquivo: "scripts/migrate_frontmatter.py"
+    potencial_X: 9.8
+    prioridade: "P1 (BLOQUEANTE)"
+    funcao: "Migra 97 notas pendentes para o padrao Fase 2 (jurisdiction lista + normas_citadas)"
+    smoke_test: "152 arquivos varridos, 47 ja migrados, 104 pendentes detectadas"
+    justificativa: "DEC-05 Fase 2; libera ~8h de trabalho manual; primeira entrega operacional"
+
+  - arquivo: "scripts/generate_fase_indice.py"
+    potencial_X: 8.5
+    prioridade: "P1"
+    funcao: "Indexador automatico de artefatos por fase; agrega P0/P1/P2 e contradicoes"
+    smoke_test: "Fase 1 (9 artefatos) + Fase 2 (3 artefatos) + Fase 3 (1 artefato) = indices gerados"
+    justificativa: "Substitui indice manual; garante cobertura 100% de artefatos por fase"
+
+  - arquivo: "scripts/detect_abyc_family.py"
+    potencial_X: 8.2
+    prioridade: "P1"
+    funcao: "Scanner da familia ABYC; detecta variantes de grafia + normas bloqueadas"
+    smoke_test: "153 arquivos varridos, 195 ocorrencias ABYC em 10 codigos unicos, 0 variantes de grafia"
+    justificativa: "Auditoria continua das contradicoes A-28/A-31/H-27 que a Fase 1 resolveu"
+
+  - arquivo: "scripts/validate_audit_yaml.py"
+    potencial_X: 7.6
+    prioridade: "P2"
+    funcao: "Valida schema dos YAMLs de auditoria (obrigatorios vs recomendados)"
+    smoke_test: "14 YAMLs validados; 1 erro (R01 legacy com meta:), 9 avisos; 5 OK"
+    justificativa: "Previne drift de schema conforme a auditoria escala (DEC-04)"
+
+  - arquivo: "scripts/check_source_urls.py"
+    potencial_X: 7.4
+    prioridade: "P2"
+    funcao: "Scanner de source_urls; detecta bug 0005 (TODO em URLs), duplicatas, malformadas"
+    smoke_test: "154 arquivos varridos, 459 URLs totais, 13 unicas, 0 contaminadas"
+    justificativa: "Trava regressao do bug 0005 + valida cadeia de fontes externas (GG-02)"
+
+# =============================================================================
+# 5. NAO DUPLICACAO VERIFICADA
+# =============================================================================
+nao_duplicacao:
+  visuais:
+    - "ac-dc-pe-bonding-analogia vs neutro-negativo-pe-bonding existente: foco pedagogico diferente (analogia controlada vs diagrama tecnico)"
+    - "inversor-12v-vs-24v-corrente-pico vs onda-pura-vs-onda-quadrada existente: eixos ortogonais (dimensionamento vs forma de onda)"
+    - "shunt-soc-corrente-liquida vs monitor-bateria-shunt-fluxo existente: complementar (calculo de soc vs arquitetura fisica)"
+    - "iso-10133-vs-13297-sucessao: nenhum existente cobria historico normativo"
+    - "mmsi-dsc-epirb-cartilha vs ais-vhf-dsc-epirb-camadas existente: cartilha processual vs diagrama de camadas"
+
+  ferramentas:
+    - "migrate_frontmatter.py: vault_tools.py nao cobria migracao batch de schema"
+    - "generate_fase_indice.py: build_manifest.py gera manifest.json, nao indice por fase"
+    - "detect_abyc_family.py: standardize_citations.py cobre todas as normas; este e especializado + scanner de grafias"
+    - "validate_audit_yaml.py: validate_vault.py valida notas, nao YAMLs editoriais"
+    - "check_source_urls.py: nenhum existente cobria URLs do frontmatter"
+
+# =============================================================================
+# 6. POTENCIAIS NAO ENTREGUES (P1/P2 pendentes)
+# =============================================================================
+potenciais_pendentes:
+  visuais_p2_nao_spec:
+    - "simbologia-eletrica-nautica (potencial 7.2) — inventario simbolos padronizado"
+    - "luz-ancora-setores-visibilidade (potencial 7.1) — setores de luz COLREGS"
+    - "quadro-eletrico-arquitetura-premium (potencial 7.5) — arquitetura premium"
+    justificativa: "Prioridade P1 limitada a 5 entregas; estes entram em Fase 3 iteracao 2"
+
+  simulacoes_p2_identificadas:
+    - "Autonomia banco calculadora interativa (potencial 8.0)"
+    - "Queda de tensao em cabos DC calculadora (potencial 7.6)"
+    justificativa: "Exigem JavaScript/interatividade; escopo adequado para Fase 4 arquitetura"
+
+# =============================================================================
+# 7. METRICAS FASE 3
+# =============================================================================
+metricas:
+  esforco_estimado_fichas: "30h total (visuais + ferramentas + simulacoes)"
+  esforco_estimado_plano_original: "10h"
+  delta: "+20h por descoberta de 5 scaffolds alto-potencial nao previstos"
+  esforco_aplicado_fase3: "~6h (specs + scaffolds + smoke-test)"
+  pendente_pos_fase3: "~24h distribuidos entre Fase 4 (arquitetura) e Fase 5 (reescritas)"
+
+# =============================================================================
+# 8. OBSERVACOES FINAIS FASE 3
+# =============================================================================
+observacoes:
+  - "Fase 3 entregou os 5 scaffolds Python em prioridade correta (migrate primeiro)"
+  - "migrate_frontmatter.py e o desbloqueador; sem ele, 97 notas ficam em estado inconsistente"
+  - "validate_audit_yaml.py ja pegou 1 legado estrutural (R01 tem meta: como namespace)"
+  - "check_source_urls.py confirmou que bug 0005 nao deixou residuos (0 URLs contaminadas)"
+  - "detect_abyc_family.py confirmou que as contradicoes da Fase 1 foram completamente canonizadas"
+  - "As 5 specs de visuais foram escolhidas por impacto pedagogico + cobertura de notas criticas"
+
+# =============================================================================
+# 9. PORTAL PARA FASE 4
+# =============================================================================
+fase_4_inputs:
+  arquitetura_a_desenhar:
+    - "Pipeline de render_visuals para as 50 specs (45 antigas + 5 novas)"
+    - "Matriz esforco x impacto x risco para Fase 5 (reescrita top-10)"
+    - "Plano de rollout do migrate_frontmatter (dry-run -> revisao -> apply)"
+    - "Integracao dos 5 scaffolds no CI (vault-check.yml)"
+
+  bloqueadores_resolvidos:
+    - "Scaffolds prontos para CI"
+    - "Specs novos prontos para render"
+    - "Ranking consolidado disponivel para priorizacao de Fase 5"
+
+  estimativa_fase4: "~6h conforme plano original"
+
+proxima_fase: "Fase 4 — arquitetura + roadmap + matriz de risco"

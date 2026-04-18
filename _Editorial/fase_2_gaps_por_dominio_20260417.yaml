@@ -1,0 +1,201 @@
+---
+# Fase 2 — Gaps por domínio
+# Data: 2026-04-17
+# Fonte: agregação dos 9 YAMLs de auditoria Fase 1 + análise de cobertura vault
+# Método: para cada domínio, levantar (a) notas auditadas, (b) notas com frontmatter migrado,
+#         (c) gaps de cobertura, (d) gaps editoriais, (e) candidatas Fase 5
+rodada: "fase_2_gaps"
+data: "2026-04-17"
+
+dominios:
+
+  # ==========================================================================
+  "00_Mapas":
+    total_notas: 16
+    auditadas_fase1: 4  # Atlas Técnico, MOC Mapas, MOC Segurança, MOC Diagnóstico
+    frontmatter_migrado: 4
+    gaps_cobertura:
+      - "12 MOCs por domínio e 1 Guia da Vault ainda em jurisdiction string"
+      - "Fundamentos da Elétrica Náutica não auditado nesta fase"
+    gaps_editoriais:
+      - "MOCs por domínio podem duplicar conteúdo com os hubs transversais (MOC Segurança, MOC Diagnóstico)"
+      - "Consistência de `seo_description` entre MOCs varia em profundidade"
+    prioridade_fase2: "P3 — consolidar convenção de MOC (com/sem normas) e aplicar em massa"
+
+  # ==========================================================================
+  "10_Fundamentos_e_Projeto":
+    total_notas: 20
+    auditadas_fase1: 9  # DC vs AC, Projeto Elétrico, Diagrama Unifilar, Cabos DC, Banco autonomia, Neutro/PE, Inspeção Cabos, Fase e Neutro, Normas (mestre)
+    frontmatter_migrado: 9
+    gaps_cobertura:
+      - "Lei de Ohm, Multímetro, Voltímetro, Troubleshooting, Manutenção Preventiva ainda em jurisdiction string"
+      - "Simbologia Elétrica Náutica e Leitura de Diagramas não auditados"
+      - "Ferramentas, Princípios Náuticos, Tipos de Embarcação com metadata legacy"
+    gaps_editoriais:
+      - "Troubleshooting tem visual (funil-diagnostico) mas corpo da nota não cita padrões normativos de procedimento"
+      - "Referência Rápida — Valores de Campo precisa convenção de 'referência prática vs valor normativo' (está no Backlog Editorial)"
+      - "Simbologia Elétrica Náutica é candidato a receber visual (backlog R02)"
+    prioridade_fase2: "P1 — Troubleshooting, Lei de Ohm, Multímetro (eixo diagnóstico premium)"
+
+  # ==========================================================================
+  "20_Baterias_e_Armazenamento":
+    total_notas: 6  # Tipos, Bancos, BMS, Monitor, Carregador, LiFePO4
+    auditadas_fase1: 5  # faltou LiFePO4
+    frontmatter_migrado: 5
+    gaps_cobertura:
+      - "Lítio LiFePO4 — Instalação e Cuidados Específicos não auditada (já tem normas_citadas no entanto)"
+    gaps_editoriais:
+      - "LiFePO4 merece revalidação — é a convergência das notas auditadas"
+      - "Carregador tem hedge ABYC padrão chargers — consolidar após verificação externa"
+    prioridade_fase2: "P2 — LiFePO4 + consolidação família ABYC E-10/E-11"
+
+  # ==========================================================================
+  "30_Energia_e_Conversao":
+    total_notas: 10
+    auditadas_fase1: 5  # CAIS, Transformador Entrada, Inversora, Placa Solar, Alternador(DC P0 fix)
+    frontmatter_migrado: 5
+    gaps_cobertura:
+      - "Arranque, Carregador Elétrico para Tender, Gerador (AC), Gerador (DC), Eólico (DC), Transformador Bivolt com metadata legacy"
+    gaps_editoriais:
+      - "Gerador (AC) e Gerador (DC) podem ter sobreposição conceitual — consolidar"
+      - "Eólico (DC) é nota menor — avaliar fusão com MOC Energia ou nota comparativa"
+    prioridade_fase2: "P2 — Gerador AC (candidato topo-10 residual) + revalidar Eólico"
+
+  # ==========================================================================
+  "40_Distribuicao_Protecao_e_Aterramento":
+    total_notas: 14
+    auditadas_fase1: 6  # Proteção DR, Isolador, Aterramento (indireto via Bonding), Barramento DC, Fusíveis DC, Disjuntores DC/AC (via R02-R03)
+    frontmatter_migrado: 6  # Proteção DR, Isolador, Aterramento
+    gaps_cobertura:
+      - "Terminais Conectores, Relés, Quadro Elétrico, Linha Pesada/Leve, Chaves Seletoras, Cabeamento Náutico, Divisores, Contatores, Hotline com metadata legacy"
+    gaps_editoriais:
+      - "Quadro Elétrico é nó arquitetural — candidato a reescrita premium"
+      - "Cabeamento Náutico deve ser eixo central; hoje tem menos densidade que Dimensionamento de Cabos DC"
+      - "Linha Pesada vs Linha Leve — nomenclatura pode confundir iniciantes"
+    prioridade_fase2: "P1 — Quadro Elétrico (reescrita premium) + Cabeamento Náutico"
+
+  # ==========================================================================
+  "50_Navegacao_Instrumentacao_e_Comunicacao":
+    total_notas: 14
+    auditadas_fase1: 3  # NAVEGAÇÃO BB/BE, NMEA 2000, Sonda (P0 fix)
+    frontmatter_migrado: 3  # mas TODAS receberam fix URL ANATEL (13 notas)
+    gaps_cobertura:
+      - "Piloto Automático, Radar, VHF, Estação de Vento, MOB, DSC, EPIRB, AIS, Bússola, Buzina, Chartplotter ainda em jurisdiction string"
+      - "Todas tiveram URL ANATEL corrigida mas frontmatter não migrado"
+    gaps_editoriais:
+      - "Convergência MMSI/DSC/EPIRB merece nota cartilha (sinalizado em Inventário Visual)"
+      - "Radar tem visual (radar-ais-chartplotter-fusao) mas sem auditoria normativa"
+    prioridade_fase2: "P1 — domínio inteiro pode entrar em lote único (13 notas pendentes)"
+
+  # ==========================================================================
+  "55_Iluminacao_e_Sinalizacao":
+    total_notas: 11
+    auditadas_fase1: 1  # Luz de Tope
+    frontmatter_migrado: 1
+    gaps_cobertura:
+      - "10 notas em jurisdiction string: Dimmer, Farol, Fitas LED, Iluminação Emergência, Luz Subaquática, Luz Cortesia, Luz Âncora, Luzes Internas, Strobo, Tipos de Lâmpadas"
+    gaps_editoriais:
+      - "COLREGS × NORMAM-01 deve ser aplicado consistentemente em notas de sinalização náutica"
+      - "Candidato a criar nota mestre 'Iluminação de Navegação — Matriz de Setores' baseada no visual já existente"
+    prioridade_fase2: "P1 — lote único (10 notas de sinalização, alinhar ao padrão COLREGS/NORMAM de Luz de Tope)"
+
+  # ==========================================================================
+  "60_Automacao_Conectividade_e_Monitoramento":
+    total_notas: 10
+    auditadas_fase1: 1  # Monitoramento VRM
+    frontmatter_migrado: 1
+    gaps_cobertura:
+      - "Atuador Linear, Automação, USB 12V, Sistema Alarme Geral, Sensor Nível Diesel, Wi-Fi, Starlink, Som, TV, Câmeras, Interfone ainda em legacy"
+    gaps_editoriais:
+      - "Alarme Geral + Sensor Nível Diesel + USB 12V formam eixo coerente 'automação de bordo'"
+      - "Wi-Fi + Starlink + Roteador Marine merecem nota comparativa (candidato a visual)"
+      - "USB 12V já tem visual (usb-12v-queda-ruido-carga) mas corpo não foi atualizado"
+    prioridade_fase2: "P2 — eixo automação de bordo em lote"
+
+  # ==========================================================================
+  "70_Hidraulica_Climatizacao_e_Utilidades":
+    total_notas: 22  # o maior domínio
+    auditadas_fase1: 2  # Dessalinizador (R07), Thruster (indireto via visual)
+    frontmatter_migrado: 2
+    gaps_cobertura:
+      - "20 notas em legacy: AC Marine, Boiler, Blower, Aquecedor, Bombas (5x), Caixa Água Cinza, Casa Máquinas, Davit, Flap, Fogão, Geladeira, Guincho, Holding Tank, Icemaker, Limpador Parabrisas, Macerador, Plataforma Popa, Sensor Nível Água, Thruster"
+    gaps_editoriais:
+      - "Domínio mais extenso e mais fraco em auditoria — só 9% coberto"
+      - "Geladeira DC teve correção de cálculo em R02/R03 (8 ocorrências localizadas) mas sem revalidação no corpo"
+      - "Bombas (5 notas distintas) podem consolidar em tabela de campo"
+      - "Thruster + Guincho + Davit formam família 'alta corrente DC' — candidato a visual integrado"
+    prioridade_fase2: "P1 CRÍTICO — 20 notas pendentes; domínio mais utilitário do vault"
+
+  # ==========================================================================
+  "80_Seguranca_e_Corrosao":
+    total_notas: 7  # Correntes Parasitas, Eletrólise, Anôdo, Detector CO, Detector Gás, Alarme Alagamento, Extintor Automático
+    auditadas_fase1: 1  # Correntes Parasitas
+    frontmatter_migrado: 1
+    gaps_cobertura:
+      - "6 notas em legacy; Anôdo já tem visual"
+    gaps_editoriais:
+      - "Eletrólise × Corrosão Galvânica × Stray Currents — 3 mecanismos distintos que iniciantes confundem; reforçar distinção no corpo"
+      - "Detector de Gás GLP/GN e Alarme Alagamento são eixo segurança passiva — candidatos a cartilha de sintomas"
+    prioridade_fase2: "P1 — domínio de segurança é alto-impacto; auditoria detalhada recomendada"
+
+  # ==========================================================================
+  "90_Revisao_Manual":
+    total_notas: 2
+    auditadas_fase1: 1  # Estabilizador
+    frontmatter_migrado: 1
+    gaps_cobertura:
+      - "Motor de Trim - Tilt ainda legacy"
+    gaps_editoriais:
+      - "Domínio declaradamente 'revisão manual' — notas incompletas por design"
+      - "Motor de Trim - Tilt é candidato a visual (backlog)"
+    prioridade_fase2: "P3 — complementar pós-Fase 5"
+
+  # ==========================================================================
+  "_Editorial":
+    total_notas: 9
+    auditadas_fase1: 4  # Backlog, Inventário Visual, Auditoria Geral, Log de Evolução
+    frontmatter_migrado: 4
+    gaps_cobertura:
+      - "Auditoria e lacunas.md, convencao_citacao_normativa.md, citation_patches_20260416.md, plano_execucao_auditoria.md não entram em auditoria normativa"
+    gaps_editoriais:
+      - "Governança atual escala? Com 147 notas + 9 YAMLs de auditoria + 5 bugs + 2 specs, a pasta _Editorial ainda é navegável manualmente, mas próximo ciclo (Fases 2-5) dobrará o volume"
+      - "Convenção YAMLs de rodada deve ser formalizada — hoje é ad-hoc (schema compacto vs completo)"
+    prioridade_fase2: "avaliada em artefato separado `fase_2_governanca_editorial.yaml`"
+
+# ==========================================================================
+# RANKING DE PRIORIDADE FASE 2 (para execução lote)
+# ==========================================================================
+ranking_fase2:
+  P1_criticos:
+    - "50_Navegacao_* (13 notas pendentes, URL ANATEL já fixada)"
+    - "70_Hidraulica_* (20 notas pendentes — domínio mais extenso, 9% coberto)"
+    - "55_Iluminacao_* (10 notas, alinhar COLREGS/NORMAM padrão Luz de Tope)"
+    - "10_Fundamentos_* — eixo diagnóstico (Troubleshooting, Lei de Ohm, Multímetro)"
+    - "40_Distribuicao_* — Quadro Elétrico reescrita premium"
+    - "80_Seguranca_* — 6 notas de segurança (alto-impacto)"
+  P2_medios:
+    - "20_Baterias_* — LiFePO4 revalidação"
+    - "30_Energia_* — Gerador AC + Eólico"
+    - "60_Automacao_* — eixo automação de bordo"
+  P3_baixo:
+    - "00_Mapas — padronização MOCs"
+    - "90_Revisao_Manual — Motor de Trim-Tilt"
+
+estimativa_lote_P1: "~6h30 (53 notas via script + pass manual)"
+estimativa_lote_P2: "~2h (20 notas)"
+estimativa_lote_P3: "~1h (15 notas)"
+total_fase2_estimado: "9h30"
+
+# ==========================================================================
+# CONTRADIÇÕES GLOBAIS CONSOLIDADAS (residuais Fase 1 → pendentes Fase 2)
+# ==========================================================================
+contradicoes_globais:
+  resolvidas_fase1: 3  # A-31, A-28, ISO 10133
+  ativas_monitoradas: 2  # bugs 0003, 0004
+  candidatas_deteccao:
+    - "ABYC H-## (família Equipment — ainda não auditada transversalmente)"
+    - "ABYC T-## (Seamanship — ainda não auditada)"
+    - "NBR ABNT série 5410 (várias edições + emendas — checar coerência)"
+  metodo_deteccao:
+    - "grep transversal por família ABYC (já validado em R04)"
+    - "validate_vault.py com regras novas (registrar em roadmap Fase 4)"

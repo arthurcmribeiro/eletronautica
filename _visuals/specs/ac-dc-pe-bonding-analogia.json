@@ -1,0 +1,71 @@
+{
+  "slug": "ac-dc-pe-bonding-analogia",
+  "kind": "analogia_visual_controlada",
+  "title": "PE, Neutro AC, Negativo DC e Bonding — Analogia Visual",
+  "summary": "Analogia visual controlada para separar papel de PE (terra de seguranca), neutro AC (retorno funcional), negativo DC (retorno funcional) e bonding (interligacao de massas), sem misturar funcoes.",
+  "didactic_goal": "Quebrar a confusao sistemica mais comum da eletrica nautica: tratar PE, neutro, negativo e bonding como se fossem o mesmo condutor. Mostrar que eles tem origens, funcoes e riscos distintos.",
+  "format": "analogia-visual-controlada",
+  "priority": "alta",
+  "hero_label": "PE, NEUTRO, NEGATIVO E BONDING TEM ORIGENS E FUNCOES DIFERENTES — MISTURAR E RISCO GRAVE",
+  "notes": [
+    "PE (Protective Earth) e o terra de seguranca do sistema AC; existe para desviar corrente de falha para a protecao (DR, disjuntor).",
+    "Neutro AC e o retorno funcional do circuito AC; carrega corrente de trabalho, nao e terra.",
+    "Negativo DC e o retorno funcional do circuito DC; nao e terra e nao deve ser assumido como massa universal.",
+    "Bonding interliga massas metalicas para equalizacao de potencial; nao e caminho de corrente de trabalho nem retorno funcional."
+  ],
+  "caution": "Cautela critica: conectar neutro AC ao bonding ou ao casco pode criar corrente parasita no mar (risco de corrosao acelerada e choque em nadadores). Conectar negativo DC ao PE sem criterio pode gerar loop de terra e falsos acionamentos de DR. Consultar ABYC E-11 (2023) e ISO 13297:2020 antes de fazer alteracoes.",
+  "target_notes": [
+    "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md",
+    "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+  ],
+  "panels": [
+    {
+      "label": "PE — TERRA DE SEGURANCA",
+      "funcao": "caminho de falha AC",
+      "tag": "Nao conduz corrente em operacao normal; desvia falha para protecao",
+      "color": "#2A9D57"
+    },
+    {
+      "label": "NEUTRO AC — RETORNO FUNCIONAL",
+      "funcao": "retorno de carga AC",
+      "tag": "Conduz corrente de trabalho; NAO e terra; no barco sempre isolado do casco",
+      "color": "#1D6FD8"
+    },
+    {
+      "label": "NEGATIVO DC — RETORNO FUNCIONAL",
+      "funcao": "retorno de carga DC",
+      "tag": "Conduz corrente de trabalho; NAO e terra universal; ponto de referencia do banco",
+      "color": "#E0A100"
+    },
+    {
+      "label": "BONDING — EQUALIZACAO",
+      "funcao": "interligacao de massas",
+      "tag": "Mantem massas metalicas no mesmo potencial; NAO e caminho de trabalho",
+      "color": "#D9534F"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Erro comum 1",
+      "detail": "Conectar neutro AC a bonding/casco — gera corrente parasita no mar e risco eletrico para nadadores.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Erro comum 2",
+      "detail": "Assumir negativo DC como terra de seguranca — DR nao detecta falha e bonding vira caminho nao previsto.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Erro comum 3",
+      "detail": "Ligar bonding ao neutro para aterrar um equipamento — inverte papel das protecoes e invalida o projeto.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Regra pratica",
+      "detail": "PE ≠ Neutro ≠ Negativo DC ≠ Bonding. Cada um tem seu barramento, seu percurso e sua funcao.",
+      "color": "#2A9D57"
+    }
+  ]
+}

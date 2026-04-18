@@ -1,0 +1,145 @@
+---
+# Fase 2 — Consolidado (MESTRE)
+# Data: 2026-04-17
+# Escopo: gaps + stack + governança + decisões objetivas + roadmap P1/P2/P3
+# Fonte: agregação de
+#   - _Editorial/fase_2_gaps_por_dominio_20260417.yaml
+#   - _Editorial/fase_2_governanca_editorial_20260417.yaml
+#   - _Editorial/normas_monitoradas.yaml
+fase: 2
+data: "2026-04-17"
+status: "concluida"
+
+# =============================================================================
+# 1. ENTREGÁVEIS DA FASE 2
+# =============================================================================
+entregaveis:
+  - "fase_2_gaps_por_dominio_20260417.yaml — gaps editoriais + cobertura por domínio"
+  - "fase_2_governanca_editorial_20260417.yaml — diagnóstico estrutura + crítica stack"
+  - "normas_monitoradas.yaml — watch list + bugs 0003/0004"
+  - "fase_2_consolidado_20260417.yaml (este arquivo)"
+
+# =============================================================================
+# 2. RESUMO EXECUTIVO
+# =============================================================================
+resumo:
+  gaps_cobertura:
+    notas_auditadas_fase1: 41
+    notas_pendentes_migracao: 97
+    dominios_criticos_p1:
+      - "50_Navegacao_* (13 pendentes)"
+      - "70_Hidraulica_* (20 pendentes, maior domínio)"
+      - "55_Iluminacao_* (10 pendentes)"
+      - "80_Seguranca_* (6 pendentes, alto-impacto)"
+      - "10_Fundamentos_* eixo diagnóstico (5 pendentes)"
+      - "40_Distribuicao_* Quadro Elétrico (reescrita premium)"
+
+  governanca:
+    escalabilidade_atual: "ADEQUADA para 147 notas"
+    escalabilidade_200_plus: "ATENÇÃO — 4 gargalos identificados"
+    decisoes_bloqueantes:
+      - "DEC-01 Notion: APOSENTAR (vault = master)"
+      - "DEC-02 manifest score_roi: SIM"
+      - "DEC-05 script migração frontmatter: SIM (destravamento)"
+
+  stack:
+    scripts_totais: "2.124 linhas, 7 arquivos"
+    ci_etapas_atuais: 3
+    ci_etapas_recomendadas: 6
+    bugs_registrados: 5 # bugs_conhecidos.md
+    score_stack: "ENXUTA E BEM ESCRITA — refatorar é viável"
+
+# =============================================================================
+# 3. DECISÕES OBJETIVAS TOMADAS NESTA FASE
+# =============================================================================
+decisoes_registradas:
+  DEC-01:
+    tema: "Notion"
+    decisao: "APOSENTAR sincronia; vault é source-of-truth definitivo"
+    impacto: "desbloqueia Fase 3 (ativos + ferramentas)"
+
+  DEC-02:
+    tema: "manifest"
+    decisao: "estender build_manifest.py para ler score_roi + audit_acao"
+    impacto: "manifest vira dashboard editorial consumível"
+    esforco: "3h"
+
+  DEC-03:
+    tema: "CI worktrees"
+    decisao: "criar job dedicado para `.claude/worktrees/`"
+    impacto: "auditorias em worktree ganham rede de segurança"
+    esforco: "1h"
+
+  DEC-04:
+    tema: "schema YAML auditoria"
+    decisao: "formalizar via JSON schema, aceitar variantes compacta e verbose"
+    impacto: "drift controlado"
+    esforco: "1h"
+
+  DEC-05:
+    tema: "migração frontmatter"
+    decisao: "desenvolver script Python para 97 notas pendentes"
+    impacto: "destrava Fase 2; libera ~8h de trabalho manual"
+    esforco: "3h + 1h validação"
+
+# =============================================================================
+# 4. ROADMAP CONSOLIDADO FASE 2
+# =============================================================================
+sprints:
+  sprint_1:
+    nome: "Destravamento operacional"
+    tarefas:
+      - "Script migração frontmatter (DEC-05)"
+      - "Regra ISO 10133 no validator (ST-P1-02)"
+      - "Regra CI anti-regressão (AUT-03)"
+    esforco: "~4h"
+    output: "97 notas migradas + validator hardened"
+
+  sprint_2:
+    nome: "Manifest como dashboard"
+    tarefas:
+      - "Estender build_manifest.py (DEC-02)"
+      - "Gerar fase_1_indice.yaml (AUT-01)"
+      - "Índice + arquivamento (GG-02/GG-03)"
+    esforco: "~4h"
+    output: "manifest publicável + índice navegável"
+
+  sprint_3:
+    nome: "Consolidação estrutural"
+    tarefas:
+      - "Dividir plano_execucao por fase (GG-01)"
+      - "Schema YAML auditoria (DEC-04)"
+      - "CI worktrees (DEC-03)"
+      - "Decisão oficial Notion documentada (DEC-01)"
+    esforco: "~2h"
+    output: "pasta _Editorial pronta para Fase 3"
+
+total_estimado: "~10h"
+total_original_plano: "8h"
+delta: "+2h por descobertas Fase 1 (normas_monitoradas + bug ANATEL)"
+
+# =============================================================================
+# 5. PORTAL PARA FASE 3
+# =============================================================================
+fase_3_inputs:
+  candidatos_ativos:
+    - "Lista dos top-10 da Fase 1 (score_roi)"
+    - "Notas com potencial_X ≥ 7 a identificar"
+    - "45 visuais existentes + gaps sinalizados em Inventário Visual"
+    - "Ranking consolidado: visuais + simulações + ferramentas"
+  bloqueadores_resolvidos:
+    - "DEC-01 Notion: APOSENTADO (fase 3 usa vault)"
+    - "DEC-02 manifest: será consumível via score_roi"
+    - "DEC-05 frontmatter: 97 notas prontas para entrar no ranking"
+  estimativa_fase3: "~10h conforme plano original"
+
+# =============================================================================
+# 6. OBSERVAÇÕES FINAIS FASE 2
+# =============================================================================
+observacoes:
+  - "Fase 2 foi curta porque Fase 1 já havia descoberto contradições, bugs e gaps — o que restava era CONSOLIDAR (não descobrir)"
+  - "A stack é pequena o suficiente para ser refatorada em sprints curtas; não há legado tóxico"
+  - "Decisão de aposentar Notion é política e deve ser comunicada ao responsável editorial antes de apagar qualquer referência"
+  - "Script de migração frontmatter é a primeira entrega operacional da Fase 2 (priority 1 do sprint 1)"
+
+proxima_fase: "Fase 3 — ativos + ferramentas + ranking potencial"

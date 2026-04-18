@@ -1,0 +1,286 @@
+---
+# Fase 3 — Fichas de ativo + ranking consolidado
+# Data: 2026-04-17
+# Escopo: identificar notas com potencial de virar ATIVO DIDÁTICO (visual, simulação, ferramenta)
+# Método: score de potencial cruzando (a) ROI pedagógico, (b) frequência de uso em trilhas, (c) acoplamento com gaps Fase 2
+fase: 3
+data: "2026-04-17"
+total_ativos_existentes:
+  visuais: 45     # _visuals/specs/*.json
+  ferramentas_python: 7 # scripts/*.py (2.124 linhas)
+  simulacoes: 0   # nenhuma ainda implementada
+  exemplos_calculados_em_visual: 3 # queda DC, autonomia banco, RPM gerador
+
+# =============================================================================
+# 1. METODOLOGIA
+# =============================================================================
+criterio_potencial:
+  formula: "potencial_X = 0.35*impacto_didatico + 0.25*alcance + 0.25*diferenciacao + 0.15*viabilidade_producao"
+  escala: "0-10"
+  threshold_ativo: 7.0 # abaixo disso não compensa investir
+  notas_avaliadas: "top-10 Fase 1 + gaps Fase 2 + backlog Inventário Visual"
+
+# =============================================================================
+# 2. FICHAS DE ATIVO — VISUAIS (potencial ≥ 7)
+# =============================================================================
+visuais_P1_novos:
+
+  - slug: "inversor-12v-vs-24v-corrente-pico"
+    tipo: "exemplo-calculado"
+    nota_alvo: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+    potencial_X: 9.1
+    justificativa: "Cálculo crítico: iniciantes escolhem 12V para cargas altas e queimam cabos. Exemplo numérico 3000W em 12V vs 24V (250A vs 125A) + surto é pedagógico."
+    dependencias: "nenhuma — spec puro"
+    backlog_origem: "Backlog Editorial § Criação de exemplo calculado"
+    esforco: "1h (spec JSON)"
+    prioridade: "P1"
+
+  - slug: "shunt-soc-corrente-liquida"
+    tipo: "fluxo-de-medicao"
+    nota_alvo: "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+    potencial_X: 8.7
+    justificativa: "Shunt + SoC + corrente líquida é confusão comum; visual conecta medição física ao cálculo de estado."
+    dependencias: "nenhuma"
+    backlog_origem: "Backlog Editorial § Exemplo de leitura de shunt"
+    esforco: "1h"
+    prioridade: "P1"
+
+  - slug: "iso-10133-vs-13297-sucessao"
+    tipo: "quadro-historico"
+    nota_alvo: "40_Distribuicao_Protecao_e_Aterramento/Bonding.md + Tipos de Bateria.md + Bancos de Bateria.md"
+    potencial_X: 8.4
+    justificativa: "Documenta aposentadoria de ISO 10133 e sucessão por 13297:2020. Preventiva — se alguém reintroduzir a norma antiga o visual argumenta contra."
+    dependencias: "nenhuma"
+    backlog_origem: "Fase 1 R01 — achado sistêmico"
+    esforco: "45min"
+    prioridade: "P1"
+
+  - slug: "mmsi-dsc-epirb-cartilha"
+    tipo: "cartilha-processo"
+    nota_alvo: "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md + EPIRB + VHF"
+    potencial_X: 8.3
+    justificativa: "MMSI + DSC + EPIRB é matéria regulatória-prática que confunde iniciantes; cartilha por passos é natural."
+    dependencias: "nenhuma"
+    backlog_origem: "Inventário Visual R05 — Próximos candidatos"
+    esforco: "1h15"
+    prioridade: "P1"
+
+  - slug: "simbologia-eletrica-nautica"
+    tipo: "tabela-referencial"
+    nota_alvo: "10_Fundamentos_e_Projeto/Simbologia Elétrica Náutica.md"
+    potencial_X: 8.0
+    justificativa: "Nota existente sem ativo visual; tabela de símbolos é alto-reuso didático."
+    dependencias: "nenhuma"
+    backlog_origem: "Inventário Visual 10_Fundamentos — Próximos candidatos"
+    esforco: "1h30 (muitos símbolos)"
+    prioridade: "P1"
+
+  - slug: "luz-ancora-setores-visibilidade"
+    tipo: "quadro-setores-180"
+    nota_alvo: "55_Iluminacao_e_Sinalizacao/Luz de Âncora.md"
+    potencial_X: 7.9
+    justificativa: "Setores de visibilidade de luzes náuticas são geometria; visual elimina ambiguidade."
+    dependencias: "nenhuma"
+    backlog_origem: "Inventário Visual R05 — Próximos candidatos"
+    esforco: "1h"
+    prioridade: "P1"
+
+  - slug: "quadro-eletrico-arquitetura-premium"
+    tipo: "arquitetura-de-painel"
+    nota_alvo: "40_Distribuicao_Protecao_e_Aterramento/Quadro Elétrico e Painel de Distribuição AC-DC.md"
+    potencial_X: 7.8
+    justificativa: "Nota candidata a reescrita premium (Fase 5); visual arquitetural puxa a reescrita. Já existe `quadro-ac-dc-camadas` — avaliar se este seria evolução."
+    dependencias: "revisar existente antes"
+    backlog_origem: "Fase 2 gaps 40_Distribuicao_*"
+    esforco: "2h (inclui revisão do existente)"
+    prioridade: "P2"
+
+  - slug: "ac-dc-pe-bonding-analogia"
+    tipo: "analogia-visual-controlada"
+    nota_alvo: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    potencial_X: 8.6
+    justificativa: "Tópico sinalizado em Fase 0 v2 como confusão sistêmica; analogia visual controlada (não metafórica solta) é ferramenta didática alta ROI."
+    dependencias: "cuidado editorial — analogias erradas pioram"
+    backlog_origem: "Backlog Editorial § Criação de analogia"
+    esforco: "2h (mais revisão editorial)"
+    prioridade: "P1"
+
+# =============================================================================
+# 3. FICHAS DE ATIVO — FERRAMENTAS PYTHON (potencial ≥ 7)
+# =============================================================================
+ferramentas_P1_novas:
+
+  - nome: "migrate_frontmatter.py"
+    potencial_X: 9.8
+    justificativa: "DEC-05 Fase 2 — libera 97 notas pendentes de migração; primeira entrega operacional Fase 2"
+    entrada: "vault path + whitelist de normas conhecidas"
+    saida: "frontmatter migrado (jurisdiction lista + reviewed_on + normas_citadas parseado)"
+    duplica_existente: false
+    arquivo_destino: "scripts/migrate_frontmatter.py"
+    esforco: "3h desenvolvimento + 1h validação"
+    prioridade: "P1 (BLOQUEANTE)"
+
+  - nome: "generate_fase_indice.py"
+    potencial_X: 8.5
+    justificativa: "AUT-01 Fase 2 — agrega YAMLs de rodada em índice navegável; reaproveitável por fase"
+    entrada: "diretório `_Editorial/`"
+    saida: "`_Editorial/fase_N_indice.yaml` com achados consolidados + tabelas ranqueadas"
+    duplica_existente: false
+    arquivo_destino: "scripts/generate_fase_indice.py"
+    esforco: "2h"
+    prioridade: "P1"
+
+  - nome: "detect_abyc_family.py"
+    potencial_X: 8.2
+    justificativa: "Grep transversal automatizado — foi a técnica que pegou 3 P0 em R04; deve virar rotina editorial mensal"
+    entrada: "vault path + padrão (ABYC E-##, H-##, A-##)"
+    saida: "relatório com ocorrências + famílias detectadas + cruzamento com registro_normas.yaml"
+    duplica_existente: false
+    arquivo_destino: "scripts/detect_abyc_family.py"
+    esforco: "2h"
+    prioridade: "P1"
+
+  - nome: "validate_audit_yaml.py"
+    potencial_X: 7.6
+    justificativa: "DEC-04 Fase 2 — schema validator para YAMLs de auditoria; evita drift compacta/verbose"
+    entrada: "YAMLs de rodada"
+    saida: "validação contra JSON schema + relatório de divergências"
+    duplica_existente: false
+    arquivo_destino: "scripts/validate_audit_yaml.py"
+    esforco: "1h30"
+    prioridade: "P2"
+
+  - nome: "check_source_urls.py"
+    potencial_X: 7.4
+    justificativa: "ST-P2-02 — verifica URLs em source_urls (respeitando robots.txt); pegaria o bug ANATEL antes"
+    entrada: "vault path"
+    saida: "relatório de 404 + URLs malformadas"
+    duplica_existente: false
+    arquivo_destino: "scripts/check_source_urls.py"
+    esforco: "2h"
+    prioridade: "P2"
+
+# =============================================================================
+# 4. SIMULAÇÕES (potencial ≥ 7 — nenhuma existe hoje)
+# =============================================================================
+simulacoes_P1_novas:
+
+  - nome: "simulador-autonomia-banco"
+    tipo: "simulacao-parametrica"
+    nota_alvo: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+    potencial_X: 8.5
+    justificativa: "Já tem visual estático (autonomia-banco-energia-dia); simulação interativa é upgrade premium natural"
+    entrada: "capacidade Ah, cargas típicas, DoD, eficiência"
+    saida: "autonomia em horas + gráfico decaimento + alertas de subdimensionamento"
+    plataforma_alvo: "HTML+JS (embutível) ou Python standalone"
+    esforco: "6h"
+    prioridade: "P2 (pós-sprint 1 Fase 3)"
+
+  - nome: "simulador-queda-tensao-cabo-dc"
+    tipo: "simulacao-parametrica"
+    nota_alvo: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+    potencial_X: 8.3
+    justificativa: "Queda de tensão é cálculo central; simulação interativa permite testar vários cenários"
+    entrada: "bitola, comprimento, corrente"
+    saida: "queda % + classe de aceitação + sugestão de bitola"
+    plataforma_alvo: "HTML+JS (embutível)"
+    esforco: "5h"
+    prioridade: "P2"
+
+# =============================================================================
+# 5. RANKING CONSOLIDADO (visuais + ferramentas + simulações)
+# =============================================================================
+ranking_consolidado:
+  top_ativos_fase3:
+    - rank: 1
+      nome: "migrate_frontmatter.py"
+      tipo: "ferramenta"
+      potencial_X: 9.8
+      status: "BLOQUEANTE — desenvolver sprint 1"
+    - rank: 2
+      nome: "inversor-12v-vs-24v-corrente-pico"
+      tipo: "visual"
+      potencial_X: 9.1
+      status: "spec pronta em sprint 1"
+    - rank: 3
+      nome: "shunt-soc-corrente-liquida"
+      tipo: "visual"
+      potencial_X: 8.7
+      status: "spec pronta em sprint 1"
+    - rank: 4
+      nome: "ac-dc-pe-bonding-analogia"
+      tipo: "visual"
+      potencial_X: 8.6
+      status: "spec + revisão editorial sprint 2"
+    - rank: 5
+      nome: "generate_fase_indice.py"
+      tipo: "ferramenta"
+      potencial_X: 8.5
+      status: "sprint 1"
+    - rank: 6
+      nome: "simulador-autonomia-banco"
+      tipo: "simulacao"
+      potencial_X: 8.5
+      status: "P2 — sprint 3 ou Fase 4"
+    - rank: 7
+      nome: "iso-10133-vs-13297-sucessao"
+      tipo: "visual"
+      potencial_X: 8.4
+      status: "spec sprint 1"
+    - rank: 8
+      nome: "mmsi-dsc-epirb-cartilha"
+      tipo: "visual"
+      potencial_X: 8.3
+      status: "sprint 2"
+    - rank: 9
+      nome: "simulador-queda-tensao-cabo-dc"
+      tipo: "simulacao"
+      potencial_X: 8.3
+      status: "P2"
+    - rank: 10
+      nome: "detect_abyc_family.py"
+      tipo: "ferramenta"
+      potencial_X: 8.2
+      status: "sprint 2"
+
+# =============================================================================
+# 6. VERIFICAÇÃO DE NÃO-DUPLICAÇÃO
+# =============================================================================
+verificacao_duplicacao:
+  visuais_ja_existentes_revisados:
+    - "onda-pura-vs-onda-quadrada (Inversora — diferente do novo 12V-vs-24V proposto)"
+    - "50hz-vs-60hz (frequência, não corrente)"
+    - "bateria-zona-util-vs-recarga (SoC qualitativo, não shunt)"
+    - "autonomia-banco-energia-dia (estático — simulador é upgrade)"
+    - "queda-tensao-cabos-dc (estático — simulador é upgrade)"
+    - "quadro-ac-dc-camadas (arquitetura conceitual — não duplica premium proposto)"
+  ferramentas_ja_existentes_revisadas:
+    - "standardize_citations.py: NÃO duplica migrate_frontmatter (aquele normaliza citações; este migra YAML)"
+    - "validate_vault.py: NÃO duplica validate_audit_yaml (aquele valida notas; este valida YAMLs de auditoria)"
+    - "build_manifest.py: NÃO duplica generate_fase_indice (aquele agrega notas; este agrega YAMLs)"
+  simulacoes:
+    - "nenhuma existe — sem risco de duplicação"
+  conclusao: "0 duplicações; todos os ativos propostos preenchem gap real"
+
+# =============================================================================
+# 7. ESTIMATIVA DE ESFORÇO TOTAL
+# =============================================================================
+esforco_totais:
+  visuais_P1:
+    total_specs: 8
+    esforco_por_spec_medio: "1h10"
+    total_estimado: "~9h"
+  ferramentas_P1:
+    total_scripts: 5
+    esforco_total: "~10h30"
+  simulacoes_P2:
+    total: 2
+    esforco_total: "~11h"
+  total_fase3: "~30h (vs 10h original — escopo expandiu porque Fase 1+2 descobriram mais gaps)"
+
+observacao: |
+  10h do plano original ficam no escopo dos VISUAIS + 2 ferramentas principais
+  (migrate_frontmatter + generate_fase_indice). Os demais entram em backlog
+  ativo para execução em Fase 4 ou como sprints subsequentes.
+
+proxima_fase: "Fase 4 — arquitetura + roadmap + matriz esforço×impacto×risco"

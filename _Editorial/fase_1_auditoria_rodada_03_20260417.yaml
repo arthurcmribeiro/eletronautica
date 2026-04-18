@@ -1,0 +1,186 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 03
+# Data: 2026-04-17
+# Escopo: thread 1-B (cálculos Tier-1 e documentação de projeto)
+# Formato compacto
+rodada: 3
+data: "2026-04-17"
+notas_auditadas: 5
+thread: "1-B"
+formato: "compacto"
+
+notas:
+
+  - arquivo: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+    thread: "1-B"
+    papel: "procedimento Tier-1 de cálculo de bitola"
+    achados:
+      - id: P1-R03-01
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 4 normas"
+        status: "aplicado"
+      - id: P2-R03-02
+        tipo: "imprecisão de conversão"
+        descricao: "Exemplo 2 (bilge): 'AWG 14 (2,5 mm²)' — na prática AWG 14 ≈ 2,08 mm²; 2,5 mm² ≈ AWG 13. A fórmula dá 2,4 mm², então a escolha correta seria AWG 13 ou 'arredondar para 2,5 mm²'"
+        acao: "em enriquecimento futuro, reformular para 'AWG 13 (2,62 mm²)' ou 'seção métrica 2,5 mm² (≈ AWG 13)'"
+        status: "registrado"
+      - id: P2-R03-03
+        tipo: "inconsistência interna"
+        descricao: "Fator de margem 1,25 aplicado nos Exemplos 2 e 3 mas não formalizado na seção de fórmula; Exemplo 1 usa 'com margem' sem valor explícito (2,1 → 2,6A ≈ 1,24)"
+        acao: "adicionar passo formal 'I_projeto = I_nominal × 1,25' na seção de fórmula"
+        status: "registrado"
+      - id: P2-R03-04
+        tipo: "precisão de referência"
+        descricao: "UL 1426 citada sem ano"
+        acao: "confirmar edição atual e adicionar"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT", "CAMPO-BR"]
+    veredito: "nota Tier-1 estável; exemplos numericamente corretos; refinamentos P2 agendados"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+    thread: "1-B"
+    papel: "procedimento Tier-1 de autonomia"
+    achados:
+      - id: P1-R03-05
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 4 normas"
+        status: "aplicado"
+      - id: P1-R03-06
+        tipo: "erro numérico recorrente"
+        descricao: |
+          Load list template: 'Geladeira DC — 12V — — contínua — 60Wh/24h' — mesma subestimação detectada na R02 para Projeto Elétrico.
+          Valor ~10× menor que realidade de campo (Engel/Isotherm: ~40W médio ciclo, duty 40% → ~400 Wh/dia).
+          Total da tabela (~1.000 Wh/dia) estava consistente com o erro; recalculado para ~1.300 Wh/dia.
+        acao: "reescrever linha da tabela + recalcular total + adicionar nota no exemplo indicando que os 1.000 Wh são valor didático para a aritmética"
+        status: "aplicado"
+      - id: P1-R03-07
+        tipo: "omissão estrutural"
+        descricao: "Única nota do thread 1-B (e uma das únicas no corpus) SEM seção 'Normas aplicáveis'"
+        acao: "adicionar seção com ABYC E-10/E-11/E-13, ISO 13297, datasheet do fabricante"
+        status: "aplicado"
+    taxonomia: ["DIDAT", "ENG-INT"]
+    veredito: "nota limpa pós-correção; lacuna estrutural de normas resolvida; erro numérico recorrente corrigido em 2ª nota do corpus"
+
+  - arquivo: "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md"
+    thread: "1-B"
+    papel: "nota conceitual comparativa"
+    achados:
+      - id: P1-R03-08
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 4 normas"
+        status: "aplicado"
+      - id: P2-R03-09
+        tipo: "omissão de referências"
+        descricao: "ISO 13297:2020 e NORMAM-211 ausentes em 'Normas aplicáveis', apesar de presentes em notas pares do corpus"
+        acao: "em rodada de enriquecimento futura, adicionar ambas"
+        status: "registrado"
+    taxonomia: ["DIDAT"]
+    veredito: "conteúdo técnico consistente; V_peak 311V OK; eficiência 85-92% OK; math dos exemplos correta"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Diagrama Unifilar — Documentação do Sistema Elétrico.md"
+    thread: "1-B"
+    papel: "nota sobre entregável central do projeto"
+    achados:
+      - id: P1-R03-10
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 5 normas"
+        status: "aplicado"
+      - id: P2-R03-11
+        tipo: "imprecisão de citação"
+        descricao: "'ABYC E-11 (2023) — seção de documentação e diagrama unifilar' — ABYC E-11 tem cláusula 11.12 de WIRING IDENTIFICATION, mas descrever a norma como tendo 'seção de diagrama unifilar' é simplificação. Reformular para 'identificação de condutores e marcação' seria mais preciso"
+        acao: "em enriquecimento futuro"
+        status: "registrado"
+      - id: P2-R03-12
+        tipo: "citação sem ano"
+        descricao: "IEC 60617 sem ano"
+        acao: "confirmar edição"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT"]
+    veredito: "nota sólida; refinamentos de precisão normativa para ciclo futuro"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Inspeção de Cabos Terminais e Conexões.md"
+    thread: "1-B"
+    papel: "procedimento de manutenção de cabeamento"
+    achados:
+      - id: P1-R03-13
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 6 normas"
+        status: "aplicado"
+      - id: P1-R03-14
+        tipo: "erro factual recorrente em nota satélite"
+        descricao: |
+          'ABYC A-28 (edição a verificar) — marine electrical circuit diagrams (identificação de cabos)'.
+          Mesmo padrão do erro P0 da R01 (ABYC A-31 mal rotulado como 'battery chargers' na nota mestre):
+          uma norma da família A é associada a um tópico incorreto. No registro central, A-28 está marcada como
+          'desconhecido' (status após correção autônoma de R01 quando descobri que eu tinha inventado 'Galley Stoves').
+          'Marine electrical circuit diagrams' não é o escopo documentado de A-28 em nenhuma fonte verificável.
+        acao: "remover a descrição falsa; deixar como 'edição/tema a verificar' com comentário HTML explicando a remoção; ver registro central"
+        status: "aplicado"
+      - id: P2-R03-15
+        tipo: "conflito interno de critérios"
+        descricao: |
+          Critério de substituição: 'Queda de tensão > 5% → Substituir'.
+          Mas na nota Dimensionamento de Cabos DC e em ABYC E-11, 3% é para críticos e até 10% é admitido para não-críticos.
+          5% como threshold único é inconsistente com o referencial adotado no resto do corpus.
+        acao: "reformular para 'Queda acima do limite do projeto para o circuito (3% críticos / até 10% não-críticos, ABYC E-11)'"
+        status: "registrado"
+      - id: P2-R03-16
+        tipo: "inconsistência interna"
+        descricao: |
+          'Resistência de isolação < 100 kΩ' conflita com disclaimer anterior da própria nota
+          ('critério final não deve ser tratado como número universal fora do método de ensaio aplicável').
+        acao: "alinhar texto para deixar o 100 kΩ como 'valor de alerta de campo' em vez de número absoluto"
+        status: "registrado"
+    taxonomia: ["CAMPO-BR", "ENG-INT"]
+    veredito: "erro factual satélite corrigido (A-28); ajustes de coerência ficam para rodada de enriquecimento"
+
+sinais_de_risco:
+  P0: 0
+  P1: 7
+  P2: 9
+  contradicoes_inter_notas: 1
+  contradicoes_resolvidas_na_rodada: 1
+
+contradicoes_transversais:
+  - descricao: "ABYC A-28 estava associada a 'marine electrical circuit diagrams' em Inspeção, mas registrada como 'desconhecido' no registro central e sem tópico afirmado na nota mestre. Contradição inter-notas."
+    status: "resolvida nesta rodada removendo a associação falsa da nota Inspeção"
+
+metricas:
+  tempo_real_rodada: "~1h10"
+  notas_com_frontmatter_padronizado_apos_R03: "13 (3 na R01 + 5 na R02 + 5 na R03)"
+  erros_factuais_corrigidos_fase_1: 2  # A-31 na R01, A-28 na R03
+  erros_numericos_recorrentes_resolvidos: 2  # geladeira DC em R02 e R03
+  notas_sem_secao_normas_detectadas_e_corrigidas: 1
+
+acoes_aplicadas_na_rodada:
+  - "5 frontmatters convertidos para padrão (lista + normas_citadas)"
+  - "Banco de Baterias: +seção 'Normas aplicáveis' (estava ausente)"
+  - "Banco de Baterias: geladeira DC 60 Wh/dia → ~400 Wh/dia; total 1.000 → 1.300 Wh/dia"
+  - "Banco de Baterias: nota explicativa no exemplo 1.000 Wh indicando valor didático"
+  - "Inspeção de Cabos: removida associação falsa A-28 = 'marine electrical circuit diagrams'; adicionado comentário HTML de rastreabilidade"
+  - "Inspeção de Cabos: +ISO 13297:2020 nas normas aplicáveis"
+
+observacoes_sistemicas:
+  - "Erro factual tipo-família das normas ABYC (A-28, A-31, possivelmente A-20/A-25) é padrão recorrente do corpus. Recomendação: auditar TODAS as menções A-## em um passe único na próxima rodada ou via grep."
+  - "Erro 'geladeira DC 40-80 Wh/dia' é outro padrão recorrente — provavelmente veio de uma fonte original compartilhada entre notas. Já corrigido em 2 notas; checar se aparece em outras (Carregador, Chartplotter, Bancos Bateria, etc.)."
+  - "Frontmatter legacy (jurisdiction scalar + sem normas_citadas) confirmado como estado antes da convenção: 13/13 notas auditadas na Fase 1 estavam desatualizadas. Justifica passe em massa futuro via script."
+
+acoes_para_rodadas_futuras:
+  - "Grep todas as menções 'ABYC A-##' e validar contra registro central — candidato a pacote adicional"
+  - "Grep 'Geladeira DC' em todas as notas e validar unidade"
+  - "Considerar script de validação de frontmatter (review_jurisdiction lista + normas_citadas presente)"
+
+proxima_rodada:
+  numero: 4
+  thread: "1-C (shore power e AC)"
+  notas_previstas:
+    - "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    - "30_Energia_e_Conversao/Transformador Entrada.md"
+    - "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+    - "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+  tempo_estimado: "~1h30 (4 notas, tema coeso, alto risco normativo)"

@@ -1,0 +1,222 @@
+---
+# Fase 4 - Matriz esforco x impacto x risco (Fase 5 top-10)
+# Data: 2026-04-17
+# Escopo: ranking das reescritas premium com custos e riscos explicitos
+# Fonte: lista top-10 inicial do plano + ajustes da Fase 1 (score_roi real)
+fase: 4
+data: "2026-04-17"
+status: "em_execucao"
+formato: "compact"
+thread: "4-B — matriz de risco Fase 5"
+
+# =============================================================================
+# 1. METODOLOGIA
+# =============================================================================
+metodologia:
+  eixos:
+    esforco:
+      unidade: "horas"
+      niveis:
+        - "baixo: ate 2h"
+        - "medio: 2h a 4h"
+        - "alto: acima de 4h"
+    impacto:
+      unidade: "score qualitativo (1-10)"
+      criterios:
+        - "alcance pedagogico (quantos alunos tocam)"
+        - "peso de risco fisico/legal se a nota errar"
+        - "densidade de links no vault"
+    risco:
+      unidade: "score qualitativo (1-10)"
+      criterios:
+        - "risco normativo (ISO/ABYC/NORMAM em revisao)"
+        - "risco de contradicao intra-vault"
+        - "risco de alucinacao tecnica se o modelo reescrever sem supervisao"
+  formula_prioridade: "prio = 0.40*impacto + 0.30*(10-risco) + 0.30*(10-esforco_norm)"
+  convencao: "prioridade maior = entregar primeiro"
+
+# =============================================================================
+# 2. MATRIZ TOP-10 (candidatas Fase 5)
+# =============================================================================
+# esforco_norm = esforco em horas / 5 (teto 10); impacto e risco sao 1-10.
+matriz:
+  - rank_plano_original: 1
+    nota: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+    esforco_h: 4
+    esforco_norm: 8.0
+    impacto: 10
+    risco: 7
+    prioridade: 6.5    # 0.40*10 + 0.30*3 + 0.30*2 = 4 + 0.9 + 0.6 = 5.5 (recalc com 10-risco, 10-norm)
+    # 0.40*10 + 0.30*(10-7) + 0.30*(10-8.0) = 4.0 + 0.9 + 0.6 = 5.5
+    nota_recalculada: 5.5
+    observacoes:
+      - "Eixo do vault inteiro; qualquer erro aqui contamina notas downstream"
+      - "Risco normativo alto — ABYC 2023/ISO 2020 em revisao; verificar edicao antes de publicar"
+      - "Deve ser reescrita apos migrate_frontmatter rodar; senao campos ficam inconsistentes"
+
+  - rank_plano_original: 2
+    nota: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+    esforco_h: 3
+    esforco_norm: 6.0
+    impacto: 9
+    risco: 5
+    nota_recalculada: 6.3   # 0.40*9 + 0.30*5 + 0.30*4.0 = 3.6 + 1.5 + 1.2
+    observacoes:
+      - "Nota mais usada em campo; calculadora Python acompanha"
+      - "Risco medio: ABYC E-11 cobre tabelas ja consensuadas"
+
+  - rank_plano_original: 3
+    nota: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    esforco_h: 2
+    esforco_norm: 4.0
+    impacto: 10
+    risco: 4
+    nota_recalculada: 7.6   # 0.40*10 + 0.30*6 + 0.30*6.0 = 4.0 + 1.8 + 1.8
+    observacoes:
+      - "Ja reescrita na Fase 1 R06; precisa apenas validacao + visual ac-dc-pe-bonding-analogia"
+      - "Risco baixo: conceitual, nao normativo; erro pedagogico mas nao regulatorio"
+
+  - rank_plano_original: 4
+    nota: "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+    esforco_h: 3
+    esforco_norm: 6.0
+    impacto: 9
+    risco: 5
+    nota_recalculada: 6.3   # idem item 2
+    observacoes:
+      - "Risco real de dano ao casco se errado; cruzamento com Aterramento e Anodos"
+      - "Exige visual ac-dc-pe-bonding-analogia + iso-10133-vs-13297-sucessao"
+
+  - rank_plano_original: 5
+    nota: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    esforco_h: 3
+    esforco_norm: 6.0
+    impacto: 8
+    risco: 6
+    nota_recalculada: 5.6   # 0.40*8 + 0.30*4 + 0.30*4.0 = 3.2 + 1.2 + 1.2
+    observacoes:
+      - "Gateway regulatorio; 127/60 vs 220/50 confunde muito aluno brasileiro"
+      - "Risco medio-alto: regulacao eletrica varia por marina/jurisdicao"
+
+  - rank_plano_original: 6
+    nota: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    esforco_h: 4
+    esforco_norm: 8.0
+    impacto: 9
+    risco: 4
+    nota_recalculada: 6.0   # 0.40*9 + 0.30*6 + 0.30*2.0 = 3.6 + 1.8 + 0.6
+    observacoes:
+      - "Nota mais densa e linkada em 20_Baterias"
+      - "Risco baixo conceitualmente; alto risco de drift se tipos de bateria evoluirem"
+
+  - rank_plano_original: 7
+    nota: "60_Automacao_Conectividade_e_Monitoramento/NMEA 2000 - NMEA 0183.md"
+    esforco_h: 3
+    esforco_norm: 6.0
+    impacto: 7
+    risco: 3
+    nota_recalculada: 6.3   # 0.40*7 + 0.30*7 + 0.30*4.0 = 2.8 + 2.1 + 1.2
+    observacoes:
+      - "Risco baixo: protocolos estabilizados; IEC 61162-1/3 + SAE J1939 consolidados"
+      - "Prioridade alta por baixo risco + medio impacto"
+
+  - rank_plano_original: 8
+    nota: "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+    esforco_h: 2
+    esforco_norm: 4.0
+    impacto: 7
+    risco: 5
+    nota_recalculada: 6.1   # 0.40*7 + 0.30*5 + 0.30*6.0 = 2.8 + 1.5 + 1.8
+    observacoes:
+      - "COLREGS com consequencias legais claras"
+      - "Risco medio: setores de luz podem mudar de interpretacao nacional"
+      - "Exige visual luz-ancora-setores-visibilidade (candidato P2 Fase 3)"
+
+  - rank_plano_original: 9
+    nota: "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+    esforco_h: 3
+    esforco_norm: 6.0
+    impacto: 8
+    risco: 4
+    nota_recalculada: 6.4   # 0.40*8 + 0.30*6 + 0.30*4.0 = 3.2 + 1.8 + 1.2
+    observacoes:
+      - "Dano invisivel; diferenciacao pedagogica alta via visual corrosao-stray-current"
+      - "Risco baixo: conceito estabilizado"
+
+  - rank_plano_original: 10
+    nota: "10_Fundamentos_e_Projeto/Troubleshooting — Diagnóstico de Falhas Elétricas.md"
+    esforco_h: 5
+    esforco_norm: 10.0
+    impacto: 9
+    risco: 3
+    nota_recalculada: 6.6   # 0.40*9 + 0.30*7 + 0.30*0.0 = 3.6 + 2.1 + 0.0
+    observacoes:
+      - "Nota de dia-a-dia; melhor candidato para arvore de decisao interativa (Fase 4+)"
+      - "Esforco alto por volume de cenarios; risco baixo"
+
+# =============================================================================
+# 3. ORDEM DE ENTREGA RECOMENDADA (por prioridade recalculada)
+# =============================================================================
+ordem_recomendada:
+  - posicao: 1
+    nota_recalculada: 7.6
+    nome: "Neutro, Negativo, Terra, PE, Bonding e DR"
+    justificativa: "Menor esforco (ja esta parcialmente reescrita) + impacto maximo + risco baixo"
+  - posicao: 2
+    nota_recalculada: 6.6
+    nome: "Troubleshooting"
+    justificativa: "Baixo risco, alto impacto; esforco alto compensado por valor pedagogico"
+  - posicao: 3
+    nota_recalculada: 6.4
+    nome: "Correntes Parasitas — Stray Currents"
+    justificativa: "Dano invisivel; baixo risco tecnico; visual ja existe"
+  - posicao: 4
+    nota_recalculada: 6.3
+    nome: "Dimensionamento de Cabos DC"
+    justificativa: "Empate 4a-6a posicao; calculadora Python acompanha"
+  - posicao: 5
+    nota_recalculada: 6.3
+    nome: "Bonding — Sistema de Interligacao de Massas"
+    justificativa: "Empate; risco real de dano ao casco; visual disponivel"
+  - posicao: 6
+    nota_recalculada: 6.3
+    nome: "NMEA 2000 - NMEA 0183"
+    justificativa: "Empate; protocolos estaveis, risco baixo"
+  - posicao: 7
+    nota_recalculada: 6.1
+    nome: "Luz de Tope"
+    justificativa: "COLREGS aplicavel; pode vir acompanhada do visual P2 luz-ancora"
+  - posicao: 8
+    nota_recalculada: 6.0
+    nome: "Bancos de Bateria"
+    justificativa: "Esforco alto por densidade; entregar apos ferramentas P1 Fase 3"
+  - posicao: 9
+    nota_recalculada: 5.6
+    nome: "CAIS (Pier) (AC)"
+    justificativa: "Risco normativo medio-alto; esperar confirmacao editorial sobre jurisdicoes"
+  - posicao: 10
+    nota_recalculada: 5.5
+    nome: "Normas e Regulamentacoes — ABYC ISO e Brasil"
+    justificativa: "Maior impacto, maior risco; entregar por ultimo apos migrate_frontmatter rodar"
+
+# =============================================================================
+# 4. NOTAS OPERACIONAIS
+# =============================================================================
+notas_operacionais:
+  regras_de_corte:
+    - "Reescrita bloqueia se houver P0 nao resolvido na nota"
+    - "Reescrita de 'Normas e Regulamentacoes' NAO pode preceder migrate_frontmatter --apply"
+    - "Reescrita de notas com contradicoes ativas nao resolvidas (matriz Fase 1) fica congelada"
+
+  dependencias_entre_notas:
+    - "'Bonding' e 'Neutro/PE' se referenciam; revisar em pacote"
+    - "'Bancos de Bateria' + 'Tipos de Bateria' + 'Monitor BMV': triangulo denso, reescrever em sequencia"
+    - "'CAIS' + 'Shore Power Brasil' + 'Isolador Galvanico': cluster AC regulatorio"
+
+  visuais_acompanhantes:
+    - "Neutro/PE + Bonding <- ac-dc-pe-bonding-analogia"
+    - "Dimensionamento Cabos DC <- inversor-12v-vs-24v-corrente-pico"
+    - "Bancos + Monitor BMV <- shunt-soc-corrente-liquida"
+    - "Bonding <- iso-10133-vs-13297-sucessao"
+
+proxima_etapa: "Consolidado mestre Fase 4"

@@ -1,0 +1,255 @@
+---
+# Fase 2 — Governança _Editorial e crítica da stack
+# Data: 2026-04-17
+# Escopo: avaliação se a estrutura editorial + stack (scripts, CI, manifest) escala para 200+ notas
+rodada: "fase_2_governanca_stack"
+data: "2026-04-17"
+
+# =============================================================================
+# 1. GOVERNANÇA _Editorial
+# =============================================================================
+estado_atual:
+  total_arquivos_editoriais: 14
+  tipos:
+    - "plano/estratégia: plano_execucao_auditoria.md (~900 linhas)"
+    - "relatórios: Auditoria Geral da Base, Log de Evolução, Auditoria e lacunas"
+    - "inventários: Inventário Visual da Base"
+    - "backlogs: Backlog de Evolução Editorial"
+    - "convenções: convencao_citacao_normativa, citation_patches_20260416"
+    - "registros: registro_normas.yaml, bugs_conhecidos.md, normas_monitoradas.yaml (novo)"
+    - "auditorias YAML: 9 (R01-R09)"
+
+  tamanho_maior_arquivo: "plano_execucao_auditoria.md (~900 linhas, crescente)"
+
+  padrao_nome:
+    auditoria_fase: "fase_N_auditoria_rodada_RR_YYYYMMDD.yaml"
+    gap_yaml: "fase_N_<topico>_YYYYMMDD.yaml"
+    relatorio_md: "<Nome Descritivo>.md"
+
+diagnostico:
+  escalabilidade_147_notas:
+    status: "ADEQUADA"
+    razao: "Pasta ainda navegável; convenção YAML compacto mantém volume controlado"
+
+  escalabilidade_200_plus_notas:
+    status: "ATENÇÃO — precisa redesign em 2 pontos"
+    gargalos_identificados:
+      - id: "GG-01"
+        descricao: "plano_execucao_auditoria.md cresce indefinidamente — logs R01-R09 + futuros"
+        impacto: "arquivo virará difícil de navegar; edições perigosas"
+        solucao_proposta: "quebrar em plano_fase_1.md, plano_fase_2.md, etc. + plano_master.md como índice"
+        esforco: "30 min"
+
+      - id: "GG-02"
+        descricao: "9 YAMLs de rodada espalhados sem índice"
+        impacto: "análise agregada requer ler todos; bom para Fase 2 mas repetitivo"
+        solucao_proposta: "gerar `_Editorial/fase_1_indice.yaml` com resumo ranqueado"
+        esforco: "15 min"
+
+      - id: "GG-03"
+        descricao: "Sem distinção visível entre artefatos 'vivos' vs 'históricos'"
+        impacto: "citation_patches_20260416.md já é histórico; mistura com convencao_citacao_normativa.md que é ativa"
+        solucao_proposta: "subpasta `_Editorial/arquivo/` para artefatos fechados com selo de data"
+        esforco: "20 min"
+
+      - id: "GG-04"
+        descricao: "Schema YAML de auditoria não é formalmente validado"
+        impacto: "drift entre R01 (verbose) e R04-R08 (compacto) ocorreu sem controle"
+        solucao_proposta: "criar `_Editorial/schema_auditoria_rodada.yaml` e validar via script"
+        esforco: "1h"
+
+    acao_consolidada_fase2:
+      - "Criar subpasta `_Editorial/arquivo/` e mover `citation_patches_20260416.md`"
+      - "Dividir `plano_execucao_auditoria.md` em arquivos por fase quando Fase 2 fechar"
+      - "Gerar índice de YAMLs de auditoria"
+      - "Formalizar schema YAML"
+
+recomendacoes_estruturais:
+  convencoes_a_codificar:
+    - "Notas editoriais e MOCs recebem `review_jurisdiction` mas NÃO `normas_citadas` (confirmado em R06)"
+    - "Citação com hedge: `CÓDIGO (edição a verificar)` + HTML TODO apontando para `registro_normas.yaml`"
+    - "Nomenclatura de arquivos de auditoria: `fase_N_<tipo>_<rodada>_YYYYMMDD.yaml`"
+    - "Artefatos históricos/fechados: `_Editorial/arquivo/<nome>_YYYYMMDD.md`"
+
+  automacoes_recomendadas:
+    - id: "AUT-01"
+      acao: "Script Python para gerar `fase_1_indice.yaml` agregando R01-R09"
+      valor: "reaproveitável para cada fase"
+      esforco: "2h"
+    - id: "AUT-02"
+      acao: "Script de migração de frontmatter em massa (97 notas pendentes)"
+      valor: "libera Fase 2 + evita trabalho manual repetitivo"
+      esforco: "3h"
+    - id: "AUT-03"
+      acao: "Regra CI para detectar `ISO 10133` (aposentada) em qualquer nota"
+      valor: "proteção contra regressão"
+      esforco: "30 min"
+
+# =============================================================================
+# 2. CRÍTICA DA STACK TÉCNICA
+# =============================================================================
+stack_inventario:
+  scripts_python:
+    - nome: "build_manifest.py"
+      linhas: 21
+      funcao: "gera `manifest/content-manifest.json` a partir das notas"
+      estado: "mínimo viável; sem score_roi"
+    - nome: "validate_vault.py"
+      linhas: 88
+      funcao: "valida frontmatter + sinaliza normas sensíveis"
+      estado: "funcional no root; BUG em worktrees (.claude/) — corrigido em vault_tools? verificar"
+    - nome: "vault_tools.py"
+      linhas: 161
+      funcao: "helpers compartilhados; walker de notas"
+      estado: "corrigido para excluir .claude e _visuals (log de evolução 2026-04-14)"
+    - nome: "standardize_citations.py"
+      linhas: 493
+      funcao: "normaliza citações normativas via regex + registro central"
+      estado: "FUNCIONAL mas com bug ANATEL URL (registrado bugs §5)"
+    - nome: "render_visuals.py"
+      linhas: 28
+      funcao: "renderiza SVG+PNG dos specs JSON"
+      estado: "funcional; usado em CI"
+    - nome: "renderer.py (engine)"
+      linhas: 1210
+      funcao: "engine de renderização SVG custom"
+      estado: "denso mas estável; 45 specs rodam clean"
+    - nome: "integrate_visuals.py"
+      linhas: 123
+      funcao: "integra visuais em notas-alvo via marcador"
+      estado: "funcional"
+  ci_workflow:
+    arquivo: ".github/workflows/vault-check.yml"
+    etapas: ["validate_vault", "build_manifest", "render_visuals", "upload artifacts"]
+    cobertura: "3 etapas smoke + artifacts"
+    lacunas:
+      - "não roda `standardize_citations.py` em modo dry-run (poderia detectar regressões)"
+      - "não valida schema YAML de auditoria"
+      - "não verifica URLs em `source_urls` (404, formatação)"
+      - "não executa em worktrees (desktop only)"
+
+diagnostico_stack:
+  P0_stack:
+    - id: "ST-P0-01"
+      descricao: "`standardize_citations.py` pode corromper URLs (bug ANATEL)"
+      correcao: "lookbehind regex `(?<!://)(?<!www\\.)` antes de injetar TODO"
+      prioridade: "P0 se script for reativado; P2 atualmente (neutralizado pós-R01)"
+      esforco: "1h incluindo testes"
+
+  P1_stack:
+    - id: "ST-P1-01"
+      descricao: "`build_manifest.py` NÃO lê `score_roi`, `audit_nota_global`, `audit_acao`"
+      impacto: "manifest não serve como dashboard de prioridade editorial"
+      correcao: "ler frontmatter de auditoria e propagar ao JSON"
+      esforco: "3h"
+
+    - id: "ST-P1-02"
+      descricao: "`validate_vault.py` não tem regra para ISO 10133 (aposentada)"
+      impacto: "regressão silenciosa possível"
+      correcao: "adicionar regra no validador com severity=ERROR"
+      esforco: "30 min"
+
+    - id: "ST-P1-03"
+      descricao: "CI não roda em `.claude/worktrees/` (bug vault_tools corrigido mas CI não testa isso)"
+      impacto: "auditorias em worktrees dependem de memória humana"
+      correcao: "adicionar job CI específico para worktrees"
+      esforco: "1h"
+
+  P2_stack:
+    - id: "ST-P2-01"
+      descricao: "schema YAML de auditoria não é validado programaticamente"
+      correcao: "adicionar JSON schema + etapa CI"
+      esforco: "1h"
+
+    - id: "ST-P2-02"
+      descricao: "sem verificação de link quebrado em `source_urls`"
+      correcao: "job noturno com `requests` (e respeitando robots.txt)"
+      esforco: "2h"
+
+    - id: "ST-P2-03"
+      descricao: "`integrate_visuals.py` não verifica se visual existe antes de integrar"
+      correcao: "pré-check de spec existente"
+      esforco: "30 min"
+
+  P3_stack:
+    - id: "ST-P3-01"
+      descricao: "sem Notion export canônico"
+      contexto: "Fase 0 sinalizou que a fonte original é Notion; vault hoje é master, mas sincronia bidirecional não existe"
+      correcao: "decidir oficialmente que vault é source-of-truth (rebaixar Notion) ou criar pipeline N8N"
+      esforco: "DECISÃO primeiro; implementação pode ser 10-40h"
+
+# =============================================================================
+# 3. DECISÕES OBJETIVAS RECOMENDADAS
+# =============================================================================
+decisoes_recomendadas:
+  - id: "DEC-01"
+    tema: "Notion"
+    pergunta: "Notion permanece como fonte ou é aposentado?"
+    recomendacao: "APOSENTAR — vault Markdown + git é master definitivo pós-Fase 1"
+    justificativa: "auditoria + correções P0 ocorrem no vault; Notion vira stale; manter dualidade custa 3-5h/mês editorial"
+    impacto: "descontinuar sincronia Notion→vault (que não existe de qualquer forma) e documentar o status"
+    prioridade: "P1 — bloqueante para Fase 3"
+
+  - id: "DEC-02"
+    tema: "score_roi no manifest"
+    pergunta: "manifest vira dashboard de prioridade editorial?"
+    recomendacao: "SIM — estender build_manifest.py para ler score_roi + audit_acao"
+    justificativa: "top-10 da Fase 1 não tem como ser consumido externamente hoje"
+    esforco: "3h"
+    prioridade: "P1"
+
+  - id: "DEC-03"
+    tema: "CI em worktrees"
+    pergunta: "CI executa em branches de worktree (.claude/worktrees/<branch>)?"
+    recomendacao: "CRIAR job dedicado — pequeno mas importante"
+    justificativa: "bug de vault_tools foi silencioso; auditorias em worktree não têm rede de segurança"
+    esforco: "1h"
+    prioridade: "P2"
+
+  - id: "DEC-04"
+    tema: "schema YAML auditoria"
+    pergunta: "formalizar schema?"
+    recomendacao: "SIM — mas leve, JSON schema no _Editorial/"
+    justificativa: "drift entre R01 verbose e R04-R08 compacto já aconteceu; documentar os dois como variantes válidas"
+    esforco: "1h"
+    prioridade: "P2"
+
+  - id: "DEC-05"
+    tema: "Governança frontmatter em massa"
+    pergunta: "script de migração automatizado?"
+    recomendacao: "SIM — priority 1 para destravar Fase 2 em massa"
+    justificativa: "97 notas pendentes; fazer manual é 8h+ de trabalho repetitivo"
+    esforco: "3h desenvolvimento + 1h validação"
+    prioridade: "P1 — primeira entrega operacional da Fase 2"
+
+# =============================================================================
+# 4. ROADMAP PRIORIZADO PARA FASE 2
+# =============================================================================
+roadmap_fase2:
+  sprint_1: # ~4h — destravamento operacional
+    - "DEC-05: script migração frontmatter em massa"
+    - "ST-P1-02: regra ISO 10133 no validator"
+    - "AUT-03: regra CI anti-regressão"
+
+  sprint_2: # ~4h — manifest como dashboard
+    - "DEC-02: estender build_manifest.py com score_roi"
+    - "AUT-01: gerar fase_1_indice.yaml"
+    - "GG-02/GG-03: índice + arquivamento"
+
+  sprint_3: # ~2h — consolidação
+    - "GG-01: dividir plano_execucao"
+    - "DEC-04: schema YAML auditoria"
+    - "DEC-01: decisão oficial Notion"
+    - "DEC-03: CI worktrees"
+
+  total_estimado: "~10h (vs 8h original — cresceu 2h por descobertas da Fase 1)"
+
+# =============================================================================
+# 5. OBSERVAÇÕES FINAIS
+# =============================================================================
+observacoes:
+  - "Stack técnica é PEQUENA e bem escrita (2.124 linhas total); refatorar é viável"
+  - "Registro central de normas foi a ADOÇÃO que mais alavancou consistência — confirmar como fundação"
+  - "Bug ANATEL URL é exemplar de como scripts massivos precisam testes de regressão (fase 3 roadmap)"
+  - "Pasta _Editorial tem ~15 arquivos; próximos 90 dias deve chegar a 25-30 — redesign agora é barato"
+  - "Decisão Notion é política mais do que técnica — mas bloqueia Fase 3 (ativos/ferramentas)"

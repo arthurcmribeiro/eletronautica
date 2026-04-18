@@ -3,8 +3,9 @@ title: "Inventário Visual da Base"
 note_type: "audit-report"
 domain: "_Editorial"
 status: "active-inventory"
-reviewed_on: "2026-04-15"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
 ---
 
 # Inventário Visual da Base

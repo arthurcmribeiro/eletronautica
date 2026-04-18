@@ -1,0 +1,173 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 02
+# Data: 2026-04-17
+# Escopo: thread 1-A conclusão (revalidação pós-P0) + 1-D (aterramento/neutro/fase)
+# Formato compacto (50 linhas/nota alvo)
+rodada: 2
+data: "2026-04-17"
+notas_auditadas: 5
+threads: ["1-A", "1-D"]
+formato: "compacto pós-Rodada 01"
+observacao_escopo: |
+  Nota "Ânodo" proposta inicialmente não existe como nota dedicada no vault
+  (apenas visual auxiliar em _visuals/generated/anodo-eletrolise-protecao.md).
+  Substituída por "Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas",
+  que é o nó-cruz natural do thread 1-D e referenciada pelas outras 4 notas da rodada.
+
+notas:
+
+  - arquivo: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+    thread: "1-A"
+    papel: "nota-mestre normativa (revalidação pós-P0 Rodada 01)"
+    frontmatter: "ok (atualizada na R01, taxonomia nova aplicada)"
+    achados:
+      - id: P1-R02-01
+        tipo: "omissão frontmatter"
+        descricao: "ABYC E-10 e ABYC A-20/A-25 citadas no corpo mas ausentes de normas_citadas"
+        acao: "adicionar A-20 e A-25 com edição TODO; E-10 já estava presente"
+        status: "aplicado"
+      - id: P2-R02-02
+        tipo: "governança"
+        descricao: "seção 'Como citar normas' não referencia _Editorial/convencao_citacao_normativa.md"
+        acao: "adicionar link à convenção em rodada futura"
+        status: "registrado"
+      - id: P2-R02-03
+        tipo: "dependência externa"
+        descricao: "ABYC A-28 continua com edição não-verificada (bug conhecido 0003)"
+        acao: "aguardar verificação externa; manter TODO-CITAÇÃO"
+        status: "registrado"
+    taxonomia: ["REG-BR", "ENG-INT"]
+    veredito: "nota-mestre estabilizada; P0 da R01 corrigido; pendências só P2"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+    thread: "1-A"
+    papel: "procedimento editorial de projeto (nota de método)"
+    frontmatter: "desatualizado antes da rodada (review_jurisdiction scalar, sem normas_citadas)"
+    achados:
+      - id: P1-R02-04
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction como string única; sem normas_citadas"
+        acao: "converter para lista + adicionar 6 normas"
+        status: "aplicado"
+      - id: P1-R02-05
+        tipo: "erro numérico em exemplo didático"
+        descricao: |
+          Load list table: "Geladeira DC | 40-80 Wh/24h" — unidade errada.
+          Geladeira DC compressor típica (Engel/Isotherm) = 40-80 Ah/dia em 12V => 480-960 Wh/dia.
+          O valor 40-80 Wh/dia subestima em ~10×.
+        acao: "reescrever linha como '~40W médio (ciclo), duty ~40%, 400-800 Wh/dia' e atualizar total típico"
+        status: "aplicado (total revisado 700-1.700 → 1.000-2.200 Wh/dia)"
+      - id: P1-R02-06
+        tipo: "omissão normativa"
+        descricao: "ISO 13297:2020 ausente em 'Normas aplicáveis' apesar de ser a referência small craft"
+        acao: "adicionar entre ABYC E-2 e NORMAM-211"
+        status: "aplicado"
+      - id: P2-R02-07
+        tipo: "enriquecimento"
+        descricao: "seção 'Queda de tensão de projeto' não cita o 3%/10% de ABYC E-11"
+        acao: "em rodada de enriquecimento futura, ancorar 3%/10% com referência"
+        status: "registrado"
+    taxonomia: ["DIDAT", "ENG-INT"]
+    veredito: "limpo para uso didático; erro numérico grave corrigido"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Fase e Neutro.md"
+    thread: "1-D"
+    papel: "nota central de topologia AC (anti-220-fase-fase)"
+    frontmatter: "desatualizado antes da rodada"
+    achados:
+      - id: P1-R02-08
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 4 normas"
+        status: "aplicado"
+      - id: P0-R02-nenhum
+        descricao: "conteúdo técnico auditado e confirmado: tópico central do risco brasileiro está bem construído"
+        status: "sem ação"
+    taxonomia: ["CAMPO-BR", "ENG-INT"]
+    veredito: "nota estratégica do corpus; mantém-se como anchor do tema 220V"
+
+  - arquivo: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+    thread: "1-D"
+    papel: "nota base do esquema de proteção"
+    frontmatter: "desatualizado antes da rodada"
+    achados:
+      - id: P1-R02-09
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 6 normas"
+        status: "aplicado"
+      - id: P1-R02-10
+        tipo: "duplicação em lista de normas"
+        descricao: "ABNT NBR 5410 (2004 + emendas) aparecia duas vezes na seção 'Normas aplicáveis'"
+        acao: "remover duplicata; adicionar ABYC E-2 (2020) e ISO 13297:2020 no lugar"
+        status: "aplicado"
+      - id: P2-R02-11
+        tipo: "precisão técnica"
+        descricao: |
+          Tabela de características afirma "Resistência máxima (ABYC) | ≤ 1 Ω".
+          ABYC E-11 não cita valor absoluto; trata continuidade do PE por prescrição de caminho de baixa impedância.
+          O texto posterior ("baixa impedância é mais importante que um número isolado") compensa, mas a linha da tabela soa categórica.
+        acao: "em enriquecimento futuro, reformular para 'continuidade com baixa impedância (valor de referência de campo ≤ 1 Ω)'"
+        status: "registrado"
+    taxonomia: ["REG-BR", "ENG-INT", "CAMPO-BR"]
+    veredito: "nota sólida; duplicata corrigida; valor 1Ω registrado para revisão futura"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    thread: "1-D"
+    papel: "nota-síntese das diferenças entre os 6 barramentos/funções"
+    frontmatter: "desatualizado antes da rodada"
+    achados:
+      - id: P1-R02-12
+        tipo: "frontmatter desatualizado"
+        descricao: "review_jurisdiction scalar; sem normas_citadas"
+        acao: "converter para lista + adicionar 7 normas"
+        status: "aplicado"
+      - id: P1-R02-13
+        tipo: "conteúdo privado em nota pública"
+        descricao: |
+          Seção "Sua dúvida da Hanse 575" tratava em 2ª pessoa direta uma conversa particular.
+          Inadequado para nota pública (SEO/GEO) e quebra o registro impessoal do resto do corpus.
+        acao: "reenquadrar como 'Caso de campo: dispositivo em série com o verde-amarelo em embarcação europeia'; exemplos Hanse/Bavaria/Beneteau/Jeanneau; ajustar também a pergunta 'Perguntas que esta nota responde'"
+        status: "aplicado"
+    taxonomia: ["ENG-INT", "CAMPO-BR"]
+    veredito: "nota técnica de alto valor; agora profissionalizada para público"
+
+sinais_de_risco:
+  P0: 0
+  P1: 10
+  P2: 4
+  contradicoes_inter_notas: 0
+
+contradicoes_transversais:
+  - "nenhuma nova detectada; ISO 10133 residual foi completamente migrada na R01"
+
+metricas:
+  tempo_real_rodada: "~1h15 (vs 3h estimadas no formato compacto)"
+  frontmatter_padronizado_pre_rodada: "3/5 (Normas mestre, Bonding, Ref Rápida já na R01)"
+  frontmatter_padronizado_pos_rodada: "8/8 notas da thread 1-A + 1-D auditadas"
+  p0_acumulados_fase_1: 1
+  p0_resolvidos: 1
+
+acoes_aplicadas_na_rodada:
+  - "frontmatter de 4 notas convertido para review_jurisdiction lista + normas_citadas"
+  - "Aterramento: duplicata ABNT NBR 5410 removida; +ABYC E-2, +ISO 13297:2020"
+  - "Projeto Elétrico: erro numérico Geladeira corrigido (40-80 Wh → 400-800 Wh); total revisado; +ISO 13297:2020"
+  - "Normas mestre: +ABYC A-20/A-25 em normas_citadas"
+  - "Neutro-Negativo-PE-Bonding-DR: seção 'Hanse 575' reenquadrada para caso genérico de barco europeu"
+
+acoes_para_rodadas_futuras:
+  - "P2-R02-02: ligar 'Como citar normas' à convenção editorial"
+  - "P2-R02-07: Projeto Elétrico — ancorar 3%/10% de queda em ABYC E-11"
+  - "P2-R02-11: Aterramento — reformular linha da tabela '1 Ω' para fraseado de continuidade"
+  - "ABYC A-28, A-20, A-25: todos continuam com edição TODO (bug conhecido 0003)"
+
+proxima_rodada:
+  numero: 3
+  thread: "1-B (cálculos Tier-1)"
+  notas_previstas:
+    - "Dimensionamento de Cabos DC — Cálculo Prático"
+    - "Dimensionamento de Banco de Baterias — Cálculo de Autonomia"
+    - "DC vs AC — Corrente Contínua e Alternada"
+    - "Diagrama Unifilar — Documentação do Sistema Elétrico"
+    - "Inspeção de Cabos Terminais e Conexões"
+  tempo_estimado: "~2h no formato compacto"

@@ -1,0 +1,85 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 05
+# Data: 2026-04-17
+# Escopo: thread 1-D (regulatório navegação) + início de 1-E (_Editorial)
+rodada: 5
+data: "2026-04-17"
+notas_auditadas: 5
+thread: "1-D + 1-E parcial"
+formato: "compacto"
+
+notas:
+  - arquivo: "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+    thread: "1-D"
+    achados:
+      - id: P1-R05-01
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 4 normas (COLREGS 72, NORMAM-01, ISO 16180:2011, USCG 33 CFR 183)"
+        status: "aplicado"
+      - id: P1-R05-02
+        tipo: "URL quebrada"
+        descricao: "source_urls continha 'https://www.gov.br/ANATEL (edição a verificar)/...' — standardizer injetou TODO dentro da URL"
+        acao: "URL normalizada para https://www.gov.br/anatel/..."
+        status: "aplicado"
+    veredito: "nota exemplar COLREGS × prática BR; correção URL crítica"
+
+  - arquivo: "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+    thread: "1-D"
+    achados:
+      - id: P1-R05-03
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 4 normas"
+        status: "aplicado"
+      - id: P2-R05-04
+        tipo: "citação incompleta"
+        descricao: "COLREGS sem ano; NORMAM-01 e USCG 33 CFR 183 TODO edição"
+        status: "registrado"
+    veredito: "nota concisa e correta; pendências normativas menores"
+
+  - arquivo: "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+    thread: "1-D"
+    achados:
+      - id: P1-R05-05
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 5 normas (NMEA 0183/2000, IEC 61162-1/3, ISO 11898)"
+        status: "aplicado"
+      - id: P1-R05-06
+        tipo: "URL quebrada"
+        descricao: "mesma URL ANATEL com TODO injetado"
+        acao: "URL normalizada"
+        status: "aplicado"
+      - id: P2-R05-07
+        tipo: "citações sem ano"
+        descricao: "IEC 61162-1 (2016 ed.5) e IEC 61162-3 TODO edição"
+        status: "registrado"
+    veredito: "nota tecnicamente densa; URLs ANATEL corrigidas"
+
+  - arquivo: "_Editorial/Backlog de Evolução Editorial.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R05-08
+        tipo: "frontmatter desatualizado (editorial)"
+        acao: "jurisdiction lista; nota editorial não cita normas (OK)"
+        status: "aplicado"
+    veredito: "backlog vivo, status OK"
+
+  - arquivo: "_Editorial/Inventário Visual da Base.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R05-09
+        tipo: "frontmatter desatualizado (editorial)"
+        acao: "jurisdiction lista"
+        status: "aplicado"
+    veredito: "inventário ativo, cobertura documentada"
+
+sinais_de_risco:
+  P0: 0
+  P1: 9
+  P2: 2
+
+observacoes_sistemicas:
+  - "BUG novo detectado: o standardizer de citações (R01) injetou '(edição a verificar)' dentro de URLs contendo 'ANATEL'. Detectado e corrigido em 2 notas; possivelmente afeta outras. Registrar em bugs_conhecidos.md."
+
+proxima_rodada:
+  numero: 6
+  thread: "1-E restante (MOCs + _Editorial) + início 1-F"
