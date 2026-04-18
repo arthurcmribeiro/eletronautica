@@ -828,6 +828,37 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## LOG — SESSÃO 2026-04-18 (débitos transversais + Fase 5 estendida #6)
+
+> **Gatilho:** instrução `continuar` + `A + B + C` do responsável editorial — autorizou commits acumulados (A), `migrate_frontmatter --apply` em branch separada (B) e início da Fase 5 estendida (C, DEC-13).
+
+### Débitos transversais fechados
+
+| Débito | Origem | Resultado |
+|--------|--------|-----------|
+| Commit dos arquivos acumulados na worktree | sessões 2026-04-16/17 | 3 commits temáticos: `cf36c9c` (audit infra Fase 1-4), `a162c78` (reescritas Fase 5 + calc DC), `daa258f` (frontmatter cross-vault) |
+| `migrate_frontmatter.py --apply` em branch separada | DEC-08 (Fase 4) | branch `claude/migrate-frontmatter-apply-20260418`, commit `7550a42`: 106 notas normalizadas (review_jurisdiction → lista, normas_citadas via regex, reviewed_on bumped); validate_vault.py passa sem erros bloqueantes; aguarda revisão editorial para merge |
+
+### Fase 5 estendida — primeira nota entregue
+
+| # | Nota | Prio | Δ linhas | Principais ganhos |
+|---|------|------|----------|-------------------|
+| 6 | NMEA 2000 / NMEA 0183 — Rede de Instrumentos | 6.3 | +51 | TL;DR 7 regras (terminadores 120Ω + drop ≤6 m + TX/RX), danger especialista (J1939/SeaTalkNG/AIS Class A/DSC sem coordenadas), glossário 20 termos (Sentence/PGN/Talker/Listener/LEN/NAME/etc.), 3 normas IEC/ISO canonicalizadas (61162-1:2016, 61162-3:2008+A2:2019, 11898-1:2015), NORMAM-204 + ITU-R M.493 adicionados |
+
+### Status Fase 5 estendida (DEC-13)
+
+| Posição | Nota | Status |
+|---------|------|--------|
+| 6 | NMEA 2000 / NMEA 0183 | ✅ entregue 2026-04-18 |
+| 7 | Luz de Tope | pendente — sob demanda |
+| 8 | Bancos de Bateria | pendente — sob demanda |
+| 9 | CAIS (Pier) (AC) | pendente — sob demanda |
+| 10 | Normas e Regulamentações | pendente — entregar por último (após `migrate_frontmatter --apply` mergeado) |
+
+**Estado da worktree após esta sessão:** 4 commits ahead de `origin/main` em `claude/optimistic-jepsen` + branch separada `claude/migrate-frontmatter-apply-20260418` aguardando revisão.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
