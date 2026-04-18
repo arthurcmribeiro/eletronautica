@@ -97,3 +97,11 @@ review_jurisdiction: "Brasil"
 - Fazer revisão visual fina dos SVGs mais estratégicos para curso/apostila.
 - Criar exemplos calculados específicos com números de campo e cautela explícita.
 - Criar versões verticais/compactas dos melhores infográficos para slide, aula e publicação futura.
+
+## 2026-04-18 — Lote 5 — Higiene final de versionamento
+
+- Revisado o estado pós-rodada com validação estrutural completa: `147` notas, `0` erros, `0` avisos.
+- Regenerado `manifest/content-manifest.json` para confirmar consistência do corpus atual.
+- Reexecutado o pipeline visual: `45` specs confirmadas, `45` integrações já presentes e `0` notas alteradas pelo integrador.
+- Identificado que `.obsidian/graph.json` seguia rastreado apesar de já constar no `.gitignore`.
+- Ajustado o versionamento para retirar `graph.json` do Git e evitar ruído local recorrente de layout/zoom do Obsidian.
