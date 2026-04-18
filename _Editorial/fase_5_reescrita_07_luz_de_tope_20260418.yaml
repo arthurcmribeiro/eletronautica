@@ -1,0 +1,111 @@
+---
+# Fase 5 - Reescrita Premium #07 (Fase 5 estendida)
+# Nota: 55_Iluminacao_e_Sinalizacao/Luz de Tope
+# Prioridade matriz: 6.1 (posicao 7)
+# Data: 2026-04-18
+fase: 5
+reescrita_num: "07"
+data: "2026-04-18"
+status: "concluida"
+formato: "compact"
+thread: "5-07 — premium rewrite Luz de Tope (Fase 5 estendida)"
+
+nota:
+  caminho: "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+  linhas_antes: 300
+  linhas_depois: 343
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.1
+  posicao_matriz: 7
+  esforco_estimado_h: 2
+  esforco_real_h: 1.0
+
+mudancas:
+  frontmatter:
+    - status -> fase-5-reescrita-premium
+    - fase_5_reescrita "07"
+    - prioridade_fase_5 6.1
+    - reviewed_on 2026-04-18
+    - normas_citadas refinadas (NORMAM-01/DPC explicito + ISO 16180:2011 com titulo + USCG 33 CFR 183 Subpart J + ABYC A-16)
+    - COLREGS expandido para Regras 21, 22, 23, 25, 27 (antes apenas 21, 23, 25)
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos"
+      regras:
+        - "Tope = branca, 225°, centrada plano longitudinal"
+        - "Motor em movimento -> liga tope; vela pura -> NAO usa tope"
+        - "Alcances minimos: 2/3/5 NM por porte"
+        - ">50m exige dois topes"
+        - "Tope acima das luzes de bordo"
+        - "Nao improvisar com lanterna LED"
+        - "Conector no topo e a falha #1"
+
+    - bloco: "Quando chamar especialista (danger)"
+      cenarios:
+        - "Embarcacao >=20m (geometria COLREGS Anexo I)"
+        - "Dois topes em embarcacao >50m (medicao precisa)"
+        - "Veleiro com instrumentacao no topo do mastro"
+        - "Substituir incandescente por LED em luminaria antiga"
+        - "Inspecao AT/seguradora pediu laudo"
+        - "Antena de radar/VHF compartilha suporte (suspeita de bloqueio)"
+        - "Embarcacao SOLAS/classificada"
+      destaque: "Custo da medicao certificada < multa capitania ou agravamento de seguro"
+
+    - bloco: "Glossario rapido (DEC-11)"
+      termos: 14
+      cobertura:
+        - "Luzes COLREGS: tope/bordo/alcancado/ancora/tricolor"
+        - "Conceitos opticos: arco/setor/sector cut-off/alcance fotometrico"
+        - "Unidades: NM"
+        - "Anexo I COLREGS"
+        - "MASTHEAD (terminologia ingles)"
+        - "NUC, RAM, CBDR (vocabulario navegacao defensiva)"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "O que e + Funcao"
+    - "Como aparece na pratica (BR / importado / premium)"
+    - "Fundamentos minimos (COLREGS Regra 21a + posicionamento + dois topes + veleiro a motor)"
+    - "Caracteristicas principais (tabela 7 parametros)"
+    - "Configuracoes e variacoes (4 cenarios)"
+    - "Principais marcas (4)"
+    - "Componentes relacionados"
+    - "Onde costuma dar problema (tabela 5)"
+    - "Causas raiz"
+    - "Diagnostico pratico (5 passos)"
+    - "Boas praticas + Cuidados instalacao + Cuidados uso"
+    - "Erros comuns"
+    - "Relacao com outros sistemas"
+    - "Brasil x Internacional (3 paineis)"
+    - "Normas e referencias (expandida)"
+    - "Como ensinar + videos + diagramas"
+    - "FAQ (4 perguntas)"
+    - "Visual didatico (iluminacao-navegacao-emergencia-camadas)"
+    - "Integracao com outras notas (8 wikilinks)"
+
+validacao:
+  normas_canonicalizadas:
+    - "ISO 16180:2011 (titulo completo adicionado)"
+    - "USCG 33 CFR 183 -> 183 Subpart J (especifico para nav lights)"
+    - "NORMAM-01 -> NORMAM-01/DPC (autoridade explicita)"
+    - "Adicionada ABYC A-16 (Electric Navigation Lights)"
+    - "COLREGS Regras expandidas (21,22,23,25,27 vs original 21,23,25)"
+
+riscos_residuais:
+  - "Edicao NORMAM-01 nao confirmada (DPC controla; mantida nota explicita)"
+  - "Edicao ABYC A-16 nao confirmada (depende de acesso ABYC)"
+
+metricas:
+  linhas_adicionadas: 43
+  callouts_novos: 2
+  termos_glossario: 14
+  normas_canonicalizadas: 4
+  diferencial:
+    - "primeira nota P2 com COLREGS expandido (5 regras vs 3)"
+    - "ABYC A-16 adicionado (norma especifica para nav lights, faltava)"
+    - "Glossario incorpora vocabulario de navegacao defensiva (NUC/RAM/CBDR)"
+    - "ROI especialista vinculado a sinistro/multa concreta"
+
+proxima_reescrita: "Fase 5 #08 - Bancos de Bateria (prio 6.0, posicao 8)"
+fase_5_estendida_progresso: "2 de 5 (NMEA + Luz de Tope concluidas)"
