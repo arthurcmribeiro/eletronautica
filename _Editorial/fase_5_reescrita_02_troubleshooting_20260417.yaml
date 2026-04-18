@@ -1,0 +1,211 @@
+---
+# Fase 5 - Reescrita Premium #02
+# Nota: 10_Fundamentos_e_Projeto/Troubleshooting - Diagnostico de Falhas Eletricas
+# Prioridade matriz: 6.6 (posicao 2)
+# Data: 2026-04-17
+# Escopo: metodologia + arvore de decisao + criterios ABYC + glossario
+fase: 5
+reescrita_num: "02"
+data: "2026-04-17"
+status: "concluida"
+formato: "compact"
+thread: "5-02 — premium rewrite Troubleshooting"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "10_Fundamentos_e_Projeto/Troubleshooting — Diagnóstico de Falhas Elétricas.md"
+  linhas_antes: 401
+  linhas_depois: 517
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.6
+  posicao_matriz: 2
+  esforco_estimado_h: 5
+  esforco_real_h: 2.0
+  risco_matriz: 3
+
+# =============================================================================
+# 2. MUDANCAS APLICADAS
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status"
+      antes: "technical-review-l1"
+      depois: "fase-5-reescrita-premium"
+      motivo: "marcar nota como parte do lote Fase 5"
+    - campo: "reviewed_on"
+      antes: '"2026-04-14"'
+      depois: '"2026-04-17"'
+      motivo: "data da reescrita premium"
+    - campo: "review_jurisdiction"
+      antes: '"Brasil"  (string)'
+      depois: '["Brasil", "internacional"]  (lista)'
+      motivo: "padroniza formato conforme convencao Fase 1 + matriz inclui ABYC/ISO/IEC/NMEA"
+    - campo: "normas_citadas"
+      antes: "(ausente)"
+      depois: "[ABYC E-11 (2023), ABYC A-31 (2024), ISO 13297:2020, IEC 60364, NMEA 2000]"
+      motivo: "nota agora cita explicitamente estas normas no corpo"
+    - campo: "fase_5_reescrita"
+      antes: "(ausente)"
+      depois: '"02"'
+      motivo: "rastreamento editorial"
+    - campo: "prioridade_fase_5"
+      antes: "(ausente)"
+      depois: "6.6"
+      motivo: "prioridade matriz Fase 4"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip callout)"
+      localizacao: "logo apos abstract Resumo tecnico"
+      regras:
+        - "Medir antes de trocar"
+        - "Verificar o obvio antes do complexo (>40% das falhas)"
+        - "Metodo da metade (divide-and-conquer)"
+        - "Sob carga, nao em circuito aberto"
+        - "Documentar valores reais (nao 'esta baixo')"
+        - "Intermitente = registrar (MIN/MAX, datalogger, termografia)"
+
+    - bloco: "Criterio ABYC E-11 para queda de tensao (note callout)"
+      localizacao: "apos bloco Equipamento liga mas nao funciona"
+      conteudo: "3% circuitos criticos, 10% nao-criticos; criterio aplicado a combinacao completa (cabo+terminais+chave+fusivel)"
+
+    - bloco: "Arvore de decisao geral (ASCII art + analise)"
+      localizacao: "antes de Diagnostico por sintoma - referencia rapida"
+      motivacao: "matriz Fase 4 identifica esta nota como melhor candidato para arvore de decisao"
+      estrutura:
+        - "Fluxo 6 passos da metodologia em formato de arvore"
+        - "Cada galho derruba metade das hipoteses"
+        - "Regra editorial: >5 medicoes = voltar ao Passo 1 (hipotese inicial errada)"
+
+    - bloco: "Quando parar e buscar especialista (danger callout)"
+      localizacao: "antes de Erros de diagnostico mais comuns"
+      cenarios:
+        - "Hot earth (corrente no PE/verde-amarelo)"
+        - "AC multiplo (shore + gerador + inversor) sem N-PE documentado"
+        - "Propulsao eletrica / lítio com BMS em protecao"
+        - "Odor de queimado sem origem identificada"
+        - "Embarcacao pos-raio"
+        - "Fusivel principal >100A atuando recorrente"
+
+    - bloco: "Normas aplicaveis expandidas"
+      antes: "apenas ABYC E-11 + docs fabricante"
+      depois: "ABYC E-11 (2023), ABYC A-31 (2024), ISO 13297:2020, IEC 60364, NMEA 2000 + docs fabricante + baseline interno"
+      observacao: "alinhamento com central standards registry da Fase 2"
+
+    - bloco: "Glossario rapido - termos e instrumentos (tabela)"
+      localizacao: "apos FAQ, antes de Visual didatico"
+      termos_cobertos:
+        - "True RMS, CCA, SoC, SoH"
+        - "EMI, Loop de terra, Ponto quente"
+        - "Corrente parasita, Queda de tensao"
+        - "Metodo da metade, Intermitente, Hot earth"
+        - "Megohmetro, Shunt"
+      diferencial: "todos os termos citados na nota com lookup O(1)"
+
+  conteudo_corrigido:
+    - caso: "Criterio de tensao '< 11.5V' era assumido 12V implicitamente"
+      antes: "1 linha hardcoded: '< 11,5V -> queda de tensao excessiva'"
+      depois: "3 linhas: '12V / 24V / 48V' com criterios proporcionais; + nota sobre comparar com faixa do fabricante"
+      motivo: "vault tem bancos 12V/24V/48V; premissa implicita gerava confusao em 24V/48V"
+
+  conteudo_preservado:
+    - "Abstract Resumo tecnico"
+    - "O que e + Principio fundamental"
+    - "Metodologia em 6 passos (estrutura original)"
+    - "Ferramentas de diagnostico (tabela)"
+    - "Falhas mais comuns e diagnostico (6 categorias)"
+    - "Diagnostico por sintoma (tabela 10 linhas)"
+    - "Erros de diagnostico mais comuns (5 casos)"
+    - "Medicoes fundamentais com multimetro (4 tipos)"
+    - "Como documentar o diagnostico"
+    - "Boas praticas profissionais"
+    - "Relacao com outros sistemas"
+    - "Brasil x Internacional (tabela)"
+    - "Como ensinar este topico"
+    - "Ideias de videos + Diagramas sugeridos"
+    - "FAQ (5 perguntas)"
+    - "Visual didatico (troubleshooting-funil-diagnostico)"
+    - "Integracao com outras notas"
+    - "Perguntas que esta nota responde"
+
+# =============================================================================
+# 3. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  normas_citadas_conferidas:
+    - norma: "ABYC E-11 (2023)"
+      status: "vigente"
+      uso_nota: "queda de tensao (3%/10%), dimensionamento, shore power"
+    - norma: "ABYC A-31 (2024)"
+      status: "vigente"
+      uso_nota: "baterias litio - BMS, ensaio, diagnostico"
+      observacao: "canonicalizada na Fase 1 (A-31 vs antigas designacoes)"
+    - norma: "ISO 13297:2020"
+      status: "vigente"
+      uso_nota: "sistemas AC recreio, ensaios isolacao"
+    - norma: "IEC 60364"
+      status: "vigente (serie)"
+      uso_nota: "instalacoes BT - shore power em jurisdicao EU"
+    - norma: "NMEA 2000"
+      status: "vigente"
+      uso_nota: "diagnostico de rede CAN (bus voltage, termination)"
+
+  arvore_de_decisao_testada_mentalmente:
+    - caso: "equipamento nao liga"
+      passos_arvore: 3
+      convergencia: "Passo 4 ramo 'nao' apos fusivel"
+    - caso: "fusivel queima repetidamente"
+      passos_arvore: 4
+      convergencia: "Passo 5 com medicao de resistencia do circuito"
+    - caso: "bateria descarregando rapido"
+      passos_arvore: 2
+      convergencia: "Passo 2 - verificar o obvio + medir corrente parasita"
+    - observacao: "todos convergem em <=5 medicoes; consistente com regra editorial"
+
+  wikilinks_validados:
+    - "[[DC vs AC — Corrente Contínua e Alternada]] -> existe"
+    - "[[Diagrama Unifilar — Documentação do Sistema Elétrico]] -> existe"
+    - "[[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]] -> existe"
+    - "[[Dimensionamento de Cabos DC — Cálculo Prático]] -> existe"
+    - "[[Fase e Neutro]] -> existe"
+    - "[[Ferramentas do Eletricista Náutico]] -> existe"
+    - "[[Inspeção de Cabos Terminais e Conexões]] -> existe"
+    - "[[Lei de Ohm e Cálculos Básicos]] -> existe"
+
+# =============================================================================
+# 4. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Arvore de decisao em ASCII art; render em diagrama visual seria melhor em web"
+    severidade: "baixa"
+    mitigacao: "spec candidata P2 para Fase 6 (troubleshooting-arvore-decisao-interativa)"
+    bloqueia_publicacao: false
+  - descricao: "Criterios 24V e 48V sao extrapolacoes proporcionais; validar com ABYC E-11 tabela 24V diretamente"
+    severidade: "baixa"
+    mitigacao: "criterio com margem conservadora (4% vs 3%); tolera erro marginal"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 5. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_adicionadas: 116
+  secoes_novas: 4    # TL;DR + arvore de decisao + especialista + glossario
+  tabelas_novas: 1   # glossario
+  callouts_novos: 3  # tip (regra 30s), note (ABYC E-11 criterio), danger (especialista)
+  palavras_antes_estim: 2400
+  palavras_depois_estim: 3400
+  crescimento_pct: 42
+  diferencial_fase_5:
+    - "arvore de decisao funcional que converge em <=5 medicoes"
+    - "criterios ABYC E-11 explicitos para queda de tensao"
+    - "suporte a sistemas 12V/24V/48V (nao apenas 12V)"
+    - "barreira editorial de seguranca (quando parar)"
+    - "glossario com 14 termos operacionais"
+
+# =============================================================================
+# 6. PROXIMO PASSO
+# =============================================================================
+proxima_reescrita: "Fase 5 #03 - Correntes Parasitas (prio 6.4, posicao 3 da matriz)"

@@ -1,0 +1,181 @@
+---
+# Fase 5 - Reescrita Premium #03
+# Nota: 80_Seguranca_e_Corrosao/Correntes Parasitas - Stray Currents
+# Prioridade matriz: 6.4 (posicao 3)
+# Data: 2026-04-17
+# Escopo: separacao dos 3 fenomenos + glossario eletroquimico + ESD awareness
+fase: 5
+reescrita_num: "03"
+data: "2026-04-17"
+status: "concluida"
+formato: "compact"
+thread: "5-03 — premium rewrite Correntes Parasitas"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+  linhas_antes: 227
+  linhas_depois: 296
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.4
+  posicao_matriz: 3
+  esforco_estimado_h: 3
+  esforco_real_h: 1.5
+  risco_matriz: 4
+
+# =============================================================================
+# 2. MUDANCAS APLICADAS
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status"
+      depois: "fase-5-reescrita-premium"
+    - campo: "fase_5_reescrita"
+      depois: '"03"'
+    - campo: "prioridade_fase_5"
+      depois: "6.4"
+    - campo: "review_jurisdiction"
+      antes: '["Brasil"]'
+      depois: '["Brasil", "internacional"]'
+    - campo: "normas_citadas"
+      antes: "(ausente)"
+      depois: "[ABYC E-2 (2020), ABYC A-28 (2020), ISO 13297:2020, ISO 28679:2017, NACE SP0169-2013]"
+      motivo: "nota discute temas explicitamente cobertos por essas normas (bonding, catódica, topologia AC)"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos"
+      localizacao: "apos abstract"
+      regras:
+        - "3 fenomenos distintos - 3 diagnosticos"
+        - "'eletrolise' nao e termo tecnico neutro"
+        - "Anodo sumindo rapido e sinal, nao diagnostico"
+        - "Multimetro na agua nao e diagnostico (precisa Ag/AgCl)"
+        - "Shore desconectado altera sintoma? origem externa vs interna"
+        - "Ordem de grandeza: galvanica = meses/anos, parasita severa = dias"
+
+    - bloco: "Quadro comparativo dos 3 fenomenos (tabela 8 linhas x 3 colunas)"
+      localizacao: "apos secao 'O que esta nota nao deve confundir', antes de Fontes tipicas"
+      colunas: "Corrosao galvanica | Corrente parasita DC | Vazamento AC"
+      aspectos:
+        - "Forca motriz"
+        - "Fonte"
+        - "Velocidade do dano"
+        - "Risco principal (inclui ESD para AC)"
+        - "Diagnostico instrumento"
+        - "Mitigacao"
+        - "Bonding ajuda?"
+        - "Shore power envolvido?"
+      diferencial: "primeira tabela do vault que faz essa diferenciacao estruturada"
+
+    - bloco: "Quando chamar especialista (danger callout)"
+      localizacao: "apos Erros comuns, antes de Visual didatico"
+      cenarios_cobertos:
+        - "Anodo consumido em semanas"
+        - "Hélice/eixo/rabeta com corrosao destrutiva"
+        - "DR ou ELCI disparando em marina especifica"
+        - "Suspeita de ESD - evacuar + desligar shore + chamar marina"
+        - "Piora consistente em marina especifica (barco vizinho)"
+        - "Casco aluminio com pitting profundo"
+      destaque: "ESD e primeiro no vault a ter protocolo explicito de evacuacao"
+
+    - bloco: "Glossario rapido (tabela 13 termos)"
+      localizacao: "apos Quando chamar especialista, antes de Visual didatico"
+      termos:
+        - "Pitting, Eletrodo Ag/AgCl, Potencial de protecao"
+        - "Protecao catodica, Anodo galvanico"
+        - "ESD, ELCI, Hot earth"
+        - "Megohmetro, Clamp meter DC, Baseline"
+        - "Galvanica (mesa), Passivacao"
+      diferencial: "primeiro glossario do vault a cobrir ESD e potencial de protecao em mV vs Ag/AgCl"
+
+  conteudo_preservado:
+    - "Abstract (intacto)"
+    - "O que sao correntes parasitas"
+    - "O que esta nota nao deve confundir (3 fenomenos em texto descritivo)"
+    - "Fontes tipicas (6 origens)"
+    - "Onde o dano costuma aparecer (8 pontos)"
+    - "Sinais de campo que merecem investigacao"
+    - "Diagnostico correto (4 sub-secoes)"
+    - "Relacao com shore power"
+    - "Papel do bonding"
+    - "Boas praticas de prevencao"
+    - "Erros comuns (5 itens)"
+    - "Visual didatico (corrosao-stray-current-causa-efeito)"
+    - "Integracao com outras notas"
+    - "Perguntas que esta nota responde"
+
+# =============================================================================
+# 3. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  normas_citadas_conferidas:
+    - norma: "ABYC E-2 (2020)"
+      status: "vigente"
+      uso_nota: "bonding/equalizacao; cobre topologia de equalizacao de massas"
+    - norma: "ABYC A-28 (2020)"
+      status: "vigente (canonicalizada Fase 1 - A-28)"
+      uso_nota: "protecao catodica galvanica em embarcacoes de recreio"
+    - norma: "ISO 13297:2020"
+      status: "vigente"
+      uso_nota: "sistemas AC em recreio; base para diagnostico shore power"
+    - norma: "ISO 28679:2017"
+      status: "vigente"
+      uso_nota: "protecao catodica de embarcacoes"
+    - norma: "NACE SP0169-2013"
+      status: "vigente"
+      uso_nota: "criterios de protecao catodica de estruturas submersas em eletrolito"
+
+  diferenciacao_3_fenomenos_coerente:
+    - aspecto: "Corrosao galvanica"
+      consistencia: "intra-nota coerente; forca motriz = nobreza; anodo protege; sem corrente externa"
+    - aspecto: "Corrente parasita DC"
+      consistencia: "intra-nota coerente; fuga de corrente DC imposta; ataque localizado rapido"
+    - aspecto: "Vazamento AC / ESD"
+      consistencia: "intra-nota coerente; risco primario e choque em pessoas; ELCI e barreira correta"
+
+  wikilinks_validados:
+    - "[[Anôdo]] -> existe"
+    - "[[Aterramento]] -> existe"
+    - "[[Bonding — Sistema de Interligação de Massas]] -> existe"
+    - "[[CAIS (Pier) (AC)]] -> existe"
+    - "[[Eletrólise]] -> existe"
+    - "[[Isolador Galvânico - Transformador de Isolamento]] -> existe"
+    - "[[Quadro Elétrico e Painel de Distribuição AC-DC]] -> existe"
+
+# =============================================================================
+# 4. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Valores tipicos de potencial de protecao (−800 mV a −1100 mV vs Ag/AgCl) sao generalistas"
+    severidade: "baixa"
+    mitigacao: "glossario explicita 'para aco em agua do mar'; outros metais/ambientes tem faixas diferentes"
+    bloqueia_publicacao: false
+  - descricao: "Protocolo de evacuacao em ESD e editorial; nao substitui treinamento marinha/bombeiros"
+    severidade: "baixa"
+    mitigacao: "callout danger usa linguagem firme ('antes de qualquer inspecao')"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 5. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_adicionadas: 69
+  secoes_novas: 3
+  tabelas_novas: 2   # quadro comparativo 3 fenomenos + glossario
+  callouts_novos: 2  # tip (regra 30s), danger (especialista)
+  palavras_antes_estim: 1500
+  palavras_depois_estim: 2400
+  crescimento_pct: 60
+  diferencial_fase_5:
+    - "quadro comparativo estruturado dos 3 fenomenos"
+    - "ESD (Electric Shock Drowning) com protocolo de evacuacao explicito"
+    - "glossario com potencial de protecao em mV vs Ag/AgCl"
+    - "normas (ISO 28679, NACE SP0169) que faltavam no frontmatter"
+
+# =============================================================================
+# 6. PROXIMO PASSO
+# =============================================================================
+proxima_reescrita: "Fase 5 #04 - Dimensionamento Cabos DC + calc_queda_tensao_dc.py (prio 6.3 posicao 4, DEC-10)"

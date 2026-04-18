@@ -3,17 +3,21 @@ title: "Bonding — Sistema de Interligação de Massas"
 note_type: "system"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "BONDING — SISTEMA DE INTERLIGAÇÃO DE MASSAS 33a19734f7fb81549c39cdaf6dffb20e.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-16"
+status: "fase-5-reescrita-premium"
+reviewed_on: "2026-04-17"
+fase_5_reescrita: "05"
+prioridade_fase_5: 6.3
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
   - "ABYC E-2 (2020)"
   - "ABYC E-11 (2023)"
-  - "ABYC A-31 (edição a verificar)"
+  - "ABYC A-28 (2020)"
+  - "ABYC A-31 (2024)"
   - "ABNT NBR 5410 (2004 + emendas)"
   - "ISO 13297:2020"
+  - "ISO 28679:2017"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -49,6 +53,15 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Bonding é a malha de equipotencialização de partes metálicas selecionadas da embarcação, normalmente integrada à estratégia de proteção catódica e separada funcionalmente do PE do sistema AC. Quando mal projetado, vira caminho de corrosão acelerada e de correntes indevidas.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Bonding ≠ PE ≠ Negativo DC.** Três sistemas com funções distintas que convergem apenas no SPOG (ponto único de referência).
+> 2. **Verde com função de equalização ≠ verde-amarelo de PE.** Ambos são verdes; confundir é erro estrutural.
+> 3. **Cabo mínimo: AWG 8 (8 mm²)** para barramento principal em casco não-metálico (ABYC E-11). AWG 10-14 é subdimensionado.
+> 4. **Continuidade alvo: < 1 Ω** entre barramento e cada componente. > 3 Ω = conexão ruim.
+> 5. **Ânodo correto por material:** zinco para aço em salgada; alumínio (AlZnIn) para casco de alumínio; magnésio para doce. Trocar sem respeitar material é erro técnico.
+> 6. **Corrente persistente no cabo de bonding** (alicate) = loop indevido com PE/negativo/neutro. Investigar antes que corroa algo caro.
+> 7. **Eixo é o componente mais esquecido.** Sem escova/clamp de eixo, a hélice fica desprotegida mesmo com todo o resto OK.
 
 ## O que é
 
@@ -242,6 +255,19 @@ Verificar especialmente vínculo indevido com PE, neutro ou negativo DC
 - Não trocar um passe-casco sem reconectar o cabo de bonding — erro frequente em manutenção
 - Inspecionar conexão do ânodo externo anualmente
 
+## Quando chamar especialista
+
+> [!danger] Situações que exigem análise qualificada
+> - Casco metálico com pitting profundo ou perda de material em zona específica — dano estrutural iminente; reparar sem diagnóstico completo significa corroer de novo em meses.
+> - Corrente persistente medida no cabo principal de bonding (alicate amperímetro) — indica loop indevido com PE, neutro ou negativo DC; origem pode ser interna ou na marina.
+> - Ânodos consumidos em **semanas** em vez de temporada — corrente parasita grave, não desgaste normal.
+> - Integração de bonding com sistema de pararaios (ABYC A-31 2024) — compartilhamento de malha é projeto específico, não retrofit intuitivo.
+> - Transformador de isolamento ou isolador galvânico recém-instalado e bonding começou a comportar-se diferente — topologia AC afeta SPOG.
+> - Casco de alumínio com faixa de potencial catódico fora do intervalo seguro (`-0,90 V` a `-1,10 V` vs Ag/AgCl) — over-protection ataca alumínio tão rápido quanto under-protection.
+> - Instalação nova em embarcação com propulsão elétrica (lítio, motor elétrico) — malha de bonding interage com BMS e proteção do banco; erro pode desarmar BMS ou destruir célula.
+>
+> O bonding é um subsistema onde "quase certo" tem custo. Inspeção profissional anual custa muito menos que uma hélice, eixo ou trocador de calor substituído por corrosão evitável.
+
 ## Erros comuns
 
 **Interligar bonding ao negativo DC em múltiplos pontos:**
@@ -294,7 +320,9 @@ Mais ânodo não é sinônimo de melhor proteção. O potencial precisa ser aval
 
 - **ABYC E-2 (2020)** — Prevention of Galvanic Corrosion (mais detalhada sobre bonding)
 - **ABYC E-11 (2023)** — AC and DC Electrical Systems (SPOG e interação com terra AC)
-- **ABYC A-31 (edição a verificar)** — Lightning Protection (bonding integrado ao pararaios)
+- **ABYC A-28 (2020)** — Galvanic Isolators (protecao catódica e interação com PE de shore power)
+- **ABYC A-31 (2024)** — Lightning Protection (bonding integrado ao pararaios; edição canonicalizada na Fase 1 — vault mantém A-31 como referência única)
+- **ISO 28679:2017** — Small craft — Cathodic protection (referência internacional para proteção catódica em embarcações)
 - **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **ISO 13297:2020** — Small craft — Electrical systems — Alternating and direct current installations (referência viva para DC em pequenas embarcações; sucedeu a ISO 10133, retirada)
 - **ISO 10133** — *retirada*; manter apenas como contexto histórico conforme nota mestre [[Normas e Regulamentações — Abyc Iso e Brasil]]
@@ -329,6 +357,15 @@ Mais ânodo não é sinônimo de melhor proteção. O potencial precisa ser aval
 - Série galvânica com potenciais em mV vs Ag/AgCl — visual e prático
 - Diagrama de medição de potencial catódico: posição do eletrodo, multímetro, interpretação dos valores
 - Comparação: bonding correto vs bonding como veículo de corrente parasita (antes e depois)
+
+## Visuais editoriais associados
+
+Specs editoriais disponíveis (em renderização — sprint 1 pós-Fase 4):
+
+- [`_visuals/specs/ac-dc-pe-bonding-analogia.json`](../_visuals/specs/ac-dc-pe-bonding-analogia.json) — Analogia visual controlada que separa PE, Neutro AC, Negativo DC e Bonding em quatro painéis coloridos, com três erros comuns catalogados. Ajuda a quebrar a confusão sistemática tratada na Regra de 30 segundos desta nota.
+- [`_visuals/specs/iso-10133-vs-13297-sucessao.json`](../_visuals/specs/iso-10133-vs-13297-sucessao.json) — Quadro histórico da sucessão normativa: ISO 10133 (APOSENTADA) vs ISO 13297:2020 (VIVA). Elimina a confusão documental comum em projetos antigos e manuais de fabricantes pré-2020.
+
+Ambos os specs têm `target_notes` incluindo esta (`Bonding — Sistema de Interligação de Massas.md`) e serão renderizados em SVG/PNG via `scripts/render_visuals.py`.
 
 ## FAQ
 

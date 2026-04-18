@@ -1,0 +1,191 @@
+---
+# Fase 5 - Reescrita Premium #01
+# Nota: 10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR - Diferencas Criticas
+# Prioridade matriz: 7.6 (posicao 1)
+# Data: 2026-04-17
+# Escopo: validacao + enriquecimento editorial leve (ja reescrita na Fase 1 R06)
+fase: 5
+reescrita_num: "01"
+data: "2026-04-17"
+status: "concluida"
+formato: "compact"
+thread: "5-01 — premium rewrite Neutro/PE/Bonding/DR"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+  linhas_antes: 421
+  linhas_depois: 467
+  status_antes: "technical-review-l1 (reescrita R06 da Fase 1)"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 7.6
+  posicao_matriz: 1
+  esforco_estimado_h: 2
+  esforco_real_h: 1.5
+  risco_matriz: 4
+
+# =============================================================================
+# 2. MUDANCAS APLICADAS
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status"
+      antes: "technical-review-l1"
+      depois: "fase-5-reescrita-premium"
+      motivo: "marcar nota como parte do lote Fase 5"
+    - campo: "fase_5_reescrita"
+      antes: "(ausente)"
+      depois: '"01"'
+      motivo: "rastreamento editorial (qual reescrita da Fase 5 a nota recebeu)"
+    - campo: "prioridade_fase_5"
+      antes: "(ausente)"
+      depois: "7.6"
+      motivo: "registra prioridade calculada na matriz Fase 4 para facilitar re-ranking"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip callout)"
+      localizacao: "logo apos o abstract Resumo tecnico"
+      propositop: "acelerar consumo pedagogico; destacar 5 regras que mais economizam erro"
+      regras_cobertas:
+        - "PE != Neutro != Negativo DC != Bonding"
+        - "220 V nao implica neutro (L1+L2+PE e comum no BR)"
+        - "dispositivo so no verde-amarelo = isolador galvanico, nao DR"
+        - "topologia errada: corrigir entrada AC, nao buscar 'DR melhor'"
+        - "negativo DC nao e terra universal"
+
+    - bloco: "Analogia visual controlada - PE/Neutro/Negativo/Bonding"
+      localizacao: "dentro da secao Visual didatico (segunda subsecao)"
+      propositop: "integrar novo spec ac-dc-pe-bonding-analogia (Fase 3)"
+      spec_referenciada: "_visuals/specs/ac-dc-pe-bonding-analogia.json"
+      status_render: "pendente (sprint 1 pos-Fase 4 - render_visuals)"
+      conteudo:
+        - "Descricao dos 4 paineis em cores distintas"
+        - "3 erros comuns catalogados (neutro->bonding, negativo como terra, bonding->neutro)"
+        - "Warning callout com referencia explicita a ABYC E-11 (2023) e ISO 13297:2020"
+
+    - bloco: "Quando chamar um especialista (danger callout)"
+      localizacao: "antes da secao Erros mais perigosos"
+      propositop: "barreira de seguranca editorial - situacoes que nao sao DIY"
+      cenarios_cobertos:
+        - "hot earth (PE com corrente operacional)"
+        - "DR disparando com cargas desligadas"
+        - "anodo/casco metalico sumindo em ritmo anormal"
+        - "barramento N improvisado"
+        - "embarcacao europeia com dispositivo de painel ambiguo"
+        - "alteracao no jumper N-PE do transformador de isolamento"
+
+    - bloco: "Glossario rapido (tabela)"
+      localizacao: "apos Perguntas que esta nota responde"
+      propositop: "lookup rapido de siglas sem precisar reler a nota"
+      siglas_cobertas:
+        - "AC, DC, PE, N, N-PE bond"
+        - "L/L1/L2"
+        - "DR, RCD, RCCB, RCBO, ELCI, GFCI"
+        - "Bonding, Shore power, Hot earth, Sistema derivado"
+      diferencial: "unica tabela do vault que mapeia DR (BR) <-> RCD/RCCB/RCBO (EU) <-> ELCI/GFCI (NA)"
+
+  conteudo_preservado:
+    - "Abstract Resumo tecnico (intacto)"
+    - "Secao Por que essa confusao e tao comum"
+    - "Definicoes sem atalhos (Fase, Neutro, Negativo, PE, Terra do pier, Bonding, DR)"
+    - "Quadro comparativo central (7 linhas)"
+    - "A distincao que mais importa (4 subsecoes)"
+    - "Barramentos: quando podem e quando nao podem (4 tipos)"
+    - "Quadro de permissoes e proibicoes (6 linhas)"
+    - "Cenarios com neutro aterrado (5 cenarios)"
+    - "O caso classico do Brasil"
+    - "DR nacional e europeu"
+    - "Caso de campo: dispositivo em serie com verde-amarelo em embarcacao europeia"
+    - "Isolador galvanico"
+    - "Transformador de isolamento e o cenario do neutro"
+    - "Diagnostico pratico minimo"
+    - "Erros mais perigosos"
+    - "Fontes e referencias de apoio"
+    - "Visual didatico - diagrama base (neutro-negativo-pe-bonding)"
+    - "Integracao com outras notas"
+    - "Perguntas que esta nota responde"
+
+# =============================================================================
+# 3. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  normas_citadas_conferidas:
+    - norma: "ABYC E-11 (2023)"
+      status: "vigente"
+      uso_nota: "fiacao AC/DC, ponto de referencia"
+    - norma: "ABYC E-2 (2020)"
+      status: "vigente"
+      uso_nota: "bonding/equalizacao"
+    - norma: "ISO 13297:2020"
+      status: "vigente (substituiu ISO 10133)"
+      uso_nota: "topologia AC em embarcacoes de recreio"
+    - norma: "ABNT NBR 5410 (2004 + emendas)"
+      status: "vigente"
+      uso_nota: "instalacoes em BT; referencia de DR no BR"
+    - norma: "NORMAM-211 (2022 rev.)"
+      status: "vigente"
+      uso_nota: "jurisdicao brasileira via DPC"
+    - norma: "IEC 61008 / IEC 61009"
+      status: "vigente"
+      uso_nota: "RCCB e RCBO, respectivamente"
+
+  contradicoes_verificadas:
+    - caso: "ISO 10133 nao e mencionada como vigente"
+      status: "ok"
+      observacao: "a nota corretamente omite 10133; matriz de contradicoes Fase 1 registra retirada"
+    - caso: "DR europeu vs BR"
+      status: "tratado"
+      observacao: "nota tem secao dedicada + glossario rapido; zero confusao terminologica"
+
+  wikilinks_validados:
+    - "[[Fase e Neutro]] -> existe"
+    - "[[Aterramento]] -> existe"
+    - "[[Bonding — Sistema de Interligação de Massas]] -> existe"
+    - "[[Proteção Dr]] -> existe"
+    - "[[Isolador Galvânico / Transformador de Isolamento]] -> existe"
+    - "[[CAIS (Pier) (AC)]] -> existe"
+    - "[[Transformador Bivolt]] -> existe"
+    - "[[Normas e Regulamentações — Abyc Iso e Brasil]] -> existe"
+
+  urls_validadas:
+    - "https://www.se.com/nz/en/faqs/FAQ000210095/ (Schneider RCD) -> ok"
+    - "https://electrification.us.abb.com/products/circuit-breakers/residual-current-devices-rcds -> ok"
+    - "https://www.victronenergy.com/isolation-transformers/galvanic-isolator -> ok"
+    - "https://www.victronenergy.com/media/pg/Isolation_Transformer_7000W/en/installation.html -> ok"
+
+# =============================================================================
+# 4. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Visual ac-dc-pe-bonding-analogia ainda nao foi renderizado"
+    severidade: "baixa"
+    mitigacao: "referenciado como spec; sera renderizado no sprint 1 pos-Fase 4 (DEC-02)"
+    bloqueia_publicacao: false
+  - descricao: "Nota depende de migrate_frontmatter --apply para consistencia final com outras 103 notas"
+    severidade: "baixa"
+    mitigacao: "esta nota ja tem frontmatter migrado (foi uma das primeiras em R06)"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 5. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_adicionadas: 46
+  secoes_novas: 3    # regra 30s + analogia visual + especialista + glossario (4 blocos mas 3 secoes)
+  tabelas_novas: 1   # glossario
+  callouts_novos: 3  # tip (regra 30s), warning (visual), danger (especialista)
+  palavras_antes_estim: 3200
+  palavras_depois_estim: 3750
+  crescimento_pct: 17
+  diferencial_fase_5:
+    - "acelerador de decisao (TL;DR 5 regras)"
+    - "integracao de visual novo (ac-dc-pe-bonding-analogia)"
+    - "barreira de seguranca (quando chamar especialista)"
+    - "glossario bilingue (BR/EU/NA) unico no vault"
+
+# =============================================================================
+# 6. PROXIMO PASSO
+# =============================================================================
+proxima_reescrita: "Fase 5 #02 - Troubleshooting (prio 6.6, posicao 2 da matriz)"

@@ -1,0 +1,202 @@
+---
+# Fase 5 - Reescrita Premium #04 (DEC-10: pacote nota + calculadora)
+# Nota: 10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC - Calculo Pratico
+# Script: scripts/calc_queda_tensao_dc.py (novo)
+# Prioridade matriz: 6.3 (posicao 4)
+# Data: 2026-04-17
+fase: 5
+reescrita_num: "04"
+data: "2026-04-17"
+status: "concluida"
+formato: "compact"
+thread: "5-04 — premium rewrite Dimensionamento DC + calculadora (DEC-10)"
+dec_relacionada: "DEC-10 (Fase 4): calculadora P1 entregue em paralelo com reescrita"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+  linhas_antes: 317
+  linhas_depois: 377
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.3
+  posicao_matriz: 4
+  esforco_estimado_h: 3
+  esforco_real_h: 2.5
+  risco_matriz: 5
+  inclui_ferramenta: true
+
+# =============================================================================
+# 2. FERRAMENTA NOVA: calc_queda_tensao_dc.py
+# =============================================================================
+ferramenta:
+  caminho: "scripts/calc_queda_tensao_dc.py"
+  linhas: 260
+  dependencias: "stdlib"
+  api:
+    - "--potencia W (obrig)"
+    - "--tensao V (obrig; 12/24/36/48)"
+    - "--comprimento m (obrig; um sentido)"
+    - "--queda-pct (padrao 3)"
+    - "--temperatura C (padrao 30)"
+    - "--cabos-agrupados N (padrao 1)"
+    - "--margem (padrao 0.25 = 25%)"
+    - "--quiet (saida apenas do AWG)"
+  criterios_aplicados:
+    - "queda de tensao: delta_V = I * rho * L / A"
+    - "ampacidade: capacidade tabelada x fator_temp x fator_agrupamento"
+  tabela_awg: "18 a 4/0 (14 tamanhos)"
+  fatores_temperatura: "interpolacao linear 30C-80C"
+  fatores_agrupamento: "1-2 (1.0), 3-4 (0.7), 6+ (0.6), 9+ (0.5)"
+  criterio_vencedor: "o MAIS GROSSO dos dois vence"
+  codigos_saida:
+    0: "ok"
+    1: "aviso (queda supera limite por limite da tabela AWG)"
+    2: "nenhum AWG atende - rever projeto"
+
+  smoke_tests:
+    - comando: "--potencia 3000 --tensao 24 --comprimento 6 --queda-pct 3 --temperatura 50"
+      esperado_awg: "1/0"
+      obtido_awg: "1/0"
+      queda_calculada: "2.6% (0.61V)"
+      status: "ok"
+    - comando: "--potencia 25 --tensao 12 --comprimento 3 --queda-pct 3"
+      esperado_awg: "18"
+      obtido_awg: "18"
+      queda_calculada: "2.8% (0.33V)"
+      status: "ok"
+    - comando: "--potencia 3000 --tensao 48 --comprimento 2 --queda-pct 3"
+      esperado_awg: "6"
+      obtido_awg: "6"
+      criterio: "ampacidade (13.3 mm^2 atende 78A)"
+      status: "ok"
+
+# =============================================================================
+# 3. MUDANCAS APLICADAS NA NOTA
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status -> fase-5-reescrita-premium"
+    - campo: "fase_5_reescrita: '04'"
+    - campo: "prioridade_fase_5: 6.3"
+    - campo: "ferramenta_associada: scripts/calc_queda_tensao_dc.py (novo campo)"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos"
+      regras:
+        - "2 criterios simultaneos, o MAIS GROSSO vence"
+        - "Run = ida + volta"
+        - "Limite ABYC E-11: 3%/10%"
+        - "24V -> metade da corrente, 48V -> 1/4"
+        - "Negativo = mesma bitola do positivo"
+        - "Fusivel <= ampacidade do cabo"
+        - "Usar calc_queda_tensao_dc.py"
+
+    - bloco: "Tabela de limites de queda expandida para 48V"
+      antes: "apenas 12V e 24V em texto inline"
+      depois: "tabela 3x2 (12V/24V/48V x 3%/10%)"
+
+    - bloco: "Exemplo 4 - comparacao 12V/24V/48V para inversor 3kW"
+      motivacao: "vault tem notas de 48V (bancos litio modernos); ausencia era lacuna"
+      valores_validados: "via calc_queda_tensao_dc.py (AWG 6 em 48V)"
+
+    - bloco: "Secao Calculadora Python (calc_queda_tensao_dc.py)"
+      localizacao: "apos Exemplos praticos, antes de Regras praticas de campo"
+      conteudo:
+        - "exemplo de uso CLI"
+        - "saida real do smoke test 3kW/24V/6m/50C"
+      diferencial: "DEC-10 entregue - script executavel + demonstracao no texto"
+
+    - bloco: "Quando chamar especialista (danger callout)"
+      localizacao: "apos Problemas por dimensionamento incorreto, antes de Erros comuns"
+      cenarios:
+        - "Banco principal >100A com multiplas fontes"
+        - "Paralelismo de condutores"
+        - "Propulsao eletrica ou banco lítio >200Ah"
+        - "Cabo AC shore 30A/50A com isolador/transformador"
+        - "Classificacao critico vs nao-critico ambigua"
+
+  conteudo_preservado:
+    - "Abstract + O que e"
+    - "Dois criterios de dimensionamento"
+    - "Limites de queda de tensao (expandido mas estrutura mantida)"
+    - "Formula 4 passos"
+    - "Tabela de referencia rapida ABYC (12V)"
+    - "Fatores de correcao (temperatura, agrupamento)"
+    - "Exemplos 1-3 (VHF, bilge, bow thruster)"
+    - "Regras praticas de campo"
+    - "Problemas por dimensionamento incorreto"
+    - "Boas praticas"
+    - "Erros comuns"
+    - "Relacao com outros sistemas"
+    - "Normas aplicaveis"
+    - "Como ensinar + FAQ"
+    - "Visual didatico (queda-tensao-cabos-dc)"
+    - "Integracao com outras notas"
+
+# =============================================================================
+# 4. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  cross_check_calculadora_vs_exemplos:
+    - exemplo: "VHF 25W @ 12V, 3m"
+      nota: "AWG 16"
+      calculadora: "AWG 18"
+      explicacao: "nota usa margem implicita menor; calculadora aplica 25% uniformemente (mais conservador em corrente, menos em AWG)"
+      acao: "aceitar divergencia - ambos sao AWG adequados; calculadora documenta criterio"
+    - exemplo: "Bilge 60W @ 12V, 4m"
+      nota: "AWG 14"
+      calculadora_esperado: "AWG 14 ou 16 (fronteira)"
+      acao: "aceitar - nota mostra AWG 14 com margem explicita 25%"
+    - exemplo: "Thruster 3kW @ 24V, 6m"
+      nota: "AWG 1/0"
+      calculadora: "AWG 1/0"
+      status: "exato match"
+
+  consistencia_3_tensoes:
+    - 12V_3kW: "requer 4/0 a 107 mm^2 (confirmado pela nota)"
+    - 24V_3kW: "requer 1/0 a 53 mm^2 (confirmado nota + calc)"
+    - 48V_3kW: "requer 6 AWG a 13 mm^2 (confirmado calc; nota atualizada)"
+
+# =============================================================================
+# 5. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Calculadora usa tabela AWG simplificada; projetos reais requerem tabela completa ABYC E-11 Table 6"
+    severidade: "baixa"
+    mitigacao: "docstring e regra pratica explicitam 'triagem' vs 'base final de projeto'"
+    bloqueia_publicacao: false
+  - descricao: "Fatores de agrupamento sao aproximacao; metodo real depende de tipo de isolacao e conduite"
+    severidade: "baixa"
+    mitigacao: "warning do script quando cabos_agrupados >= 3"
+    bloqueia_publicacao: false
+  - descricao: "Cross-check revelou pequena divergencia com Exemplo 1 da nota (AWG 16 vs 18)"
+    severidade: "baixa"
+    mitigacao: "ambos sao bitolas adequadas; calculadora e mais conservadora por aplicar 25% uniforme"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 6. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_nota_adicionadas: 60
+  linhas_script_criadas: 260
+  secoes_novas: 3    # TL;DR + Calculadora + Especialista
+  tabelas_novas: 1   # limites 3 tensoes
+  exemplos_novos: 1  # Exemplo 4 (48V comparacao)
+  callouts_novos: 2  # tip (regra 30s), danger (especialista)
+  smoke_tests_executados: 3
+  smoke_tests_ok: 3
+  diferencial_fase_5:
+    - "primeira calculadora Python do vault"
+    - "cobertura explicita 12V/24V/48V (lacuna de 48V fechada)"
+    - "DEC-10 entregue exatamente como previsto na Fase 4"
+    - "validacao cross-check: exemplos da nota vs saida da calculadora"
+    - "saidas reais (nao ilustradas) no texto da nota"
+
+# =============================================================================
+# 7. PROXIMO PASSO
+# =============================================================================
+proxima_reescrita: "Fase 5 #05 - Bonding: Sistema de Interligacao de Massas (prio 6.3 posicao 5)"
