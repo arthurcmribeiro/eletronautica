@@ -1,0 +1,128 @@
+---
+# Fase 5 - Reescrita Premium #08 (Fase 5 estendida)
+# Nota: 20_Baterias_e_Armazenamento/Bancos de Bateria
+# Prioridade matriz: 6.0 (posicao 8)
+# Data: 2026-04-18
+fase: 5
+reescrita_num: "08"
+data: "2026-04-18"
+status: "concluida"
+formato: "compact"
+thread: "5-08 — premium rewrite Bancos de Bateria (Fase 5 estendida)"
+
+nota:
+  caminho: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+  linhas_antes: 457
+  linhas_depois: 518
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.0
+  posicao_matriz: 8
+  esforco_estimado_h: 4
+  esforco_real_h: 1.5
+
+mudancas:
+  frontmatter:
+    - status -> fase-5-reescrita-premium
+    - fase_5_reescrita "08"
+    - prioridade_fase_5 6.0
+    - reviewed_on 2026-04-18
+    - review_jurisdiction expandido para incluir 'internacional'
+    - normas_citadas expandidas de 4 para 9 itens (E-13 lithium, A-31 chargers, ISO 16315, UN 38.3, NFPA 302; titulos completos em E-10, E-11, ISO 13297)
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip)"
+      regras:
+        - "Banco != pilha (funcao+quimica+arranjo+protecao+monitor)"
+        - "Paralelo: mesma quimica/lote/idade/SoC"
+        - "Serie soma V; paralelo soma Ah"
+        - "DoD pratico: AGM/GEL/FLA <=50%, LiFePO4 <=80%"
+        - "Fusivel obrigatorio (E-10: <=18cm do positivo)"
+        - "Cabos interligacao iguais"
+        - "NUNCA abrir chave seletora com alternador girando"
+        - "LiFePO4 + chumbo = NAO no mesmo banco"
+        - "Voltimetro NAO mede SoC -- usar shunt+BMV"
+
+    - bloco: "Quando chamar especialista (danger)"
+      cenarios:
+        - "Banco LiFePO4 >200Ah ou >4 baterias paralelo"
+        - "Conversao chumbo->litio mantendo o resto do sistema"
+        - "Banco em propulsao eletrica (ISO 16315 + isolamento contator)"
+        - "Banco >600Ah em paralelo (complexidade nao-linear)"
+        - "Sintoma de thermal event passado (descomissionar antes)"
+        - "Multiplas fontes de carga (gerador+carregador+solar+alternador)"
+        - "Litio sem certificacao UN 38.3 ou sem datasheet"
+        - "Compartimento sem ventilacao (E-10 calculo de gases H2)"
+      destaque: "Custo de projeto bem feito (3-5h engenheiro) << incendio em casco; alem de risco a vidas"
+
+    - bloco: "Glossario rapido (DEC-11)"
+      termos: 24
+      cobertura:
+        - "Capacidade: Ah, C-rate, SoC, DoD, CCA"
+        - "Quimicas: AGM, GEL, FLA, LiFePO4"
+        - "Componentes: BMS, banco partida/servico, chave 1/2/Ambos/Off"
+        - "Combinadores: ACR, VSR, DC-DC charger, isolador (legado)"
+        - "Monitoramento: shunt, BMV"
+        - "Fenomenos: Peukert, equalizacao chumbo, balancing litio, thermal runaway"
+        - "PGNs N2K: 127506 (DC Detailed Status), 127508 (Battery Status)"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "O que e + Funcao"
+    - "Como aparece na pratica (5 perfis: lanchas populares, medias, veleiros, motoryachts, projetos custom)"
+    - "Fundamentos minimos (paralelo, serie, autodescarga diferencial, capacidade real)"
+    - "Caracteristicas principais (capacidade, tensao, numero, autonomia, taxa de carga)"
+    - "Configuracoes e variacoes (banco simples, dois bancos, tres bancos, isolador, lifepo4+BMS, 24V)"
+    - "Marcas (AGM: Victron, Trojan, Fullriver, Moura; LiFePO4: Victron, Battle Born, SOK; monitoramento)"
+    - "Componentes relacionados (8)"
+    - "Onde costuma dar problema (tabela 7 casos)"
+    - "Causas raiz (4 casos)"
+    - "Diagnostico pratico (subdimensionamento, desequilibrio, cabos, fusivel)"
+    - "Boas praticas (10)"
+    - "Cuidados de instalacao (simetria, configuracao paralelo, torque, protecao mecanica, etiquetagem)"
+    - "Cuidados de uso (6)"
+    - "Erros comuns (8)"
+    - "Relacao com outros sistemas (6)"
+    - "Brasil x Internacional (5 painéis)"
+    - "Normas e referencias aplicaveis (tabela)"
+    - "Destaques para ensino + videos + diagramas + FAQ (7 perguntas)"
+    - "Visual didatico (bancos-bateria-separacao-funcional)"
+    - "Integracao com outras notas (8 wikilinks)"
+
+validacao:
+  normas_canonicalizadas:
+    - "ABYC E-10 (titulo Storage Batteries adicionado)"
+    - "ABYC E-11 (titulo AC and DC Electrical Systems adicionado)"
+    - "ABYC A-31 (2024) adicionado -- carregadores conectam aqui"
+    - "ABYC E-13 adicionado -- baterias lition iónicas"
+    - "ISO 13297:2020 (substitui ISO 10133) reforcado"
+    - "ISO 16315:2016 adicionado -- propulsao eletrica"
+    - "UN 38.3 adicionado -- transporte de litio (regulatorio internacional)"
+    - "NFPA 302 adicionado -- regulamento US para barcos a motor"
+
+  coerencia_intra_nota:
+    - "DoD AGM 50% / LiFePO4 80% (consistente entre TL;DR, Cuidados, FAQ)"
+    - "Fusivel obrigatorio (consistente: TL;DR, Erros comuns, Brasil x Internacional)"
+    - "Voltimetro NAO mede SoC (consistente: TL;DR, Diagnostico, Erros comuns, FAQ)"
+    - "LiFePO4 + chumbo proibido (consistente: TL;DR, Configuracoes, Erros comuns, danger)"
+    - "Chave seletora com alternador (consistente: tabela problemas, Cuidados, Erros, danger)"
+
+riscos_residuais:
+  - "Edicao ABYC E-13 nao confirmada (depende de acesso ABYC)"
+  - "Visual bancos-bateria-separacao-funcional referenciado mas nao validamos rendering"
+
+metricas:
+  linhas_adicionadas: 61
+  callouts_novos: 2
+  termos_glossario: 24
+  normas_canonicalizadas_ou_adicionadas: 5
+  diferencial:
+    - "maior glossario da Fase 5 (24 termos -- domino mais denso do vault)"
+    - "thermal runaway entrou explicitamente no vocabulario (risco real e crescente)"
+    - "PGNs N2K 127506/127508 vinculam Bancos a NMEA (ja documentada)"
+    - "UN 38.3 entra no vault (transporte de litio -- regulatorio raro citado)"
+    - "ABYC E-13 entra no vault (norma especifica de litio)"
+    - "danger especialista cita ISO 16315 (propulsao eletrica) -- preparando para reescritas futuras"
+
+proxima_reescrita: "Fase 5 #09 - CAIS (Pier) (AC) (prio 5.6, posicao 9)"
+fase_5_estendida_progresso: "3 de 5 (NMEA + Luz de Tope + Bancos Bateria concluidos)"
