@@ -3,18 +3,24 @@ title: "CAIS (Pier) (AC)"
 note_type: "system"
 domain: "30_Energia_e_Conversao"
 source_file: "CAIS (Pier) (AC) 55219734f7fb834ab92701fecab7a7cb.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_5_reescrita: "09"
+prioridade_fase_5: 5.6
+reviewed_on: "2026-04-18"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ABYC A-28 (edição a verificar)"
-  - "ISO 13297:2020"
-  - "ABNT NBR 5410 (2004 + emendas)"
-  - "NORMAM-211 (2022)"
-  - "NFPA 303 (edição a verificar)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-28 (edição a verificar) — Galvanic Isolators"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters (carregador conecta aqui)"
+  - "ABYC A-33 (edição a verificar) — Shore Power Inlets"
+  - "ISO 13297:2020 — Small craft — Electrical systems — Alternating current installations"
+  - "ABNT NBR 5410 (2004 + emendas) — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC (2022) — esporte e recreio (referência regulatória nacional)"
+  - "NFPA 303 (edição a verificar) — Fire Protection for Marinas and Boatyards"
+  - "NEC 555 (NFPA 70 art. 555, edição a verificar) — Marinas, Boatyards, Floating Buildings"
+  - "IEC 60364-7-709 — Electrical installations of marinas and similar locations"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -48,6 +54,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Shore power é a interface elétrica entre a marina e o sistema AC da embarcação. Além de fornecer energia, ele introduz condicionantes de segurança, qualidade de energia, corrosão galvânica e compatibilidade de topologia que precisam ser tratados antes de simplesmente conectar o barco. No Brasil, isso inclui um problema recorrente: `220 V` pode chegar como `fase-neutro` ou como `fase-fase`.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **`220 V` brasileiro NÃO é único** — pode ser `L + N + PE` ou `L1 + L2 + PE`. Medir antes de energizar o painel.
+> - **NUNCA promover um ativo a "neutro de adaptação"** — se o barco foi feito para `L + N` e recebe `L1 + L2`, exige sistema derivado (transformador) projetado.
+> - **Polaridade invertida não impede funcionar — mata em manutenção.** Sempre testar com verificador ou multímetro antes de conectar.
+> - **Terra do pedestal pode ser borne sem fio** — medir `N–PE < 3 V` no pedestal antes de confiar.
+> - **Cabo de pier:** 6 mm² para 32 A, 10 mm² para 50 A. Extensão doméstica = incêndio anunciado.
+> - **Conector quente após 30 min sob carga** = falha de contato → desconectar e investigar.
+> - **Isolador galvânico no PE = mínimo; transformador de isolamento = ideal** (especialmente casco metálico).
+> - **Conectar/desconectar com disjuntor do pedestal OFF** — reduz arco e prolonga vida do plug.
+> - **ESD (Electric Shock Drowning):** suspeita de corrente na água → desliga shore power da marina inteira ANTES de qualquer pessoa entrar na água.
 
 ## O que é
 
@@ -267,6 +284,20 @@ Com tudo ligado e cargas normais:
 - Em marina desconhecida: medir antes de conectar — polaridade e terra
 - Em suspeita de problema (cheiro de queimado, equipamento com comportamento estranho): desconectar o shore power e investigar
 
+> [!danger] Quando chamar especialista
+> A interface AC é fronteira de responsabilidade técnica e jurídica. Falha aqui não dispara só disjuntor — dispara investigação de seguradora, autoridade marítima e (em pior caso) inquérito por morte por choque na água. Pare e procure profissional naval certificado quando:
+> - **Pedestal sem PE confirmado** e sem possibilidade de transformador de isolamento a bordo.
+> - **Conversão para split-phase 120/240 V** em barco importado mantendo cargas brasileiras (sistema derivado projetado, não improvisado).
+> - **Marina com histórico de corrosão galvânica em frota inteira** — problema é da infraestrutura, não do barco. Diagnóstico coletivo.
+> - **Casco metálico (alumínio ou aço)** operando shore power sem transformador de isolamento — risco galvânico estrutural.
+> - **Suspeita de ESD (Electric Shock Drowning)** em pier — risco a vida humana. Desligue tudo e chame o eletricista/marina antes de entrar na água.
+> - **Inlet em proa ou local exposto a green water** — re-instalação completa, não apenas substituição do conector.
+> - **Embarcação com >1 entrada AC** (gerador + shore + inversor) e ATS (Automatic Transfer Switch) com comportamento suspeito — coordenação de fontes é projeto de engenharia.
+> - **Trifásico ou >50 A** com necessidade de coordenação NBR 5410 + ABYC + ELCI/RCD — fora do escopo de instalador comum.
+> - **Marina pediu laudo de aceitação** ou sinistro envolveu shore power — assinatura técnica de profissional habilitado é obrigatória.
+>
+> Custo de inspeção/projeto correto (3–6 h de engenheiro/eletricista naval) é muito inferior a sinistro de incêndio em casco, troca de ferragens corroídas ou — pior — vida humana.
+
 ## Erros comuns
 
 **Usar extensão doméstica como cabo de pier:**
@@ -315,12 +346,21 @@ Resistência de contato elevada → aquecimento progressivo → arco elétrico. 
 
 ## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (terra, proteção diferencial/leakage, polaridade)
-- **ABYC A-28 (edição/tema a verificar)** — citada na literatura como referência para isoladores galvânicos; tópico a confirmar externamente (ver `_Editorial/registro_normas.yaml`)
-- **ISO 13297:2020** — Small craft — Electrical systems — Alternating current installations
-- **NFPA 303 (edição a verificar)** — Fire Protection for Marinas and Boatyards
-- **ABNT NBR 5410 (2004 + emendas)** — Instalações elétricas de baixa tensão (referência complementar para pedestais de marina e infraestrutura associada)
-- **NORMAM-211 (2022)** — referencial regulatório brasileiro da DPC para amadores, esporte e recreio e universo correlato
+**Bordo (lado embarcação):**
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (terra, proteção diferencial/leakage, polaridade, ELCI 30 mA)
+- **ABYC A-28 (edição a verificar)** — Galvanic Isolators (referência canônica para isoladores no PE; ver `_Editorial/registro_normas.yaml`)
+- **ABYC A-31 (2024)** — Battery Chargers and Inverters (carregador é a principal carga AC do shore power)
+- **ABYC A-33 (edição a verificar)** — Shore Power Inlets (especificação dos receptáculos de bordo)
+- **ISO 13297:2020** — Small craft — Electrical systems — Alternating current installations (substitui ISO 13297:2014)
+
+**Pedestal (lado marina):**
+- **NEC 555 (NFPA 70 art. 555, edição a verificar)** — Marinas, Boatyards, Floating Buildings (referência US para infraestrutura de marina)
+- **IEC 60364-7-709** — Electrical installations — Marinas and similar locations (referência IEC internacional)
+- **NFPA 303 (edição a verificar)** — Fire Protection for Marinas and Boatyards (proteção contra incêndio)
+
+**Brasil:**
+- **ABNT NBR 5410 (2004 + emendas)** — Instalações elétricas de baixa tensão (referência para pedestais de marina e infraestrutura associada)
+- **NORMAM-211/DPC (2022)** — referencial regulatório brasileiro da DPC para amadores, esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 
@@ -373,6 +413,35 @@ Imediatamente não. Mas coloca tensão de fase no condutor neutro — tocar o ne
 **Qual a frequência correta no Brasil?**
 
 60Hz. Equipamentos europeus são projetados para 50Hz — motores giram em velocidade ligeiramente diferente, relógios analógicos podem dessincronizar, transformadores podem aquecer mais.
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Shore power** | Energia AC fornecida pela marina/cais à embarcação atracada |
+| **Pedestal** | Caixa fixa no cais com tomada, disjuntor e (idealmente) PE |
+| **Inlet** | Receptáculo fixo no costado/popa do barco, ponto de entrada AC |
+| **Cabo de pier** | Cabo flexível entre pedestal e inlet (10–15 m, 6–10 mm²) |
+| **L + N + PE** | Topologia monofásica clássica: fase + neutro + terra |
+| **L1 + L2 + PE** | Topologia fase-fase: dois ativos + terra (sem neutro) |
+| **Split-phase 120/240 V** | Padrão US: dois ativos defasados 180° + neutro central + PE |
+| **PE (Protective Earth)** | Condutor de proteção, igual ao "terra" — não conduz em operação normal |
+| **Polaridade** | Orientação fase/neutro no plug — invertida = neutro energizado |
+| **Marinco 30A/125V** | Conector US travado de 3 pinos para shore power 30 A |
+| **Marinco 50A/125V** | Conector US travado de 4 pinos para shore power 50 A (split-phase) |
+| **Steck 2P+T** | Conector industrial brasileiro 2 polos + terra |
+| **IEC 60309** | Padrão de conector industrial trifásico (azul/vermelho) |
+| **GFCI / DR** | Ground Fault Circuit Interrupter / Diferencial Residual — desarma em fuga |
+| **ELCI** | Equipment Leakage Circuit Interrupter — DR específico de bordo (ABYC, 30 mA) |
+| **RCD / RCBO** | Residual Current Device / RCD + Breaker — proteção combinada |
+| **ATS** | Automatic Transfer Switch — chaveamento entre shore/gerador/inversor |
+| **Bonding** | Interconexão equipotencial de massas metálicas para evitar diferenças de potencial |
+| **ESD** | Electric Shock Drowning — fuga AC na água + nadador → afogamento por choque |
+| **Corrente parasita** | Corrente AC/DC indevida que circula pelo PE compartilhado |
+| **Corrosão galvânica** | Dissolução eletroquímica de metais em meio condutor (água do mar) |
+| **Isolador galvânico** | Bloqueia DC galvânico no PE (até ~1,2 V), passa AC normalmente |
+| **Transformador de isolamento** | Separa eletricamente marina e barco — mata corrente parasita e galvânica |
+| **IP66 / IP67** | Grau de proteção: poeira total + jato d'água / imersão temporária |
 
 ## Visual didático
 

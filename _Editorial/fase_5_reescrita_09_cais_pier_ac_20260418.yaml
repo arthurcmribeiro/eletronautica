@@ -1,0 +1,143 @@
+---
+# Fase 5 - Reescrita Premium #09 (Fase 5 estendida)
+# Nota: 30_Energia_e_Conversao/CAIS (Pier) (AC)
+# Prioridade matriz: 5.6 (posicao 9)
+# Data: 2026-04-18
+fase: 5
+reescrita_num: "09"
+data: "2026-04-18"
+status: "concluida"
+formato: "compact"
+thread: "5-09 — premium rewrite CAIS (Pier) (AC) (Fase 5 estendida)"
+
+nota:
+  caminho: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+  linhas_antes: 401
+  linhas_depois: 469
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 5.6
+  posicao_matriz: 9
+  esforco_estimado_h: 3
+  esforco_real_h: 1.0
+
+mudancas:
+  frontmatter:
+    - status -> fase-5-reescrita-premium
+    - fase_5_reescrita "09"
+    - prioridade_fase_5 5.6
+    - reviewed_on 2026-04-18
+    - normas_citadas expandidas de 6 para 10 itens
+    - "Adicionado ABYC A-31 (2024) -- carregador eh principal carga AC do shore power"
+    - "Adicionado ABYC A-33 -- norma especifica de Shore Power Inlets"
+    - "Adicionado NEC 555 (NFPA 70 art. 555) -- referencia US para marinas"
+    - "Adicionado IEC 60364-7-709 -- referencia IEC internacional para marinas"
+    - "NORMAM-211 -> NORMAM-211/DPC (autoridade explicita)"
+    - "Titulos completos adicionados em E-11, ISO 13297, NBR 5410"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip)"
+      regras:
+        - "220V brasileiro NAO eh unico (L+N+PE OU L1+L2+PE)"
+        - "NUNCA promover ativo a 'neutro de adaptacao'"
+        - "Polaridade invertida nao impede funcionar -- mata em manutencao"
+        - "Terra do pedestal pode ser borne sem fio (medir N-PE < 3V)"
+        - "Cabo pier: 6mm2/32A, 10mm2/50A; extensao domestica = incendio"
+        - "Conector quente apos 30min sob carga = falha de contato"
+        - "Isolador galvanico = minimo; transformador isolamento = ideal"
+        - "Conectar/desconectar com disjuntor pedestal OFF (reduz arco)"
+        - "ESD: suspeita de corrente na agua -> desliga marina inteira ANTES de entrar"
+
+    - bloco: "Quando chamar especialista (danger)"
+      cenarios:
+        - "Pedestal sem PE confirmado e sem possibilidade de transformador"
+        - "Conversao split-phase 120/240V em barco importado mantendo cargas BR"
+        - "Marina com historico de corrosao galvanica em frota inteira"
+        - "Casco metalico (Al/aco) operando shore power sem transformador"
+        - "Suspeita de ESD em pier (risco a vida humana)"
+        - "Inlet em proa ou exposto a green water (re-instalacao completa)"
+        - "Embarcacao com >1 entrada AC (gerador+shore+inversor) e ATS suspeito"
+        - "Trifasico ou >50A (coordenacao NBR 5410 + ABYC + ELCI/RCD)"
+        - "Marina pediu laudo de aceitacao ou sinistro envolveu shore power"
+      destaque: "Custo 3-6h engenheiro << sinistro incendio em casco / vida humana"
+
+    - bloco: "Glossario rapido (DEC-11)"
+      termos: 25
+      cobertura:
+        - "Infraestrutura: shore power, pedestal, inlet, cabo pier"
+        - "Topologias: L+N+PE, L1+L2+PE, split-phase 120/240V"
+        - "Conectores: Marinco 30A/50A, Steck 2P+T, IEC 60309"
+        - "Protecoes AC: GFCI, DR, ELCI, RCD, RCBO"
+        - "Sistema: PE, polaridade, ATS, bonding"
+        - "Riscos: ESD, corrente parasita, corrosao galvanica"
+        - "Solucoes: isolador galvanico, transformador isolamento"
+        - "Vedacao: IP66, IP67"
+
+    - bloco: "Normas aplicaveis reorganizadas em 3 grupos"
+      grupos:
+        - "Bordo (lado embarcacao): E-11, A-28, A-31, A-33, ISO 13297"
+        - "Pedestal (lado marina): NEC 555, IEC 60364-7-709, NFPA 303"
+        - "Brasil: NBR 5410, NORMAM-211/DPC"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "O que e + Funcao (tabela 4 funcoes)"
+    - "Como aparece na pratica (3 perfis: BR, importado, premium)"
+    - "Fundamentos minimos (topologia, 220V multitopico, polaridade, terra compartilhado)"
+    - "Caracteristicas (tabela comparativa Brasil x US)"
+    - "Configuracoes (basico, recomendado, premium)"
+    - "Marcas (6: Marinco, Steck, Hubbell, Mastervolt/Victron, Promariner/Charles, Palazzoli/ABB)"
+    - "Componentes relacionados (10)"
+    - "Problemas frequentes (tabela 7 casos com gravidade)"
+    - "Causas raiz (4)"
+    - "Diagnostico pratico (4 procedimentos com codigo de instrumento)"
+    - "Boas praticas profissionais (9)"
+    - "Cuidados de instalacao (6)"
+    - "Cuidados de uso (5)"
+    - "Erros comuns (5)"
+    - "Relacao com outros sistemas (8)"
+    - "Brasil x Internacional (tabela 6 aspectos)"
+    - "Como ensinar + videos + diagramas + FAQ (5 perguntas)"
+    - "Visual didatico (shore-power-topologias)"
+    - "Integracao (7 wikilinks)"
+
+validacao:
+  normas_canonicalizadas:
+    - "ABYC E-11 (titulo AC and DC Electrical Systems adicionado)"
+    - "ABYC A-31 (2024) adicionado -- carregador eh principal carga"
+    - "ABYC A-33 adicionado -- ESPECIFICA de Shore Power Inlets"
+    - "NEC 555 (NFPA 70 art. 555) adicionado -- referencia US para marina"
+    - "IEC 60364-7-709 adicionado -- referencia IEC internacional"
+    - "NORMAM-211 -> NORMAM-211/DPC (autoridade explicita)"
+    - "ISO 13297:2020 (substitui 13297:2014) titulo completo"
+
+  coerencia_intra_nota:
+    - "220V multitopico (consistente: TL;DR, Fundamentos, Caracteristicas, Erros)"
+    - "Medir antes de conectar (consistente: TL;DR, Diagnostico, Boas praticas, Erros, FAQ)"
+    - "Polaridade invertida nao impede funcionar mas mata (consistente: TL;DR, Causas, Erros, FAQ)"
+    - "Isolador galvanico vs transformador (consistente: Fundamentos, Configuracoes, danger, FAQ)"
+    - "ESD entrou explicitamente (TL;DR, danger, glossario)"
+
+riscos_residuais:
+  - "Edicao ABYC A-28 nao confirmada"
+  - "Edicao ABYC A-33 nao confirmada"
+  - "Edicao NEC 555 nao confirmada (mantida nota explicita)"
+  - "Edicao NFPA 303 nao confirmada"
+  - "ESD eh terminologia US (Electric Shock Drowning) -- equivalente BR menos formal"
+
+metricas:
+  linhas_adicionadas: 68
+  callouts_novos: 2
+  termos_glossario: 25
+  normas_canonicalizadas_ou_adicionadas: 7
+  diferencial:
+    - "primeira nota com Normas reorganizadas em 3 grupos (Bordo / Pedestal / Brasil)"
+    - "ESD (Electric Shock Drowning) entra no vocabulario do vault (risco a vida)"
+    - "ABYC A-33 entra no vault (norma especifica de shore power inlets)"
+    - "NEC 555 entra no vault (referencia US para infraestrutura de marina)"
+    - "IEC 60364-7-709 entra no vault (referencia internacional para marinas)"
+    - "danger especialista cobre 9 cenarios (mais completa da Fase 5)"
+    - "TL;DR cobre 9 regras incluindo ESD"
+
+proxima_reescrita: "Fase 5 #10 - Normas e Regulamentacoes ABYC ISO Brasil (prio 5.5, posicao 10, ULTIMA)"
+fase_5_estendida_progresso: "4 de 5 (NMEA + Luz Tope + Bancos Bateria + CAIS concluidos)"
