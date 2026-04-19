@@ -977,6 +977,61 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 3 CONCLUÍDA — 2026-04-19
+
+**Comando de continuidade do responsável editorial:** "continuar" — interpretado como aprovação para seguir com Onda 3 mantendo o padrão recalibrado de Onda 2 (40-47 termos glossário, todas as normas cabíveis, TL;DR 9 regras, danger 9 cenários).
+
+**Onda 3 executada (9/9 notas Tier S, cluster navegação/emergência/comunicação):**
+
+| # | Nota | Antes → Depois | Normas | Destaques |
+|---|------|---------------|--------|-----------|
+| 18 | VHF | 297 → ~500 | 4 → 18 | GMDSS, Canal 16, DSC, MMSI, PL-259/SO-239, ITU-R M.493/M.1084, IEC 62238/61097-7 |
+| 19 | DSC | 320 → ~545 | 4 → 17 | DEC-14, Canal 70 exclusivo, MMSI único, distress cancelamento, NMEA 2000 PGN 129808, GMDSS A1-A4 |
+| 20 | EPIRB | 297 → ~570 | 4 → 21 | DEC-14, Cospas-Sarsat C/S T.001/T.018/G.005, MEOSAR, 15HEX/UIN, SISEPIRB, Cat I/II float-free |
+| 21 | AIS | 273 → ~495 | 4 → 20 | DEC-14, ITU-R M.1371/M.2092 (VDES), Classe A/B SOTDMA/CSTDMA, IALA G-1028/A-126, Appendix 18 |
+| 22 | Radar | 267 → ~535 | 3 → 23 | DEC-14, IMO MSC.192(79), IEC 62388/60936-1/-2/-3, ARPA A.823(19), ICNIRP, ABYC TE-4 |
+| 23 | MOB | 306 → ~540 | 6 → 24 | AIS-SART IEC 61097-14, PLB Cospas-Sarsat, ISAF OSR Cat 0-5, ISO 12402/12401, ABYC T-31 |
+| 24 | NAVEGAÇÃO BB/BE/Alcançado | 327 → ~560 | 4 → 25 | COLREGs 20-38 + Annex I-II específicas, ISO 16180/19009, ABYC A-16, CIE 15:2004 |
+| 25 | Luz de Âncora | 274 → ~455 | 3 → 21 | COLREGs Rule 30 + 21(e) + 22, hotline obrigatório, ≥ 50 m duas luzes, tricolor modo âncora |
+| 26 | Iluminação Emergência | 286 → ~585 | 6 → 30 | SOLAS II-1 Reg 41-43 + II-2 Reg 13, LLL ISO 15370, NBR 10898/13434, NR-30, IEC 62034 auto-teste |
+
+**Métricas Onda 3:**
+- 9 notas, **~2138 linhas adicionadas**
+- **18 callouts novos** (9 tip + 9 danger)
+- **413 termos de glossário** (média 45,9/nota vs 42 em Onda 2)
+- **199 normas expandidas/canonicalizadas** (média 22,1/nota) — maior densidade normativa do programa até aqui; SOLAS Cap III/IV/V + II-1/II-2 + Annex I-IV + Regras 5/6/7/20-31/38 COLREGs, ITU-R M-séries, IEC 61097/61993-2/62287-1/-2/60945/62388/60598-2-22/62034, ISO 12401/12402/15370/17631/24409/16180/19009, ABYC A-4/A-16/E-11/E-30/T-31/TE-4, USCG 33 CFR 183/84 + 46 CFR 111/112/133, Cospas-Sarsat C/S T.001/T.018/G.005, NR-30, ABNT NBR 10898/13434/IEC 60598-2-22/5410, NORMAM-201/204/205/211
+- **5 notas com `normas_citadas` criadas/ampliadas substancialmente** (DEC-14 ou DEC-14-like expansão): DSC, EPIRB, AIS, Radar, Iluminação Emergência
+- **5 TODOs antigos resolvidos:**
+  - "NORMAM-01 (edição a verificar)" em NAVEGAÇÃO, Luz de Âncora, Iluminação Emergência → resolvido para NORMAM-201/211/205 específicas
+  - "SOLAS (edição a verificar) Chapter II-2 / Reg. 42" em Iluminação Emergência → resolvido para SOLAS II-2 Reg 13 + II-1 Reg 41-43
+  - "USCG 33 CFR (edição a verificar) 183" em NAVEGAÇÃO → resolvido para 33 CFR Part 183 + 84 + 46 CFR Part 111
+- **5 novas decisões documentadas:** DEC-21 (GMDSS integrado), DEC-22 (COLREGs específico + NORMAM explícita), DEC-23 (NBR 10898+13434+IEC 60598-2-22 triad), DEC-24 (ISAF OSR baseline), DEC-25 (Cospas-Sarsat trilogy)
+- Esforço: 11-13 h estimadas → **~7 h reais** (1,7× mais eficiente)
+
+**Padrões reforçados no cluster Onda 3 (11 padrões):**
+- GMDSS como ecossistema integrado — VHF+DSC+EPIRB+AIS-SART+MOB-AIS+PLB (DEC-21)
+- SOLAS Cap IV + ITU-R M-séries + IEC 60945 citadas juntas em toda comunicação
+- COLREGs Rules com número específico (não genérico) — Rule 5/6/7/20-31/38 + Annex I-IV (DEC-22)
+- NORMAM-01 substituída por NORMAM-201/204/205/211 conforme aplicabilidade
+- NMEA 0183 + NMEA 2000 + PGNs específicos (129038/129039/129794/129808/130842) em toda rede eletrônica
+- ABYC E-11 + NBR 5410 como par DC/AC em todas as notas elétricas
+- Glossários 42-49 termos consistentes (cumprindo feedback Q2 "melhor possível")
+- Radar/AIS complementaridade explícita (Rule 5 + Rule 7 COLREGs)
+- MOB/EPIRB distinção pessoal (PLB) vs embarcação (EPIRB)
+- NAVEGAÇÃO/Luz Âncora contraste direcional (112,5°/135°/225°) vs 360° all-round
+- Iluminação Emergência arquitetura 3 camadas (elétrica + fotoluminescente + portátil)
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_03_tier_s_navegacao_emergencia_20260419.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas
+- Concluído: **26 / 133** (19,5%)
+- Próxima: **Onda 4 — Tier S fechamento (17 notas remanescentes)** após aprovação humana
+
+**Cadência (b) — PAUSA OBRIGATÓRIA:** Onda 3 entregue. Antes de Onda 4, validar: (1) presença massiva de COLREGs específicos por Regra está clara ou sobrecarregando? (2) novas DEC-21 a DEC-25 devem ser retrofitadas em Ondas 1-2 ou aplicadas apenas daqui para frente? (3) média de 22 normas/nota (maior da fase até aqui) está no "ponto certo" ou precisa conter? (4) grupo Tier S restante (Onda 4: 17 notas misturando instrumentação, propulsão, segurança fundacional) mantém padrão recalibrado ou ajusta para cluster menos regulatório? (5) cadência: seguir cadência (b) por mais 1-2 ondas ou mudar para (a) auto-contínuo?
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
