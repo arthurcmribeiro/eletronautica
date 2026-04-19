@@ -3,16 +3,24 @@ title: "DC vs AC — Corrente Contínua e Alternada"
 note_type: "comparison"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DC vs AC — CORRENTE CONTÍNUA E ALTERNADA 33a19734f7fb81538f02d8f3158c915f.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "07"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ISO 13297:2020"
-  - "ABNT NBR 5410 (2004 + emendas)"
-  - "IEC 60092 (edição a verificar)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC and DC installations"
+  - "ISO 16315:2016 — Small craft — Electric propulsion"
+  - "IEC 60092 (série) — Electrical installations in ships (edição a verificar)"
+  - "IEC 60364-7-709 — Marinas and similar locations"
+  - "NEC 555 (NFPA 70 art. 555) — Marinas and Boatyards"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar para AC"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -44,6 +52,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > DC vs AC — Os dois sistemas de eletricidade coexistem em embarcações modernas. Entender as diferenças, onde cada um é usado e como eles se relacionam é essencial para trabalhar com segurança e eficiência.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **DC e AC são domínios separados**: painéis, cabos, barramentos, proteções e diagrama separados. Compartilhamento = ambiguidade = risco.
+> - **Componente AC ≠ componente DC**: disjuntor, fusível, porta-fusível, chave — tudo precisa ser especificado para a corrente correta. Arco DC não se extingue sozinho.
+> - **Risco dominante em DC = arco + incêndio**. Em AC = choque + ESD. As proteções refletem isso (fusível/breaker DC, DR/ELCI/GFCI AC).
+> - **Frequência ≠ tensão**: 220 V a 50 Hz ≠ 220 V a 60 Hz para motores, relógios, temporizadores, cargas indutivas. Verificar ambos.
+> - **Inversor é ponte com custo**: eficiência 85–92%; cada W de AC puxa ~1,10–1,18× em DC.
+> - **Senoidal puro é padrão prudente**; onda modificada aceitável apenas em cargas resistivas bem caracterizadas.
+> - **Tensão DC do sistema** escala com potência: 12 V pequeno, 24 V médio, 48 V+ propulsão/alta potência.
+> - **Shore power sempre desligado antes de intervenção**, mesmo com disjuntor "off"; confirmar com multímetro.
+> - **Cores e rotulagem**: DC preto/vermelho/amarelo; AC verde-amarelo/azul/marrom; nunca trocar convenção para "encaixar" material à mão.
 
 ## O que é
 
@@ -196,6 +215,20 @@ Sem shore power (navegando ou fundeado):
 - Dimensionar o inversor para as cargas AC que serão usadas simultaneamente
 - Documentar no diagrama unifilar a separação entre os dois sistemas
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Retrofit de embarcação com conversão completa AC→DC (p.ex. propulsão elétrica pura) — envolve ISO 16315, ABYC, e análise de potência total.
+> - Sistema híbrido DC/AC com múltiplas fontes (shore + gerador + inversor + solar + hidrogerador) operando em paralelo — coordenação exige chave de transferência com intertravamento e/ou grid-tie.
+> - Instalação de tensão DC acima de 48 V ou sistema de eletropropulsão — categorias diferentes de risco elétrico, acesso restrito conforme norma.
+> - Incidente com choque AC, eletrocussão ou ESD — perito técnico e laudo com ART/CREA.
+> - Incêndio no banco, no inversor ou no painel — causa raiz pode ser sistêmica (coordenação de proteção, queda de tensão, conexão frouxa).
+> - Laudo técnico para seguradora, Marinha, Justiça.
+> - Importação de barco projetado para 120 V / 60 Hz operar no Brasil 127 ou 220 V / 60 Hz — requer reprojeto AC; alguns equipamentos são descartáveis.
+> - Embarcação comercial, SOLAS, passageiro ou classificada — IEC 60092 e regime de classe aplicam-se.
+> - Conversão 220 V BR (fase-fase) para 220 V fase-neutro via transformador — decisão de topologia.
+>
+> Confundir DC com AC em projeto, proteção ou manutenção é uma das causas mais comuns de incêndio em embarcação de recreio. Quando houver dúvida, pare.
+
 ## Erros comuns
 
 **Usar componentes DC em circuito AC:**
@@ -260,6 +293,32 @@ Não diretamente. O gerador gera AC. Para carregar baterias DC, é necessário u
 **Qual o risco real de 12V DC?**
 
 Em extra-baixa tensão, o risco de choque costuma ser menor que em 127/220V, mas isso não autoriza tratar o sistema como "seguro por definição". Em embarcações, o risco operacional dominante costuma ser arco, aquecimento e incêndio por curto-circuito ou proteção inadequada; em ambiente molhado, mãos lesionadas e contatos extensos, o risco fisiológico também aumenta.
+
+## Glossário rápido
+
+- **DC (Direct Current)** — corrente de polaridade fixa; fornecida por bateria, MPPT, retificador ou conversor DC-DC.
+- **AC (Alternating Current)** — corrente de polaridade que alterna periodicamente; shore, gerador ou inversor.
+- **Senoide** — forma de onda AC ideal; referência para todo equipamento AC bem projetado.
+- **Onda quadrada** — AC grosseiramente alternada; inadequada para cargas indutivas/eletrônicos.
+- **Onda modificada (modified sine wave)** — aproximação em degraus; aceitável só em cargas resistivas simples.
+- **Frequência (Hz)** — número de ciclos por segundo; 60 Hz no Brasil, 50 Hz na Europa.
+- **Zero crossing** — passagem por zero da senoide; permite extinção natural do arco em AC.
+- **Tensão de pico** — valor máximo instantâneo; 220 V RMS ≈ 311 V pico.
+- **RMS (Root Mean Square)** — valor eficaz da AC; é o que o multímetro em VAC mostra.
+- **Inversor** — converte DC→AC; eficiência típica 85–92%.
+- **Carregador** — converte AC→DC; eficiência típica 85–92%.
+- **Inversor-carregador** — bidirecional (p.ex. Victron MultiPlus, Mastervolt Mass Combi).
+- **Conversor DC-DC** — transforma um nível DC em outro (24→12 V, 48→24 V); mantém o domínio DC.
+- **Alternador** — gera AC trifásica internamente, retifica para DC; saída prática é DC.
+- **Retificador** — converte AC→DC via diodos; parte do alternador, do carregador, do MPPT.
+- **Shore power** — alimentação AC externa do cais (50/60 Hz, 127/220/230/240 V).
+- **Banco de baterias** — armazenamento de energia DC; autonomia em Ah ou kWh.
+- **Queda de tensão** — perda ao longo do condutor (V = I×R); DC baixa tensão sofre muito mais.
+- **Extra-baixa tensão (ELV)** — convencionalmente ≤ 50 V AC ou 120 V DC; risco de choque reduzido, não zero.
+- **Baixa tensão (LV)** — até 1000 V AC ou 1500 V DC; inclui shore power 220 V BR.
+- **Topologia de rede** — arrangements: L+N+PE, L1+L2+PE, split-phase 120/240 V, trifásico — define proteção.
+- **Polaridade (DC)** — positivo e negativo fixos; inverter = queimar equipamento ou bateria.
+- **Convenção de cores** — DC: preto (+) / vermelho (+) / amarelo (−); AC BR: marrom/preto (fase), azul claro (neutro), verde-amarelo (PE).
 
 ## Integração com outras notas
 

@@ -3,17 +3,24 @@ title: "Diagrama Unifilar — Documentação do Sistema Elétrico"
 note_type: "system"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DIAGRAMA UNIFILAR — DOCUMENTAÇÃO DO SISTEMA ELÉTRI 33a19734f7fb814699bceccc90b97d43.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "08"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ISO 13297:2020"
-  - "IEC 60617"
-  - "ABNT NBR 5410 (2004 + emendas)"
-  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats (documentação e identificação)"
+  - "ABYC E-2 (2020) — Cathodic Protection (inclui diagrama de bonding)"
+  - "ABYC E-10 (2023) — Storage Batteries (diagrama do banco)"
+  - "ISO 13297:2020 — Small craft — Electrical systems (requisitos documentais)"
+  - "ISO 10133 retirada → ISO 13297 é a referência atual"
+  - "IEC 60617 (série) — Símbolos gráficos para diagramas elétricos"
+  - "IEC 61346 / IEC 81346 — Referência de designações (TAGs) em sistemas"
+  - "ABNT NBR 5444 — Símbolos gráficos para instalações elétricas prediais (referência BR)"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar para instalação"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -47,6 +54,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > DIAGRAMA UNIFILAR — Representação esquemática simplificada do sistema elétrico, mostrando os circuitos, proteções e equipamentos em uma visão de conjunto. A linguagem universal da elétrica náutica.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Sem diagrama, sem laudo e sem modificação segura**: qualquer intervenção significativa sem unifilar atualizado aumenta risco de incêndio, choque e custo de reparo.
+> - **Uma linha por circuito, não por condutor**: a unifilar simplifica; detalhe fica no esquemático, na lista de cabos e no layout físico.
+> - **DC e AC em seções visualmente separadas**: cores, blocos, molduras ou folhas diferentes. Misturar = técnico no sistema errado.
+> - **Proteção com valor, cabo com bitola**: "Disj. 20 A, curva C" e "#10 AWG / 6 mm²" — não apenas "fusível".
+> - **Numeração espelha o painel físico**: circuito #3 no diagrama = chave #3 no painel; divergência = retrabalho garantido.
+> - **Data e revisão obrigatórias**: diagrama sem versão vira ficção em 12 meses.
+> - **Cópia a bordo plastificada + cópia digital na nuvem**: papel molha, celular quebra; redundância é projeto.
+> - **Retroengenharia > ausência**: sem projeto original, documentar a partir do painel existente com multímetro; melhor esboço à mão que nada.
+> - **Bonding tem diagrama próprio ou seção dedicada**: não confundir caminho de corrente com malha equipotencial.
 
 ## O que é
 
@@ -208,6 +226,20 @@ Shore power / Gerador / Inversor
 - Revisar a cada 2 anos mesmo sem modificações (verificar se reflete a realidade)
 - Não usar diagrama genérico de "barco similar" — cada embarcação tem sua configuração
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Laudo técnico para seguradora, Marinha ou Justiça envolvendo o sistema elétrico — diagrama assinado por profissional habilitado (ART/CREA) é documento primário.
+> - Embarcação comercial, SOLAS, passageiro ou classificada — diagrama segue padrões IEC 60092 e regime da sociedade classificadora (ABS, DNV, BV, Lloyd's).
+> - Projeto novo ou refit completo de sistema elétrico AC+DC com múltiplas fontes (shore + gerador + inversor + solar + hidro) — coordenação é projeto de engenharia, não desenho.
+> - Eletropropulsão, 48 V+ DC, baterias de íon-lítio — ISO 16315 + ABYC E-13 exigem diagrama específico com BMS, contator principal, Class T e sinalização.
+> - Retrofit sem projeto original disponível — retroengenharia precisa de ART para validar topologia, não apenas "mapear".
+> - Incêndio, sinistro ou perda de cobertura de seguro cuja causa raiz envolva diagrama ausente/desatualizado — perícia exige reconstituição documental.
+> - Venda/importação de embarcação — comprador ou seguradora internacional exige diagrama conforme padrão ABYC/ISO.
+> - Modificação que altere topologia AC (monofásico ↔ bifásico ↔ split-phase) — reemissão completa do diagrama AC.
+> - Bancos paralelos de tecnologias diferentes (AGM + lítio) ou múltiplos bancos de 24/48 V — diagrama deve mostrar chave de transferência, BMS e isolação entre bancos.
+>
+> O diagrama unifilar é o **contrato técnico da instalação**. Quando ele importa (laudo, venda, sinistro, refit, conformidade), precisa carimbo de quem assume responsabilidade.
+
 ## Erros comuns
 
 **Diagrama desatualizado:**
@@ -317,6 +349,31 @@ Ensinar a ler o diagrama unifilar como mapa de energia e protecao, nao como dese
 **Cautela:** O unifilar simplifica condutores e detalhes fisicos. Ele deve ser complementado por lista de cabos, layout fisico, etiquetas e plano de teste.
 
 Material de apoio: [Diagrama unifilar: camadas de leitura](../_visuals/generated/diagrama-unifilar-camadas.md)
+
+## Glossário rápido
+
+- **Unifilar / SLD (Single Line Diagram)** — representação com uma linha por circuito, independentemente do número de condutores; visão arquitetural.
+- **Esquemático / multifilar** — mostra cada condutor individualmente; usado em diagnóstico e controle.
+- **Diagrama de blocos** — representação de macrofunções (fontes, proteções, cargas) sem detalhamento de circuito.
+- **Diagrama de layout** — vista física de onde cada componente está no barco; complementa o unifilar.
+- **Cable schedule / lista de cabos** — planilha com bitola, comprimento, origem, destino e proteção de cada cabo.
+- **Legenda (key)** — tabela que decodifica símbolos, cores, abreviações e convenções usados no diagrama.
+- **Símbolo IEC 60617** — padrão internacional de símbolos para diagramas elétricos.
+- **Símbolo ANSI / IEEE 315** — padrão americano; convivem com IEC em barcos multiorigem.
+- **TAG / designação de referência** — código único que identifica cada componente (IEC 81346); p.ex. "-F1" para fusível 1, "-QM1" para chave geral.
+- **Barramento (busbar)** — ponto de conexão comum de múltiplos circuitos; representado por linha horizontal espessa.
+- **SPOG (Single Point of Grounding)** — ponto único onde negativo DC, PE AC e bonding convergem; destaque explícito no diagrama.
+- **Fonte** — origem de energia: banco, alternador, shore, gerador, inversor, MPPT, hidrogerador.
+- **Carga** — consumidor de energia; representada com símbolo funcional (motor, lâmpada, resistência, eletrônico).
+- **Proteção a montante / a jusante** — posição relativa entre dispositivos em cascata; fundamental para seletividade.
+- **Chave de transferência (ATS/MTS)** — seleciona entre fontes AC (shore/gerador/inversor); automática ou manual com intertravamento.
+- **Intertravamento** — mecanismo que impede duas fontes AC em paralelo simultâneo; representado no diagrama com símbolo de acoplamento.
+- **Sistema derivado** — secundário de transformador de isolamento ou saída de inversor; tem seu próprio N-PE no diagrama.
+- **Revisão / revision table** — histórico de mudanças; "Rev A, 2026-04-19, added solar MPPT".
+- **As-built** — versão do diagrama que reflete o instalado final, diferente do "as-designed" (projetado).
+- **Retroengenharia (reverse engineering)** — processo de reconstruir diagrama a partir da instalação física existente sem projeto original.
+- **Padrão de cor** — convenção visual para identificar sistemas (DC vermelho/preto/amarelo, AC preto-marrom/azul/verde-amarelo) no diagrama e no cabo real.
+- **Nota técnica (note)** — texto anexo ao diagrama com premissas, restrições e observações (p.ex. "todos os cabos AC em conduíte metálico aterrado").
 
 ## Integração com outras notas
 
