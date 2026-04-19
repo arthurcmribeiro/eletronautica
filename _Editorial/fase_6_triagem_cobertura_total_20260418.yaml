@@ -1,0 +1,431 @@
+---
+# Fase 6 - Triagem para cobertura total DEC-11 (Caminho B)
+# Data: 2026-04-18
+# Autor: Claude Opus 4.7
+# Status: aguardando aprovacao editorial antes de iniciar ondas
+fase: 6
+formato: "triagem-adaptada"
+caminho_escolhido: "B -- triagem + template adaptado por tier"
+data: "2026-04-18"
+status: "aguardando_aprovacao"
+
+resumo:
+  total_notas_vault: 143
+  ja_premium_fase_5: 10
+  falta_classificar: 133
+  distribuicao_proposta:
+    tier_S_cheio: 43
+    tier_A_adaptado: 54
+    tier_B_light: 18
+    tier_C_frontmatter: 18
+
+criterios_por_tier:
+  tier_S:
+    descricao: "DEC-11 cheio igual as 10 da Fase 5 premium"
+    template:
+      - "TL;DR 7-9 regras (tip callout)"
+      - "Danger especialista (5-9 cenarios)"
+      - "Glossario 15-25 termos"
+      - "Normas canonicalizadas com titulo/ano/clausula"
+    criterio_trigger: "ATENDE >=2 dos 3: (1) risco a vida/fogo/explosao/corrosao estrutural, (2) topologia AC ou alta potencia, (3) sistema regulado/norma explicita"
+    esforco_por_nota_h: 0.75
+    esforco_total_h: 32
+
+  tier_A:
+    descricao: "DEC-11 adaptado (medio)"
+    template:
+      - "TL;DR 5-6 regras"
+      - "Glossario 8-12 termos"
+      - "Danger callout OPCIONAL (so se houver risco especifico)"
+      - "Normas canonicalizadas quando citadas"
+    criterio_trigger: "Componente operacional medio-risco, nota tecnica padrao 180-300 linhas"
+    esforco_por_nota_h: 0.45
+    esforco_total_h: 24
+
+  tier_B:
+    descricao: "DEC-11 light"
+    template:
+      - "TL;DR 3-4 regras"
+      - "Glossario 4-6 termos"
+      - "Sem danger callout"
+      - "Frontmatter normalizado"
+    criterio_trigger: "Nota-conceito curta (<200 linhas), componente de conveniencia, acessorio"
+    esforco_por_nota_h: 0.25
+    esforco_total_h: 4.5
+
+  tier_C:
+    descricao: "Apenas frontmatter normalizado (ou minimo refinement)"
+    template:
+      - "status bump (se ainda technical-review-l1)"
+      - "normas_citadas vazio (MOCs nao citam norma)"
+      - "Manter conteudo como esta"
+      - "Refinamento de wikilinks se detectar links quebrados"
+    criterio_trigger: "MOCs, indices, guias, README"
+    esforco_por_nota_h: 0.05
+    esforco_total_h: 1.0
+
+  esforco_total_estimado_h: 61.5
+  desvio_eficiencia_aplicado: "mesma taxa 2.0x observada na Fase 5 -> esforco real estimado 30-35h"
+
+classificacao:
+  ja_premium_fase_5:
+    - "10_Fundamentos_e_Projeto/Dimensionamento de Cabos DC — Cálculo Prático.md"
+    - "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+    - "10_Fundamentos_e_Projeto/Troubleshooting — Diagnóstico de Falhas Elétricas.md"
+    - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    - "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+    - "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+    - "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+
+  tier_S:
+    - caminho: "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md"
+      linhas: 277
+      motivo: "Conceito fundador + risco AC"
+    - caminho: "10_Fundamentos_e_Projeto/Diagrama Unifilar — Documentação do Sistema Elétrico.md"
+      linhas: 336
+      motivo: "Documentacao normativa + sistema complexo"
+    - caminho: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+      linhas: 309
+      motivo: "Calculo + responsabilidade tecnica"
+    - caminho: "10_Fundamentos_e_Projeto/Fase e Neutro.md"
+      linhas: 264
+      motivo: "Topologia AC critica (citada em muitas premium)"
+    - caminho: "10_Fundamentos_e_Projeto/Inspeção de Cabos Terminais e Conexões.md"
+      linhas: 390
+      motivo: "Procedimento + seguranca"
+    - caminho: "10_Fundamentos_e_Projeto/Manutenção Preventiva Elétrica — Checklist.md"
+      linhas: 323
+      motivo: "Procedimento sistematico"
+    - caminho: "10_Fundamentos_e_Projeto/Multímetro e Instrumentos de Medição.md"
+      linhas: 293
+      motivo: "Ferramenta critica de diagnostico"
+    - caminho: "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+      linhas: 355
+      motivo: "Procedimento + norma"
+    - caminho: "10_Fundamentos_e_Projeto/Voltímetro - Amperímetro (DC e AC).md"
+      linhas: 365
+      motivo: "Medicao critica"
+    - caminho: "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+      linhas: 270
+      motivo: "Sistema complexo + litio"
+    - caminho: "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+      linhas: 361
+      motivo: "AC + alta potencia"
+    - caminho: "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+      linhas: 467
+      motivo: "Referencia ampla (~maior do dominio)"
+    - caminho: "20_Baterias_e_Armazenamento/Lítio LiFePO4 — Instalação e Cuidados Específicos.md"
+      linhas: 238
+      motivo: "Risco litio + thermal runaway"
+    - caminho: "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+      linhas: 269
+      motivo: "Metrica critica (SoC)"
+    - caminho: "30_Energia_e_Conversao/Alternador (DC).md"
+      linhas: 362
+      motivo: "Fonte complexa"
+    - caminho: "30_Energia_e_Conversao/Gerador (DC).md"
+      linhas: 201
+      motivo: "Fonte primaria"
+    - caminho: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+      linhas: 381
+      motivo: "AC + seguranca"
+    - caminho: "30_Energia_e_Conversao/Placa Solar (DC).md"
+      linhas: 229
+      motivo: "Sistema solar regulado"
+    - caminho: "30_Energia_e_Conversao/Transformador Bivolt.md"
+      linhas: 324
+      motivo: "AC"
+    - caminho: "30_Energia_e_Conversao/Transformador Entrada.md"
+      linhas: 357
+      motivo: "AC interface marina"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+      linhas: 373
+      motivo: "Topologia critica"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Disjuntores (DC) e (AC).md"
+      linhas: 356
+      motivo: "Protecao AC"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Fusíveis DC — Proteção Contra Sobrecorrente.md"
+      linhas: 296
+      motivo: "Protecao DC"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+      linhas: 404
+      motivo: "Corrosao + AC"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+      linhas: 361
+      motivo: "Diferencial AC"
+    - caminho: "40_Distribuicao_Protecao_e_Aterramento/Linha Pesada (AC).md"
+      linhas: 228
+      motivo: "AC alta potencia"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/AIS (Automatic Identification System).md"
+      linhas: 272
+      motivo: "Comunicacao emergencia"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md"
+      linhas: 319
+      motivo: "Emergencia regulada (ITU-R M.493)"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/EPIRB - Beacon de Emergência.md"
+      linhas: 296
+      motivo: "Emergencia regulada (COSPAS-SARSAT)"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/Mob — Man Overboard — Sistema de Detecção.md"
+      linhas: 306
+      motivo: "Vida humana"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+      linhas: 326
+      motivo: "COLREGS (luzes navegacao)"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/Radar.md"
+      linhas: 266
+      motivo: "Navegacao defensiva"
+    - caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/VHF.md"
+      linhas: 296
+      motivo: "Comunicacao + ANATEL"
+    - caminho: "55_Iluminacao_e_Sinalizacao/Luz de Âncora.md"
+      linhas: 273
+      motivo: "COLREGS Regra 30"
+    - caminho: "55_Iluminacao_e_Sinalizacao/Iluminação de Emergência a Bordo.md"
+      linhas: 285
+      motivo: "Seguranca emergencia"
+    - caminho: "70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Marine — Sistema Completo.md"
+      linhas: 210
+      motivo: "AC alta potencia + refrigeracao"
+    - caminho: "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Porão.md"
+      linhas: 186
+      motivo: "Seguranca (redundancia Bombeamento Porao)"
+    - caminho: "80_Seguranca_e_Corrosao/Alarme de Alagamento - Sensor de Porão.md"
+      linhas: 173
+      motivo: "Seguranca"
+    - caminho: "80_Seguranca_e_Corrosao/Anôdo.md"
+      linhas: 210
+      motivo: "Corrosao estrutural"
+    - caminho: "80_Seguranca_e_Corrosao/Detector de CO — Monóxido de Carbono.md"
+      linhas: 182
+      motivo: "Risco a vida"
+    - caminho: "80_Seguranca_e_Corrosao/Detector de Gás GLP - GN.md"
+      linhas: 175
+      motivo: "Risco explosao"
+    - caminho: "80_Seguranca_e_Corrosao/Eletrólise.md"
+      linhas: 158
+      motivo: "Corrosao"
+    - caminho: "80_Seguranca_e_Corrosao/Extintor Automático — Combate a Incêndio na Casa de Máquinas.md"
+      linhas: 226
+      motivo: "Fogo"
+
+  tier_A:
+    - "10_Fundamentos_e_Projeto/Ferramentas do Eletricista Náutico.md (274) - procedural"
+    - "10_Fundamentos_e_Projeto/Lei de Ohm e Cálculos Básicos.md (277) - conceitual ampla"
+    - "10_Fundamentos_e_Projeto/Leitura de Diagramas e Esquemas Elétricos.md (251)"
+    - "10_Fundamentos_e_Projeto/Princípios Náuticos.md (225)"
+    - "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md (134) - cheat sheet"
+    - "10_Fundamentos_e_Projeto/Simbologia Elétrica Náutica.md (213)"
+    - "10_Fundamentos_e_Projeto/Tipos de Embarcação.md (251)"
+    - "30_Energia_e_Conversao/Arranque.md (212)"
+    - "30_Energia_e_Conversao/Eólico (DC).md (188)"
+    - "30_Energia_e_Conversao/Carregador Elétrico para Tender e Jet Ski.md (180)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Barramento DC - Bus Bar - Distribuição DC.md (217)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Cabeamento Náutico.md (202)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Chaves Gerais (DC).md (202)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Chaves Seletoras (AC).md (176)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Contatores (AC).md (225)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Divisores de Carga (DC).md (248)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Hotline (DC).md (194)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Linha Leve (AC).md (221)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Quadro Elétrico e Painel de Distribuição AC-DC.md (210)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Relés e Relés de Estado Sólido.md (191)"
+    - "40_Distribuicao_Protecao_e_Aterramento/Terminais Conectores e Emendas.md (205)"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Bússola Eletrônica (Compass - HDG Sensor).md (302)"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Chartplotter - GPS - MFD.md (303)"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Estação de Vento - Anemômetro.md (302)"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Piloto Automático.md (293)"
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Sonda - Profundímetro - Sonar.md (287)"
+    - "55_Iluminacao_e_Sinalizacao/Dimmer — Controle de Intensidade Luminosa.md (290)"
+    - "55_Iluminacao_e_Sinalizacao/Farol de Busca.md (258)"
+    - "55_Iluminacao_e_Sinalizacao/Fitas Led - Iluminação Led.md (282)"
+    - "55_Iluminacao_e_Sinalizacao/Luz de Cortesia.md (243)"
+    - "55_Iluminacao_e_Sinalizacao/Luz Subaquática.md (263)"
+    - "55_Iluminacao_e_Sinalizacao/Strobo.md (189)"
+    - "55_Iluminacao_e_Sinalizacao/Tipos de Lâmpadas e LEDs Náuticos.md (204)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Atuador Linear.md (233)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Automação de Bordo — Sistemas Domoticos.md (206)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Sensor de Nível Diesel.md (201)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Sistema de Alarme Geral - Painel de Alarmes.md (189)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Aquecedor de Bordo - Cabin Heater.md (191)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Blower.md (169)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Boiler.md (213)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Bomba Ar Condicionado.md (201)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Água Pressurizada.md (188)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Águas Negras.md (236)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Banheiro.md (234)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Caixa de Água Cinza.md (193)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Casa de Máquinas e Paiol.md (231)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Dessanilizador.md (228)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Flap.md (180)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Fogão - Cooktop Elétrico - Galley.md (188)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Geladeira - Freezer de Bordo.md (191)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Guincho.md (189)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Holding Tank - Y-Valve - Sistema de Esgoto.md (239)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Macerador - Bomba de Águas Negras.md (221)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Thruster.md (200)"
+
+  tier_B:
+    - "50_Navegacao_Instrumentacao_e_Comunicacao/Buzina.md (149) - componente simples"
+    - "55_Iluminacao_e_Sinalizacao/Luzes Internas Teto.md (175) - decoracao"
+    - "60_Automacao_Conectividade_e_Monitoramento/Câmeras de Bordo - Sistema CFTV.md (166)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Interfone - Intercomunicador de Bordo.md (198)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Monitoramento Remoto — VRM - Telemetria.md (175)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Som.md (198)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Starlink - Internet a Bordo.md (167)"
+    - "60_Automacao_Conectividade_e_Monitoramento/TV a Bordo - Entretenimento.md (192)"
+    - "60_Automacao_Conectividade_e_Monitoramento/USB 12V (Power).md (205)"
+    - "60_Automacao_Conectividade_e_Monitoramento/Wi-Fi a Bordo — Roteador Marine e Conectividade.md (184)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Catraca.md (171)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Davit - Munk - Guindaste de Bote - Tender Lift.md (176)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Icemaker - Máquina de Gelo.md (195)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Limpador de Parabrisas.md (152)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Plataforma de Popa Elétrica - Hidráulica.md (180)"
+    - "70_Hidraulica_Climatizacao_e_Utilidades/Sensor de Nível de Água.md (140)"
+    - "90_Revisao_Manual/Estabilizador.md (168)"
+    - "90_Revisao_Manual/Motor de Trim - Tilt.md (195)"
+
+  tier_C:
+    - "00_Mapas/Atlas Técnico.md (60) - MOC"
+    - "00_Mapas/Fundamentos da Elétrica Náutica.md (267) - MOC extenso"
+    - "00_Mapas/Guia da Vault Curada.md (49) - guide"
+    - "00_Mapas/MOC — Automacao Conectividade e Monitoramento.md (22)"
+    - "00_Mapas/MOC — Baterias e Armazenamento.md (16)"
+    - "00_Mapas/MOC — Diagnóstico e Manutenção.md (77)"
+    - "00_Mapas/MOC — Distribuicao Protecao e Aterramento.md (28)"
+    - "00_Mapas/MOC — Energia e Conversao.md (21)"
+    - "00_Mapas/MOC — Fundamentos e Projeto.md (54)"
+    - "00_Mapas/MOC — Hidraulica Climatizacao e Utilidades.md (35)"
+    - "00_Mapas/MOC — Iluminacao e Sinalizacao.md (21)"
+    - "00_Mapas/MOC — Mapas.md (46)"
+    - "00_Mapas/MOC — Navegacao Instrumentacao e Comunicacao.md (24)"
+    - "00_Mapas/MOC — Revisao Manual.md (12)"
+    - "00_Mapas/MOC — Seguranca e Corrosao.md (17)"
+    - "00_Mapas/MOC — Segurança Integrada.md (68)"
+    - "README.md (66)"
+
+plano_de_execucao_em_ondas:
+  onda_1:
+    titulo: "Onda 1 - Tier S prioritario domino 10 e 40 (topologia AC/DC)"
+    notas:
+      - "Fase e Neutro (264)"
+      - "Aterramento (373)"
+      - "Isolador Galvanico (404)"
+      - "Protecao Dr (361)"
+      - "Disjuntores DC e AC (356)"
+      - "Fusiveis DC (296)"
+      - "DC vs AC (277)"
+      - "Diagrama Unifilar (336)"
+    quantidade: 8
+    esforco_estimado_h: 6.0
+    esforco_real_estimado_h: 3.0
+    pausa_revisao: "humana antes de Onda 2"
+
+  onda_2:
+    titulo: "Onda 2 - Tier S baterias e geracao"
+    notas:
+      - "Tipos de Bateria (467)"
+      - "Carregador de Bateria AC to DC (361)"
+      - "BMS (270)"
+      - "Litio LiFePO4 (238)"
+      - "Monitor BMV (269)"
+      - "Alternador DC (362)"
+      - "Gerador DC (201)"
+      - "Inversora DC to AC (381)"
+      - "Placa Solar DC (229)"
+    quantidade: 9
+    esforco_estimado_h: 6.75
+    esforco_real_estimado_h: 3.5
+
+  onda_3:
+    titulo: "Onda 3 - Tier S navegacao emergencia"
+    notas:
+      - "AIS (272)"
+      - "DSC (319)"
+      - "EPIRB (296)"
+      - "VHF (296)"
+      - "MOB (306)"
+      - "Radar (266)"
+      - "NAVEGACAO BB BE (326)"
+      - "Luz de Ancora (273)"
+      - "Iluminacao de Emergencia (285)"
+    quantidade: 9
+    esforco_estimado_h: 6.75
+    esforco_real_estimado_h: 3.5
+
+  onda_4:
+    titulo: "Onda 4 - Tier S calculo/procedure + seguranca"
+    notas:
+      - "Projeto Eletrico Embarcacao (355)"
+      - "Dimensionamento Banco Baterias (309)"
+      - "Manutencao Preventiva (323)"
+      - "Inspecao Cabos Terminais (390)"
+      - "Multimetro (293)"
+      - "Voltimetro Amperimetro (365)"
+      - "Anodo (210)"
+      - "Eletrolise (158)"
+      - "Detector CO (182)"
+      - "Detector GLP (175)"
+      - "Extintor Automatico (226)"
+      - "Alarme Alagamento (173)"
+      - "Transformador Bivolt (324)"
+      - "Transformador Entrada (357)"
+      - "Linha Pesada AC (228)"
+      - "Ar-Condicionado Marine (210)"
+      - "Bomba de Porao (186)"
+    quantidade: 17
+    esforco_estimado_h: 12.75
+    esforco_real_estimado_h: 6.5
+    comentario: "fecha Tier S completo"
+
+  onda_5:
+    titulo: "Onda 5 - Tier A dominios 10, 30 e 40"
+    notas_aprox: 21
+    esforco_estimado_h: 9.5
+    esforco_real_estimado_h: 4.75
+
+  onda_6:
+    titulo: "Onda 6 - Tier A dominios 50, 55 e 60"
+    notas_aprox: 18
+    esforco_estimado_h: 8.1
+    esforco_real_estimado_h: 4.0
+
+  onda_7:
+    titulo: "Onda 7 - Tier A dominio 70 (hidraulica/climatizacao)"
+    notas_aprox: 15
+    esforco_estimado_h: 6.75
+    esforco_real_estimado_h: 3.4
+
+  onda_8:
+    titulo: "Onda 8 - Tier B + Tier C (fechamento)"
+    notas_aprox: 36
+    esforco_estimado_h: 5.5
+    esforco_real_estimado_h: 2.75
+    comentario: "final - fecha cobertura total"
+
+pausa_revisao:
+  apos_cada_onda: "PR ou commit dedicado + notificacao ao responsavel editorial"
+  escopo_revisao: "leitura amostra 3-5 notas da onda + check de callouts forcados ou deslocados"
+
+riscos_e_mitigacoes:
+  - risco: "Template DEC-11 cheio forcado em nota Tier A/B vira ruido"
+    mitigacao: "Triagem aprovada ANTES de onda; revisao humana entre ondas"
+  - risco: "Cansaco de revisao humana em lotes grandes"
+    mitigacao: "Ondas limitadas a 17 notas no maximo (onda 4)"
+  - risco: "Deriva de padrao ao longo de 8 ondas"
+    mitigacao: "Template DEC-11 imutavel; yaml de triagem referencia para cada onda"
+  - risco: "Novas decisoes editoriais emergindo (DEC-14, DEC-15)"
+    mitigacao: "Documentar em yaml de onda assim que surgirem; voltar ao plano se necessario"
+
+decisao_pendente:
+  - "Aprovar ou ajustar classificacao S/A/B/C"
+  - "Confirmar ordem das 8 ondas"
+  - "Definir cadencia (todas sequenciais ou pausar apos onda 1 para validar o padrao adaptado)"
+  - "Definir: merge em main apos cada onda OU tudo em branch unica final?"
+
+proxima_acao_se_aprovado:
+  - "Iniciar Onda 1 (8 notas topologia AC/DC)"
+  - "Esforco: ~3h reais"
+  - "Entregar commits tematicos + yaml de auditoria da onda"
