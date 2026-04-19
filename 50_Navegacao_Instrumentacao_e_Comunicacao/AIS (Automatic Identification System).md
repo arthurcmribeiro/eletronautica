@@ -3,14 +3,41 @@ title: "AIS (Automatic Identification System)"
 note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "AIS (Automatic Identification System) 33a19734f7fb81b4b75ffe1f6db19c78.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "21"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "SOLAS Cap. V, Regra 19 — Carriage requirements for shipborne navigational systems (AIS obrigatório)"
+  - "IMO Resolution A.1106(29) — Revised guidelines for onboard operational use of shipborne AIS"
+  - "IMO Resolution MSC.74(69) — Performance standards for AIS (base técnica)"
+  - "ITU-R M.1371 — Technical characteristics for AIS using TDMA in the VHF maritime mobile band"
+  - "ITU-R M.2092 — Technical characteristics for a VHF data exchange system (VDES) in the maritime mobile band"
+  - "ITU Radio Regulations — Apêndice 18 (canais AIS-1 161,975 MHz e AIS-2 162,025 MHz)"
+  - "IEC 61993-2 — AIS — Class A shipborne equipment"
+  - "IEC 62287-1 — AIS Class B CSTDMA equipment"
+  - "IEC 62287-2 — AIS Class B SOTDMA equipment"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 61162-1/-2 (NMEA 0183) — Digital interfaces"
+  - "IEC 61162-3 (NMEA 2000) — Network-based digital interface"
+  - "IALA Guideline G-1028 — Operational use of AIS"
+  - "IALA A-126 — Use of AIS in marine aids to navigation"
+  - "RIPEAM/COLREGs Rule 5 — Look-out (AIS integra o lookout eletrônico)"
+  - "NORMAM-204/DPC — Serviço Móvel Marítimo"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "Resoluções ANATEL aplicáveis — homologação de AIS e alocação de MMSI"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
   - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.itu.int/pub/R-REC"
+  - "https://www.iala-aism.org/"
 aliases:
   - "AIS (Automatic Identification System)"
 seo_title: "AIS (Automatic Identification System)"
@@ -39,6 +66,75 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > AIS — AUTOMATIC IDENTIFICATION SYSTEM — Sistema de identificação automática que transmite e recebe dados de embarcações (nome, posição, velocidade, rumo, MMSI) via VHF digital. Classe A (obrigatório para embarcações comerciais) ou Classe B.
+
+> [!tip] TL;DR — Regra de decisão em 30 segundos
+> 1. **Classe A vs Classe B não é questão de "qualidade", é de protocolo** — Classe A (SOTDMA, 12,5 W, atualização 2-10 s) é obrigatório SOLAS para embarcações comerciais > 300 GT; Classe B CSTDMA (2 W, 30 s parado, escuta antes de transmitir) é padrão recreio; Classe B SOTDMA (5 W, 5-30 s, prioridade de slot) é o "upgrade" recreio para áreas densas.
+> 2. **MMSI não é opcional e não é genérico** — transponder sem MMSI oficial registrado é juridicamente invisível (NORMAM-204/ITU MARS); programar 0000000, 1234567 ou copiar de outra embarcação é infração regulatória e pode impedir SAR de identificar o alvo.
+> 3. **Recepção não é transmissão** — receptor AIS (RX-only) embutido em chartplotters NÃO torna você visível para outros; você vê, mas não é visto. Para ser visto por SAR, tráfego comercial e plataformas públicas, obrigatoriamente transponder.
+> 4. **CPA/TCPA é a única função "útil" do AIS em tempo real** — configurar CPA ≤ 0,5 mn e TCPA ≤ 10-15 min como alarme audível. Sem alarme configurado, o AIS vira enfeite no chartplotter.
+> 5. **AIS não substitui radar, substitui rádio binocular** — AIS só detecta alvos com transponder ligado; veleiros pequenos, jangadas, pesqueiros artesanais, obstáculos físicos e balsas sem AIS são invisíveis. Radar + AIS + lookout visual (COLREGs Regra 5) são camadas complementares.
+> 6. **Antena compartilhada via splitter ativo é a norma recreio** — splitter passivo barato atenua 3-6 dB (perde metade do alcance); splitter ativo tipo Vesper/Digital Yacht mantém <1 dB de perda e prioriza VHF em TX. Antena dedicada AIS é preferível em embarcações > 15 m.
+> 7. **Alcance AIS é linha de visada VHF** — antena a 3 m = ~20 mn; antena a 15 m = ~40 mn; navios comerciais com antena a 30 m transmitindo 12,5 W = visíveis a 60+ mn. Planejar a partir da altura real da antena, não de especificações fabricante.
+> 8. **GPS sem fix = AIS sem transmissão** — Classe B exige posição válida para transmitir. GPS integrado (AIS com GNSS interno) é o padrão moderno; alternativamente, feed de GPS externo via NMEA 0183/2000 estável.
+> 9. **NMEA 2000 é backbone preferido para AIS** — PGN 129038 (Class A position), 129039 (Class B position), 129794 (static data), 129808 (DSC data). NMEA 0183 (AIVDM/AIVDO, 38400 baud) ainda funciona, mas exige fiação dedicada em 38400 (não 4800).
+
+> [!danger] Quando chamar um especialista (engenheiro ou técnico com formação em navegação eletrônica)
+> 1. **MMSI programado com erro (típico de equipamento segunda mão)** — Classe B permite 1 reprogramação em fábrica (ou DESN na Vesper); outros modelos exigem devolução ao fabricante. Antes de comprar AIS usado, confirmar com o vendedor o MMSI atual.
+> 2. **Upgrade SOLAS (> 300 GT ou > 500 GT)** — transição de Classe B para Classe A envolve homologação IEC 61993-2, Pilot Port, conexão ECDIS, verificação IMO e certificação de estação pela ANATEL; escopo de projeto naval/eletrônico, não retrofit DIY.
+> 3. **Splitter de antena com atenuação suspeita** — se alcance AIS caiu para < 8 mn com antena > 5 m de altura, splitter passivo ou cabo coaxial de baixa qualidade (RG-58 em lances > 10 m) tipicamente degradou o sinal; medição com analisador de espectro e VSWR obrigatória antes de trocar peças.
+> 4. **Transmissor AIS "cegando" o próprio receptor VHF** — sintoma: VHF fica mudo enquanto AIS transmite slot (2-10 s). Causa: antena compartilhada sem splitter ou splitter passivo inadequado; requer reengenharia do plano RF de bordo.
+> 5. **Dark/silent mode intencional em áreas de pirataria** — em regiões MSCHOA/NATO (Golfo de Áden, Estreito de Malaca, partes do Caribe), desligar AIS é prática recomendada por SOLAS Reg 19 mas exige documentação e permissão do comandante; decisão jurídica, não técnica.
+> 6. **Perícia sinistro com uso de AIS histórico** — dados de MarineTraffic/VesselFinder/AIS Hub têm latência, cobertura intermitente e gaps; prova judicial requer AIS recorder homologado (IEC 61993-2 SOLAS) ou dados oficiais MRCC, não captura de tela de plataforma pública.
+> 7. **Importação sem homologação ANATEL** — AIS Classe B SOTDMA importado direto dos EUA (FCC) frequentemente opera em 161,975/162,025 MHz mas sem homologação brasileira; operar é infração ANATEL e pode ser motivo de apreensão pela Marinha em inspeção.
+> 8. **Integração multi-chartplotter com alertas CPA duplicados** — em instalações com Garmin + B&G + Simrad no mesmo backbone NMEA 2000, alertas CPA podem ser emitidos simultaneamente por vários MFDs; planejamento de qual unidade é "master" para alarme é decisão de projeto.
+> 9. **Frota comercial com AIS Classe A + AIS-SART + VDR** — Classe A integrado a Voyage Data Recorder (VDR, IMO SOLAS) e AIS-SART (IEC 61097-14) para dispositivos de emergência requer comissionamento por empresa homologada, auditoria DPC/ANATEL e treinamento GOC (General Operator Certificate) da tripulação.
+
+> [!info] Glossário rápido (≈ 45 termos)
+> - **AIS** — Automatic Identification System, IMO SOLAS Cap V Reg 19 + ITU-R M.1371.
+> - **Classe A** — transponder obrigatório SOLAS, SOTDMA, 12,5 W, atualização 2-10 s, mensagens 1/2/3/5.
+> - **Classe B CSTDMA** — recreio simplificado, 2 W, 30 s parado, escuta canal antes de transmitir.
+> - **Classe B SOTDMA** — recreio premium, 5 W, slot reservado, 5-30 s, prioridade maior na rede.
+> - **AIS RX-only** — receptor passivo, não transmite, comum em chartplotters modernos.
+> - **AIS-SART** — Search and Rescue Transmitter baseado em AIS (IEC 61097-14), substituto do SART radar.
+> - **MOB-AIS** — dispositivo pessoal AIS para Homem ao Mar, transmite em 161,975 MHz.
+> - **VDES** — VHF Data Exchange System, ITU-R M.2092, evolução futura do AIS.
+> - **SOTDMA** — Self-Organized TDMA, protocolo Classe A e Classe B premium, slots auto-organizados.
+> - **CSTDMA** — Carrier Sense TDMA, protocolo Classe B simples, escuta antes de transmitir.
+> - **ITDMA** — Incremental TDMA, variante usada para alocação de slot inicial.
+> - **Slot** — intervalo de tempo de 26,67 ms; 2250 slots por minuto por canal.
+> - **Frame** — sequência de 2250 slots = 1 min no canal AIS.
+> - **AIS-1 / AIS-2** — canais 161,975 MHz (87B) e 162,025 MHz (88B); operação bi-canal.
+> - **Apêndice 18 (ITU RR)** — alocação das frequências marítimas VHF, inclui AIS-1/AIS-2.
+> - **MMSI** — Maritime Mobile Service Identity, 9 dígitos, Brasil MID 710-719.
+> - **MID** — Maritime Identification Digits, prefixo do país no MMSI.
+> - **ITU MARS** — Maritime mobile Access and Retrieval System, banco mundial de MMSIs.
+> - **Static data** — nome, MMSI, IMO, call sign, tipo, dimensões (mensagem 5 Classe A).
+> - **Dynamic data** — posição, SOG, COG, HDG, ROT, status nav (mensagens 1/2/3).
+> - **Voyage data** — destino, ETA, draft, tipo de carga (mensagem 5 Classe A).
+> - **ROT** — Rate of Turn, grau/min, sensor ROT dedicado para Classe A.
+> - **SOG/COG** — Speed Over Ground / Course Over Ground (do GPS).
+> - **HDG** — Heading (True), bússola/girocompass, não COG.
+> - **CPA** — Closest Point of Approach, distância mínima de aproximação prevista.
+> - **TCPA** — Time to CPA, minutos até o ponto de maior aproximação.
+> - **BCPA** — Bow CPA, variante considerando a proa da embarcação.
+> - **AIS Target** — alvo AIS no chartplotter; ícone triangular.
+> - **Ghost target** — alvo duplicado/fantasma por reflexão VHF ou multi-path.
+> - **Antenna Splitter** — dispositivo que compartilha antena VHF entre VHF e AIS.
+> - **Splitter ativo** — amplifica/reduz perda (<1 dB), prioriza VHF em TX.
+> - **Splitter passivo** — divisor resistivo, atenua 3-6 dB, uso em embarcações pequenas.
+> - **PGN 129038** — NMEA 2000 Class A Position Report.
+> - **PGN 129039** — NMEA 2000 Class B Position Report.
+> - **PGN 129794** — NMEA 2000 AIS Voyage Static Data.
+> - **AIVDM** — sentença NMEA 0183 recebida de outra estação.
+> - **AIVDO** — sentença NMEA 0183 transmitida pela própria estação.
+> - **BIIT** — Built-In Integrity Test, autoteste contínuo (IEC 61993-2).
+> - **Silent mode / dark** — AIS desligado (autorizado somente em áreas SOLAS Reg 19).
+> - **IALA G-1028** — Guideline operacional do AIS (boas práticas).
+> - **IALA A-126** — uso de AIS em sinalização náutica (AtoN).
+> - **AIS AtoN** — estação AIS virtual/sintética em boia, farol ou ponto fixo.
+> - **Base station** — estação costeira AIS operada por autoridade marítima.
+> - **MarineTraffic / VesselFinder** — plataformas públicas de visualização (não oficiais).
+> - **Lookout (COLREGs Rule 5)** — obrigação legal de vigilância por todos os meios, incluindo AIS.
 
 ## O que é
 
@@ -224,10 +320,27 @@ No Brasil, a obrigatoriedade de AIS para embarcações de recreio não é clara 
 
 ## Normas e referências aplicáveis
 
-- **SOLAS (edição a verificar)** — AIS Classe A obrigatório para navios > 300 GT em viagens internacionais
-- **ITU Radio Regulations** — frequências AIS 161,975 e 162,025 MHz
-- **NORMAM-01 (edição a verificar)** — regulação nacional (AIS não claramente obrigatório para recreio)
-- **IALA Guidelines** — boas práticas de instalação e uso
+- **SOLAS Cap. V, Regra 19** — Carriage requirements for shipborne navigational systems (AIS obrigatório navios > 300 GT em viagens internacionais e > 500 GT em geral; passenger ships independente de tonelagem).
+- **IMO Resolution A.1106(29)** — Revised guidelines for onboard operational use of shipborne AIS (uso operacional).
+- **IMO Resolution MSC.74(69), Anexo 3** — Performance standards for AIS (requisitos mínimos de desempenho para equipamentos Classe A).
+- **ITU-R M.1371** — Technical characteristics for an AIS using time division multiple access in the VHF maritime mobile band (documento-raiz técnico do AIS; slot, SOTDMA/CSTDMA, mensagens 1-27).
+- **ITU-R M.2092** — Technical characteristics for a VHF data exchange system (VDES) in the maritime mobile band (evolução AIS, canais ASM e VDE).
+- **ITU Radio Regulations — Apêndice 18** — Frequências marítimas VHF; aloca AIS-1 (161,975 MHz) e AIS-2 (162,025 MHz), canais 75/76 ASM.
+- **IEC 61993-2** — Maritime navigation and radiocommunication equipment and systems — AIS — Part 2: Class A shipborne equipment (ensaio, BIIT, certificação SOLAS).
+- **IEC 62287-1** — Class B AIS CSTDMA equipment (padrão barato recreio, 2 W, 30 s).
+- **IEC 62287-2** — Class B AIS SOTDMA equipment (premium recreio, 5 W, slot reservado).
+- **IEC 60945** — Maritime navigation and radiocommunication equipment — General requirements (EMC, IP, vibração, temperatura para toda eletrônica marítima).
+- **IEC 61162-1 / -2 (NMEA 0183)** — Digital interfaces (AIVDM/AIVDO, 38400 baud para AIS, distinto dos 4800 baud típicos do NMEA 0183).
+- **IEC 61162-3 (NMEA 2000)** — Network-based digital interface, PGNs 129038/129039/129794/129808.
+- **IALA Guideline G-1028** — Operational use of AIS (boas práticas, mensagens de segurança, conduta operador).
+- **IALA A-126** — Use of AIS in marine aids to navigation (AtoN virtuais, sintéticos, reais em boias e faróis).
+- **RIPEAM/COLREGs Rule 5** — Look-out: obrigação de usar TODOS os meios disponíveis (AIS explicitamente inclui-se no lookout eletrônico).
+- **NORMAM-204/DPC** — Serviço Móvel Marítimo (alocação de MMSI, registro de estações, licenças ROC/GOC).
+- **NORMAM-201/DPC** — Tráfego e Permanência de Embarcações (documentação da estação, AIS em embarcações comerciais nacionais).
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio (aplicabilidade a recreio com regra diferenciada para AIS).
+- **Resoluções ANATEL aplicáveis** — homologação de equipamentos AIS (Resolução 242/2000, demais atos do SMM), alocação de indicativo de chamada.
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (fiação, fusíveis e proteção da fonte DC do AIS).
+- **ABNT NBR 5410:2004 + emendas** — Instalações elétricas de baixa tensão (aplicável a partes AC quando AIS alimentado por conversor DC-AC).
 
 ## Destaques para ensino
 

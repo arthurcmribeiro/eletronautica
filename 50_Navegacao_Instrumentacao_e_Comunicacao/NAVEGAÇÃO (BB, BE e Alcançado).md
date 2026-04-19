@@ -3,16 +3,38 @@ title: "NAVEGAÇÃO (BB, BE e Alcançado)"
 note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "NAVEGAÇÃO (BB, BE e Alcançado) ff119734f7fb8264ba9b01e36f23d896.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "24"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "COLREGS 72 (Regras 20-31)"
-  - "NORMAM-01 (edição a verificar)"
-  - "ISO 16180:2011"
-  - "USCG 33 CFR 183 (edição a verificar)"
+  - "COLREGs 72 — International Regulations for Preventing Collisions at Sea (Rules 20-31)"
+  - "COLREGs Regra 20 — Application (aplicabilidade das luzes)"
+  - "COLREGs Regra 21 — Definitions (definições fotométricas de masthead light, sidelights, sternlight, towing light, all-round light)"
+  - "COLREGs Regra 22 — Visibility of lights (alcance mínimo por porte)"
+  - "COLREGs Regra 23 — Power-driven vessels underway"
+  - "COLREGs Regra 25 — Sailing vessels underway and vessels under oars"
+  - "COLREGs Regra 30 — Anchored vessels and vessels aground"
+  - "COLREGs Regra 38 — Exemptions (isenções legais)"
+  - "COLREGs Annex I — Positioning and technical details of lights and shapes"
+  - "ISO 16180:2011 — Small craft — Navigation lights — Installation, placement and visibility"
+  - "ISO 19009:2015 — Small craft — Electric navigation lights — Performance requirements"
+  - "IMO Resolution A.694(17) — General requirements for shipborne radio and electronic navigation aids"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 61108-1 — GNSS receiver performance (quando integrado a luzes GPS)"
+  - "USCG 33 CFR Part 183 — Boats and associated equipment"
+  - "USCG 46 CFR Part 111 — Electrical engineering (grandes embarcações)"
+  - "ABYC A-16 (2023) — Electric navigation lights"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-30 — Ignition protection for marine products (fiação sob coberta)"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "Resoluções ANTAQ/DPC aplicáveis à Marinha Mercante"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "CIE Publication 15:2004 — Colorimetry (coordenadas das cores das luzes)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
@@ -44,6 +66,77 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > LUZES DE NAVEGAÇÃO (BB, BE e Alcançado) — Sistema de iluminação de navegação previsto em COLREGs para embarcações em movimento. Vermelho em BB/bombordo, verde em BE/boreste e branco de alcançado na popa. O arranjo exato depende do tipo e do porte da embarcação.
+
+> [!tip] TL;DR — Regra de decisão em 30 segundos
+> 1. **As cores e arcos não são "costume náutico" — são direito internacional vinculante** — COLREGs Regra 21 define 112,5° vermelho (BB) + 112,5° verde (BE) + 135° branca (alcançado) + 225° branca (masthead) e Annex I especifica colorimetria CIE, alcance em milhas náuticas e posicionamento; qualquer desvio é violação.
+> 2. **Alcance mínimo é função do comprimento** — embarcação < 12 m: sidelights 1 mn + sternlight 2 mn + masthead 2 mn; < 20 m: sidelights 2 mn; < 50 m: sidelights 2 mn + masthead 3 mn + sternlight 2 mn; > 50 m: sidelights 3 mn + masthead 6 mn. (COLREGs Reg 22)
+> 3. **LED só pode substituir incandescente se for homologado ISO 19009:2015 (luzes de navegação elétricas) ou ABYC A-16** — LED de "loja de ferragem" ou LED automotivo tem coordenadas CIE fora da norma; a Capitania pode autuar em inspeção mesmo que "pareça" correto.
+> 4. **BB vermelho e BE verde, sempre da perspectiva do tripulante olhando para a proa** — não da perspectiva de fora. Confusão na instalação inverte luzes e envia mensagem oposta a outros navegantes (rumo reverso).
+> 5. **Veleiros: tricolor no topo do mastro OU luzes de bordo inferiores — nunca as duas simultâneas** — COLREGs Regra 25 permite tricolor APENAS em modo vela pura; a motor, obrigatório masthead light + sidelights inferiores. Chave seletora é projeto correto.
+> 6. **Luz de alcançado (sternlight) é o que mais esquecem** — 135° branca ré, alcance 2 mn; em embarcação > 12 m a motor, é separada; em tricolor de veleiro, integrada. Ausência é infração grave.
+> 7. **Dimmer em luz de navegação NÃO é permitido** — a luz deve operar em plena potência para atingir alcance fotométrico normativo; dimmer subdimensiona e viola o alcance mínimo.
+> 8. **Sinais adicionais por tipo de embarcação** — rebocando (Rule 24), restrita (Rule 27), pescando (Rule 26): arranjos específicos com luzes adicionais (all-round vermelha/branca/verde) que o comandante deve conhecer por tipo de operação.
+> 9. **Inspeção pré-saída checklist não-negociável** — BB vermelho? BE verde? Masthead branca 225°? Sternlight branca 135°? Todos acendem? Arco visível? Cabos e conectores sem oxidação? Se algo falhou, não saia.
+
+> [!danger] Quando chamar um especialista (engenheiro/técnico com formação em COLREGs + eletrônica marinha)
+> 1. **Homologação de embarcação nova e comissionamento Classe DPC** — instalação de sistema de luzes em embarcação comercial ou recreio de > 12 m requer plano de luzes aprovado pela Capitania, ensaio fotométrico documentado (ISO 16180/19009 ou USCG 33 CFR 183) e vistoria; escopo de projeto naval.
+> 2. **Retrofit com tricolor mastro em veleiro importado (padrão EU)** — substituição de incandescente 25 W por tricolor LED no topo do mastro exige passagem de cabo pelo mastro, chave seletora Vela/Motor, proteção contra raio ABYC TE-4 e alinhamento com Annex I COLREGs; projeto elétrico.
+> 3. **Embarcação restrita em sua capacidade de manobra (Rule 27)** — arranjo de luzes especial (all-round vermelha-branca-vermelha na vertical + mastro) para operação de draga, pesquisa, reboque, mergulho, cabo submarino etc.; licenciamento operacional com Capitania + DPC.
+> 4. **Conflito entre homologação USCG e CE-RCD europeu** — embarcação importada dos EUA com luzes USCG e inspeção brasileira exigindo ISO: a equivalência nem sempre é automática; trânsito com plano de equivalência documentado ou substituição.
+> 5. **Perícia pós-abalroamento com alegação "luzes apagadas/erradas"** — laudo forense requer leitura do switch panel, documentação fotográfica, exame de oxidação de conectores, teste de tensão em terminais das luminárias, certificação da luminária; escopo jurídico.
+> 6. **Integração com IoT/automação de luzes (acendimento automático ao pôr-do-sol, sensor crepuscular)** — sistemas "smart" adicionados sem certificação podem gerar glitch de intermitência (não compliant com COLREGs que exige fluxo constante); análise de compatibilidade necessária.
+> 7. **Instalação de luz em embarcação com fibra de carbono** — não há caminho de retorno de descargas; ABYC TE-4 + análise de aterramento específico; engenheiro elétrico naval.
+> 8. **Navegação internacional com regras contrárias (inland rules USCG vs COLREGs internacionais)** — EUA tem Inland Navigation Rules diferentes (33 CFR 84-88); embarcação com masthead separate de sidelights para internacional e combinado para inland; projeto e chave seletora.
+> 9. **Substituição de magnetron de luz de tope em navio comercial (sistema de arco elétrico)** — embarcação comercial com luz a arco (alcance > 6 mn, rara em recreio) requer técnico certificado pelo fabricante (Lalolux, AquaSignal industrial); nunca DIY.
+
+> [!info] Glossário rápido (≈ 46 termos)
+> - **BB (Bombordo)** — lado esquerdo visto da proa, luz VERMELHA.
+> - **BE (Boreste)** — lado direito visto da proa, luz VERDE.
+> - **Alcançado (Sternlight)** — luz BRANCA na popa, arco 135°.
+> - **Masthead light** — luz branca no mastro/tope, arco 225° (COLREGs Reg 23).
+> - **Sidelight** — luzes laterais coloridas, arco 112,5° cada.
+> - **All-round light** — luz 360° (âncora, restrita, pescando).
+> - **Luz de âncora** — all-round branca usada fundeado (Rule 30).
+> - **Towing light** — all-round amarela (embarcações rebocando, Rule 24).
+> - **Luz de tricolor** — combinada BB+BE+alcançado no topo do mastro (veleiros apenas).
+> - **Bicolor light** — BB+BE combinados em uma luminária única (proa).
+> - **Arco 112,5°** — sidelight (de proa até 22,5° atrás do través).
+> - **Arco 135°** — sternlight (135° da popa, 67,5° cada lado).
+> - **Arco 225°** — masthead light (cobre tudo à frente + lados 22,5° atrás do través).
+> - **Arco 360°** — all-round light (âncora, restrita, pesca).
+> - **CIE xy chromaticity** — coordenadas colorimétricas Internacional Commission on Illumination.
+> - **Fotometria** — medição de intensidade luminosa por ângulo (cd, candela).
+> - **Candela (cd)** — unidade de intensidade luminosa; sidelight 1 mn ≈ 0,9 cd.
+> - **Intensidade mínima por ângulo** — definida em Annex I COLREGs.
+> - **Alcance (mn)** — distância de visibilidade em milhas náuticas.
+> - **Ano de emenda COLREGs** — 1972 original + emendas 1981, 1987, 1989, 2003, 2007, 2013.
+> - **Annex I** — Positioning and technical details (posicionamento geométrico).
+> - **Annex II** — Additional signals for fishing vessels.
+> - **Annex III** — Technical details of sound signal appliances.
+> - **Annex IV** — Distress signals.
+> - **USCG 33 CFR 183** — Boats and associated equipment (padrão norte-americano).
+> - **ABYC A-16** — Electric Navigation Lights (2023, padrão ABYC).
+> - **ISO 16180:2011** — Navigation lights — Installation and visibility.
+> - **ISO 19009:2015** — Electric navigation lights — Performance requirements.
+> - **IEC 60945** — General requirements for marine electronic equipment.
+> - **Inland Navigation Rules (USA)** — Rules 33 CFR 84-88, versão doméstica USCG.
+> - **Certificado de homologação** — documento que atesta cumprimento normativo.
+> - **Flux constant** — COLREGs exige fluxo constante (não strobing).
+> - **Intensidade máxima** — limite superior em cd (ofuscamento).
+> - **Redução diurna** — permitida em all-round de navio grande, nunca em recreio.
+> - **Dimmer** — NÃO permitido em luzes de navegação.
+> - **Fan beam / Sector cut-off** — transição entre setores deve ser < 6°.
+> - **Temperatura de cor (vermelho/verde)** — definida por CIE, não pelo nome.
+> - **LED marino homologado** — com certificação USCG/ISO 19009/ABYC A-16.
+> - **LED automotivo não serve** — fora de colorimetria CIE náutica.
+> - **Halogênio** — substituto do incandescente antes do LED (transição anos 2000-2010).
+> - **Incandescente (filamento)** — tradicional, vida 500-2000 h, consumo 2-5 A.
+> - **Fresnel lens** — lente escalonada, padrão em luminárias de longo alcance.
+> - **Cut-off angle** — ângulo preciso onde a luz corta.
+> - **IP-67/IP-68** — proteção ingress protection para ambiente marino.
+> - **Marine-grade connector** — conectores vedados tipo Deutsch DT, Ancor, AMP Superseal.
+> - **Bonding (aterramento)** — ligação de massa para proteção contra raio (ABYC TE-4).
+> - **Hotline** — ligação direta ao banco DC (sempre ativa, bypass da chave geral).
 
 ## O que é
 
@@ -251,10 +344,33 @@ Sem luzes de navegação corretas: risco de colisão + infração grave com autu
 
 ## Normas e referências aplicáveis
 
-- **COLREGS 72** — Convenção Internacional para Evitar Abalroamentos (Regras 20–31)
-- **NORMAM-01 (edição a verificar) (DPC/Marinha do Brasil)** — regulamentação nacional de luzes de navegação
-- **ISO 16180:2011** — Requisitos fotométricos para luzes de navegação
-- **USCG 33 CFR (edição a verificar) 183** — padrão americano de homologação
+- **COLREGs 72 — Convention on the International Regulations for Preventing Collisions at Sea** — base legal internacional; Regras 20-31 especificam luzes e sinais.
+- **COLREGs Regra 20** — Application (aplicabilidade das luzes em todas as embarcações).
+- **COLREGs Regra 21** — Definitions (masthead light, sidelights, sternlight, towing light, all-round light; arcos e fotometria).
+- **COLREGs Regra 22** — Visibility of lights (alcance mínimo em milhas náuticas por porte).
+- **COLREGs Regra 23** — Power-driven vessels underway (masthead + sidelights + sternlight).
+- **COLREGs Regra 25** — Sailing vessels underway (tricolor no topo OU luzes de bordo + sternlight; nunca simultâneas a motor).
+- **COLREGs Regra 26** — Fishing vessels (all-round vermelha-branca + direcional).
+- **COLREGs Regra 27** — Vessels not under command or restricted in their ability to maneuver.
+- **COLREGs Regra 30** — Anchored vessels and vessels aground (all-round branca 360°).
+- **COLREGs Regra 38** — Exemptions (embarcações antigas, período de transição).
+- **COLREGs Annex I** — Positioning and technical details of lights and shapes (geometria precisa de instalação).
+- **COLREGs Annex II** — Additional signals for fishing vessels.
+- **ISO 16180:2011** — Small craft — Navigation lights — Installation, placement and visibility (requisitos de instalação em embarcações < 24 m).
+- **ISO 19009:2015** — Small craft — Electric navigation lights — Performance requirements (homologação elétrica e fotométrica).
+- **IMO Resolution A.694(17)** — General requirements for shipborne radio and electronic navigation aids (base técnica para equipamento embarcado).
+- **IEC 60945** — Maritime navigation and radiocommunication equipment — General requirements (EMC, IP, ambiente marinho).
+- **IEC 61108-1** — GNSS receiver performance (quando integrado a luzes com GPS automático).
+- **USCG 33 CFR Part 183** — Boats and associated equipment (padrão norte-americano recreio).
+- **USCG 46 CFR Part 111** — Electrical engineering (grandes embarcações comerciais, sistema de luzes).
+- **ABYC A-16 (2023)** — Electric Navigation Lights (instalação, alcance, fiação em embarcações de recreio).
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (fiação, fusíveis, bitolas do circuito de luzes).
+- **ABYC E-30** — Ignition protection for marine products (fiação sob coberta em áreas de combustível).
+- **NORMAM-201/DPC** — Tráfego e Permanência de Embarcações (aplicabilidade a comerciais brasileiras).
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio (obrigação de luzes em recreio brasileiro).
+- **Resoluções ANTAQ/DPC** — aplicáveis à Marinha Mercante.
+- **ABNT NBR 5410:2004 + emendas** — Instalações elétricas de baixa tensão (aplicável quando há parte AC).
+- **CIE Publication 15:2004** — Colorimetry (coordenadas CIE xy das cores vermelho/verde/branco/amarelo exigidas pelas COLREGs).
 
 ## Destaques para ensino
 

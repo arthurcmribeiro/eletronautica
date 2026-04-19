@@ -3,14 +3,38 @@ title: "VHF"
 note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "VHF e5319734f7fb835c9aaa01e0b5de4318.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "18"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "GMDSS (IMO) — Global Maritime Distress and Safety System"
+  - "SOLAS Cap. IV — Radiocommunications"
+  - "ITU-R M.493 — Digital Selective Calling system for use in the maritime mobile service"
+  - "ITU-R M.1084 — Interim solutions for improved efficiency in the use of the band 156-174 MHz"
+  - "ITU Radio Regulations — Appendix 18 (VHF maritime channels)"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 62238 — Maritime VHF radiotelephone equipment with integrated DSC Class D"
+  - "IEC 61097-7 — Shipborne VHF radiotelephone transmitter and receiver"
+  - "IEC 61097-3 — Digital Selective Calling equipment operating in MF, MF/HF and VHF"
+  - "IEC 61162-1/-2 (NMEA 0183) — Digital interfaces for navigational devices"
+  - "IEC 61162-3 (NMEA 2000) — Network-based digital interface for navigational devices"
+  - "NORMAM-204/DPC — Serviço Móvel Marítimo e Serviço Móvel Marítimo por Satélite"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "Resoluções ANATEL aplicáveis — Serviço Móvel Marítimo e licenciamento de estações de navio"
+  - "RIPEAM/COLREGS — Regulamento Internacional para Evitar Abalroamentos no Mar"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats (alimentação e proteção do VHF)"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
   - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.itu.int/pub/R-REC"
+  - "https://www.imo.org/en/OurWork/Safety/Pages/GMDSS.aspx"
 aliases:
   - "VHF"
 seo_title: "VHF"
@@ -35,7 +59,29 @@ related_notes:
 # VHF
 
 > [!abstract] Resumo técnico
-> VHF MARINO — Rádio de comunicação marítima na faixa VHF (156–174 MHz). Equipamento central de comunicação e socorro a bordo. Requisitos regulatórios, obrigação de porte e rotinas de escuta dependem da classe da embarcação, área de navegação e enquadramento aplicável.
+> VHF MARINO — Rádio de comunicação marítima na faixa VHF (156–174 MHz). Equipamento central de comunicação e socorro a bordo. Requisitos regulatórios, obrigação de porte e rotinas de escuta dependem da classe da embarcação, área de navegação e enquadramento aplicável. O VHF com DSC integrado ao GPS é a linha de frente do GMDSS — antecede celular em cobertura, reconhecimento por autoridades e função de emergência.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **VHF não é opcional em embarcação que sai do abrigo.** Celular não tem cobertura em mar aberto, não é reconhecido pelo MRCC/Salvamar e não transmite posição automática. Para travessia, costeira longa ou área de pesca, VHF fixo com DSC é requisito de segurança — sem exceção.
+> 2. **MMSI programado + GPS conectado via NMEA é o que torna o DSC útil.** VHF sem MMSI = DSC inoperante. VHF com MMSI mas sem NMEA = Mayday **sem posição** — o socorro vai chegar em qualquer lugar. Conectar e testar a integração é parte da instalação, não opcional.
+> 3. **Canal 16 (156,800 MHz) é o canal de socorro e chamada.** Monitoramento conforme o enquadramento operacional da embarcação e o GMDSS. Não é "canal que pode estar ligado" — é o canal que o navio/estação escuta de forma coerente com sua rotina e sua classe.
+> 4. **Alcance em linha de visada: altura da antena é rei.** 25W em antena baixa (T-top de 2m) = 8–12 mn. Mesmo rádio em antena de mastro a 12m = 25–40 mn. Antena e cabo coaxial definem mais alcance do que a potência do rádio.
+> 5. **Cabo coaxial: RG-8X ou RG-8/213 — nunca RG-58.** RG-58 perde 3 dB em 10 m no VHF (metade da potência chega à antena). RG-8X é mínimo aceitável; RG-213 ou LMR-400 em corridas longas (>15 m).
+> 6. **Conector PL-259/SO-239 é o calcanhar de Aquiles.** 80% dos problemas de alcance resolvem com re-crimpagem ou substituição do conector da base da antena. Oxidação verde = troca imediata. Vedar com autofusão e cinta termo-retrátil marinizada.
+> 7. **Sem DSC operante, o VHF não atende o padrão mundial de socorro.** Mayday-voz funciona, mas só quem estiver escutando no momento ouve. DSC com MMSI + GPS envia o distress digital para todo barco/estação no alcance, com posição e identificação — muda o nível da resposta.
+> 8. **Portátil não é primário — é backup.** 5–6W contra 25W do fixo, bateria interna limitada, antena curta. Obrigatório ter, mas para emergência primária a cadeia é fixo → DSC → GMDSS.
+> 9. **Antena VHF nunca na mesma altura de outras antenas de alta potência.** Convivência com radar, Iridium, celular 4G, outra antena VHF (2ª estação) exige separação vertical e espacial. Acoplamento queima front-end do receptor ou corta a transmissão em redes de alta RF.
+
+> [!danger] Quando chamar um especialista
+> - **Programação de MMSI em rádio que já foi programado:** muitos VHFs permitem **apenas uma** programação de MMSI pelo usuário; a segunda vez exige reset em laboratório autorizado ou substituição do rádio. Não tentar reprogramar sem confirmar o modelo e a regra do fabricante.
+> - **Licenciamento de estação de navio / MMSI em embarcação com mudança de bandeira ou proprietário:** procedimento envolve ANATEL, DPC e cadastro internacional. Confundir MMSI "de fábrica" ou pedir número não autorizado = multa e invalidade do DSC em emergência real. Despachante ou armador com experiência é regra.
+> - **VHF GMDSS tipo Class A com duty cycle de travessia oceânica:** o regime regulatório (SOLAS, STCW, GMDSS área A1/A2/A3/A4) define redundância, fonte reserva e procedimentos. Instalação deve ser por prestador homologado, com inspeção DPC/MRCC.
+> - **Sinistro marítimo com Mayday acionado mas socorro sem posição:** revisar cabeamento NMEA, firmware do VHF, configuração do DSC, log do GPS. Perícia precisa de evidência preservada — não apagar o log do equipamento antes do laudo.
+> - **Interferência entre VHF e radar / celular / Starlink / Iridium / auto-pilot:** problema de planta de antenas (proximidade, acoplamento, intermodulação). Engenheiro de RF naval faz site survey com analisador de espectro.
+> - **Instalação em embarcação metálica (alumínio, aço):** aterramento da malha de plano-terra do dipolo, bonding do cabo coaxial, proteção contra descarga atmosférica, isolação contra correntes galvânicas. Diferente de instalação em casco de fibra — projeto específico.
+> - **VHF travando/resetando durante transmissão de alta potência:** queda de tensão > 10% nos terminais durante TX. Pode ser banco subdimensionado, cabo de alimentação inadequado ou bateria com alta impedância interna. Diagnóstico com multímetro registrador + scope.
+> - **Certificação de embarcação nova ou importada exigindo homologação DPC/ANATEL:** o equipamento precisa constar da lista de rádios homologados, com etiqueta Anatel e compatibilidade com canais brasileiros. Importação direta sem homologação = bloqueio na vistoria.
+> - **Coexistência VHF + AIS + DSC no mesmo rádio "combo":** sincronização, divisão de recepção, prioridades de canal, comportamento em standby. Configuração errada = AIS desativado sem alerta ao operador ou DSC sem GPS.
 
 ## O que é
 
@@ -228,12 +274,80 @@ No Brasil, a NORMAM exige VHF mas não detalha o requisito de MMSI com o mesmo r
 
 O VHF é mais útil que o celular em mar por cobertura, reconhecimento pelas autoridades e função DSC. Em emergência: VHF com MMSI programado e posição GPS integrada vale mais que qualquer celular.
 
+## Glossário rápido
+
+- **VHF marítimo:** faixa 156–174 MHz alocada pela ITU para comunicação marítima.
+- **Canal 16 (156,800 MHz):** canal internacional de socorro, segurança e chamada. Escuta obrigatória conforme enquadramento/GMDSS.
+- **Canal 70 (156,525 MHz):** canal exclusivo para Chamada Seletiva Digital (DSC) — não é usado para voz.
+- **Canal 06 / 13 / 22A:** canal de comunicação ship-to-ship, ponte-a-ponte (bridge-to-bridge) e coordenação com Guarda Costeira (22A nos EUA).
+- **Dual Watch / Tri Watch:** função que monitora simultaneamente Canal 16 + outro canal (Dual) ou Canal 16 + 2 canais (Tri).
+- **Scan (varredura):** varre todos os canais memorizados, parando quando detecta transmissão.
+- **DSC (Digital Selective Calling):** protocolo digital que envia chamadas (distress, urgency, routine) com identificação MMSI e posição GPS automaticamente pelo Canal 70.
+- **MMSI (Maritime Mobile Service Identity):** número de 9 dígitos que identifica a estação marítima. Obrigatório para DSC. Obtenção no Brasil via ANATEL/DPC.
+- **Mayday:** sinal de socorro de **risco imediato de vida ou navio**. Maior prioridade. Formato: "Mayday-Mayday-Mayday, este é [MMSI], posição, natureza da emergência, assistência requerida".
+- **Pan-Pan:** sinal de **urgência sem risco imediato de vida** (avaria, medical, pessoa doente).
+- **Sécurité:** sinal de **segurança** (aviso à navegação, meteorológico, objeto flutuante).
+- **GMDSS (Global Maritime Distress and Safety System):** sistema global de socorro que integra DSC, EPIRB, SART, NAVTEX, Inmarsat e VHF.
+- **GMDSS Área A1:** cobertura VHF com DSC (até ~20–30 mn da costa).
+- **GMDSS Área A2:** cobertura MF/HF com DSC (até ~150 mn da costa).
+- **GMDSS Área A3/A4:** cobertura Inmarsat / polar por HF.
+- **MRCC (Maritime Rescue Coordination Centre):** centro de coordenação de salvamento marítimo. No Brasil: Salvamar Brasil (Marinha do Brasil).
+- **SOLAS:** Safety of Life at Sea — convenção IMO que define requisitos de equipamentos para navios mercantes e exemplifica o pano de fundo do GMDSS.
+- **RIPEAM / COLREGS:** regras internacionais para evitar abalroamento — ponto-a-ponto também pode usar VHF (Canal 13).
+- **VHF fixo:** rádio 25W instalado permanentemente, alimentado por banco DC, antena externa.
+- **VHF portátil (hand-held):** 5–6W, bateria interna, à prova d'água (IPX7 ou IPX8), flutuante em modelos marinos.
+- **Potência alta (HI):** 25W para comunicação de longo alcance.
+- **Potência baixa (LO / 1W):** para comunicação local (marina, porto) e redução de bateria.
+- **Squelch (silenciador):** supressão de ruído quando não há sinal — abrir demais → só ouve chiado; fechar demais → não ouve chamadas fracas.
+- **Gain (ganho):** em dBi (dipolo isotrópico) ou dBd (dipolo de referência). Antena de 6 dBd ≈ 8 dBi.
+- **Dipolo 1/2 onda:** antena típica de 6 dBd usada em mastro de veleiro.
+- **Colinear 5/8 onda:** antena típica de 3 dBd usada em T-top de lancha — mais curta, menos direcional em rolagem.
+- **Plano-terra / ground plane:** referência elétrica necessária para antena vertical. Em casco metálico = o próprio casco; em fibra = radiais ou plano planeado.
+- **VSWR / ROE (Razão de Onda Estacionária):** relação entre potência refletida e incidente na antena. Ideal < 1,5:1; acima de 2:1 há risco de danificar o PA do rádio.
+- **PL-259 / SO-239:** conector coaxial padrão em VHF marítimo (macho PL-259, fêmea SO-239).
+- **N connector:** conector alternativo de alta qualidade, à prova d'água, usado em instalações premium.
+- **Coaxial RG-58:** cabo de baixa qualidade (perda ~3 dB/10 m em VHF). **Não recomendado** para VHF fixo.
+- **Coaxial RG-8X (Mini-8):** cabo intermediário (perda ~1,5 dB/10 m). Mínimo aceitável.
+- **Coaxial RG-8/213:** cabo de baixa perda (~0,8 dB/10 m). Recomendado em corridas longas.
+- **Coaxial LMR-400:** equivalente americano de alta qualidade, baixíssima perda.
+- **dB (decibel):** escala logarítmica de potência. 3 dB = dobro/metade; 10 dB = 10×/0,1×.
+- **Audio noise blanker:** filtro que reduz ruído pulsado (ignição do motor, alternador).
+- **Class A DSC:** exigido em navios SOLAS. Mais recursos, múltiplas classes de chamadas.
+- **Class B DSC:** simplificado, usado em não-SOLAS (pesca costeira).
+- **Class D DSC:** classe mais comum em rádios de recreio. IEC 62238.
+- **ATIS (Automatic Transmitter Identification System):** identificação automática exigida em hidrovias europeias (CEVNI/Rhine).
+- **Rx/Tx (Recepção/Transmissão):** estado do rádio. Corrente Tx fixo ≈ 4–6 A em HI.
+- **Distress button:** botão vermelho protegido do DSC; pressionar >3s envia Mayday automático.
+- **Position Request:** função DSC para solicitar posição de outra estação (buddy tracking).
+- **All Ships Call:** chamada DSC para todas as estações em alcance (não-emergency, ex. aviso local).
+- **Group Call:** chamada a MMSI de grupo (frota, clube, marina).
+- **NMEA sentence "DSC" / "DSE" (0183):** sentenças que o VHF envia ao chartplotter com info do DSC recebido.
+- **PGN 129808 (NMEA 2000):** DSC Call Information — equivalente moderno em rede.
+- **ANATEL:** Agência Nacional de Telecomunicações — licenciamento de estação e indicativo de chamada no Brasil.
+- **Indicativo de chamada (call sign):** identificação alfanumérica atribuída à estação (ex. PU0XYZ).
+- **VHF com AIS:** rádio que integra receptor AIS Classe B — exibe alvos AIS no display.
+- **ECLI/RF exposure:** limites de exposição a radiofrequência — VHF portátil mais relevante (antena próxima ao corpo).
+
 ## Normas e referências aplicáveis
 
-- **NORMAM / DPC / Marinha do Brasil** — verificar o requisito aplicável conforme tipo de embarcação, área de navegação e enquadramento atualizado
-- **GMDSS (Global Maritime Distress and Safety System)** — sistema global de socorro que o DSC integra
-- **ITU Radio Regulations** — alocação de canais VHF marítimos
-- **ANATEL (edição a verificar) e demais órgãos competentes** — verificar licenciamento, indicativo e processo vigente para MMSI/estação
+- **GMDSS (IMO — Global Maritime Distress and Safety System)** — sistema global de socorro para navegação marítima.
+- **SOLAS, Cap. IV — Radiocommunications** — requisitos de equipamentos de radiocomunicação para navios mercantes (base conceitual do GMDSS).
+- **ITU-R M.493** — *Digital Selective Calling system for use in the maritime mobile service.* Define o protocolo DSC.
+- **ITU-R M.1084** — *Interim solutions for improved efficiency in the use of the band 156-174 MHz by stations in the maritime mobile service.*
+- **ITU Radio Regulations, Apêndice 18** — alocação de canais VHF marítimos internacionais.
+- **IEC 60945** — *Maritime navigation and radiocommunication equipment and systems — General requirements.* Requisitos ambientais, EMC, segurança elétrica.
+- **IEC 62238** — *Maritime VHF radiotelephone equipment and systems with integrated Class D DSC — Operational and performance requirements.* Referência para VHF de recreio com DSC.
+- **IEC 61097-7** — *Shipborne VHF radiotelephone transmitter and receiver.* Requisitos técnicos.
+- **IEC 61097-3** — *Digital Selective Calling (DSC) equipment operating in MF, MF/HF and VHF bands.*
+- **IEC 61162-1/-2 (NMEA 0183)** — sentenças de comunicação entre o VHF (DSC) e o GPS/chartplotter.
+- **IEC 61162-3 (NMEA 2000)** — rede digital moderna para troca de PGNs (ex. 129808 DSC Call).
+- **NORMAM-204/DPC** — *Serviço Móvel Marítimo e Serviço Móvel Marítimo por Satélite.* Base brasileira para uso, licenciamento e inspeção.
+- **NORMAM-201/DPC** — *Tráfego e Permanência de Embarcações em Águas Jurisdicionais Brasileiras.*
+- **NORMAM-211/DPC** — *Embarcações de esporte e recreio.* Requisitos para amadores.
+- **Resoluções ANATEL aplicáveis** — Serviço Móvel Marítimo (SMM), homologação de equipamentos, atribuição de MMSI e indicativo de chamada. Verificar edição vigente caso a caso.
+- **RIPEAM/COLREGS** — *Regulamento Internacional para Evitar Abalroamentos no Mar.* Canal 13 (bridge-to-bridge) é ferramenta operacional.
+- **ABYC E-11 (2023)** — *AC and DC Electrical Systems on Boats.* Base para alimentação DC do VHF fixo, fusível e aterramento RF.
+- **ABNT NBR 5410:2004 + emendas** — *Instalações elétricas de baixa tensão.* Complemento nacional.
 
 ## Destaques para ensino
 

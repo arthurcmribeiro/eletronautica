@@ -3,14 +3,44 @@ title: "Mob — Man Overboard — Sistema de Detecção"
 note_type: "system"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "MOB — MAN OVERBOARD — SISTEMA DE DETECÇÃO 33a19734f7fb81db8ef6d25c8985db66.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "23"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "SOLAS Cap. III — Life-saving appliances and arrangements (arranjos de salvatagem e busca)"
+  - "SOLAS Cap. IV — Radiocommunications (GMDSS, Dispositivos MOB associados)"
+  - "IMO Resolution MSC.246(83) — Performance standards for AIS-SART"
+  - "IMO Resolution A.810(19) — Float-free satellite EPIRB (referência para PLB)"
+  - "IEC 61097-14 — AIS-SART (Search and Rescue Transmitter) e MOB-AIS"
+  - "IEC 61097-2 / IEC 61097-13 — EPIRB 406 MHz (referência para PLB Cospas-Sarsat)"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 61993-2 / IEC 62287-1/-2 — AIS Class A / Class B (recepção de alvos MOB-AIS)"
+  - "ISO 12402 (série) — Personal flotation devices — Classes e ensaios (PFD, coletes salva-vidas)"
+  - "ISO 12401 — Deck safety harness and safety line"
+  - "ITU-R M.1371 — AIS TDMA (suporta mensagens MOB-AIS, ID 1-9)"
+  - "ITU-R M.493 / M.541 — DSC (MOB via chamada distress individual)"
+  - "Cospas-Sarsat C/S T.001 — 406 MHz Distress Beacons (PLB)"
+  - "Cospas-Sarsat C/S T.018 — Second-generation beacons (PLB moderno)"
+  - "ISAF Offshore Special Regulations (OSR) — obrigação de MOB-AIS/PLB em regatas oceânicas"
+  - "RIPEAM/COLREGs Rule 5 — Look-out (vigilância é o primeiro elo do MOB)"
+  - "NORMAM-204/DPC — Serviço Móvel Marítimo (PLB, registro SISEPIRB para PLB)"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio (salvatagem recreio)"
+  - "Resoluções ANATEL — homologação de dispositivos MOB-AIS e PLB"
+  - "ABYC A-4 (2023) — Fire fighting equipment (correlato a arranjos de segurança)"
+  - "ABYC T-31 — Swim platforms, ladders, boarding equipment (escada de resgate)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
   - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.cospas-sarsat.int/"
+  - "https://www.sailing.org/tools/documents/ISAFOffshoreSpecialRegulations"
 aliases:
   - "MOB — MAN OVERBOARD — SISTEMA DE DETECÇÃO"
 seo_title: "Mob — Man Overboard — Sistema de Detecção"
@@ -39,6 +69,78 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > MOB — MAN OVERBOARD (Homem ao Mar) — Sistema eletrônico de detecção e localização de pessoa que caiu ao mar. Pode ser um simples botão que marca a posição GPS no chartplotter, ou um sistema completo com AIS pessoal, alarme automático e rast.
+
+> [!tip] TL;DR — Regra de decisão em 30 segundos
+> 1. **MOB é protocolo + equipamento, nunca só equipamento** — os primeiros 10 segundos (gritar "Homem ao Mar" + pressionar botão MOB + jogar boia + designar vigia) valem mais que qualquer dispositivo no colete; treinar a sequência semestralmente é obrigação do comandante.
+> 2. **Botão MOB no chartplotter é linha base não-negociável** — todo MFD tem um atalho dedicado (físico ou touchscreen); se o GPS estiver sem fix ou o botão não funcionar, você NÃO está preparado para sair. Teste antes de cada saída.
+> 3. **AIS-SART/MOB-AIS pessoal (IEC 61097-14) é o padrão offshore** — dispositivo no colete/suspensório transmite em 161,975 MHz quando ativado por imersão ou manualmente; aparece como alvo de emergência em todos os AIS receivers no raio de ~5-8 mn.
+> 4. **PLB pessoal (Cospas-Sarsat 406 MHz) cobre o cenário "sem AIS ao redor"** — AIS-SART só funciona se outra embarcação com AIS estiver em alcance VHF; PLB transmite para satélites e aciona MRCC diretamente. Oceano aberto = PLB obrigatório.
+> 5. **MOB-AIS ≠ EPIRB** — EPIRB é da embarcação (registro no nome do barco); MOB-AIS/PLB é pessoal (registro no nome do tripulante, com vinculação à embarcação no SISEPIRB para PLB brasileiro). Nunca confundir.
+> 6. **Ativação por imersão é padrão moderno, mas ativação manual é sempre possível** — Ocean Signal MOB1, Kannad SafeSea MOB, McMurdo FastFind usam sensor de imersão + botão; pessoa inconsciente no mar ativa automaticamente em < 5 s.
+> 7. **Integração MOB-AIS → chartplotter → piloto automático é configurável, não automática** — dispositivo transmite, mas o chartplotter precisa estar configurado para tratar alvos MOB-AIS com prioridade e notificar piloto automático; testar essa cadeia no cais antes de offshore.
+> 8. **Escada de resgate (ABYC T-31) é o elo frequentemente esquecido** — recuperar pessoa no mar após 10 min em água fria é impossível sem escada que chegue a 30 cm abaixo da linha d'água; sem ela, a pessoa pode estar marcada no GPS mas inacessível.
+> 9. **ISAF OSR define níveis (Category 0-5)** — regatas oceânicas exigem AIS-SART/PLB por tripulante, colete ISO 12402-3 + harness ISO 12401, escada de resgate, sarilhos, boia MOB com mastro e luz; referência voluntária excelente para cruzeiro recreio offshore.
+
+> [!danger] Quando chamar um especialista (engenheiro/instrutor com formação em salvatagem e GMDSS)
+> 1. **Configuração MOB-AIS → piloto automático com retorno automático (Return-to-MOB)** — integração Garmin GHP Reactor, Raymarine Evolution, Simrad AP44 para que o piloto gire automaticamente ao receber alvo MOB-AIS requer parametrização (rumo, velocidade reduzida, parada a 20-30 m do alvo) e treino; erro de config pode virar para direção errada.
+> 2. **Homologação ANATEL + registro SISEPIRB de PLB importado** — PLB comprado nos EUA (FCC) sem homologação ANATEL: registro SISEPIRB recusa, sinal pode ser ignorado por MRCC brasileiro em emergência; processo de homologação individual é complexo e caro.
+> 3. **Tripulação de 6+ em regata offshore (ISAF Category 0-2)** — cada tripulante com AIS-SART + PLB, + MOB boat (pedestal com mastro + bolsa de recuperação + sarilho elétrico), plano de emergência documentado, radar/chartplotter com MARPA ativo; projeto de safety by design.
+> 4. **Falha de ativação por imersão (MOB ativou sem motivo ou não ativou em teste)** — unidades Ocean Signal/Kannad/McMurdo com falha de sensor de imersão não devem ser "consertadas" DIY; substituir ou enviar ao fabricante; em PLB, substituição da bateria também é feita só em central autorizada Cospas-Sarsat.
+> 5. **Testes reais antes de expedição oceânica** — testar MOB-AIS em terra (modo teste) não garante funcionamento ativado em água; teste em cais ao lado do chartplotter receptor, com MRCC ou operadora de AIS informada para evitar alarme falso regional.
+> 6. **MOB durante piloto automático em cruzeiro solo (single-handed)** — pessoa sozinha no barco e cai ao mar com piloto mantendo rumo: o AIS-SART ativa mas ninguém a bordo para ajudar; protocolo inclui tether harness ISO 12401 obrigatório, PLB com contato emergencial, + possivelmente sistema de kill-switch automático do motor (MOB lanyard).
+> 7. **Recuperação de vítima em hipotermia** — pessoa resgatada após > 15 min em água < 15°C tem risco alto de choque pós-resgate (arrhythmia rewarming); treinamento de primeiros socorros hipotermia (horizontal posture, rewarming gradual) vai além do tema MOB puro e requer curso offshore safety.
+> 8. **Perícia sinistro em caso de afogamento com MOB documentado** — laudo forense envolvendo "o MOB foi acionado" requer leitura de logs do chartplotter (se existir), timestamp AIS no MRCC, verificação de registro SISEPIRB; escopo jurídico, não manutenção.
+> 9. **Alarme falso de MOB-AIS em marina (ativação acidental)** — dispositivo ativado por chuva, lavagem ou limpeza genera distress AIS em canal 161,975 MHz; procedimento: desligar imediatamente, notificar MRCC para cancelamento, documentar; repetição pode gerar autuação ANATEL.
+
+> [!info] Glossário rápido (≈ 47 termos)
+> - **MOB** — Man Overboard, Homem ao Mar.
+> - **MOB button** — botão físico/virtual no MFD que marca posição GPS instantânea.
+> - **MOB waypoint** — ponto GPS marcado pelo MOB button, padrão WPL NMEA 0183.
+> - **MOB-AIS** — dispositivo pessoal AIS-SART em 161,975 MHz (IEC 61097-14).
+> - **AIS-SART** — AIS Search and Rescue Transmitter, para embarcação ou pessoal.
+> - **SART (radar, legado)** — Search and Rescue Transponder em 9 GHz, substituído por AIS-SART.
+> - **PLB** — Personal Locator Beacon, 406 MHz Cospas-Sarsat (pessoal).
+> - **EPIRB** — Emergency Position Indicating Radio Beacon (embarcação).
+> - **Cospas-Sarsat** — sistema internacional de satélites SAR.
+> - **MEOSAR** — Medium Earth Orbit SAR (constelação moderna, < 5 min).
+> - **MRCC** — Maritime Rescue Coordination Centre (Salvamar Brasil).
+> - **SISEPIRB** — Sistema Brasileiro de Registro de EPIRB/PLB (DPC).
+> - **Distress alert (AIS)** — mensagem AIS tipo 14 ou 1-9 com ID de MOB.
+> - **Ativação por imersão** — sensor de água ativa dispositivo automaticamente.
+> - **Ativação manual** — botão + trava de segurança (2-3 s pressionados).
+> - **UIN** — Unique Identifier Number de PLB (15 HEX).
+> - **MID** — Maritime Identification Digits (Brasil 710-719) em MOB-AIS.
+> - **Nav status 14 (AIS)** — "AIS-SART/MOB/EPIRB active".
+> - **Safe harness** — ISO 12401, cinto-linha-gancho para deck de veleiro.
+> - **Jackline** — linha fixa ao longo do deck onde o harness engata.
+> - **Tether** — cabo curto do harness ao jackline.
+> - **PFD** — Personal Flotation Device (colete salva-vidas).
+> - **ISO 12402-2** — colete 275N, offshore ocean service.
+> - **ISO 12402-3** — colete 150N, offshore standard.
+> - **ISO 12402-5** — auxiliares de flutuação 50N (esporte).
+> - **Lifering / Horseshoe buoy** — boia salva-vidas circular ou em ferradura.
+> - **Dan buoy / MOB pole** — mastro com luz e bandeira para marcar posição no mar.
+> - **MOB light** — luz estroboscópica no colete/boia.
+> - **Return-to-MOB** — função do piloto automático de retornar ao ponto.
+> - **MARPA** — Mini Automatic Radar Plotting Aid (rastrear alvo no radar).
+> - **Escada de resgate (ABYC T-31)** — com degrau a 30 cm abaixo da linha d'água.
+> - **Rescue sling** — bolsa/alça de içamento com sistema de roldanas.
+> - **Lifesling** — marca de rescue sling padrão offshore.
+> - **Kill switch (MOB lanyard)** — cordão que desliga motor ao cair ao mar.
+> - **Cat 0-5 ISAF OSR** — categorias de regata offshore (0 trans-oceânica, 5 baía).
+> - **Quick-release boarding ladder** — escada abatível com rápido acionamento.
+> - **SAR (Search and Rescue)** — busca e salvamento coordenado.
+> - **Salvamar Brasil** — autoridade SAR brasileira (Marinha/DPC).
+> - **Hipotermia** — <35°C temperatura central; risco crítico após > 15 min em água fria.
+> - **Cold shock** — resposta autonômica nos 1-3 min iniciais em água fria.
+> - **Dry suit / Wet suit** — proteção térmica (offshore frio).
+> - **LED strobe** — luz estroboscópica brilhante para ser vista no escuro.
+> - **Retroreflective tape** — fita reflexiva SOLAS no colete.
+> - **Personal GPS tracker** — Garmin inReach, Spot (bidirecional satélite).
+> - **Man-overboard drill** — treinamento operacional de MOB.
+> - **Quick-stop maneuver** — manobra de retorno clássica à vela.
+> - **Williamson turn** — manobra de retorno a motor (250°/20° corrigido).
+> - **Ficha de tripulação** — registro nominal obrigatório em regata/offshore.
 
 ## O que é
 
@@ -232,12 +334,33 @@ Passo 6: Testar o procedimento de içamento de pessoa a bordo
 
 ## Normas e referências
 
-- **COLREGS:** regras de prevenção de colisão (contexto de emergência)
-- **ABYC A-7 (edição a verificar):** recomendações de segurança (MOB)
-- **ISO 15085:** Safety equipment — MOB procedures
-- **NORMAM-01 (edição a verificar):** equipamentos de segurança obrigatórios
-- **IEC 61097-14:** AIS-SART (dispositivos pessoais AIS de socorro)
-- **ISAF OSR (Offshore Special Regulations):** obrigatoriedade de MOB em regatas oceânicas
+- **SOLAS Cap. III** — Life-saving appliances and arrangements (coletes, botes, escadas; base de arranjo de salvatagem).
+- **SOLAS Cap. IV** — Radiocommunications (GMDSS, integração MOB-AIS/DSC/EPIRB).
+- **IMO Resolution MSC.246(83)** — Performance standards for AIS-SART (base técnica para dispositivos AIS-SART/MOB-AIS).
+- **IMO Resolution A.810(19)** — Float-free satellite EPIRB (referência para PLB Cospas-Sarsat 406 MHz).
+- **IEC 61097-14** — AIS Search and Rescue Transmitter (AIS-SART) e MOB-AIS pessoal (161,975 MHz).
+- **IEC 61097-2 / IEC 61097-13** — EPIRB 406 MHz primeira e segunda geração (base técnica para PLB).
+- **IEC 60945** — Maritime navigation and radiocommunication equipment — General requirements (EMC, IP, ambiente marítimo).
+- **IEC 61993-2** — AIS Class A shipborne equipment (recepção de alvos MOB-AIS em embarcações grandes).
+- **IEC 62287-1 / -2** — AIS Class B CSTDMA/SOTDMA (recepção MOB-AIS em recreio).
+- **ISO 12402 (série)** — Personal flotation devices — Classes 275N/150N/100N/50N (coletes salva-vidas).
+- **ISO 12401** — Small craft — Deck safety harness and safety line (harness + tether).
+- **ITU-R M.1371** — AIS TDMA (suporta mensagens MOB-AIS ID 1-9).
+- **ITU-R M.493 / M.541** — DSC (chamada distress individual integrada a MOB, quando VHF DSC disponível).
+- **Cospas-Sarsat C/S T.001** — 406 MHz Distress Beacons (PLB primeira geração).
+- **Cospas-Sarsat C/S T.018** — Second-generation beacons — General specification (PLB moderno, Return Link Service).
+- **Cospas-Sarsat C/S G.005** — Beacon coding (protocolo PLB).
+- **ISAF Offshore Special Regulations (OSR)** — Categorias 0-5; obrigação de MOB-AIS/PLB por tripulante, colete 275N, escada de resgate, boia MOB pole (regatas oceânicas).
+- **RIPEAM/COLREGs Rule 5** — Look-out (vigia é o primeiro elo do MOB; sem olho no mar, o botão é inútil).
+- **RIPEAM/COLREGs Rule 7** — Risk of collision (MOB em alvo AIS deve ser tratado como emergência prioritária).
+- **NORMAM-204/DPC** — Serviço Móvel Marítimo (MOB-AIS licenciamento, PLB registro SISEPIRB).
+- **NORMAM-201/DPC** — Tráfego e Permanência de Embarcações.
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio (salvatagem recreio brasileira).
+- **Resoluções ANATEL** — homologação de dispositivos MOB-AIS e PLB para uso no Brasil.
+- **ABYC A-4 (2023)** — Fire fighting equipment (correlato, arranjos de segurança).
+- **ABYC T-31** — Swim platforms, ladders, boarding equipment (escada de resgate com degrau abaixo da linha d'água).
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (fiação das unidades MOB fixas e integração chartplotter/piloto).
+- **ABNT NBR 5410:2004 + emendas** — Instalações elétricas de baixa tensão (parte AC quando houver).
 
 ## Como ensinar este tópico
 

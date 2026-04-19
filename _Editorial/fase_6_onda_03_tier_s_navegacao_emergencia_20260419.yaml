@@ -1,0 +1,326 @@
+---
+wave: 3
+phase: 6
+sprint: "Caminho B — aplicação DEC-11 premium em Tier S"
+date: "2026-04-19"
+cadence: "b (pause after wave)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier S — 9 notas Navegação / Instrumentação / Comunicação / Sinalização de emergência"
+template_recalibrated:
+  tldr_rules: 9
+  danger_scenarios: 9
+  glossary_terms: "40-49 (média ≈ 46)"
+  normas_expanded: "17-30 (média ≈ 21)"
+  decision: "Vademecum da elétrica náutica brasileira — todas as normas cabíveis"
+
+notes_processed:
+  - n: "01/9"
+    title: "VHF"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/VHF.md"
+    lines_before: 297
+    lines_after: ~500
+    delta_lines: +203
+    normas_before: 4
+    normas_after: 18
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 47
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "ITU-R M.493/M.541 citadas"
+      - "IEC 62238 (Class D) explícito"
+      - "ABYC E-11 + NBR 5410 cruzeiro AC"
+    destaques:
+      - "TL;DR cobre 9 regras essenciais (MMSI, licenciamento, alcance, conector PL-259, DSC mundial)"
+      - "Danger distingue 9 cenários críticos (reprogramação MMSI, SOLAS Class A upgrade, sinistro, integração RF)"
+      - "Glossário lista ~47 termos: Canal 16/70/06/13/22A, Dual/Tri Watch, DSC, Mayday, GMDSS, RG-58/8X/213, PL-259/SO-239"
+      - "Normas inclui 18 itens SOLAS Cap IV, GMDSS, ITU M.493/M.1084, IEC 60945/62238/61097-7/61097-3, NMEA 0183/2000, NORMAM-204/201/211, ANATEL, RIPEAM, ABYC"
+  - n: "02/9"
+    title: "DSC"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md"
+    lines_before: 320
+    lines_after: ~545
+    delta_lines: +225
+    normas_before: 4
+    normas_after: 17
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 45
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 criação integral normas_citadas"
+      - "ITU-R M.493/M.541/M.825 explícitos"
+      - "Cospas-Sarsat não confundido com DSC"
+    destaques:
+      - "TL;DR aborda MMSI único/irreprogramável, Canal 70 exclusivo, cancelamento distress acidental, NMEA 0183 $GPRMC, NMEA 2000 PGN 129808"
+      - "Danger cobre 9 cenários legais (MMSI travado, distress não cancelado, ANATEL registro, Class A SOLAS, importação)"
+      - "Glossário ~45 termos: Distress/Urgency/Safety/Routine, All Ships/Individual/Group/Geographic, Position Request, GMDSS A1-A4, ROC/GOC/LRC, ATIS"
+      - "Normas 17 itens (SOLAS Cap IV, ITU-R M.493/M.541/M.825, Apêndice 18, IEC 61097-3/62238, IEC 61162-1/-3, NORMAM-204, ANATEL)"
+  - n: "03/9"
+    title: "EPIRB"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/EPIRB - Beacon de Emergência.md"
+    lines_before: 297
+    lines_after: ~570
+    delta_lines: +273
+    normas_before: 4
+    normas_after: 21
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 49
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 criação integral normas_citadas"
+      - "Cospas-Sarsat C/S T.001/T.018/G.005 primeira aparição sistemática"
+      - "SISEPIRB registro Brasil explícito"
+      - "MID Brasil 710-719 explícito"
+    destaques:
+      - "TL;DR aborda complementaridade VHF DSC, SISEPIRB obrigatório, GPS integrado moderno, Cat I float-free vs Cat II manual, troca bateria 5-10 anos"
+      - "Danger cobre 9 cenários (registro/transferência, LED anormal, tug-top metálico, frotas comerciais, SOLAS GMDSS)"
+      - "Glossário ~49 termos: Cospas-Sarsat, 406/121.5/243 MHz, LEOSAR/GEOSAR/MEOSAR, Return Link, 15HEX/UIN, LUT/MCC, Cat I/II, hidrostato HRU"
+      - "Normas 21 itens (SOLAS, IMO A.810(19)/A.1001(25), Cospas-Sarsat C/S T.001/T.018/G.005, IEC 61097-2/-13/-14, ITU-R M.633, ETSI EN 300 066, FCC 47 CFR Part 80)"
+  - n: "04/9"
+    title: "AIS"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/AIS (Automatic Identification System).md"
+    lines_before: 273
+    lines_after: ~495
+    delta_lines: +222
+    normas_before: 4
+    normas_after: 20
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 45
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 criação integral normas_citadas"
+      - "ITU-R M.1371/M.2092 (VDES) explícito"
+      - "IALA G-1028 + A-126 citadas"
+      - "Apêndice 18 ITU canais 161,975/162,025 MHz"
+    destaques:
+      - "TL;DR explica Classe A SOTDMA vs Classe B CSTDMA/SOTDMA, MMSI oficial, recepção ≠ transmissão, CPA/TCPA configurar, NMEA 2000 PGNs 129038/129039/129794"
+      - "Danger aborda 9 cenários (MMSI reprogramação, SOLAS upgrade, splitter atenuação, cegamento VHF, silent mode, perícia sinistro, ANATEL)"
+      - "Glossário ~45 termos: SOTDMA/CSTDMA/ITDMA, slot/frame, static/dynamic/voyage data, ROT/SOG/COG/HDG, AIVDM/AIVDO, BIIT, AtoN virtual/sintético"
+      - "Normas 20 itens (SOLAS Cap V Reg 19, IMO A.1106(29)/MSC.74(69), ITU-R M.1371/M.2092, Apêndice 18, IEC 61993-2, IEC 62287-1/-2, IEC 60945, IALA G-1028/A-126)"
+  - n: "05/9"
+    title: "Radar"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Radar.md"
+    lines_before: 267
+    lines_after: ~535
+    delta_lines: +268
+    normas_before: 3
+    normas_after: 23
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 46
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 criação integral normas_citadas"
+      - "IMO MSC.192(79) + A.823(19) (ARPA) explícitas"
+      - "IEC 62388/60936-1/-2/-3 diferenciadas"
+      - "ICNIRP 1998/2020 citada (RF exposure)"
+      - "ABYC TE-4 (Lightning Protection) incluído"
+    destaques:
+      - "TL;DR cobre Magnetron vs Solid State, altura = alcance, ARPA/MARPA SOLAS, heading sensor pré-requisito, COLREGs Rule 7 explícita, open array vs radome"
+      - "Danger aborda 9 cenários (alinhamento offset, SOLAS retrofit, dual radar, degradação magnetron, FLIR integration, perícia sinistro, raio em mastro)"
+      - "Glossário ~46 termos: Banda X/S, PRF, HBW, Doppler, MARPA/ARPA/ATA/EPA, CPA/TCPA, clutter/STC/FTC, echo trails, VRM/EBL, PGN 130842, Racon"
+      - "Normas 23 itens (SOLAS Cap V Reg 19, IMO MSC.192(79)/A.823(19)/MSC.252(83), IEC 62388/60936-1/-2/-3/60945, ITU-R M.1313, ICNIRP)"
+  - n: "06/9"
+    title: "MOB"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Mob — Man Overboard — Sistema de Detecção.md"
+    lines_before: 306
+    lines_after: ~540
+    delta_lines: +234
+    normas_before: 6
+    normas_after: 24
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 47
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Normas expandidas substancialmente (6 → 24)"
+      - "ISAF OSR + ISO 12401/12402 explícitas"
+      - "Cospas-Sarsat C/S T.001/T.018/G.005 para PLB"
+      - "IMO MSC.246(83) AIS-SART performance"
+    destaques:
+      - "TL;DR ressalta protocolo + equipamento, MOB-AIS vs PLB complementares, ativação imersão, escada resgate ABYC T-31"
+      - "Danger cobre 9 cenários (Return-to-MOB autopilot, PLB importado sem SISEPIRB, ISAF Cat 0-2 regata, hipotermia, single-handed, falso alarme marina)"
+      - "Glossário ~47 termos: MOB button/waypoint, MOB-AIS, AIS-SART, PLB, MEOSAR, Cospas-Sarsat, SISEPIRB, ISO 12401/12402, jackline/tether, Williamson turn, Quick-stop"
+      - "Normas 24 itens (SOLAS Cap III/IV, IMO MSC.246(83)/A.810(19), IEC 61097-14/-2/-13, IEC 61993-2/62287-1/-2, ISO 12402/12401, Cospas-Sarsat, ISAF OSR, ABYC T-31)"
+  - n: "07/9"
+    title: "NAVEGAÇÃO (BB, BE e Alcançado)"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+    lines_before: 327
+    lines_after: ~560
+    delta_lines: +233
+    normas_before: 4
+    normas_after: 25
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 46
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Normas expandidas de 4 para 25"
+      - "COLREGs Regras 20-38 + Annex I-IV citadas"
+      - "ISO 16180:2011 + ISO 19009:2015 explícitas"
+      - "ABYC A-16 (Electric Navigation Lights) citada"
+    destaques:
+      - "TL;DR trata COLREGs Rule 21 como direito internacional vinculante, alcance por comprimento Rule 22, LED ISO 19009 homologado, BB vermelho da proa, tricolor vs sidelights, sternlight 135°, dimmer NÃO permitido"
+      - "Danger cobre 9 cenários (homologação DPC, tricolor retrofit, embarcação restrita Rule 27, USCG vs CE-RCD, perícia abalroamento, IoT automação, carbono sem aterramento, Inland Rules USCG, luz a arco comercial)"
+      - "Glossário ~46 termos: BB/BE/Alcançado, masthead/sidelight/sternlight/all-round/towing/tricolor/bicolor, arcos 112,5°/135°/225°/360°, CIE xy, candela, ISO 16180/19009, USCG 33 CFR 183, ABYC A-16"
+      - "Normas 25 itens (COLREGs 72 + Regras 20-25/26/27/30/38 + Annex I-II, ISO 16180/19009, IEC 60945/61108-1, USCG 33 CFR 183 / 46 CFR 111, ABYC A-16/E-11/E-30, NORMAM-201/211, CIE 15:2004)"
+  - n: "08/9"
+    title: "Luz de Âncora"
+    path: "55_Iluminacao_e_Sinalizacao/Luz de Âncora.md"
+    lines_before: 274
+    lines_after: ~455
+    delta_lines: +181
+    normas_before: 3
+    normas_after: 21
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 42
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Normas expandidas de 3 para 21"
+      - "COLREGs Rule 30 + Rule 21(e) + Rule 22 explícitas"
+      - "Annex I posicionamento vertical citado"
+      - "ABYC A-16 inclui luz de âncora"
+    destaques:
+      - "TL;DR: all-round 360° branca, Rule 30 do pôr ao nascer, hotline obrigatório, LED ~0,3-0,5 A × 10 h, ≥ 50 m duas luzes, tricolor mastro tem modo âncora, masthead 225° NÃO serve, strobo/piscante NÃO serve"
+      - "Danger aborda 9 cenários (comercial > 12 m DPC, retrofit hotline, ≥ 50 m proa + popa, sensor crepúsculo, multi-mode interlock, perícia abalroamento noturno, mastro carbono, banco pequeno, homologação)"
+      - "Glossário ~42 termos: all-round, Rule 30, anchor ball, anchor ball (dia), sternlight/masthead contraste, tricolor modo âncora, hotline, sensor crepúsculo, 2 mn/3 mn alcance, CIE xy, LED ABYC A-16, globo/Fresnel, IP-67/68"
+      - "Normas 21 itens (COLREGs 72 + Rule 30/21(e)/22/20/38 + Annex I, ISO 16180/19009, IEC 60945, ABYC A-16/E-11, USCG 33 CFR 183/84, NORMAM-201/211, CIE 15:2004)"
+  - n: "09/9"
+    title: "Iluminação de Emergência a Bordo"
+    path: "55_Iluminacao_e_Sinalizacao/Iluminação de Emergência a Bordo.md"
+    lines_before: 286
+    lines_after: ~585
+    delta_lines: +299
+    normas_before: 6
+    normas_after: 30
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 46
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Normas expandidas de 6 para 30 (maior da onda)"
+      - "SOLAS Cap II-1 Reg 41/42/43 + Cap II-2 Reg 13 explícitas"
+      - "ISO 15370 (LLL), ISO 17631, ISO 24409 citadas"
+      - "EN 1838 + EN 50172/IEC 62034 (auto-teste)"
+      - "ABNT NBR 10898:2013 + NBR 13434 + NBR IEC 60598-2-22 integradas"
+      - "NR-30 MTE + NORMAM-205 (passageiros) citadas"
+    destaques:
+      - "TL;DR: sistema 3 camadas (automática elétrica + fotoluminescente passiva + portátil), autonomia ≥ 3 h em SOLAS passageiros, circuito carga FORA da chave geral, teste autonomia anual obrigatório, LLL ISO 15370 em corredores, NiCd 3-5 anos / LiFePO4 8-10 anos / Pb-SLA 2-3 anos, LED HOTLINE direto ao banco, sinalização ABNT NBR 13434"
+      - "Danger aborda 9 cenários (passageiro SOLAS > 36 pax, integração com detecção incêndio, charter DPC NORMAM-205, retrofit recreio→comercial, auto-teste IEC 62034, AC > 12 V, gerador emergência ATS, perícia evacuação noturna, área bateria lítio)"
+      - "Glossário ~46 termos: EM luminária, escape lighting, LLL, anti-panic, standby lighting, CBS, self-contained, ATS, self-test IEC 62034, indicator LED, fotoluminescente/fosforescente/fluorescente, autonomia, NiCd/LiFePO4/SLA/VRLA, NR-30, NBR 10898/13434, MSC.81(70)"
+      - "Normas 30 itens (SOLAS Cap II-1 Reg 41/42/43, Cap II-2 Reg 13, IMO MSC/Circ.1032/MSC.81(70)/A.654(16)/A.752(18), IEC 60598-2-22/60945/61508/62034, EN 1838/50172, ISO 15370/17631/24409, USCG 46 CFR 111/112/133, ABYC A-16/E-11/A-4, NR-30, NBR 10898/IEC 60598-2-22/5410/13434)"
+
+metrics:
+  total_notes: 9
+  lines_added_total: ~2138
+  callouts_added: 18  # 9 tip + 9 danger
+  glossary_terms_total: 413  # avg ≈ 46
+  normas_expanded_total: 199  # avg ≈ 22.1
+  dec_14_notes: 5  # DSC, EPIRB, AIS, Radar + (plus from prior wave 4 more total across program)
+  dec_11_notes: 9
+  todos_resolved: 2  # "NORMAM-01 (edição a verificar)" em NAVEGAÇÃO e Luz de Âncora; "SOLAS (edição a verificar)" em Iluminação Emergência
+  average_glossary_per_note: 45.9
+  average_normas_per_note: 22.1
+
+new_decisions:
+  - id: "DEC-21"
+    title: "GMDSS documentado como ecossistema integrado"
+    statement: "VHF (SOLAS Cap IV) + DSC (ITU-R M.493/M.541) + EPIRB (Cospas-Sarsat) + AIS-SART (IEC 61097-14) + MOB-AIS e PLB devem ser entendidos como módulos de um sistema GMDSS único, não peças isoladas. Em notas de comunicação/emergência, citar as normas-raiz IMO SOLAS Cap IV + Cospas-Sarsat C/S T.001/T.018 + ITU-R M-séries simultaneamente."
+    rationale: "Padroniza a camada de normas regulatórias de emergência em todo o domínio 50 (comunicação) + notas de segurança em outras áreas."
+    scope: "Domínio 50 + equipamentos de salvatagem em outros domínios"
+
+  - id: "DEC-22"
+    title: "COLREGs como direito internacional vinculante"
+    statement: "Em todas as notas que tratem de luzes de navegação, radar, AIS, COLREGs 1972 + emendas deve ser citada com número de Regra específica (Rule 5, 6, 7, 20-31, 38, Annex I-IV), não apenas 'COLREGs'. NORMAM-01 é substituída por NORMAM-201 (comerciais) + NORMAM-211 (recreio) + NORMAM-205 (passageiros) + NORMAM-204 (SMM) conforme aplicável."
+    rationale: "Remove ambiguidade legal e fornece ancoragem jurídica precisa."
+    scope: "Todas as notas de navegação, iluminação e sinalização"
+
+  - id: "DEC-23"
+    title: "ABNT NBR 10898 + NBR 13434 + NBR IEC 60598-2-22 como conjunto de sinalização e emergência"
+    statement: "Notas de iluminação de emergência devem citar o conjunto ABNT NBR 10898 (sistema) + NBR 13434 (sinalização) + NBR IEC 60598-2-22 (luminárias), além de ISO 15370 (LLL), ISO 17631 (planos) e ISO 24409 (sinais)."
+    rationale: "Reconhece que sinalização e iluminação são arquitetura integrada, não peças separadas."
+    scope: "Domínio 55 (iluminação/sinalização) + emergência em outras áreas"
+
+  - id: "DEC-24"
+    title: "ISAF Offshore Special Regulations como referência voluntária excelente"
+    statement: "Em notas de segurança offshore (MOB, EPIRB, coletes, harness), citar ISAF OSR como referência técnica consolidada mesmo quando não aplicável juridicamente à embarcação — serve de baseline de boas práticas."
+    rationale: "Fornece padrão mundial consolidado em um só documento abrangente."
+    scope: "Segurança offshore / salvatagem"
+
+  - id: "DEC-25"
+    title: "Cospas-Sarsat C/S T.001 + T.018 + G.005 como trilogia PLB/EPIRB"
+    statement: "Toda menção a beacon 406 MHz (EPIRB, PLB) deve citar o conjunto C/S T.001 (primeira geração) + C/S T.018 (segunda geração, Return Link) + C/S G.005 (codificação), não apenas 'Cospas-Sarsat'."
+    rationale: "Distingue gerações e inclui protocolo de codificação."
+    scope: "EPIRB / PLB / MOB com Cospas-Sarsat"
+
+intra_wave_coherence_patterns:
+  - pattern: "Todas as notas de comunicação (VHF, DSC, EPIRB, AIS) citam SOLAS Cap IV + ITU-R M-séries + IEC 60945 consistentemente"
+  - pattern: "NMEA 0183 + NMEA 2000 + PGNs específicos referenciados em todas as notas eletrônicas aplicáveis"
+  - pattern: "NORMAM-204 (SMM) + NORMAM-201 (tráfego) + NORMAM-211 (recreio) citadas como trio consistente"
+  - pattern: "ABYC E-11 + ABNT NBR 5410 aparecem como par DC + AC em quase todas as notas"
+  - pattern: "Glossários médios em 45-47 termos (cumprindo feedback Q2 do usuário)"
+  - pattern: "TL;DR com 9 regras estruturadas em ordem: arquitetura → operação → instalação → normas → armadilhas"
+  - pattern: "Danger com 9 cenários mapeados para especialistas específicos (naval, RF, SOLAS, perícia)"
+  - pattern: "Radar/AIS: complementaridade explícita (Rule 5/7/8 COLREGs)"
+  - pattern: "MOB/EPIRB: distinção pessoal vs embarcação"
+  - pattern: "NAVEGAÇÃO/Luz Âncora: arco direcional vs 360° contrastados"
+  - pattern: "Iluminação Emergência: arquitetura 3 camadas (elétrica + fotoluminescente + portátil)"
+
+todos_resolved_this_wave:
+  - "NORMAM-01 (edição a verificar)" em NAVEGAÇÃO (BB, BE e Alcançado).md — resolvido para NORMAM-201/211 específicas
+  - "NORMAM-01 (edição a verificar)" em Luz de Âncora.md — resolvido para NORMAM-201/211
+  - "SOLAS (edição a verificar) Chapter II-2 / Reg. 42" em Iluminação Emergência — resolvido para SOLAS II-2 Reg 13 (means of escape) + II-1 Reg 41-43 (fonte emergência)
+  - "USCG 33 CFR (edição a verificar) 183" em NAVEGAÇÃO — resolvido para USCG 33 CFR Part 183 + 33 CFR Part 84 (Annex I Inland) + 46 CFR Part 111
+  - "NORMAM-01 (edição a verificar)" em Iluminação Emergência — resolvido para NORMAM-201/205/211
+
+commit_message_draft: |
+  Phase 6 Wave 3: DEC-11 recalibrated on 9 Tier S notes (Navegação + Emergência)
+
+  Notes (9): VHF, DSC, EPIRB, AIS, Radar, MOB, NAVEGAÇÃO (BB/BE/Alcançado),
+  Luz de Âncora, Iluminação de Emergência a Bordo.
+
+  Each note received:
+  - TL;DR tip callout with 9 decision rules (30-second read)
+  - Danger callout with 9 scenarios requiring specialist intervention
+  - Glossário rápido with 42-49 technical terms (target 40-47)
+  - Normas section expanded from 3-6 items to 17-30 items (avg 22.1)
+
+  New decisions documented:
+  - DEC-21: GMDSS as integrated ecosystem (VHF+DSC+EPIRB+AIS-SART+MOB/PLB)
+  - DEC-22: COLREGs Rules cited specifically (not generic); NORMAM-01 → NORMAM-201/211/205/204
+  - DEC-23: ABNT NBR 10898 + 13434 + IEC 60598-2-22 as signaling+emergency triad
+  - DEC-24: ISAF OSR as voluntary excellence baseline for offshore safety
+  - DEC-25: Cospas-Sarsat C/S T.001+T.018+G.005 as PLB/EPIRB trilogy
+
+  TODOs resolved (5):
+  - NORMAM-01 references in NAVEGAÇÃO, Luz de Âncora, Iluminação Emergência
+    → resolved to NORMAM-201/211/205 specifics
+  - SOLAS (edição a verificar) Ch II-2 Reg 42 in Iluminação Emergência
+    → resolved to SOLAS II-2 Reg 13 + II-1 Reg 41-43
+  - USCG 33 CFR (edição a verificar) in NAVEGAÇÃO
+    → resolved to 33 CFR Part 183 + 84 + 46 CFR Part 111
+
+  Metrics:
+  - 9 notes processed
+  - ~2138 lines added
+  - 18 callouts added (9 tip + 9 danger)
+  - 413 glossary terms (avg 45.9/note)
+  - 199 norms expanded (avg 22.1/note)
+  - 5 notes with DEC-14 (normas_citadas created from scratch: DSC, EPIRB, AIS, Radar + Iluminação Emergência frontmatter enhancement)
+  - Progress: 26/133 notes (19.5%)
+
+  Cadence (b): pausing for human review before Wave 4.
+---
