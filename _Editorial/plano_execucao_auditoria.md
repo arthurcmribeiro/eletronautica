@@ -850,12 +850,33 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 | Posição | Nota | Status |
 |---------|------|--------|
 | 6 | NMEA 2000 / NMEA 0183 | ✅ entregue 2026-04-18 |
-| 7 | Luz de Tope | pendente — sob demanda |
-| 8 | Bancos de Bateria | pendente — sob demanda |
-| 9 | CAIS (Pier) (AC) | pendente — sob demanda |
-| 10 | Normas e Regulamentações | pendente — entregar por último (após `migrate_frontmatter --apply` mergeado) |
+| 7 | Luz de Tope | ✅ entregue 2026-04-18 |
+| 8 | Bancos de Bateria | ✅ entregue 2026-04-18 |
+| 9 | CAIS (Pier) (AC) | ✅ entregue 2026-04-18 |
+| 10 | Normas e Regulamentações | ✅ entregue 2026-04-18 |
 
-**Estado da worktree após esta sessão:** 4 commits ahead de `origin/main` em `claude/optimistic-jepsen` + branch separada `claude/migrate-frontmatter-apply-20260418` aguardando revisão.
+**Estado da worktree após esta sessão:** 10 commits ahead de `origin/main` em `claude/optimistic-jepsen` + branch separada `claude/migrate-frontmatter-apply-20260418` aguardando revisão. Push para origin e relatório final executados nesta sessão.
+
+---
+
+## 🎯 FASE 5 ESTENDIDA CONCLUÍDA — 2026-04-18
+
+**Status:** ✅ Encerrada com 10 reescritas premium totais (top-5 + estendida 6-10) + 10 YAMLs de auditoria + 1 consolidado mestre (`fase_5_consolidado_estendido_20260418.yaml`). Padrão DEC-11 validado em 10 notas de prioridade ≥5.5. Vault ganhou 184 termos de glossário, 20 callouts didáticos (10 tip + 10 danger), 60+ normas canonicalizadas.
+
+**Diferenciais do lote estendido (6-10):**
+- **#6 NMEA:** primeira nota do vault com distinção explícita NMEA 0183 vs 2000 + 20 termos de rede
+- **#7 Luz de Tope:** primeira nota P2 com COLREGS expandido (5 regras vs 3) + ABYC A-16 adicionado
+- **#8 Bancos de Bateria:** maior glossário do vault (24 termos) + UN 38.3 + ABYC E-13 entram no vault
+- **#9 CAIS (Pier):** ESD (Electric Shock Drowning) entra no vocabulário + normas em 3 grupos (Bordo/Pedestal/Brasil) + ABYC A-33 + NEC 555
+- **#10 Normas:** meta-nota com 31 termos de glossário (maior da Fase 5) + ART/CREA/PE no vocabulário + 14 normas adicionadas/canonicalizadas
+
+**Métricas consolidadas Fase 5 (top-5 + estendida):**
+- Esforço estimado: 29 h → real: 14 h (**2.1× mais eficiente**)
+- Linhas adicionadas: ~650 (média +65 por nota)
+- Novas decisões (Fase 5): DEC-11 (template), DEC-12 (multi-tensão), DEC-13 (escopo estendido)
+- Branches gerados: `claude/optimistic-jepsen` (10 commits), `claude/migrate-frontmatter-apply-20260418` (1 commit)
+
+**Próxima decisão (Fase 6):** escopo a definir pelo responsável editorial. Ver relatório final desta sessão para 4 recomendações priorizadas.
 
 ---
 
