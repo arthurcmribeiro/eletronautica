@@ -880,6 +880,49 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 1 CONCLUÍDA — 2026-04-19
+
+**Escopo aprovado:** Aplicar padrão DEC-11 a **todas as 133 notas restantes** do vault, estratificadas em 4 tiers (S/A/B/C), com pausa de revisão humana entre ondas. Base: `fase_6_triagem_cobertura_total_20260418.yaml` (commit `4ec3e47`).
+
+**Onda 1 executada (8/8 notas Tier S, cluster topologia AC/DC):**
+
+| # | Nota | Antes → Depois | Destaques |
+|---|------|---------------|-----------|
+| 1 | Fase e Neutro | 264 → ~365 | L+N+PE vs L1+L2+PE, nunca criar neutro falso |
+| 2 | Aterramento | 373 → ~460 | SPOG único, bond N-PE segue fonte ativa, ESD |
+| 3 | Isolador Galv. / Trafo Isolamento | 404 → ~495 | Isolador ≠ trafo, fail-safe ABYC A-28, sistema derivado |
+| 4 | Proteção DR | 362 → ~460 | DR/RCD/GFCI/ELCI distinguidos, Classe A mínimo |
+| 5 | Disjuntores (DC) e (AC) | 357 → ~460 | Arco DC, AIC/Icn, MCB vs MCCB (frontmatter normas novo) |
+| 6 | Fusíveis DC | 297 → ~395 | ABYC 178 mm, Class T p/ lítio (frontmatter normas novo) |
+| 7 | DC vs AC | 278 → ~375 | Separação física, frequência ≠ tensão, custo do inversor |
+| 8 | Diagrama Unifilar | 337 → ~445 | Contrato técnico, retroengenharia, IEC 60617/81346 |
+
+**Métricas Onda 1:**
+- 8 notas, **~783 linhas adicionadas**
+- **16 callouts novos** (8 tip + 8 danger)
+- **172 termos de glossário**
+- **~57 normas expandidas/canonicalizadas** (ABYC E-series, A-28/A-31/A-33, IEC 60364-7-709, 60947-2, 60617, 81346, NEC 555, ISO 13297, 16315, UL 248/489/943)
+- Esforço: 12 h estimadas → 4,5 h reais (**2,67× mais eficiente**)
+
+**Padrões reforçados no cluster:**
+- L+N+PE vs L1+L2+PE vs split-phase 120/240 V (Fase e Neutro, Aterramento, DC vs AC)
+- Sistema derivado (Isolador/Trafo, Aterramento, Proteção DR)
+- SPOG único (Aterramento, Isolador, Diagrama Unifilar)
+- ESD (Electric Shock Drowning) (Aterramento, Isolador, Proteção DR)
+- Física do arco DC (Disjuntores, Fusíveis, DC vs AC)
+- Vocabulário AIC/Icn/kA (Disjuntores e Fusíveis)
+
+**Commit:** `a120b6c` em `claude/optimistic-jepsen` (pushado). YAML: `fase_6_onda_01_tier_s_topologia_ac_dc_20260419.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas
+- Concluído: **8 / 133** (6%)
+- Próxima: **Onda 2 — Tier S baterias/geração (9 notas)** após aprovação humana
+
+**Cadência (b) — PAUSA OBRIGATÓRIA:** Onda 1 entregue. Antes de Onda 2, validar com responsável editorial: (1) template adaptado funciona em notas medianas de 264-404 linhas? (2) glossário de 20-25 termos é o tamanho certo para Tier S não-fundacional? (3) danger de 8-9 cenários alinhado com apetite? (4) TL;DR de 8-9 regras — manter ou reduzir para 5-6 em notas menos críticas?
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
