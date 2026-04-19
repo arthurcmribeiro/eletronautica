@@ -1,0 +1,295 @@
+---
+# Fase 6 - Onda 2 - Tier S Baterias e Geracao
+# 9 notas Tier S do cluster baterias/geracao/conversao DC
+# Data: 2026-04-19
+# Autor: Claude Opus 4.7 + responsavel editorial
+fase: 6
+onda: 2
+tema: "Tier S -- Baterias e Geracao (baterias, BMS, alternador, gerador, carregador, monitor, inversor, solar)"
+data: "2026-04-19"
+status: "concluida"
+template_aplicado: "DEC-11 full recalibrado (glossario expandido 40-47 termos + normas maximizadas)"
+pausa_revisao: "humana antes de Onda 3 (cadencia b)"
+
+contexto_recalibragem:
+  feedback_usuario_pos_onda_1:
+    - "Q1 glossario Onda 1 (~21 termos) estava ligeiramente menor que Fase 5 (~23)"
+    - "Q2/Q3 manter danger 8-9 cenarios e TL;DR 8-9 regras"
+    - "Q4 'todas normas cabiveis' -- estamos construindo o vademecum da eletrica nautica"
+  ajuste_onda_2:
+    - "Glossario recalibrado para 40-47 termos (cresceu ~2x vs Onda 1)"
+    - "Normas maximizadas -- nao filtrar, citar todas as aplicaveis a cada nota"
+    - "Manter TL;DR 9 regras e danger 9 cenarios como teto"
+    - "Resolver TODOs pendentes (ABYC A-31 em Carregador e Alternador)"
+
+caminho_b:
+  origem: "Fase 5 estendida finalizada + Onda 1 validada"
+  decisao_previa: "Caminho B -- triagem S/A/B/C + template adaptado por tier (recalibrado em Onda 2)"
+  estrategia_commit: "direct commits em claude/optimistic-jepsen (cadencia c)"
+
+notas_processadas:
+  "09":
+    caminho: "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+    tier: "S"
+    prioridade_triagem: "maxima (fundamento do cluster baterias)"
+    linhas_antes: 468
+    linhas_depois: 564
+    delta_linhas: 96
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 2
+    normas_expandidas_para: 13
+    callouts_novos: 2
+    termos_glossario: 45
+    dec_14_aplicado: false
+    destaque: "Chumbo FLA/AGM/GEL vs litio (LiFePO4/NMC/LCO/LMO/LTO/NCA); bancos separados; automotiva so partida; quimica define carregador"
+
+  "10":
+    caminho: "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+    tier: "S"
+    prioridade_triagem: "maxima (obrigatorio em litio)"
+    linhas_antes: 270
+    linhas_depois: 367
+    delta_linhas: 97
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 3
+    normas_expandidas_para: 16
+    callouts_novos: 2
+    termos_glossario: 40
+    dec_14_aplicado: false
+    destaque: "BMS monitora celula nao banco; integrado != projetado; corte abrupto; balanceamento passivo topo; CAN 500kbps; disconnect abrupto destroi alternador"
+
+  "11":
+    caminho: "20_Baterias_e_Armazenamento/Lítio LiFePO4 — Instalação e Cuidados Específicos.md"
+    tier: "S"
+    prioridade_triagem: "maxima (quimica dominante em novos projetos)"
+    linhas_antes: 240
+    linhas_depois: 339
+    delta_linhas: 99
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 15
+    callouts_novos: 2
+    termos_glossario: 42
+    dec_14_aplicado: true
+    destaque: "Nao e 'AGM melhorada'; nunca 1:1 em retrofit; BMS requisito; sem carga < 0 C; alternador exige regulador externo; MPPT perfil especifico"
+
+  "12":
+    caminho: "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+    tier: "S"
+    prioridade_triagem: "alta (fonte primaria de recarga em marina)"
+    linhas_antes: 362
+    linhas_depois: 449
+    delta_linhas: 87
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 4
+    normas_expandidas_para: 14
+    callouts_novos: 2
+    termos_glossario: 40
+    dec_14_aplicado: false
+    todo_resolvido: "ABYC A-31 citada como (2024) Battery Chargers and Inverters"
+    destaque: "Bulk/absorption/float; perfil por quimica; ignition protection; galvanic isolator ABYC A-28; transfer switch em carregador combi"
+
+  "13":
+    caminho: "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+    tier: "S"
+    prioridade_triagem: "alta (fonte de verdade para SoC real)"
+    linhas_antes: 270
+    linhas_depois: 356
+    delta_linhas: 86
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 2
+    normas_expandidas_para: 11
+    callouts_novos: 2
+    termos_glossario: 40
+    dec_14_aplicado: false
+    destaque: "Voltimetro != monitor; shunt no negativo; capacidade REAL nao nominal; sincronizacao rotina; VE.Direct/Can; PGN 127506/127508; Victron BMV-712/SmartShunt"
+
+  "14":
+    caminho: "30_Energia_e_Conversao/Alternador (DC).md"
+    tier: "S"
+    prioridade_triagem: "alta (fonte de recarga em navegacao)"
+    linhas_antes: 363
+    linhas_depois: 456
+    delta_linhas: 93
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 12
+    callouts_novos: 2
+    termos_glossario: 45
+    dec_14_aplicado: true
+    todo_resolvido: "ABYC A-31 citada como (2024) Battery Chargers and Inverters"
+    destaque: "Sistema nao peca; marinizacao (ignition protection SAE J1171); nunca desconectar bateria com motor ligado; litio exige regulador externo + sonda NTC; load dump ISO 16750-2; Balmar MC-614/Wakespeed WS500"
+
+  "15":
+    caminho: "30_Energia_e_Conversao/Gerador (DC).md"
+    tier: "S"
+    prioridade_triagem: "alta (fonte arquitetural + eletropropulsao REx)"
+    linhas_antes: 201
+    linhas_depois: 295
+    delta_linhas: 94
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 12
+    callouts_novos: 2
+    termos_glossario: 40
+    dec_14_aplicado: true
+    destaque: "Nao e sinonimo de alternador; so faz sentido barramento DC central; REx em eletropropulsao; controlador energia (Cerbo GX/EmpirBus/CZone); thresholds, paralelismo, prioridade de fontes"
+
+  "16":
+    caminho: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+    tier: "S"
+    prioridade_triagem: "alta (interface DC->AC + transfer switch)"
+    linhas_antes: 382
+    linhas_depois: 478
+    delta_linhas: 96
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 2
+    normas_expandidas_para: 15
+    callouts_novos: 2
+    termos_glossario: 42
+    dec_14_aplicado: false
+    destaque: "Senoidal pura vs modificada; eficiencia real 88-92%; corrente DC altissima (2kW/12V=180A); inversor/carregador combi; transfer switch + neutro comutado; AC coupling com solar"
+
+  "17":
+    caminho: "30_Energia_e_Conversao/Placa Solar (DC).md"
+    tier: "S"
+    prioridade_triagem: "alta (fonte renovavel mais racional a bordo)"
+    linhas_antes: 229
+    linhas_depois: 343
+    delta_linhas: 114
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 17
+    callouts_novos: 2
+    termos_glossario: 47
+    dec_14_aplicado: true
+    destaque: "Watt nominal != producao diaria (HSP 3-4 h); MPPT padrao; Voc em -10 C; sombreamento parcial derruba string; modulo flexivel nao e superior; IEC 62109/61215/61730; NBR 16690:2019"
+
+metricas_onda_2:
+  notas_processadas: 9
+  total_linhas_antes: 2785
+  total_linhas_depois: 3647
+  total_linhas_adicionadas: 862
+  total_callouts_adicionados: 18  # 9 tip + 9 danger
+  total_termos_glossario: 381
+  total_normas_expandidas: 112  # deltas somados
+  normas_media_por_nota_antes: 1.4
+  normas_media_por_nota_depois: 13.9
+  glossario_medio_por_nota: 42
+  dec_14_aplicado_em: 4  # LiFePO4, Alternador, Gerador, Placa Solar
+  esforco_estimado_h: "11-13"
+  esforco_real_h: 6.5
+  ratio_eficiencia: "1.85x mais rapido que estimativa"
+
+decisoes_aplicadas:
+  DEC_11_full_recalibrado:
+    descricao: "Template premium com glossario expandido para 40-47 termos (vs 20-23 em Onda 1)"
+    rationale: "Usuario pediu 'vademecum da eletrica nautica' -- glossario mais denso serve melhor ao proposito"
+  DEC_14_normas_criadas_do_zero:
+    descricao: "4 notas sem normas_citadas no frontmatter (LiFePO4, Alternador, Gerador, Placa Solar) tiveram conjunto completo adicionado"
+    impacto: "100% das notas Tier S processadas ate aqui tem normas_citadas canonicalizadas"
+  DEC_15_ESD_continuado:
+    descricao: "ESD mencionado em Carregador, Inversora e Placa Solar como risco de fuga AC"
+  DEC_16_ABYC_families_cristalizadas_expandido:
+    descricao: "E-10, E-11, E-13, A-28, A-31, H-25 cruzadas entre todas as 9 notas"
+  DEC_17_IEC_normas_tecnicas_elevadas:
+    descricao: "IEC 62040-1 (UPS), 62109-1/-2 (PV), 62619:2022, 62620:2014, 63056:2020 (BESS), 61215/61730 (modulos PV), 62548 (arranjos PV), 60051 (analogicos), 61010-1 (medicao) citadas onde aplicaveis"
+  DEC_18_UL_padrao_marinho:
+    descricao: "UL 458 (inversores marinhos), UL 1236 (carregadores motor), UL 1500 (ignition protection), UL 1741 (inversores), UL 1703 (PV modules), UL 1973 (estacionarias), UL 9540A (thermal runaway), UL 2580 (EV) consistentemente citadas"
+  DEC_19_load_dump_conceito_tecnico:
+    descricao: "ISO 16750-2 e ISO 7637-2 introduzidas como base tecnica de load dump em BMS/Alternador/Inversor"
+  DEC_20_abyc_a31_todo_resolvido:
+    descricao: "TODOs antigos sobre ABYC A-31 ('consta como Lightning Protection -- referencia removida ate confirmacao') resolvidos -- A-31 citada como (2024) Battery Chargers and Inverters"
+    notas_afetadas: ["Carregador de Bateria (AC To DC)", "Alternador (DC)"]
+
+coerencia_intra_onda:
+  - "Quimica do banco define carregador e perfil: Tipos de Bateria, BMS, LiFePO4, Carregador, Monitor, Alternador usam o mesmo vocabulario (bulk/absorcao/float/equalizacao)"
+  - "BMS como requisito em litio: BMS, LiFePO4, Alternador, Inversora, Monitor alinham a mensagem"
+  - "Fusivel 178 mm do banco: Tipos de Bateria, BMS, LiFePO4, Carregador, Alternador, Inversora, Placa Solar repetem a regra ABYC E-11"
+  - "Corrente DC altissima: Tipos de Bateria, Alternador, Inversora reforcam 180A em 12V e cabo dimensionado"
+  - "Disconnect abrupto do BMS: BMS, LiFePO4, Alternador, Inversora alinham o risco de load dump"
+  - "MPPT como padrao: Placa Solar, Monitor, Carregador convergem na narrativa"
+  - "AC coupling: Inversora e Placa Solar tratam o conceito"
+  - "VE.Direct/VE.Can/NMEA 2000: Monitor, Carregador, Alternador, Inversora, Placa Solar usam PGNs consistentes"
+  - "Ignition protection (ISO 8846 / SAE J1171 / UL 1500): Tipos de Bateria, Carregador, Alternador, Gerador, Inversora, Placa Solar citam"
+  - "Controlador de energia (Cerbo GX/EmpirBus/CZone): Gerador, Inversora, Placa Solar, Monitor fecham o ciclo"
+
+riscos_residuais_onda_2:
+  - "ABYC E-30 (eletropropulsao) ainda em draft -- citada com ressalva"
+  - "NBR 16690:2019 foco em FV residencial; adequacao a nautico nao e obvia"
+  - "IEC 63056:2020 recente -- pouco disseminada no mercado"
+  - "Visuais SVG ainda pendentes (onda-pura-vs-onda-quadrada, solar-mppt-banco-cargas)"
+  - "NORMAM-211 vs NORMAM-01 nao desambiguadas caso a caso"
+
+proximas_etapas:
+  aguardar_revisao_humana:
+    motivo: "Cadencia b acordada -- pausa apos Onda 2 para validar recalibragem"
+    pontos_para_usuario_validar:
+      - "Glossario de 40-47 termos esta muito denso ou adequado para vademecum?"
+      - "Normas 'maximas' (11-17 por nota) estao gerando boa densidade ou redundancia?"
+      - "Presenca de IEC 63056:2020 e UL 9540A esta adequada para audiencia brasileira?"
+      - "Load dump (ISO 16750-2) como conceito transversal esta funcionando?"
+      - "Proxima onda (Onda 3) deve manter mesmo padrao ou ajustar?"
+    caso_aprovado: "Prosseguir Onda 3 (9 notas Tier S navegacao/emergencia)"
+    caso_ajustar: "Aplicar feedback antes de Onda 3"
+
+  se_prosseguir_onda_3:
+    escopo_estimado: "9 notas Tier S do cluster navegacao/emergencia"
+    notas_candidatas:
+      - "50_Equipamentos_de_Bordo/VHF.md (ou equivalente em 60)"
+      - "60_Navegacao_e_Eletronica/GPS Chartplotter.md"
+      - "60_Navegacao_e_Eletronica/Radar.md"
+      - "60_Navegacao_e_Eletronica/AIS.md"
+      - "60_Navegacao_e_Eletronica/Piloto Automatico.md"
+      - "60_Navegacao_e_Eletronica/EPIRB.md"
+      - "60_Navegacao_e_Eletronica/PLB.md"
+      - "80_Seguranca_e_Emergencia/Iluminacao de Emergencia.md"
+      - "80_Seguranca_e_Emergencia/Bomba de Porao.md"
+    esforco_estimado_h: "10-12 (ritmo Onda 2)"
+
+branches_e_commits:
+  branch_ativa: "claude/optimistic-jepsen"
+  commit_onda_2: "a criar -- mensagem abaixo"
+  mensagem_commit: |
+    Fase 6 Onda 2: DEC-11 recalibrado em 9 notas Tier S baterias/geracao
+
+    Aplica template premium expandido (TL;DR + danger + glossario 40-47
+    termos + normas maximizadas) no cluster baterias/geracao/conversao:
+
+    - Tipos de Bateria (468->564 linhas)
+    - BMS (270->367)
+    - Litio LiFePO4 (240->339) [DEC-14 normas criadas]
+    - Carregador AC to DC (362->449) [ABYC A-31 TODO resolvido]
+    - Monitor BMV Shunt (270->356)
+    - Alternador DC (363->456) [DEC-14 + ABYC A-31 TODO resolvido]
+    - Gerador DC (201->295) [DEC-14]
+    - Inversora DC to AC (382->478)
+    - Placa Solar DC (229->343) [DEC-14]
+
+    Metricas:
+    - 9 notas, 862 linhas adicionadas
+    - 18 callouts novos (9 tip + 9 danger)
+    - 381 termos de glossario (media 42/nota vs ~21 em Onda 1)
+    - 112 normas expandidas/canonicalizadas (media 13.9/nota)
+    - 4 notas com normas_citadas criadas do zero (DEC-14)
+
+    Padroes reforcados: quimica define carregador, BMS requisito em litio,
+    fusivel 178mm ABYC E-11, disconnect abrupto/load dump ISO 16750-2,
+    ignition protection, MPPT padrao, AC coupling, IEC 62619/62620/63056,
+    UL 1973/9540A, NBR 16690:2019.
+
+    Recalibragem pos-Onda 1: glossario ~2x maior, normas maximizadas
+    (vademecum da eletrica nautica).
+
+    Proxima etapa: pausa para revisao humana antes de Onda 3.
+
+    Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>

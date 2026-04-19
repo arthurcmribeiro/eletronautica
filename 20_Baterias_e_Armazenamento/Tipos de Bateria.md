@@ -3,17 +3,33 @@ title: "Tipos de Bateria"
 note_type: "comparison"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "TIPOS DE BATERIA 17419734f7fb83e38ee80148dae5ba3c.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "09"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
 normas_citadas:
-  - "ABYC E-10 (2023)"
-  - "ISO 13297:2020"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC and DC installations"
+  - "ISO 16315:2016 — Small craft — Electric propulsion system"
+  - "ISO 8846:2022 — Small craft — Electrical devices — Protection against ignition of surrounding flammable gases"
+  - "UL 1973:2022 — Batteries for use in stationary, vehicle auxiliary, and light electric rail applications"
+  - "UL 9540A — Test method for evaluating thermal runaway fire propagation in battery energy storage systems"
+  - "IEC 62619:2022 — Secondary cells and batteries — Safety requirements for lithium batteries"
+  - "IEC 62620:2014 — Secondary lithium cells and batteries for use in industrial applications"
+  - "SAE J1495 — Marine Cranking Amperes test"
+  - "NBR 5410:2004 — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.iso.org/standard/56180.html"
+  - "https://www.iec.ch/"
+  - "https://www.ul.com/"
 aliases:
   - "TIPOS DE BATERIA"
 seo_title: "Tipos de Bateria"
@@ -39,6 +55,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Tipos de bateria devem ser comparados por química, função, regime de carga, profundidade de descarga, manutenção e integração com o restante do sistema. Escolher a bateria só por preço ou Ah de catálogo leva a erro de projeto, baixa autonomia e envelhecimento prematuro.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Partida e serviço em bancos separados — sempre.** Mesmo em lancha pequena, misturar partida e ciclo profundo no mesmo banco é o erro elétrico mais comum e mais caro do mercado brasileiro.
+> 2. **Bateria automotiva só para partida, nunca para serviço.** Placas finas otimizadas para corrente de pico destroem-se em 6-18 meses sob descarga cíclica.
+> 3. **A química define o carregador.** FLA ≠ AGM ≠ GEL ≠ LiFePO4. Tensão de absorção errada em 0,3-0,6 V causa dano cumulativo em centenas de ciclos — a bateria "some" antes do prazo e o proprietário acha que veio defeituosa.
+> 4. **LiFePO4 sem BMS não é instalação — é risco estrutural.** ABYC E-13 e IEC 62619 tratam BMS como requisito, não acessório. Bateria lítio "drop-in" barata sem BMS certificado é economia que compra sinistro.
+> 5. **Dimensione pela capacidade útil, não pela nominal.** AGM 100 Ah = 50 Ah úteis (50 % DoD). LiFePO4 100 Ah = 80 Ah úteis (80 % DoD). Projetar pelo número da etiqueta leva a subdimensionamento sistemático.
+> 6. **Paralelo só com mesma química, marca, lote, idade e SoC no momento da conexão.** Diferente disso é circulação permanente de corrente, desequilíbrio e desgaste acelerado da bateria mais fraca.
+> 7. **Série dobra tensão (12 V + 12 V = 24 V); paralelo dobra Ah, não tensão.** Combinar série-paralelo exige cuidado redobrado com equalização inicial e seleção de bateria.
+> 8. **Fusível de banco ≤ 178 mm (7") do terminal positivo.** ABYC E-11 é explícita; a proteção precisa atuar antes do cabo derreter em curto franco com banco lítio ou AGM grande (Isc pode ultrapassar 10 kA).
+> 9. **Ventilação é obrigatória para FLA** (H₂ durante carga é explosivo) e recomendada para AGM/GEL em compartimento fechado. Proximidade a motor, escapamento e cargas irradiantes degrada eletrólito em qualquer tecnologia.
+
+> [!danger] Quando chamar um especialista
+> - **Retrofit chumbo → lítio em embarcação existente.** Nunca trocar "1 por 1" — exige reavaliação do alternador (com regulador externo programável), do carregador (perfil LiFePO4), do BMS, do fusível e bitola de cabo (Isc do lítio é ordens de grandeza maior), da ventilação, da topologia de aterramento e da coordenação com inversor/shore. Projeto assinado com ART/CREA.
+> - **Incêndio ou "thermal event" em banco** (LiFePO4 sem BMS, AGM inchada com liberação de ácido, FLA com explosão por H₂). Preservar cena, acionar seguradora, laudo pericial com ART/CREA, análise de causa raiz (química, carregador, BMS, cabeamento). Não recolocar bateria sem diagnóstico.
+> - **Projeto de eletropropulsão** (48 V, 96 V, 400 V, bancos > 10 kWh). ISO 16315:2016, ABYC E-30 (draft) e IEC 62619/62620 entram como base. Exige responsável técnico, não balconista de loja.
+> - **Sinistro com perda total ou parcial de banco** em marina, trânsito ou guarda. Laudo com química compatível com ISO 13297, ABYC E-10/E-13 e documentação de data de instalação, SoH e histórico de ciclos.
+> - **Conversão de topologia de tensão** (12 V → 24 V, 24 V → 48 V). Recalcular banco, alternador, carregador, inversor, todo o cabeamento, proteção, bitolas e aterramento. Não é upgrade incremental — é reprojeto.
+> - **Paralelismo de bancos heterogêneos** (idades, marcas, químicas ou tamanhos diferentes). Equalização fica impossível, a bateria mais fraca puxa a mais forte permanentemente, desgaste acelerado e risco térmico. Refazer o banco do zero.
+> - **Bateria automotiva com mais de 1 ano em uso como serviço** com histórico de descargas profundas repetidas. Sulfatação irreversível, risco de falha súbita em momento crítico (ancoragem, motor principal, bomba de porão).
+> - **Importação de embarcação ou retrofit de AGM europeia 12 V em sistema projetado para 24 V americano.** Reverificar toda a arquitetura de energia antes do primeiro uso. Documentação técnica do estaleiro original é essencial.
+> - **Bateria comprada com mais de 12 meses de estoque sem rotação ou manutenção de tensão.** Capacidade comprometida, garantia normalmente invalidada, ciclos úteis reduzidos mesmo antes da instalação.
 
 ## O que é
 
@@ -351,6 +389,54 @@ Banco "desaparece" — tensão sobe ao remover carga mas não fornece corrente. 
 - **Controlador MPPT solar:** perfil configurável para AGM, GEL ou LiFePO4.
 - **Sistema de distribuição DC:** chave seletora, barramento, disjuntores — todos dimensionados para a corrente máxima possível do banco.
 
+## Glossário rápido
+
+- **Bateria** — dispositivo eletroquímico que converte energia química em elétrica (descarga) e vice-versa (carga). "Bateria" no uso técnico é o conjunto; "célula" é a unidade.
+- **Célula** — unidade eletroquímica básica. Chumbo-ácido: 2,0 V nominais (6 células em série = 12 V). LiFePO4: 3,2 V nominais (4 células em série = 12,8 V).
+- **FLA (Flooded Lead-Acid)** — chumbo-ácido inundada, eletrólito líquido, placas imersas. Exige ventilação (H₂), reposição de água, cuidado com derramamento.
+- **AGM (Absorbed Glass Mat)** — chumbo-ácido selada, eletrólito absorvido em mantas de fibra de vidro. Padrão atual no náutico brasileiro.
+- **GEL** — chumbo-ácido selada, eletrólito em forma de gel de sílica. Tensão máxima de absorção menor que AGM (~14,1 V).
+- **VRLA (Valve-Regulated Lead-Acid)** — família de chumbo selado que inclui AGM e GEL. Válvula de alívio para gases sob pressão.
+- **LiFePO4 (Lítio Ferro-Fosfato)** — química de lítio mais estável termicamente; padrão náutico atual. 3,2 V/célula nominal.
+- **NMC (Nickel Manganese Cobalt)** — química lítio de maior densidade de energia, usada em automotivo; menos estável termicamente que LiFePO4, uso naval restrito.
+- **LCO, LMO, LTO, NCA** — outras químicas lítio (cobalto, manganês, titanato, níquel-cobalto-alumínio); raras em náutica recreativa.
+- **Banco de partida** — conjunto dedicado a fornecer corrente de pico alta (CCA/MCA) para o motor de arranque.
+- **Banco de serviço (house bank)** — conjunto dedicado a cargas prolongadas (luzes, bombas, eletrônicos). Exige ciclo profundo.
+- **Banco de emergência** — terceiro conjunto isolado, garante partida do motor mesmo com bancos principais descarregados.
+- **Buffer** — função de "pulmão" do banco em sistemas com múltiplas fontes (shore, solar, gerador, alternador).
+- **Ah (ampère-hora)** — capacidade nominal de carga. Depende do regime de ensaio (C/20 padrão chumbo, C/5 padrão lítio).
+- **Wh (watt-hora)** — energia armazenada: Ah × tensão nominal. Métrica mais comparável entre tecnologias diferentes.
+- **C-rate** — taxa de carga/descarga em múltiplos da capacidade: 1C em 100 Ah = 100 A. Chumbo prefere C/5–C/10; LiFePO4 tolera 0,5C-1C em carga.
+- **DoD (Depth of Discharge)** — percentual descarregado em relação à nominal. AGM 50 %, GEL 50-60 %, LiFePO4 80-90 % como regra de projeto.
+- **SoC (State of Charge)** — percentual de carga atual. Medido por tensão em repouso (chumbo) ou integração de corrente com shunt (todas).
+- **SoH (State of Health)** — percentual de capacidade remanescente em relação à nova. Cai com ciclos e tempo.
+- **Ciclo** — uma descarga parcial ou total seguida de recarga. Ciclos a 50 % DoD contam diferente de ciclos a 100 % DoD.
+- **CCA (Cold Cranking Amperes)** — corrente entregue a -18 °C por 30 s mantendo ≥ 7,2 V em bateria 12 V. Métrica de partida.
+- **MCA (Marine Cranking Amperes)** — equivalente a 0 °C; número maior que CCA para a mesma bateria (SAE J1495).
+- **RC (Reserve Capacity)** — minutos que a bateria sustenta 25 A descendo a 10,5 V a 27 °C. Métrica de autonomia.
+- **Tensão nominal** — valor de referência (12 V, 24 V, 48 V). Não é tensão real medida — é classe do banco.
+- **Tensão de absorção** — tensão alta de recarga (14,4-14,7 V para AGM 12 V; 14,6 V para LiFePO4). Carregador mantém até corrente cair abaixo de limiar.
+- **Tensão de flutuação (float)** — tensão baixa de manutenção (13,2-13,8 V chumbo; 13,6 V ou desligada em LiFePO4). Carregador mantém indefinidamente.
+- **Tensão de equalização** — tensão extra-alta (15,5-16 V) aplicada periodicamente em FLA para dessulfatar. **Nunca aplicar em AGM, GEL ou lítio.**
+- **Bulk / Absorção / Flutuação** — três estágios do perfil clássico de carga: corrente constante, tensão constante, manutenção.
+- **Sulfatação** — formação de cristais de sulfato de chumbo nas placas por descarga profunda prolongada. Irreversível após horas.
+- **Gassing** — liberação de H₂ e O₂ durante carga. Intenso em FLA; controlado em VRLA. **Hidrogênio é explosivo em 4-75 % v/v no ar.**
+- **Thermal runaway** — reação em cadeia exotérmica. Em LiFePO4 é extremamente improvável sem dano mecânico; em NMC/LCO é o risco central. UL 9540A avalia propagação.
+- **BMS (Battery Management System)** — sistema eletrônico obrigatório em lítio. Mede tensão/temperatura de célula, corrente do banco, estado de carga; protege contra sobrecarga, sobredescarga, curto, sobreaquecimento; balanceia células.
+- **Balanceamento passivo / ativo** — passivo dissipa energia da célula mais alta em resistor; ativo transfere carga entre células. Ativo é mais eficiente mas mais complexo.
+- **Shunt** — resistor calibrado de baixo valor na linha negativa; o monitor lê a queda de tensão e calcula corrente real (bidirecional).
+- **Monitor de bateria** — BMV/SmartShunt/Simarine PICO; integra corrente no tempo para SoC real (coulomb counting).
+- **Paralelismo** — ligação +/+ e -/- entre baterias; dobra Ah, mantém tensão. Exige química, marca, idade e SoC iguais.
+- **Série** — ligação + de uma ao - da outra; dobra tensão, mantém Ah. Banco de 24 V típico é 2 × 12 V em série.
+- **Fusível de banco** — proteção contra curto-circuito na saída do positivo. ANL, MRBF, Class T. Máximo **178 mm (7")** do terminal positivo segundo ABYC E-11.
+- **AIC (Ampere Interrupting Capacity)** — capacidade do fusível de interromper a corrente máxima esperada. Critico em lítio — Isc pode ultrapassar 10 kA.
+- **Isc (corrente de curto-circuito)** — corrente máxima que o banco entrega em curto franco. Varia por química e configuração; declarada em datasheet do fabricante.
+- **NMEA 2000 / CAN bus** — redes de comunicação para BMS moderno reportar SoC, SoH, alarmes e comandar carregador/alternador.
+- **Compartimento ventilado** — requisito ABYC/ISO para FLA; entrada baixa + saída alta com saída ao exterior; cálculo de vazão por Ah e regime de carga.
+- **Fixação mecânica** — bandeja, cinta, suporte rígido contra vibração. Bateria solta quebra terminal, fura invólucro, causa curto.
+- **Data code / data de fabricação** — estampagem ou etiqueta do fabricante. Rotação FIFO em revenda; bateria > 12 meses de estoque perde capacidade e garantia.
+- **ESD (Electric Shock Drowning)** — morte por corrente AC dispersa em água doce; relevante no banco porque carregador defeituoso alimentando banco defeituoso pode gerar vazamento entre DC e AC em sistemas com bond único.
+
 ## Brasil x referências internacionais
 
 🌎 **Brasil x referências internacionais**
@@ -379,10 +465,21 @@ Adotar os princípios funcionais da ABYC — separação de bancos, fixação, v
 
 | Referência | O que orienta | Relevância prática | Cuidado no Brasil |
 | --- | --- | --- | --- |
-| ABYC E-10 (2023) | Sistemas de bateria em embarcações | Separação de bancos, ventilação, fixação, proteção | Contexto americano — adaptar para realidade local |
-| ISO 13297:2020 | Pequenas embarcações — instalações AC e DC | Proteção, bitolamento, instalação | Sucede a ISO 10133 (retirada); referência viva aplicável |
-| Victron Energy (documentação técnica) | Parâmetros de produto e integração | Muito bem documentado — usar como referência prática | Produto premium — adaptar para outros fabricantes |
-| Datasheets do fabricante | Perfis específicos de carga e descarga | Essencial para configurar carregador e alternador | Sempre consultar antes de qualquer instalação |
+| ABYC E-10 (2023) | Storage batteries em embarcações | Separação de bancos (start/house/emergency), ventilação, fixação, proteção, compartimento | Contexto americano — princípios funcionais aplicáveis independentemente de certificação formal |
+| ABYC E-11 (2023) | AC and DC Electrical Systems on Boats | Regra do fusível ≤ 178 mm do terminal positivo; proteção de cabo; bitolagem; cores | Base técnica de referência para laudo em retrofit e peritagem |
+| ABYC E-13 (2023) | Lithium Ion Batteries | Requisito de BMS certificado, ensaios, instalação, manuseio em incêndio | Vital em projetos LiFePO4; tratar BMS como sistema de segurança, não acessório |
+| ISO 13297:2020 | Pequenas embarcações — AC e DC | Proteção, bitolamento, instalação; sucede a ISO 10133 (retirada) | Referência viva aplicável a barcos < 24 m |
+| ISO 16315:2016 | Electric propulsion system | Eletropropulsão e bancos de alta tensão/energia | Base para bancos > 10 kWh e sistemas 48/96/400 V |
+| ISO 8846:2022 | Proteção contra ignição de gases inflamáveis | Ignition protection em equipamentos no compartimento do motor/baterias | Relevante em FLA perto de motor a gasolina |
+| UL 1973:2022 | Baterias estacionárias/auxiliares/light rail | Teste de segurança de célula/pack para instalação fixa | Usado por fabricantes premium (Victron, Battle Born) como evidência |
+| UL 9540A | Thermal runaway fire propagation | Avaliação de propagação térmica em sistemas de armazenamento de energia | Relevante em projetos com múltiplos packs lítio |
+| IEC 62619:2022 | Safety requirements for lithium batteries | Segurança de células e packs secundários lítio de uso industrial | Amplamente referenciada em datasheets de células importadas |
+| IEC 62620:2014 | Secondary lithium cells for industrial applications | Desempenho e durabilidade | Cruza com 62619 para packs náuticos |
+| SAE J1495 | Marine Cranking Amperes test | Definição padrão de MCA | Comparação correta entre baterias de partida marítimas |
+| NBR 5410:2004 | Instalações elétricas de baixa tensão | Base brasileira para sistemas AC a bordo após o shore inlet | Não cobre DC náutico com profundidade — usar ABYC/ISO |
+| NORMAM-211/DPC | Embarcações de esporte e recreio (Brasil) | Exigências administrativas e de segurança da autoridade marítima brasileira | Aplicável a todas as embarcações de recreio; não substitui norma técnica |
+| Victron Energy (documentação técnica) | Parâmetros de produto e integração | Muito bem documentado — usar como referência prática de perfil de carga | Produto premium — adaptar parâmetros para outros fabricantes |
+| Datasheets do fabricante | Perfis específicos de carga/descarga, BMS, ciclos | Essencial para configurar carregador, alternador, MPPT, inversor | Sempre consultar antes de qualquer instalação; registrar na pasta técnica da embarcação |
 
 ## Destaques para ensino
 

@@ -3,18 +3,36 @@ title: "BMS — Battery Management System"
 note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "BMS — BATTERY MANAGEMENT SYSTEM 33a19734f7fb81519181fa235e718c78.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "10"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "IEC 62619 (edição a verificar)"
-  - "NMEA 2000"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "IEC 62619:2022 — Safety requirements for secondary lithium cells and batteries"
+  - "IEC 62620:2014 — Secondary lithium cells and batteries for industrial applications"
+  - "IEC 63056:2020 — Safety requirements for secondary lithium batteries in electrical energy storage systems"
+  - "UL 1973:2022 — Batteries for use in stationary, vehicle auxiliary, and light electric rail applications"
+  - "UL 9540A — Test method for evaluating thermal runaway fire propagation"
+  - "UL 2580 — Batteries for use in electric vehicles"
+  - "UN 38.3 — Transporte de baterias de lítio (requisito de importação)"
+  - "SAE J2464 — Electric and hybrid vehicle rechargeable energy storage system safety and abuse testing"
+  - "ISO 13297:2020 — Small craft — AC and DC installations"
+  - "ISO 16315:2016 — Small craft — Electric propulsion system"
+  - "NMEA 2000 (IEC 61162-3) — Comunicação de rede marítima"
+  - "NBR 5410:2004 — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.iec.ch/"
+  - "https://www.ul.com/"
+  - "https://www.nmea.org/"
 aliases:
   - "BMS — BATTERY MANAGEMENT SYSTEM"
 seo_title: "BMS — Battery Management System"
@@ -42,6 +60,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > BMS é o sistema de supervisão e proteção do banco de lítio. Ele monitora células, corrente, temperatura e permissões de carga/descarga, e precisa ser coordenado com carregadores, alternadores, inversores e estratégias de desligamento do sistema.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **BMS em lítio não é acessório — é requisito estrutural.** ABYC E-13 (2023) e IEC 62619:2022 tratam como sistema de segurança indispensável, junto com fusível, cabo, bandeja, ventilação e carregador compatível.
+> 2. **BMS monitora cada célula, não o banco.** Tensão média de 13,2 V pode esconder uma célula em 2,5 V e outra em 3,9 V — desbalanceamento que o voltímetro do banco nunca revela.
+> 3. **BMS integrado em bateria pronta ≠ BMS projetado para o sistema.** BMS "drop-in" barato muitas vezes apenas corta, sem comunicar com o resto do sistema — útil em cenário simples, insuficiente em retrofit completo.
+> 4. **Corte abrupto do BMS em carga é evento elétrico.** Se o inversor continua puxando corrente no momento em que o BMS abre o MOSFET, pode haver pico de tensão, alarme e até falha do inversor — comunicação (VE.Bus, CAN, NMEA 2000) é que evita o corte duro.
+> 5. **Nunca "reset" do BMS sem diagnóstico.** BMS que dispara repetidamente indica causa raiz (célula desbalanceada, temperatura, carregador mal configurado, sobrecorrente real). Forçar reconexão esconde o sintoma e acelera falha.
+> 6. **Temperaturas abaixo de 0 °C bloqueiam carga em LiFePO4** — deposição de lítio metálico é irreversível. BMS bloqueia por projeto; solução é aquecedor de bateria, não bypass.
+> 7. **Fusível entre banco e BMS é obrigatório** — BMS não substitui fusível. Curto-circuito franco em lítio gera Isc de milhares de ampères; MOSFET do BMS é protegido pelo fusível, não o contrário.
+> 8. **Balanceamento passivo equilibra no topo da carga;** diferenças grandes de capacidade entre células nunca ficam perfeitamente balanceadas — BMS ativo corrige em qualquer ponto, mas não compensa seleção ruim de células.
+> 9. **Parâmetros do BMS devem vir do fabricante da célula, não do default do BMS.** Daly, JBD e similares saem com configuração genérica; célula CATL, EVE ou Winston tem limites próprios em datasheet. Configurar sem ler datasheet é instalar às cegas.
+
+> [!danger] Quando chamar um especialista
+> - **Banco LiFePO4 sem BMS, ou com BMS "misterioso" sem documentação.** Não faça primeiro uso sem identificar o BMS (marca, modelo, datasheet), tirar configuração atual via app/console, validar parâmetros contra a célula instalada e registrar na pasta técnica da embarcação. "Comprei com BMS" não é evidência.
+> - **BMS desconectando repetidamente sem causa aparente.** Causa pode ser célula com falha interna, temperatura oculta, carregador com tensão excessiva, shunt mal dimensionado ou cabo com queda de tensão fora de especificação. Diagnóstico com app, multímetro, termômetro IR e, em último caso, teardown da célula — não é tentativa-e-erro.
+> - **Integração BMS + alternador + regulador em projeto novo ou retrofit.** Alternador original não "sabe" que o banco é lítio; regulador externo programável, DC-DC charger ou sistema integrado com BMS é decisão de projeto, com ART/CREA e teste em bancada.
+> - **Retrofit de banco AGM → LiFePO4 mantendo carregador/inversor antigos.** Parâmetros de carga, comportamento em float, corrente de absorção e estratégia de desligamento são todos diferentes. Sem reconfiguração e comunicação, o BMS será "ponto de conflito" permanente.
+> - **Eletropropulsão com bancos > 10 kWh ou 48/96/400 V.** BMS precisa cobrir balanceamento, isolamento galvânico, detecção de fuga à massa (ground fault), contatores de potência, interlock com freio regenerativo. ISO 16315 + IEC 62619 + ABYC E-30 (draft) como base.
+> - **Incêndio, venting ou "puff event" em célula LiFePO4.** Isolar, ventilar, não apagar com água (ver fabricante), acionar seguradora, laudo com ART/CREA. Preservar BMS e células para análise — não descartar antes da perícia.
+> - **Banco DIY com células prismáticas soltas (CATL, EVE) e BMS externo.** Montagem exige busbar calibrado, aperto com torquímetro, teste de capacidade inicial célula a célula, topbalance antes do pack final e cronograma de inspeção. Não é projeto de fim de semana.
+> - **Comunicação BMS-carregador-inversor em ambiente Victron, Mastervolt, Mastervolt CZone, NMEA 2000.** VE.Bus, VE.Can, CAN bus proprietário — mapa de mensagens é específico. Tentar "fazer funcionar sem documentação" leva a falsa integração que só falha em regime real.
+> - **Laudo pericial ou parecer técnico sobre evento em banco lítio** (sinistro, incêndio, inchamento, dano em equipamento). Responsável técnico com ART/CREA, reconstituição da cadeia causal, evidência fotográfica e registro de parâmetros do BMS no momento do evento.
 
 ## O que é
 
@@ -208,12 +248,69 @@ BMS sem comunicação desconecta abruptamente. Inversor em carregamento pode sof
 - **Monitor de bateria (BMV/Shunt):** complementa o BMS — monitoramento do banco como um todo
 - **VRM:** dados do BMS podem aparecer no painel remoto Victron
 
+## Glossário rápido
+
+- **BMS (Battery Management System)** — sistema eletrônico que monitora tensão de célula, temperatura, corrente e SoC/SoH; protege contra sobretensão, subtensão, sobrecorrente e temperatura; balanceia células.
+- **Célula** — unidade eletroquímica básica. LiFePO4: 3,2 V nominais / 2,5 V mínimo / 3,65 V máximo.
+- **Pack / banco** — conjunto de células em série e/ou paralelo formando a bateria instalada.
+- **4S** — 4 células em série (4 × 3,2 V = 12,8 V nominal). Padrão LiFePO4 12 V.
+- **8S / 16S** — 8 células em série (24 V nominal) / 16 células (48 V nominal).
+- **4S2P** — 4 em série, 2 em paralelo — dobra capacidade mantendo tensão.
+- **Balanceamento passivo** — BMS dissipa energia da célula mais alta em resistor (calor). Simples, lento, gera calor.
+- **Balanceamento ativo** — BMS transfere energia entre células via conversor DC-DC. Eficiente, complexo, caro.
+- **Topbalance** — equalização inicial do banco antes do primeiro uso; leva células ao mesmo SoC via fonte de bancada.
+- **Bottombalance** — equalização ao fundo da curva; menos comum, exige descarga controlada.
+- **Sobretensão de célula (OVP)** — proteção contra tensão acima do limite da célula (típico LiFePO4: 3,65 V).
+- **Subtensão de célula (UVP)** — proteção contra tensão abaixo do mínimo (típico LiFePO4: 2,5 V).
+- **Sobrecorrente de carga (OCP-C)** — proteção contra carga acima do limite configurado.
+- **Sobrecorrente de descarga (OCP-D)** — proteção contra descarga acima do limite configurado.
+- **Short Circuit Protection (SCP)** — proteção contra curto franco; atua em microssegundos.
+- **OTP (Over Temperature Protection)** — proteção contra sobreaquecimento.
+- **UTP (Under Temperature Protection)** — proteção contra carga abaixo de 0 °C.
+- **MOSFET de potência** — transistor semicondutor usado pelo BMS para isolar o banco; sem arco mecânico.
+- **Relé de potência** — contator eletromecânico usado em bancos grandes; arco elétrico ao abrir, desgaste mecânico.
+- **BMS centralizado** — um módulo controla todas as células; comum em baterias prontas; ponto único de falha.
+- **BMS distribuído** — um módulo por célula ou grupo; robusto, industrial, caro.
+- **BMS inteligente** — com app/Bluetooth/CAN para leitura e configuração remota.
+- **BMS "burro"** — apenas corta; sem comunicação com o sistema.
+- **SoC (State of Charge)** — percentual de carga atual; BMS integra corrente para calcular.
+- **SoH (State of Health)** — percentual de capacidade remanescente em relação à nova.
+- **Coulomb counting** — método de cálculo de SoC por integração de corrente no tempo.
+- **Shunt** — resistor calibrado de baixo valor na linha negativa; BMS/monitor lê queda de tensão para medir corrente.
+- **VE.Bus / VE.Can** — protocolos Victron para comunicação entre BMS, inversor, carregador.
+- **CAN bus** — protocolo automotivo; base do NMEA 2000 e da maioria dos BMS industriais.
+- **NMEA 2000** — rede marítima padronizada sobre CAN; permite BMS reportar SoC, alarmes, comandos.
+- **UN 38.3** — teste mandatório para transporte aéreo/marítimo de baterias lítio.
+- **DIY pack** — banco montado a partir de células soltas + BMS externo; requer topbalance, busbar, torquímetro.
+- **Pack pronto (drop-in)** — bateria com case, BMS e terminais prontos para substituir AGM.
+- **Pré-carga (precharge)** — resistor que limita inrush ao fechar contator; evita arco e proteção espúria.
+- **Interlock / E-stop** — botão de emergência que comanda BMS a abrir; requisito em eletropropulsão.
+- **Ground fault detection** — detecção de fuga à massa em banco isolado (48 V+); essencial em eletropropulsão.
+- **Thermal runaway** — reação exotérmica em cadeia; LiFePO4 resiste melhor, NMC é o risco real.
+- **Venting** — liberação de gás por válvula de alívio da célula sob falha; sinal de dano irreversível.
+- **Datasheet da célula** — documento do fabricante com limites elétricos, térmicos e mecânicos; base para configurar BMS.
+- **AIC (Ampere Interrupting Capacity)** — capacidade do fusível de interromper Isc; crítico em lítio.
+- **Isc** — corrente de curto-circuito do banco; em LiFePO4 pode ultrapassar 10 kA.
+
 ## Normas aplicáveis
 
-- **IEC 62619 (edição a verificar)** — Secondary cells and batteries for use in industrial applications — Safety requirements (inclui BMS)
-- **UN38.3** — transporte de baterias de lítio (para importação/exportação)
-- **ABYC E-11 (2023)** — referência geral para sistemas elétricos DC
-- **Especificações do fabricante** — parâmetros de configuração por tipo de célula
+- **ABYC E-13 (2023) — Lithium Ion Batteries** — referência mais completa para instalação, BMS, ensaios e manutenção de bancos de lítio em embarcação; trata BMS como sistema de segurança.
+- **ABYC E-11 (2023) — AC and DC Electrical Systems** — regra do fusível ≤ 178 mm do terminal positivo, proteção de cabo, bitolagem, cores.
+- **ABYC E-10 (2023) — Storage Batteries** — separação de bancos, ventilação, fixação, compartimento.
+- **IEC 62619:2022** — Safety requirements for secondary lithium cells and batteries (industrial) — base técnica referenciada em datasheets de células importadas.
+- **IEC 62620:2014** — Desempenho e durabilidade de células e packs secundários lítio industriais.
+- **IEC 63056:2020** — Baterias lítio em sistemas de armazenamento de energia elétrica (BESS).
+- **UL 1973:2022** — Baterias estacionárias/auxiliares/light rail; ensaio de segurança de pack completo.
+- **UL 9540A** — Método de avaliação de propagação de thermal runaway em sistemas de armazenamento.
+- **UL 2580** — Baterias para veículos elétricos; referência em automotivo e eletropropulsão.
+- **UN 38.3** — transporte aéreo e marítimo de baterias de lítio (importação/exportação obrigatório).
+- **SAE J2464** — Ensaios de segurança e abuso para sistemas de armazenamento de energia de veículos elétricos.
+- **ISO 13297:2020** — Sistemas AC e DC em pequenas embarcações.
+- **ISO 16315:2016** — Sistemas de propulsão elétrica em pequenas embarcações; base para projetos com bancos > 10 kWh.
+- **NMEA 2000 (IEC 61162-3)** — Rede marítima para comunicação entre BMS, MFD, inversor, carregador.
+- **NBR 5410:2004** — Instalações elétricas de baixa tensão; aplicável ao AC após o shore inlet.
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio; exigências da autoridade marítima brasileira.
+- **Especificações do fabricante** — parâmetros de configuração por célula e por BMS; consulta obrigatória antes da instalação.
 
 ## Como ensinar este tópico
 

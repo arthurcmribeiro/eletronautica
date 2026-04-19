@@ -3,18 +3,35 @@ title: "Inversora (DC To AC)"
 note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "INVERSORA (DC to AC) 8ed19734f7fb836b85828192050b797a.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "16"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ABNT NBR 5410 (2004+emendas)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries (interface banco lítio)"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC A-28 (2023) — Galvanic Isolators"
+  - "ISO 13297:2020 — Small craft — AC and DC installations"
+  - "ISO 8846:2022 — Protection against ignition of surrounding flammable gases"
+  - "ISO 16315:2016 — Electric propulsion system"
+  - "UL 458 — Power converters/inverters for marine use"
+  - "UL 1741 — Inverters, converters and interconnection system equipment"
+  - "IEC 62040-1 — Uninterruptible Power Systems (UPS)"
+  - "IEC 62109-1/-2 — Safety of power converters for PV systems (inversor solar híbrido)"
+  - "NMEA 2000 (IEC 61162-3) — Comunicação de rede marítima"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
   - "https://abycinc.org/standards/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.iec.ch/"
+  - "https://www.ul.com/"
 aliases:
   - "INVERSORA (DC to AC)"
 seo_title: "Inversora (DC To AC)"
@@ -42,7 +59,29 @@ related_notes:
 # Inversora (DC To AC)
 
 > [!abstract] Resumo técnico
-> INVERSORA (DC → AC) — Converte energia DC do banco de baterias em AC 220V para equipamentos a bordo sem shore power ou gerador. Permite operar ar-condicionado, micro-ondas, carregadores e tomadas com energia armazenada. A diferença entre on.
+> INVERSORA (DC → AC) — Converte energia DC do banco de baterias em AC 220V para equipamentos a bordo sem shore power ou gerador. Permite operar ar-condicionado, micro-ondas, carregadores e tomadas com energia armazenada. A diferença entre onda senoidal pura e modificada, a eficiência real e o dimensionamento do cabo DC definem o sucesso ou o fracasso do sistema.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Onda senoidal pura é o padrão a bordo.** Onda modificada só se sobrou um orçamento para cargas puramente resistivas (TV antiga, iluminação). Motor AC, compressor, transformador, eletrônica sensível e equipamento médico **exigem** senoidal pura.
+> 2. **Eficiência real não é 100%.** Para cada 100W AC entregues, o banco DC fornece 108–114W (eficiência 88–92%). Calcule a corrente DC pela **potência AC ÷ eficiência ÷ tensão DC**, nunca ignore o rendimento.
+> 3. **Corrente DC cresce absurdamente em 12V.** Inversor de 2.000W em 12V = **~180A DC contínuos**. Em 24V cai para ~90A; em 48V para ~45A. Acima de 1.500W, pensar em 24V ou 48V é regra, não luxo.
+> 4. **Inversor ≠ inversor/carregador.** Inversor simples só converte DC→AC. Inversor/carregador (MultiPlus, Quattro, Mass Combi) inverte, carrega e faz **transferência automática** (<20ms) entre shore power, gerador e banco. A escolha muda toda a arquitetura AC do barco.
+> 5. **Transfer switch e neutro comutado são projeto, não opcional.** Shore power e saída do inversor **não podem coexistir** no mesmo barramento. O equipamento precisa comutar neutro e fase conforme a topologia L+N+PE e SPOG do país — erro aqui = ESD ou corrente de corrosão galvânica.
+> 6. **Fusível DC de alta corrente próximo ao banco é obrigatório.** MRBF, ANL ou NH dimensionado para ~125% da corrente máxima do inversor, com AIC compatível com a Isc do banco. Comprimento máximo do cabo desprotegido: **178mm (7")** pela ABYC E-11.
+> 7. **Cabo DC é o mais crítico do barco.** Dimensionar para corrente máxima contínua + pico, queda de tensão < 3%, comprimento mínimo. Torque nos terminais conforme fabricante. Cabo subdimensionado + inversor de 3kW = arco garantido.
+> 8. **Ventilação não é decoração.** Inversor dissipa 8–15% como calor. Instalação em compartimento fechado sem circulação = derating + desligamento térmico + falha prematura de capacitores.
+> 9. **Standby consome bateria silenciosamente.** Inversor em no-load consome 0,5–3W contínuos (~1–7Ah/dia em 12V). Em temporada longa sem uso, desligar fisicamente ou ativar ECO mode.
+
+> [!danger] Quando chamar um especialista
+> - **Retrofit de inversor/carregador em barco com banco existente:** transfer switch, neutro, PE, coordenação com shore power + gerador + BMS do lítio. Um erro aqui = ESD ou incêndio. Profissional com experiência ABYC/ISO, não eletricista residencial.
+> - **Sistema com múltiplas fontes AC (shore power + gerador + inversor):** priorização, sincronismo, anti-paralelismo, commutação sem perda de neutro, AC coupling solar. Exige projeto integrado com Cerbo GX, CZone ou EmpirBus — não se resolve no manual do MultiPlus.
+> - **Split-phase 120/240V americano ou europeu 230V trifásico:** barco importado com topologia AC diferente da brasileira. Decidir se mantém, converte ou faz conversão isolada exige análise caso a caso — conversões mal feitas destroem equipamentos em minutos.
+> - **Thermal event em inversor (cheiro de queimado, desligamentos térmicos repetidos):** capacitores estufados, MOSFET comprometido, ventilador travado. Continuar a operar = risco de fogo. Retirar do barco, testar em bancada, avaliar reparo × substituição.
+> - **Integração inversor/carregador com banco LiFePO4 e BMS:** CAN bus proprietário, setpoints de absorção, curva de carga, proteção contra disconnect abrupto do BMS. Exige configuração de parâmetros específicos do pack — profissional certificado pelo fabricante do BMS e do inversor.
+> - **Corrosão galvânica associada a inversor/shore power mal aterrado:** zinco desaparecendo em semanas, ESD risk. Exige medição de corrente de fuga AC e DC, inspeção do isolador galvânico ou transformador de isolação, verificação do bond neutro-PE em marina. Perícia naval.
+> - **Eletropropulsão com inversor AC auxiliar compartilhando banco de tração:** isolação entre barramentos de tração e auxiliares, proteção contra backfeed, coordenação com motor elétrico e chargers de alta potência. Projeto sob ISO 16315 + ABYC E-30 (draft).
+> - **Sinistro com inversor envolvido (fogo, curto, descarga):** preservar o equipamento e os cabos, fotografar terminais, fusíveis, ponto de origem. Perícia elétrica precisa do produto íntegro para determinar causa (falha do inversor vs instalação vs carga).
+> - **AC coupling de solar via inversor grid-tie + inversor/carregador em ilha:** configuração complexa exigindo frequency shift, anti-islanding, firmware compatível. Exige projetista com experiência em sistemas híbridos residenciais **e** portuário — não é plug-and-play.
 
 ## O que é
 
@@ -303,11 +342,69 @@ O inversor tem proteção interna — mas o cabo entre o banco e o inversor não
 
 **Realidade brasileira:** O mercado nacional ainda vende muito inversor de onda modificada por questão de preço. O proprietário liga um aparelho de TV ou notebook e funciona. O problema aparece quando liga o compressor da geladeira, o ar-condicionado ou qualquer motor AC — que funcionam por meses com problemas crescentes antes de falhar definitivamente.
 
+## Glossário rápido
+
+- **Inversor (DC→AC):** conversor eletrônico que transforma corrente contínua do banco em corrente alternada para cargas AC.
+- **Inversor/carregador (Inverter/Charger / Combi):** equipamento integrado que inverte, carrega o banco e faz transferência automática entre shore power/gerador e inversão. Exemplos: Victron MultiPlus/Quattro, Mastervolt Mass Combi, Schneider XW+.
+- **Quattro:** linha Victron de inversor/carregador com **duas entradas AC** (shore power + gerador) para priorização automática.
+- **Onda senoidal pura (PSW — Pure Sine Wave):** saída AC idêntica à rede elétrica ideal, com baixa distorção harmônica (THD < 3%). Compatível com **todas** as cargas AC.
+- **Onda senoidal modificada (MSW — Modified Sine Wave):** aproximação por pulsos quadrados. Compatível só com cargas resistivas. Incompatível com motor AC, compressor, transformador, eletrônica sensível.
+- **THD (Total Harmonic Distortion):** distorção harmônica total. Em inversor PSW de qualidade: < 3%. Em MSW pode chegar a 40%.
+- **Potência contínua:** potência que o inversor entrega indefinidamente em temperatura ambiente normal. Não somar além de 80% para operação segura.
+- **Potência de pico (surge):** potência instantânea (5–30s) para partida de motores. Tipicamente 2× a 3× a contínua.
+- **Eficiência:** razão entre potência AC entregue e potência DC consumida. 88–96% em inversores modernos de qualidade; despreze abaixo disso.
+- **No-load / Standby consumption:** consumo em watt que o inversor tira do banco quando está ligado mas sem carga útil. Entre 0,5W e 3W.
+- **ECO mode / Search mode:** modo no qual o inversor envia pulsos de busca e só ativa a saída quando detecta carga > limiar. Economiza banco em instalações com cargas intermitentes.
+- **Transfer switch:** chave de transferência entre shore power / gerador e inversão. Tempo típico de comutação: <20ms.
+- **Neutro comutado:** em inversor/carregador bem projetado, o neutro é comutado junto com a fase para manter o bond neutro-PE adequado em cada modo (shore power vs inversão).
+- **Low-voltage cutoff / disconnect (LVD):** corte automático da saída AC quando a tensão do banco cai abaixo do configurado. Protege o banco de descarga profunda.
+- **High-voltage cutoff:** corte por sobretensão DC (ex.: alternador descontrolado, carregador com defeito).
+- **Low/High temperature shutdown:** desligamento térmico para proteção dos MOSFETs e capacitores.
+- **MOSFET / IGBT:** semicondutores de potência que fazem a comutação DC→AC. Falha mais comum em inversores submetidos a sobrecarga crônica.
+- **H-bridge:** topologia clássica de saída com 4 MOSFETs formando a onda AC a partir de barramento DC.
+- **LLC / Resonant converter:** topologia de alta eficiência usada em inversores modernos para reduzir perdas de comutação.
+- **PWM (Pulse Width Modulation):** técnica de geração da senoide por pulsos de largura variável filtrados por indutores e capacitores.
+- **Potência aparente (VA) × potência ativa (W):** cargas indutivas (motor, compressor) têm VA > W. Inversor precisa suprir a potência aparente de pico — não apenas a ativa.
+- **Fator de potência (PF):** razão W/VA. Cargas resistivas PF=1; motores PF=0,7–0,85. Dimensionar inversor considerando PF da carga.
+- **Low-frequency inverter:** inversor com transformador toroidal de baixa frequência. Mais pesado, mas com alta capacidade de surge (3–5× nominal). Preferido para cargas com alto inrush.
+- **High-frequency inverter:** inversor sem transformador, mais leve e compacto. Surge menor (2× nominal). Típico em portáteis e baixa potência.
+- **AC coupling:** arquitetura na qual um inversor grid-tie solar injeta na saída AC do inversor/carregador, que controla frequência para balancear produção/consumo.
+- **Grid-tie vs off-grid:** inversor grid-tie só funciona com rede presente (desliga em falta). Off-grid (inversor/carregador) forma a rede.
+- **Anti-islanding:** proteção obrigatória em grid-tie — inversor desconecta se a rede cair. Em sistema híbrido exige firmware compatível.
+- **Frequency shift:** técnica usada por inversor/carregador para comandar o grid-tie solar a reduzir produção quando o banco está cheio.
+- **Fusível DC 178mm / 7":** distância máxima permitida por ABYC E-11 entre o polo positivo do banco e o primeiro dispositivo de proteção.
+- **MRBF / ANL / NH:** fusíveis de alta corrente DC usados em circuito de inversor. MRBF monta direto no terminal da bateria; ANL em base aberta; NH em porta-fusível industrial.
+- **AIC (Ampere Interrupting Capacity):** capacidade do fusível de interromper corrente de curto sem arco sustentado. Deve ser ≥ Isc do banco.
+- **Isc (Short-circuit current):** corrente máxima de curto do banco. Em LiFePO4 de 200Ah pode ultrapassar 3000A; exige fusível com AIC compatível.
+- **Bond neutro-PE / SPOG (Single Point of Grounding):** topologia de aterramento na qual neutro e PE são ligados em **um único ponto** do sistema, evitando correntes parasitas.
+- **ESD (Electric Shock Drowning):** choque elétrico em água causado por corrente de fuga AC. Risco direto associado a inversor/carregador mal aterrado ou com neutro não comutado.
+- **Isolador galvânico / transformador de isolação:** dispositivos que bloqueiam correntes DC (zinco) ou correntes AC de fuga entre barcos na marina. Obrigatórios conforme ABYC A-28.
+- **GFCI / DDR:** dispositivo diferencial residual. Proteção obrigatória em tomadas AC que podem ser tocadas em ambiente úmido.
+- **Derating térmico:** redução da capacidade nominal em função de temperatura ambiente. Acima de 40°C, inversor perde 0,5–1% por °C.
+- **VE.Bus / VE.Can / VE.Direct:** protocolos de comunicação Victron. VE.Bus liga inversor-carregador ao Cerbo GX; VE.Can conversa com BMS em 500 kbps.
+- **Cerbo GX / Venus OS:** centro de controle Victron para monitoramento remoto e configuração de parâmetros.
+- **VRM (Victron Remote Management):** portal cloud para supervisão remota do sistema.
+- **48V vs 12V vs 24V:** tensão do banco. 48V reduz corrente DC a 1/4 de 12V para a mesma potência AC — cabos menores, perdas menores, sistema mais eficiente acima de 3kW.
+- **Assistente (Victron):** scripts configuráveis no MultiPlus/Quattro para comportamentos customizados (ex.: limite de shore power, gerenciamento de gerador).
+- **Hybrid mode:** modo no qual o inversor/carregador complementa shore power insuficiente extraindo a diferença do banco (power assist).
+
 ## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — AC Electrical Systems (instalação, proteção, aterramento)
-- **UL 458** — Power Converters/Inverters and Power Converter/Inverter Systems for Land Vehicles and Marine Crafts
-- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABYC E-11 (2023)** — *AC and DC Electrical Systems on Boats.* Instalação, proteção, aterramento, topologia neutro-PE, dimensionamento de cabos DC, distância máxima do fusível.
+- **ABYC A-31 (2024)** — *Battery Chargers and Inverters.* Requisitos específicos de segurança elétrica, transferência de fontes, bond neutro comutado, proteção DC e AC integradas.
+- **ABYC E-13 (2023)** — *Lithium Ion Batteries.* Interface entre inversor/carregador e banco lítio com BMS (setpoints, comunicação, proteção contra disconnect).
+- **ABYC E-10 (2023)** — *Storage Batteries.* Referência para cargas DC e proteção do banco alimentador do inversor.
+- **ABYC A-28 (2023)** — *Galvanic Isolators.* Exigido quando há conexão shore power em sistema com inversor/carregador.
+- **ISO 13297:2020** — *Small craft — Electrical systems — AC and DC installations.* Referência europeia para topologia AC/DC em embarcações < 24m.
+- **ISO 8846:2022** — *Small craft — Electrical devices — Protection against ignition of surrounding flammable gases.* Inversor em compartimento com risco de vapor combustível exige ignition protection.
+- **ISO 16315:2016** — *Small craft — Electric propulsion system.* Quando o inversor divide banco com sistema de eletropropulsão.
+- **UL 458** — *Power Converters/Inverters and Power Converter/Inverter Systems for Land Vehicles and Marine Crafts.* Referência para inversores marinizados (EUA).
+- **UL 1741** — *Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources.* Referência para inversor grid-tie híbrido em arquitetura AC coupling.
+- **IEC 62040-1** — *Uninterruptible Power Systems (UPS) — Part 1: Safety requirements.* Base para inversores com função UPS/backup.
+- **IEC 62109-1/-2** — *Safety of power converters for use in photovoltaic power systems.* Aplicável quando o inversor híbrido integra entrada solar DC.
+- **NMEA 2000 (IEC 61162-3)** — *Digital interface for navigational devices.* Comunicação com displays e Cerbo GX quando inversor exporta PGN de status.
+- **ABNT NBR 5410:2004 + emendas** — *Instalações elétricas de baixa tensão.* Referência nacional para princípios de baixa tensão, identificação, proteção, dimensionamento.
+- **NORMAM-211/DPC** — *Embarcações de esporte e recreio.* Regulamentação brasileira aplicável à homologação e operação da embarcação.
 
 ## Como ensinar este tópico
 
