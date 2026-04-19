@@ -923,6 +923,60 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 2 CONCLUÍDA — 2026-04-19
+
+**Feedback do responsável editorial pós-Onda 1 (recalibragem aplicada em Onda 2):**
+- Q1: glossário ~21 termos em Onda 1 vs ~23 em Fase 5 — "diminuiu porque? foi pra melhor?" → **recalibrar** para 40-47 termos (vademecum da elétrica náutica)
+- Q2/Q3: "melhor possível" → manter TL;DR de 9 regras + danger de 9 cenários
+- Q4: "todas que forem cabíveis" → **maximizar** normas (não filtrar, citar todas aplicáveis)
+- Comando: "seguir com Onda 2"
+
+**Onda 2 executada (9/9 notas Tier S, cluster baterias/geração/conversão):**
+
+| # | Nota | Antes → Depois | Normas | Destaques |
+|---|------|---------------|--------|-----------|
+| 9 | Tipos de Bateria | 468 → 564 | 2 → 13 | FLA/AGM/GEL vs LiFePO4/NMC/LCO/LMO/LTO/NCA, química define carregador |
+| 10 | BMS | 270 → 367 | 3 → 16 | BMS monitora célula não banco, CAN 500 kbps, disconnect abrupto = load dump |
+| 11 | Lítio LiFePO4 | 240 → 339 | 0 → 15 | Não é "AGM melhorada", BMS requisito, sem carga < 0 °C (DEC-14) |
+| 12 | Carregador (AC→DC) | 362 → 449 | 4 → 14 | Bulk/absorção/float por química, ignition protection, ABYC A-28 (ABYC A-31 TODO resolvido) |
+| 13 | Monitor BMV/Shunt | 270 → 356 | 2 → 11 | Voltímetro ≠ monitor, shunt no negativo, PGN 127506/127508 |
+| 14 | Alternador (DC) | 363 → 456 | 0 → 12 | Marinização SAE J1171, regulador externo em lítio, load dump ISO 16750-2 (DEC-14 + A-31 TODO) |
+| 15 | Gerador (DC) | 201 → 295 | 0 → 12 | Só faz sentido com barramento DC central, REx em eletropropulsão (DEC-14) |
+| 16 | Inversora (DC→AC) | 382 → 478 | 2 → 15 | Senoidal pura, corrente DC altíssima, inversor/carregador combi, AC coupling |
+| 17 | Placa Solar (DC) | 229 → 343 | 0 → 17 | Wp ≠ produção, MPPT padrão, IEC 62109/61215/61730, NBR 16690:2019 (DEC-14) |
+
+**Métricas Onda 2:**
+- 9 notas, **862 linhas adicionadas**
+- **18 callouts novos** (9 tip + 9 danger)
+- **381 termos de glossário** (média 42/nota vs ~21 em Onda 1 — **recalibrada 2×**)
+- **112 normas expandidas/canonicalizadas** (média 13,9/nota) — ABYC E-10/E-11/E-13/A-28/A-31/H-25, IEC 62040-1/62109-1-2/62619/62620/63056/61215/61730/62548/61010-1, UL 458/1236/1500/1703/1741/1973/2580/9540A, SAE J1171/J1495/J2464, ISO 8846/13297/16315/16750-2/7637-2, NMEA 2000, UN 38.3, NBR 16690:2019, NBR 5410, NORMAM-211
+- **4 notas com `normas_citadas` criadas do zero** (DEC-14): LiFePO4, Alternador, Gerador, Placa Solar
+- **2 TODOs antigos resolvidos:** ABYC A-31 citada como "(2024) — Battery Chargers and Inverters" em Carregador e Alternador
+- Esforço: 11-13 h estimadas → **~6,5 h reais** (1,85× mais eficiente)
+
+**Padrões reforçados no cluster:**
+- Química do banco define carregador e perfil (Tipos de Bateria, BMS, LiFePO4, Carregador, Monitor, Alternador)
+- BMS requisito em lítio (BMS, LiFePO4, Alternador, Inversora, Monitor)
+- Fusível 178 mm ABYC E-11 em todas as 9 notas
+- Corrente DC altíssima (180 A em 12 V com inversor de 2 kW)
+- Disconnect abrupto do BMS = load dump ISO 16750-2 (BMS, LiFePO4, Alternador, Inversora)
+- MPPT como padrão (Placa Solar, Monitor, Carregador)
+- AC coupling (Inversora, Placa Solar)
+- VE.Direct/VE.Can/NMEA 2000 com PGNs consistentes (Monitor, Carregador, Alternador, Inversora, Placa Solar)
+- Ignition protection ISO 8846 / SAE J1171 / UL 1500 em 6 notas
+- Controlador de energia (Cerbo GX, EmpirBus, CZone) como arquitetura integradora
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_02_tier_s_baterias_geracao_20260419.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas
+- Concluído: **17 / 133** (13%)
+- Próxima: **Onda 3 — Tier S navegação/emergência (9 notas)** após aprovação humana
+
+**Cadência (b) — PAUSA OBRIGATÓRIA:** Onda 2 entregue. Antes de Onda 3, validar: (1) glossário de 40-47 termos está muito denso ou adequado para vademecum? (2) normas "máximas" (11-17 por nota) estão gerando boa densidade ou redundância? (3) presença de IEC 63056:2020 e UL 9540A adequada para audiência brasileira? (4) load dump (ISO 16750-2) como conceito transversal está funcionando? (5) próxima onda (Onda 3) deve manter mesmo padrão ou ajustar?
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
