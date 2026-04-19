@@ -3,27 +3,43 @@ title: "Normas e Regulamentações — Abyc Iso e Brasil"
 note_type: "reference"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "NORMAS E REGULAMENTAÇÕES — ABYC, ISO E BRASIL 33a19734f7fb81cb8e17dd284ca1cc01.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-16"
+status: "fase-5-reescrita-premium"
+fase_5_reescrita: "10"
+prioridade_fase_5: 5.5
+reviewed_on: "2026-04-18"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ABYC E-2 (2020)"
-  - "ABYC E-10 (2023)"
-  - "ABYC E-13 (2022)"
-  - "ABYC A-20 (edição a verificar)"
-  - "ABYC A-25 (edição a verificar)"
-  - "ABYC A-28 (edição a verificar)"
-  - "ABYC A-31 (edição a verificar)"
-  - "ISO 13297:2020"
-  - "ISO 10133 (retirada, histórico)"
-  - "ABNT NBR 5410 (2004 + emendas)"
-  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-2 (2020) — Cathodic Protection"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-13 (2022) — Lithium Ion Batteries"
+  - "ABYC A-16 (edição a verificar) — Electric Navigation Lights"
+  - "ABYC A-20 (edição a verificar) — Battery Chargers"
+  - "ABYC A-25 (edição a verificar) — Inverter/Chargers"
+  - "ABYC A-28 (edição a verificar) — Galvanic Isolators"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ABYC A-33 (edição a verificar) — Shore Power Inlets"
+  - "ISO 13297:2020 — Small craft — AC electrical installations"
+  - "ISO 10133 (retirada, histórico; migração para 13297)"
+  - "ISO 16180:2011 — Small craft — Navigation lights"
+  - "ISO 16315:2016 — Small craft — Electric propulsion"
+  - "IEC 61008 — RCD without integral overcurrent protection"
+  - "IEC 61009 — RCBO with integral overcurrent protection"
+  - "IEC 60364-7-709 — Electrical installations — Marinas"
+  - "IEC 61162-1:2016 / IEC 61162-3:2008+A2:2019 — NMEA 0183 / 2000"
+  - "IEC 60092 (série) — Electrical installations in ships"
+  - "NEC 555 (NFPA 70 art. 555, edição a verificar) — Marinas"
+  - "NFPA 302 (edição a verificar) — Pleasure and Commercial Motor Craft"
+  - "NFPA 303 (edição a verificar) — Fire Protection for Marinas"
+  - "COLREGS 72 (Regras 21–31, Anexo I) — navigation lights"
+  - "UN 38.3 — transporte de lítio (regulatório internacional)"
+  - "ABNT NBR 5410 (2004 + emendas) — Instalações elétricas BT"
+  - "NORMAM-01/DPC — Autoridade Marítima (geral)"
+  - "NORMAM-204/DPC — rádio-comunicações marítimas"
+  - "NORMAM-211/DPC (2022) — esporte e recreio"
   - "NORMAM-02 (substituída, histórico)"
-  - "IEC 61008"
-  - "IEC 61009"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -60,6 +76,16 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > A base normativa da elétrica náutica não cabe em uma única sigla. No Brasil, a **NORMAM** define o eixo regulatório para embarcações de esporte e recreio; **ABNT/NBR** e família **IEC** oferecem referências complementares de baixa tensão e identificação; **ABYC** e **ISO** são os corpos de engenharia mais úteis para projeto, instalação e diagnóstico. O erro clássico é tratar uma dessas camadas como suficiente, ou transplantar uma filosofia estrangeira sem revalidar a topologia real das marinas brasileiras.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Regulatório ≠ engenharia ≠ produto.** NORMAM obriga; ABYC/ISO orientam; IEC especifica equipamento.
+> - **ABYC não é lei brasileira** — é a melhor referência de engenharia para campo, mas não substitui a NORMAM no enquadramento regulatório.
+> - **NORMAM-211/DPC** = esporte e recreio; **NORMAM-204/DPC** = rádio-comunicações; **NORMAM-01/DPC** = Autoridade Marítima geral. **NORMAM-02 foi substituída** — não citar como vigente sem conferir.
+> - **ISO 10133 foi retirada** — use **ISO 13297:2020** (AC) como referência corrente. Citar 10133 como viva é erro técnico.
+> - **NBR 5410 é complementar**, não substitui norma náutica de bordo.
+> - **Edição "a verificar" não vai para laudo assinado** — confirmar edição vigente antes de comprometer a assinatura técnica.
+> - **Citação válida** = documento + edição/ano + cláusula + contexto. "Segue ABYC" sem o resto é citação inválida.
+> - **SOLAS / classificadas** (ABS/DNV/BV) → regime diferente; esta nota não cobre.
 
 ## Como esta nota deve ser usada
 
@@ -256,6 +282,56 @@ Exemplo de postura errada:
 - nunca dizer "segue ABYC" sem explicar se o barco foi projetado para `L + N + PE`, `L1 + L2 + PE`, `split-phase` ou sistema derivado;
 - sempre separar **regulação**, **engenharia** e **manual de fabricante**;
 - em nota de Obsidian, deixar claro quando a informação depende da edição vigente ou de norma paga.
+
+> [!danger] Quando chamar especialista
+> Normas viram problema jurídico quando saem do Obsidian e entram em laudo, contrato, sinistro ou processo. Nessas situações, a assinatura de engenheiro eletricista com ART/CREA (ou equivalente internacional) é requisito — e cada família de norma tem seu mundo. Pare e procure profissional habilitado quando:
+> - **Sinistro elétrico envolvendo ferido ou morte** — entra em cena perito criminal/DPC, cadeia de custódia e norma vigente no momento do sinistro (não a atual).
+> - **Laudo técnico para seguradora, Marinha ou Justiça** — exige engenheiro registrado (CREA/CONFEA no Brasil; PE nos EUA) com ART específica.
+> - **Embarcação SOLAS ou classificada** (ABS, DNV, BV, Lloyd's, RINA) — sociedade classificadora tem regras próprias que prevalecem sobre ABYC/ISO.
+> - **Entrada em operação comercial ou transporte de passageiros** — regime NORMAM específico (ex.: NORMAM-01 para carga/passageiro) ≠ esporte/recreio. Reclassificação é ato administrativo.
+> - **Importação com homologação** ANATEL (rádio-comunicações), INMETRO (componentes) ou alfandegária (UN 38.3 para lítio) — documentação em camadas.
+> - **Divergência entre edição ABYC/ISO citada no projeto e edição vigente** — retrofit pode obrigar atualização; risco jurídico se o projeto for referência em sinistro.
+> - **Retrofit ou conversão que altere topologia AC** (sistema derivado, split-phase, trifásico) — exige projeto assinado por engenheiro eletricista naval.
+> - **Instalação em marina comercial** com fiscalização municipal/estadual — NBR 5410 + NR-10 + convenção coletiva podem se somar.
+> - **Norma citada foi revogada/substituída** e o responsável técnico não atualizou — exposição em auditoria.
+>
+> Custo de consultoria normativa (2–10 h de engenheiro sênior) é irrisório frente ao custo de laudo reprovado, processo ou autuação.
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Regulatória** | Norma com força de lei no território — no Brasil: NORMAM, NBR quando referenciada por lei |
+| **Engenharia voluntária** | Norma que orienta projeto sem força de lei — ABYC, ISO, NFPA (quando não adotadas) |
+| **Produto** | Norma que especifica requisitos de equipamento — IEC 61008, 61009, 60092 |
+| **Fabricante** | Manual/datasheet do componente específico — sempre a última palavra em instalação |
+| **ABYC** | American Boat and Yacht Council — referência US de engenharia naval de recreio |
+| **ISO** | International Organization for Standardization — normas harmonizadas internacionais |
+| **IEC** | International Electrotechnical Commission — normas internacionais de eletrotécnica |
+| **NFPA** | National Fire Protection Association — NEC (NFPA 70) + normas náuticas (302, 303) |
+| **ABNT** | Associação Brasileira de Normas Técnicas — NBR 5410 e adoções IEC/ISO no Brasil |
+| **IMO** | International Maritime Organization — COLREGS, SOLAS, MARPOL |
+| **IACS** | International Association of Classification Societies — guarda-chuva ABS/DNV/BV/Lloyd's |
+| **DPC** | Diretoria de Portos e Costas — braço da Marinha que edita as NORMAM |
+| **NORMAM-01** | Autoridade Marítima geral — embarcações, tripulação, operação |
+| **NORMAM-204** | Rádio-comunicações marítimas — VHF, DSC, EPIRB, AIS |
+| **NORMAM-211** | Esporte e recreio (2022) — substituiu parte da NORMAM-02 |
+| **INMETRO** | Instituto Nacional de Metrologia — homologação de componentes |
+| **ANATEL** | Agência Nacional de Telecomunicações — homologação de rádio (VHF, AIS) |
+| **ART** | Anotação de Responsabilidade Técnica — vínculo do engenheiro ao projeto (BR) |
+| **CREA/CONFEA** | Conselhos de engenharia — registro profissional para assinar ART no Brasil |
+| **PE (US)** | Professional Engineer — equivalente americano do engenheiro registrado |
+| **E-series (ABYC)** | Electrical standards — E-2/E-10/E-11/E-13 são as principais de elétrica |
+| **A-series (ABYC)** | Accessories — A-16, A-20, A-25, A-28, A-31, A-33 (cada uma um componente) |
+| **H-series (ABYC)** | Hull standards — estrutura e casco (fora do escopo elétrico direto) |
+| **Small craft (ISO)** | Família de normas para embarcações ≤24 m (ISO 8846, 13297, 16180, 16315) |
+| **Edição vigente** | Versão da norma em validade no momento da instalação/laudo |
+| **TODO-CITAÇÃO** | Marca no vault: edição citada precisa de confirmação antes de uso jurídico |
+| **Canonicalização** | Ato de padronizar a citação (título completo + ano + cláusula) |
+| **CE** | Conformité Européenne — marcação obrigatória no EEE |
+| **MED** | Marine Equipment Directive — diretiva UE para equipamento marítimo |
+| **RED** | Radio Equipment Directive — diretiva UE para rádio (sucessora R&TTE) |
+| **SOLAS** | Safety of Life at Sea — convenção IMO para navios mercantes >500 GT |
 
 ## Fontes institucionais e catálogos oficiais
 
