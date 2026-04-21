@@ -3,18 +3,42 @@ title: "Projeto Elétrico de Embarcação — Passo a Passo"
 note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "PROJETO ELÉTRICO DE EMBARCAÇÃO — PASSO A PASSO 33a19734f7fb816c9ebbcc180815b545.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "27"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ABYC E-2 (2020)"
-  - "ISO 13297:2020"
-  - "ABNT NBR 5410 (2004 + emendas)"
-  - "NORMAM-211 (2022 rev. aplicável via DPC)"
-  - "IEC 60092 (edição a verificar)"
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats"
+  - "ABYC E-2 (2020) — Cathodic Protection / Bonding"
+  - "ABYC E-4 (2019) — Lightning Protection"
+  - "ABYC E-8 (2020) — AC Generators on Boats"
+  - "ABYC E-9 (2019) — DC Electrical Systems / Alternators and Chargers"
+  - "ABYC E-10 (2018) — Storage Batteries (chumbo-ácido e lítio)"
+  - "ABYC A-16 (2020) — Electric Navigation Lights"
+  - "ABYC TE-4 (2018) — Lightning Protection (technical note)"
+  - "ABYC A-4 (2018) — Fire Fighting Equipment"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC & DC installations (sucessora de ISO 10133)"
+  - "ISO 8846:1990 — Small craft — Electrical devices — Protection against ignition of flammable gases"
+  - "ISO 10134:2019 — Small craft — Electrical devices — Lightning protection"
+  - "IEC 60092-101 — Definitions and general requirements"
+  - "IEC 60092-201 — System design — General"
+  - "IEC 60092-202 — System design — Protection"
+  - "IEC 60092-301 — Equipment — Generators and motors"
+  - "IEC 60092-352 — Choice and installation of electrical cables"
+  - "IEC 60092-401 — Installation and test of completed installation"
+  - "IEC 60092-507 — Pleasure craft"
+  - "IEC 60364-series — Low-voltage electrical installations (referência cruzada AC shore-to-boat)"
+  - "IEC 61162-1/-2/-3 (NMEA 0183/2000) — Rede digital de instrumentação e controle"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "ABNT NBR IEC 60364 — Instalações elétricas de baixa tensão (adoção brasileira)"
+  - "NORMAM-201/DPC — Tráfego e permanência (embarcações comerciais)"
+  - "NORMAM-204/DPC — Segurança da Marinha Mercante"
+  - "NORMAM-205/DPC — Embarcações de passageiros"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive (marcação CE)"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -46,6 +70,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > PROJETO ELÉTRICO — Planejamento e documentação completa do sistema elétrico da embarcação antes da execução. A diferença entre um sistema confiável e um sistema problemático começa aqui.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Load list antes de tudo** — nenhum cálculo de banco, cabo ou proteção faz sentido sem levantamento completo de cargas (equipamento, potência, tensão, horas/dia) e **perfil de uso realista** (o que fica ligado simultaneamente, não o pior caso somado).
+> 2. **Banco dimensionado por Wh/dia × autonomia ÷ DOD** — chumbo-ácido trabalha até 50% DOD (vida útil), LiFePO4 até 80% DOD (ABYC E-10). Margem de envelhecimento: +20-30%.
+> 3. **Cabo dimensionado por ABYC E-11 Tabela VI (corrente) + Tabela VI-A (queda de tensão 3% críticos / 10% não-críticos)** — duas restrições, adota-se a maior seção. Dobrar comprimento (ida+volta).
+> 4. **Proteção no positivo, ≤7" (178 mm) do barramento** — fusível ≤ capacidade do cabo (ABYC E-11), nunca ≤ carga. Baterias sempre com fusível classe T ou MRBF próximo ao polo positivo.
+> 5. **Bonding ABYC E-2 é parte do projeto, não acessório** — todas as massas metálicas submersas interligadas + ânodos dimensionados; projeto elétrico sem diagrama de bonding é projeto incompleto.
+> 6. **Diagrama unifilar AC + DC obrigatório** — sem single-line diagram legível, não há como fazer manutenção, perícia ou reforma controlada. AC e DC **em diagramas separados**, nunca misturados.
+> 7. **Cargas transitórias verificadas separadamente** — motor de partida (200-1000 A), compressor AC (inrush 5-8×), guincho âncora — não entram na média diária, exigem dimensionamento específico de cabo/proteção.
+> 8. **Documentação legível a bordo** — projeto no escritório que não chega ao barco é projeto inútil; pasta física + cópia digital + identificação de cabos/circuitos no próprio painel.
+> 9. **Revisão obrigatória a cada adição de equipamento** — acrescentar geladeira, inverter, conversor, painel solar sem recálculo de cabo-tronco/barramento/banco é a principal causa de incêndio elétrico pós-reforma.
+
+> [!danger] Quando chamar um especialista (engenheiro eletricista náutico / surveyor)
+> 1. **Projeto do zero em embarcação > 12 m ou com sistema AC a bordo** — ART de engenheiro, compatibilização com NORMAM-211 (recreio) ou NORMAM-201/204/205 (comercial), e interface com certificadora (BV, Lloyd's, RINA, ABS) quando aplicável.
+> 2. **Retrofit de banco chumbo→lítio em arquitetura central** — LiFePO4 exige BMS, reconfiguração de alternador (field regulator ou DC-DC charger), revisão de fusível classe T, bonding e ventilação; cálculo e laudo técnico antes da troca (ABYC E-10 + TE-13 drafts).
+> 3. **Eletrificação, híbrido ou propulsão elétrica** — projeto de bus ≥ 48 V DC exige estudo de curto-circuito, coordenação de proteções, isolação galvânica e análise térmica; fora do escopo de instalador generalista.
+> 4. **Sistema AC 110/220 V com shore power + gerador + inverter** — ATS (automatic transfer switch), isolador galvânico ou transformador de isolação, ELCI/RCD/GFCI, distribuição por polaridade — ABYC E-11 + IEC 60092-series + NBR 5410 cruzados; erro aqui mata (choque fatal em água).
+> 5. **Certificação para classe comercial, charter ou exportação** — BV/Lloyd's/RINA para NORMAM-201/204/205 brasileiro; CE-RCD Directive 2013/53/EU para mercado europeu; USCG + ABYC para EUA. Cada regime exige projeto formal com traceability de normas.
+> 6. **Perícia pós-sinistro (incêndio, choque elétrico, eletrocussão)** — engenheiro com experiência em perícia (IBAPE, Abracem) + documentação do projeto original = base para defesa do proprietário/instalador; sem projeto, presunção de culpa.
+> 7. **Survey para compra/venda, seguro ou mudança de bandeira** — surveyor homologado avalia projeto vs instalação real; ausência ou divergência gera cláusulas de exceção na apólice e redução de valor na venda.
+> 8. **Mudança de classe NORMAM-211 (recreio) → NORMAM-201/205 (comercial/charter)** — reclassificação exige reprojeto completo (RBNA ou sociedade classificadora), adequação a normas mais rígidas e inspeção DPC.
+> 9. **Projeto em áreas classificadas (tanques de combustível, compartimento de baterias, lazareto com glp)** — zona Ex, ABYC E-11 seção 11 + ISO 8846 (ignition protection) + IEC 60079-series; equipamento não certificado nessas áreas = risco de explosão.
 
 ## O que é
 
@@ -269,12 +315,97 @@ O projeto deve indicar quando inspecionar cabos, terminais, baterias, fusíveis.
 
 ## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — tabelas de bitola, queda de tensão, proteção (referência técnica mais usada)
-- **ABYC E-2 (2020)** — bonding (parte do projeto)
-- **ISO 13297:2020** — sistemas elétricos AC e DC em pequenas embarcações (sucessora de ISO 10133)
-- **NORMAM-211 (2022 rev. aplicável via DPC)** — enquadramento regulatório brasileiro para amadores, embarcações de esporte e recreio e universo correlato
-- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referências complementares para princípios de baixa tensão, identificação e proteção
-- **IEC 60092 (edição a verificar)** — Electrical installations in ships (referência internacional)
+**Referência técnica de projeto (ABYC — mais usada na prática):**
+
+- **ABYC E-11 (2023)** — *AC & DC Electrical Systems on Boats*: tabelas de bitola (Tabela VI), queda de tensão (Tabela VI-A, 3%/10%), proteção no positivo ≤7", identificação por cor, proteção ≤178 mm do polo/barramento. **Documento mestre do projeto elétrico náutico.**
+- **ABYC E-2 (2020)** — *Cathodic Protection*: bonding, interligação de massas metálicas submersas, dimensionamento de ânodos de sacrifício. Parte integrante do projeto (não acessório).
+- **ABYC E-4 (2019) / TE-4 (2018)** — *Lightning Protection*: projeto do sistema de proteção contra raios, air terminals, eletrodos submersos, bonding específico.
+- **ABYC E-8 (2020)** — *AC Generators on Boats*: projeto de circuito de gerador, ATS, paralelismo com shore power.
+- **ABYC E-9 (2019)** — *DC Electrical Systems / Alternators and Chargers*: dimensionamento de alternador, regulação, carga multi-banco.
+- **ABYC E-10 (2018)** — *Storage Batteries*: dimensionamento, ventilação, fixação, DOD chumbo-ácido vs LiFePO4, fusível classe T ou MRBF.
+- **ABYC A-16 (2020)** — *Electric Navigation Lights*: homologação e instalação das luzes de navegação (cruzamento com COLREGs 72).
+- **ABYC A-4 (2018)** — *Fire Fighting Equipment*: interface do projeto elétrico com detecção/supressão de incêndio.
+
+**Normas internacionais para embarcações de recreio (ISO):**
+
+- **ISO 13297:2020** — *Small craft — Electrical systems — AC & DC installations* (sucessora de ISO 10133, unificando AC e DC).
+- **ISO 8846:1990** — *Small craft — Electrical devices — Protection against ignition of flammable gases* (ignition protection em áreas com combustível/GLP).
+- **ISO 10134:2019** — *Small craft — Electrical devices — Lightning protection*.
+
+**Normas internacionais para embarcações comerciais (IEC 60092-series — *Electrical installations in ships*):**
+
+- **IEC 60092-101** — Definitions and general requirements.
+- **IEC 60092-201** — System design — General.
+- **IEC 60092-202** — System design — Protection.
+- **IEC 60092-301** — Equipment — Generators and motors.
+- **IEC 60092-352** — Choice and installation of electrical cables.
+- **IEC 60092-401** — Installation and test of completed installation.
+- **IEC 60092-507** — Pleasure craft (consolidação para recreio).
+- **IEC 60364-series** — Low-voltage electrical installations (cruzamento para instalação AC shore-to-boat).
+- **IEC 61162-1/-2/-3 (NMEA 0183 / 2000)** — Rede digital de instrumentação e controle a bordo.
+
+**Normas brasileiras (ABNT + DPC):**
+
+- **ABNT NBR 5410:2004 + emendas** — *Instalações elétricas de baixa tensão*: referência para AC a bordo (shore power, gerador, inverter) e princípios de proteção/identificação.
+- **ABNT NBR IEC 60364** — adoção brasileira da série IEC 60364.
+- **NORMAM-211/DPC** — embarcações de esporte e recreio (regime amador).
+- **NORMAM-201/DPC** — tráfego e permanência (embarcações comerciais).
+- **NORMAM-204/DPC** — Segurança da Marinha Mercante.
+- **NORMAM-205/DPC** — embarcações de passageiros (charter, travessia).
+
+**Diretiva europeia (recreio, mercado CE):**
+
+- **CE-RCD Directive 2013/53/EU** — *Recreational Craft Directive*: marcação CE obrigatória para embarcações de recreio colocadas no mercado europeu; exige projeto conforme harmonised standards (ISO 13297, ISO 8846, ISO 10134, etc.).
+
+## Glossário rápido
+
+- **ABYC (American Boat & Yacht Council)** — organização norte-americana que edita as normas técnicas voluntárias mais adotadas no projeto elétrico náutico (E-11, E-2, E-8, E-9, E-10, etc.).
+- **ABS / Bureau Veritas / Lloyd's Register / RINA** — sociedades classificadoras (IACS) que certificam embarcações comerciais conforme SOLAS + IEC 60092.
+- **Alternador de bordo** — gerador DC acoplado ao motor de propulsão; dimensionamento via ABYC E-9 e capacidade de carga do banco.
+- **ART (Anotação de Responsabilidade Técnica)** — documento CREA que formaliza responsabilidade do engenheiro sobre o projeto; obrigatória em instalações comerciais e recomendada em recreio > 12 m.
+- **As-built** — documentação "como construído": reflete a instalação real (pós-execução), que pode diferir do projeto original; parte obrigatória do dossiê.
+- **Banco de baterias** — conjunto de baterias ligadas em série/paralelo para atingir tensão e Ah de projeto (ver [[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]]).
+- **BMS (Battery Management System)** — eletrônica embarcada em lítio que gerencia balanceamento, proteção e comunicação; obrigatório em LiFePO4.
+- **Bonding (ABYC E-2)** — interligação equipotencial de todas as massas metálicas submersas + gerador + blocos motor + tanques; reduz corrosão galvânica e elimina diferenças de potencial perigosas.
+- **Cable tray / Conduíte marine-grade** — encaminhamento organizado dos cabos com suportes a cada 450 mm (ABYC E-11).
+- **CAD elétrico (QElectroTech, EPLAN, AutoCAD Electrical)** — software para diagramas unifilares profissionais.
+- **Carga parasita** — consumo contínuo de equipamentos em standby (relés, displays, carregadores ociosos): 50-200 W/dia típico; entra no cálculo do banco.
+- **CE-RCD (Recreational Craft Directive)** — regulamentação europeia obrigatória para embarcações de recreio; exige declaração de conformidade ICNN + harmonised standards.
+- **Classe de proteção IP (IEC 60529)** — grau de proteção contra poeira e água; IP-67 típico para convés, IP-22 para cabine.
+- **Curto-circuito nominal (I_cc)** — corrente presumível de falta franca; dimensiona capacidade de interrupção de fusíveis (AIC — Amperage Interrupting Capacity).
+- **Diagrama unifilar (single-line diagram)** — representação simplificada do sistema elétrico com barramentos, proteções, cargas e fontes; documento central do projeto.
+- **DOD (Depth of Discharge)** — profundidade de descarga: 50% máximo em chumbo-ácido (vida útil), 80% em LiFePO4 (ABYC E-10).
+- **DPC (Diretoria de Portos e Costas)** — autoridade marítima brasileira que edita as NORMAM e fiscaliza via CP/DL/AG.
+- **ELCI (Equipment Leakage Circuit Interrupter)** — proteção diferencial AC em shore power (ABYC E-11), equivalente a RCD/DR 30 mA.
+- **EMC (Compatibilidade Eletromagnética)** — coexistência de sistemas sem interferência; ABYC E-11 + IEC 60533.
+- **Fusível classe T / MRBF** — fusíveis de alta AIC (até 20.000 A) exigidos próximos aos bancos LiFePO4 e cabos de partida.
+- **Galvanic isolator** — dispositivo em série com o terra do shore power; bloqueia DC galvânica e permite passagem de AC de falta.
+- **GFCI (Ground Fault Circuit Interrupter)** — proteção diferencial AC em tomadas (equivalente europeu: RCD; brasileiro: DR).
+- **Ignition protection (ISO 8846)** — equipamento classificado para não ignitar vapores de combustível; obrigatório em compartimento de motor gasolina.
+- **Inrush current** — corrente de partida transitória (5-8× nominal em motores AC/bombas); dimensiona proteção time-delay.
+- **Isolador galvânico vs transformador de isolação** — duas soluções para corrosão galvânica via shore power; transformador é mais caro e mais seguro (isolação total).
+- **Kill switch (battery switch)** — chave geral de bateria; exigida por ABYC E-11 em todo circuito DC principal.
+- **Load list** — planilha com todos os consumidores (W, V, h/dia, Wh/dia); base do cálculo do banco.
+- **MRBF (Marine Rated Battery Fuse)** — fusível de alta AIC instalado diretamente no polo da bateria.
+- **NEC (National Electrical Code) Art. 555** — regulamentação AC para marinas nos EUA (referência cruzada para shore power).
+- **NMEA 2000 (IEC 61162-3)** — rede digital de instrumentação (CAN bus a 250 kbps); substitui cabeamento analógico ponto-a-ponto.
+- **NORMAM (Normas da Autoridade Marítima)** — normas brasileiras DPC; 201 (tráfego), 204 (SMM), 205 (passageiros), 211 (recreio).
+- **Payload eletrônico** — equipamentos embarcados (GPS, radar, VHF, autopilot); consumo médio contínuo típico 80-200 W.
+- **Peak load vs continuous load** — carga de pico (transitória, inrush) vs contínua; ABYC exige ambos no dimensionamento.
+- **Perfil de uso (duty cycle)** — fração do dia em que cada equipamento opera; multiplicador honesto para dimensionar banco.
+- **Queda de tensão (voltage drop)** — ΔV = R × I; ABYC E-11 fixa 3% em circuitos críticos (nav, eletrônica, partida) e 10% em não-críticos (iluminação cabine).
+- **RCD / DR (Dispositivo Diferencial Residual)** — proteção diferencial 30 mA em AC; equivalente IEC/ABNT ao ELCI/GFCI.
+- **Resistividade (ρ) do cobre** — 0,0175 Ω·mm²/m; base do cálculo de seção.
+- **Retroengenharia do projeto** — processo de documentar embarcação existente sem projeto original (fotografar, medir, mapear, registrar).
+- **Shore power** — alimentação AC externa (marina); exige ATS, isolador galvânico/transformador, ELCI/RCD, polaridade correta.
+- **Single-point failure** — componente cuja falha derruba todo o sistema; projeto eletrico robusto deve identificá-los (ex.: barramento positivo único, gerador isolado).
+- **Size, Derating e Ampacity** — termos ABYC: Size = bitola AWG/mm², Ampacity = capacidade de corrente contínua, Derating = fator por temperatura ambiente e agrupamento.
+- **Surveyor marítimo** — profissional homologado (RBNA, Abracem, IBAPE) para vistoria; avalia projeto vs execução.
+- **Tabela VI ABYC E-11** — tabela de ampacity para cabos marine-grade (AWG 18 a 4/0); base primária de dimensionamento.
+- **Tabela VI-A ABYC E-11** — tabela de queda de tensão por AWG e comprimento em amp-feet.
+- **TBC (Thermal Breaker / Magnetic Breaker / Switchable Fuse)** — tipos de proteção; ABYC E-11 detalha aplicação de cada um.
+- **Voltage sag** — queda transitória de tensão durante partida de cargas grandes; deve ser avaliado no projeto.
+- **Wet cell vs AGM vs gel vs LiFePO4** — tecnologias de bateria, cada uma com curva de tensão, DOD e ventilação próprias (ABYC E-10).
 
 ## Como ensinar este tópico
 

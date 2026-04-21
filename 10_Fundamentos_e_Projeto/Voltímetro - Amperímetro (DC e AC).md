@@ -3,9 +3,37 @@ title: "Voltímetro / Amperímetro (DC e AC)"
 note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "VOLTIMETRO AMPERIMETRO (DC) e (AC) e7d19734f7fb827bba7a819fb2653ee0.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "32"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats (instrumentação de painel, shunts, proteção de circuitos de medição)"
+  - "ABYC E-10 (2023) — Storage Batteries (monitoramento de banco, SoC, SoH)"
+  - "ABYC E-13 (2022) — Lithium Ion Batteries (instrumentação específica LiFePO4)"
+  - "ABYC E-8 (2020) — AC Generators (frequencímetro, voltímetro AC)"
+  - "ABYC E-9 (2019) — DC Charging Systems (amperímetro alternador)"
+  - "ISO 13297:2020 — Small craft — Electrical systems AC & DC (requisitos de monitoramento)"
+  - "IEC 60051-1:2016 — Direct acting indicating analogue electrical measuring instruments (classes de exatidão)"
+  - "IEC 60051-2:1984 — Amperímetros e voltímetros analógicos"
+  - "IEC 60051-3:1984 — Wattímetros e varímetros"
+  - "IEC 60051-7:1984 — Multifunction instruments"
+  - "IEC 60688:2012 — Electrical measuring transducers (conversores)"
+  - "IEC 61010-1:2010 — Safety requirements for measurement equipment (CAT I-IV)"
+  - "IEC 61326-1:2020 — EMC requirements"
+  - "IEC 60529 — Graus de proteção IP (painel náutico IP-54 mín)"
+  - "IEC 60092-504 — Control and instrumentation on ships"
+  - "IEC 60092-401 — Installation and test of completed installation"
+  - "IEEE C57.13 — Standard Requirements for Instrument Transformers (TC/CT)"
+  - "ANSI C12.20 — Electricity meters (0,1% e 0,2% accuracy classes)"
+  - "NMEA 2000 (IEC 61162-3) — Rede digital para integração de instrumentação"
+  - "Victron Application Note — BMV Battery Monitor Installation"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "ABNT NBR IEC 61010-1:2010 — Segurança de instrumentos de medição"
+  - "INMETRO Portaria 200/2002 — Regulamentação de instrumentos de medição"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -39,6 +67,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > VOLTÍMETRO / AMPERÍMETRO (DC e AC) — Instrumentos de medição elétrica que permitem ao operador monitorar tensão e corrente no painel — os olhos do sistema elétrico a bordo.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Voltímetro isolado NÃO dá SoC confiável** — tensão cai artificialmente em descarga e sobe em carga; só faz sentido em repouso ≥ 2h com química/temperatura conhecidas; LiFePO4 com curva plana (13,0-13,3 V de 20-90% SoC) é PRATICAMENTE inútil.
+> 2. **Monitor com shunt = SoC real em tempo real** — Victron BMV/SmartShunt, Simarine PICO, Trimetric; integra corrente no tempo (coulomb counting) + sincronização com banco cheio; instrumento de referência em banco > 100 Ah.
+> 3. **Shunt SEMPRE no negativo principal** — todos os negativos passam por ele; instalar no positivo = inversão de sinal e risco de dano; shunt em ramal = contabiliza só aquele ramal.
+> 4. **Bitola do cabo de sinal do shunt = fino (0,75 mm² típico) + fusível 1 A** — corrente de sinal é μA-mA; cabo grosso é desnecessário, fusível protege monitor em curto.
+> 5. **Amperímetro AC exige TC (Transformador de Corrente)** — instalar instrumento direto na fase = queima; TC dimensionado à corrente máxima (100A/5A para até 100 A AC).
+> 6. **Voltímetro AC em painel é informação operacional, não proteção** — faixa aceitável 198-242 V (220 V ±10%), < 190 V sinaliza cabo/marina com problema; a proteção real é o DR/ELCI/GFCI.
+> 7. **Classe de exatidão IEC 60051 define utilidade** — classe 0,5 (±0,5% fundo de escala) profissional, classe 1,5 popular náutico, classe 2,5 automotivo (aceitável só para indicação).
+> 8. **Sincronização do BMV exige "100% full charge"** — sem atingir flutuação total periodicamente, SoC deriva; parâmetros de charged voltage + tail current + charged detection time devem estar certos.
+> 9. **NMEA 2000 (IEC 61162-3) integra instrumentação** — BMV + MPPT + Cerbo GX + plotter num único display; redução de cabeamento e consistência de dados.
+
+> [!danger] Quando chamar um especialista (eletricista náutico / integrador Victron/Mastervolt)
+> 1. **SoC sistematicamente errado mesmo após recalibração** — bypass de shunt (negativo conectado direto na bateria), capacidade programada incorreta, parâmetros de sincronização errados ou banco envelhecido com SoH << 100%; diagnóstico exige mapeamento de todos os negativos.
+> 2. **Instrumentação de banco lítio multi-bateria em série/paralelo** — BMS de cada pack + BMV de banco + BMS-master: configuração coordenada exige conhecimento do ecossistema (Victron Lynx Distributor + Lynx Smart BMS + BMV-712 + Cerbo GX + VRM).
+> 3. **Integração NMEA 2000 + Victron VE.Bus + SignalK + plotter Raymarine/Garmin/B&G** — protocolos diferentes, gateways (Victron Cerbo, Actisense NGT-1), mapeamento PGN, certificação NMEA; fora do escopo de integrador generalista.
+> 4. **Medição de corrente em cabo-tronco de embarcação comercial (> 500 A DC, > 200 A AC)** — TC de precisão, shunt calibrado, integrador ANSI C12.20; laudo auditável pela classificadora (BV, Lloyd's, RBNA).
+> 5. **Diagnóstico de instrumento queimado por surto (raio, falha shore power)** — análise de trilha de dano, identificação de origem, renovação coordenada de proteções (varistores MOV, GDT, TVS); substituição sem diagnóstico = queima repetida.
+> 6. **Certificação de painel elétrico comercial (RBNA, BV)** — painel IP-54/56 + disjuntores certificados + instrumentação classe 1,5 + etiquetas normativas; exige desenho de conjunto + ART + conformidade IEC 61439-series.
+> 7. **Perícia pós-sinistro com instrumento como evidência** — preservação do instrumento queimado, cadeia de custódia, laudo IBAPE/Abracem; trocar sem perícia = perda de evidência.
+> 8. **Monitoramento remoto VRM com alarmes críticos (banco < 20% SoC, gerador overload, shore desconectado)** — configuração de regras + notificações push/email/SMS + integração IoT; exige conta VRM + modem/4G + configuração avançada.
+> 9. **Instrumentação em embarcação hospitalar, OPV médico ou offshore crítico** — NBR 13534 (criticidade), redundância N+1, fail-safe em cada medição; projeto dedicado.
 
 ## Escopo
 
@@ -286,12 +336,108 @@ Voltímetro AC + amperímetro AC (com TC) + frequencímetro para o sistema shore
 | Bluetooth/app | Crescendo com Victron | Padrão |
 | Shunt instalado corretamente | Frequentemente bypassado por negativos avulsos | Rigoroso — todos os negativos pelo shunt |
 
-## Normas e referências técnicas
+## Normas aplicáveis
 
-- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: instrumentação recomendada, shunts, proteção de circuitos de medição
-- **ISO 13297:2020** — Electrical systems on recreational craft
-- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- Documentação Victron: Application Note "BMV Battery Monitor Installation" — referência prática completa
+**ABYC — instrumentação de painel náutico:**
+
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: instrumentação recomendada, shunts no negativo principal, proteção de circuitos de medição (fusível de sinal 1 A), bitola do cabo de sinal.
+- **ABYC E-10 (2023)** — Storage Batteries: monitoramento de banco, SoC, SoH, histórico de ciclos.
+- **ABYC E-13 (2022)** — Lithium Ion Batteries: instrumentação específica LiFePO4 (integração BMS + BMV).
+- **ABYC E-8 (2020)** — AC Generators: voltímetro + amperímetro + frequencímetro de gerador.
+- **ABYC E-9 (2019)** — DC Charging Systems: amperímetro de alternador em tempo real.
+
+**ISO — embarcações de recreio:**
+
+- **ISO 13297:2020** — Small craft — Electrical systems AC & DC: requisitos de monitoramento operacional.
+
+**IEC — instrumentos de medição (segurança + exatidão):**
+
+- **IEC 60051-1:2016** — Direct acting indicating analogue electrical measuring instruments: classes de exatidão (0,1; 0,2; 0,5; 1,0; 1,5; 2,5; 5,0).
+- **IEC 60051-2:1984** — Amperímetros e voltímetros analógicos de indicação direta.
+- **IEC 60051-3:1984** — Wattímetros e varímetros.
+- **IEC 60051-7:1984** — Multifunction instruments.
+- **IEC 60688:2012** — Electrical measuring transducers (conversores sinal-corrente 4-20 mA, sinal-tensão 0-10 V).
+- **IEC 61010-1:2010** — Safety requirements for measurement (CAT I-IV).
+- **IEC 61326-1:2020** — EMC requirements for measurement equipment.
+- **IEC 60529** — Graus de proteção IP: painel náutico IP-54 mínimo, IP-65/67 em instalação externa.
+- **IEC 60092-504** — Control and instrumentation on ships (comerciais).
+- **IEC 60092-401** — Installation and test of completed installation.
+
+**ANSI / IEEE — EUA:**
+
+- **IEEE C57.13** — Standard Requirements for Instrument Transformers (TC e PT): classes 0,3, 0,6, 1,2 de exatidão.
+- **ANSI C12.20** — Electricity meters: classes 0,1% e 0,2% para medidores fiscais (auditáveis).
+
+**Integração digital:**
+
+- **NMEA 2000 (IEC 61162-3)** — rede digital para integração de instrumentação (BMV, MPPT, GX, plotter).
+- **Victron Application Note** — BMV Battery Monitor Installation: referência prática documentada.
+
+**Brasil:**
+
+- **ABNT NBR 5410:2004 + emendas** — princípios de baixa tensão, identificação e proteção.
+- **ABNT NBR IEC 61010-1:2010** — segurança de instrumentos de medição.
+- **INMETRO Portaria 200/2002** — regulamentação de instrumentos de medição.
+
+## Glossário rápido
+
+- **Accuracy class (classe de exatidão IEC 60051)** — erro máximo em % do fundo de escala: 0,5 (laboratório), 1,0-1,5 (industrial), 2,5 (popular).
+- **Ah counter (contador de ampère-hora)** — integra corrente × tempo; base do cálculo de SoC no BMV.
+- **Amperímetro DC direto** — instrumento com bobina em série no circuito (obsoleto, limitado a baixa corrente).
+- **Amperímetro DC com shunt** — instrumento que lê queda de tensão no shunt (mV) e converte para corrente; padrão atual.
+- **Amperímetro AC** — lê corrente AC via TC (transformador de corrente); instalação direta = queima.
+- **ANSI C12.20 classe 0,1% / 0,2%** — medidores fiscais de energia (auditáveis pela concessionária).
+- **Auto-ranging** — seleção automática de escala (em alguns modelos digitais).
+- **Bluetooth (Victron VE.Direct)** — comunicação sem fio do SmartShunt/BMV para app no celular.
+- **BMS (Battery Management System)** — eletrônica de lítio que gerencia células; fornece dados ao BMV via cabo de comunicação.
+- **BMV (Battery Monitor Victron)** — linha de monitores Victron: BMV-700, BMV-702, BMV-712 Smart (BT), SmartShunt (sem display).
+- **Burden (carga) de TC** — impedância conectada ao secundário do TC; excesso de burden satura o TC.
+- **Cerbo GX / Color Control / Venus OS** — gateway Victron que centraliza dados de monitores + inversor + MPPT + gerador.
+- **Charged voltage (tensão de banco cheio)** — parâmetro BMV; valor para considerar banco 100% (ex: 14,0 V em chumbo, 13,8 V em lítio).
+- **Charged detection time** — tempo que banco precisa ficar na tensão cheia para sincronizar SoC (ex.: 3 min).
+- **Class 1,5 IEC 60051** — exatidão ±1,5% do fundo de escala; padrão em instrumentos náuticos de painel.
+- **Coulomb counting** — método de integração de corrente no tempo para calcular Ah consumidos (base do BMV).
+- **CT (Current Transformer / TC)** — transformador que reduz corrente alta AC a valor seguro para o instrumento (100A/5A típico).
+- **Derating por temperatura** — redução de exatidão em temperatura fora de 0-40 °C típico.
+- **Digital display (segmentos LED ou LCD)** — leitura numérica; padrão atual (analógico é obsoleto).
+- **Exatidão ±0,5 V em voltímetro 12 V** — 4% de erro; inadequado para diagnóstico de SoC.
+- **Fail-safe reading** — display mostra zero ou infinito em falha; exige design adequado.
+- **Fluke 107 / 117 (CAT III 600 V)** — referência profissional de multímetro para uso com amperímetro AC/DC.
+- **Frequencímetro (Hz meter)** — mede frequência AC; 60 Hz nominal Brasil, 50 Hz Europa.
+- **GX Device** — família Victron Cerbo/CCGX/Venus; interface centralizada.
+- **Hall effect sensor** — sensor magnético que mede corrente DC sem contato (alicate DC+AC).
+- **Input impedance ≥ 10 MΩ** — voltímetro digital não carrega o circuito; analógico tem ~20 kΩ/V (carrega circuito).
+- **Isolação galvânica (opto-isolador)** — separação elétrica entre instrumento e circuito medido; crítico em AC.
+- **Logging (registro)** — monitor com memória interna (BMV-702/712) armazena histórico de SoC, corrente, temperatura.
+- **Low battery alarm** — alarme programável em monitor (SoC < X% ou V < Y); aciona buzzer ou notificação.
+- **Margin de proteção (CAT)** — CAT III 600 V protege em circuito nominal 600 V com transientes 6 kV.
+- **Measurement transducer** — converte grandeza em sinal 4-20 mA ou 0-10 V para SCADA/controlador.
+- **Monitor centralizado (dashboard)** — display grande que integra tensão, corrente, SoC, autonomia, temperatura (ex.: Simarine PICO).
+- **mV/A (sensibilidade do shunt)** — ex.: 500A/75mV = 0,15 mV/A; BMV lê essa relação para converter.
+- **Multi-shunt BMV (Victron Lynx)** — monitoramento de múltiplos bancos simultâneos.
+- **Negativo bypass** — erro comum: negativo de algum equipamento conectado direto na bateria sem passar pelo shunt; resulta em SoC errado.
+- **NMEA 2000 integration** — BMV, MPPT, inverter publicam dados em PGNs (Parameter Group Numbers) específicos.
+- **Panel meter (instrumento de painel)** — instrumento embutido em painel de embarcação (72x72 mm, 96x96 mm, 48x48 mm padrão).
+- **PGN 127508 (NMEA 2000)** — Battery Status: voltage, current, temperature.
+- **PGN 127509 (NMEA 2000)** — Inverter Status.
+- **Power factor (cosφ) em AC** — fator de potência (real vs aparente); medidor AC avançado o mede.
+- **Precisão vs exatidão** — precisão = repetibilidade, exatidão = proximidade do valor verdadeiro; dois conceitos diferentes.
+- **Recalibração de capacidade (battery capacity)** — parâmetro programável no BMV: "este banco tem X Ah"; incorreto = SoC errado.
+- **Redundant monitor** — segunda medição (BMV + voltímetro analógico paralelo) para tolerância a falha.
+- **RS-485 Modbus** — protocolo industrial para instrumentação (alternativa ao NMEA 2000).
+- **Shunt resistivo (resistência de precisão mΩ)** — resistor calibrado; ex.: 500A/75mV = 0,00015 Ω; dissipa 37,5 W a 500 A.
+- **Sincronização automática (Auto-sync)** — BMV sincroniza SoC a 100% quando detecta banco cheio (charged voltage + tail current + time).
+- **SmartShunt Victron (500A/1000A/2000A)** — shunt com Bluetooth integrado; sem display próprio (lê no app VictronConnect).
+- **SoC (State of Charge)** — % de carga atual do banco; valor primário do monitor.
+- **SoH (State of Health)** — % da capacidade nominal que o banco ainda entrega; fim de vida típico = 80%.
+- **Tail current** — corrente mínima abaixo da qual banco é considerado cheio (tipicamente 2-4% da capacidade nominal).
+- **TC classe 0,5 IEEE C57.13** — transformador de corrente com exatidão 0,5%; padrão fiscal/industrial.
+- **Transformer-based AC meter** — instrumento AC que usa TC interno (sem fio externo).
+- **True RMS voltmeter AC** — lê tensão AC não-senoidal corretamente; essencial em inverter.
+- **VE.Direct (Victron)** — protocolo serial proprietário para comunicação entre Victron + BMV + MPPT + Cerbo GX.
+- **VictronConnect (app)** — aplicativo gratuito para configurar BMV, MPPT, inverter via Bluetooth.
+- **VRM (Victron Remote Management)** — portal web gratuito para monitoramento remoto; exige GX Device + internet.
+- **Zero-crossing detection** — detecção de passagem por zero em AC; usado em wattímetros e medidores de fator de potência.
 
 ## Como ensinar este tópico
 

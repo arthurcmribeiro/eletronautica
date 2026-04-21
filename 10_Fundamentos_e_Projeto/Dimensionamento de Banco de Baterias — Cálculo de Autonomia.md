@@ -3,16 +3,35 @@ title: "Dimensionamento de Banco de Baterias — Cálculo de Autonomia"
 note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "DIMENSIONAMENTO DE BANCO DE BATERIAS — CÁLCULO DE  33a19734f7fb8174ba99e27e7b0fef11.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "28"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction:
   - "Brasil"
   - "internacional"
 normas_citadas:
-  - "ABYC E-11 (2023)"
-  - "ABYC E-10 (2023)"
-  - "ABYC E-13 (2022)"
-  - "ISO 13297:2020"
+  - "ABYC E-10 (2023) — Storage Batteries (chumbo-ácido + lítio integrado)"
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats"
+  - "ABYC E-13 (2022) — Lithium Ion Batteries (LiFePO4 + químicas afins)"
+  - "ABYC E-9 (2019) — DC Electrical Systems / Alternators and Chargers"
+  - "ABYC TE-13 — Lithium Ion Batteries (technical note)"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC & DC installations"
+  - "ISO 10133:2012 (retirada, sucedida por 13297)"
+  - "ISO 8846:1990 — Small craft — Electrical devices — Protection against ignition of flammable gases"
+  - "IEC 60092-507 — Electrical installations in ships — Pleasure craft"
+  - "IEC 62133-2:2017 — Secondary cells and batteries (safety — lithium)"
+  - "IEC 62619:2022 — Secondary cells and batteries — Safety for industrial LiB"
+  - "IEC 62620:2014 — Secondary cells and batteries for industrial applications"
+  - "UN 38.3 — Transport of Dangerous Goods — Lithium batteries (test manual)"
+  - "UL 1973:2022 — Batteries for Use in Stationary and Motive Auxiliary Power Applications"
+  - "IMO MSC.1/Circ.1646 (2021) — Guidelines for use of Li-ion batteries in ship applications"
+  - "USCG CG-ENG Policy Letter 02-19 — Lithium battery safety"
+  - "ABNT NBR 5410:2004 + emendas"
+  - "NORMAM-211/DPC — Esporte e recreio"
+  - "NORMAM-201/DPC — Tráfego e permanência comercial"
+  - "NORMAM-204/DPC — Segurança Marinha Mercante"
+  - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -47,6 +66,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > DIMENSIONAMENTO DE BANCO DE BATERIAS — Como calcular a capacidade necessária para um banco de baterias náutico. O cálculo mais importante do projeto elétrico — feito errado, o sistema inteiro é sub ou superdimensionado.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Levantamento de cargas honesto primeiro** — planilha com equipamento × potência (W) × tensão × horas/dia × Wh/dia; somar para obter o **consumo diário total em Wh**. Sem isso nenhum cálculo é válido.
+> 2. **DOD por tecnologia (ABYC E-10 + E-13)** — chumbo-ácido/AGM/GEL até 50%, LiFePO4 até 80%; fórmula: `C_banco (Wh) = Consumo_diário × Autonomia ÷ DOD`.
+> 3. **Converter Wh → Ah na tensão do sistema** — `Ah = Wh ÷ V_sistema` (12 V, 24 V ou 48 V). Sistemas ≥ 24 V reduzem corrente e bitola de cabo-tronco (melhor eficiência).
+> 4. **Margem de envelhecimento 20-30%** — bateria de 3 anos entrega 70-85% da capacidade nominal; projetar para o fim da vida útil, não para o dia da instalação.
+> 5. **Banco de partida é DIFERENTE do banco de serviço** — partida exige CCA (Cold Cranking Amperes), não Ah; serviço exige ciclo profundo. Isolamento obrigatório via VSR/ACR/chave Bi-Banco (ABYC E-11).
+> 6. **Paralelismo exige baterias idênticas** — mesma marca, modelo, lote, idade; mix de baterias velhas + novas degrada rápido o conjunto (balanceamento ruim).
+> 7. **Lítio (LiFePO4) exige BMS obrigatório + fusível classe T** — ABYC E-13; BMS gerencia SOC, SOH, células desbalanceadas e corta em sobretensão/subtensão/sobretemperatura.
+> 8. **Efeito Peukert reduz capacidade útil em chumbo** — a 100Ah nominal a C/20, entrega ~70Ah a C/5 e ~50Ah a C/2; lítio tem efeito Peukert mínimo mas respeita C-rate do fabricante.
+> 9. **Sistema de geração tem que recarregar em tempo útil** — banco sem recarga adequada (solar + alternador + shore power + gerador) é banco mal-dimensionado; calcular **balanço energético diário**, não só capacidade.
+
+> [!danger] Quando chamar um especialista (engenheiro eletricista náutico / BMS engineer)
+> 1. **Retrofit chumbo → lítio em banco de serviço existente** — exige reavaliação de alternador (field regulator ou DC-DC charger), fusível classe T, ventilação, localização (lítio não libera hidrogênio mas pode entrar em *thermal runaway*), bonding e BMS compatível (ABYC E-13 + IMO MSC.1/Circ.1646).
+> 2. **Banco ≥ 48 V DC (eletrificação / híbrido / hotel load grande)** — tensões nominais > 50 V (valor de alerta SELV) exigem proteções adicionais, interlocks, estudo de curto-circuito e coordenação de proteções; fora do escopo de instalador generalista.
+> 3. **Banco lítio para classificação SOLAS / NORMAM-201/204/205** — embarcações comerciais exigem submissão de memorial de cálculo + BMS certificado (UL 1973, IEC 62619) + ventilação/detecção gás + sistema de supressão (FM-200/Novec 1230/água-névoa); interface com sociedade classificadora (BV, Lloyd's, RINA).
+> 4. **Transporte aéreo ou importação de lítio > 100 Wh/célula** — UN 38.3 obrigatória; certificado de teste por laboratório homologado e documentação de transporte aéreo (IATA DGR Seção II); erro aqui = apreensão na alfândega.
+> 5. **Sistema híbrido com shore power + gerador + inverter + solar simultâneos** — coordenação de carregadores multi-fonte (priorização, curva de absorção, equalização), risco de sobrecarga se dois carregadores entregam simultaneamente; projeto integrado exige Victron Quattro/MultiPlus ou equivalente com configuração VE.Bus/VE.Can.
+> 6. **Thermal runaway real ou suspeita** — lítio com inchaço, calor, vazamento ou gás: **desconectar, evacuar, não apagar com água sem EPI** (risco de choque DC); laudo técnico + troca do pack + investigação de causa (célula defeituosa, BMS com falha, sobrecarga).
+> 7. **Banco de tração em propulsão elétrica (ePropulsion, Torqeedo, Oceanvolt)** — tensões 48-400 V DC, classes de isolação específicas, resfriamento líquido ou ar forçado, interlocks de acesso; engenharia dedicada do fabricante + vistoria pré-comissionamento.
+> 8. **Perícia pós-incêndio em banco de baterias** — investigação IBAPE/Abracem; preservação de evidências (não descartar células queimadas), análise de BMS, cabeamento, fusíveis; base para disputa com seguradora.
+> 9. **Charter/Marina com múltiplas embarcações em shore power comum** — isolamento galvânico insuficiente + banco lítio em paralelo via shore = risco de corrosão eletrolítica acelerada e descarga cruzada via terra; exige estudo por surveyor elétrico.
 
 ## O que é
 
@@ -244,11 +285,88 @@ R$3.000 / 2.880.000 Wh = R$0,001/Wh
 
 ## Normas aplicáveis
 
-- **ABYC E-10 (2023)** — Storage Batteries (requisitos de instalação, ventilação e retenção)
-- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (interface de bancos com o sistema de bordo)
-- **ABYC E-13 (2022)** — Lithium Ion Batteries (requisitos específicos para LiFePO4 e química afim)
-- **ISO 13297:2020** — pequenas embarcações, sistemas elétricos (sucessora de ISO 10133)
-- Datasheet e manual do fabricante da bateria — define os DOD, C-rate, temperatura e regime de carga admissíveis para o cálculo acima
+**ABYC (referência técnica de bancos náuticos):**
+
+- **ABYC E-10 (2023)** — *Storage Batteries*: requisitos de instalação, ventilação, fixação mecânica (resistir a aceleração em pitching/rolling), terminais, isolação e retenção. Consolidou chumbo-ácido + lítio na última revisão.
+- **ABYC E-11 (2023)** — *AC and DC Electrical Systems on Boats*: interface do banco com barramento, proteção no positivo, bitola do cabo-tronco, chaves de isolamento (Bi-Banco, ACR, VSR).
+- **ABYC E-13 (2022)** — *Lithium Ion Batteries*: requisitos específicos LiFePO4/NMC/LFP: BMS obrigatório, localização, ventilação, fusível classe T, detecção de temperatura, estratégia de carga.
+- **ABYC E-9 (2019)** — *DC Electrical Systems — Alternators and Chargers*: dimensionamento do sistema de geração compatível com o banco.
+- **ABYC TE-13** — *Technical note sobre lítio*: complementa E-13 com orientações de campo e casos.
+
+**ISO (embarcações de recreio mercado CE):**
+
+- **ISO 13297:2020** — *Small craft — Electrical systems — AC & DC installations* (sucessora de ISO 10133, agora unificada).
+- **ISO 8846:1990** — ignition protection (relevante para banco instalado próximo a combustível/GLP).
+
+**IEC (comerciais + baterias industriais):**
+
+- **IEC 60092-507** — Electrical installations in ships — pleasure craft.
+- **IEC 62133-2:2017** — *Secondary cells and batteries containing alkaline or other non-acid electrolytes — Safety requirements for portable sealed secondary cells (Part 2: Lithium)*.
+- **IEC 62619:2022** — *Safety requirements for secondary lithium cells and batteries for use in industrial applications*.
+- **IEC 62620:2014** — *Secondary lithium cells and batteries for use in industrial applications*.
+
+**Transporte, importação e certificação:**
+
+- **UN 38.3** — Manual de Testes e Critérios (transporte de baterias lítio). Essencial para importação e frete aéreo.
+- **UL 1973:2022** — *Batteries for Use in Stationary, Vehicle Auxiliary Power and Light Electric Rail (LER) Applications*: certificação reconhecida pela USCG para banco marítimo lítio.
+
+**IMO + USCG (embarcações comerciais / SOLAS):**
+
+- **IMO MSC.1/Circ.1646 (2021)** — *Guidelines for the use of lithium-ion batteries in ship applications*: diretrizes para projeto, operação e emergência com bancos lítio a bordo.
+- **USCG CG-ENG Policy Letter 02-19** — Lithium battery safety guidance (aplicável a embarcações sob bandeira EUA ou operando em águas EUA).
+
+**Brasil (ABNT + DPC):**
+
+- **ABNT NBR 5410:2004 + emendas** — princípios de baixa tensão (referência para AC shore power e interface).
+- **NORMAM-211/DPC** — embarcações de esporte e recreio.
+- **NORMAM-201/204/205/DPC** — tráfego comercial, SMM, passageiros.
+
+**Diretiva europeia:**
+
+- **CE-RCD Directive 2013/53/EU** — Recreational Craft Directive (marcação CE + harmonised standards para mercado europeu).
+
+**Documentação primária obrigatória:** datasheet e manual do fabricante — define **os limites reais** de DOD, C-rate, temperatura operacional, vida útil (ciclos × DOD × temperatura) e regime de carga (absorção, float, equalização). O cálculo de projeto **deve respeitar** esses limites, não as médias de mercado.
+
+## Glossário rápido
+
+- **Ah (Ampère-hora)** — unidade de capacidade de carga elétrica: corrente × tempo. Bateria de 100 Ah @ 12 V armazena 1200 Wh nominais.
+- **AIC (Amperage Interrupting Capacity)** — capacidade de interrupção de fusível/disjuntor em curto; ABYC E-11 exige ≥ I_cc do banco (típico LiFePO4: 3.000-20.000 A).
+- **Alternador com field regulator externo** — regulador externo (Balmar, Wakespeed, Victron Smart Alternator) controla tensão de campo; essencial em alternador carregando banco lítio.
+- **BCI Group** — classificação de tamanho de bateria chumbo-ácido (24, 27, 31, 4D, 8D); padrão usado pela indústria automotiva e náutica.
+- **BMS (Battery Management System)** — eletrônica embarcada em pack lítio que monitora tensão de célula, temperatura, SOC, SOH, balanceamento e corta em falha. Obrigatório em LiFePO4 (ABYC E-13).
+- **C-rate** — taxa de descarga relativa à capacidade: C/5 = 20 A em bateria 100 Ah. Fabricante define C-rate máximo admissível.
+- **CCA (Cold Cranking Amperes)** — corrente de partida a frio (-18 °C por 30 s com tensão ≥ 7,2 V); principal parâmetro de banco de partida, NÃO do banco de serviço.
+- **Ciclo de carga/descarga** — uma descarga + recarga completa; vida útil medida em ciclos × DOD (ex.: LiFePO4 3000 ciclos @ 80% DOD).
+- **Chumbo-ácido flooded (wet cell)** — tecnologia mais antiga, eletrólito líquido, exige ventilação para H₂, manutenção de água destilada.
+- **C_total (Wh)** — consumo total do período de autonomia desejado: Consumo_diário × N dias.
+- **Derating por temperatura** — capacidade de chumbo cai ~1%/°C abaixo de 25°C; em geladeira do porão a 10°C, 100 Ah viram ~85 Ah.
+- **DOD (Depth of Discharge)** — % descarregada: 50% chumbo/AGM/GEL, 80% LiFePO4 (ABYC E-10/E-13).
+- **Efeito Peukert** — em chumbo, capacidade real cai com taxa de descarga (equação: Cp = I^n × t, onde n ≈ 1,1-1,3).
+- **Equalização** — carga controlada em sobretensão (15,5 V para 12 V chumbo) que reverte sulfatação; NUNCA aplicar em AGM/GEL/LiFePO4.
+- **Fusível classe T** — fusível de alta AIC (20.000 A @ 125 VDC) usado próximo a polo de banco lítio (ABYC E-11 + E-13).
+- **Gel cell** — eletrólito gelificado; ciclos profundos, intolerante a sobretensão, DOD até 50%.
+- **Hotel load** — consumo "residencial" da embarcação (luzes, geladeira, entretenimento, bombas de conforto); diferente do propulsão load.
+- **LiFePO4 (Lithium Iron Phosphate, LFP)** — química de lítio mais estável termicamente, menor energia específica que NMC mas segurança muito superior; padrão de mercado náutico.
+- **Load list (planilha de cargas)** — documento base do projeto: equipamento, W, V, A, h/dia, Wh/dia (ver nota [[Projeto Elétrico de Embarcação — Passo a Passo]]).
+- **MRBF (Marine Rated Battery Fuse)** — fusível AIC alta montado diretamente no polo da bateria.
+- **NMC (Nickel Manganese Cobalt)** — química lítio de alta densidade, usada em veículos elétricos; maior risco térmico que LFP; menos comum em náutica.
+- **Paralelo balanceado** — baterias em paralelo com cabos de mesmo comprimento do barramento positivo ao negativo (método diagonal ou fat stud) para corrente igual por bateria.
+- **Parasitic load (carga parasita)** — consumo contínuo em standby: displays, relés, BMS, ESCOs — 50-200 Wh/dia típico.
+- **Peak load** — carga de pico momentânea (inverter em partida AC compressor, guincho âncora); dimensiona C-rate do banco e fusível.
+- **Pilhagem em série** — múltiplas baterias 12 V ligadas em série para compor 24 V ou 48 V; balanceamento por células-cruzadas exige cuidado.
+- **Profile of use (perfil de uso)** — fração do dia em que cada equipamento opera; multiplicador honesto, não "máximo teórico" (todos ligados o dia todo).
+- **Reserva de projeto** — margem sobre o consumo calculado (15-30%) para cobrir envelhecimento, incerteza de uso e criticidade.
+- **RoHS / REACH** — diretivas europeias que regulam substâncias perigosas em baterias importadas.
+- **SLA (Sealed Lead-Acid)** — termo genérico que abrange AGM e GEL.
+- **SoC (State of Charge)** — % de carga atual; monitor de bateria (shunt + display) valida o dimensionamento.
+- **SoH (State of Health)** — % da capacidade nominal que o banco ainda entrega; 100% novo → 80% fim de vida útil.
+- **Sulfatação** — cristalização de sulfato de chumbo nas placas em chumbo descarregado por muito tempo; reduz capacidade irreversível a partir de certo estágio.
+- **Temperatura de operação LiFePO4** — carga entre 0 °C e +45 °C, descarga -20 °C a +60 °C (valores típicos; fabricante define).
+- **Thermal runaway** — reação em cadeia térmica em lítio após falha de célula; gera gás inflamável + calor extremo; não apagar com água em tensão viva.
+- **Tray (bandeja de bateria)** — receptáculo com contenção de eletrólito (chumbo) e fixação; ABYC E-10 exige resistir a aceleração 90° (pitching) + 30° (rolling) por 1 min.
+- **VRLA (Valve Regulated Lead-Acid)** — SLA com válvula de alívio (tecnologia AGM e GEL).
+- **VSR / ACR (Voltage Sensitive Relay / Automatic Charging Relay)** — relé automático que conecta bancos quando tensão de carga está presente e isola quando ausente.
+- **Wh (Watt-hora)** — unidade de energia; Wh = V × Ah. Fundamental para cálculo correto entre tensões diferentes.
 
 ## Como ensinar este tópico
 

@@ -3,9 +3,49 @@ title: "Transformador Bivolt"
 note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "editorial-addition-2026-04-13"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "39"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats (shore power + isolation + bond N-PE)"
+  - "ABYC A-22 — Marinas and Boatyards"
+  - "ABYC E-4 — Lightning Protection (cross-ref)"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC and DC"
+  - "ISO 8846:2020 — Small craft — Electrical devices — Protection against ignition"
+  - "IEC 60076-1:2011 — Power transformers — General"
+  - "IEC 60076-5:2006 — Ability to withstand short circuit"
+  - "IEC 60076-11:2018 — Dry-type transformers"
+  - "IEC 60076-18 — Measurement of frequency response"
+  - "IEC 61558-1:2017 — Safety of transformers, reactors, power supply units"
+  - "IEC 61558-2-1 — Particular requirements for isolating transformers"
+  - "IEC 61558-2-4 — Isolating transformers for general applications"
+  - "IEC 60092-201 — Electrical installations in ships — System design"
+  - "IEC 60092-301 — Equipment — Generators, converters, transformers"
+  - "IEC 60092-352 — Cables for shipboard installations"
+  - "UL 1561 — Dry-Type General Purpose and Power Transformers"
+  - "UL 506 — Specialty Transformers"
+  - "NEC Art. 250 — Grounding and Bonding"
+  - "NEC Art. 450 — Transformers and Transformer Vaults"
+  - "NEC Art. 555 — Marinas, Boatyards, Boat Basins"
+  - "NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "NBR 5356-1/-2/-3 — Transformadores de potência"
+  - "NBR 10295 — Transformadores de potência secos"
+  - "NBR IEC 61558-1/-2 — Segurança de transformadores"
+  - "INMETRO Portaria 637/2014 — Regulamentação de transformadores"
+  - "ANEEL PRODIST Módulo 8 — Qualidade da energia (cross-ref)"
+  - "DNV-RU-SHIP Pt 4 Ch 8 — Electrical installations"
+  - "Lloyd's Register Rules Pt 6 — Electrical"
+  - "EN 61558-1 — Safety of transformers"
+  - "EN 61558-2-4 — Isolating transformers"
+  - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
+  - "NORMAM-211/DPC — Esporte e recreio"
+  - "NORMAM-201/204/DPC — Comercial / SMM"
+  - "NFPA 302 — Pleasure and Commercial Motor Craft (shore power integration)"
+review_level: "engineering-curated"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -42,6 +82,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > "Transformador bivolt" é a expressão de campo usada para o equipamento que permite à embarcação operar entre marinas com tensões e topologias diferentes. Em projeto sério, isso precisa ser refinado: às vezes o problema é só tensão; às vezes é tensão + topologia; às vezes é topologia + isolamento galvânico. Por isso, o termo pode esconder três soluções diferentes: autotransformador, transformador de isolamento com taps múltiplos e conversão eletrônica de entrada. Para a realidade brasileira, a solução mais robusta costuma ser o equipamento que, além de adaptar a tensão, permite definir de forma previsível o sistema derivado de bordo.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **"Bivolt" esconde TRÊS soluções distintas** — autotransformador (só adapta V), transformador de isolamento com taps (V + topologia + isolamento galvânico), ou entrada AC universal em equipamento específico (carregador, inverter); NÃO são intercambiáveis.
+> 2. **Autotransformador ≠ isolação galvânica** — sem enrolamento primário e secundário separados fisicamente, o loop galvânico com a marina PERMANECE; vender autotransformador como "isolação" é fraude técnica.
+> 3. **Brasil exige adaptar TOPOLOGIA + TENSÃO** — `220 V fase-fase` (marina) → `220 V fase-neutro` (barco) só com transformador de isolamento + sistema derivado documentado; autotransformador cria "neutro artificial" perigoso.
+> 4. **Transformador de isolamento com taps múltiplos é a arquitetura mais robusta para trocar marinas no Brasil** — tap primário 120/208/220/230/240 V, secundário fixo 220 V f-n; define fronteira técnica clara.
+> 5. **Dimensionamento em kVA (VA), NÃO watt** — somar carga contínua + motor inrush (3–6× running); margem 25%; ar-condicionado e compressor de pressurização dominam o pico.
+> 6. **Bond neutro-PE DEVE existir no secundário APENAS quando sistema derivado é criado** — ponto ÚNICO, documentado no unifilar; NEC 250.30 + ABYC E-11 + IEC 61558-2-4; duplicar = corrente em PE + corrosão + ESD.
+> 7. **DR/ELCI/RCD precisa enxergar a topologia da SAÍDA do transformador, não da entrada** — o diferencial mede soma vetorial dos condutores ativos do sistema ativo; reposicionar após o secundário quando sistema é derivado.
+> 8. **Referências primárias: ABYC E-11 + IEC 61558-2-4 + NEC 450/555 + NBR IEC 61558 + INMETRO Portaria 637/2014** — classificadora exige IEC 60092-301 para comercial.
+> 9. **Integração com gerador + inversor via ATS (Automatic Transfer Switch)** — ATS deve comutar N + L (4-pole) quando há bond N-PE em cada fonte; ATS 2-pole só serve quando neutro é comum.
+
+> [!danger] Quando chamar engenheiro elétrico / surveyor
+> 1. **Autotransformador vendido/instalado como "isolação" — risco de corrente galvânica persistente + perícia rejeitada** — desconstruir instalação; especificar transformador de isolamento IEC 61558-2-4 com laudo de dielétrico 4 kV RMS.
+> 2. **Sistema derivado mal construído = bond N-PE duplicado = choque fatal em água (ESD)** — desligar TUDO + medição com miliohmímetro N vs PE no secundário + inspeção física + reprojeto de barramento; emergência antes de nova operação.
+> 3. **Dimensionamento por watt (nameplate load) ignorando FP + inrush de motor** — aquecimento, isolação classe B (130°C) excedida, risco incêndio; recalcular em VA com fator de partida + termografia anual.
+> 4. **Transformador instalado em compartimento fechado sem ventilação conforme UL 1561 / IEC 60076-11** — elevação térmica > classe de isolação; redução drástica de vida útil; ventilação forçada ou reinstalação em zona ventilada.
+> 5. **Retrofit de transformador sem revisar barramento PE da embarcação** — loop galvânico subsistente; medição de tensão PE-casco + continuidade bonding + ajuste de arquitetura.
+> 6. **Transfer switch ATS manual/automático errado (2-pole onde deveria ser 4-pole)** — múltiplos bonds N-PE simultâneos entre shore + gerador + inversor; NEC 250.30(A)(1) + ABYC E-11 10.2; substituir ATS por 4-pole com switching de neutro.
+> 7. **Charter, aluguel ou escola náutica com transformador sem certificação INMETRO (Portaria 637/2014) ou sem laudo de ensaio dielétrico** — não conformidade; responsabilidade civil + recusa de apólice; laudo + rastreabilidade antes da operação.
+> 8. **Embarcação americana 120/240 split-phase em marina brasileira 220 V sem projeto completo** — perigo de subdimensionamento + topologia errada; projeto técnico com transformador de isolamento step-up ou 1:1 + redesenho de barramento.
+> 9. **Perícia pós-incêndio, choque em água ou sinistro com suspeita de falha do transformador** — preservar evidência: transformador inteiro (não desconectar), conexões, etiqueta de plaqueta, laudo classe de isolação se disponível; IBAPE + Abracem + IEC 60076-1 análise térmica.
 
 ## O que é
 
@@ -296,6 +358,193 @@ Marina ruim continua exigindo cautela, medição e inspeção.
 - [[Aterramento]]
 - [[Proteção Dr]]
 - [[Normas e Regulamentações — Abyc Iso e Brasil]]
+
+## Normas aplicáveis (organizadas por família)
+
+Transformador bivolt cruza quatro áreas normativas: **shore power marinho** (ABYC E-11, NEC 555, ISO 13297), **transformador propriamente dito** (IEC 60076, 61558, UL 1561, NBR 5356), **embarcação comercial** (IEC 60092, classificadoras), **jurisdição brasileira** (NBR 5410, INMETRO, ANEEL).
+
+### ABYC (recreio USA) — referência técnica dominante
+
+- **ABYC E-11 (2023) — AC & DC Electrical Systems on Boats** — norma central; Seção 10 (shore power) + Seção 11 (isolation transformer) cobrem dimensionamento, bond N-PE no secundário, proteção ELCI, identificação.
+- **ABYC A-22 — Marinas and Boatyards** — exigências do lado da marina; ELCI no pedestal, aterramento do cais.
+- **ABYC E-4 — Lightning Protection** — proteção contra descarga atmosférica; DPS na entrada do transformador.
+
+### ISO (pequena embarcação internacional)
+
+- **ISO 13297:2020 — Small craft — Electrical systems — AC and DC** — obrigatório para certificação CE.
+- **ISO 8846:2020 — Small craft — Electrical devices — Protection against ignition** — proteção de ignição em compartimento com vapor combustível.
+
+### IEC (transformador propriamente dito — referência técnica universal)
+
+- **IEC 60076-1:2011 — Power transformers — General** — norma guarda-chuva; terminologia, classificação, requisitos gerais.
+- **IEC 60076-5:2006 — Ability to withstand short circuit** — capacidade de suportar curto; ensaio mecânico.
+- **IEC 60076-11:2018 — Dry-type transformers** — transformador seco (sem óleo); maioria dos bivolt marinhos.
+- **IEC 60076-18 — Measurement of frequency response** — diagnóstico por resposta em frequência (FRA).
+- **IEC 61558-1:2017 — Safety of transformers, reactors, power supply units** — segurança; requisitos dielétricos, térmicos, construtivos.
+- **IEC 61558-2-1 — Particular requirements for isolating transformers** — transformador de isolamento geral.
+- **IEC 61558-2-4 — Isolating transformers for general applications** — específico para isolação; referência primária para "isolation transformer" marinho.
+
+### IEC marítimo (comercial)
+
+- **IEC 60092-201 — System design** — arquitetura elétrica em navio comercial.
+- **IEC 60092-202 — System design — Protection** — proteção elétrica, incluindo transformadores.
+- **IEC 60092-301 — Equipment — Generators, converters, transformers** — requisitos específicos para transformador em navio.
+- **IEC 60092-352 — Cables for shipboard installations** — cabos de alimentação.
+- **IEC 60092-502 — Tankers** — requisitos adicionais para navios petroleiros (cross-ref).
+
+### UL (certificação USA)
+
+- **UL 1561 — Dry-Type General Purpose and Power Transformers** — certificação USA padrão.
+- **UL 1562 — Distribution Dry-Type Transformers — Over 600 V** — alta tensão.
+- **UL 506 — Specialty Transformers** — transformadores especiais, incluindo pequenos.
+
+### NEC (USA — instalação)
+
+- **NEC Art. 250 — Grounding and Bonding** — Seção 250.30 específica para sistemas derivados separadamente.
+- **NEC Art. 450 — Transformers and Transformer Vaults** — instalação de transformadores em edificação.
+- **NEC Art. 555 — Marinas, Boatyards, Boat Basins** — instalação do pedestal; ELCI obrigatório 2017+.
+
+### Brasil (normas técnicas)
+
+- **NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão** — norma guarda-chuva BT Brasil; aplica-se ao lado AC do barco.
+- **NBR 5356-1/-2/-3 — Transformadores de potência** — especificação de transformador de potência BT.
+- **NBR 10295 — Transformadores de potência secos** — transformador seco (sem óleo).
+- **NBR IEC 61558-1/-2 — Segurança de transformadores** — adoção brasileira de IEC 61558.
+- **INMETRO Portaria 637/2014 — Regulamentação de transformadores** — certificação compulsória no Brasil.
+- **ANEEL PRODIST Módulo 8 — Qualidade da energia** — referência para qualidade (cross-ref para marinas com QualidadeEnergia ruim).
+
+### Sociedades classificadoras (comercial)
+
+- **DNV-RU-SHIP Pt 4 Ch 8 — Electrical installations** — regras DNV para instalação elétrica.
+- **Lloyd's Register Rules Pt 6 — Electrical** — regras LR.
+- **ABS Steel Vessel Rules Pt 4 Ch 8** — regras ABS.
+- **Bureau Veritas NR 467 Pt C Ch 2** — regras BV para instalação elétrica.
+
+### Europa (RCD)
+
+- **EN 61558-1 — Safety of transformers** — adoção europeia de IEC 61558.
+- **EN 61558-2-4 — Isolating transformers** — adoção europeia.
+- **CE-RCD Directive 2013/53/EU — Recreational Craft Directive** — exige conformidade a ISO 13297 + EN 61558.
+
+### Brasil (marítimo)
+
+- **NORMAM-211/DPC — Esporte e recreio** — regulamento DPC recreio.
+- **NORMAM-201/204/DPC — Comercial / SMM** — comercial classificada.
+
+### Proteção contra incêndio (USA)
+
+- **NFPA 302 — Pleasure and Commercial Motor Craft** — integração do transformador ao sistema de proteção.
+- **NFPA 70 (NEC)** — código elétrico nacional.
+
+### Como usar este conjunto normativo na prática
+
+| Situação | Norma-chave |
+|---|---|
+| Projeto recreio USA | ABYC E-11 + NEC 555 + UL 1561 + NFPA 302 |
+| Projeto recreio Brasil | ABYC E-11 + NBR IEC 61558 + INMETRO Portaria 637 |
+| Projeto comercial classificado | IEC 60092-201/301 + classificadora |
+| Certificação CE Europa | EN 61558 + RCD |
+| Sistema derivado separadamente | NEC 250.30 + ABYC E-11 10.x + IEC 61558-2-4 |
+| Fabricante sob encomenda Brasil | NBR 5356 + NBR 10295 + laudo INMETRO |
+| Retrofit marina brasileira | NBR 5410 + ABYC E-11 + laudo técnico CREA |
+| Perícia pós-incêndio | IEC 60076-18 (FRA) + IBAPE + NR-10 |
+| Integração ATS shore+gerador+inverter | NEC 250.30 + ABYC E-11 + fabricante ATS |
+| Ensaio dielétrico | IEC 61558-1 Seção 18 + NBR 5356-3 |
+
+## Glossário rápido
+
+### Tipos de transformador
+
+- **Autotransformador (autotransformer)** — um único enrolamento com derivações (taps); sem isolação galvânica; mais leve e barato; NÃO cria sistema derivado.
+- **Transformador de duplo enrolamento (dual-winding / two-winding)** — primário e secundário fisicamente separados; isolação galvânica; padrão IEC 61558-2-1/-2-4.
+- **Transformador de isolamento (isolation transformer)** — transformador de duplo enrolamento 1:1 ou com taps; dedicado a criar barreira elétrica entre duas redes.
+- **Transformador bivolt** — expressão de campo; pode ser auto ou isolação, com taps para tensões de entrada diferentes.
+- **Toroidal transformer** — núcleo toroidal; baixa radiação eletromagnética + alta eficiência; comum em marinho premium.
+- **E-I core (laminado)** — núcleo E-I tradicional; mais barato, mais ruidoso, maior fluxo de fuga.
+- **Shell type / core type** — topologia construtiva do núcleo.
+- **Dry-type transformer (seco)** — sem óleo refrigerante; padrão em marinho por segurança de fogo.
+- **Oil-filled transformer** — com óleo mineral refrigerante; NÃO usado em marinho.
+- **Cast resin transformer** — resina epóxi encapsulada; alta isolação; premium.
+
+### Topologia e sistema derivado
+
+- **Sistema derivado separadamente (separately derived system)** — NEC 250.30; sistema onde o secundário do transformador cria nova referência de terra/neutro.
+- **Bond neutro-PE (N-PE bond)** — conexão ÚNICA entre neutro e proteção; no secundário do transformador quando sistema é derivado.
+- **Ponto único de aterramento** — localização onde todos os referenciais convergem; crítico para evitar loops.
+- **Service entrance** — ponto de entrada de energia; onde o transformador da concessionária entrega ao consumidor.
+- **Sistema TN-S / TT / IT** — classificação IEC 60364 de sistemas de aterramento; determina onde o DR atua.
+- **Ground fault circuit interrupter (GFCI)** — disjuntor diferencial 5 mA (tomadas).
+- **Equipment Leakage Circuit Interrupter (ELCI)** — disjuntor diferencial 30 mA marinho; ABYC E-11.
+- **RCD (Residual Current Device)** — nomenclatura europeia para diferencial.
+- **ESD (Electric Shock Drowning)** — choque elétrico fatal em água; fuga AC > 30 mA.
+
+### Parâmetros do transformador
+
+- **kVA (potência aparente)** — produto V × I; dimensionamento correto em CA.
+- **Watt (potência ativa)** — V × I × cos φ; NÃO usar para dimensionar transformador.
+- **Fator de potência (power factor, cos φ)** — ângulo entre V e I; define relação kW/kVA.
+- **Inrush current (corrente de partida)** — pico na energização; 3–10× nominal durante 50–200 ms.
+- **Locked rotor current (corrente de rotor bloqueado)** — motor parado; 6–8× corrente nominal.
+- **Rated voltage (tensão nominal)** — V nominal do enrolamento.
+- **Tap (derivação)** — conexão intermediária do enrolamento; ± 2,5 %, ± 5 % típicos.
+- **Voltage regulation (regulação)** — queda de V da vazio para plena carga; idealmente < 5 %.
+- **Impedance (Z %)** — impedância percentual; típica 2–6 % para transformadores de distribuição.
+- **Short-circuit impedance** — impedância vista do secundário com primário em curto; define corrente de curto.
+
+### Parâmetros térmicos e de isolação
+
+- **Class of insulation** — classe de isolação térmica; A (105 °C), B (130 °C), F (155 °C), H (180 °C), N (200 °C).
+- **Temperature rise (elevação térmica)** — diferença entre temperatura do enrolamento e ambiente; classe B permite elevação 80–90 °C sobre ambiente 40 °C.
+- **Hot spot temperature** — ponto mais quente do enrolamento; limite da classe.
+- **Ambient temperature rating** — temperatura ambiente de projeto; tipicamente 40 °C IEC, 30 °C UL.
+- **Altitude derating** — redução de capacidade em altitude > 1000 m (menos densidade de ar = menos convecção).
+- **Cooling class** — natural AN (air natural), AF (air forced), ON (oil natural), OF (oil forced).
+- **Magnetostriction (noise / ruído)** — vibração do núcleo em 100/120 Hz; causa hum audível.
+
+### Ensaios e certificação
+
+- **Dielectric test (ensaio dielétrico)** — aplicação de tensão > nominal para verificar isolação; típico 2,5× + 1 kV RMS durante 1 min.
+- **Voltage withstand** — tensão que o equipamento suporta sem falha.
+- **BIL (Basic Insulation Level)** — tensão de impulso 1,2/50 μs; capacidade de surto.
+- **SWC (Surge Withstand Capability)** — capacidade a surto.
+- **FRA (Frequency Response Analysis)** — diagnóstico por resposta em frequência (IEC 60076-18); detecta deformação mecânica.
+- **No-load loss (perdas a vazio)** — perdas no núcleo (hysteresis + eddy current); constantes.
+- **Load loss (perdas em carga)** — perdas em enrolamento (I²R); proporcional a carga².
+- **Eficiência** — razão potência de saída / potência de entrada; tipicamente 95–99 %.
+- **K-factor** — fator K para harmônicos; K-13, K-20 para cargas não-lineares (LEDs, inverters).
+
+### Construção
+
+- **Winding (enrolamento)** — espiras de cobre (ou alumínio) em torno do núcleo.
+- **Primary winding (primário)** — enrolamento de entrada (alta tensão em step-down).
+- **Secondary winding (secundário)** — enrolamento de saída.
+- **Copper winding** — cobre; padrão premium; melhor condutividade.
+- **Aluminum winding** — alumínio; mais barato, mais leve; exige seção maior.
+- **Faraday shield (tela eletrostática)** — tela metálica entre primário e secundário; reduz acoplamento capacitivo; ausente em autotransformador.
+- **Core (núcleo)** — aço-silício laminado; concentra fluxo magnético.
+- **Saturation (saturação)** — ponto onde o núcleo não responde linearmente a H; limite superior.
+- **B-H curve (curva de magnetização)** — relação densidade de fluxo vs campo magnético.
+
+### Integração com a arquitetura
+
+- **Automatic Transfer Switch (ATS)** — chave automática de transferência entre fontes (shore/gerador).
+- **2-pole ATS** — chaveia apenas L; neutro é comum; simples, mas limita arquiteturas.
+- **4-pole ATS** — chaveia L + N; necessário quando há bond N-PE em cada fonte.
+- **Hardwired neutral** — neutro direto sem chaveamento.
+- **Switched neutral** — neutro comutado no ATS.
+- **Phase synchronization** — sincronização de fase antes de fechar ATS; evita contracorrente.
+- **Zero-crossing switching** — comutação em zero crossing; reduz arc.
+
+### Jurisdições e padrões citados
+
+- **ABYC E-11** — padrão americano AC/DC marinho (Seção 11 = isolation transformer).
+- **IEC 61558-2-4** — padrão internacional específico de isolation transformer.
+- **NEC 250.30** — seção específica de sistema derivado separadamente.
+- **UL 1561** — certificação USA padrão.
+- **NBR 5356** — padrão brasileiro transformador de potência.
+- **INMETRO Portaria 637/2014** — certificação compulsória Brasil.
+- **DNV-RU-SHIP** — regras DNV para navio.
+- **IEC 60092-301** — regras IEC para comercial.
 
 ## Perguntas que esta nota responde
 
