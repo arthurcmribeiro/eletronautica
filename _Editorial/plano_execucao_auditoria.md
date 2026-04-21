@@ -1032,6 +1032,74 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 4 CONCLUÍDA — 2026-04-19
+
+**Comando de continuidade do responsável editorial:** "continuar" — interpretado como aprovação para seguir com Onda 4 mantendo o padrão recalibrado (vademecum da elétrica náutica — todas as normas cabíveis, glossário 40-60 termos, TL;DR 9 regras, danger 9 cenários). Feedback adicional no meio da onda: aceitar **nota bônus** fora do plano original quando um tema adjacente for tecnicamente relevante (AC 12V DC).
+
+**Onda 4 executada (18/18 Tier S + 1 bônus extra = 19 notas, cluster fechamento projeto + diagnóstico + segurança + transformadores + distribuição + climatização + porão):**
+
+| # | Nota | fase_6 | Normas | Glossário | Destaques |
+|---|------|--------|--------|-----------|-----------|
+| 27 | Projeto Elétrico de Embarcação — Passo a Passo | 27 | 28 | 50 | Projeto integrado DC + AC + distribuição + proteção + sinalização, ABYC E-11 + NBR 5410 + IEC 60092, passo-a-passo canonicalizado |
+| 28 | Dimensionamento de Banco de Baterias | 28 | 25 | 50 | DEC-14, ABYC E-11/E-13, ISO 16315, IEC 62619, DoD/SoC/capacidade útil |
+| 29 | Manutenção Preventiva Elétrica — Checklist | 29 | 22 | 48 | Checklist ABYC + NBR 5410 + NORMAM, periodicidade por categoria |
+| 30 | Inspeção de Cabos Terminais e Conexões | 30 | 24 | 50 | UL 1426 + ABYC E-11 + NBR 14039 + torque specs, tin-copper obrigatório |
+| 31 | Multímetro e Instrumentos de Medição | 31 | 24 | 52 | DEC-14, IEC 61010-1, categorias CAT II/III/IV explícitas, RMS verdadeiro |
+| 32 | Voltímetro - Amperímetro (DC e AC) | 32 | 22 | 48 | DEC-14, IEC 61010-1/61557, shunt + calibração + precisão |
+| 33 | Anôdo | 33 | 30 | 54 | DEC-14, NACE SP0176/TM0497/SP0169/CP1-CP4, ASTM B418, ISO 15589-2 |
+| 34 | Eletrólise | 34 | 32 | 57 | DEC-14, ASTM G71/G82, ISO 11845, ISO 8044 (corrosão eletroquímica) |
+| 35 | Detector de CO | 35 | 26 | 56 | DEC-14, UL 2034 + UL 2075, EN 50291-1/-2, ABYC A-24, station wagon effect, COHb% physiology |
+| 36 | Detector de Gás GLP / GN | 36 | 27 | 55 | DEC-14, UL 1484, EN 50194-1 + EN 50244, ABYC A-1, GLP pesado vs GN leve |
+| 37 | Extintor Automático | 37 | 42 | 55 | DEC-14, NFPA 10/12/17/2001, ISO 14520, EN 15004, SOLAS II-2, FSS Code — maior normas_citadas da onda |
+| 38 | Alarme de Alagamento - Sensor de Porão | 38 | 26 | 50 | DEC-14, ABYC H-22 + ISO 15083 + USCG 33 CFR 183 + SOLAS II-1 Reg 21, NMEA 2000 PGN 130310/11/16 |
+| 39 | Transformador Bivolt | 39 | 34 | 55 | DEC-14, IEC 60076-1/-5/-11/-18 + 61558-1/-2-1/-2-4, autotransformador ≠ isolação, INMETRO 637/2014 |
+| 40 | Transformador Entrada | 40 | 31 | 50 | TODO "IEC 60076 (edição a verificar)" resolvido → 60076-1/5/11 + 61558-1/-2-1/-2-4, NBR 5356 série |
+| 41 | Linha Pesada (AC) | 41 | 40 | 50 | DEC-14, ABYC E-11 + NEC Art 430/440/555 + IEC 60364-7-709 + IEC 60092, MCA/MOCP, ATS sem múltiplos bonds |
+| 42 | Ar-Condicionado Marine — Sistema Completo | 42 | 55 | 60 | DEC-14, NEC 440 + ASHRAE 15/34/62.1, regulação ambiental (Montreal + Kigali + EPA SNAP + AIM Act + F-gas + CONAMA 267 + EPA Section 608), quatro subsistemas — **maior normas_citadas da fase até aqui** |
+| 43 | Bomba de Porão | 43 | 38 | 48 | DEC-14, ABYC H-22 + ISO 15083 + USCG 33 CFR 183 + SOLAS II-1 Reg 21/35-1 + USCG NVIC 7-82 + 46 CFR Subchapter K/T, hotline explícito |
+| 44 | **Ar-Condicionado Marine 12V DC** (NOTA NOVA / BÔNUS) | 44 | 47 | 55 | **Criada integralmente nesta onda** — DEC-14, compressor BLDC inverter, integração banco lítio LFP + BMS + Class T/MRBF, IEC 60335-2-40 + EN 14511 + EN 378 + UL 60335-2-40, paridade regulatória de refrigerante com AC 220V, tabela cabo/fusível por BTU, ECE R10 EMC |
+
+**Métricas Onda 4:**
+- **19 notas** processadas (18 Tier S + 1 bônus) — inclui Projeto Elétrico de Embarcação (fase_6 "27") iniciado em segmento anterior desta mesma onda
+- **38 callouts novos** (19 tip + 19 danger)
+- **~1003 termos de glossário** (média **52,8/nota** — nova marca; vademecum reforçado)
+- **~621 normas expandidas/canonicalizadas** (média **32,7/nota** — maior densidade normativa da fase até aqui)
+- **13 notas com `normas_citadas` criadas/ampliadas substancialmente** (DEC-14)
+- **3 TODOs antigos resolvidos:**
+  - "IEC 60076 (edição a verificar)" em Transformador Entrada → 60076-1/5/11 + 61558-1/-2-1/-2-4
+  - `normas_citadas` ausentes em 13 notas → DEC-14 aplicada
+  - `review_jurisdiction` escalar → lista `["Brasil", "internacional"]` em todas as 18 notas da onda
+- **1 nota bônus criada** (Ar-Condicionado Marine 12V DC) — primeira aplicação da DEC-30
+- **5 novas decisões documentadas:**
+  - **DEC-26** (Regulação ambiental de refrigerantes como camada normativa obrigatória — Montreal + Kigali + EPA + F-gas + CONAMA + Section 608)
+  - **DEC-27** (ABYC H-22 + ISO 15083 como par primário para bomba de porão + alarme de alagamento; diferenciar bomba ≠ alarme)
+  - **DEC-28** (NEC Art. 440 como referência dimensional para AC marine 220V e 12V DC; MCA/MOCP obrigatórios)
+  - **DEC-29** (Transformador isolador vs autotransformador — distinção obrigatória; IEC 60076 + IEC 61558 + INMETRO 637)
+  - **DEC-30** (Nota bônus fora do plano — formalização de práticas de expansão; limite 1-2/onda, backlink obrigatório)
+
+**Padrões reforçados no cluster Onda 4 (9 padrões):**
+- Regulação ambiental de refrigerante tratada como **camada normativa técnica**, não curiosidade — Montreal + Kigali + EPA SNAP + AIM Act + F-gas + CONAMA 267 + Section 608 citados em todas as notas de refrigeração (DEC-26)
+- **NEC Art. 440 + MCA/MOCP** como referência dimensional para todo AC marine, independente da jurisdição (DEC-28)
+- **ABYC H-22 + ISO 15083** como par primário inquestionável em bomba de porão + alarme (DEC-27)
+- **Autotransformador ≠ transformador isolador** explicitado em todas as notas de transformador; INMETRO 637/2014 citada (DEC-29)
+- **Refrigerantes regulados** (R-134a, R-410A, R-32, R-290) com classificação ASHRAE 34 A1/A2L/A3 + B1/B2/B3 + GWP documentados
+- **Cabos marine tin-copper** (UL 1426 + ABYC E-11) como padrão em todas as notas elétricas da onda
+- **Stack IEC 60076 + IEC 61558** canonicalizado para transformadores; correção de TODO legado
+- **NFPA 10 / 12 / 17 / 2001 + ISO 14520 + EN 15004** como stack completo de extinção automática
+- **NACE SP0176 / TM0497 / SP0169 + CP1-CP4 + ASTM B418 / G1 / G71 / G82** como stack completo de corrosão / proteção catódica
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_04_tier_s_fechamento_20260419.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas (134 com nota bônus desta onda)
+- Concluído: **45 / 134** (**33,6%**) — Tier S completo (44 notas) + 1 bônus
+- Próxima: **Onda 5 — Tier A cluster 1 (18 notas)** após aprovação humana
+- **Marco:** Tier S **100% concluído** (44 notas) — encerramento da fase de máxima prioridade.
+
+**Cadência (b) — PAUSA OBRIGATÓRIA:** Onda 4 entregue e Tier S fechado. Antes de Onda 5, validar: (1) a nova camada de regulação ambiental de refrigerante (DEC-26) deve ser retrofitada em notas anteriores (ex.: refrigerador, freezer, chiller em ondas futuras)? (2) a densidade de 33 normas/nota é sustentável para Tier A ou deve baixar para 15-25? (3) a nota bônus (DEC-30) deve virar prática padrão ou exceção controlada? (4) Tier A, por ser menos crítico que Tier S, comporta TL;DR de 7-9 regras (variável) ou deve manter 9 fixo? (5) cadência: seguir (b) ou mudar para (a) auto-contínuo agora que o padrão está consolidado?
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
