@@ -1098,6 +1098,73 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 **Cadência (b) — PAUSA OBRIGATÓRIA:** Onda 4 entregue e Tier S fechado. Antes de Onda 5, validar: (1) a nova camada de regulação ambiental de refrigerante (DEC-26) deve ser retrofitada em notas anteriores (ex.: refrigerador, freezer, chiller em ondas futuras)? (2) a densidade de 33 normas/nota é sustentável para Tier A ou deve baixar para 15-25? (3) a nota bônus (DEC-30) deve virar prática padrão ou exceção controlada? (4) Tier A, por ser menos crítico que Tier S, comporta TL;DR de 7-9 regras (variável) ou deve manter 9 fixo? (5) cadência: seguir (b) ou mudar para (a) auto-contínuo agora que o padrão está consolidado?
 
+**Respostas do responsável editorial (2026-04-21) — entrada da Onda 5:**
+1. Densidade de normas: *"o que achar melhor"* → adotada ~35 normas/nota (levemente acima do Tier S para seguir cobrindo o domínio hidráulico com rigor).
+2. DEC-26 retrofit: *"sim, fazer o mesmo para tipos de oleo hidraulico (vg, sae, atf, reversor, direcao, plataforma, passarela, flap e coisas assim)"* → criada nota-mãe Óleos Hidráulicos Marine + retrofit DEC-26 em Geladeira-Freezer e Icemaker (**DEC-31** e **DEC-32**).
+3. Notas bônus: *"só quando realmente for pertinente"* → Óleos Hidráulicos Marine criada por pertinência clara; mantida disciplina de 1 bônus/onda.
+4. TL;DR: *"pode variar"* → **DEC-34** formalizada (7-9 regras por complexidade; Onda 5 naturalmente ficou em 9 para todas, reforçando consolidação).
+5. Cadência: *"auto-continuo"* → **DEC-33** formalizada; cadência (a) auto-contínua adotada para Tier A em diante, com gates documentais preservados (commit + YAML + plano por onda).
+
+---
+
+## 🌊 FASE 6 (Caminho B) — ONDA 5 CONCLUÍDA — 2026-04-21
+
+**Comando de continuidade do responsável editorial:** "continuar" + cinco diretivas explícitas (ver respostas acima). Interpretado como aprovação para iniciar **Tier A** com cluster hidráulica + refrigeração + utilidades, aplicando DEC-11 premium + DEC-26 retrofit em notas de refrigeração tocadas, criando nota-mãe de óleos hidráulicos, e migrando para cadência (a) auto-contínua.
+
+**Onda 5 executada (11 notas = 1 nota-mãe nova + 10 retrofits — cluster hidráulica + refrigeração + utilidades):**
+
+| # | Nota | fase_6 | Normas | Glossário | Destaques |
+|---|------|--------|--------|-----------|-----------|
+| 45 | **Óleos Hidráulicos Marine — Guia Completo** (NOTA-MÃE NOVA / BÔNUS) | 45 | 42 | 60 | **Criada integralmente nesta onda** — taxonomia completa de óleos hidráulicos marine (ISO VG + HLP/HVLP/HFC/HFDU + SAE J300/J306 + ATF OEM + NMMA TC-W3/FC-W + API GL-1 a GL-5), tabela reversor fluid-by-fabricante, tabela aplicação-por-aplicação; DEC-31 |
+| 46 | Flap | 46 | 27 | 50 | DEC-14, Bennett Hydraulic (ATF Dexron) vs Lenco Electromechanical vs Humphree/Zipwake interceptor — distinção tripla, ABYC H-3 bonding, IP67/IP68 |
+| 47 | Plataforma de Popa Elétrica - Hidráulica | 47 | 33 | 55 | DEC-14, três arquiteturas (elétrica/eletro-hidráulica/hidráulica dedicada), Opacmare Transformer + Besenzoni + Nautical Structures, sincronismo ≤ 5%, CE 2006/42/EC + EN ISO 12100 + IMO MSC.81(70) + NR-12 |
+| 48 | Motor de Trim - Tilt | 48 | 26 | 50 | DEC-14, tabela OEM fluid para 8 fabricantes (Mercury/Yamaha/Suzuki/Evinrude/Volvo Penta/Mercruiser/Honda/Tohatsu), lista "NUNCA usar" (fluido freio, óleo motor, HLP genérico, Mercon V, ATF+4, direção automotiva) |
+| 49 | **Geladeira - Freezer de Bordo** (DEC-26 RETROFIT) | 49 | 38 | 55 | DEC-14, **DEC-26 retrofit completo** (Montreal + Kigali + EPA SNAP + AIM Act + F-gas + CONAMA + Section 608), compressor BD-Danfoss/Secop BD35F/BD50F/BD80F/BD100F, R-134a/R-600a/R-290, consumo 25-60 Ah/dia DC 12V, IEC 60079 zona 2 hidrocarbonetos |
+| 50 | **Icemaker - Máquina de Gelo** (DEC-26 RETROFIT) | 50 | 42 | 55 | DEC-14, **DEC-26 retrofit completo**, NSF/ANSI 12/18/61/372 + FDA Food Code 2022 + Portaria MS 2.914/2011 + ISO 17899 + AHRI 810, tipos de gelo (clear cube/half dice/nugget/flake/gourmet), R-134a/R-290/R-404A/R-452A/R-448A, sanidade charter |
+| 51 | Estabilizador | 51 | 38 | 55 | DEC-14, duas famílias (aletas hidráulicas ABT-TRAC/CMC/NAIAD/Quantum com VG 46 HVLP vs giroscópio Seakeeper/Mitsubishi ARG/TOHMEI), warm-up 30-45 min, IMO MSC.137(76) + SOLAS II-1 + DNV-GL Pt.6 Ch.5 + Lloyd's LR-PCR + ABS + CE + IEC 61508 |
+| 52 | Guincho (Windlass) | 52 | 30 | 55 | DEC-14, ABYC H-40 + DIN 766 + ISO 4565 + ISO 4309 + EN 14492-1 + NR-12, chain padrões DIN 766 vs BBB vs G4/G7/HT, banco dedicado proa = 80% da solução, S2 10min / S3 25%, cable sizing exemplo 2/0 AWG |
+| 53 | Thruster | 53 | 32 | 55 | DEC-14, Sleipner/Vetus/Lewmar/Quick/Max Power + linha pro (ABT/Wesmar/Schottel/Jastram/Kongsberg), tabela óleo caixa submersa por fabricante, DC × AC × hidráulico por escala, S2 3-4 min / S3 10%, NUNCA ATF em GL-5 |
+| 54 | Davit - Munk - Guindaste de Bote - Tender Lift | 54 | 42 | 55 | DEC-14, Opacmare/Besenzoni/Nautical Structures/Steelhead, fator dinâmico ψ (1,1 a 3,0), sincronismo twin ≤ 5%, ISO 4309 critério descarte, Dyneema FS 7:1 vs aço 5:1, EN 14492-2 + EN 13852-3 + FEM 1.001 + DIN 15020 + NBR 8400 + SOLAS III/20 + MSC.81(70) + LOLER 1998 + NR-11/-12 |
+| 55 | Catraca (Capstan / Self-tailing Winch) | 55 | 35 | 55 | DEC-14, **distinção crítica catraca ≠ windlass** (tabela 9 aspectos), Harken/Lewmar/Andersen/Antal/Pontos × Muir/Maxwell/Quick/Lofrans, graxa winch NLGI 2 específica, chicote + aprisionamento + tropeço + queda (ergonomia), EN 14492-1 + EN 60204-32 + NR-12 |
+
+**Métricas Onda 5:**
+- **11 notas** processadas (1 nota-mãe nova + 10 retrofits — cluster hidráulica + refrigeração + utilidades)
+- **22 callouts novos** (11 tip + 11 danger)
+- **~600 termos de glossário** (média **54,5/nota** — vademecum consolidado)
+- **~385 normas expandidas/canonicalizadas** (média **35,0/nota** — densidade acima de Tier S, coerente com cluster multirregulatório)
+- **11 notas com `normas_citadas` criadas/ampliadas substancialmente** (DEC-14 aplicada em 100%)
+- **2 notas com DEC-26 retrofit completo** (Geladeira-Freezer + Icemaker) — primeira aplicação prática de **DEC-32**
+- **1 nota bônus criada** (Óleos Hidráulicos Marine — Guia Completo) — segunda aplicação da DEC-30, consolidada como **nota-mãe** (**DEC-31**)
+- **5 novas decisões documentadas:**
+  - **DEC-31** (Nota-mãe de óleos hidráulicos como referência cruzada — ISO VG + HLP/HVLP/HFC/HFDU + SAE J300/J306 + ATF OEM-specific + NMMA + API GL; tabela reversor fluid-by-fabricante; tabela aplicação-por-aplicação)
+  - **DEC-32** (DEC-26 é RETROFIT obrigatório em refrigeração — paridade regulatória independente da onda em que a nota foi tocada)
+  - **DEC-33** (Cadência (a) auto-contínua adotada para Tier A em diante — gates documentais preservados: commit + YAML + plano por onda)
+  - **DEC-34** (TL;DR variável 7-9 regras — prioridade é clareza, não contagem; Onda 5 ficou em 9 naturalmente, indicando consolidação)
+  - **DEC-35** (GL-4 vs GL-5 em bronze — alerta obrigatório; erro recorrente em davit + capstan legacy + redutores sinfim-coroa)
+
+**Padrões reforçados no cluster Onda 5 (11 padrões):**
+- Todas as notas hidráulicas linkam para [[Óleos Hidráulicos Marine — Guia Completo]] — **centralização taxonômica** do cluster (DEC-31)
+- **ISO VG 32 HLP (temperado) × ISO VG 46 HVLP (tropical)** padronizados em 100% das notas de HPU
+- **Stack ISO de óleo hidráulico**: 4406 (contaminação) + 6743-4 (classificação) + 3448 (viscosidade) + 11158 (especificação) + 12922 (fire-resistant)
+- **Stack DIN**: 51524-2 (HLP) + 51524-3 (HVLP) + 51517-3 (CLP gear oil) em todas as notas hidráulicas
+- **Stack SAE/API**: J300 (motor oil) + J306 (gear oil) + API GL-4/GL-5 em todas as notas com redutor
+- **ATF OEM-specific**: Dexron III/VI / Mercon V/LV / ATF+4 / ATF Type F em reversor + trim-tilt + flap Bennett
+- **DEC-26 aplicada em 100%** das notas de refrigeração tocadas (Geladeira-Freezer + Icemaker) — paridade com Onda 4
+- **Stack segurança de máquinas**: CE 2006/42/EC + EN ISO 12100 + EN ISO 13849-1 + NR-12 em todas as notas com atuador motorizado
+- **Stack içamento**: EN 14492-1/-2 + FEM 1.001 + DIN 15020 + NBR 8400 + ISO 4309 (cabos) em Guincho + Davit + Catraca
+- **IEC 60529 IP67/IP68** obrigatório em equipamento submerso ou em popa
+- **Tabela comparativa por jurisdição** (EUA / Brasil / Internacional / Europa) em 100% das notas da onda
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_05_tier_a_cluster_hidraulica_20260421.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas (134 com bônus Onda 4 → **135 com bônus Onda 5**)
+- Concluído: **56 / 135** (**41,5%**) — Tier S (44) + bônus Onda 4 (1) + Onda 5 (11, incluindo nota-mãe bônus)
+- Próxima: **Onda 6 — Tier A cluster 2** (seguindo cadência (a) auto-contínua — sem pausa humana obrigatória)
+- **Marco Onda 5:** cluster hidráulico + refrigeração concluído; 2 retrofits DEC-26 aplicados; nota-mãe de óleos criada; cadência (a) adotada.
+
+**Cadência (a) — AUTO-CONTÍNUA (DEC-33 em vigor):** Onda 5 entregue; próxima onda prossegue sem pausa humana obrigatória. Gates preservados (commit + YAML + atualização de plano). Se qualquer escolha estrutural nova surgir (novo DEC, nova sub-fase, mudança de escopo), pausa imediata.
+
 ---
 
 
