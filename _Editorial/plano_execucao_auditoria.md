@@ -1167,6 +1167,69 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 6 CONCLUÍDA — 2026-04-21
+
+**Comando de continuidade:** cadência (a) auto-contínua em vigor (DEC-33). Cluster selecionado: **domínio 40_Distribuicao_Protecao_e_Aterramento** (11 notas Tier A — barramento DC, cabeamento, chaves DC/AC, contatores, divisores, hotline, linhas leve/pesada AC, quadro elétrico, relés, terminais).
+
+**Feedback do responsável editorial durante a onda (2 interrupções com diretivas técnicas):**
+1. **Divisores de Carga — restruturação:** *"conte sobre o diodo mais antigo... e fale dos combinadores mais modernos... aqui no brasil o mais vendido é o Arieltek pelos valores, porém nos EUA a linha da Blue Sea é a mais conhecida..."* → restruturação com história (diodo 70s-90s → FET 90s-2000s → combinador/ACR → DC-DC) + referências comerciais por mercado (Blue Sea ML-ACR/SI-ACR/Add-A-Battery nos EUA, Arieltek DVSR/Automotive VSR no Brasil, Victron Cyrix, Sterling ProSplit-R, BEP, Perko) + taxonomia explícita de "separador de carga" como termo guarda-chuva. **DEC-36** formalizada.
+2. **Hotline — bomba de porão:** *"a bomba de porão também, mesmo hotline dos outros sensores, é importante... tinhamos um barco no qual o ramal automatico estava no hotline e o botão manual do painel estava saindo do barramento após a chave geral, certo? só que alguem pressionou o botão manual ao fechar o barco, ficando no modo manual, e com a chave geral desligada e o carregador off, a bomba automatica deu um start no deposito interno da bomba, o pino automatico está sendo alimentado, e a corrente voltou do ponto interno dela em comum com o positivo manual, energizando o chicote do botão manual até a saida da chave, e o barco energizou todo com a chave geral desligada"* → TL;DR rule 5 nova + Falha real em campo expandida + Falhas comuns atualizado + Erros técnicos + FAQ expandido. **DEC-37** formalizada.
+3. **Convenção de chaveamento:** *"via positivo... automáticos trabalham com positivo normalmente no brasil, negativo apenas para alarmes, pode conferir?"* → callout info na Hotline com convenção BR explícita (bomba chaveia positivo via terminais "+ auto / + manual / – common" de Rule/Attwood/Johnson/Jabsco/Seaflo/Shurflo; alarme chaveia negativo em painéis common-positive Borel/MGM/Maretron/Offshore Systems). **DEC-38** formalizada.
+
+**Onda 6 executada (11 notas Tier A — todas retrofits — cluster distribuição + proteção + aterramento):**
+
+| # | Nota | fase_6 | Normas | Glossário | Destaques |
+|---|------|--------|--------|-----------|-----------|
+| 56 | Barramento DC - Bus Bar - Distribuição DC | 56 | 34 | 50 | DEC-14, tabela dimensionamento 100 A → 1000+ A com refs Blue Sea 2105/2126/2127/2128, ABYC E-11.4.7 (≤ 178 mm) + E-10.7 (limite conexões/polo), IEC 61439-1 §10.10 (dissipação térmica) |
+| 57 | Cabeamento Náutico | 57 | 33 | 50 | DEC-14, UL 1426 BC5W2 + IEC 60092-353 + SAE J1127/J1128 + IEC 60228 classes 1-6, tabela AWG × mm² × ampacidade + derating, fórmula ΔV = 2·L·I·ρ/S |
+| 58 | Chaves Gerais (DC) | 58 | 31 | 50 | DEC-14, ABYC E-11.4.7 + IEC 60947-3 categorias DC-20/21/22/23, AFD (Alternator Field Disconnect), tabela 100 A → 10 kW |
+| 59 | Chaves Seletoras (AC) | 59 | 31 | 50 | DEC-14, UL 1008 / IEC 60947-6-1 ATS, break-before-make default, inversor-carregador (Victron/Mastervolt/Magnum/Xantrex) como seletora moderna, anti-islanding UL 1741-SA |
+| 60 | Contatores (AC) | 60 | 32 | 55 | DEC-14, IEC 60947-4-1 categorias AC-1 to AC-8b + NEMA ICS 2, overload relay class 10/20/5, coil suppression (varistor/RC para AC, diodo+TVS para DC), Schneider TeSys/Siemens Sirius/ABB AF/Eaton DILM/Chint CJX |
+| 61 | **Divisores de Carga (DC)** (feedback usuário) | 61 | 30 | 50 | DEC-14, **DEC-36 aplicada**: taxonomia "separador de carga" (combinador × isolador × seletora × DC-DC), história diodo → FET → ACR → DC-DC, refs comerciais por mercado (Blue Sea USA × Arieltek BR × Victron × Sterling × BEP × Perko), subsecção "Por que combinadores substituíram isoladores" |
+| 62 | **Hotline (DC)** (feedback usuário) | 62 | 28 | 50 | DEC-14, **DEC-37 aplicada**: backfeed pelo ramal manual da bomba (caso real — TL;DR + Falha real + Falhas comuns + FAQ), **DEC-38 aplicada**: convenção chaveamento positivo (bomba) × negativo (alarme), MRBF2 isolação + budget standby ~255 mA, 28+ normas |
+| 63 | Linha Leve (AC) | 63 | 30 | 50 | DEC-14, separação linha leve × pesada por natureza de carga, setorização por zona (salão/camarote/banheiro/galley/cockpit), DR/GFCI/ELCI/GFPE comparados (5 mA UL 943 × 30 mA ABNT/IEC 61008 × ABYC E-11.11.1.6), DR tipo AC × A × B |
+| 64 | Quadro Elétrico e Painel de Distribuição AC-DC | 64 | 32 | 50 | DEC-14, IEC 61439-1/-3 canonicalizado, tabela dimensionamento por porte (< 25 pés → > 80 pés), IP por localização, dissipação IEC 61439-1 §10.10, digital switching (CZone/EmpirBus/Garmin), reserva mínima 25% |
+| 65 | Relés e Relés de Estado Sólido | 65 | 30 | 50 | DEC-14, categorias IEC 60947-5-1 (AC-1/AC-3/AC-15, DC-1/DC-3/DC-13), SSR AC (TRIAC) × SSR DC (MOSFET), MOSFET switch marine (Victron BP/Blue Sea/Littelfuse Smart), supressão MOV+RC × diodo+TVS, tabela 12 aplicações de bordo |
+| 66 | Terminais Conectores e Emendas | 66 | 28 | 50 | DEC-14, ABYC E-11 §11.13 canonicalizado (crimpagem primária, solda proibida como único meio, wire-nut proibido), DIN 46234/46235/46237/46228, passo-a-passo crimpagem + ferramentas por calibre + torque por borne (M3 → M12), heat-shrink solder-seal + vulcanizado 3M 2228 |
+
+**Métricas Onda 6:**
+- **11 notas** processadas (0 novas + 11 retrofits — cluster distribuição + proteção + aterramento)
+- **22 callouts novos** (11 tip + 11 danger)
+- **~555 termos de glossário** (média **50,5/nota** — vademecum consolidado)
+- **~339 normas expandidas/canonicalizadas** (média **30,8/nota** — densidade Tier A típica)
+- **11 notas com `normas_citadas` criadas/ampliadas substancialmente** (DEC-14 aplicada em 100%)
+- **3 novas decisões documentadas** (todas vindas de feedback direto do usuário):
+  - **DEC-36** — Separador de carga como termo guarda-chuva (combinador × isolador × seletora × DC-DC); história tecnológica (diodo → FET → ACR → DC-DC); refs comerciais por mercado (Blue Sea USA × Arieltek BR).
+  - **DEC-37** — Backfeed pelo ramal manual da bomba de porão como modo de falha documentado; AMBOS os ramais (manual + automático) no MESMO barramento hotline; mitigações: diodo Schottky, LED piloto, teste pós-instalação (chave geral OFF + acionar automático → 0 V no barramento comutado).
+  - **DEC-38** — Convenção de chaveamento: positivo para bomba de porão ("+ auto / + manual / – common" de Rule/Attwood/Johnson/Jabsco/Seaflo/Shurflo); negativo para alarme de alta água (painéis common-positive Borel/MGM/Maretron/Offshore Systems).
+
+**Padrões reforçados no cluster Onda 6 (13 padrões):**
+- **ABYC E-11 §11.4.7** (≤ 178 mm proteção do polo) referenciada em todas as notas envolvendo polo/MRBF/barramento
+- **IEC 60947 family** (-1 geral, -2 MCCB, -3 seccionadores, -4-1 contatores, -4-2/-4-3 semicondutores, -5-1 categorias, -6-1 ATS) canonicalizado
+- **IEC 61439-1/-3** (quadros BT) como referência estrutural do quadro elétrico
+- **IEC 60364-7-709** (marinas) + **NFPA 70 art. 555** (marinas USA) em todas as notas de shore-power
+- **ABYC E-11.11.1.5** (GFCI 5 mA áreas molhadas) + **E-11.11.1.6** (ELCI 30 mA) em todas as notas AC
+- **IEC 60529 IP code** em todas as notas de equipamento exposto (quadro, relés, terminais, chaves)
+- **UL 1426 BC5W2** + **SAE J1127/J1128** + **IEC 60092-353** como stack de cabo marine
+- **Stack brasileiro**: ABNT NBR 5410 + NBR 14136 + NBR IEC 61439-3 + NBR IEC 60947-2 + NBR IEC 60529
+- **NORMAM-05/DPC** (recreio) + **NORMAM-01/DPC** (marítimo) citadas em 100% das notas
+- **Tabela comparativa por jurisdição** (EUA ABYC/NFPA/UL × Internacional ISO/IEC × Brasil ABNT/NORMAM × Europa CE/RCD × SOLAS) em todas as 11 notas
+- **Backlinks cruzados** fortes: Hotline (DC) ↔ Divisores de Carga (DC) ↔ Chaves Gerais (DC) ↔ Barramento DC ↔ Quadro Elétrico ↔ Relés ↔ Terminais
+- **Tabelas de dimensionamento** por corrente/porte/aplicação em cada nota estrutural (Barramento, Cabeamento, Chaves DC, Quadro, Relés, Terminais)
+- **Fabricantes com referência comercial específica**: Blue Sea, Arieltek, Victron, Hubbell, Marinco, Furrion, Schneider, ABB, Siemens, Eaton, Ancor, T&B, Burndy
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_06_tier_a_cluster_distribuicao_20260421.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas (134 com bônus Onda 4 → 135 com bônus Onda 5)
+- Concluído: **67 / 135** (**49,6%**) — Tier S (44) + bônus Onda 4 (1) + Onda 5 (11) + Onda 6 (11)
+- Próxima: **Onda 7 — Tier A cluster 3** (seguindo cadência (a) auto-contínua — sem pausa humana obrigatória)
+- **Marco Onda 6:** cluster distribuição + proteção + aterramento concluído; 3 novos DECs (36/37/38) a partir de feedback direto do usuário durante a onda; **~50% do Caminho B atingido** (meio-do-caminho).
+
+**Cadência (a) — AUTO-CONTÍNUA (DEC-33 em vigor):** Onda 6 entregue; próxima onda prossegue sem pausa humana obrigatória. Gates preservados (commit + YAML + atualização de plano). Se qualquer escolha estrutural nova surgir (novo DEC, nova sub-fase, mudança de escopo), pausa imediata.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
