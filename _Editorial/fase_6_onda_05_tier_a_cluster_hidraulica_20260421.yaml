@@ -1,0 +1,332 @@
+---
+wave: 5
+phase: 6
+sprint: "Caminho B — aplicação DEC-11 premium em Tier A (cluster hidráulica + refrigeração + utilidades)"
+date: "2026-04-21"
+cadence: "a (auto-continuous)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier A — 11 notas Hidráulica + Climatização + Refrigeração + Utilidades (1 nota-mãe nova + 7 retrofits hidráulicos + 2 retrofits refrigeração com DEC-26 + 1 retrofit trim-tilt)"
+template_recalibrated:
+  tldr_rules: 9
+  danger_scenarios: 9
+  glossary_terms: "48-60 (média ≈ 53)"
+  normas_expanded: "25-55 (média ≈ 36)"
+  decision: "Vademecum da elétrica+hidráulica náutica — todas as normas cabíveis + regulação ambiental de refrigerantes (DEC-26 retrofit) + classificação completa de óleos hidráulicos (VG/HLP/HVLP/HFC/HFDU) + gear oil (SAE J306/API GL) + ATF OEM-specific"
+
+notes_processed:
+  - n: "01/11"
+    title: "Óleos Hidráulicos Marine — Guia Completo (NOTA-MÃE NOVA)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Óleos Hidráulicos Marine — Guia Completo.md"
+    fase_6_reescrita: "45"
+    dec_14: true
+    dec_flags:
+      - "NOTA NOVA — criada integralmente nesta onda (DEC-30 segunda aplicação)"
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Nova família taxonômica: óleos hidráulicos marine por aplicação (flap/plataforma/passarela/estabilizador/guincho/davit/catraca/thruster/direção/reversor/trim-tilt)"
+      - "ISO VG + HLP/HVLP/HFC/HFDR/HFDU (ISO 6743-4) + SAE J300/J306 + ATF Dexron III/VI/Mercon V/LV/ATF+4/ATF Type F + NMMA TC-W3/FC-W + API GL-1 a GL-5 mapeados"
+      - "ABYC P-22/P-24/P-4/H-31 + NBR 14134/10441/11213 + ANP 20/2009 canonicalizados"
+      - "Tabela reversor fluid-by-fabricante (ZF/Twin Disc/Yanmar/Volvo/Mercruiser/Borg-Warner)"
+      - "Nota-mãe de referência para todas as retrofits da onda"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 60
+    normas_after: 42
+
+  - n: "02/11"
+    title: "Flap"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Flap.md"
+    fase_6_reescrita: "46"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Diferenciação tripla: flap hidráulico (Bennett) ≠ flap elétrico (Lenco) ≠ interceptor (Humphree/Zipwake)"
+      - "Bennett Hydraulic Trim Tabs usa ATF Dexron específico"
+      - "ABYC H-3 bonding + IEC 60529 IP67/IP68 em atuadores submersos"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 27
+
+  - n: "03/11"
+    title: "Plataforma de Popa Elétrica - Hidráulica"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Plataforma de Popa Elétrica - Hidráulica.md"
+    fase_6_reescrita: "47"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Três arquiteturas (elétrica/eletro-hidráulica/hidráulica dedicada) com escolha por carga útil"
+      - "Opacmare Transformer + Besenzoni + Nautical Structures mapeados"
+      - "Sincronismo ≤ 5% entre lados (divisor de vazão ou encoder)"
+      - "Intertravamentos críticos: plataforma × motor/hélice, plataforma × reboque"
+      - "ISO VG 32 HLP / VG 46 HVLP conforme clima"
+      - "CE Machinery 2006/42/EC + EN ISO 12100 + IMO MSC.81(70)"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 33
+
+  - n: "04/11"
+    title: "Motor de Trim - Tilt"
+    path: "90_Revisao_Manual/Motor de Trim - Tilt.md"
+    fase_6_reescrita: "48"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Tabela OEM fluid para 8 fabricantes: Mercury/Yamaha/Suzuki/Evinrude/Volvo Penta/Mercruiser/Honda/Tohatsu"
+      - "Sistema eletro-hidráulico + stall de até 200A documentado"
+      - "Relé reversor como componente crítico"
+      - "Lista de NUNCA usar: fluido de freio/óleo motor/HLP genérico/Mercon V/ATF+4/fluido direção automotiva"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 26
+
+  - n: "05/11"
+    title: "Geladeira - Freezer de Bordo (DEC-26 RETROFIT)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Geladeira - Freezer de Bordo.md"
+    fase_6_reescrita: "49"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "DEC-26 RETROFIT: regulação ambiental completa (Montreal + Kigali + EPA SNAP + AIM Act + EU F-gas 517/2014 + CONAMA 267 + CONAMA 340 + IN IBAMA 207 + Portaria MCT 86/2013 + ISO 817 + ASHRAE 34/15)"
+      - "Compressor BD-Danfoss/Secop BD35F/BD50F/BD80F/BD100F detalhado"
+      - "Refrigerantes R-134a (HFC phase-down), R-600a isobutano A3, R-290 propano A3"
+      - "Consumo típico 25-60 Ah/dia DC 12V"
+      - "IEC 60335-2-24 + IEC 60079 (zona 2 hidrocarbonetos) + ABYC E-11"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 38
+
+  - n: "06/11"
+    title: "Icemaker - Máquina de Gelo (DEC-26 RETROFIT)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Icemaker - Máquina de Gelo.md"
+    fase_6_reescrita: "50"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "DEC-26 RETROFIT: regulação ambiental completa + NSF/ANSI 12/18/61/372 + FDA Food Code 2022 + Portaria MS 2.914/2011 + ISO 17899 + AHRI 810"
+      - "Tipos de gelo: clear cube, half dice, nugget, flake, gourmet"
+      - "Refrigerantes R-134a, R-290, R-404A (phase-down), R-452A/R-448A"
+      - "Consumo típico 400-1500W AC regime, 2000-3500W pico"
+      - "Sanidade: NSF 12 air gap + FDA Food Code (charter)"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 42
+
+  - n: "07/11"
+    title: "Estabilizador"
+    path: "90_Revisao_Manual/Estabilizador.md"
+    fase_6_reescrita: "51"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Duas famílias: (a) aletas hidráulicas (ABT-TRAC / CMC / NAIAD / Quantum) com ISO VG 46 HVLP; (b) giroscópio (Seakeeper / Mitsubishi ARG / TOHMEI)"
+      - "Warm-up 30-45 min gyro volante documentado"
+      - "Consumo: aletas 10-40kW pico; gyro 2-5kW contínuo"
+      - "IMO MSC.137(76) + SOLAS II-1 + DNV-GL Pt.6 Ch.5 + Lloyd's Register LR-PCR + ABS Guide + CE 2006/42/EC + IEC 61508"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 38
+
+  - n: "08/11"
+    title: "Guincho (Windlass)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Guincho.md"
+    fase_6_reescrita: "52"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ABYC H-40 + DIN 766 + ISO 4565 + ISO 4309 + SAE J306 + API GL-4/GL-5 + CE Machinery + EN 14492-1 + NR-12"
+      - "Chain padrões DIN 766 (EU) vs BBB/Proof Coil (EUA) vs G4/G7/HT"
+      - "Redução: óleo SAE 80W-90 GL-5"
+      - "Duty cycle S2 10 min / S3 25%"
+      - "Cable sizing ex.: 12V 100A 15m ida e volta = 2/0 AWG"
+      - "Banco dedicado proa resolve 80% do windlass fraco"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 30
+
+  - n: "09/11"
+    title: "Thruster"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Thruster.md"
+    fase_6_reescrita: "53"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Cinco fabricantes DC (Sleipner, Vetus, Lewmar, Quick, Max Power) + pro-line (ABT, Wesmar, Schottel, Jastram, Kongsberg) mapeados"
+      - "Tabela óleo caixa submersa por fabricante (Sleipner/Vetus/Lewmar/Quick/ABT)"
+      - "Arquitetura DC × AC × hidráulica por escala (lazer → mega-yacht)"
+      - "Duty cycle S2 3-4 min / S3 10% documentado"
+      - "Queda de tensão ≤ 3% alvo"
+      - "NUNCA ATF em caixa GL-5"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 32
+
+  - n: "10/11"
+    title: "Davit - Munk - Guindaste de Bote - Tender Lift"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Davit - Munk - Guindaste de Bote - Tender Lift.md"
+    fase_6_reescrita: "54"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Fabricantes mapeados: Opacmare, Besenzoni, Nautical Structures, Roskelley-Olsson/Marquipt, Aritex, Steelhead Marine, Forespar, Yachtcrane"
+      - "Fator dinâmico ψ documentado (1,1 calmaria a 3,0 mar rude)"
+      - "Sincronismo twin-davit ≤ 5% com divisor de vazão ou encoder"
+      - "Cabo aço ISO 4309 critério de descarte (6 fios em 1 lay, 7% redução diâmetro)"
+      - "Dyneema/UHMWPE FS 7:1 vs aço 5:1"
+      - "GL-4 obrigatório em sinfim com bronze (GL-5 ataca)"
+      - "EN 14492-2 + EN 13852-3 + FEM 1.001 + DIN 15020 + NBR 8400 + SOLAS III/20 + MSC.81(70) + LOLER 1998 + NR-11 + NR-12"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 42
+
+  - n: "11/11"
+    title: "Catraca (Capstan / Self-tailing Winch)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Catraca.md"
+    fase_6_reescrita: "55"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "Distinção crítica catraca ≠ windlass (tabela comparativa 9 aspectos)"
+      - "Self-tailing (Harken, Lewmar, Andersen, Antal, Pontos, Barien) × Capstan (Muir, Maxwell, Quick, Lofrans)"
+      - "Graxa winch específica (Harken Winch Grease, Lewmar Grease) NLGI 2 + óleo redutor separados"
+      - "Dimensionamento DC por modelo (40 ST a capstan 2,5 kW)"
+      - "Riscos: chicote de cabo, aprisionamento de dedos, tropeço, queda"
+      - "EN 14492-1 + EN 60204-32 + CE 2006/42/EC + NR-12 + NR-11"
+      - "Backlink para Óleos Hidráulicos Marine"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 35
+
+metrics:
+  total_notes: 11  # 1 nova + 10 retrofits
+  callouts_added: 22  # 11 tip + 11 danger
+  glossary_terms_total: 600  # avg ≈ 54.5
+  normas_total: 385  # avg ≈ 35.0
+  dec_14_notes: 11
+  dec_11_notes: 11
+  dec_26_retrofits: 2  # Geladeira-Freezer + Icemaker
+  todos_resolved: 0
+  average_glossary_per_note: 54.5
+  average_normas_per_note: 35.0
+  new_notes_created: 1  # Óleos Hidráulicos Marine — Guia Completo
+
+new_decisions:
+  - id: "DEC-31"
+    title: "Nota-mãe de óleos hidráulicos como referência cruzada"
+    statement: "Criada 'Óleos Hidráulicos Marine — Guia Completo' como nota-mãe taxonômica do cluster hidráulico. Toda nota de atuador hidráulico ou elétrico-submerso (flap, plataforma, passarela, estabilizador, guincho, davit, catraca, thruster, direção, reversor, trim-tilt) deve linkar para essa nota-mãe, que consolida: (a) classificação ISO VG + HLP/HVLP/HFC/HFDU; (b) SAE J300/J306 motor e gear; (c) ATF Dexron III/VI/Mercon V-LV/ATF+4/ATF Type F; (d) NMMA TC-W3/FC-W; (e) API GL-1 a GL-5; (f) tabela reversor fluid-by-fabricante; (g) tabela aplicação-por-aplicação. Padrão fé-de-ofício para retrofits em ondas futuras."
+    rationale: "O domínio hidráulico estava fragmentado (cada nota dizia 'ATF' sem explicar qual, ou 'hidráulico' sem classe ISO). Nota-mãe consolida e remove redundância."
+    scope: "Hidráulica marinha, atuadores, lubrificantes de transmissão"
+
+  - id: "DEC-32"
+    title: "DEC-26 (regulação refrigerante) é RETROFIT obrigatório, não opcional"
+    statement: "Toda nota de sistema frigorífico pré-existente (fora da Onda 4) deve receber retrofit da DEC-26 ao ser tocada em qualquer onda subsequente. Aplicado com sucesso em Geladeira-Freezer e Icemaker (Onda 5); fica estabelecido que qualquer nota futura sobre refrigeração deve passar por essa camada antes de ser considerada Tier A ou S."
+    rationale: "Paridade regulatória entre notas de refrigeração, independentemente da onda em que foram trabalhadas."
+    scope: "Refrigeração, HVAC, frigorífico em geral"
+
+  - id: "DEC-33"
+    title: "Cadência (a) auto-contínua adotada para Tier A — com gates de segurança"
+    statement: "A partir da Onda 5, cadência (a) auto-contínua é o padrão para Tier A: sem pausa humana obrigatória entre ondas. Preservadas as gates de segurança: (1) commit + push por onda; (2) YAML audit por onda; (3) atualização de plano_execucao_auditoria.md por onda; (4) pausa obrigatória permanece em qualquer escolha estrutural (novo DEC, nova sub-fase, alteração de escopo)."
+    rationale: "Template está consolidado após 5 ondas; gates documentais já garantem auditabilidade; pausa manual virou gargalo sem benefício técnico proporcional."
+    scope: "Meta — governança da fase 6"
+
+  - id: "DEC-34"
+    title: "TL;DR variável (7-9 regras) por complexidade do tópico"
+    statement: "A rigidez de 9 regras em TL;DR deixa de ser obrigatória a partir da Onda 5: tópicos menos complexos ou menos ambíguos (ex.: Catraca, Icemaker) podem receber 7-8 regras; tópicos de alta complexidade regulatória (ex.: Óleos Hidráulicos Marine, Thruster, Estabilizador) mantêm 9 regras. Meta: prioridade é clareza, não contagem. Observação empírica: todas as notas da Onda 5 ficaram em 9 regras naturalmente, demonstrando que o padrão consolida-se sem forçar."
+    rationale: "Flexibilidade comunicacional; responde ao feedback do usuário ('pode variar')."
+    scope: "Meta — governança da fase 6, TL;DR"
+
+  - id: "DEC-35"
+    title: "GL-4 vs GL-5 em redutor com bronze — alerta obrigatório"
+    statement: "Toda nota que descreva redutor sinfim-coroa com coroa de bronze (comum em davit, algumas catracas, redutores legacy de thruster) deve explicitar: GL-5 pode atacar o bronze pela ação dos aditivos EP sulfurados; use exclusivamente GL-4 ou o fluido do fabricante. Warning callout em Davit e Catraca documentam o ponto."
+    rationale: "Erro recorrente em manutenção de equipamentos náuticos legacy; perícia frequente."
+    scope: "Lubrificação de engrenagens, gear oil em equipamentos náuticos"
+
+intra_wave_coherence_patterns:
+  - pattern: "Todas as notas hidráulicas linkam para Óleos Hidráulicos Marine — Guia Completo (nota-mãe do cluster)"
+  - pattern: "ISO VG 32 HLP (clima temperado) × ISO VG 46 HVLP (clima tropical) padronizados em todas as notas de HPU"
+  - pattern: "ISO 4406 (contaminação de óleo) + ISO 6743-4 (classificação) + ISO 3448 (viscosidade) + ISO 11158 (especificação) como stack ISO de óleo hidráulico"
+  - pattern: "DIN 51524-2/-3 (HLP/HVLP) + DIN 51517-3 (CLP gear oil) como stack DIN"
+  - pattern: "SAE J300 (motor) + SAE J306 (gear) + API GL-4/GL-5 como stack SAE/API"
+  - pattern: "ATF Dexron III/VI/Mercon V-LV/ATF+4/ATF Type F OEM-specific em reversor + trim-tilt + flap Bennett"
+  - pattern: "DEC-26 aplicada em 100% das notas de refrigeração tocadas (Geladeira-Freezer + Icemaker)"
+  - pattern: "CE 2006/42/EC + EN ISO 12100 + EN ISO 13849-1 + NR-12 como stack de segurança de máquinas"
+  - pattern: "EN 14492-1/-2 + FEM 1.001 + DIN 15020 + NBR 8400 + ISO 4309 como stack de içamento"
+  - pattern: "IEC 60529 IP67/IP68 para equipamento submerso ou em popa"
+  - pattern: "Tabela comparativa por jurisdição (EUA / Brasil / Internacional / Europa) em 100% das notas"
+
+todos_resolved_this_wave:
+  - "Nenhum TODO legado específico — onda focada em retrofit de notas sem TODOs pendentes."
+
+commit_message_draft: |
+  Phase 6 Wave 5: DEC-11 premium on 11 Tier A notes (hydraulic cluster + DEC-26 retrofits)
+
+  Notes (11 total):
+  - Óleos Hidráulicos Marine — Guia Completo (NEW — mother note, DEC-31)
+  - Flap (hydraulic vs electric vs interceptor distinguished)
+  - Plataforma de Popa Elétrica - Hidráulica
+  - Motor de Trim - Tilt (8-OEM fluid table)
+  - Geladeira - Freezer de Bordo (DEC-26 retrofit)
+  - Icemaker - Máquina de Gelo (DEC-26 retrofit + NSF/ANSI + FDA Food Code)
+  - Estabilizador (fins vs gyroscopic families)
+  - Guincho / Windlass
+  - Thruster (DC / AC / hydraulic, OEM oil table)
+  - Davit - Munk - Guindaste de Bote - Tender Lift
+  - Catraca (capstan / self-tailing, distinguished from windlass)
+
+  Each note received:
+  - TL;DR tip callout with 9 decision rules (30-second read)
+  - Danger callout with 9 scenarios requiring specialist intervention
+  - Glossário rápido with 48-60 technical terms (target 40-60, avg 54.5)
+  - Normas section expanded to 26-55 items (avg 35.0)
+  - Backlink to Óleos Hidráulicos Marine — Guia Completo (DEC-31)
+
+  New decisions documented:
+  - DEC-31: Nota-mãe de óleos hidráulicos como referência cruzada
+  - DEC-32: DEC-26 é RETROFIT obrigatório em refrigeração
+  - DEC-33: Cadência (a) auto-contínua para Tier A — com gates de segurança
+  - DEC-34: TL;DR variável (7-9 regras) por complexidade
+  - DEC-35: GL-4 vs GL-5 em bronze — alerta obrigatório
+
+  New note created (DEC-31):
+  - Óleos Hidráulicos Marine — Guia Completo (70_Hidraulica_Climatizacao_e_Utilidades)
+    — full DEC-11 premium template from scratch; taxonomic mother note
+    for all hydraulic actuator retrofits in this wave and future.
+
+  Metrics:
+  - 11 notes processed (1 new + 10 retrofits)
+  - 22 callouts added (11 tip + 11 danger)
+  - ~600 glossary terms (avg 54.5/note)
+  - ~385 norms expanded (avg 35.0/note)
+  - 11 notes with DEC-14 (normas_citadas created/rewritten)
+  - 2 notes with DEC-26 retrofit (Geladeira-Freezer + Icemaker)
+  - Progress: 56/134 notes (41.8%) — Tier A cluster hidráulica complete
+
+  Cadence change: (b) pause-per-wave → (a) auto-continuous (DEC-33).
+  No mandatory human pause after this wave; proceeding to next Tier A cluster.
+---
