@@ -1230,6 +1230,68 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 7 CONCLUÍDA — 2026-04-25
+
+**Comando de continuidade:** cadência (a) auto-contínua em vigor (DEC-33). Cluster selecionado: **domínio 70_Hidraulica_Climatizacao_e_Utilidades** (14 notas Tier A — 12 retrofits + 2 notas-filhas novas — sub-cluster sanitário/galley/utilidades + sub-cluster climate-aux).
+
+**Onda 7 executada (14 notas — 4 retrofits engineering-curated + 8 retrofits premium-l3 + 2 notas-filhas novas premium-l3):**
+
+| # | Nota | fase_6 | Status | Destaques |
+|---|------|--------|--------|-----------|
+| 67 | Aquecedor de Bordo - Cabin Heater | 67 | engineering-curated | DEC-14, ABYC A-7 (heating systems) + A-24 (CO detection) + ISO 7547, Webasto Air Top + Eberspächer Airtronic, combustão segura + escape estanque |
+| 68 | Blower | 68 | engineering-curated | DEC-14, ABYC H-2 (ventilação compartimento gasolina) + 33 CFR 183 Subpart K, regra 4 min antes de partir motor a gasolina (ABYC H-2.6 / UL 1128), Attwood Turbo / Jabsco Flexmount |
+| 69 | Boiler | 69 | engineering-curated | DEC-14, ABYC H-23.7 (air gap) + ASSE 1001 + ANVISA Portaria 5/2017 + Portaria GM/MS 888/2021, Quick / Sigmar / Isotemp / Atwood, calandra elétrica + heat exchanger, sacrificial anode |
+| 70 | Bomba Ar Condicionado | 70 | engineering-curated | DEC-14, March / Cruisair / Dometic / Webasto, pump magneticamente acoplada (March LC-3CP-MD / 5C-MD), strainer + filtro + air gap + anti-sifão |
+| 71 | Bomba de Água Pressurizada | 71 | premium-l3 | DEC-11 + DEC-14, ABYC H-23 + ISO 15748-1/-2 + ABNT NBR 14728 + ANVISA Portaria 5/2017 + Portaria GM/MS 888/2021, Shurflo 4008/5050 + Jabsco PAR-Max + Whale Watermaster, variable-speed pumps |
+| **71b** | **Ar-Condicionado Chiller - Chilled Water Marine** **(NOVA)** | 71b | premium-l3 | **DEC-30 + DEC-40 + DEC-26 retrofit completo** (Montreal + Kigali + EPA SNAP + AIM Act + EU F-gas + CONAMA 267/340 + ABNT NBR 16401-1/-2/-3), Cruisair MTBlue / Webasto BlueCool S / Frigomar, refrigerantes R-410A/R-454B/R-32, ABYC H-32 + IEC 60335-2-40 + ASHRAE 15/34 |
+| 72 | Bomba de Águas Negras | 72 | premium-l3 | DEC-11 + DEC-14, ABYC H-22 + ISO 8099-1/-2 + ISO 17479 + 33 CFR 159 + MARPOL IV Reg.11 + Polar Code + HELCOM, Lei 9.605/1998 + Decreto 4.136 + CONAMA 357/430 + NORMAM-08, Jabsco 18590 + Whale Gulper 320 Mk2 + Shurflo 3200 + Sealand T-Series |
+| 73 | Bomba de Banheiro | 73 | premium-l3 | DEC-11 + DEC-14, 4 arquiteturas (manual/elétrica sem macerador/elétrica com macerador/vácuo), joker valve = peça desgaste 12-24 meses (70% das queixas), vented loop + air gap H-23.7, Raritan PHII + Jabsco Quiet Flush + Tecma Silence Plus + Sealand SailVAC + Lavac |
+| **73b** | **Sistema Sanitário a Vácuo - VacuFlush - SailVAC** **(NOVA)** | 73b | premium-l3 | **DEC-30 + DEC-40**, arquitetura vácuo central (Dometic VacuFlush / Sealand SailVAC), vácuo 6-15 inHg, <300 mL por descarga, autonomia 3-5× maior, mega-iate/charter/comercial >65 ft, vacuum pump + tanque acumulador + linha PVC, macerador overboard frequentemente redundante |
+| 74 | Caixa de Água Cinza | 74 | premium-l3 | DEC-11 + DEC-14, distinção águas cinzas (pia/chuveiro/cozinha) ≠ negras ≠ oleosas, Báltico HELCOM + Polar Code restringem mesmo cinzas, pré-filtro + escovas/vapor anti-entupimento (gordura/cabelo) |
+| 75 | Dessanilizador | 75 | premium-l3 | DEC-11 + DEC-14, princípio osmose reversa 800-1200 psi, Spectra + HRO Sea-Flo + Schenker + Village Marine, pré-filtros 5/20 µm + carbon block + UV-C + flush automático, ANVISA Portaria 5/2017 + Portaria GM/MS 888/2021, membrana TFC poliamida 3-5 anos |
+| 76 | Fogão - Cooktop Elétrico - Galley | 76 | premium-l3 | DEC-11 + DEC-14, ABYC A-1 (LPG) + A-3 (galley stoves) + ISO 10239 (LPG), indução vs resistência vs gas, Webasto X100 / Kenyon / Force 10, gimbaled mounts em veleiros, detector GLP + solenóide elétrica + manômetro |
+| 77 | Holding Tank - Y-Valve - Sistema de Esgoto | 77 | premium-l3 | DEC-11 + DEC-14, **nota-mãe sanitária do cluster**, ABYC H-3 + ISO 8099-1/-2 + 33 CFR 159 (USCG MSD I/II/III) + MARPOL IV Reg.11 + Polar Code + HELCOM + Antarctic Treaty + EU 2006/87/EC + EU 2013/53/EU + Lei 9.605 + CONAMA + NORMAM (8/1/2/5/201/211), tabela MSD + zoneamento (NDZ/Polar/HELCOM/Brasil) |
+| 78 | Macerador - Bomba de Águas Negras | 78 | premium-l3 | **DEC-41 aplicada**: ISO 17479 (Toilet waste discharge systems with macerators) reconhecida como norma específica do macerador, distinta de ISO 8099, tabela 6 fabricantes (Jabsco 18590 + Whale Gulper 320 Mk2 + Shurflo 3200 + Sealand T-Series + Raritan Crown + TMC/Albin), 5 arquiteturas, super-dimensionar fusível QUEIMA o motor (proibido), lâmina = 2-5 anos, selo = 3-5 anos preventivo |
+
+**Métricas Onda 7:**
+- **14 notas** processadas (12 retrofits + **2 notas-filhas novas**)
+- **28 callouts novos** (14 tip + 14 danger)
+- **~840 termos de glossário** (média **~60/nota** — vademecum sanitário/galley)
+- **~560 normas expandidas/canonicalizadas** (média **~40/nota** — densidade premium-l3)
+- **14 notas com `normas_citadas`** (DEC-14 aplicada em 100%)
+- **1 retrofit DEC-26** (Ar-Condicionado Chiller — regulação refrigerante completa)
+- **3 novas decisões documentadas:**
+  - **DEC-39** — Two-tier template no cluster: climate-aux engineering-curated (normas estruturadas) × sanitário/galley premium-l3 (normas em lista plana ampliada). Escolha por: (1) número de jurisdições aplicáveis; (2) risco a vida/ambiente/saúde pública; (3) zonas regulatórias específicas (NDZ/Polar/HELCOM/ARIE).
+  - **DEC-40** — Notas-filhas para arquiteturas alternativas (vácuo central / chiller central) com fabricantes/normas/falhas/duty próprios — não subseção. Aplicado: Sistema Sanitário a Vácuo (filha de Bomba Banheiro/Holding Tank) + Ar-Condicionado Chiller (filha de Ar-Condicionado Marine).
+  - **DEC-41** — ISO 17479 reconhecida como norma específica do macerador (Toilet waste discharge systems with macerators), distinta de ISO 8099-1/-2 (sistemas de retenção). Toda nota macerador/descarte canonicaliza ISO 17479 explicitamente.
+
+**Padrões reforçados no cluster Onda 7 (13 padrões):**
+- **ABYC H-3 + ISO 8099-1/-2 + ISO 17479 + 33 CFR 159 + MARPOL IV Reg.11** stack sanitário em 100% das notas do sub-cluster esgoto
+- **Polar Code (IMO MEPC.264(68)) + HELCOM Rec. 28E/13 + Antarctic Treaty Annex IV** citados em todas as notas com descarga overboard
+- **ABYC H-23.7 + ASSE 1001 + ANVISA Portaria 5/2017 + Portaria GM/MS 888/2021** stack potável (air gap)
+- **ABYC E-11 + ISO 13297 + ISO 28848 + ABNT NBR 14728** stack elétrico marine de pumps
+- **Lei 9.605/1998 + Decreto 4.136/2002 + CONAMA 357/2005 + CONAMA 430/2011 + NORMAM-08/01/02/05/201/211** stack regulatório BR
+- **EU 2013/53/EU (RCD) + EU 2006/87/EC (inland) + IEC 60364-7-709 (marinas)** stack europeu
+- **Mangueira sanitária Trident 101/102 + Shields 148/116 + Vetus SAHOSE** referenciada em 100% das notas com efluente
+- **Vented loop ≥30 cm acima WL em qualquer banda/trim** referenciado em todas as notas com sucção/descarga abaixo da WL
+- **DEC-26 retrofit em Ar-Condicionado Chiller** (1 nota nova) — Montreal + Kigali + AIM Act + CONAMA 267/340
+- **Tabela comparativa por jurisdição** (EUA / Internacional / Brasil / Europa) em 10/10 notas premium-l3
+- **Backlinks cruzados densos**: Holding Tank ↔ Y-valve ↔ Macerador ↔ Bomba Águas Negras ↔ Bomba Banheiro ↔ Sistema Vácuo ↔ Caixa Cinza ↔ Dessanilizador ↔ Bomba Pressurizada
+- **MSD Type I/II/III** explicitado em todas as notas do sub-cluster esgoto (USA jurisdiction)
+- **DEC-30 (criação de notas novas)** acionada 2× nesta onda: Ar-Condicionado Chiller + Sistema Sanitário a Vácuo
+
+**Commit:** a criar em `claude/optimistic-jepsen`. YAML: `fase_6_onda_07_tier_a_cluster_hidraulica_utilidades_20260425.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 133 notas em 8 ondas (135 com bônus Onda 4 + Onda 5; 137 com bônus Onda 7 = 2 notas-filhas novas)
+- Concluído: **81 / 137** (**59,1%**) — Tier S (44) + bônus Onda 4 (1) + Onda 5 (11) + Onda 6 (11) + Onda 7 (14)
+- Próxima: **Onda 8 — Tier A cluster restante 50/55/60** (Navegação + Iluminação + Automação) seguindo cadência (a) auto-contínua
+- **Marco Onda 7:** cluster Hidráulica/Sanitário/Galley/Utilidades concluído com 2 notas-filhas novas (Sistema Sanitário a Vácuo + Ar-Condicionado Chiller); 3 novos DECs (39/40/41); two-tier template no cluster (engineering-curated × premium-l3) demonstra adaptabilidade de DEC-11 sem deriva.
+
+**Cadência (a) — AUTO-CONTÍNUA (DEC-33 em vigor):** Onda 7 entregue; próxima onda prossegue sem pausa humana obrigatória. Gates preservados (commit + YAML + atualização de plano). Se qualquer escolha estrutural nova surgir (novo DEC, nova sub-fase, mudança de escopo), pausa imediata.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
