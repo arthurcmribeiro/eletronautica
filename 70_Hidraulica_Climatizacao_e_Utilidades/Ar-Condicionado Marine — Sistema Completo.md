@@ -82,14 +82,17 @@ geo_queries:
   - "Como funciona o ar-condicionado marine em embarcações?"
   - "Quais são as falhas mais comuns em ar-condicionado marinho?"
 related_notes:
+  - "Ar-Condicionado Chiller - Chilled Water Marine"
   - "Ar-Condicionado Marine 12V DC"
   - "Bomba Ar Condicionado"
+  - "Aquecedor de Bordo - Cabin Heater"
   - "CAIS (Pier) (AC)"
   - "Contatores (AC)"
   - "Gerador (AC)"
   - "Linha Pesada (AC)"
   - "Proteção Dr"
   - "Quadro Elétrico e Painel de Distribuição AC-DC"
+  - "Soft Starter"
   - "Troubleshooting — Diagnóstico de Falhas Elétricas"
 ---
 
@@ -155,9 +158,12 @@ Quando o diagnóstico não enxerga os quatro subsistemas, a chance de troca erra
 
 É a solução mais comum em lanchas e barcos médios. A unidade concentra refrigeração e ventilação localmente. Tem instalação mais simples, mas multiplica equipamentos quando há muitos ambientes.
 
-### Chilled water
+### Chilled water (chiller)
 
-Mais comum em embarcações maiores. Centraliza a refrigeração e distribui água gelada para unidades terminais. É mais sofisticado, exige projeto melhor e facilita setorização, manutenção e acústica quando bem executado.
+Mais comum em embarcações maiores (>55-60 ft). Centraliza a refrigeração em uma central frigorífica (chiller) e distribui **água gelada com glicol propilênico (chilled water)** para **fan-coils** em cada ambiente. É mais sofisticado, exige projeto melhor e facilita setorização, manutenção, redundância (N+1) e acústica quando bem executado.
+
+> [!info] Nota dedicada
+> O tratamento técnico completo (loops primário/secundário/terciário, dimensionamento de bomba de glicol, refrigerantes pós-Kigali, marcas Cruisair Vector / Webasto BlueCool / Climma / Frigomar, comissionamento e manutenção) está em **[[Ar-Condicionado Chiller - Chilled Water Marine]]**. Esta seção apenas resume a arquitetura no contexto comparativo com self-contained.
 
 ## O que mais derruba desempenho no mundo real
 
@@ -342,8 +348,8 @@ Ar-condicionado marine é o ponto onde **instalação elétrica**, **equipamento
 - **HVAC (Heating, Ventilation, Air Conditioning)**: sigla que cobre climatização + ventilação.
 - **Self-contained**: unidade com compressor, condensador, evaporador e controle em um único gabinete; comum em lanchas e barcos médios.
 - **Split**: unidade com condensadora separada da evaporadora; incomum no marine puro por questão de corrosão e tubulação de refrigerante.
-- **Chilled water / chiller**: sistema central com água gelada distribuída a fan-coils; típico de embarcações grandes.
-- **Fan-coil**: unidade terminal com serpentina de água gelada e ventilador.
+- **Chilled water / chiller**: sistema central com água gelada (água + glicol propilênico) distribuída a fan-coils; típico de embarcações grandes (>55 ft). Vide nota dedicada **[[Ar-Condicionado Chiller - Chilled Water Marine]]**.
+- **Fan-coil (FCU)**: unidade terminal com serpentina de água gelada, ventilador, válvula modulante e termostato individual; em chiller é o que substitui a unidade self-contained nos ambientes.
 - **DX (Direct Expansion)**: expansão direta do refrigerante no evaporador (sem loop intermediário de água).
 - **Condensação a água do mar / SW-cooled (Seawater-cooled)**: rejeição de calor ao mar via bomba; padrão em AC marine.
 - **Condensação a ar / air-cooled**: rejeita calor ao ar (raro em marine por tamanho e corrosão).
@@ -392,11 +398,15 @@ Ar-condicionado marine é o ponto onde **instalação elétrica**, **equipamento
 
 ## Integração com outras notas
 
-- [[Bomba Ar Condicionado]]
+- [[Ar-Condicionado Chiller - Chilled Water Marine]] — arquitetura central de água gelada (>55-60 ft).
+- [[Ar-Condicionado Marine 12V DC]] — alternativa 12V DC para barcos pequenos.
+- [[Bomba Ar Condicionado]] — bomba de água do mar (loop terciário) tanto para self-contained quanto para chiller.
+- [[Aquecedor de Bordo - Cabin Heater]] — quando AC reversível não atende, sistema diesel/elétrico complementa.
 - [[CAIS (Pier) (AC)]]
 - [[Contatores (AC)]]
 - [[Gerador (AC)]]
 - [[Linha Pesada (AC)]]
+- [[Soft Starter]]
 - [[Proteção Dr]]
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]]
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]]
