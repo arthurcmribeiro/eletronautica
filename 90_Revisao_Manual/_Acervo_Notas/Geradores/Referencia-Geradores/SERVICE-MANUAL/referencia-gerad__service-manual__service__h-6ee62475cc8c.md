@@ -6,7 +6,7 @@ status: "auto-extracted"
 acervo_origin: "acervo-principal"
 document_kind: "service-manual"
 curation_priority: "alta"
-curation_stage: "triagem-automatica"
+curation_stage: "curadoria-assistida-automatica"
 reviewed_on: "2026-04-26"
 review_jurisdiction: "Brasil"
 source_pdf: "Geradores/Referencia-Geradores/SERVICE-MANUAL/referencia-gerad__service-manual__service__h-6ee62475cc8c.pdf"
@@ -83,27 +83,44 @@ related_notes:
 - `90_Revisao_Manual/90_Arquivo_Historico/Acervo Local - Geradores Iniciais (Cummins Onan)`
 
 <!-- CURADORIA-HUMANA:START -->
-## Curadoria humana
+## Curadoria assistida por automacao
 
-### Resumo humano
-- pendente
+> [!warning] Status
+> Este bloco foi preenchido automaticamente para acelerar busca e priorizacao. Nao substitui revisao tecnica humana antes de aula, atendimento, orcamento ou publicacao.
+
+### Resumo operacional
+- documento `service-manual` em `Geradores` para `Referencia-Geradores / SERVICE-MANUAL`.
+- prioridade atual: `alta`; score operacional: `105`.
+- razoes de prioridade: sistema Geradores; tipo service-manual; prioridade editorial alta.
+- paginas detectadas: `78`.
 
 ### Aplicacao de oficina
-- pendente
+- priorizar ligacoes, protecoes, ventilacao, alarmes, partida/parada e rotina de manutencao do grupo gerador.
 
-### Modelos cobertos confirmados
+### Modelos cobertos provaveis
 - `SERVICE-MANUAL`
+- confirmar modelos, revisoes e excecoes no PDF antes de uso publico.
 
 ### Pontos de atencao
-- pendente
+- texto pesquisavel: `True` por `pdftotext`
+- status qpdf: `ok`
+- prioridade OCR: `nao`
+- PDF criptografado: `nao`
+- boa candidata para virar checklist de oficina ou aula tecnica.
 
 ### Integracoes e links internos
 - sistema-base: `Geradores`
 - marca/familia: `Referencia-Geradores / SERVICE-MANUAL`
-- notas relacionadas: pendente
+- conectar com nota tecnica do sistema quando este PDF virar material de ensino.
+
+### Proximo passo humano
+- confirmar modelos/revisoes diretamente no PDF
+- marcar paginas-chave para instalacao, diagnostico, protecao e manutencao
+- separar recomendacao de fabricante de exigencia normativa
+- adicionar links internos para notas de sistema da vault
 
 ### Status de curadoria
-- tipo documental confirmado: `service-manual`
+- tipo documental confirmado automaticamente: `service-manual`
 - curadoria humana: pendente
 - pronto para ensino/SEO: nao
 <!-- CURADORIA-HUMANA:END -->

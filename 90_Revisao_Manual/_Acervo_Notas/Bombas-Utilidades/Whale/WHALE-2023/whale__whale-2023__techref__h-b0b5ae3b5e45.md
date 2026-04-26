@@ -6,7 +6,7 @@ status: "auto-extracted"
 acervo_origin: "acervo-principal"
 document_kind: "technical-reference"
 curation_priority: "alta"
-curation_stage: "triagem-automatica"
+curation_stage: "curadoria-assistida-automatica"
 reviewed_on: "2026-04-26"
 review_jurisdiction: "Brasil"
 source_pdf: "Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.pdf"
@@ -20,11 +20,11 @@ pdf_pages: "128"
 pdf_version: "1.7"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
+ocr_priority: "concluido"
+ocr_status: "partial"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.md"
+ocr_text_chars: "130799"
 analysis_source: "pdftotext"
 aliases:
   - "whale__whale-2023__techref__h-b0b5ae3b5e45.pdf"
@@ -40,9 +40,6 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
-
 ## Fonte
 
 - PDF: [whale__whale-2023__techref__h-b0b5ae3b5e45.pdf](</C:/Users/User/Desktop/ELETRO NAUTICA OBSIDIAN/ELETRO NAUTICA/90_Revisao_Manual/_Acervo_Local/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.pdf>)
@@ -57,11 +54,11 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdftotext`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `partial`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.txt`
+- caracteres OCR auxiliares: `130799`
 - fonte de analise automatica: `pdftotext`
 
 ## Sinais principais
@@ -85,27 +82,43 @@ related_notes:
 - `70_Hidraulica_Climatizacao_e_Utilidades`
 
 <!-- CURADORIA-HUMANA:START -->
-## Curadoria humana
+## Curadoria assistida por automacao
 
-### Resumo humano
-- pendente
+> [!warning] Status
+> Este bloco foi preenchido automaticamente para acelerar busca e priorizacao. Nao substitui revisao tecnica humana antes de aula, atendimento, orcamento ou publicacao.
+
+### Resumo operacional
+- documento `technical-reference` em `Bombas-Utilidades` para `Whale / WHALE-2023`.
+- prioridade atual: `alta`; score operacional: `105`.
+- razoes de prioridade: sistema Bombas-Utilidades; tipo technical-reference; prioridade editorial alta; OCR alta; documento longo (128 paginas).
+- paginas detectadas: `128`.
 
 ### Aplicacao de oficina
-- pendente
+- priorizar corrente, fusivel, pressostato, valvulas, altura manometrica, acesso e falhas recorrentes.
 
-### Modelos cobertos confirmados
+### Modelos cobertos provaveis
 - `WHALE-2023`
+- confirmar modelos, revisoes e excecoes no PDF antes de uso publico.
 
 ### Pontos de atencao
-- pendente
+- texto pesquisavel: `sim` por `pdf-stream-strings-low-confidence`
+- status qpdf: `ok`
+- prioridade OCR: `alta`
+- PDF criptografado: `nao`
 
 ### Integracoes e links internos
 - sistema-base: `Bombas-Utilidades`
 - marca/familia: `Whale / WHALE-2023`
-- notas relacionadas: pendente
+- conectar com nota tecnica do sistema quando este PDF virar material de ensino.
+
+### Proximo passo humano
+- confirmar modelos/revisoes diretamente no PDF
+- marcar paginas-chave para instalacao, diagnostico, protecao e manutencao
+- separar recomendacao de fabricante de exigencia normativa
+- adicionar links internos para notas de sistema da vault
 
 ### Status de curadoria
-- tipo documental confirmado: `technical-reference`
+- tipo documental confirmado automaticamente: `technical-reference`
 - curadoria humana: pendente
 - pronto para ensino/SEO: nao
 <!-- CURADORIA-HUMANA:END -->

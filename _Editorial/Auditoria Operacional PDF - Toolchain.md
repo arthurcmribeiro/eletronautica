@@ -19,7 +19,7 @@ related_notes:
 > [!info] Geracao
 > Comando: `python scripts/acervo/audit_pdf_toolchain.py --scope all`.
 > Escopo desta execucao: `all`.
-> Gerado em `2026-04-26T07:53:34.102872+00:00`.
+> Gerado em `2026-04-26T08:41:42.155302+00:00`.
 
 ## Resultado executivo
 

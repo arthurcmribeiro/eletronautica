@@ -22,7 +22,7 @@ related_notes:
 
 > [!info] Geração
 > Comando: `python scripts/acervo/build_local_index.py`.
-> Gerado em `2026-04-26T07:58:26.011034+00:00`.
+> Gerado em `2026-04-26T09:05:42.286468+00:00`.
 
 ## Resumo
 

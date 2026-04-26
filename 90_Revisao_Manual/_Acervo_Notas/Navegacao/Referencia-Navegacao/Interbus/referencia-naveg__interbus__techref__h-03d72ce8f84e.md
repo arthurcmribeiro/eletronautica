@@ -20,12 +20,12 @@ pdf_pages: "274"
 pdf_version: "1.4"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "partial"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.md"
+ocr_text_chars: "252281"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-naveg__interbus__techref__h-03d72ce8f84e.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `partial` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.md`.
 
 ## Fonte
 
@@ -60,21 +57,21 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdf-stream-strings-low-confidence`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `partial`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.txt`
+- caracteres OCR auxiliares: `252281`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
 - sistema: `Navegacao`
 - marca: `Referencia-Navegacao`
 - familia: `Interbus`
-- marcas detectadas: `n/a`
-- codigos/modelos detectados: `Interbus, H-03D72CE8F84E, 03D72CE8F84E`
-- termos uteis detectados: `n/a`
+- marcas detectadas: `H-Tec, Quick, Victron`
+- codigos/modelos detectados: `Interbus, H-03D72CE8F84E, 03D72CE8F84E, D-SUB/9-pos, WP-6A, RS-232, KG/100, P-6A`
+- termos uteis detectados: `air, bonding, control, controls, cooling, corrosion, diagnostic, installation`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -115,7 +112,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `DOOGD MOD Lema OCDE`
+- `INNOVATION IN INTERFACE`
+- `Configuring and Installing INTERBUS`
+- `Designation: IBS SYS PRO INST UME`
+- `Order No.: 27 43 802`
+- `[sem texto OCR: ]`
+- `Designation: IBS SYS PRO INST UM E`
+- `Revision: ACO2`
+- `This manual is valid for:`
+- `— ST modules (Smart Terminals)`
 
 ## Perguntas de curadoria
 

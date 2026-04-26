@@ -20,12 +20,12 @@ pdf_pages: "12"
 pdf_version: "1.4"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "completed"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.md"
+ocr_text_chars: "11743"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `completed` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.md`.
 
 ## Fonte
 
@@ -60,21 +57,21 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `no-text-detected`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `completed`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.txt`
+- caracteres OCR auxiliares: `11743`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
 - sistema: `Propulsao-Motores`
 - marca: `Referencia-Propulsao`
 - familia: `propulsao-motores-turbo`
-- marcas detectadas: `n/a`
-- codigos/modelos detectados: `H-547726ED710B, 547726ED710B`
-- termos uteis detectados: `n/a`
+- marcas detectadas: `Yanmar`
+- codigos/modelos detectados: `H-547726ED710B, 547726ED710B, L70EE-D/DE/DG/DEG/DP/DEP, DI11`
+- termos uteis detectados: `air, control, cooling, engine, pump, spec, wiring`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -115,7 +112,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `L70EE-D/DE/DG/DEG/DP/DEP`
+- `Copyright: 2002 Yanmar Diesel Engine Co.. Lid. Tu`
+- `i diritti sono nservan`
+- `CYLINDER BLOCK`
+- `N. Rif, Codice Ricambio`
+- `1 714871-01560`
+- `8 114350-01700`
+- `9 26106-100122`
+- `10 44350-01200`
+- `11 114350-01210`
 
 ## Perguntas de curadoria
 

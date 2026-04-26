@@ -20,12 +20,12 @@ pdf_pages: "3"
 pdf_version: "1.4"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "completed"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.md"
+ocr_text_chars: "2375"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `completed` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.md`.
 
 ## Fonte
 
@@ -60,21 +57,21 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdf-stream-strings-low-confidence`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `completed`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.txt`
+- caracteres OCR auxiliares: `2375`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
 - sistema: `Campo-Clientes`
 - marca: `Referencia-Campo`
 - familia: `Imagens-e-Recortes-Tecni`
-- marcas detectadas: `n/a`
-- codigos/modelos detectados: `Imagens, Recortes, Tecni, H-AA138D8C8774, AA138D8C8774`
-- termos uteis detectados: `n/a`
+- marcas detectadas: `Rehlko / Kohler`
+- codigos/modelos detectados: `Imagens, Recortes, Tecni, H-AA138D8C8774, AA138D8C8774, O.01KG`
+- termos uteis detectados: `air, generator, service`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -117,7 +114,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `EXPRESS WORLDWIDE | TI =) 4 Rasa DHL EXPRESS TERMOS E CONDIÇÕES DE TRANSPORTE`
+- `panes Termas 2 Condições)`
+- `dr auanuLtos sr`
+- `Fre: SPEEDYLION- LDA em 1`
+- `RUA ANGRA DO HEROISMO, 3`
+- `LISBOA FREGUESIA - ARROIOS`
+- `1150-200 LISBON`
+- `L. PORTUGAL a`
+- `.___PT-LIS-LIS .`
+- `Tessrpt wean?`
 
 ## Perguntas de curadoria
 

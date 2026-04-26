@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-26T07:59:11.619873+00:00",
-  "started_at": "2026-04-26T07:57:38.231682+00:00",
-  "finished_at": "2026-04-26T07:59:11.619873+00:00",
-  "duration_seconds": 93.388,
+  "generated_at": "2026-04-26T09:06:18.581833+00:00",
+  "started_at": "2026-04-26T09:05:00.497697+00:00",
+  "finished_at": "2026-04-26T09:06:18.581833+00:00",
+  "duration_seconds": 78.084,
   "status": "ok",
   "dry_run": false,
   "audit_scope": "all",
@@ -11,23 +11,23 @@
     {
       "name": "Empacotar/atualizar staging humano tecnico",
       "command": "C:\\Python314\\python.exe scripts/acervo/package_human_technical_archive.py",
-      "started_at": "2026-04-26T07:57:38.231717+00:00",
-      "duration_seconds": 39.755,
+      "started_at": "2026-04-26T09:05:00.497731+00:00",
+      "duration_seconds": 34.558,
       "returncode": 0,
       "status": "ok"
     },
     {
       "name": "Reconstruir indice local do acervo principal",
       "command": "C:\\Python314\\python.exe scripts/acervo/build_local_index.py",
-      "started_at": "2026-04-26T07:58:17.987218+00:00",
-      "duration_seconds": 8.043,
+      "started_at": "2026-04-26T09:05:35.056159+00:00",
+      "duration_seconds": 7.25,
       "returncode": 0,
       "status": "ok"
     },
     {
       "name": "Auditar PDFs com toolchain externo",
       "command": "C:\\Python314\\python.exe scripts/acervo/audit_pdf_toolchain.py --scope all --ocr-sample-limit 2",
-      "started_at": "2026-04-26T07:58:26.030230+00:00",
+      "started_at": "2026-04-26T09:05:42.306599+00:00",
       "duration_seconds": 0.0,
       "returncode": 0,
       "status": "skipped"
@@ -35,7 +35,7 @@
     {
       "name": "Gerar OCR auxiliar prioritario",
       "command": "C:\\Python314\\python.exe scripts/acervo/ocr_priority_pdfs.py --priority alta",
-      "started_at": "2026-04-26T07:58:26.030287+00:00",
+      "started_at": "2026-04-26T09:05:42.306654+00:00",
       "duration_seconds": 0.0,
       "returncode": 0,
       "status": "skipped"
@@ -43,32 +43,40 @@
     {
       "name": "Regenerar notas companheiras dos PDFs",
       "command": "C:\\Python314\\python.exe scripts/acervo/build_pdf_companion_notes.py",
-      "started_at": "2026-04-26T07:58:26.030308+00:00",
-      "duration_seconds": 38.192,
+      "started_at": "2026-04-26T09:05:42.306674+00:00",
+      "duration_seconds": 30.894,
+      "returncode": 0,
+      "status": "ok"
+    },
+    {
+      "name": "Construir painel de curadoria do acervo",
+      "command": "C:\\Python314\\python.exe scripts/acervo/build_curation_dashboard.py",
+      "started_at": "2026-04-26T09:06:13.201151+00:00",
+      "duration_seconds": 0.955,
       "returncode": 0,
       "status": "ok"
     },
     {
       "name": "Validar scripts Python",
       "command": "C:\\Python314\\python.exe scripts/check_python_scripts.py",
-      "started_at": "2026-04-26T07:59:04.221987+00:00",
-      "duration_seconds": 1.333,
+      "started_at": "2026-04-26T09:06:14.155690+00:00",
+      "duration_seconds": 0.721,
       "returncode": 0,
       "status": "ok"
     },
     {
       "name": "Validar vault Markdown",
       "command": "C:\\Python314\\python.exe scripts/validate_vault.py",
-      "started_at": "2026-04-26T07:59:05.554656+00:00",
-      "duration_seconds": 4.143,
+      "started_at": "2026-04-26T09:06:14.876964+00:00",
+      "duration_seconds": 1.877,
       "returncode": 0,
       "status": "ok"
     },
     {
       "name": "Reconstruir manifesto geral",
       "command": "C:\\Python314\\python.exe scripts/build_manifest.py",
-      "started_at": "2026-04-26T07:59:09.698072+00:00",
-      "duration_seconds": 1.922,
+      "started_at": "2026-04-26T09:06:16.753595+00:00",
+      "duration_seconds": 1.828,
       "returncode": 0,
       "status": "ok"
     }

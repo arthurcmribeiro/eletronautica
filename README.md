@@ -52,6 +52,7 @@ O validador bloqueia PDF solto na raiz do acervo principal e exige nota companhe
 O orquestrador gera `manifest/pdf-pipeline-last-run.json` e `_Editorial/Pipeline PDF - Ultima Execucao.md`, com status de cada etapa.
 O auditor operacional gera `manifest/acervo-pdf-toolchain-audit.json` e `_Editorial/Auditoria Operacional PDF - Toolchain.md`, com paginas, metadados, status `qpdf`, texto pesquisavel e fila de OCR.
 O OCR controlado gera texto auxiliar em `90_Revisao_Manual/_Dados_Acervo/ocr_texts/`, notas OCR em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/` e manifesto em `90_Revisao_Manual/_Dados_Acervo/ocr-results.json`, sem sobrescrever os PDFs originais.
+O painel de curadoria gera `manifest/acervo-curation-dashboard.json` e `90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo.md`, com separacao humano/tecnico, OCR pendente e fila de notas prioritarias.
 
 ## Agentes
 

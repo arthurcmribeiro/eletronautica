@@ -20,12 +20,12 @@ pdf_pages: "5"
 pdf_version: "1.4"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "completed"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.md"
+ocr_text_chars: "8777"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `completed` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.md`.
 
 ## Fonte
 
@@ -60,12 +57,12 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdf-stream-strings-low-confidence`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `completed`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.txt`
+- caracteres OCR auxiliares: `8777`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
@@ -74,7 +71,7 @@ related_notes:
 - familia: `00206BF595AE240412115759`
 - marcas detectadas: `n/a`
 - codigos/modelos detectados: `00206BF595AE240412115759, 00206BF595AE24041211, H-4F030A8A2591, 4F030A8A2591`
-- termos uteis detectados: `n/a`
+- termos uteis detectados: `spec`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -115,7 +112,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE`
+- `Paço de Arcos`
+- `CURSO DE MESTRADO EM ENGENHARIA DE MÁQUINAS MARÍTIMAS`
+- `ANO LETIVO 2024/2025`
+- `O Presidente da Escola Superior Náutica Infante D. Henrique, faz saber nostermos doartigo`
+- `9.º do Regulamento Geral dos Segundos Ciclos de Estudo da Escola Superior Náutica`
+- `Infante D. Henrique (Despacho n.º 7487/2021, publicado no Diário da República n.º`
+- `145/2021, Série Il de 28 de julho), que se encontra aberto o concurso para admissão ao`
+- `Curso de Mestrado em Engenharia de Máquinas Marítimas, de acordo com o disposto nos`
+- `artigos seguintes.`
 
 ## Perguntas de curadoria
 

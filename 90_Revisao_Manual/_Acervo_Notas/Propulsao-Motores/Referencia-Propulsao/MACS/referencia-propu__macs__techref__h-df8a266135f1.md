@@ -20,12 +20,12 @@ pdf_pages: "7"
 pdf_version: "1.7"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "partial"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.md"
+ocr_text_chars: "11511"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-propu__macs__techref__h-df8a266135f1.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `partial` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.md`.
 
 ## Fonte
 
@@ -60,21 +57,21 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdf-stream-strings-low-confidence`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `partial`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.txt`
+- caracteres OCR auxiliares: `11511`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
 - sistema: `Propulsao-Motores`
 - marca: `Referencia-Propulsao`
 - familia: `MACS`
-- marcas detectadas: `n/a`
+- marcas detectadas: `Dometic`
 - codigos/modelos detectados: `MACS, H-DF8A266135F1, DF8A266135F1`
-- termos uteis detectados: `n/a`
+- termos uteis detectados: `air, control, cooling, installation, pump, spec, voltage`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -115,7 +112,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `MARINE AIR CONDITIONING SYSTEMS`
+- `MARINE AIR CONDITIONING`
+- `Rotatable high velocity blower`
+- `Ventilatore specifico per la`
+- `canalizzazione dellaria trattata, con`
+- `bocca di mandata orientabile`
+- `Heat exchanger with copper tubes and`
+- `stainless steel chassis`
+- `Evaporatore con tubi in rame e`
+- `carenatura in acciaio inox`
 
 ## Perguntas de curadoria
 

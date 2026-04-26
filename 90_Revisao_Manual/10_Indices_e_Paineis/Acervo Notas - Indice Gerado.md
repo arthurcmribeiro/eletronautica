@@ -60,16 +60,15 @@ related_notes:
 
 ## Fila operacional de OCR
 
-- OCR `alta`: `8`
 - OCR `bloqueado`: `2`
-- OCR `concluido`: `2`
+- OCR `concluido`: `10`
 - OCR `nao`: `236`
 
 ## OCR auxiliar gerado
 
-- OCR auxiliar `completed`: `1`
-- OCR auxiliar `nao-gerado`: `246`
-- OCR auxiliar `partial`: `1`
+- OCR auxiliar `completed`: `6`
+- OCR auxiliar `nao-gerado`: `238`
+- OCR auxiliar `partial`: `4`
 
 ## Campo-Clientes
 

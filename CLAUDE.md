@@ -42,6 +42,7 @@ python scripts/acervo/run_pdf_pipeline.py
 - Preservar sempre `CURADORIA-HUMANA:START/END`.
 - Rodar `audit_pdf_toolchain.py` para manter paginas, metadados, `qpdf` e fila de OCR atualizados.
 - Rodar `ocr_priority_pdfs.py --priority alta` para gerar OCR auxiliar sem sobrescrever PDFs originais.
+- Rodar `build_curation_dashboard.py` para manter painel de curadoria, separacao humano/tecnico e enriquecimento assistido das notas prioritarias.
 - Preferir `run_pdf_pipeline.py` quando a tarefa for atualizar o acervo apos entrada de PDF novo.
 
 ## Onde recuperar contexto
@@ -54,6 +55,7 @@ python scripts/acervo/run_pdf_pipeline.py
 - `90_Revisao_Manual/00_Entrada_e_Controle/Portal do Acervo — Biblioteca de Referência.md`
 - `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado.md`
 - `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local — Índice Gerado.md`
+- `90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo.md`
 
 ## Quando criar conteúdo
 

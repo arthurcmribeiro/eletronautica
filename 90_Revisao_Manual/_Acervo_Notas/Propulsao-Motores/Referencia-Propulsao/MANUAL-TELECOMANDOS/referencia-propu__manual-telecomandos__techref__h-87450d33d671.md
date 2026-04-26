@@ -20,12 +20,12 @@ pdf_pages: "8"
 pdf_version: "1.7"
 pdf_encrypted: "nao"
 qpdf_status: "ok"
-ocr_priority: "alta"
-ocr_status: "nao-gerado"
-ocr_text_path: "n/a"
-ocr_note_path: "n/a"
-ocr_text_chars: "0"
-analysis_source: "metadata-only"
+ocr_priority: "concluido"
+ocr_status: "completed"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.md"
+ocr_text_chars: "10009"
+analysis_source: "ocr-sidecar"
 aliases:
   - "referencia-propu__manual-telecomandos__techref__h-87450d33d671.pdf"
 related_notes:
@@ -40,11 +40,8 @@ related_notes:
 > Nota companheira gerada automaticamente a partir do PDF do acervo local.
 > Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
 
-> [!warning] Extracao textual com baixa confianca
-> Esta nota ficou limitada a metadados, familia tecnica e trilha editorial. Use o PDF original como fonte primaria.
-
-> [!tip] Prioridade operacional de OCR
-> Prioridade: `alta`. Motivo: PDF curado sem texto confiavel; OCR melhora busca e notas
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `completed` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.md`.
 
 ## Fonte
 
@@ -60,12 +57,12 @@ related_notes:
 - tipo documental detectado: `technical-reference`
 - metodo de extracao: `pdf-stream-strings-low-confidence`
 - status qpdf: `ok`
-- prioridade OCR: `alta`
-- status OCR auxiliar: `nao-gerado`
-- nota OCR auxiliar: `n/a`
-- texto OCR auxiliar: `n/a`
-- caracteres OCR auxiliares: `0`
-- fonte de analise automatica: `metadata-only`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `completed`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.txt`
+- caracteres OCR auxiliares: `10009`
+- fonte de analise automatica: `ocr-sidecar`
 
 ## Sinais principais
 
@@ -74,7 +71,7 @@ related_notes:
 - familia: `MANUAL-TELECOMANDOS`
 - marcas detectadas: `n/a`
 - codigos/modelos detectados: `TELECOMANDOS, H-87450D33D671, 87450D33D671`
-- termos uteis detectados: `manual`
+- termos uteis detectados: `control, manual, spec`
 
 ## Aplicacao e integracoes sugeridas
 
@@ -115,7 +112,16 @@ related_notes:
 
 ## Trechos indexaveis
 
-- `nenhum trecho textual confiavel foi extraido automaticamente`
+- `Assistência Técnica`
+- `TELECOMANDOS`
+- `BAHIA: SANTA CATARINA:`
+- `Cleber Macedo Serviços Náuticos Armazém Naval`
+- `Fone: (71) 8864 2654 Fone: (48) 3225 9370`
+- `Fone: clebermacedonautos@hotmail.com E-mail: armazemnaval@terra.com.br`
+- `RIO GRANDE DO SUL:`
+- `Náutica Rimoli`
+- `Fone: (51) 3268 7963`
+- `E-mail: nauticarimoli@terra.com.br`
 
 ## Perguntas de curadoria
 

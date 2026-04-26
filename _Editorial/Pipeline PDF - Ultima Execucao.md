@@ -20,15 +20,15 @@ related_notes:
 ## Resultado
 
 - status geral: `ok`
-- iniciado em: `2026-04-26T07:57:38.231682+00:00`
-- finalizado em: `2026-04-26T07:59:11.619873+00:00`
-- duracao total: `93.388` s
+- iniciado em: `2026-04-26T09:05:00.497697+00:00`
+- finalizado em: `2026-04-26T09:06:18.581833+00:00`
+- duracao total: `78.084` s
 - dry-run: `False`
 - manifesto: `manifest/pdf-pipeline-last-run.json`
 
 ## Contagem por status
 
-- `ok`: `6`
+- `ok`: `7`
 - `skipped`: `2`
 
 ## Passos
@@ -37,14 +37,14 @@ related_notes:
 
 - status: `ok`
 - retorno: `0`
-- duracao: `39.755` s
+- duracao: `34.558` s
 - comando: `C:\Python314\python.exe scripts/acervo/package_human_technical_archive.py`
 
 ### Reconstruir indice local do acervo principal
 
 - status: `ok`
 - retorno: `0`
-- duracao: `8.043` s
+- duracao: `7.25` s
 - comando: `C:\Python314\python.exe scripts/acervo/build_local_index.py`
 
 ### Auditar PDFs com toolchain externo
@@ -65,28 +65,35 @@ related_notes:
 
 - status: `ok`
 - retorno: `0`
-- duracao: `38.192` s
+- duracao: `30.894` s
 - comando: `C:\Python314\python.exe scripts/acervo/build_pdf_companion_notes.py`
+
+### Construir painel de curadoria do acervo
+
+- status: `ok`
+- retorno: `0`
+- duracao: `0.955` s
+- comando: `C:\Python314\python.exe scripts/acervo/build_curation_dashboard.py`
 
 ### Validar scripts Python
 
 - status: `ok`
 - retorno: `0`
-- duracao: `1.333` s
+- duracao: `0.721` s
 - comando: `C:\Python314\python.exe scripts/check_python_scripts.py`
 
 ### Validar vault Markdown
 
 - status: `ok`
 - retorno: `0`
-- duracao: `4.143` s
+- duracao: `1.877` s
 - comando: `C:\Python314\python.exe scripts/validate_vault.py`
 
 ### Reconstruir manifesto geral
 
 - status: `ok`
 - retorno: `0`
-- duracao: `1.922` s
+- duracao: `1.828` s
 - comando: `C:\Python314\python.exe scripts/build_manifest.py`
 
 ## Uso recomendado

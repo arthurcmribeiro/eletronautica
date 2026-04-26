@@ -125,6 +125,11 @@ def build_steps(args: argparse.Namespace) -> list[PipelineStep]:
             enabled=not args.skip_companion_notes,
         ),
         PipelineStep(
+            "Construir painel de curadoria do acervo",
+            [python, "scripts/acervo/build_curation_dashboard.py"],
+            enabled=not args.skip_curation_dashboard,
+        ),
+        PipelineStep(
             "Validar scripts Python",
             [python, "scripts/check_python_scripts.py"],
             enabled=not args.skip_check_scripts,
@@ -246,6 +251,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-audit", action="store_true")
     parser.add_argument("--skip-ocr", action="store_true")
     parser.add_argument("--skip-companion-notes", action="store_true")
+    parser.add_argument("--skip-curation-dashboard", action="store_true")
     parser.add_argument("--skip-check-scripts", action="store_true")
     parser.add_argument("--skip-validate", action="store_true")
     parser.add_argument("--skip-manifest", action="store_true")

@@ -66,6 +66,7 @@ python scripts/acervo/run_pdf_pipeline.py
 - PDFs do acervo principal são tratados por `build_pdf_companion_notes.py`.
 - A saude operacional dos PDFs e a fila de OCR sao tratadas por `audit_pdf_toolchain.py`.
 - OCR pesado deve ser feito por `ocr_priority_pdfs.py`, gerando sidecars `.txt` e `.md` em `_Dados_Acervo` sem alterar o PDF original.
+- A separacao humano/tecnico, fila de curadoria e enriquecimento assistido das notas prioritarias sao tratados por `build_curation_dashboard.py`.
 - A rotina completa e propagavel para PDF novo deve ser feita por `run_pdf_pipeline.py`.
 
 ## Comandos de validação

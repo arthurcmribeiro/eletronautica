@@ -892,6 +892,52 @@ review_jurisdiction: "Brasil"
   - `python scripts/build_manifest.py`;
   - `python scripts/validate_vault.py`.
 
+## 2026-04-26 - Lote 63 - Automacao completa dos proximos passos do acervo PDF
+
+- Criado checkpoint Git antes das novas automacoes:
+  - commit `f39e86b` (`Checkpoint organized PDF archive`).
+- Ativado `git config core.longpaths true` no repositorio para permitir versionamento de caminhos longos do acervo sem renomear documentos tecnicos.
+- Rodada completa da pipeline PDF executada com auditoria e OCR prioritario:
+  - `678` PDFs auditados;
+  - `2.8 GB` de acervo auditado;
+  - `33305` paginas conhecidas;
+  - `420` PDFs com `qpdf ok`;
+  - `258` PDFs com `qpdf warning`;
+  - `639` PDFs com texto pesquisavel;
+  - `39` PDFs sem texto pesquisavel direto;
+  - `8` PDFs selecionados para OCR prioritario;
+  - OCR finalizado com `6` completos e `4` parciais no historico acumulado.
+- Criado `scripts/acervo/build_curation_dashboard.py` como etapa automatica para:
+  - separar `acervo-principal`, `humano-staging-tecnico`, `humano-fora-do-escopo` e `humano-arquivado-duplicata`;
+  - gerar manifesto `manifest/acervo-curation-dashboard.json`;
+  - gerar painel `90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo.md`;
+  - priorizar fila de curadoria por sistema, tipo documental, OCR, texto pesquisavel, paginas, `qpdf` e prioridade editorial;
+  - enriquecer notas prioritarias com curadoria assistida por automacao sem sobrescrever curadoria humana existente.
+- Resultado da separacao automatica:
+  - `248` PDFs no acervo principal;
+  - `230` PDFs no staging tecnico humano;
+  - `176` PDFs fora de escopo/pessoais;
+  - `24` PDFs em duplicatas arquivadas;
+  - `478` PDFs classificados como tecnico operacional (`acervo-principal` + `humano-staging-tecnico`).
+- Enriquecimento automatico aplicado:
+  - `21` notas companheiras receberam bloco de `curadoria-assistida-automatica`;
+  - `100` alvos tecnicos ficaram priorizados no manifesto/painel;
+  - a rotina preserva blocos humanos ja editados e evita rebaixar curadoria existente.
+- Propagacao para PDFs novos:
+  - `run_pdf_pipeline.py` passou a chamar `build_curation_dashboard.py` antes da validacao e do manifesto final;
+  - `README.md`, `AGENTS.md`, `CLAUDE.md` e `scripts/acervo/README.md` foram atualizados para documentar o novo passo.
+- Validacao final desta passada:
+  - `python scripts/acervo/run_pdf_pipeline.py --keep-going`;
+  - `python scripts/acervo/run_pdf_pipeline.py --skip-audit --skip-ocr`;
+  - `python scripts/check_python_scripts.py`;
+  - `python scripts/validate_vault.py`;
+  - `python scripts/build_manifest.py`.
+- Estado final:
+  - `26` scripts Python compilando;
+  - `754` notas analisadas;
+  - `0` erros;
+  - `0` avisos.
+
 ## 2026-04-26 - Lote 62 - Limpeza reversivel e reestruturação final do 90_Revisao_Manual
 
 - Reestruturada a raiz de `90_Revisao_Manual/` para reduzir ruído operacional sem apagar rastreabilidade.

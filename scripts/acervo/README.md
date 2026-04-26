@@ -17,6 +17,7 @@ Este diretorio concentra a automacao da frente `90_Revisao_Manual`. Nao limpar p
 - `audit_pdf_toolchain.py`: audita PDFs, paginas, metadados, integridade `qpdf`, texto pesquisavel e fila de OCR.
 - `ocr_priority_pdfs.py`: gera OCR auxiliar em sidecars sem alterar PDFs originais.
 - `build_pdf_companion_notes.py`: cria/atualiza notas `.md` para PDFs curados do acervo principal.
+- `build_curation_dashboard.py`: separa acervo humano/tecnico em manifesto, prioriza fila de curadoria e enriquece notas prioritarias sem sobrescrever curadoria humana.
 - `build_local_index.py`: gera o indice humano e JSON do acervo principal.
 - `package_human_technical_archive.py`: empacota o staging humano e preserva curadoria humana ja feita.
 - `promote_all_human_pdfs_to_main.py`: promove PDFs tecnicos do staging humano para o acervo principal.

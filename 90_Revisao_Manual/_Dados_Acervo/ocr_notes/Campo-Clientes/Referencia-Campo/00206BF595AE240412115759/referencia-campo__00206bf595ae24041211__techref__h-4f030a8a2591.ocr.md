@@ -1,0 +1,223 @@
+---
+title: "OCR - referencia-campo - 00206bf595ae24041211 - techref - h-4f030a8a2591"
+note_type: "acervo-ocr-text"
+domain: "90_Revisao_Manual"
+status: "auto-generated"
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+source_pdf: "90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf"
+source_sha256: "4f030a8a25918f79f9b7add080c5f94a02c0b6d03c97c175cb428f51c97dd63d"
+ocr_status: "completed"
+ocr_language: "por+eng"
+ocr_dpi: "150"
+ocr_psm: "3"
+aliases:
+  - "referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf OCR"
+related_notes:
+  - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado"
+---
+
+# OCR - referencia-campo - 00206bf595ae24041211 - techref - h-4f030a8a2591
+
+> [!warning] Texto derivado por OCR
+> Use este arquivo para busca e triagem. O PDF original continua sendo a fonte primaria.
+
+## Fonte
+
+- PDF: [referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf](</C:/Users/User/Desktop/ELETRO NAUTICA OBSIDIAN/ELETRO NAUTICA/90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf>)
+- caminho relativo: `90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf`
+- SHA-256: `4f030a8a25918f79f9b7add080c5f94a02c0b6d03c97c175cb428f51c97dd63d`
+- TXT OCR: [referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.txt](</C:/Users/User/Desktop/ELETRO NAUTICA OBSIDIAN/ELETRO NAUTICA/90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.txt>)
+- status OCR: `completed`
+- idioma: `por+eng`
+- renderizacao: `150` dpi
+
+## Texto OCR
+
+### Pagina 1
+
+ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE
+Paço de Arcos
+EDITAL
+CURSO DE MESTRADO EM ENGENHARIA DE MÁQUINAS MARÍTIMAS
+ANO LETIVO 2024/2025
+O Presidente da Escola Superior Náutica Infante D. Henrique, faz saber nostermos doartigo
+9.º do Regulamento Geral dos Segundos Ciclos de Estudo da Escola Superior Náutica
+Infante D. Henrique (Despacho n.º 7487/2021, publicado no Diário da República n.º
+145/2021, Série Il de 28 de julho), que se encontra aberto o concurso para admissão ao
+Curso de Mestrado em Engenharia de Máquinas Marítimas, de acordo com o disposto nos
+artigos seguintes.
+Artigo 1.º
+Tipologia da formação
+O Curso de Mestrado em Engenharia de Máquinas Marítimas, adiante também designado
+de MEMM, encontra-se regulamentado de acordo com o disposto no Decreto-Lei n.º
+74/2006, de 24 de março, alterado pelo Decreto-Lei n.º 107/2008, de 25 de junho, bem
+como no Decreto-Lei n.º 49/2005, de 30 de março, e ainda respeitando o disposto na
+Convenção Internacional sobre Normas de Formação, de Certificação e de Serviço de
+Quartos para os Marítimos, STCW 1978, emendada em 1995 e em 2010, doravante referida
+como Convenção STCW.
+Artigo 2.º
+Condições de candidatura
+1. Podem candidatar-se ao acesso ao MEMM:
+a. Titulares do grau de licenciado em Engenharia de Máquinas Marítimas ou
+equivalente;
+b. Titulares de um grau académico superior estrangeiro na área científica em que se
+insere o ciclo de estudos, conferido na sequência de um 1º ciclo de estudos
+organizado de acordo com os princípios do Processo de Bolonha por um estado
+aderente a este processo;
+c. Titulares de um grau académico superior estrangeiro na área científica em que se
+insere o ciclo de estudos, que seja reconhecido como satisfazendo os objetivos do
+grau de licenciado pelo Conselho Técnico Científico da ENIDH;
+d. Detentores de um currículo escolar, científico ou profissional que seja reconhecido
+como atestando capacidade para a realização deste ciclo de estudos pelo Conselho
+Técnico-Científico da ENIDH.
+
+### Pagina 2
+
+ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE
+Paço de Arcos
+O reconhecimento a que se referem as alíneas b) a d) do n.º 1 do presente artigo, tem
+como efeito apenas o acesso ao ciclo de estudos conducente ao grau de mestre e não
+confere ao seu titular a equivalência ao grau de licenciado ou o reconhecimento desse
+grau.
+Os estudantes que concluam a Licenciatura em Engenharia de Máquinas Marítimas na
+ENIDH poderão ter acesso preferencial ao MEMM, garantida que está a coerência
+científica entre os dois ciclos, e nos termos em que o regulamento o preveja.
+Artigo 3.º
+Vagas
+a) No ano letivo de 2024/2025, é fixado um número de 20 (vinte) vagas para o MEMM;
+b) Exclusivamente destinadas a nacionais de PALOP com os quais foram celebrados
+convénios, acresce 30% ao número de vagas fixadas em a), observadas as condições
+de acesso;
+c) Exclusivamente destinadas a estudantes internacionais, acresce 30% ao número de
+vagas fixadas em a), observadas as condições referidas no artigo anterior;
+d) AENIDH reserva o direito de não abrir o MEMM no presente ano letivo, se o número
+de candidatos não for considerado suficiente para o seu regular e justificado
+funcionamento.
+Artigo 4.º
+Seleção e seriação
+Os candidatos à inscrição no MEMM serão selecionados e seriados pelo júri designado
+pelo Conselho Técnico-Científico, mediante proposta da comissão coordenadora do
+curso.
+O critério de seriação a utilizar será a experiência profissional, sendo dada maior
+relevância aos períodos de embarque. Em caso de empate, serão aplicados os seguintes
+critérios, pela ordem apresentada:
+a) Classificação da licenciatura ou de outros graus de acesso, já obtidos pelo candidato,
+de acordo com o n.º 1 do Artigo 6.º do Regulamento Geral dos Segundos Ciclos da
+ENIDH (Despacho n.º 7487/2021, de 28 de julho);
+b) Afinidade entre o curso de licenciatura ou de outros graus de acesso que possuem,
+de acordo com o n.º 1 do Artigo 6.º do mesmo Regulamento e o ciclo de estudos a que
+se candidatam;
+c) Currículo académico, científico, técnico e profissional;
+d) Resultado de entrevista individual, quando tal for considerado necessário;
+e) Casos excecionais de candidatura.
+
+### Pagina 3
+
+Um
+ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE
+Paço de Arcos
+3. O Conselho Técnico-Científico, em casos excecionais, e sob proposta da comissão
+coordenadora do Mestrado, poderá determinar a obrigatoriedade da frequência de
+unidades curriculares de nível de licenciatura identificando os créditos acumuláveis, ou
+estabelecer um plano individual de estudos, ou submeter os candidatos à inscrição em
+provas académicas de seleção para avaliação do seu nível nas áreas científicas de base,
+correspondente ao curso.
+4. Os candidatos referidos na alínea b) e c) do artigo 3º serão seriados separadamente.
+Artigo 5.º
+Local de funcionamento
+O MEMM funcionará nas instalações da ENIDH.
+Artigo 6.º
+Instrução do processo de candidatura
+A candidatura deverá ser instruída com os seguintes documentos:
+a. Ficha de candidatura devidamente preenchida;
+b. Certidão de habilitações académicas;
+c. Curriculum vitae, datado e assinado, acompanhado de cópia de comprovativos de
+cursos/ações de formação realizados (se aplicável);
+d. Fotocópia da Cédula Marítima evidenciando os períodos de embarque (se
+aplicável);
+e. Cópia do bilhete de identidade ou do cartão de cidadão.
+Artigo 7.º
+Local de apresentação de candidaturas
+1. As candidaturas deverão ser realizadas online no sítio da ENIDH em
+https://netpa.enautica.pt/cssnet/page ?stage=registrationinputstage &wizard escolha
+cursos&followupstageparameters=regimecandidaturaid, nos prazos definidos no Anexo
+| deste Edital. Cada candidato deverá preencher o formulário de candidatura e anexar a
+documentação obrigatória.
+2. No ato de candidatura deverá ser paga a taxa de candidatura, de acordo com a tabela
+de emolumentos em vigor.
+Artigo 8.º
+Resultados provisórios
+1. O resultado provisório da seleção e seriação é tornado público, com a seguinte
+informação:
+a. A lista dos candidatos excluídos.
+
+### Pagina 4
+
+b.
+ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE
+Paço de Arcos
+A lista seriada com a menção de “Colocado” ou “Não colocado”.
+2. Das listas provisórias da seleção e seriação, cabe recurso para o júri de seleção e
+seriação, nos prazos definidos no Anexo |.
+Artigo 9.º
+Resultados finais
+1. O resultado final da seleção e seriação será homologado pelo Presidente da ENIDH.
+2. As listas finais de seleção e seriação, serão tornadas públicas, através de um edital a
+afixar na ENIDH.
+Artigo 10.º
+Matrícula
+1. Os candidatos colocados deverão proceder à matrícula online, no prazo fixado no
+Anexo |, em https://netpa.enautica.pt/netpa/page, com as credenciais enviadas pelo
+Serviço Académico, anexando os seguintes documentos:
+a.
+b.
+c.
+d.
+Ficha de matrícula devidamente preenchida.
+Cópia do bilhete de identidade ou do cartão de cidadão.
+Cópia do bilhete de identificação fiscal.
+Duas fotografias (tipo passe).
+2. No ato da matrícula, deverão ser pagos:
+a.
+b.
+€.
+A taxa de matricula e inscrição em vigor.
+O valor do seguro escolar.
+O valor integral da propina ou da 1.º prestação no caso de o pagamento poder ser
+fracionado.
+As propinas para os estudantes, indicadas na alínea c) do ponto anterior, serão
+fixadas pelo Conselho Geral.
+Artigo 11.º
+Diploma do curso de especialização
+Aos estudantes aprovados no Curso de Especialização em Engenharia de Máquinas
+Marítimas, constituído pelas unidades curriculares do primeiro ano do Mestrado em
+Engenharia de Máquinas Marítimas, é conferido um diploma e o respetivo suplemento ao
+diploma, emitido pelo Serviço Académico da ENIDH, nos termos do Decreto-Lei n.º
+74/2006, de 24 de março e da Convenção STCW.
+
+### Pagina 5
+
+ESCOLA SUPERIOR NÁUTICA INFANTE D. HENRIQUE
+Paço de Arcos
+Artigo 12.º
+Certificação marítima
+1. O Curso de Especialização em Engenharia de Máquinas Marítimas confere a formação
+de nível de gestão para oficiais na área de Engenharia de Máquinas Marítimas referida
+na alínea a) do nº 2 do artigo 12.º da Portaria 235/2020;
+2. Os candidatos que não sejam titulares de um primeiro ciclo de estudos em Engenharia
+de Máquinas Marítimas da ENIDH ou equivalente, não terão direito à emissão de
+certificação marítima.
+Artigo 13.º
+Creditação de formações
+As formações de que o estudante já seja titular, poderão ser objeto de creditação no
+MEMM, de acordo com as disposições legais em vigor.
+Artigo 14.º
+Prazos
+Os prazos de candidatura, seleção, matrícula e funcionamento do Mestrado em Engenharia
+de Máquinas Marítimas são os constantes do Anexo | do presente edital. Neste anexo estão
+previstas duas fases de candidatura, sendo que a segunda fase só se realizará após decisão
+dos órgãos competentes da ENIDH, se ainda existirem vagas sobrantes da primeira fase que
+justifiquem a sua abertura.
+Escola Superior Náutica Infante D. Henrique, Paço de Arcos, de abril de 2023
+Victor Franco Correia
