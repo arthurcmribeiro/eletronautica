@@ -1,0 +1,325 @@
+---
+wave: 9
+phase: 6
+sprint: "Caminho B — DEC-11 premium em Tier A (cluster Iluminação + Automação — domínios 55 e 60, 11 notas Tier A)"
+date: "2026-04-26"
+cadence: "a (auto-continuous)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier A — 11 notas dos domínios 55 (iluminação 7) + 60 (automação 4): tipos de lâmpadas (mestre), fitas LED, luz subaquática, farol busca, dimmer, strobo, luz cortesia, atuador linear, automação domótica, sensor nível diesel, painel alarmes"
+template_recalibrated:
+  tldr_rules: "9-10 (média ≈ 9.5)"
+  danger_scenarios: "9-10"
+  glossary_terms: "50-90 (média ≈ 65)"
+  normas_expanded: "30-65 (média ≈ 40)"
+  decision: "Vademecum de iluminação náutica (LED + drivers + EMC + IP + COLREGS Annex IV/Rule 22/36 + ABYC A-16/A-30 + IEC 60598/60945/61347/62031/62471 + IES LM-79/LM-80/TM-21 + INMETRO + DPC) + automação náutica (digital switching CZone/EmpirBus/OneHelm + NMEA 2000 + IEC 62616 BNWAS + ISO 13849-1 safety + override manual fail-safe)"
+
+notes_processed:
+  - n: "01/11"
+    title: "Tipos de Lâmpadas e LEDs Náuticos"
+    path: "55_Iluminacao_e_Sinalizacao/Tipos de Lâmpadas e LEDs Náuticos.md"
+    fase_6_reescrita: 84
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 90+ termos)"
+      - "DEC-14 normas_citadas (lista plana 65+ itens)"
+      - "Nota MESTRE do cluster — referenciada por todas as outras (fundamentos LED, CRI/CCT, IP, EMC, vida L70/L80)"
+      - "IEC 60598-1/-2-22 + IEC 61347 + IEC 62031/62717 + IEC 62471 + IEC 60529 + IEC 61547 + IEC 60945"
+      - "ABYC A-16 (nav lights) + A-30 (cabin) + E-11 + TE-30 + TE-04"
+      - "IES LM-79/LM-80/TM-21 + ANSI C78.377 + DLC Premium V5.1 + ENERGY STAR Marine"
+      - "INMETRO Portaria 144/2015 + 132/2017 + ANATEL 715/2019"
+      - "EU 2014/35 LVD + 2014/30 EMC + 2014/90 MED + 2019/2020 EcoDesign"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 90
+    normas_after: 65
+
+  - n: "02/11"
+    title: "Fitas Led / Iluminação Led"
+    path: "55_Iluminacao_e_Sinalizacao/Fitas Led - Iluminação Led.md"
+    fase_6_reescrita: 85
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "Chips SMD 2835/5050/3014/5630/COB + densidade 30/60/120/240 LED/m + 12V × 24V"
+      - "Queda de tensão (alimentação bilateral em fitas >3 m / 12V)"
+      - "RGB / RGBW + controlador PWM (Bluetooth/Wi-Fi/DMX)"
+      - "IEC 60598-2-23 + IEC 61347-2-13 + IEC 62031 + IEC 60529 IP65/67/68"
+      - "Conector estanque IP67 (Deutsch DT, Wieland, Furrion)"
+      - "Stack fabricantes: Hella SeaHawk Strip, Lumitec Caprera2/Mirage Strip, Imtra ILIM, LunaSea, Paulmann YourLED, Ledvance"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 60
+    normas_after: 35
+
+  - n: "03/11"
+    title: "Luz Subaquática"
+    path: "55_Iluminacao_e_Sinalizacao/Luz Subaquática.md"
+    fase_6_reescrita: 86
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "Arquiteturas: surface mount × through-hull × pad-mount × cooling water-flow"
+      - "ABYC H-27 + ISO 9093-1/-2 (passe-casco) + ABYC E-11.16 bonding obrigatório"
+      - "IEC 60529 IP68 obrigatório + IEC 60598-2-18 (analógico piscina) + IEC 62471 fotobiologia"
+      - "Cor por penetração: azul 440-470 nm (efeito) × verde 525 nm (atrai peixe) × branco 5500K+"
+      - "Material: bronze marine ASTM B584 vs polímero composto vs inox 316L"
+      - "Stack fabricantes: Lumishore SMX/Lumix/Eclipse, Lumitec SeaBlazeX2/Mirage, Aqualuma Gen 4/5, OceanLED 3010/3020/DMX2010, Bluefin Piranha, SeaVision, Underwater Lights USA, Imtra"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 65
+    normas_after: 40
+
+  - n: "04/11"
+    title: "Farol de Busca"
+    path: "55_Iluminacao_e_Sinalizacao/Farol de Busca.md"
+    fase_6_reescrita: 87
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "4 arquiteturas: fixo manual × giratório motorizado × LED bar × multifeixe combinado"
+      - "COLREGS Rule 36 (sinais de chamar atenção) + Rule 22 (não confundir com nav lights)"
+      - "ABYC A-30 + ABYC E-11 + IEC 60598/60945/62471 + EU 2014/30/EU EMC"
+      - "Stack fabricantes: ACR RCL-100/100D/75/50/95, Golight Stryker/GXL/RadioRay, Hella Mega Beam, Lumitec Caprera2/Mirage, Vetus, Imtra ILSL, Quick Italy Nemo, Rigid Industries / Baja Designs"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 50
+    normas_after: 30
+
+  - n: "05/11"
+    title: "Dimmer — Controle de Intensidade Luminosa"
+    path: "55_Iluminacao_e_Sinalizacao/Dimmer — Controle de Intensidade Luminosa.md"
+    fase_6_reescrita: 88
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "5 famílias canonicalizadas: PWM × TRIAC × 0-10V × DALI × DMX512 + wireless proprietário"
+      - "IEC 60669-2-1 + IEC 61347-2-13 + IEC 62386 (DALI) + USITT DMX512-A + ANSI E1.20 (RDM)"
+      - "Compatibilidade dimmer-LED é falha #1 (etiqueta dimmable)"
+      - "Stack fabricantes: Lutron Caseta/Vive/RA2, Lumitec POCO, Lumishore Lumix Sense, CZone, EmpirBus NG/NG2, Garmin OneHelm, Pathway Connectivity, ENTTEC"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 55
+    normas_after: 30
+
+  - n: "06/11"
+    title: "Strobo"
+    path: "55_Iluminacao_e_Sinalizacao/Strobo.md"
+    fase_6_reescrita: 89
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "Aplicações: MOB strobe + colete salva-vidas SOLAS + bote salva-vidas + distress mastro"
+      - "COLREGS Annex IV (distress signals) + Rule 36 + Annex I.13 (approval)"
+      - "IMO MSC.81(70) LSA Code + SOLAS Chapter III + USCG 46 CFR 161"
+      - "Frequência 50-70 fpm + ≥0,75 cd + ≥1 nm visibilidade + 8h vida útil mínima"
+      - "Stack fabricantes: ACR PathFinder 3 / Firefly Pro / 4F-1, McMurdo Smartfind S5/S20 AIS, Pelican 2460/2480/9420, Princeton Tec Aqua Strobe, Plastimo SOS"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 50
+    normas_after: 35
+
+  - n: "07/11"
+    title: "Luz de Cortesia"
+    path: "55_Iluminacao_e_Sinalizacao/Luz de Cortesia.md"
+    fase_6_reescrita: 90
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "5 tipos: downlight encastrado × surface mount step × gunwale strip × path light × cockpit ambient"
+      - "ISO 19009 (internal lighting) + ISO 16273 (night vision) + ABYC A-30"
+      - "Cor por aplicação (branca 3000-4000K geral × vermelha 620 nm night vision × azul ambient)"
+      - "COLREGS Rule 22 — não confundir com luzes de navegação"
+      - "Stack fabricantes: Hella SeaHawk Mini/EuroLED, Lumitec Aurora/Lipstick/Andromeda, Imtra LunaSea/ILM, Aqualuma EZ-Connect, Quick Italy, Foresti & Suardi, Innovative Lighting"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 50
+    normas_after: 30
+
+  - n: "08/11"
+    title: "Atuador Linear"
+    path: "60_Automacao_Conectividade_e_Monitoramento/Atuador Linear.md"
+    fase_6_reescrita: 91
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários)"
+      - "DEC-14 normas_citadas (lista plana 50+ itens)"
+      - "Tabela aplicações: escotilha / capota T-top / plataforma popa / flap / trim-tilt / davit / mesa / helm seat / porta motorizada"
+      - "Princípios físicos: motor DC + redutor + parafuso de esferas (ball screw) ou trapezoidal (Acme/lead)"
+      - "Stall current (5-10× nominal) + duty cycle + limit switch obrigatório"
+      - "ABYC E-11/P-22/H-29 + IEC 60204-1 + IEC 60034-1 + IEC 60529 + ISO 12100/13849-1 + CE Machinery 2006/42/EC"
+      - "Anti-pinch protection (ISO 13849-1 PL 'c' mínimo)"
+      - "Stack fabricantes: Lewmar HC, Linak Marine LA12/20/28/31/36/37, Thomson Electrak HD/1/10/50, SKF CAHB, Bosch Rexroth EMA, LinMot, Bug Buster"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 50
+    normas_after: 50
+
+  - n: "09/11"
+    title: "Automação de Bordo — Sistemas Domoticos"
+    path: "60_Automacao_Conectividade_e_Monitoramento/Automação de Bordo — Sistemas Domoticos.md"
+    fase_6_reescrita: 92
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "4 arquiteturas: digital switching dedicado × lighting-first × monitoring + alerts × DIY open-source"
+      - "Princípios: fail-safe + override manual + redundância + cybersecurity (IEC 62443)"
+      - "ABYC E-11/TE-30/TE-04 + IEC 60945/61162-1/-3/-450 + ISO 12100/13849-1 + EU 2014/30/35/90/53"
+      - "EU GDPR 2016/679 (privacidade telemetria/cloud)"
+      - "Stack fabricantes: CZone (Power Products) Touch 5/7/10 + COI/MIPS modules; EmpirBus NG/NG2; Garmin OneHelm + OneCan; Lumitec POCO 2/3; Maretron N2KView + DCM100/DSM150/250/410; Yacht Devices YDxxx; Mastervolt CZone; Victron VRM/Cerbo GX; Home Assistant + N2K bridge (DIY)"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 65
+    normas_after: 35
+
+  - n: "10/11"
+    title: "Sensor de Nível Diesel"
+    path: "60_Automacao_Conectividade_e_Monitoramento/Sensor de Nível Diesel.md"
+    fase_6_reescrita: 93
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "5 tecnologias: resistivo bóia × capacitivo × ultrassônico × radar × hidrostático"
+      - "3 padrões resistivos: USA SAE J1810 240-33Ω × Mercury 0-190Ω × VDO European 10-180Ω"
+      - "ABYC H-24/H-25/H-33 (fuel systems) + ISO 21487-1/-2 (diesel/petrol tanks) + ISO 8849 + ISO 8846 + ISO 7840 + ISO 10088"
+      - "USCG 33 CFR 183 Subpart J + 46 CFR 56"
+      - "NMEA 2000 PGN 127505 (Fluid Level) + instances 0-15 multi-tank"
+      - "Calibração tank shape (5-20 pontos volume × resistência)"
+      - "ANP Resolução 858/2021 (lacre comercial) + IBAMA Lei 9.605/1998 (vazamento)"
+      - "Stack fabricantes: Maretron TLM100/TLM150/TLM200/FPM100; Wema NMEA 2000; Airmar G2183; KUS; Faria; VDO/Veethree; Centroid TankNet; Honeywell"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 50
+    normas_after: 45
+
+  - n: "11/11"
+    title: "Sistema de Alarme Geral / Painel de Alarmes"
+    path: "60_Automacao_Conectividade_e_Monitoramento/Sistema de Alarme Geral - Painel de Alarmes.md"
+    fase_6_reescrita: 94
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3"
+      - "DEC-14 normas_citadas"
+      - "4 arquiteturas: centralizada hardwired × NMEA 2000 distribuída × digital switching integrada × BNWAS dedicado SOLAS"
+      - "Princípios: priorização (Critical/Warning/Info) + fail-safe + audibilidade ≥75 dB + bateria reserva + sons distintos + mute timeout + logs"
+      - "IMO MSC.282(86) BNWAS + IEC 62616 + SOLAS V/19.2.7.1 (carriage requirement)"
+      - "ABYC E-11/H-22/A-24/A-26/A-32 + ISO 21927-1/-2/-3 (smoke alarm) + ISO 7240 (fire detection) + ISO 12100/13849-1"
+      - "Cascade BNWAS: helm → cabin master → second master → alarm geral (IEC 62616)"
+      - "Stack fabricantes: Maretron N2KView + DSM150/250/410; Borel Marine; MGM Compak/SafeMaster; Offshore Systems/Faria; Furuno NavPilot 700 BNWAS; Garmin OneHelm; CZone alarm management"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 60
+    normas_after: 40
+
+metrics:
+  total_notes: 11
+  retrofits: 11
+  new_notes: 0
+  callouts_added: "22 (11 tip + 11 danger)"
+  glossary_terms_total: "≈ 715 (avg ≈ 65)"
+  normas_total: "≈ 435 (avg ≈ 40)"
+  dec_14_notes: 11
+  dec_11_notes: 11
+  dec_26_retrofits: 0
+  todos_resolved: 0
+  fase_6_range: "84-94"
+  status_distribution:
+    premium-l3: 11
+
+new_decisions: []  # Sem decisões estruturais novas; cluster coerente
+
+intra_wave_coherence_patterns:
+  - pattern: "IEC 60598-1/-2-22/-2-23 (luminaires) + IEC 61347-2-13 (LED driver) + IEC 62031/62717 (LED modules) + IEC 60529 (IP) + IEC 62471 (fotobiologia) stack iluminação completo"
+  - pattern: "IEC 61547 + IEC 61000-3-2/-6-1/-3 EMC stack — driver LED ruim mata VHF/GPS"
+  - pattern: "ABYC E-11 + A-16 (nav lights) + A-30 (cabin/weather deck) + TE-30 (electronics install) + TE-04 (lightning) + E-11.16 (bonding) stack ABYC iluminação"
+  - pattern: "COLREGS Annex I + Rules 21/22/23/25/27/30/36 + Annex IV (distress) — uso de luzes em embarcação"
+  - pattern: "USCG 33 CFR 183 Subpart J + UL 1598/8750 + ANSI C78.377 + IES LM-79/LM-80/TM-21 stack USA"
+  - pattern: "ISO 19009 (internal lighting) + ISO 16273 (night vision) + ISO 9093 (passe-casco) + ISO 21487 (fuel tanks)"
+  - pattern: "INMETRO Portaria 144/2015 + 132/2017 (LED etiquetagem BR) + ANATEL Resolução 715/2019 (homologação eletrônica + RF)"
+  - pattern: "DPC NORMAM-201/211/05/204 + ABNT NBR 14728 + ABNT NBR 5410 stack BR"
+  - pattern: "EU 2014/35 LVD + 2014/30 EMC + 2014/90 MED + 2019/2020 EcoDesign + 2013/53 RCD stack europeu"
+  - pattern: "NMEA 2000 IEC 61162-3 PGNs canonicalizados: 127505 (Fluid Level), 127245+ (alarmes), 130306 (Wind), 128267 (Depth) — backbone instrumentação"
+  - pattern: "Digital switching marine: CZone (Power Products) × EmpirBus NG/NG2 × Garmin OneHelm × Lumitec POCO + integração com MFDs"
+  - pattern: "ISO 12100/13849-1 + IEC 60204-1 + CE Machinery 2006/42/EC stack safety of machinery (atuador, automação, alarme)"
+  - pattern: "IMO MSC.81(70) LSA Code + MSC.282(86) BNWAS + Resolution A.694(17) stack IMO LSA + bridge"
+  - pattern: "Backlinks cruzados densos: Tipos de Lâmpadas (mestre) ↔ Fitas LED ↔ Luz Subaquática ↔ Farol de Busca ↔ Dimmer ↔ Strobo ↔ Luz de Cortesia ↔ Iluminação Emergência (Tier S); Atuador Linear ↔ Plataforma Popa ↔ Flap ↔ Davit ↔ Catraca ↔ Piloto Automático; Sistema de Alarme ↔ Sensores diversos (CO/GLP/Diesel/Água/MOB/BMS) ↔ Automação de Bordo ↔ Telemetria"
+
+todos_resolved_this_wave:
+  - "Nenhum TODO legado específico — cluster bem coberto"
+
+user_feedback_applied_in_wave: []  # Execução direta da cadência (a) DEC-33 sem feedback
+
+commit_message_draft: |
+  Phase 6 Wave 9 (parts 1+2): DEC-11 premium on 11 Tier A notes (Iluminação 7 + Automação 4 — domínios 55 + 60)
+
+  Domain 55 (Iluminação 7 notes — already committed in part 1 + part 2):
+  - Tipos de Lâmpadas e LEDs Náuticos (master ref) — premium-l3, fase 84
+  - Fitas Led / Iluminação Led — premium-l3, fase 85
+  - Luz Subaquática — premium-l3, fase 86
+  - Farol de Busca — premium-l3, fase 87
+  - Dimmer — Controle de Intensidade Luminosa — premium-l3, fase 88
+  - Strobo — premium-l3, fase 89
+  - Luz de Cortesia — premium-l3, fase 90
+
+  Domain 60 (Automação 4 notes — part 2):
+  - Atuador Linear — premium-l3, fase 91
+  - Automação de Bordo — Sistemas Domoticos — premium-l3, fase 92
+  - Sensor de Nível Diesel — premium-l3, fase 93
+  - Sistema de Alarme Geral / Painel de Alarmes — premium-l3, fase 94
+
+  Each note received:
+  - TL;DR tip callout with 9-10 decision rules
+  - Danger callout with 9-10 risk scenarios
+  - Glossário with 50-90 technical terms (avg ~65)
+  - Normas section expanded to 30-65 items (avg ~40)
+  - Tabela comparativa por jurisdição
+  - Cross-links across the cluster
+
+  Pattern reinforcement (iluminação cluster):
+  - IEC 60598/61347/62031/62717/62471/60529/61547 stack iluminação completo
+  - ABYC E-11/A-16/A-30/TE-30/TE-04/E-11.16 stack ABYC
+  - COLREGS Annex I/IV + Rules 21-36 (visibility + distress signals)
+  - USCG 33 CFR 183 Subpart J + UL 1598/8750
+  - ISO 19009/16273/9093/21487
+  - IES LM-79/LM-80/TM-21
+  - INMETRO Portaria 144/2015 + ANATEL 715/2019
+
+  Pattern reinforcement (automação cluster):
+  - ABYC E-11/H-22/H-24/H-29/A-24/A-26/A-32/P-22/TE-30/TE-04
+  - IEC 60945/61162-1/-3/-450/62616/60204-1/61000-6-1/-3/61547
+  - ISO 12100/13849-1/21487/21927-1/-2/-3/7240/8849/8846/10088
+  - IMO MSC.81(70) LSA Code + MSC.282(86) BNWAS + SOLAS V/19.2.7.1
+  - NMEA 2000 PGN 127505 (Fluid Level) + 127245+ (alarmes)
+  - Digital switching: CZone × EmpirBus × Garmin OneHelm × Lumitec POCO
+  - EU 2014/30/35/90/53 + GDPR + IEC 62443 cybersecurity
+
+  Metrics:
+  - 11 notes processed (all retrofits + 0 new)
+  - 22 callouts added (11 tip + 11 danger)
+  - ~715 glossary terms (avg ~65/note)
+  - ~435 norms expanded (avg ~40/note)
+  - 11 notes with DEC-14 (normas_citadas)
+  - 0 new DECs documented (cluster coerente, sem decisão estrutural nova)
+  - Progress: 97/137 notes (70.8%) — Tier A clusters Iluminação + Automação complete
+
+  Cadence: (a) auto-continuous per DEC-33. Próxima onda: Tier A restante 10/30/40
+  (Fundamentos + Conversão + Distribuição que faltam) + Tier B + Tier C closure.
+---
