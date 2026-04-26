@@ -1,0 +1,198 @@
+---
+wave: 8
+phase: 6
+sprint: "Caminho B — DEC-11 premium em Tier A (cluster Navegação — domínio 50, 5 notas Tier A)"
+date: "2026-04-25"
+cadence: "a (auto-continuous)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier A — 5 notas do domínio 50_Navegacao_Instrumentacao_e_Comunicacao (sub-cluster instrumentos integrados de navegação a vela e motor: heading + cartografia + vento + piloto + sonar)"
+template_recalibrated:
+  tldr_rules: "9-10 (média ≈ 9.8)"
+  danger_scenarios: "9-10"
+  glossary_terms: "55-75 (média ≈ 65)"
+  normas_expanded: "40-55 (média ≈ 47)"
+  decision: "Vademecum dos instrumentos integrados de navegação náutica — IMO MSC.64/74/116/232/252/401/467 + IEC 60945/61108/61162/62065/62288 + ISO 11606/11674/16329/17713/22090 + ABYC E-11/H-27/TE-30/TE-04 + COLREGS Rule 5/7/8 + SOLAS V/19/24 + DHN/NORMAM-201/204/211/05 + ANATEL Resolução 715/2019 — todos integrados via NMEA 2000 backbone (IEC 61162-3) e NMEA 0183 (IEC 61162-1)"
+
+notes_processed:
+  - n: "01/05"
+    title: "Bússola Eletrônica (Compass / HDG Sensor)"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Bússola Eletrônica (Compass - HDG Sensor).md"
+    fase_6_reescrita: 79
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 65+ termos)"
+      - "DEC-14 normas_citadas (lista plana, 50+ itens)"
+      - "Três tecnologias canonicalizadas: fluxgate (ISO 22090-2) × AHRS × GPS compass dual-antenna (ISO 22090-3)"
+      - "IMO MSC.116(73) (THD performance) + IEC 60945 + IEC 60533 EMC"
+      - "Procedimento swinging documentado + deviation card exemplo"
+      - "Heading magnético × verdadeiro × COG explicitado (declinação WMM/NCEI)"
+      - "Stack fabricantes: Garmin GPS 19x/24xd HVS, Simrad HS70, Furuno SC-50/SCX, B&G Precision-9, Raymarine EV-1, ComNav G2/Vector G5, Airmar H2183B"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 65
+    normas_after: 50
+
+  - n: "02/05"
+    title: "Chartplotter / GPS / MFD"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Chartplotter - GPS - MFD.md"
+    fase_6_reescrita: 80
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 75+ termos)"
+      - "DEC-14 normas_citadas (lista plana, 55+ itens)"
+      - "Distinção crítica MFD ≠ ECDIS (IMO MSC.232(82) é só para SOLAS; recreativo usa ECS via MSC.401(95))"
+      - "GNSS multi-constellation (GPS+GLONASS+Galileo+BeiDou+QZSS+IRNSS) + SBAS (WAAS/EGNOS/MSAS/GAGAN/SDCM)"
+      - "Cartografia: IHO S-57/S-63/S-100 + DHN BR + comerciais (Navionics/C-MAP/BlueChart/TimeZero)"
+      - "DPC NORMAM-204 (cartas eletrônicas BR) + ANATEL 715/2019"
+      - "CCRP (Common Reference Point — IMO MSC.467) explicitado"
+      - "Stack fabricantes: Garmin (GPSMAP/8617/9000), Simrad/B&G/Lowrance (Navico — NSO/NSS/Zeus/HDS), Raymarine (Axiom Pro/XL), Furuno (NavNet TZtouch3/TZT22)"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 75
+    normas_after: 55
+
+  - n: "03/05"
+    title: "Estação de Vento / Anemômetro"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Estação de Vento - Anemômetro.md"
+    fase_6_reescrita: 81
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 9 regras + Danger 10 cenários + Glossário 60+ termos)"
+      - "DEC-14 normas_citadas (lista plana, 40+ itens)"
+      - "Cup × Sonic 2D × Sonic 3D canonicalizado (ISO 17713-1 cup × ISO 16622 sonic)"
+      - "Cálculo vetorial vento aparente × verdadeiro com BSW (não COG) explicitado"
+      - "Conector da base do mastro = ponto de falha #1 (ABYC E-11 + IEC 60533 + dielectric grease)"
+      - "Wireless (Calypso/Tacktick/gWind Wireless 2): RED 2014/53/EU + FCC Part 15 + ANATEL"
+      - "Stack fabricantes: B&G WS320/WS700, Garmin GWS 10/gWind, Raymarine MastView, Calypso Ultrasonic, Gill WindSonic, Airmar PB200/120WX"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 60
+    normas_after: 40
+
+  - n: "04/05"
+    title: "Piloto Automático"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Piloto Automático.md"
+    fase_6_reescrita: 82
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 65+ termos)"
+      - "DEC-14 normas_citadas (lista plana, 45+ itens)"
+      - "IMO MSC.64(67) + MSC.74(69) Annex 2 (HCS) + IEC 62065 (TCS) + ISO 11674/16329 canonicalizados"
+      - "Atuadores: linear × rotativo × hidráulico (Octopus/Hynautic/ComNav) × drive-by-wire (IPS/Joystick/SteerCommand)"
+      - "Modos canonicalizados: Standby, Heading (Auto), Track (Nav), Wind, Dodge, Pattern, Power Steer, No Drift"
+      - "PID + sea state + rudder gain + counter rudder explicitado + auto-tune (AutoLearn/Auto-Tune/Sea State Adapt)"
+      - "MOB protocol força STANDBY (treinamento crítico)"
+      - "ABYC P-22/P-24/P-27 (steering systems) + atuador hidráulico exige fluido específico (vide [[Óleos Hidráulicos Marine — Guia Completo]])"
+      - "Stack fabricantes: Raymarine Evolution EV-100/200/300/400, Garmin Reactor 40/GHP, Simrad AP44/70/80, Furuno NavPilot 711C/300/700, B&G H5000, ComNav P-Series"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 65
+    normas_after: 45
+
+  - n: "05/05"
+    title: "Sonda / Profundímetro / Sonar"
+    path: "50_Navegacao_Instrumentacao_e_Comunicacao/Sonda - Profundímetro - Sonar.md"
+    fase_6_reescrita: 83
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 75+ termos)"
+      - "DEC-14 normas_citadas (lista plana, 50+ itens)"
+      - "IMO MSC.74(69) Annex 4 + IEC 61088 + ISO 13076 canonicalizados"
+      - "Tecnologias: Conventional 50/200 kHz × CHIRP (low/mid/high) × Side Imaging × Down Imaging × 3D × Live (LiveScope/ActiveTarget/MEGA Live) × Forward-looking sonar × Searchlight Sonar"
+      - "Transdutores: transom × thru-hull × in-hull × pod × Smart Sensor (Airmar DST810)"
+      - "ABYC H-27 + ISO 9093-1/-2 (passe-casco) + ABYC E-11.16 (bonding) + ABYC TE-04 (surge)"
+      - "Configuração crítica: 'Depth Below Keel' com transducer offset (default fábrica é Below Transducer = inseguro)"
+      - "DPC NORMAM-04 (Hidrografia) + DHN cartas + DPC NORMAM-204 cartas eletrônicas"
+      - "Stack fabricantes: Garmin Panoptix LiveScope, Lowrance HDS Pro/ActiveTarget, Humminbird Solix/MEGA Live 2, Furuno DFF/FCV/Searchlight, Simrad S5100, Raymarine RealVision/RVX1000, Airmar (transdutores OEM)"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 75
+    normas_after: 50
+
+metrics:
+  total_notes: 5
+  retrofits: 5
+  new_notes: 0
+  callouts_added: "10 (5 tip + 5 danger)"
+  glossary_terms_total: "≈ 340 (avg ≈ 68)"
+  normas_total: "≈ 240 (avg ≈ 48)"
+  dec_14_notes: 5
+  dec_11_notes: 5
+  dec_26_retrofits: 0
+  todos_resolved: 1  # ABYC H-27 confirmado em Sonda (era TODO de citação)
+  fase_6_range: "79-83"
+  status_distribution:
+    premium-l3: 5
+
+new_decisions: []  # Nenhuma decisão estrutural nova; cluster pequeno e coerente
+
+intra_wave_coherence_patterns:
+  - pattern: "NMEA 2000 (IEC 61162-3) PGN 127250 (Vessel Heading) + 129025/129026/129029 (GNSS) + 130306 (Wind) + 127245/127237 (Rudder/Heading Track Control) + 128267 (Water Depth) — backbone canonicalizado nas 5 notas"
+  - pattern: "NMEA 0183 (IEC 61162-1) sentences mapeadas: $HDM/$HDT/$HDG (heading), $GGA/$RMC/$VTG (GPS), $MWV/$MWD (wind), $APB/$RMB/$XTE/$RSA (autopilot), $DPT/$DBT/$DBK (depth)"
+  - pattern: "ABYC E-11 + ABYC TE-30 + ABYC TE-04 (surge protection) + ABYC E-11.16 (bonding) stack elétrico marine em 100% das notas"
+  - pattern: "IEC 60945 (general) + IEC 60533 (EMC) + IEC 62288 (display) stack EMC em 100% das notas"
+  - pattern: "IMO MSC family canonicalizada: 64(67)/74(69) HCS, 116(73) THD, 232(82) ECDIS, 252(83) INS, 401(95) MFD, 467(101) CCRP"
+  - pattern: "ISO 22090-1/-2/-3 (THD: gyro/geomagnético/GNSS) cobre Bússola Eletrônica + Piloto + (parcialmente) Chartplotter"
+  - pattern: "COLREGS Rule 5 (Look-out) + Rule 7 (Risk of collision) + Rule 8 (Action to avoid collision) reforçados em todas as notas operacionais"
+  - pattern: "SOLAS V/19 (carriage) + V/22 (bridge windows) + V/24 (HCS/TCS use) — referência onde aplicável"
+  - pattern: "DHN + DPC NORMAM-201/204/211/05 + ANATEL Resolução 715/2019 stack regulatório BR"
+  - pattern: "EU Directive 2014/90/EU (MED) + 2013/53/EU (RCD) stack europeu"
+  - pattern: "Stack fabricantes consolidado por cluster: Garmin (multi-disciplinas) × Simrad/B&G/Lowrance (Navico — vela e motor) × Raymarine (Teledyne — Evolution autopilot, Axiom MFD) × Furuno (offshore profissional, NavNet TZtouch) × ComNav (commercial robust) × Airmar (transdutores OEM)"
+  - pattern: "Backlinks cruzados densos: Bússola ↔ Chartplotter ↔ Piloto ↔ Vento ↔ Sonda ↔ NMEA 2000 — 5 notas formam cluster instrumentos integrados completo"
+  - pattern: "Configuração crítica documentada em cada nota: swinging compass (Bússola), datum WGS-84 + CCRP (Chartplotter), offset direção (Vento), PID/sea state/rudder gain (Piloto), Depth Below Keel + transducer offset (Sonda)"
+
+todos_resolved_this_wave:
+  - "Sonda: TODO-CITAÇÃO sobre ABYC para passe-casco resolvido — confirmado ABYC H-27 (Seacocks, Thru-Hull Connections and Drain Plugs) como referência canônica + ISO 9093-1/-2"
+
+user_feedback_applied_in_wave: []  # Sem feedback explícito do usuário nesta onda — execução direta da cadência (a) DEC-33
+
+commit_message_draft: |
+  Phase 6 Wave 8: DEC-11 premium on 5 Tier A notes (Navegação cluster — domínio 50)
+
+  Notes (5 total, all retrofits — sub-cluster instrumentos integrados):
+  - Bússola Eletrônica (Compass / HDG Sensor) — premium-l3, fase 79
+  - Chartplotter / GPS / MFD — premium-l3, fase 80
+  - Estação de Vento / Anemômetro — premium-l3, fase 81
+  - Piloto Automático — premium-l3, fase 82
+  - Sonda / Profundímetro / Sonar — premium-l3, fase 83
+
+  Each note received:
+  - TL;DR tip callout with 9-10 decision rules
+  - Danger callout with 9-10 risk scenarios (specialist intervention)
+  - Glossário with 60-75 technical terms (avg ~68)
+  - Normas section expanded to 40-55 items (avg ~48)
+  - Tabela comparativa por jurisdição (EUA/Internacional/Brasil/Europa)
+  - Cross-links across the cluster (instrumentos NMEA 2000 backbone)
+
+  Pattern reinforcement (cluster coherence):
+  - NMEA 2000 PGNs canonicalized: 127250 (Heading), 129025/129026/129029 (GNSS),
+    130306 (Wind), 127245/127237 (Rudder/Heading Track), 128267 (Water Depth)
+  - NMEA 0183 sentences mapped: $HDG/$HDM/$HDT, $GGA/$RMC/$VTG, $MWV/$MWD,
+    $APB/$RMB/$XTE/$RSA, $DPT/$DBT/$DBK
+  - IMO MSC family: 64(67)/74(69) HCS, 116(73) THD, 232(82) ECDIS, 252(83) INS,
+    401(95) MFD, 467(101) CCRP
+  - ISO 22090-1/-2/-3 (THD: gyro/geomagnético/GNSS)
+  - SOLAS V/19/22/24 + COLREGS Rule 5/7/8
+  - DHN + NORMAM-201/204/211/05 + ANATEL Resolução 715/2019
+
+  TODOs resolved:
+  - Sonda: TODO-CITAÇÃO sobre ABYC para passe-casco resolvido — ABYC H-27
+    canonicalizado como referência + ISO 9093-1/-2
+
+  Metrics:
+  - 5 notes processed (5 retrofits + 0 new)
+  - 10 callouts added (5 tip + 5 danger)
+  - ~340 glossary terms (avg ~68/note)
+  - ~240 norms expanded (avg ~48/note)
+  - 5 notes with DEC-14 (normas_citadas)
+  - 0 new DECs documented (cluster coerente, sem decisão estrutural nova)
+  - Progress: 86/137 notes (62.8%) — Tier A cluster Navegação complete
+
+  Cadence: (a) auto-continuous per DEC-33. Next Tier A cluster (likely 55/60 —
+  Iluminação + Automação remaining Tier A — 11 notes total).
+---
