@@ -1,0 +1,697 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>FUNDAMENTOS DA ELETRICA NÁUTICA</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1e419734-f7fb-80f9-abe4-d621dcf45570" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 39.470000000000006%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🚤</span></div><h1 class="page-title">FUNDAMENTOS DA ELETRICA NÁUTICA</h1><p class="page-description"></p></header><div class="page-body"><p id="1e419734-f7fb-80f5-88b9-d0d4e0b1f9f4" class="">
+</p><div id="1e419734-f7fb-80c7-b0ca-e4b2b147a1b6" class="column-list"><div id="1e419734-f7fb-8040-883f-e60beca00fd5" style="width:24.242424242424246%" class="column"><h3 id="93919734-f7fb-836e-bf18-016a285dfa53" class="block-color-gray_background">QDG (Apresentação)</h3><figure id="d8b19734-f7fb-83f0-a528-0108ea7c19cc" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/TIPOS%20DE%20EMBARCAC%CC%A7A%CC%83O%20d8b19734f7fb83f0a5280108ea7c19cc.html">TIPOS DE EMBARCAÇÃO</a></figure><figure id="d5819734-f7fb-834e-a646-019aef919ea7" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/PRINCIPIOS%20NA%CC%81UTICOS%20d5819734f7fb834ea646019aef919ea7.html">PRINCIPIOS NÁUTICOS</a></figure><figure id="3fc19734-f7fb-8307-932d-81f9a93b33b1" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/FASE%20E%20NEUTRO%203fc19734f7fb8307932d81f9a93b33b1.html">FASE E NEUTRO</a></figure><p id="1e419734-f7fb-8045-be27-fec78ddbb7e5" class="">
+</p></div><div id="1e419734-f7fb-80be-8147-d7b0af16a210" style="width:24.242424242424246%" class="column"><h3 id="0d719734-f7fb-8283-b53c-01dba309fe17" class="block-color-brown_background">GERAÇÃO</h3><figure id="55219734-f7fb-834a-b927-01fecab7a7cb" class="block-color-default link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CAIS%20(Pier)%20(AC)%2055219734f7fb834ab92701fecab7a7cb.html">CAIS (Pier) (AC)</a></figure><figure id="0ee19734-f7fb-82d8-9da2-817e8a73a815" class="block-color-default link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/GERADOR%20(AC)%200ee19734f7fb82d89da2817e8a73a815.html">GERADOR (AC)</a></figure><figure id="58419734-f7fb-83ba-ae88-811eb7c459cf" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/TRANSFORMADOR%20ENTRADA%2058419734f7fb83baae88811eb7c459cf.html">TRANSFORMADOR ENTRADA</a></figure><figure id="8ed19734-f7fb-836b-8582-8192050b797a" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/INVERSORA%20(DC%20to%20AC)%208ed19734f7fb836b85828192050b797a.html">INVERSORA (DC to AC)</a></figure><figure id="eb219734-f7fb-83f0-a134-81295cd5c8f6" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/GERADOR%20(DC)%20eb219734f7fb83f0a13481295cd5c8f6.html">GERADOR (DC)</a></figure><figure id="64e19734-f7fb-83f6-8797-01f63709d32e" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CARREGADOR%20DE%20BATERIA%20(AC%20to%20DC)%2064e19734f7fb83f6879701f63709d32e.html">CARREGADOR DE BATERIA (AC to DC)</a></figure><figure id="16b19734-f7fb-8270-9b95-01e9ac1e1bca" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/PLACA%20SOLAR%20(DC)%2016b19734f7fb82709b9501e9ac1e1bca.html">PLACA SOLAR (DC)</a></figure><figure id="d0b19734-f7fb-8218-b705-81ee7f081bf3" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/EO%CC%81LICO%20(DC)%20d0b19734f7fb8218b70581ee7f081bf3.html">EÓLICO (DC)</a></figure><figure id="e2819734-f7fb-8224-ab72-8189f1ab5518" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ALTERNADOR%20(DC)%20e2819734f7fb8224ab728189f1ab5518.html">ALTERNADOR (DC)</a></figure></div><div id="1e419734-f7fb-8017-a72c-da1167be71cd" style="width:24.242424242424246%" class="column"><h3 id="fa319734-f7fb-82dd-b07e-01a51591b7de" class="block-color-orange_background">ARMAZENAMENTO</h3><figure id="17419734-f7fb-83e3-8ee8-0148dae5ba3c" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/TIPOS%20DE%20BATERIA%2017419734f7fb83e38ee80148dae5ba3c.html">TIPOS DE BATERIA</a></figure><figure id="8ec19734-f7fb-83e5-8478-0174466db4de" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BANCOS%20DE%20BATERIA%208ec19734f7fb83e584780174466db4de.html">BANCOS DE BATERIA</a></figure><p id="1e619734-f7fb-80fe-b611-de9293edad03" class="">
+</p></div><div id="1e419734-f7fb-8071-869d-ce79755ca62b" style="width:27.27272727272727%" class="column"><h3 id="46219734-f7fb-8395-af45-01e6add244dc" class="block-color-yellow_background">GESTÃO </h3><figure id="15919734-f7fb-834f-beda-01362553ce8a" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CHAVES%20GERAIS%20(DC)%2015919734f7fb834fbeda01362553ce8a.html">CHAVES GERAIS (DC)</a></figure><figure id="2f419734-f7fb-831c-ad5d-81f3bc9880ae" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/DIVISORES%20DE%20CARGA%20(DC)%202f419734f7fb831cad5d81f3bc9880ae.html">DIVISORES DE CARGA (DC)</a></figure><figure id="77f19734-f7fb-83e9-9276-817165e87b28" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/HOTLINE%20(DC)%2077f19734f7fb83e99276817165e87b28.html">HOTLINE (DC)</a></figure><figure id="e7d19734-f7fb-827b-ba7a-819fb2653ee0" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/VOLTIMETRO%20AMPERIMETRO%20(DC)%20e%20(AC)%20e7d19734f7fb827bba7a819fb2653ee0.html">VOLTIMETRO/AMPERIMETRO (DC) e (AC)</a></figure><figure id="61f19734-f7fb-820e-b398-81eaf8483db4" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/DISJUNTORES%20(DC)%20e%20(AC)%2061f19734f7fb820eb39881eaf8483db4.html">DISJUNTORES (DC) e (AC)</a></figure><figure id="2c919734-f7fb-8307-8ff6-01354dc25bca" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CHAVES%20SELETORAS%20(AC)%202c919734f7fb83078ff601354dc25bca.html">CHAVES SELETORAS (AC)</a></figure><figure id="f0f19734-f7fb-8208-95d4-0138dc40c1ac" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CONTATORES%20(AC)%20f0f19734f7fb820895d40138dc40c1ac.html">CONTATORES (AC)</a></figure><figure id="f9e19734-f7fb-82eb-b08a-01bde9cf45c6" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LINHA%20LEVE%20(AC)%20f9e19734f7fb82ebb08a01bde9cf45c6.html">LINHA LEVE (AC)</a></figure><figure id="6bd19734-f7fb-836e-818f-01ed1f949d26" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LINHA%20PESADA%20(AC)%206bd19734f7fb836e818f01ed1f949d26.html">LINHA PESADA (AC)</a></figure><figure id="6f319734-f7fb-82f6-b803-01582816022e" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/PROTEC%CC%A7A%CC%83O%20DR%206f319734f7fb82f6b80301582816022e.html">PROTEÇÃO DR</a></figure><figure id="01a19734-f7fb-82dc-8094-811f3a4f0d01" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/SENSOR%20DE%20NIVEL%20DIESEL%2001a19734f7fb82dc8094811f3a4f0d01.html">SENSOR DE NIVEL DIESEL</a></figure><figure id="fbf19734-f7fb-83ae-b875-017afe071612" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/SENSOR%20DE%20NIVEL%20A%CC%81GUA%20fbf19734f7fb83aeb875017afe071612.html">SENSOR DE NIVEL ÁGUA</a></figure><p id="1e419734-f7fb-80f1-bfc3-e00697420a33" class="">
+</p></div></div><div id="1e419734-f7fb-803a-b4ed-e54947a3bc81" class="column-list"><div id="1e419734-f7fb-804a-ae5a-dceee16cdf1a" style="width:20%" class="column"><h3 id="2fa19734-f7fb-836f-b9a8-81e8dc4dd128" class="block-color-teal_background">BOMBAS</h3><figure id="b2a19734-f7fb-83d6-9a14-810e202c2c13" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOMBA%20DE%20PORA%CC%83O%20b2a19734f7fb83d69a14810e202c2c13.html">BOMBA DE PORÃO</a></figure><figure id="48019734-f7fb-8270-a543-01056798e713" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOMBA%20DE%20A%CC%81GUA%20PRESSURIZADA%2048019734f7fb8270a54301056798e713.html">BOMBA DE ÁGUA PRESSURIZADA</a></figure><figure id="1c019734-f7fb-8324-97ea-815983a848a7" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOMBA%20AR%20CONDICIONADO%201c019734f7fb832497ea815983a848a7.html">BOMBA AR CONDICIONADO</a></figure><figure id="3c119734-f7fb-8338-ace3-811fef114aba" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOMBA%20DE%20BANHEIRO%203c119734f7fb8338ace3811fef114aba.html">BOMBA DE BANHEIRO</a></figure><figure id="83d19734-f7fb-8231-a914-819660234052" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOMBA%20AGUAS%20NEGRAS%2083d19734f7fb8231a914819660234052.html">BOMBA AGUAS NEGRAS</a></figure><figure id="f6d19734-f7fb-8308-8456-0187fddd7783" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CAIXA%20DE%20A%CC%81GUA%20CINZA%20f6d19734f7fb830884560187fddd7783.html">CAIXA DE ÁGUA CINZA</a></figure></div><div id="1e419734-f7fb-8068-ae61-dc0eed9c0b0f" style="width:20%" class="column"><h3 id="82419734-f7fb-82f2-961a-816b46d9b575" class="block-color-blue_background">MOTORES ELÉTRICOS </h3><figure id="e2519734-f7fb-835c-88cc-01ee230c806c" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BUZINA%20e2519734f7fb835c88cc01ee230c806c.html">BUZINA</a></figure><figure id="26519734-f7fb-8343-900c-015a28ddc9c8" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ARRANQUE%2026519734f7fb8343900c015a28ddc9c8.html">ARRANQUE</a></figure><figure id="50f19734-f7fb-8338-bcfd-819cb7823229" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/GUINCHO%2050f19734f7fb8338bcfd819cb7823229.html">GUINCHO</a></figure><figure id="0f519734-f7fb-82de-a40b-017c2a10e5ae" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/THRUSTER%200f519734f7fb82dea40b017c2a10e5ae.html">THRUSTER</a></figure><figure id="93e19734-f7fb-8351-88a5-0199d626ca56" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CATRACA%2093e19734f7fb835188a50199d626ca56.html">CATRACA</a></figure><figure id="f1f19734-f7fb-8225-96ae-81cfdf33b3bd" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BLOWER%20f1f19734f7fb822596ae81cfdf33b3bd.html">BLOWER</a></figure><figure id="9f419734-f7fb-8319-9e23-01a78b4b5d06" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LIMPADOR%20DE%20PARABRISAS%209f419734f7fb83199e2301a78b4b5d06.html">LIMPADOR DE PARABRISAS</a></figure><figure id="5a319734-f7fb-8392-ad8b-81db5fd17f98" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ATUADOR%20LINEAR%205a319734f7fb8392ad8b81db5fd17f98.html">ATUADOR LINEAR</a></figure></div><div id="1e419734-f7fb-809f-9c5c-c5939bf932a5" style="width:20%" class="column"><h3 id="fcb19734-f7fb-8323-a286-010a7b9b3611" class="block-color-purple_background">LUZES</h3><figure id="c6b19734-f7fb-82d3-8157-8190ac1f6cec" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LUZES%20INTERNAS%20TETO%20c6b19734f7fb82d381578190ac1f6cec.html">LUZES INTERNAS TETO</a></figure><figure id="ff119734-f7fb-8264-ba9b-01e36f23d896" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/NAVEGAC%CC%A7A%CC%83O%20(BB,%20BE%20e%20Alcanc%CC%A7ado)%20ff119734f7fb8264ba9b01e36f23d896.html">NAVEGAÇÃO (BB, BE e Alcançado)</a></figure><figure id="95519734-f7fb-82f5-9352-8121a72dcb4e" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/TOP%2095519734f7fb82f593528121a72dcb4e.html">TOP</a></figure><figure id="83119734-f7fb-8302-9a96-0199efae621e" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/STROBO%2083119734f7fb83029a960199efae621e.html">STROBO</a></figure><figure id="bfe19734-f7fb-83b9-becc-01589acd8157" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/FAROL%20DE%20BUSCA%20bfe19734f7fb83b9becc01589acd8157.html">FAROL DE BUSCA</a></figure><figure id="94a19734-f7fb-82e2-8ec0-81bd42c05b94" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LUZ%20DE%20CORTESIA%2094a19734f7fb82e28ec081bd42c05b94.html">LUZ DE CORTESIA</a></figure><figure id="d7619734-f7fb-8311-ae03-81f72aa1a0c6" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/LUZ%20SUBAQUA%CC%81TICA%20d7619734f7fb8311ae0381f72aa1a0c6.html">LUZ SUBAQUÁTICA</a></figure><figure id="fe919734-f7fb-835a-8d72-8197805a7f96" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/CASA%20DE%20MA%CC%81QUINAS%20E%20PAIOL%20fe919734f7fb835a8d728197805a7f96.html">CASA DE MÁQUINAS E PAIOL</a></figure><p id="1e419734-f7fb-8067-b14b-c3d9256bc014" class="">
+</p></div><div id="1e419734-f7fb-804d-9e70-fb14e5d028ae" style="width:20%" class="column"><h3 id="c1f19734-f7fb-83a8-9820-8119b3dd84d0" class="block-color-pink_background">ELETRÔNICOS</h3><figure id="e5319734-f7fb-835c-9aaa-01e0b5de4318" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/VHF%20e5319734f7fb835c9aaa01e0b5de4318.html">VHF</a></figure><figure id="99519734-f7fb-82af-a0ef-81e230098bb2" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/SOM%2099519734f7fb82afa0ef81e230098bb2.html">SOM</a></figure><figure id="0f919734-f7fb-83d4-a90e-81c518fd4608" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/RADAR%200f919734f7fb83d4a90e81c518fd4608.html">RADAR</a></figure><figure id="4b019734-f7fb-826e-beac-810548e8c64d" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/PILOTO%20AUTOMA%CC%81TICO%204b019734f7fb826ebeac810548e8c64d.html">PILOTO AUTOMÁTICO</a></figure><p id="1e419734-f7fb-8058-bfc6-c09ac73a3675" class="">
+</p></div><div id="1e419734-f7fb-8055-b92c-ce1b0d5387fa" style="width:20%" class="column"><h3 id="e2a19734-f7fb-83f3-8773-01299f8bd220" class="block-color-red_background">DIVERSOS</h3><figure id="2de19734-f7fb-827a-8315-0176909e81e1" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/FLAP%202de19734f7fb827a83150176909e81e1.html">FLAP</a></figure><figure id="7ae19734-f7fb-8302-934f-01801d82dbdd" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/BOILER%207ae19734f7fb8302934f01801d82dbdd.html">BOILER</a></figure><figure id="bb819734-f7fb-8373-bf6e-01246ab6177a" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ELETRO%CC%81LISE%20bb819734f7fb8373bf6e01246ab6177a.html">ELETRÓLISE</a></figure><figure id="49619734-f7fb-82a4-8941-010bf6384b31" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/USB%20(POWER%2012V)%2049619734f7fb82a48941010bf6384b31.html">USB (POWER 12V)</a></figure><figure id="bed19734-f7fb-83f5-b4ae-011fe6302611" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ESTABILIZADOR%20bed19734f7fb83f5b4ae011fe6302611.html">ESTABILIZADOR</a></figure><figure id="2d619734-f7fb-83b2-90ce-8195a3c4da0c" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/DESSANILIZADOR%202d619734f7fb83b290ce8195a3c4da0c.html">DESSANILIZADOR</a></figure><figure id="8e019734-f7fb-829a-bd3e-01f8fcef8de0" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ANO%CC%82DO%208e019734f7fb829abd3e01f8fcef8de0.html">ANÔDO</a></figure><figure id="62019734-f7fb-83ed-822d-818740bfe4cb" class="link-to-page"><a href="FUNDAMENTOS%20DA%20ELETRICA%20NA%CC%81UTICA%201e419734f7fb80f9abe4d621dcf45570/ATERRAMENTO%2062019734f7fb83ed822d818740bfe4cb.html">ATERRAMENTO</a></figure><p id="1e419734-f7fb-80e5-8e35-faad195ba6af" class="">
+</p></div></div><p id="1e419734-f7fb-80fb-8a8b-c714a6d3c3e7" class="">
+</p><p id="1e419734-f7fb-80f3-8928-da233394b0da" class="">
+</p><p id="1e419734-f7fb-8039-a0ff-d159b64459e1" class="">
+</p><p id="1e419734-f7fb-80a9-891f-c28299256431" class="">
+</p><p id="1e419734-f7fb-80c8-9739-fb91174a9a89" class="">
+</p><p id="1e419734-f7fb-80ed-94c2-e34e8b998ee5" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

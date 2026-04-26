@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-04-20T10:07:51.640223+00:00",
+  "queue_path": "90_Revisao_Manual/_Acervo_Local/acervo-download-queue-onan-lote01.json",
+  "report_path": "90_Revisao_Manual/_Acervo_Local/acervo-download-report-onan-lote01.json",
+  "item_count": 19,
+  "status_counts": {
+    "skipped_existing": 4,
+    "error": 15
+  },
+  "results": [
+    {
+      "id": "GEN-ONAN-006-PARTS",
+      "url": "https://www.seapowermarine.com/seapower22/download/1426/parts-manual/5832/mdkdp-dr-dv-parts-manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mkdv__parts-manual__a046l892.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual do bloco GEN-006.",
+      "status": "skipped_existing",
+      "size_bytes": 4160043,
+      "sha256": "087b478f3a8d0ebae4e1c09cb5af15c86c0e54d778108cb31ebe614f4c0abf94"
+    },
+    {
+      "id": "GEN-ONAN-006-INSTALL",
+      "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__installation-manual__a046j598.pdf",
+      "expected_type": "pdf",
+      "notes": "Installation manual comum aos blocos médios Onan.",
+      "status": "skipped_existing",
+      "size_bytes": 2286515,
+      "sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    },
+    {
+      "id": "GEN-ONAN-006-OPERATOR",
+      "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A050G574-Issue-1-Portuguese-Brazil.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__operator-manual__a050g574-pt-br.pdf",
+      "expected_type": "pdf",
+      "notes": "Manual operacional PT-BR comum aos blocos médios Onan.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-006-SERVICE",
+      "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__service-manual__a046j602.pdf",
+      "expected_type": "pdf",
+      "notes": "Service manual comum aos blocos médios Onan.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-007-PARTS",
+      "url": "https://www.seapowermarine.com/seapower22/download/1426/parts-manual/5834/mdkds-dt-du-parts-manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__parts-manual__a046j604.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual do bloco GEN-007.",
+      "status": "skipped_existing",
+      "size_bytes": 5803528,
+      "sha256": "fae9fd5e57a8e43d574bab41ca9414b91200ccb9fdb8776b1b3b7dc65e466c60"
+    },
+    {
+      "id": "GEN-ONAN-007-INSTALL",
+      "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__installation-manual__a046j598.pdf",
+      "expected_type": "pdf",
+      "notes": "Installation manual comum aos blocos médios Onan.",
+      "status": "skipped_existing",
+      "size_bytes": 2286515,
+      "sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    },
+    {
+      "id": "GEN-ONAN-007-OPERATOR",
+      "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A050G574-Issue-1-Portuguese-Brazil.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__operator-manual__a050g574-pt-br.pdf",
+      "expected_type": "pdf",
+      "notes": "Manual operacional PT-BR comum aos blocos médios-altos Onan.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-007-SERVICE",
+      "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__service-manual__a046j602.pdf",
+      "expected_type": "pdf",
+      "notes": "Service manual comum aos blocos médios-altos Onan.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-001-OPERATOR",
+      "url": "https://www.cummins.fr/wp-content/uploads/2020/10/0981-0180-Issue-5-English.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBH/cummins-onan__mdkbh__operator-manual__0981-0180.pdf",
+      "expected_type": "pdf",
+      "notes": "Operator manual oficial da família MDKBH.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-001-SERVICE",
+      "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBH-Service-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBH/cummins-onan__mdkbh__service-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Service manual da família MDKBH.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-001-PARTS",
+      "url": "https://www.marine-j.com/pdf/MDKBH-Parts-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBH/cummins-onan__mdkbh__parts-manual__marine-j.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual da família MDKBH.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-001-INSTALL",
+      "url": "https://onan.xmsi.net/981-0647%20Onan%20MDKBH%20Spec%20A-E%20Installation%20Manual%20%2810-2013%29.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBH/cummins-onan__mdkbh__installation-manual__981-0647.pdf",
+      "expected_type": "pdf",
+      "notes": "Installation manual da família MDKBH.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-002-OPERATOR",
+      "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A029Z105-Issue-5-English.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBJ-MDKBW/cummins-onan__mdkbj-mdkbw__operator-manual__a029z105.pdf",
+      "expected_type": "pdf",
+      "notes": "Operator manual oficial da família MDKBJ-MDKBW.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-002-SERVICE",
+      "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBJ-BW-Service-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBJ-MDKBW/cummins-onan__mdkbj-mdkbw__service-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Service manual da família MDKBJ-MDKBW.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-002-PARTS",
+      "url": "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKBJ-MDKBW/cummins-onan__mdkbj-mdkbw__parts-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual da família MDKBJ-MDKBW.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-003-005-OPERATOR",
+      "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A052J727-Issue-1-English.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDK-MDKDL-MDKDM-MDKDN/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__operator-manual__a052j727.pdf",
+      "expected_type": "pdf",
+      "notes": "Operator manual compartilhado das famílias MDKDK-MDKDL-MDKDM-MDKDN.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-003-005-SERVICE",
+      "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDK-DL-DM-DN-Service-Manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDK-MDKDL-MDKDM-MDKDN/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__service-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Service manual compartilhado das famílias MDKDK-MDKDL-MDKDM-MDKDN.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-004-PARTS",
+      "url": "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDK-MDKDL-MDKDM-MDKDN/cummins-onan__mdkdk__parts-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual específico da família MDKDK.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "id": "GEN-ONAN-005-PARTS",
+      "url": "https://www.seapowermarine.com/wpfd_file/mdkdl-dm-dn-parts-manual/",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDK-MDKDL-MDKDM-MDKDN/cummins-onan__mdkdl-mdkdm-mdkdn__parts-manual__seapower.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual compartilhado das famílias MDKDL-MDKDM-MDKDN.",
+      "status": "error",
+      "error": "<urlopen error timed out>"
+    }
+  ]
+}

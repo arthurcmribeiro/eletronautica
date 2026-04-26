@@ -1,0 +1,755 @@
+{
+  "brands": [
+    {
+      "canonical": "Victron Energy",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Victron", "Victron Energy"],
+      "domains": ["victronenergy.com"],
+      "seed_urls": ["https://www.victronenergy.com/support-and-downloads/manuals"]
+    },
+    {
+      "canonical": "Mastervolt",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Mastervolt"],
+      "domains": ["mastervolt.com"],
+      "seed_urls": ["https://www.mastervolt.com/downloads/"]
+    },
+    {
+      "canonical": "Blue Sea Systems",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Blue Sea", "Blue Sea Systems"],
+      "domains": ["bluesea.com"],
+      "seed_urls": ["https://www.bluesea.com/resources"]
+    },
+    {
+      "canonical": "Simarine",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Simarine"],
+      "domains": ["simarine.net"],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Balmar",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Balmar"],
+      "domains": ["balmar.net"],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Battle Born Batteries",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Battle Born", "Battle Born Batteries"],
+      "domains": ["battlebornbatteries.com"],
+      "seed_urls": ["https://battlebornbatteries.com/manuals/"]
+    },
+    {
+      "canonical": "Cummins",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Cummins", "Cummins Marine", "Cummins Onan"],
+      "domains": ["cummins.com", "mart.cummins.com", "cummins.fr"],
+      "seed_urls": [
+        "https://www.cummins.com/generators/marine/resources",
+        "https://www.cummins.com/support/manuals?locset=US",
+        "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+        "https://www.cummins.fr/onanmanuel/"
+      ]
+    },
+    {
+      "canonical": "Onan",
+      "type": "subbrand",
+      "parent": "Cummins",
+      "aliases": ["Onan", "Cummins Onan", "Onan Marine", "QD", "MDK", "MDDC"],
+      "domains": [
+        "cummins.com",
+        "mart.cummins.com",
+        "cummins.fr",
+        "seapowermarine.com",
+        "manualslib.com"
+      ],
+      "seed_urls": [
+        "https://www.cummins.com/generators/marine/resources",
+        "https://www.cummins.fr/onanmanuel/",
+        "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+        "https://www.manualslib.com/brand/onan/"
+      ],
+      "source_layers": {
+        "official": {
+          "domains": ["cummins.com", "mart.cummins.com", "cummins.fr"],
+          "seed_urls": [
+            "https://www.cummins.fr/onanmanuel/",
+            "https://www.cummins.com/generators/marine/resources",
+            "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+            "https://www.cummins.com/generators/products/onan-marine-qd-45-kw-generator",
+            "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+            "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+            "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+            "https://selfscreening.cummins.com/en-in/generators/onan-marine-qd-1351717519215-kw-generator",
+            "https://selfscreening.cummins.com/generators/onan-marine-qd-2252729-kw-generator",
+            "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator"
+          ]
+        },
+        "secondary": {
+          "domains": ["seapowermarine.com"],
+          "seed_urls": [
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBH-Service-Manual.pdf",
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBJ-BW-Service-Manual.pdf",
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDK-DL-DM-DN-Service-Manual.pdf",
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+            "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/",
+            "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/",
+            "https://www.seapowermarine.com/wpfd_file/mdkdl-dm-dn-parts-manual/",
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DV-Parts-Manual.pdf",
+            "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDS-DT-DU-Parts-Manual.pdf"
+          ]
+        },
+        "mirror": {
+          "domains": [
+            "manualslib.com",
+            "onan.xmsi.net",
+            "marine-j.com",
+            "bazakonkurencyjnosci.funduszeeuropejskie.gov.pl",
+            "scribd.com"
+          ],
+          "seed_urls": [
+            "https://www.manualslib.com/brand/onan/",
+            "https://www.manualslib.com/manual/3112362/Onan-Mdkbk.html",
+            "https://www.manualslib.com/products/Onan-Mdkbh-Series-11780253.html",
+            "https://www.manualslib.com/products/Onan-Mdkbu-3661057.html",
+            "https://onan.xmsi.net/981-0647%20Onan%20MDKBH%20Spec%20A-E%20Installation%20Manual%20%2810-2013%29.pdf",
+            "https://www.marine-j.com/pdf/MDKBH-Parts-Manual.pdf",
+            "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+            "https://www.manualslib.com/products/Onan-Mcck-13706721.html"
+          ]
+        }
+      },
+      "curated_candidates": [
+        {
+          "family": "Onan",
+          "url": "https://www.cummins.fr/onanmanuel/",
+          "label": "Hub oficial de manuais do operador Onan",
+          "source_tier": "official",
+          "document_type": "operator-hub"
+        },
+        {
+          "family": "QD",
+          "url": "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+          "label": "Linha oficial Onan Marine Generators",
+          "source_tier": "official",
+          "document_type": "product-line"
+        },
+        {
+          "family": "QD 4-5 / MDKBH",
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-45-kw-generator",
+          "label": "Produto oficial QD 4-5 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 6-8 / MDKBJ-MDKBW",
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+          "label": "Produto oficial QD 6-8 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 7-9 / MDKDK-MDKDL",
+          "url": "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+          "label": "Produto oficial QD 7-9 kW Space Saver",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 9-13 / MDKDM-MDKDN",
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+          "label": "Produto oficial QD 9-13.5 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 13.5-21.5 / MDKDP-MDKDR-MDKDV",
+          "url": "https://selfscreening.cummins.com/en-in/generators/onan-marine-qd-1351717519215-kw-generator",
+          "label": "Produto oficial QD 13.5-21.5 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 22.5-29 / MDKDS-MDKDT-MDKDU",
+          "url": "https://selfscreening.cummins.com/generators/onan-marine-qd-2252729-kw-generator",
+          "label": "Produto oficial QD 22.5-29 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "QD 40-110 / MDDC",
+          "url": "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator",
+          "label": "Produto oficial QD 40-110 kW",
+          "source_tier": "official",
+          "document_type": "product-page"
+        },
+        {
+          "family": "MDKBH",
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/0981-0180-Issue-5-English.pdf",
+          "label": "MDKBH Operator Manual",
+          "source_tier": "official",
+          "document_type": "operator"
+        },
+        {
+          "family": "MDKBJ-MDKBW",
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A029Z105-Issue-5-English.pdf",
+          "label": "MDKBJ-MDKBW Operator Manual",
+          "source_tier": "official",
+          "document_type": "operator"
+        },
+        {
+          "family": "MDKDK-MDKDL-MDKDM-MDKDN",
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A052J727-Issue-1-English.pdf",
+          "label": "MDKDK-MDKDL-MDKDM-MDKDN Operator Manual",
+          "source_tier": "official",
+          "document_type": "operator"
+        },
+        {
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A050G574-Issue-1-Portuguese-Brazil.pdf",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Operator Manual PT-BR",
+          "source_tier": "official",
+          "document_type": "operator"
+        },
+        {
+          "family": "MDKBH",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBH-Service-Manual.pdf",
+          "label": "MDKBH Service Manual",
+          "source_tier": "secondary",
+          "document_type": "service"
+        },
+        {
+          "family": "MDKBJ-MDKBW",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBJ-BW-Service-Manual.pdf",
+          "label": "MDKBJ-MDKBW Service Manual",
+          "source_tier": "secondary",
+          "document_type": "service"
+        },
+        {
+          "family": "MDKDK-MDKDL-MDKDM-MDKDN",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDK-DL-DM-DN-Service-Manual.pdf",
+          "label": "MDKDK-MDKDL-MDKDM-MDKDN Service Manual",
+          "source_tier": "secondary",
+          "document_type": "service"
+        },
+        {
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Service Manual",
+          "source_tier": "secondary",
+          "document_type": "service"
+        },
+        {
+          "family": "MDKBJ-MDKBW",
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/",
+          "label": "MDKBJ-MDKBW Parts Manual",
+          "source_tier": "secondary",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKDK",
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/",
+          "label": "MDKDK Parts Manual",
+          "source_tier": "secondary",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKDL-MDKDM-MDKDN",
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkdl-dm-dn-parts-manual/",
+          "label": "MDKDL-MDKDM-MDKDN Parts Manual",
+          "source_tier": "secondary",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKDP-MDKDR-MDKDV",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DV-Parts-Manual.pdf",
+          "label": "MDKDP-MDKDR-MDKDV Parts Manual",
+          "source_tier": "secondary",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKDS-MDKDT-MDKDU",
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDS-DT-DU-Parts-Manual.pdf",
+          "label": "MDKDS-MDKDT-MDKDU Parts Manual",
+          "source_tier": "secondary",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKBH",
+          "url": "https://onan.xmsi.net/981-0647%20Onan%20MDKBH%20Spec%20A-E%20Installation%20Manual%20%2810-2013%29.pdf",
+          "label": "MDKBH Installation Manual",
+          "source_tier": "mirror",
+          "document_type": "installation"
+        },
+        {
+          "family": "MDKBH",
+          "url": "https://www.marine-j.com/pdf/MDKBH-Parts-Manual.pdf",
+          "label": "MDKBH Parts Manual",
+          "source_tier": "mirror",
+          "document_type": "parts"
+        },
+        {
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Installation Manual",
+          "source_tier": "mirror",
+          "document_type": "installation"
+        },
+        {
+          "family": "Onan legado",
+          "url": "https://www.manualslib.com/brand/onan/",
+          "label": "ManualsLib Onan Brand Archive",
+          "source_tier": "mirror",
+          "document_type": "archive"
+        }
+      ]
+    },
+    {
+      "canonical": "Rehlko",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Rehlko", "Rehlko Marine"],
+      "domains": ["marine.rehlko.com", "resources.rehlko.com"],
+      "seed_urls": [
+        "https://www.marine.rehlko.com/",
+        "https://www.marine.rehlko.com/brochures-literature"
+      ]
+    },
+    {
+      "canonical": "Kohler Marine",
+      "type": "subbrand",
+      "parent": "Rehlko",
+      "aliases": ["Kohler", "Kohler Marine"],
+      "domains": ["marine.rehlko.com", "manualslib.com"],
+      "seed_urls": [
+        "https://www.marine.rehlko.com/",
+        "https://www.manualslib.com/brand/kohler.html"
+      ]
+    },
+    {
+      "canonical": "Dometic",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Dometic"],
+      "domains": ["dometic.com"],
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine"
+      ]
+    },
+    {
+      "canonical": "Cruisair",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["Cruisair"],
+      "domains": ["dometic.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "Condaria",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["Condaria"],
+      "domains": ["dometic.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "Marine Air",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["Marine Air"],
+      "domains": ["dometic.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "SeaStar",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["SeaStar"],
+      "domains": ["dometic.com", "seastarsolutions.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "BayStar",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["BayStar"],
+      "domains": ["dometic.com", "seastarsolutions.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "Optimus",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["Optimus"],
+      "domains": ["dometic.com", "seastarsolutions.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "Xtreme",
+      "type": "subbrand",
+      "parent": "Dometic",
+      "aliases": ["Xtreme"],
+      "domains": ["dometic.com", "seastarsolutions.com"],
+      "seed_urls": ["https://www.dometic.com/en-us/lp/marinelp-dometic-marine"]
+    },
+    {
+      "canonical": "Xylem",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Xylem"],
+      "domains": ["xylem.com"],
+      "seed_urls": [
+        "https://www.xylem.com/en-us/brand/jabsco/",
+        "https://www.xylem.com/de-de/brands/rule/documents/"
+      ]
+    },
+    {
+      "canonical": "Jabsco",
+      "type": "subbrand",
+      "parent": "Xylem",
+      "aliases": ["Jabsco"],
+      "domains": ["xylem.com"],
+      "seed_urls": ["https://www.xylem.com/en-us/brand/jabsco/"]
+    },
+    {
+      "canonical": "Rule",
+      "type": "subbrand",
+      "parent": "Xylem",
+      "aliases": ["Rule", "Rule-Mate", "Rule Mate"],
+      "domains": ["xylem.com"],
+      "seed_urls": ["https://www.xylem.com/de-de/brands/rule/documents/"]
+    },
+    {
+      "canonical": "VETUS",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["VETUS", "Vetus"],
+      "domains": ["vetus.com"],
+      "seed_urls": [
+        "https://vetus.com/service-support/manuals/",
+        "https://vetus.com/usa/vetus-catalogue/"
+      ]
+    },
+    {
+      "canonical": "Lewmar",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Lewmar"],
+      "domains": ["lewmar.com"],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Sleipner",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Sleipner", "Side-Power", "Side Power"],
+      "domains": ["sleipnergroup.com", "side-power.com"],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Garmin",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Garmin", "Garmin Marine"],
+      "domains": ["garmin.com", "support.garmin.com"],
+      "seed_urls": ["https://support.garmin.com/marine/"]
+    },
+    {
+      "canonical": "Raymarine",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Raymarine"],
+      "domains": ["raymarine.com"],
+      "seed_urls": ["https://www.raymarine.com/en-us/support/document-library"]
+    },
+    {
+      "canonical": "Simrad",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Simrad"],
+      "domains": ["simrad-yachting.com"],
+      "seed_urls": ["https://www.simrad-yachting.com/help--support/service-and-support/"]
+    },
+    {
+      "canonical": "B&G",
+      "type": "brand",
+      "parent": "Navico Group",
+      "aliases": ["B&G", "BG"],
+      "domains": ["bandg.com", "ww2.bandg.com"],
+      "seed_urls": [
+        "https://www.bandg.com/downloads/",
+        "https://ww2.bandg.com/downloads-category/manuals/"
+      ]
+    },
+    {
+      "canonical": "Navico Group",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Navico", "Navico Group"],
+      "domains": ["navico.com"],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Furuno",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Furuno"],
+      "domains": ["furunousa.com"],
+      "seed_urls": ["https://furunousa.com/en/knowledge_base/general/manuals_for_furuno_products"]
+    },
+    {
+      "canonical": "Icom",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Icom"],
+      "domains": ["icomamerica.com"],
+      "seed_urls": ["https://www.icomamerica.com/support/manual/"]
+    },
+    {
+      "canonical": "Actisense",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Actisense"],
+      "domains": ["actisense.com"],
+      "seed_urls": ["https://actisense.com/downloads/"]
+    },
+    {
+      "canonical": "Maretron",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Maretron"],
+      "domains": ["maretron.com"],
+      "seed_urls": ["https://www.maretron.com/support.php"]
+    },
+    {
+      "canonical": "Standard Horizon",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Standard Horizon"],
+      "domains": ["standardhorizon.com"],
+      "seed_urls": ["https://www.standardhorizon.com/"]
+    },
+    {
+      "canonical": "ACR",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["ACR", "ACR Artex"],
+      "domains": ["acrartex.com"],
+      "seed_urls": ["https://www.acrartex.com/support/"]
+    },
+    {
+      "canonical": "Ocean Signal",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Ocean Signal"],
+      "domains": ["oceansignal.com"],
+      "seed_urls": ["https://oceansignal.com/support/documents/"]
+    },
+    {
+      "canonical": "Lumitec",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Lumitec"],
+      "domains": ["lumiteclighting.com"],
+      "seed_urls": ["https://www.lumiteclighting.com/support-center.html"]
+    },
+    {
+      "canonical": "OceanLED",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["OceanLED", "Ocean LED"],
+      "domains": ["oceanled.com"],
+      "seed_urls": ["https://www.oceanled.com/downloads/"]
+    },
+    {
+      "canonical": "Quick",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Quick", "Quick Marine"],
+      "domains": ["quickitaly.com"],
+      "seed_urls": ["https://www.quickitaly.com/en/manuals/"]
+    },
+    {
+      "canonical": "Xantrex",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Xantrex"],
+      "domains": ["xantrex.com"],
+      "seed_urls": ["https://xantrex.com/library/"]
+    },
+    {
+      "canonical": "Charles Industries",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Charles", "Charles Industries"],
+      "domains": ["charlesindustries.com"],
+      "seed_urls": ["https://www.charlesindustries.com/support/technical-emergency-support/industrial-solutions/owners-manuals/"]
+    },
+    {
+      "canonical": "ProMariner",
+      "type": "brand",
+      "parent": "Navico Group",
+      "aliases": ["ProMariner"],
+      "domains": ["promariner.navico.com"],
+      "seed_urls": ["https://promariner.navico.com/resources/"]
+    },
+    {
+      "canonical": "Marinco",
+      "type": "brand",
+      "parent": "Navico Group",
+      "aliases": ["Marinco"],
+      "domains": ["marinco.com"],
+      "seed_urls": ["https://www.marinco.com/en/resources"]
+    },
+    {
+      "canonical": "Hubbell",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Hubbell", "Hubbell Marine"],
+      "domains": ["hubbell.com", "hubbellcdn.com"],
+      "seed_urls": [
+        "https://www.hubbell.com/wiringdevice-kellems/en/installation-instructions",
+        "https://www.hubbell.com/wiringdevice-kellems/en/catalog"
+      ]
+    },
+    {
+      "canonical": "Webasto",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Webasto", "Webasto Marine"],
+      "domains": ["webasto.com"],
+      "seed_urls": ["https://www.webasto.com/en-us/cooling.html"]
+    },
+    {
+      "canonical": "Mabru",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Mabru", "Mabru Marine"],
+      "domains": ["mabrumarine.com", "mabrupowersystems.com"],
+      "seed_urls": ["https://www.mabrumarine.com/"]
+    },
+    {
+      "canonical": "FRIGOMAR",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["FRIGOMAR", "Frigomar"],
+      "domains": ["frigomar.com"],
+      "seed_urls": ["https://www.frigomar.com/en/download/"]
+    },
+    {
+      "canonical": "H-Tec",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["H-Tec", "HTec", "H-Tec Nautica", "H-Tec Nautica"],
+      "domains": ["htecnautica.com.br"],
+      "seed_urls": ["https://www.htecnautica.com.br/"]
+    },
+    {
+      "canonical": "Gelotec",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Gelotec"],
+      "domains": ["gelotecrefrigeracao.com.br"],
+      "seed_urls": ["https://gelotecrefrigeracao.com.br/"]
+    },
+    {
+      "canonical": "Schutz",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Schutz"],
+      "domains": [],
+      "seed_urls": []
+    },
+    {
+      "canonical": "Seakeeper",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Seakeeper"],
+      "domains": ["seakeeper.com", "manuals.seakeeper.com"],
+      "seed_urls": ["https://manuals.seakeeper.com/ride/"]
+    },
+    {
+      "canonical": "Starlink",
+      "type": "brand",
+      "parent": "",
+      "aliases": ["Starlink"],
+      "domains": ["starlink.com"],
+      "seed_urls": ["https://www.starlink.com/"]
+    }
+  ],
+  "products": [
+    { "canonical": "MultiPlus", "brand": "Victron Energy", "aliases": ["MultiPlus", "MultiPlus-II", "MultiPlus II"] },
+    { "canonical": "Quattro", "brand": "Victron Energy", "aliases": ["Quattro"] },
+    { "canonical": "SmartShunt", "brand": "Victron Energy", "aliases": ["SmartShunt"] },
+    { "canonical": "Cerbo GX", "brand": "Victron Energy", "aliases": ["Cerbo GX"] },
+    { "canonical": "BMV", "brand": "Victron Energy", "aliases": ["BMV", "BMV-712", "BMV 712"] },
+    { "canonical": "SmartSolar", "brand": "Victron Energy", "aliases": ["SmartSolar"] },
+    { "canonical": "Orion XS", "brand": "Victron Energy", "aliases": ["Orion XS"] },
+    { "canonical": "Lynx", "brand": "Victron Energy", "aliases": ["Lynx"] },
+    { "canonical": "ChargeMaster", "brand": "Mastervolt", "aliases": ["ChargeMaster", "ChargeMaster Plus"] },
+    { "canonical": "Mass Combi", "brand": "Mastervolt", "aliases": ["Mass Combi", "Mass Combi Ultra"] },
+    { "canonical": "Triton2", "brand": "B&G", "aliases": ["Triton2", "Triton 2", "Triton²"] },
+    { "canonical": "WS310", "brand": "B&G", "aliases": ["WS310"] },
+    { "canonical": "Precision-9", "brand": "B&G", "aliases": ["Precision-9", "Precision 9"] },
+    { "canonical": "WTP3", "brand": "B&G", "aliases": ["WTP3", "WTP 3"] },
+    { "canonical": "Zeus", "brand": "B&G", "aliases": ["Zeus"] },
+    { "canonical": "H5000", "brand": "B&G", "aliases": ["H5000"] },
+    { "canonical": "Nemesis", "brand": "B&G", "aliases": ["Nemesis"] },
+    { "canonical": "ECD", "brand": "Dometic", "aliases": ["ECD"] },
+    { "canonical": "MasterFlush", "brand": "Dometic", "aliases": ["MasterFlush"] },
+    { "canonical": "VacuFlush", "brand": "Dometic", "aliases": ["VacuFlush", "Vacu-Flush"] },
+    { "canonical": "BlueCool", "brand": "Webasto", "aliases": ["BlueCool", "BlueCool S-Series", "BlueCool C-Series", "BlueCool A-Series"] },
+    { "canonical": "FCF", "brand": "Webasto", "aliases": ["FCF", "FCF Classic", "FCF Platinum"] },
+    { "canonical": "MyTouch", "brand": "Webasto", "aliases": ["MyTouch", "BlueCool MyTouch"] },
+    { "canonical": "SC", "brand": "Mabru", "aliases": ["SC5DC", "SC7DC", "SC12DC", "SC16DC", "SC05VI", "SC09VI", "SC17VI"] },
+    { "canonical": "RadAir", "brand": "Mabru", "aliases": ["RadAir"] },
+    { "canonical": "GlobalFix", "brand": "ACR", "aliases": ["GlobalFix"] },
+    { "canonical": "ResQLink", "brand": "ACR", "aliases": ["ResQLink"] },
+    { "canonical": "MOB1", "brand": "Ocean Signal", "aliases": ["MOB1"] },
+    { "canonical": "EPIRB1", "brand": "Ocean Signal", "aliases": ["EPIRB1"] },
+    { "canonical": "SeaBlaze", "brand": "Lumitec", "aliases": ["SeaBlaze", "SeaBlazeX3", "SeaBlaze X3"] },
+    { "canonical": "Poco", "brand": "Lumitec", "aliases": ["Poco", "Poco 3", "Poco 4"] },
+    { "canonical": "QNN", "brand": "Quick", "aliases": ["QNN"] },
+    { "canonical": "QCC", "brand": "Quick", "aliases": ["QCC"] },
+    { "canonical": "ZDIM", "brand": "Quick", "aliases": ["ZDIM", "ZDIM 100"] },
+    { "canonical": "HDIM", "brand": "Quick", "aliases": ["HDIM", "HDIM 300 PLUS"] },
+    { "canonical": "LDIM", "brand": "Quick", "aliases": ["LDIM", "LDIM BUS"] },
+    { "canonical": "Ride", "brand": "Seakeeper", "aliases": ["Ride", "Seakeeper Ride"] },
+    { "canonical": "Rule-Mate", "brand": "Rule", "aliases": ["Rule-Mate", "Rule Mate"] },
+    { "canonical": "Rule-A-Matic", "brand": "Rule", "aliases": ["Rule-A-Matic", "Rule A Matic"] },
+    { "canonical": "Twist n Lock", "brand": "Jabsco", "aliases": ["Twist 'n' Lock", "Twist n Lock"] },
+    { "canonical": "Electric Head", "brand": "Jabsco", "aliases": ["Electric Head"] },
+    { "canonical": "Searchmaster", "brand": "Jabsco", "aliases": ["Searchmaster", "Searchlight"] },
+    { "canonical": "BOW", "brand": "VETUS", "aliases": ["BOW2512B", "BOW3512", "BOW6012B", "BOW9512", "BOW12512B"] },
+    { "canonical": "BPJ5B", "brand": "VETUS", "aliases": ["BPJ5B", "DBPJ5B", "BPSRC", "BPSM"] },
+    { "canonical": "IsoBoost", "brand": "Charles Industries", "aliases": ["IsoBoost", "ISOBOOST", "ISO-G2"] },
+    { "canonical": "Freedom XC Pro", "brand": "Xantrex", "aliases": ["Freedom XC PRO", "Freedom XC Pro"] },
+    { "canonical": "TrueCharge2", "brand": "Xantrex", "aliases": ["TRUEcharge2", "TrueCharge2"] },
+    { "canonical": "ProNauticP", "brand": "ProMariner", "aliases": ["ProNauticP", "ProNautic P"] },
+    { "canonical": "ProSafeFS", "brand": "ProMariner", "aliases": ["ProSafeFS", "ProSafe FS"] },
+    { "canonical": "QD", "brand": "Onan", "aliases": ["QD 4/5", "QD 6/7.5/8", "QD 9.5/13.5", "QD 22.5/29", "QD 40-110"] },
+    { "canonical": "MDK", "brand": "Onan", "aliases": ["MDKBH", "MDKDP", "MDKDR", "MDKDS", "MDKDT", "MDKDU", "MDKDM", "MDKDN"] },
+    { "canonical": "EFKOD", "brand": "Kohler Marine", "aliases": ["5EFKOD", "6EKOD", "7EFKOZD", "13.5EFKOZD"] },
+    { "canonical": "EKOZD", "brand": "Kohler Marine", "aliases": ["9EKOZD", "11EKOZD", "9EFKOZD", "11EFKOZD", "17EFKOZD"] }
+  ],
+  "norm_bodies": [
+    { "canonical": "ABYC", "aliases": ["ABYC"] },
+    { "canonical": "ISO", "aliases": ["ISO"] },
+    { "canonical": "IEC", "aliases": ["IEC"] },
+    { "canonical": "ABNT NBR", "aliases": ["ABNT NBR", "NBR"] },
+    { "canonical": "NORMAM", "aliases": ["NORMAM"] },
+    { "canonical": "NR", "aliases": ["NR-10", "NR 10"] },
+    { "canonical": "SOLAS", "aliases": ["SOLAS"] },
+    { "canonical": "COLREG", "aliases": ["COLREG", "COLREGS"] }
+  ]
+}

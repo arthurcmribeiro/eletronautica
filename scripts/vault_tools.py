@@ -10,13 +10,24 @@ ROOT = Path(__file__).resolve().parent.parent
 FRONTMATTER_RE = re.compile(r"(?s)^---\r?\n(.*?)\r?\n---\r?\n?(.*)$")
 WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)")
 EXCLUDED_PARTS = {".git", ".obsidian", ".claude", "_visuals"}
+EXCLUDED_RELATIVE_PREFIXES = {
+    "90_Revisao_Manual/_Acervo_Local/Acervo do humano/",
+}
+
+
+def is_excluded_path(path: Path, root: Path = ROOT) -> bool:
+    relative_path = path.relative_to(root).as_posix()
+    return (
+        any(part in EXCLUDED_PARTS for part in path.parts)
+        or any(relative_path.startswith(prefix) for prefix in EXCLUDED_RELATIVE_PREFIXES)
+    )
 
 
 def note_files(root: Path = ROOT) -> list[Path]:
     return sorted(
         path
         for path in root.rglob("*.md")
-        if not any(part in EXCLUDED_PARTS for part in path.parts)
+        if not is_excluded_path(path, root)
         and path.parent != root
     )
 

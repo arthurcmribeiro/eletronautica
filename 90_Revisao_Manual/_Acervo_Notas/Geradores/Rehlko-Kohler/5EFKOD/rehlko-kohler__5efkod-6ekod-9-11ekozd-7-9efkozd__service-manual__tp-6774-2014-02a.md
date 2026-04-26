@@ -1,0 +1,146 @@
+---
+title: "rehlko-kohler - 5efkod-6ekod-9-11ekozd-7-9efkozd - service-manual - tp-6774-2014-02a"
+note_type: "acervo-companion"
+domain: "90_Revisao_Manual"
+status: "auto-extracted"
+acervo_origin: "acervo-principal"
+document_kind: "service-manual"
+curation_priority: "alta"
+curation_stage: "curadoria-humana-parcial"
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+source_pdf: "Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf"
+source_sha256: "25c5a7676eea2a076c470a1550daa6d8ea673d536e2d0ff4ef11f80c89d3e09f"
+acervo_system: "Geradores"
+acervo_brand: "Rehlko-Kohler"
+acervo_family: "5EFKOD"
+extraction_method: "pdftotext"
+text_extractable: "sim"
+pdf_pages: "120"
+pdf_version: "1.3"
+pdf_encrypted: "nao"
+qpdf_status: "warning"
+ocr_priority: "nao"
+ocr_status: "nao-gerado"
+ocr_text_path: "n/a"
+ocr_note_path: "n/a"
+ocr_text_chars: "0"
+analysis_source: "pdftotext"
+aliases:
+  - "rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf"
+related_notes:
+  - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local - Indice Gerado"
+  - "Tabela-Mestre do Acervo - Biblioteca de Referencia"
+  - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado"
+---
+
+# rehlko-kohler - 5efkod-6ekod-9-11ekozd-7-9efkozd - service-manual - tp-6774-2014-02a
+
+> [!abstract] Resumo tecnico
+> Nota companheira gerada automaticamente a partir do PDF do acervo local.
+> Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
+
+## Fonte
+
+- PDF: [rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf](</C:/Users/User/Desktop/ELETRO NAUTICA OBSIDIAN/ELETRO NAUTICA/90_Revisao_Manual/_Acervo_Local/Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf>)
+- caminho relativo: `Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf`
+- nota companheira: `90_Revisao_Manual/_Acervo_Notas/Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.md`
+- tamanho do arquivo: `7.3 MB`
+- paginas detectadas: `120`
+- versao PDF: `1.3`
+- PDF criptografado: `nao`
+- titulo em metadados: `untitled`
+- texto extraivel detectado: `sim`
+- tipo documental detectado: `service-manual`
+- metodo de extracao: `pdftotext`
+- status qpdf: `warning`
+- prioridade OCR: `nao`
+- status OCR auxiliar: `nao-gerado`
+- nota OCR auxiliar: `n/a`
+- texto OCR auxiliar: `n/a`
+- caracteres OCR auxiliares: `0`
+- fonte de analise automatica: `pdftotext`
+
+## Sinais principais
+
+- sistema: `Geradores`
+- marca: `Rehlko-Kohler`
+- familia: `5EFKOD`
+- marcas detectadas: `Rehlko / Kohler`
+- codigos/modelos detectados: `5EFKOD, 6EKOD, 11EKOZD, 9EFKOZD, 9-11EKOZD, 7-9EFKOZD, TP-6774-2014-02A, TP-6774`
+- termos uteis detectados: `air, control, controls, cooling, corrosion, engine, generator, manual`
+
+## Aplicacao e integracoes sugeridas
+
+- usar esta nota para localizar rapidamente procedimentos, identificacao de modelo e pontos de manutencao do grupo gerador
+- prioridade alta para campo: documentar ligacoes, bitolas, protecoes, ventilacao, posicionamento e checklist de montagem
+
+## Links internos sugeridos
+
+- `Tabela-Mestre do Acervo - Biblioteca de Referencia`
+- `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local - Indice Gerado`
+- `90_Revisao_Manual/00_Entrada_e_Controle/Portal do Acervo - Biblioteca de Referencia`
+- `90_Revisao_Manual/90_Arquivo_Historico/Acervo Local - Geradores Iniciais (Cummins Onan)`
+
+<!-- CURADORIA-HUMANA:START -->
+## Curadoria humana
+
+### Resumo humano
+- manual de servico compartilhado da linha `Rehlko / Kohler Marine Generator Sets` cobrindo `5EFKOD`, `6EKOD`, `7-9EFKOZD` e `9-11EKOZD`
+- o valor principal para oficina esta em manutencao programada, troubleshooting, controlador `Advanced Digital Control IId`, testes de gerador e diagramas eletricos
+
+### Aplicacao de oficina
+- usar este PDF quando houver falha de partida, alarme de controlador, problema de fluxo de agua, queda de tensao/frequencia ou necessidade de desmontagem do conjunto
+- importante para separar as rotas de diagnostico das familias com `slip rings / brushes` (`5EFKOD` e `6EKOD`) das familias com foco em excitatriz, retificacao e regulacao (`7-9EFKOZD` e `9-11EKOZD`)
+
+### Modelos cobertos confirmados
+- `5EFKOD`
+- `6EKOD`
+- `7-9EFKOZD`
+- `9-11EKOZD`
+
+### Pontos de atencao
+- o manual reforca risco de partida acidental; em manutencao, desconectar primeiro o negativo da bateria
+- ha avisos fortes de `CO`, estanqueidade do escape e necessidade de detector funcional na embarcacao
+- checar com prioridade itens classicos de campo: impeller, zinc anode, correia, siphon break e trocador de calor antes de avancar para falha eletrica complexa
+- ao intervir em regulacao de tensao, reconexao de enrolamentos ou testes de controlador, seguir a familia correta para nao misturar procedimento de gerador com escovas e gerador brushless
+
+### Integracoes e links internos
+- sistema-base: `Geradores`
+- marca/familia: `Rehlko-Kohler / 5EFKOD`
+- notas relacionadas: `Tabela-Mestre do Acervo - Biblioteca de Referencia`, `90_Revisao_Manual/Checklist Operacional - Abertura de Nova Familia do Acervo`, `90_Revisao_Manual/Acervo Local - Geradores Iniciais (Cummins Onan)`, `90_Revisao_Manual/Acervo Notas - Indice Gerado`
+
+### Status de curadoria
+- tipo documental confirmado: `service-manual`
+- curadoria humana: parcial
+- pronto para ensino/SEO: parcial
+<!-- CURADORIA-HUMANA:END -->
+
+## Trechos indexaveis
+
+- `Marine Generator Sets`
+- `TP-6774 2/14a`
+- `Product Identification Information`
+- `Product identification numbers determine service parts.`
+- `Record the product identification numbers in the spaces`
+- `below immediately after unpacking the products so that`
+- `the numbers are readily available for future reference.`
+- `Record field-installed kit numbers after installing the`
+- `Generator Set Identification Numbers`
+- `Record the product identification numbers from the`
+
+## Perguntas de curadoria
+
+- quais modelos e revisoes este PDF cobre de verdade, e quais ficaram de fora?
+- quais paginas merecem virar nota humana curada ou material de aula?
+- quais requisitos de montagem, bitola, protecao e ambiente precisam ser destacados no resumo humano?
+
+## Acoes sugeridas
+
+- destacar ligacoes, torque, bitolas, protecoes e condicoes de montagem
+- conferir se existe manual operacional complementar na mesma familia
+
+## Observacoes
+
+- esta nota e automatica; revisar manualmente antes de usar como resumo definitivo
+- quando este PDF for relevante para ensino, oficina ou SEO, vale evoluir para nota humana curada

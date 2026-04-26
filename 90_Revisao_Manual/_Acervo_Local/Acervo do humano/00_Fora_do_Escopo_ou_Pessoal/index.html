@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão Geral - Estratégia de Canal</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --link-color: #3498db;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .sidebar-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar-header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 20px 0;
+        }
+        
+        .nav-item {
+            margin-bottom: 5px;
+        }
+        
+        .nav-link {
+            display: block;
+            padding: 10px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-left-color: var(--secondary-color);
+        }
+        
+        .nav-link i {
+            margin-right: 10px;
+        }
+        
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 30px;
+        }
+        
+        .page-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        
+        .page-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .page-header p {
+            color: #666;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-header .btn {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            background-color: #219653;
+        }
+        
+        .btn-primary {
+            background-color: var(--link-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #c0392b;
+        }
+        
+        .document-viewer {
+            width: 100%;
+            height: 700px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .overview-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .overview-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .overview-card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .overview-card-header i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .overview-card-body {
+            padding: 20px;
+        }
+        
+        .overview-card-footer {
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eee;
+            text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .overview-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Estratégia de Canal</h1>
+                <p>R$10.000 Mensais em 12 Meses</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i>📊</i> Visão Geral
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="metricas.html" class="nav-link">
+                        <i>📈</i> Métricas e Monetização
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="marcos.html" class="nav-link">
+                        <i>🏆</i> Marcos de Desenvolvimento
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendario.html" class="nav-link">
+                        <i>📅</i> Calendário Estratégico
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="videos_longos.html" class="nav-link">
+                        <i>🎬</i> Vídeos Longos (60)
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="shorts.html" class="nav-link">
+                        <i>📱</i> Shorts (300)
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="planejamento_semanal.html" class="nav-link">
+                        <i>📋</i> Planejamento Semanal
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="trafego_pago.html" class="nav-link">
+                        <i>💰</i> Análise de Tráfego Pago
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="horarios.html" class="nav-link">
+                        <i>⏰</i> Horários de Publicação
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="funil_vendas.html" class="nav-link">
+                        <i>🔄</i> Funil de Vendas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="organizacao_tarefas.html" class="nav-link">
+                        <i>✅</i> Organização de Tarefas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h2>Visão Geral</h2>
+                <p>Estratégia completa para atingir R$10.000 mensais em 12 meses com canal de finanças</p>
+            </header>
+            
+            <div class="overview-cards">
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>📈</i> Métricas e Monetização
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Benchmarks reais e projeções financeiras para atingir R$10.000 mensais em 12 meses, com análise de RPM, visualizações necessárias e estratégias de monetização.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="metricas.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>🏆</i> Marcos de Desenvolvimento
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Objetivos tangíveis e metas claras para acompanhar seu progresso mês a mês, com indicadores de sucesso e pontos de verificação.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="marcos.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>📅</i> Calendário Estratégico
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Datas e eventos importantes para 2025/2026 para maximizar relevância e engajamento, incluindo feriados, datas fiscais e eventos sazonais.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="calendario.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>🎬</i> Vídeos Longos (60)
+                    </div>
+                    <div class="overview-card-body">
+                        <p>60 títulos e resumos persuasivos para vídeos longos alinhados com tendências e datas importantes, com potencial de monetização.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="videos_longos.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>📱</i> Shorts (300)
+                    </div>
+                    <div class="overview-card-body">
+                        <p>300 títulos e resumos persuasivos para shorts virais, organizados por linha e com potencial de engajamento, sem recortes de vídeos longos.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="shorts.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>📋</i> Planejamento Semanal
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Distribuição semanal de conteúdo ao longo do ano, com folgas nos finais de semana e organização eficiente das publicações.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="planejamento_semanal.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>💰</i> Análise de Tráfego Pago
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Estratégia para investimento em anúncios e maximização do ROI, com identificação dos vídeos com maior potencial para tráfego pago.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="trafego_pago.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>⏰</i> Horários de Publicação
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Momentos ideais para cada tipo de conteúdo, maximizando alcance e engajamento com base em dados de audiência e algoritmos.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="horarios.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>🔄</i> Funil de Vendas
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Estratégia para Instagram e TikTok com vídeos shorts para maximizar conversão e monetização através de múltiplas plataformas.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="funil_vendas.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-card-header">
+                        <i>✅</i> Organização de Tarefas
+                    </div>
+                    <div class="overview-card-body">
+                        <p>Fluxo de trabalho semanal otimizado com uso de IAs para máxima eficiência, com apenas 2,5h de trabalho e 0,5h de estudo por dia.</p>
+                    </div>
+                    <div class="overview-card-footer">
+                        <a href="organizacao_tarefas.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    Visão Geral do Projeto
+                </div>
+                <div class="card-body">
+                    <h3>Objetivo Principal</h3>
+                    <p>Criar um canal de finanças altamente rentável que gere R$10.000 mensais em 12 meses, com apenas 2,5 horas de trabalho diário e folgas nos finais de semana.</p>
+                    
+                    <h3>Estratégia de Conteúdo</h3>
+                    <p>Combinação de 60 vídeos longos e 300 shorts originais (não recortes) distribuídos estrategicamente ao longo do ano, com foco em temas de alta demanda e baixa concorrência.</p>
+                    
+                    <h3>Monetização</h3>
+                    <p>Múltiplas fontes de receita incluindo Programa de Parcerias do YouTube, afiliados, produtos digitais próprios e patrocínios, com estratégia de tráfego pago para acelerar o crescimento.</p>
+                    
+                    <h3>Diferencial</h3>
+                    <p>Abordagem baseada em dados reais de mercado, com planejamento detalhado semana a semana e uso intensivo de IAs para otimizar o fluxo de trabalho e maximizar resultados.</p>
+                    
+                    <h3>Como Usar Este Site</h3>
+                    <p>Navegue pelo menu lateral para acessar cada seção detalhada do plano. Todos os documentos podem ser visualizados diretamente no site e também baixados em formato Word para edição.</p>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <p>Estratégia de Canal - R$10.000 Mensais em 12 Meses | Desenvolvido por Manus AI</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

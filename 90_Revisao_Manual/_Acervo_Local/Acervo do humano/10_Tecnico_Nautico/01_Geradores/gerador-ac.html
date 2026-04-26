@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>GERADOR (AC)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0ee19734-f7fb-82d8-9da2-817e8a73a815" class="page sans"><header><h1 class="page-title">GERADOR (AC)</h1><p class="page-description"></p></header><div class="page-body"><ul id="1e319734-f7fb-817b-ab19-e38cafcf5688" class="toggle"><li><details open=""><summary>Principais Marcas</summary><ul id="1e319734-f7fb-8127-934f-e9ffdea4b8e9" class="bulleted-list"><li style="list-style-type:disc">Onam</li></ul><ul id="1e319734-f7fb-815b-80fa-f58d9a96deee" class="bulleted-list"><li style="list-style-type:disc">Kohler</li></ul><ul id="1e319734-f7fb-814f-8d73-c8e29e2330dd" class="bulleted-list"><li style="list-style-type:disc">NorthernLights</li></ul><ul id="1e319734-f7fb-815a-af4e-e177bfa9be9b" class="bulleted-list"><li style="list-style-type:disc">Panda</li></ul><ul id="1e319734-f7fb-817e-ba1b-ec5926971c70" class="bulleted-list"><li style="list-style-type:disc">Mase</li></ul><ul id="1e319734-f7fb-8143-b317-d7e13fd9b123" class="bulleted-list"><li style="list-style-type:disc">Westernbeck</li></ul><ul id="1e319734-f7fb-8150-93f4-eea3f53d4927" class="bulleted-list"><li style="list-style-type:disc">Mastervolts</li></ul><ul id="1e319734-f7fb-81e9-aa31-f3f3c31d6c1b" class="bulleted-list"><li style="list-style-type:disc">Swell</li></ul></details></li></ul><ul id="1e319734-f7fb-81f7-bf8d-c1ff835da3a2" class="toggle"><li><details open=""><summary>Problemas mais frequentes </summary><ul id="1e319734-f7fb-8188-b718-df0c94a9752d" class="bulleted-list"><li style="list-style-type:disc">Motor de partida</li></ul><ul id="1e319734-f7fb-8182-b9c9-fd7820d3fdff" class="bulleted-list"><li style="list-style-type:disc">Circulação de água salgada (Filtro, rotor, trocador, escape)</li></ul><ul id="1e319734-f7fb-8150-a87f-d8f27bf1216d" class="bulleted-list"><li style="list-style-type:disc">Vazamento na Bomba d&#x27;água</li></ul><ul id="1e319734-f7fb-8170-af29-f45783b6dacd" class="bulleted-list"><li style="list-style-type:disc">Temperatura (válvula, líquido refrigerante)</li></ul><ul id="1e319734-f7fb-811d-81e3-d37754c3906f" class="bulleted-list"><li style="list-style-type:disc">Pressão de óleo (sensor)</li></ul><ul id="1e319734-f7fb-81fa-bf89-f90d0b6074dd" class="bulleted-list"><li style="list-style-type:disc">Não carrega (regulador, curto)</li></ul><ul id="1e319734-f7fb-810d-952b-ca03e202b997" class="bulleted-list"><li style="list-style-type:disc">Curto interno(Bobina, Induzido, Colar, Excitatriz)</li></ul><ul id="1e319734-f7fb-81c3-8fd8-f3c726c71576" class="bulleted-list"><li style="list-style-type:disc">Frequência errada (velocidade do motor)</li></ul><ul id="1e319734-f7fb-810d-b22a-f86ef1e8cf37" class="bulleted-list"><li style="list-style-type:disc">Bomba de combustível</li></ul><ul id="1e319734-f7fb-81ff-9fbf-d69ab7a4eb7a" class="bulleted-list"><li style="list-style-type:disc">Ar/obstrução na linha de diesel</li></ul><ul id="1e319734-f7fb-8120-8e5c-f09457975602" class="bulleted-list"><li style="list-style-type:disc">Revisão periódica (Anôdo, filtros, corrêa, rotor, óleo)</li></ul><ul id="1e319734-f7fb-81bb-8ad3-e61217a4dae4" class="bulleted-list"><li style="list-style-type:disc">Filtro de entrada de ar e saída do escapamento</li></ul><ul id="1e319734-f7fb-8190-845b-e73beae3b0a9" class="bulleted-list"><li style="list-style-type:disc">Bandeja oxidada</li></ul><ul id="1e319734-f7fb-81a8-967e-f94dae971fb2" class="bulleted-list"><li style="list-style-type:disc">Chicote elétrico (Regulador, relé, fusível, diodo, disjuntor, sensores)</li></ul></details></li></ul><ul id="1e319734-f7fb-8161-80f9-d544c826974a" class="toggle"><li><details open=""><summary>Características </summary><ul id="1e319734-f7fb-8112-8879-e3bb5a316db4" class="bulleted-list"><li style="list-style-type:disc">Escovado x Brushless</li></ul><ul id="1e319734-f7fb-8132-a322-e62d1b7588e0" class="bulleted-list"><li style="list-style-type:disc">Rotação x frequência</li></ul><ul id="1e319734-f7fb-8191-b2a0-cd25c152d584" class="bulleted-list"><li style="list-style-type:disc">Solenóide de STOP (como retirá-lo para testar o gerador)</li></ul><ul id="1e319734-f7fb-8148-9c8c-d9826d7baeb4" class="bulleted-list"><li style="list-style-type:disc">Sistema de proteção automático e quais os principais motivos que fazem um gerador desligar sozinho.</li></ul><ul id="1e319734-f7fb-81ef-8703-cf91739a060c" class="bulleted-list"><li style="list-style-type:disc">Agrupamento da bobina para 110 e 220v.</li></ul><ul id="1e319734-f7fb-8156-b355-f598727fd737" class="bulleted-list"><li style="list-style-type:disc">Governor (excesso de carga x fumaça preta)</li></ul><ul id="1e319734-f7fb-817b-9501-d9b45601249f" class="bulleted-list"><li style="list-style-type:disc">Manutenção periódica (revisão, registros, filtros, chave geral, cabos de bateria, mangueiras de combustível)</li></ul><ul id="1e319734-f7fb-8101-ae9d-c1b8c63ec813" class="bulleted-list"><li style="list-style-type:disc">Alternador usa excitação por diodo (para não manter ligado o painel pelo alternador)</li></ul><ul id="1e319734-f7fb-81fc-bf37-f7fe5fccb3fe" class="bulleted-list"><li style="list-style-type:disc">Válvula termostática x consumo</li></ul><ul id="1e319734-f7fb-8133-aa97-d1bb53ace3ed" class="bulleted-list"><li style="list-style-type:disc">Tanque de expansão externo</li></ul><ul id="1e319734-f7fb-811e-941b-dd86c4cf0a6c" class="bulleted-list"><li style="list-style-type:disc">Tipos de marinização</li></ul><ul id="1e319734-f7fb-81de-adc5-c8373a728966" class="bulleted-list"><li style="list-style-type:disc">Eletrólise da marinização embutida</li></ul><ul id="1e319734-f7fb-8178-9fde-d81e0989d7d2" class="bulleted-list"><li style="list-style-type:disc">Pescador no tanque mais alto que o do motor (segurança)</li></ul><ul id="1e319734-f7fb-8155-ab5b-f88f1666ec5e" class="bulleted-list"><li style="list-style-type:disc">Caixa de abafador</li></ul><ul id="1e319734-f7fb-81d2-8e58-e8bdcd420ecc" class="bulleted-list"><li style="list-style-type:disc">Aquecimento</li></ul><ul id="1e319734-f7fb-81ac-bdcf-dd80b92519dd" class="bulleted-list"><li style="list-style-type:disc">Botão de supressão do sistema de proteção</li></ul><ul id="1e319734-f7fb-81c1-80ec-fff968974d9b" class="bulleted-list"><li style="list-style-type:disc">Bobina auxiliar 110v</li></ul><ul id="1e319734-f7fb-812c-9d00-f8e779344de0" class="bulleted-list"><li style="list-style-type:disc">Waterlocker x separador de água e gases</li></ul></details></li></ul><ul id="1e319734-f7fb-817b-a693-deb36d4a64c2" class="toggle"><li><details open=""><summary>Na Prática </summary><ul id="1e319734-f7fb-81c8-afc9-d61890d123e8" class="bulleted-list"><li style="list-style-type:disc">Teste voltagem</li></ul><ul id="1e319734-f7fb-8168-989b-dae6cf26b2a7" class="bulleted-list"><li style="list-style-type:disc">Teste partida</li></ul><ul id="1e319734-f7fb-81d6-b724-fd609d0ed577" class="bulleted-list"><li style="list-style-type:disc">Teste de produção e frequência</li></ul><ul id="1e319734-f7fb-8189-88cc-de92312e619f" class="bulleted-list"><li style="list-style-type:disc">Teste bomba de combustível</li></ul><ul id="1e319734-f7fb-81ac-b1f9-c05f90ec4a6b" class="bulleted-list"><li style="list-style-type:disc">Teste do solenóide de STOP</li></ul><ul id="1e319734-f7fb-816b-9287-d3278acd8c04" class="bulleted-list"><li style="list-style-type:disc">Teste do alternador/dínamo</li></ul><ul id="1e319734-f7fb-81a1-8fb6-ee65427f2084" class="bulleted-list"><li style="list-style-type:disc">Teste de curto dos componentes internos</li></ul><ul id="1e319734-f7fb-8180-8321-d8244c0e5157" class="bulleted-list"><li style="list-style-type:disc">Produção com 12v direto</li></ul><ul id="1e319734-f7fb-815e-87a0-d7a673921043" class="bulleted-list"><li style="list-style-type:disc">Teste com regulador universal (Brushless)</li></ul><ul id="1e319734-f7fb-8130-a165-d896495eb08f" class="bulleted-list"><li style="list-style-type:disc">Troca das correias (Brushless e escovado)</li></ul><ul id="1e319734-f7fb-818d-b143-d0800b853feb" class="bulleted-list"><li style="list-style-type:disc">Troca das escovas (escovado)</li></ul><ul id="1e319734-f7fb-8108-b8d6-d813a8c348ce" class="bulleted-list"><li style="list-style-type:disc">Troca do esticador da corrêa (escovado)</li></ul><ul id="1e319734-f7fb-8194-a8e6-d2a84e20a699" class="bulleted-list"><li style="list-style-type:disc">Teste da placa de diodos</li></ul><ul id="1e319734-f7fb-81cc-84e5-e50e4d6a4bd0" class="bulleted-list"><li style="list-style-type:disc">Fechamento bobina 110v e 220v</li></ul><ul id="1e319734-f7fb-815b-9611-e45207232cbd" class="bulleted-list"><li style="list-style-type:disc">Revisão períodica (óleo, filtro de óleo, filtro combustível, filtro raccor, corrêa, anôdo, rotor, líquido refrigerante)</li></ul><ul id="1e319734-f7fb-817e-8016-e0c3a55928ef" class="bulleted-list"><li style="list-style-type:disc">Manutenção da bomba d&#x27;água salgada (Troca do selo, rolamento e retentor)</li></ul><ul id="1e319734-f7fb-8135-938f-e3f1f6bad0a8" class="bulleted-list"><li style="list-style-type:disc">Limpeza do trocador de calor</li></ul><ul id="1e319734-f7fb-8189-87ca-c040c2ec743b" class="bulleted-list"><li style="list-style-type:disc">Teste da válvula termostática</li></ul><ul id="1e319734-f7fb-8136-a9e9-f6b92b19ee39" class="bulleted-list"><li style="list-style-type:disc">Substituição da bomba de água doce</li></ul><ul id="1e319734-f7fb-811a-8623-c4800ef9ca34" class="bulleted-list"><li style="list-style-type:disc">Circuito de água doce</li></ul><ul id="1e319734-f7fb-810f-940b-e61861408a27" class="bulleted-list"><li style="list-style-type:disc">Circuito de água salgada</li></ul><ul id="1e319734-f7fb-81e0-acdb-ec7645dad160" class="bulleted-list"><li style="list-style-type:disc">Circuito de produção</li></ul><ul id="1e319734-f7fb-8100-8e87-c0b56555b079" class="bulleted-list"><li style="list-style-type:disc">Circuito de proteção</li></ul></details></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

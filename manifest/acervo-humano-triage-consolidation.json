@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-04-26T02:39:50.414765+00:00",
+  "applied": true,
+  "triage_root": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/90_Triagem_Tecnica_por_Codigo",
+  "items": [
+    {
+      "status": "moved",
+      "source": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/90_Triagem_Tecnica_por_Codigo/02_Navegacao_Comunicacao_e_Instrumentos/manual_2019-12-19_08-26-08_437f82db9d3ec913309ffa0b7b52f11f.pdf",
+      "target": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/05_Navegacao_e_Eletronicos/manual_2019-12-19_08-26-08_437f82db9d3ec913309ffa0b7b52f11f.pdf",
+      "scope": "technical",
+      "sha256": "82a849d86a5383495f0edfc79cff7d4bd44c594761c99c90bc8b0daec1f17162"
+    },
+    {
+      "status": "moved",
+      "source": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/90_Triagem_Tecnica_por_Codigo/03_Propulsao_Motores_e_Turbo/5648FFB8-6EFB-48BB-AA5D-270A51B18862PORTUGUESE_TH360B_31200294-A_OMM.pdf",
+      "target": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/09_Propulsao_Motores_Estabilizacao_e_Atuacao/5648FFB8-6EFB-48BB-AA5D-270A51B18862PORTUGUESE_TH360B_31200294-A_OMM.pdf",
+      "scope": "technical",
+      "sha256": "5431892c0da092e4e2303e30e41f58d559e41236ae81d13a7ae5210b7b3b844b"
+    },
+    {
+      "status": "moved",
+      "source": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/90_Triagem_Tecnica_por_Codigo/06_Artigos_Normas_e_Referencia_Tecnica/2015-MSc-PEMM-Gustavo_Henrique_Senna_de_Freitas_Ligeiro_de_Carvalho.pdf",
+      "target": "90_Revisao_Manual/_Acervo_Local/Acervo do humano/10_Tecnico_Nautico/10_Materiais_Internos_e_Cursos/Referencias_Tecnicas/2015-MSc-PEMM-Gustavo_Henrique_Senna_de_Freitas_Ligeiro_de_Carvalho.pdf",
+      "scope": "technical",
+      "sha256": "21f8717aa694c20767834904e5ce1ddc1eaf80dd708cfe4976fec91325a8afa6"
+    }
+  ],
+  "removed_empty_dirs": []
+}

@@ -1,0 +1,354 @@
+{
+  "generated_at": "2026-04-20T09:14:35.480885+00:00",
+  "queue_path": "90_Revisao_Manual/_Dados_Acervo/manual-resolution-queue.json",
+  "result_count": 1,
+  "dry_run": false,
+  "results": [
+    {
+      "canonical": "Onan",
+      "visited_pages": 18,
+      "seed_urls": [
+        "https://www.cummins.fr/onanmanuel/",
+        "https://www.cummins.com/generators/marine/resources",
+        "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+        "https://www.cummins.com/generators/products/onan-marine-qd-45-kw-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+        "https://selfscreening.cummins.com/en-in/generators/onan-marine-qd-1351717519215-kw-generator",
+        "https://selfscreening.cummins.com/generators/onan-marine-qd-2252729-kw-generator",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator",
+        "https://www.cummins.com/pt-br/generators/products/onan-marine-qd-79-kw-marine-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-2252729-kw-generator",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBH-Service-Manual.pdf",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBJ-BW-Service-Manual.pdf",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDK-DL-DM-DN-Service-Manual.pdf",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+        "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/",
+        "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/",
+        "https://www.seapowermarine.com/wpfd_file/mdkdl-dm-dn-parts-manual/",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DV-Parts-Manual.pdf",
+        "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDS-DT-DU-Parts-Manual.pdf",
+        "https://www.manualslib.com/brand/onan/",
+        "https://www.manualslib.com/manual/3112362/Onan-Mdkbk.html",
+        "https://www.manualslib.com/products/Onan-Mdkbh-Series-11780253.html"
+      ],
+      "curated_candidate_count": 26,
+      "candidate_count": 26,
+      "source_layer_counts": {
+        "official": 13,
+        "secondary": 9,
+        "mirror": 4,
+        "unknown": 0
+      },
+      "candidates": [
+        {
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A050G574-Issue-1-Portuguese-Brazil.pdf",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Operator Manual PT-BR",
+          "score": 31,
+          "kind": "operator",
+          "source_tier": "official",
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A052J727-Issue-1-English.pdf",
+          "label": "MDKDK-MDKDL-MDKDM-MDKDN Operator Manual",
+          "score": 25,
+          "kind": "operator",
+          "source_tier": "official",
+          "family": "MDKDK-MDKDL-MDKDM-MDKDN",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/0981-0180-Issue-5-English.pdf",
+          "label": "MDKBH Operator Manual",
+          "score": 23,
+          "kind": "operator",
+          "source_tier": "official",
+          "family": "MDKBH",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.fr/wp-content/uploads/2020/10/A029Z105-Issue-5-English.pdf",
+          "label": "MDKBJ-MDKBW Operator Manual",
+          "score": 21,
+          "kind": "operator",
+          "source_tier": "official",
+          "family": "MDKBJ-MDKBW",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator",
+          "label": "Produto oficial QD 40-110 kW",
+          "score": 18,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 40-110 / MDDC",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://selfscreening.cummins.com/en-in/generators/onan-marine-qd-1351717519215-kw-generator",
+          "label": "Produto oficial QD 13.5-21.5 kW",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 13.5-21.5 / MDKDP-MDKDR-MDKDV",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://selfscreening.cummins.com/generators/onan-marine-qd-2252729-kw-generator",
+          "label": "Produto oficial QD 22.5-29 kW",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 22.5-29 / MDKDS-MDKDT-MDKDU",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+          "label": "Produto oficial QD 7-9 kW Space Saver",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 7-9 / MDKDK-MDKDL",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-45-kw-generator",
+          "label": "Produto oficial QD 4-5 kW",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 4-5 / MDKBH",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+          "label": "Produto oficial QD 6-8 kW",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 6-8 / MDKBJ-MDKBW",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+          "label": "Produto oficial QD 9-13.5 kW",
+          "score": 16,
+          "kind": "product-page",
+          "source_tier": "official",
+          "family": "QD 9-13 / MDKDM-MDKDN",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators",
+          "label": "Linha oficial Onan Marine Generators",
+          "score": 14,
+          "kind": "product-line",
+          "source_tier": "official",
+          "family": "QD",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.cummins.fr/onanmanuel/",
+          "label": "Hub oficial de manuais do operador Onan",
+          "score": 11,
+          "kind": "operator-hub",
+          "source_tier": "official",
+          "family": "Onan",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DS-DT-DU-DV-Service-Manual.pdf",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Service Manual",
+          "score": 29,
+          "kind": "service",
+          "source_tier": "secondary",
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "found_from": [
+            "curated",
+            "seed"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDS-DT-DU-Parts-Manual.pdf",
+          "label": "MDKDS-MDKDT-MDKDU Parts Manual",
+          "score": 25,
+          "kind": "parts",
+          "source_tier": "secondary",
+          "family": "MDKDS-MDKDT-MDKDU",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDP-DR-DV-Parts-Manual.pdf",
+          "label": "MDKDP-MDKDR-MDKDV Parts Manual",
+          "score": 23,
+          "kind": "parts",
+          "source_tier": "secondary",
+          "family": "MDKDP-MDKDR-MDKDV",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKDK-DL-DM-DN-Service-Manual.pdf",
+          "label": "MDKDK-MDKDL-MDKDM-MDKDN Service Manual",
+          "score": 23,
+          "kind": "service",
+          "source_tier": "secondary",
+          "family": "MDKDK-MDKDL-MDKDM-MDKDN",
+          "found_from": [
+            "curated",
+            "seed"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBH-Service-Manual.pdf",
+          "label": "MDKBH Service Manual",
+          "score": 21,
+          "kind": "service",
+          "source_tier": "secondary",
+          "family": "MDKBH",
+          "found_from": [
+            "curated",
+            "seed"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/seapowerwp/wp-content/uploads/2018/05/MDKBJ-BW-Service-Manual.pdf",
+          "label": "MDKBJ-MDKBW Service Manual",
+          "score": 19,
+          "kind": "service",
+          "source_tier": "secondary",
+          "family": "MDKBJ-MDKBW",
+          "found_from": [
+            "curated",
+            "seed"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkdl-dm-dn-parts-manual/",
+          "label": "MDKDL-MDKDM-MDKDN Parts Manual",
+          "score": 17,
+          "kind": "parts",
+          "source_tier": "secondary",
+          "family": "MDKDL-MDKDM-MDKDN",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/",
+          "label": "MDKBJ-MDKBW Parts Manual",
+          "score": 13,
+          "kind": "parts",
+          "source_tier": "secondary",
+          "family": "MDKBJ-MDKBW",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/",
+          "label": "MDKDK Parts Manual",
+          "score": 13,
+          "kind": "parts",
+          "source_tier": "secondary",
+          "family": "MDKDK",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://onan.xmsi.net/981-0647%20Onan%20MDKBH%20Spec%20A-E%20Installation%20Manual%20%2810-2013%29.pdf",
+          "label": "MDKBH Installation Manual",
+          "score": 21,
+          "kind": "installation",
+          "source_tier": "mirror",
+          "family": "MDKBH",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+          "label": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV Installation Manual",
+          "score": 20,
+          "kind": "installation",
+          "source_tier": "mirror",
+          "family": "MDKDP-MDKDR-MDKDS-MDKDT-MDKDU-MDKDV",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.marine-j.com/pdf/MDKBH-Parts-Manual.pdf",
+          "label": "MDKBH Parts Manual",
+          "score": 18,
+          "kind": "parts",
+          "source_tier": "mirror",
+          "family": "MDKBH",
+          "found_from": [
+            "curated"
+          ]
+        },
+        {
+          "url": "https://www.manualslib.com/brand/onan/",
+          "label": "ManualsLib Onan Brand Archive",
+          "score": 8,
+          "kind": "archive",
+          "source_tier": "mirror",
+          "family": "Onan legado",
+          "found_from": [
+            "curated"
+          ]
+        }
+      ],
+      "errors": [
+        "https://www.cummins.fr/onanmanuel/: <urlopen error timed out>",
+        "https://www.cummins.com/generators/marine/resources: <urlopen error timed out>",
+        "https://www.cummins.com/en-na/generators/marine-generators/onan-marine-generators: <urlopen error timed out>",
+        "https://www.cummins.com/generators/products/onan-marine-qd-45-kw-generator: <urlopen error timed out>",
+        "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator: <urlopen error timed out>",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator: <urlopen error timed out>",
+        "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator: <urlopen error timed out>",
+        "https://selfscreening.cummins.com/en-in/generators/onan-marine-qd-1351717519215-kw-generator: <urlopen error timed out>",
+        "https://selfscreening.cummins.com/generators/onan-marine-qd-2252729-kw-generator: <urlopen error timed out>",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator: <urlopen error timed out>",
+        "https://www.cummins.com/pt-br/generators/products/onan-marine-qd-79-kw-marine-generator: <urlopen error timed out>",
+        "https://www.cummins.com/generators/products/onan-marine-qd-2252729-kw-generator: <urlopen error timed out>",
+        "https://www.seapowermarine.com/wpfd_file/mdkbj-bw-parts-manual/: <urlopen error timed out>",
+        "https://www.seapowermarine.com/wpfd_file/mdkdk-parts-manual/: <urlopen error timed out>"
+      ]
+    }
+  ]
+}

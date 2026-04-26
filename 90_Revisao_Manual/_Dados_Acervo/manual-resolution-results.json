@@ -1,0 +1,863 @@
+{
+  "generated_at": "2026-04-20T02:23:23.554140+00:00",
+  "queue_path": "90_Revisao_Manual/_Dados_Acervo/manual-resolution-queue.json",
+  "result_count": 52,
+  "dry_run": true,
+  "results": [
+    {
+      "canonical": "Victron Energy",
+      "seed_urls": [
+        "https://www.victronenergy.com/support-and-downloads/manuals",
+        "https://www.victronenergy.com/media/pg/VRM_Portal_manual/en/index-en.html",
+        "https://www.victronenergy.com/batteries/lithium-battery-12-8v/",
+        "https://www.victronenergy.com/chargers/blue-smart-ip22-charger",
+        "https://www.victronenergy.com/chargers/phoenix-charger-12v-24v",
+        "https://www.victronenergy.com/inverters/phoenix-inverter-compact",
+        "https://www.victronenergy.com/inverters/phoenix-inverter-vedirect-250va-800va",
+        "https://www.victronenergy.com/media/pg/BMV-700/en/index-en.html",
+        "https://www.victronenergy.com/media/pg/BMV-712_Smart/en/index-en.html",
+        "https://www.victronenergy.com/media/pg/Blue_Smart_IP65_Charger_230V_manual/en/index-en.html",
+        "https://www.victronenergy.com/media/pg/Cerbo_GX/en/index-en.html",
+        "https://www.victronenergy.com/media/pg/GlobalLink_520/en/index-en.html"
+      ],
+      "allowed_domains": [
+        "victronenergy.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Garmin",
+      "seed_urls": [
+        "https://support.garmin.com/marine/",
+        "https://support.garmin.com/en-US/?identifier=3326298033&tab=manuals",
+        "https://support.garmin.com/en-US/?identifier=561671&tab=manuals",
+        "https://support.garmin.com/en-US/?identifier=877856&tab=manuals",
+        "https://support.garmin.com/en-US/?partNumber=010-00572-02&tab=manuals",
+        "https://support.garmin.com/en-US/?partNumber=010-01510-01&tab=manuals",
+        "https://support.garmin.com/en-US/?partNumber=010-02527-01&tab=manuals",
+        "https://support.garmin.com/en-US/?partNumber=010-02527-51&tab=manuals",
+        "https://support.garmin.com/en-US/?productID=100686&tab=manuals",
+        "https://support.garmin.com/en-US/?productID=126694&tab=manuals"
+      ],
+      "allowed_domains": [
+        "garmin.com",
+        "support.garmin.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Cummins",
+      "seed_urls": [
+        "https://www.cummins.com/generators/marine/resources",
+        "https://www.cummins.com/support/manuals?locset=US",
+        "https://mart.cummins.com/imagelibrary/data/assetfiles/0032264.pdf",
+        "https://mart.cummins.com/imagelibrary/data/assetfiles/0058498.pdf",
+        "https://mart.cummins.com/imagelibrary/data/assetfiles/0043413.pdf",
+        "https://mart.cummins.com/imagelibrary/data/assetfiles/0075914.pdf",
+        "https://mart.cummins.com/imagelibrary/data/assetfiles/0075915.pdf",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+        "https://www.cummins.com/pt-br/generators/products/onan-marine-qd-79-kw-marine-generator",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-2252729-kw-generator"
+      ],
+      "allowed_domains": [
+        "cummins.com",
+        "mart.cummins.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Onan",
+      "seed_urls": [
+        "https://www.cummins.com/generators/marine/resources",
+        "https://www.manualslib.com/brand/onan/",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-79-kw-space-saver-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-6758-kw-generator",
+        "https://www.cummins.com/generators/products/onan-marine-qd-9511115135-kw-generator",
+        "https://www.cummins.com/pt-br/generators/products/onan-marine-qd-79-kw-marine-generator",
+        "https://www.cummins.com/en-na/generators/products/onan-marine-qd-40-110-kw-generator",
+        "https://www.manualslib.com/manual/3112362/Onan-Mdkbk.html",
+        "https://www.manualslib.com/manual/3112362/Onan-Mdkbk.html?page=85",
+        "https://www.manualslib.com/products/Onan-Mdkbh-Series-11780253.html",
+        "https://www.manualslib.com/products/Onan-Mdkbu-3661057.html",
+        "https://www.cummins.com/generators/products/onan-marine-qd-2252729-kw-generator",
+        "https://www.manualslib.com/products/Onan-Mcck-13706721.html"
+      ],
+      "allowed_domains": [
+        "cummins.com",
+        "manualslib.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Quick",
+      "seed_urls": [
+        "https://www.quickitaly.com/en/manuals/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/dimmers/hdim-300-plus/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/dimmers/zdim-100/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/qcc-system/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/qnn-system/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/qnn-system/qnn-gateway/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/dimmers/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/dimmers/ldim-bus-2ch/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/dimmers/ldim-bus-rgbw/",
+        "https://www.quickitaly.com/en/products/quick-marine-lighting/control-systems-and-accessories/qcc-system/qcc-lcs-ts-wifi/"
+      ],
+      "allowed_domains": [
+        "quickitaly.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Starlink",
+      "seed_urls": [
+        "https://www.starlink.com/",
+        "https://starlink.com/us/residential/installation",
+        "https://www.starlink.com/us/roam",
+        "https://www.starlink.com/business/maritime",
+        "https://www.starlink.com/maritime",
+        "https://www.starlink.com/na/business/maritime"
+      ],
+      "allowed_domains": [
+        "starlink.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Mastervolt",
+      "seed_urls": [
+        "https://www.mastervolt.com/downloads/",
+        "https://www.mastervolt.com/country/us/product/5910/",
+        "https://www.mastervolt.com/downloads/6905",
+        "https://www.mastervolt.com/products/ac-master-12v/ac-master-12-700-120-v/",
+        "https://www.mastervolt.com/products/chargemaster-24v/chargemaster-24-60-3",
+        "https://www.mastervolt.com/products/mass-24v/mass-24-25-2-230v/",
+        "https://www.mastervolt.com/products/mass-combi-ultra/mass-combi-ultra-12-3000-150-230-v/"
+      ],
+      "allowed_domains": [
+        "mastervolt.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "ACR",
+      "seed_urls": [
+        "https://www.acrartex.com/support/",
+        "https://www.acrartex.com/wp-content/uploads/downloads/774/Product_Manual_GlobalFix_Pro_ACR.pdf",
+        "https://www.acrartex.com/wp-content/uploads/downloads/947/USA_Product_Manual_ResQLink__ACR.pdf",
+        "https://www.acrartex.com/products/globalfix-pro-epirb",
+        "https://www.acrartex.com/products/resqlink-400/"
+      ],
+      "allowed_domains": [
+        "acrartex.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Simrad",
+      "seed_urls": [
+        "https://www.simrad-yachting.com/help--support/service-and-support/",
+        "https://www.simrad-yachting.com/en-eu/nss-evo3s/",
+        "https://www.simrad-yachting.com/en-gb/simrad/type/compasses/hs70-gps-compass/",
+        "https://www.simrad-yachting.com/en-nz/simrad/type/autopilots/autopilot-controllers/ap44-rotary-pilot-head/",
+        "https://www.simrad-yachting.com/simrad/series/go-xse/",
+        "https://www.simrad-yachting.com/simrad/type/compasses/precision-9-compass/",
+        "https://www.simrad-yachting.com/simrad/type/radar/halo20simradradar-645c8d41/"
+      ],
+      "allowed_domains": [
+        "simrad-yachting.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Raymarine",
+      "seed_urls": [
+        "https://www.raymarine.com/en-us/support/document-library",
+        "https://www.raymarine.com/en-us/download/axiom-axiom-manuals",
+        "https://www.raymarine.com/en-us/download/evolution-autopilot-manuals",
+        "https://www.raymarine.com/en-us/download/quantum-radar-manuals",
+        "https://www.raymarine.com/en-us/our-products/marine-instruments/i70s-series/i70s-instrument"
+      ],
+      "allowed_domains": [
+        "raymarine.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Dometic",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/externalassets/dometic-ecd_9108732762_125615.pdf?ref=973748353",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_62759.pdf?ref=1214173833",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_74241.pdf?ref=-1025274256",
+        "https://www.dometic.com/externalassets/optimus-displays_9130000265_92979.pdf?ref=1728975229",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control",
+        "https://www.dometic.com/en-us/outdoor/boat/boat-toilets/dometic-masterflush-8500-193880?v=9600006448"
+      ],
+      "allowed_domains": [
+        "dometic.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Rehlko",
+      "seed_urls": [
+        "https://www.marine.rehlko.com/",
+        "https://www.marine.rehlko.com/brochures-literature",
+        "https://resources.rehlko.com/marine/PDF/PocketGuide.pdf",
+        "https://www.marine.rehlko.com/product/5efkod",
+        "https://www.marine.rehlko.com/product/6ekod",
+        "https://www.marine.rehlko.com/product/7efkozd",
+        "https://www.marine.rehlko.com/product/17efkozd_3phase",
+        "https://www.marine.rehlko.com/product/45efozdj",
+        "https://www.marine.rehlko.com/products/Pleasure%2BCraft%2BGenerators",
+        "https://www.marine.rehlko.com/product/125efozdj",
+        "https://www.marine.rehlko.com/product/13.5efkozd_1phase",
+        "https://www.marine.rehlko.com/product/13.5efkozd_3phase",
+        "https://www.marine.rehlko.com/product/175efozdj"
+      ],
+      "allowed_domains": [
+        "marine.rehlko.com",
+        "resources.rehlko.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "B&G",
+      "seed_urls": [
+        "https://www.bandg.com/downloads/",
+        "https://ww2.bandg.com/downloads-category/manuals/",
+        "https://ww2.bandg.com/downloads-category/manuals/page/3/",
+        "https://ww2.bandg.com/downloads-category/manuals/page/7/",
+        "https://www.bandg.com/en-gb/bg/type/instruments/cpu-pack-wtp3-inc.-cablesmanual/",
+        "https://www.bandg.com/bg/type/autopilots/autopilot-displays-controllers/triton2-pilot-controllerdisplay-pack/",
+        "https://www.bandg.com/en-gb/bg/series/triton/",
+        "https://www.bandg.com/en-gb/bg/series/wtp3/",
+        "https://www.bandg.com/en-gb/bg/type/autopilots/autopilot-compasses/precision-9-compass3/",
+        "https://www.bandg.com/en-gb/bg/type/instrument-sensors-and-transducers/wind-sensors/ws310-wind-sensor/",
+        "https://www.bandg.com/en-gb/bg/type/instrument-sensors-and-transducers/wind-sensors/ws310-wired-interface/",
+        "https://ww2.bandg.com/downloads-category/triton2-autopilots-manuals/"
+      ],
+      "allowed_domains": [
+        "bandg.com",
+        "ww2.bandg.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Kohler Marine",
+      "seed_urls": [
+        "https://www.marine.rehlko.com/",
+        "https://www.manualslib.com/brand/kohler.html",
+        "https://www.manualslib.com/manual/1071277/Kohler-6ekod.html",
+        "https://www.manualslib.com/manual/1196255/Kohler-6ekod.html",
+        "https://www.manualslib.com/manual/928158/Kohler-6ekod.html",
+        "https://www.manualslib.com/products/Kohler-6ekod-3799386.html",
+        "https://www.manualslib.com/manual/2130934/Kohler-6ekod.html",
+        "https://www.manualslib.com/products/Kohler-33-125efozdj-4003196.html",
+        "https://www.manualslib.com/products/Kohler-5efkod-3799385.html",
+        "https://www.manualslib.com/products/Kohler-7-5r-3981797.html",
+        "https://www.manualslib.com/products/Kohler-7-9efkozd-3799387.html",
+        "https://www.manualslib.com/products/Kohler-7efkozd-10732569.html",
+        "https://www.manualslib.com/products/Kohler-13ekozd-10721962.html",
+        "https://www.manualslib.com/products/Kohler-80eoz-3609926.html"
+      ],
+      "allowed_domains": [
+        "marine.rehlko.com",
+        "manualslib.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Blue Sea Systems",
+      "seed_urls": [
+        "https://www.bluesea.com/resources",
+        "https://www.bluesea.com/products/6006/m-Series",
+        "https://www.bluesea.com/products/9003e/e-Series_On_Off_Battery_Switch",
+        "https://www.bluesea.com/products/category/14/30/Circuit_Breakers/187-Series?Mounting=Panel_Mount",
+        "https://www.bluesea.com/products/category/14/32/Circuit_Breakers/285-Series"
+      ],
+      "allowed_domains": [
+        "bluesea.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Rule",
+      "seed_urls": [
+        "https://www.xylem.com/de-de/brands/rule/documents/",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide--dry-bilge-pump.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide-automatic-bilge-pumps.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/technical-brochure/rule-a-matic-float-switch-technical-datasheet.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/brochure/rule-automatic-bilge-pumps-sales-flyer.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/specification/jabsco-engine-cooling-pump-database-f100-468-web.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/campaigns/jabsco-toilet-portfolio-f100-480-rev-a.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/37010-electric-head.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60010-255sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/drawing/twist-n-lock-dimensional-drawing.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60020-135sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/en-us/brands/rule/"
+      ],
+      "allowed_domains": [
+        "xylem.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Xylem",
+      "seed_urls": [
+        "https://www.xylem.com/en-us/brand/jabsco/",
+        "https://www.xylem.com/de-de/brands/rule/documents/",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/specification/jabsco-engine-cooling-pump-database-f100-468-web.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/campaigns/jabsco-toilet-portfolio-f100-480-rev-a.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/37010-electric-head.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60010-255sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide--dry-bilge-pump.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide-automatic-bilge-pumps.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/technical-brochure/rule-a-matic-float-switch-technical-datasheet.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/drawing/twist-n-lock-dimensional-drawing.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60020-135sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/brochure/rule-automatic-bilge-pumps-sales-flyer.pdf",
+        "https://www.xylem.com/en-us/products--services/light-power/search-lights-and-flood-lights/135sl-remote-control-searchlight-2dcd11d9/"
+      ],
+      "allowed_domains": [
+        "xylem.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Charles Industries",
+      "seed_urls": [
+        "https://www.charlesindustries.com/support/technical-emergency-support/industrial-solutions/owners-manuals/",
+        "https://www.charlesindustries.com/wp-content/uploads/2021/05/LT93-ISOBOO-1.pdf",
+        "https://www.charlesindustries.com/wp-content/uploads/2021/05/LT93-ISOBOO-2.pdf",
+        "https://www.charlesindustries.com/support/technical-emergency-support/industrial-solutions/"
+      ],
+      "allowed_domains": [
+        "charlesindustries.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "H-Tec",
+      "seed_urls": [
+        "https://www.htecnautica.com.br/"
+      ],
+      "allowed_domains": [
+        "htecnautica.com.br"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Furuno",
+      "seed_urls": [
+        "https://furunousa.com/en/knowledge_base/general/manuals_for_furuno_products",
+        "https://furunousa.com/en/support/gp1971f",
+        "https://www.furunousa.com/en/support/drs4dnxt",
+        "https://www.furunousa.com/en/support/sc50",
+        "https://www.furunousa.com/en/support/tzt12f"
+      ],
+      "allowed_domains": [
+        "furunousa.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Lumitec",
+      "seed_urls": [
+        "https://www.lumiteclighting.com/support-center.html",
+        "https://www.lumiteclighting.com/media/wysiwyg/Poco_3_User_Manual_23.pdf",
+        "https://www.lumiteclighting.com/support-center/getting-started-guides/poco-4-guide.html",
+        "https://www.lumiteclighting.com/support-center/getting-started-guides/seablazex3-guide.html",
+        "https://www.lumiteclighting.com/support-center/getting-started-guides/poco-quick-start.html",
+        "https://www.lumiteclighting.com/poco-4-digital-lighting-control-module.html"
+      ],
+      "allowed_domains": [
+        "lumiteclighting.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Marine Air",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/en-us/category/boat/marine-air-conditioners",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners",
+        "https://www.dometic.com/en-us/outdoor/lp/rebranded-marine-air",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/externalassets/dometic-ecd_9108732762_125615.pdf?ref=973748353",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_62759.pdf?ref=1214173833"
+      ],
+      "allowed_domains": [
+        "dometic.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "VETUS",
+      "seed_urls": [
+        "https://vetus.com/service-support/manuals/",
+        "https://vetus.com/usa/vetus-catalogue/",
+        "https://vetus.com/wp-content/uploads/020523.07-r01-07-06.pdf",
+        "https://vetus.com/wp-content/uploads/020530.04-r02-08-06.pdf",
+        "https://vetus.com/wp-content/uploads/120111.01-r04-2025-07-BPJ5B-DBPJ5B.pdf",
+        "https://vetus.com/wp-content/uploads/Part-catalogue-BOW95.pdf",
+        "https://vetus.com/wp-content/uploads/020547.02-r01-10-06.pdf",
+        "https://webshop.vetus.com/en/product/bpsm-bow-thruster-control",
+        "https://webshop.vetus.com/en/product/bpsrc-thruster-panel"
+      ],
+      "allowed_domains": [
+        "vetus.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Jabsco",
+      "seed_urls": [
+        "https://www.xylem.com/en-us/brand/jabsco/",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/specification/jabsco-engine-cooling-pump-database-f100-468-web.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/campaigns/jabsco-toilet-portfolio-f100-480-rev-a.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/37010-electric-head.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60010-255sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/drawing/twist-n-lock-dimensional-drawing.pdf",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/60020-135sl-remote-control-searchlight-technical-data-sheet.pdf",
+        "https://www.xylem.com/en-us/products--services/light-power/search-lights-and-flood-lights/135sl-remote-control-searchlight-2dcd11d9/",
+        "https://www.xylem.com/siteassets/brand/jabsco/resources/manual/user-guide-twist-n-lock-manual-marine-toilet/",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide--dry-bilge-pump.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/manual/user-guide-automatic-bilge-pumps.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/technical-brochure/rule-a-matic-float-switch-technical-datasheet.pdf",
+        "https://www.xylem.com/siteassets/brand/rule/resources/brochure/rule-automatic-bilge-pumps-sales-flyer.pdf"
+      ],
+      "allowed_domains": [
+        "xylem.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Mabru",
+      "seed_urls": [
+        "https://www.mabrumarine.com/",
+        "https://mabrupowersystems.com/wp-content/uploads/2025/04/Mabru-Marine-Air-Conditioner-Installation-Manual-2025.pdf",
+        "https://www.mabrumarine.com/_files/ugd/845321_5f64b3e7532c4cf69a4604b5100ee4fc.pdf",
+        "https://www.mabrumarine.com/_files/ugd/845321_f84b887847dd43868478b625ffa032de.pdf",
+        "https://www.mabrumarine.com/dc-air-conditioning-units"
+      ],
+      "allowed_domains": [
+        "mabrumarine.com",
+        "mabrupowersystems.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Hubbell",
+      "seed_urls": [
+        "https://www.hubbell.com/wiringdevice-kellems/en/installation-instructions",
+        "https://www.hubbell.com/wiringdevice-kellems/en/catalog",
+        "https://hubbellcdn.com/installationmanuals/WIRING_PD1491_INSTALLINST.pdf",
+        "https://hubbellcdn.com/specsheet/WDK-HBL332NM-SPEC-EN.pdf",
+        "https://hubbellcdn.com/specsheet/WDK_CA-HBL303NM-SPEC-EN.pdf",
+        "https://hubbellcdn.com/specsheet/WIRING_HBL503NM_spec.pdf",
+        "https://hubbellcdn.com/specsheet/WDK-HBL504SS-SPEC-EN.pdf",
+        "https://www.hubbell.com/wiringdevice-kellems/en/products/p/157909",
+        "https://www.hubbell.com/wiringdevice-kellems/en/products/p/178245",
+        "https://www.hubbell.com/hubbell/en/p/168511"
+      ],
+      "allowed_domains": [
+        "hubbell.com",
+        "hubbellcdn.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Marinco",
+      "seed_urls": [
+        "https://www.marinco.com/en/resources",
+        "https://www.marinco.com/-/media/inriver/6371EL_SPEC.pdf",
+        "https://www.marinco.com/en/~/media/inriver/331521-19774.pdf",
+        "https://marinco.com/en/~/media/inriver/317663-39202.pdf"
+      ],
+      "allowed_domains": [
+        "marinco.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "ProMariner",
+      "seed_urls": [
+        "https://promariner.navico.com/resources/",
+        "https://promariner.navico.com/chargers/",
+        "https://promariner.navico.com/isolators/"
+      ],
+      "allowed_domains": [
+        "promariner.navico.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Cruisair",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/en-us/lp/rebranded-cruisair",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/externalassets/dometic-ecd_9108732762_125615.pdf?ref=973748353",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_62759.pdf?ref=1214173833",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_74241.pdf?ref=-1025274256",
+        "https://www.dometic.com/externalassets/optimus-displays_9130000265_92979.pdf?ref=1728975229",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control"
+      ],
+      "allowed_domains": [
+        "dometic.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Condaria",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/en-us/lp/condaria-rebranding-page",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/externalassets/dometic-ecd_9108732762_125615.pdf?ref=973748353",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_62759.pdf?ref=1214173833",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_74241.pdf?ref=-1025274256",
+        "https://www.dometic.com/externalassets/optimus-displays_9130000265_92979.pdf?ref=1728975229",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control"
+      ],
+      "allowed_domains": [
+        "dometic.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "FRIGOMAR",
+      "seed_urls": [
+        "https://www.frigomar.com/en/download/",
+        "https://www.frigomar.com/wp-content/uploads/2025/09/BRC-Self-Contained-Unit-2025-web.pdf",
+        "https://www.frigomar.com/wp-content/uploads/2025/10/BRC-Chiller-CU-25.01-web.pdf",
+        "https://www.frigomar.com/en/products/",
+        "https://www.frigomar.com/en/products/fancoils-ah/",
+        "https://www.frigomar.com/en/products/self-contained-unit-he-bldc-variable-speed-cc/",
+        "https://www.frigomar.com/en/products/self-contained-unit-inverter-bldc/",
+        "https://www.frigomar.com/en/products/thermostats/"
+      ],
+      "allowed_domains": [
+        "frigomar.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Webasto",
+      "seed_urls": [
+        "https://www.webasto.com/en-us/cooling.html",
+        "https://www.webasto.com/content/dam/webasto/region-specific/us/products/marine-chiller-ac-units/literature/BlueCool%20A-Series%20Datasheet.pdf.coredownload.inline.pdf",
+        "https://www.webasto.com/content/dam/webasto/region-specific/us/products/marine-self-contained-units/literature/BlueCool%20S-Series%20Datasheet.pdf.coredownload.inline.pdf",
+        "https://www.webasto.com/en-us/cooling/controllers/bluecool-mytouch.html",
+        "https://www.webasto.com/en-us/cooling/marine-chiller-air-conditioning-units.html",
+        "https://www.webasto.com/en-us/cooling/marine-chiller-air-conditioning-units/bluecool-a-series.html",
+        "https://www.webasto.com/en-us/cooling/marine-chiller-air-conditioning-units/bluecool-c-series.html",
+        "https://www.webasto.com/en-us/cooling/marine-self-contained-air-conditioning-units.html",
+        "https://www.webasto.com/en-us/cooling/marine-self-contained-air-conditioning-units/bluecool-s-series.html",
+        "https://www.webasto.com/en-us/cooling/marine-chiller-air-conditioning-units/bluecool-vx-series.html",
+        "https://www.webasto.com/en-us/cooling/marine-self-contained-air-conditioning-units/fcf-classic.html",
+        "https://www.webasto.com/en-us/cooling/marine-self-contained-air-conditioning-units/fcf-platinum.html"
+      ],
+      "allowed_domains": [
+        "webasto.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Xantrex",
+      "seed_urls": [
+        "https://xantrex.com/library/",
+        "https://xantrex.com/library/battery-chargers/",
+        "https://xantrex.com/library/inverter-chargers/freedom-xc-pro-marine-inverter-charger/",
+        "https://xantrex.com/products/battery-chargers/truecharge2-12v/",
+        "https://xantrex.com/products/battery-chargers/truecharge2-24v/",
+        "https://xantrex.com/products/inverter-chargers/freedomxcpromarine/",
+        "https://xantrex.com/support/get-customer-support/"
+      ],
+      "allowed_domains": [
+        "xantrex.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Icom",
+      "seed_urls": [
+        "https://www.icomamerica.com/support/manual/",
+        "https://www.icomamerica.com/lineup/products/IC-M25_evo/",
+        "https://www.icomamerica.com/support/manual/1621/",
+        "https://www.icomamerica.com/support/manual/1722/",
+        "https://www.icomamerica.com/support/manual/3307/"
+      ],
+      "allowed_domains": [
+        "icomamerica.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Standard Horizon",
+      "seed_urls": [
+        "https://www.standardhorizon.com/",
+        "https://standardhorizon.com/product-detail.aspx?CatName=Fixed+Mount+VHF&Model=GX1850",
+        "https://standardhorizon.com/product-detail.aspx?CatName=Legacy&Model=GX2400",
+        "https://www.standardhorizon.com/product-detail.aspx?CatName=Legacy&Model=HX890"
+      ],
+      "allowed_domains": [
+        "standardhorizon.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Ocean Signal",
+      "seed_urls": [
+        "https://oceansignal.com/support/documents/",
+        "https://oceansignal.com/support/documents/?category%5B%5D=user-manuals",
+        "https://oceansignal.com/us/support/documents/",
+        "https://oceansignal.com/wp-content/uploads/2025/08/912S-01517-Issue-01.13-MOB1-User-Manual.pdf",
+        "https://oceansignal.com/us/products/mob1/"
+      ],
+      "allowed_domains": [
+        "oceansignal.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Battle Born Batteries",
+      "seed_urls": [
+        "https://battlebornbatteries.com/manuals/"
+      ],
+      "allowed_domains": [
+        "battlebornbatteries.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Seakeeper",
+      "seed_urls": [
+        "https://manuals.seakeeper.com/ride/",
+        "https://manuals.seakeeper.com/ride/seakeeper-ride-configuration-instructions/1-introduction/",
+        "https://manuals.seakeeper.com/ride/seakeeper-ride-electrical-installation-manual/?print=true",
+        "https://manuals.seakeeper.com/ride/seakeeper-ride-maintenance/3-maintencance/maintenance-introduction/",
+        "https://manuals.seakeeper.com/ride/seakeeper-ride-mechanical-installation-manual/",
+        "https://manuals.seakeeper.com/ride/seakeeper-ride-ride-750-series-controllers-mechanical-installation-manual/",
+        "https://manuals.seakeeper.com/"
+      ],
+      "allowed_domains": [
+        "seakeeper.com",
+        "manuals.seakeeper.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Optimus",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/externalassets/optimus-displays_9130000265_92979.pdf?ref=1728975229",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control/displays/optimus-displays-244724?v=9130000265",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/externalassets/dometic-ecd_9108732762_125615.pdf?ref=973748353",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_62759.pdf?ref=1214173833",
+        "https://www.dometic.com/externalassets/dometic-masterflush-7220_9108836042_74241.pdf?ref=-1025274256",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control"
+      ],
+      "allowed_domains": [
+        "dometic.com",
+        "seastarsolutions.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Gelotec",
+      "seed_urls": [
+        "https://gelotecrefrigeracao.com.br/",
+        "https://gelotecrefrigeracao.com.br/produtos/",
+        "https://gelotecrefrigeracao.com.br/sobre/"
+      ],
+      "allowed_domains": [
+        "gelotecrefrigeracao.com.br"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Navico Group",
+      "seed_urls": [
+        "https://promariner.navico.com/resources/",
+        "https://docs.navico.com/view/993106572/",
+        "https://promariner.navico.com/chargers/",
+        "https://promariner.navico.com/isolators/"
+      ],
+      "allowed_domains": [
+        "navico.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Actisense",
+      "seed_urls": [
+        "https://actisense.com/downloads/",
+        "https://actisense.com/acti_downloads/ngt-1-user-manual/"
+      ],
+      "allowed_domains": [
+        "actisense.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Maretron",
+      "seed_urls": [
+        "https://www.maretron.com/support.php",
+        "https://www.maretron.com/support/manuals/USB100UM_1.7.pdf",
+        "https://www.maretron.com/products/nmea-2000-gateways-bridges/"
+      ],
+      "allowed_domains": [
+        "maretron.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Schutz",
+      "seed_urls": [],
+      "allowed_domains": [],
+      "status": "planned"
+    },
+    {
+      "canonical": "Balmar",
+      "seed_urls": [
+        "https://www.balmar.net/wp-content/uploads/2017/12/MC-614-Installation-Operation-Manual.pdf",
+        "https://balmar.net/operation-manuals/",
+        "https://balmar.net/application/marine/alternators-charging-kits/6-series/"
+      ],
+      "allowed_domains": [
+        "balmar.net"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "OceanLED",
+      "seed_urls": [
+        "https://www.oceanled.com/downloads/",
+        "https://www.oceanled.com/product/explore-e6-xfm",
+        "https://www.oceanled.com/product/explore-e9",
+        "https://www.oceanled.com/sport-colours-camera-edition"
+      ],
+      "allowed_domains": [
+        "oceanled.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "SeaStar",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control",
+        "https://www.dometic.com/en-us/article/dometic-introduces-new-touch-screen-control",
+        "https://www.dometic.com/en-us/category/boat/marine-air-conditioners",
+        "https://www.dometic.com/en-us/lp/condaria-rebranding-page",
+        "https://www.dometic.com/en-us/lp/rebranded-cruisair",
+        "https://www.dometic.com/en-us/outdoor/boat/boat-toilets/dometic-masterflush-8500-193880?v=9600006448"
+      ],
+      "allowed_domains": [
+        "dometic.com",
+        "seastarsolutions.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Xtreme",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control",
+        "https://www.dometic.com/en-us/article/dometic-introduces-new-touch-screen-control",
+        "https://www.dometic.com/en-us/category/boat/marine-air-conditioners",
+        "https://www.dometic.com/en-us/lp/condaria-rebranding-page",
+        "https://www.dometic.com/en-us/lp/rebranded-cruisair",
+        "https://www.dometic.com/en-us/outdoor/boat/boat-toilets/dometic-masterflush-8500-193880?v=9600006448"
+      ],
+      "allowed_domains": [
+        "dometic.com",
+        "seastarsolutions.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "BayStar",
+      "seed_urls": [
+        "https://www.dometic.com/en-us/lp/marinelp-dometic-marine",
+        "https://www.dometic.com/globalassets/1-outdoor/out-category-pages/climate--comfort/air-conditioners/dometic-marine-ac-guide-2023.pdf",
+        "https://www.dometic.com/globalassets/1-outdoor/out-buying-guides/boat-toilets/dometic-marine-sanitation-guide-202363.pdf?ref=ACB369A871",
+        "https://www.dometic.com/en-us/product/dometic-optimus-link-9620017870",
+        "https://www.dometic.com/en-us/support/spare-parts-information",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners/marine-climate-water-pumps/dometic-magdrive-pump-328692",
+        "https://www.dometic.com/en-us/outdoor/boat/marine-control",
+        "https://www.dometic.com/en-us/article/dometic-introduces-new-touch-screen-control",
+        "https://www.dometic.com/en-us/category/boat/marine-air-conditioners",
+        "https://www.dometic.com/en-us/lp/condaria-rebranding-page",
+        "https://www.dometic.com/en-us/lp/rebranded-cruisair",
+        "https://www.dometic.com/en-us/outdoor/boat/boat-toilets/dometic-masterflush-8500-193880?v=9600006448"
+      ],
+      "allowed_domains": [
+        "dometic.com",
+        "seastarsolutions.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Simarine",
+      "seed_urls": [],
+      "allowed_domains": [
+        "simarine.net"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Lewmar",
+      "seed_urls": [],
+      "allowed_domains": [
+        "lewmar.com"
+      ],
+      "status": "planned"
+    },
+    {
+      "canonical": "Sleipner",
+      "seed_urls": [],
+      "allowed_domains": [
+        "sleipnergroup.com",
+        "side-power.com"
+      ],
+      "status": "planned"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-04-20T02:07:30.109742+00:00",
+  "queue_path": "90_Revisao_Manual/_Acervo_Local/acervo-download-queue.json",
+  "report_path": "90_Revisao_Manual/_Acervo_Local/acervo-download-report.json",
+  "item_count": 6,
+  "status_counts": {
+    "skipped_existing": 6
+  },
+  "results": [
+    {
+      "id": "CLI-HTE-001",
+      "url": "https://cdnc.heyzine.com/files/uploaded/cd9e129d3571f2a543bcf1092cba927781018aa8.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Climatizacao/H-Tec/HFC-Acqua/h-tec__hfc-acqua__catalogo-brochure__on-board.pdf",
+      "expected_type": "pdf",
+      "notes": "Brochure institucional H-Tec.",
+      "status": "skipped_existing",
+      "size_bytes": 19416257,
+      "sha256": "49ff2f92ba5a0793c5d6628a5cf973547a62e50fac7e77f0e8591bc5a3f1739a"
+    },
+    {
+      "id": "CLI-MAB-001",
+      "url": "https://www.mabrumarine.com/_files/ugd/845321_f84b887847dd43868478b625ffa032de.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Climatizacao/Mabru/Self-Contained-DC-VI/mabru__self-contained-dc-vi__installation-manual__2025.pdf",
+      "expected_type": "pdf",
+      "notes": "Manual oficial de instalação 2025 da Mabru.",
+      "status": "skipped_existing",
+      "size_bytes": 8001012,
+      "sha256": "49196f6780421c2bf1b82c01a4496aee5b6bd53c7bc7da6fa9f3d4451153d1e1"
+    },
+    {
+      "id": "GEN-CUM-006-PARTS",
+      "url": "https://www.seapowermarine.com/seapower22/download/1426/parts-manual/5832/mdkdp-dr-dv-parts-manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mkdv__parts-manual__a046l892.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual do bloco GEN-006.",
+      "status": "skipped_existing",
+      "size_bytes": 4160043,
+      "sha256": "087b478f3a8d0ebae4e1c09cb5af15c86c0e54d778108cb31ebe614f4c0abf94"
+    },
+    {
+      "id": "GEN-CUM-006-INSTALL",
+      "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__installation-manual__a046j598.pdf",
+      "expected_type": "pdf",
+      "notes": "Installation manual comum aos blocos médios Onan.",
+      "status": "skipped_existing",
+      "size_bytes": 2286515,
+      "sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    },
+    {
+      "id": "GEN-CUM-007-PARTS",
+      "url": "https://www.seapowermarine.com/seapower22/download/1426/parts-manual/5834/mdkds-dt-du-parts-manual.pdf",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__parts-manual__a046j604.pdf",
+      "expected_type": "pdf",
+      "notes": "Parts manual do bloco GEN-007.",
+      "status": "skipped_existing",
+      "size_bytes": 5803528,
+      "sha256": "fae9fd5e57a8e43d574bab41ca9414b91200ccb9fdb8776b1b3b7dc65e466c60"
+    },
+    {
+      "id": "GEN-CUM-007-INSTALL",
+      "url": "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/760932",
+      "target_relpath": "90_Revisao_Manual/_Acervo_Local/Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__installation-manual__a046j598.pdf",
+      "expected_type": "pdf",
+      "notes": "Installation manual comum aos blocos médios Onan.",
+      "status": "skipped_existing",
+      "size_bytes": 2286515,
+      "sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    }
+  ]
+}

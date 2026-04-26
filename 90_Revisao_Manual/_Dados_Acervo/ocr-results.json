@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-04-26T02:13:19.644344+00:00",
+  "source_audit": "manifest/acervo-pdf-toolchain-audit.json",
+  "tools": {
+    "pdftoppm": {
+      "path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Packages\\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\\poppler-25.07.0\\Library\\bin\\pdftoppm.EXE",
+      "version": "pdftoppm version 25.07.0"
+    },
+    "tesseract": {
+      "path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+      "version": "tesseract v5.5.0.20241111"
+    }
+  },
+  "results": [
+    {
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.pdf",
+      "acervo_relative_path": "Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.pdf",
+      "source_sha256": "6a5287a55b9b173bb0ddbb1cb8135b3c4e9feac174bdd8bcecd1f10172ab6f12",
+      "file_name": "dometic__marine-air-conditioners__price-list__2024.pdf",
+      "status": "partial",
+      "pages_total": 98,
+      "pages_completed": 98,
+      "pages_useful": 95,
+      "pages_failed": 3,
+      "chars": 213175,
+      "language": "por+eng",
+      "dpi": 150,
+      "psm": 3,
+      "generated_at": "2026-04-26T02:06:21.795165+00:00",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.ocr.md",
+      "failed_pages": [
+        {
+          "page": 1,
+          "status": "ok",
+          "message": ""
+        },
+        {
+          "page": 2,
+          "status": "ok",
+          "message": ""
+        },
+        {
+          "page": 97,
+          "status": "ok",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "acervo_relative_path": "Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "source_sha256": "4bcd9af75d0d74cbeaa7c46ea7c9f06f91af78ad7ffad78b210d7a47cd67d6db",
+      "file_name": "raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "status": "completed",
+      "pages_total": 3,
+      "pages_completed": 3,
+      "pages_useful": 3,
+      "pages_failed": 0,
+      "chars": 3767,
+      "language": "por+eng",
+      "dpi": 150,
+      "psm": 3,
+      "generated_at": "2026-04-26T02:06:05.181304+00:00",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.ocr.md",
+      "failed_pages": []
+    }
+  ]
+}
