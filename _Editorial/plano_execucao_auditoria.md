@@ -1341,6 +1341,62 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 9 CONCLUÍDA — 2026-04-26
+
+**Comando de continuidade:** cadência (a) auto-contínua em vigor (DEC-33). Cluster selecionado: **domínios 55_Iluminacao_e_Sinalizacao + 60_Automacao_Conectividade_e_Monitoramento** (11 notas Tier A — 7 de iluminação + 4 de automação).
+
+**Onda 9 executada (11 notas Tier A — todas retrofits — clusters Iluminação + Automação):**
+
+| # | Nota | Domínio | fase_6 | Destaques |
+|---|------|---------|--------|-----------|
+| 84 | Tipos de Lâmpadas e LEDs Náuticos (**MASTER**) | 55 | 84 | DEC-11 + DEC-14, IEC 60598/61347/62031/62717/62471/60529/61547, ABYC A-16/A-30, COLREGS Annex I + Rules 21-36, USCG 33 CFR 183, IES LM-79/LM-80/TM-21, INMETRO Portaria 144/2015, EU 2014/35 LVD + 2014/30 EMC + 2019/2020 EcoDesign, fundamentos LED (CCT/CRI/R9/IP/EMC/L70-L80) — **referenciada por todas as outras** |
+| 85 | Fitas Led / Iluminação Led | 55 | 85 | DEC-11 + DEC-14, chips SMD 2835/5050/3014/COB, densidade 30/60/120/240 LED/m, 12V × 24V, queda de tensão (alimentação bilateral >3 m), RGB/RGBW + controlador PWM, IP65/67/68, perfil de alumínio + difusor, conector estanque (Deutsch DT, Wieland), Hella SeaHawk Strip + Lumitec Caprera2 + Imtra ILIM + LunaSea + Paulmann + Ledvance |
+| 86 | Luz Subaquática | 55 | 86 | DEC-11 + DEC-14, surface mount × through-hull × pad-mount × cooling water-flow, IP68 obrigatório, ABYC H-27 + ISO 9093 + E-11.16 bonding mandatório, cor por penetração (azul 470 nm × verde 525 nm × branco 5500K+), bronze ASTM B584 vs polímero composto vs inox 316L, Lumishore SMX/Eclipse + Lumitec SeaBlazeX2 + Aqualuma Gen 4/5 + OceanLED 3010/DMX2010 + Bluefin Piranha + SeaVision + Underwater Lights USA |
+| 87 | Farol de Busca | 55 | 87 | DEC-11 + DEC-14, fixo × giratório motorizado × LED bar × multifeixe, COLREGS Rule 36 (sinais atenção) + Rule 22 (não confundir nav lights), ABYC A-30, ACR RCL-100/100D + Golight Stryker + Hella Mega Beam + Lumitec Caprera2 + Vetus + Quick Italy Nemo + Rigid Industries / Baja Designs |
+| 88 | Dimmer — Controle de Intensidade Luminosa | 55 | 88 | DEC-11 + DEC-14, 5 famílias canonicalizadas (PWM × TRIAC × 0-10V × DALI × DMX512) + wireless proprietário, IEC 60669-2-1 + 61347-2-13 + 62386 (DALI) + USITT DMX512-A + ANSI E1.20 (RDM), compatibilidade dimmer-LED é falha #1, Lutron Caseta + Lumitec POCO + Lumishore Lumix + CZone + EmpirBus NG/NG2 + Garmin OneHelm + Pathway Connectivity + ENTTEC |
+| 89 | Strobo | 55 | 89 | DEC-11 + DEC-14, MOB strobe + colete SOLAS + bote salva-vidas + distress mastro, COLREGS Annex IV + Rule 36, IMO MSC.81(70) LSA Code + SOLAS Chapter III + USCG 46 CFR 161, frequência 50-70 fpm + 0,75 cd + 1 nm visibilidade + 8h vida útil, ACR PathFinder 3/Firefly Pro + McMurdo Smartfind S5/S20 AIS + Pelican 2460/9420 + Princeton Tec Aqua Strobe + Plastimo SOS |
+| 90 | Luz de Cortesia | 55 | 90 | DEC-11 + DEC-14, downlight encastrado × surface mount step × gunwale strip × path light × cockpit ambient, ISO 19009 + ISO 16273 (night vision) + ABYC A-30, cor por aplicação (branca 3000-4000K × vermelha 620 nm × azul ambient), COLREGS Rule 22, Hella SeaHawk Mini + Lumitec Aurora/Lipstick/Andromeda + Imtra LunaSea + Aqualuma EZ-Connect + Quick Italy + Foresti & Suardi + Innovative Lighting |
+| 91 | Atuador Linear | 60 | 91 | DEC-11 + DEC-14, motor DC + redutor + parafuso esferas (ball screw) ou Acme/lead, aplicações (escotilha/T-top/plataforma popa/flap/trim-tilt/davit/mesa), stall current 5-10× nominal, duty cycle, limit switch, ABYC E-11/P-22/H-29 + IEC 60204-1/60034-1/60529 + ISO 12100/13849-1 + CE Machinery 2006/42/EC, anti-pinch ISO 13849-1 PL "c", Lewmar HC + Linak LA12/20/28/31/36/37 + Thomson Electrak HD/1/10/50 + SKF CAHB + Bosch Rexroth EMA + LinMot + Bug Buster |
+| 92 | Automação de Bordo — Sistemas Domoticos | 60 | 92 | DEC-11 + DEC-14, 4 arquiteturas (digital switching dedicado × lighting-first × monitoring × DIY open-source), princípios fail-safe + override manual + redundância + cybersecurity (IEC 62443), ABYC E-11/TE-30/TE-04, IEC 60945/61162-1/-3/-450, ISO 12100/13849-1, EU GDPR 2016/679, CZone Touch 5/7/10 + EmpirBus NG2 + Garmin OneHelm + Lumitec POCO + Maretron N2KView + Yacht Devices + Victron VRM/Cerbo GX + Home Assistant DIY |
+| 93 | Sensor de Nível Diesel | 60 | 93 | DEC-11 + DEC-14, 5 tecnologias (resistivo bóia × capacitivo × ultrassônico × radar × hidrostático), 3 padrões resistivos (USA SAE J1810 240-33Ω × Mercury 0-190Ω × VDO European 10-180Ω), ABYC H-24/H-25/H-33 + ISO 21487-1/-2 + ISO 8849/8846/7840/10088 + USCG 33 CFR 183 Subpart J, NMEA 2000 PGN 127505 instances 0-15, calibração tank shape (5-20 pontos), ANP Resolução 858/2021 + IBAMA Lei 9.605, Maretron TLM100/150/200/FPM100 + Wema Centroid + Airmar G2183 + KUS + VDO/Veethree + Centroid TankNet |
+| 94 | Sistema de Alarme Geral / Painel de Alarmes | 60 | 94 | DEC-11 + DEC-14, 4 arquiteturas (centralizada hardwired × NMEA 2000 distribuída × digital switching integrada × BNWAS dedicado SOLAS), priorização Critical/Warning/Info + audibilidade ≥75 dB + bateria reserva + sons distintos + mute timeout + logs, IMO MSC.282(86) BNWAS + IEC 62616 + SOLAS V/19.2.7.1, ABYC H-22/A-24/A-26/A-32 + ISO 21927/7240/13849-1, cascade BNWAS (helm → cabin master → second master → alarm geral), Maretron N2KView + Borel Marine + MGM Compak/SafeMaster + Offshore Systems/Faria + Furuno BNWAS + Garmin OneHelm + CZone alarm management |
+
+**Métricas Onda 9:**
+- **11 notas** processadas (11 retrofits + 0 novas)
+- **22 callouts novos** (11 tip + 11 danger)
+- **~715 termos de glossário** (média **~65/nota**)
+- **~435 normas expandidas/canonicalizadas** (média **~40/nota** — densidade premium-l3)
+- **11 notas com `normas_citadas`** (DEC-14 aplicada em 100%)
+- **0 novas decisões documentadas** (cluster coerente, sem decisão estrutural nova nesta onda)
+
+**Padrões reforçados nos clusters Onda 9 (14 padrões):**
+- **IEC 60598-1/-2-22/-2-23 (luminaires) + IEC 61347-2-13 (LED driver) + IEC 62031/62717 (LED modules) + IEC 60529 (IP) + IEC 62471 (fotobiologia)** stack iluminação completo
+- **IEC 61547 + IEC 61000-3-2/-6-1/-3** EMC stack — driver LED ruim mata VHF/GPS
+- **ABYC E-11 + A-16 (nav lights) + A-30 (cabin/weather deck) + TE-30 (electronics install) + TE-04 (lightning) + E-11.16 (bonding)** stack ABYC iluminação
+- **COLREGS Annex I + Rules 21/22/23/25/27/30/36 + Annex IV (distress)** — uso de luzes
+- **USCG 33 CFR 183 Subpart J + UL 1598/8750 + ANSI C78.377 + IES LM-79/LM-80/TM-21** stack USA
+- **ISO 19009 (internal lighting) + ISO 16273 (night vision) + ISO 9093 (passe-casco) + ISO 21487 (fuel tanks)**
+- **INMETRO Portaria 144/2015 + 132/2017 (LED etiquetagem BR) + ANATEL Resolução 715/2019**
+- **DPC NORMAM-201/211/05/204 + ABNT NBR 14728 + ABNT NBR 5410** stack BR
+- **EU 2014/35 LVD + 2014/30 EMC + 2014/90 MED + 2019/2020 EcoDesign + 2013/53 RCD** stack europeu
+- **NMEA 2000 IEC 61162-3 PGNs canonicalizados**: 127505 (Fluid Level), 127245+ (alarmes), 130306 (Wind), 128267 (Depth) — backbone instrumentação
+- **Digital switching marine**: CZone (Power Products) × EmpirBus NG/NG2 × Garmin OneHelm × Lumitec POCO + integração com MFDs
+- **ISO 12100/13849-1 + IEC 60204-1 + CE Machinery 2006/42/EC** stack safety of machinery (atuador, automação, alarme)
+- **IMO MSC.81(70) LSA Code + MSC.282(86) BNWAS + Resolution A.694(17)** stack IMO LSA + bridge
+- **Backlinks cruzados densos**: Tipos de Lâmpadas (mestre) ↔ Fitas LED ↔ Luz Subaquática ↔ Farol de Busca ↔ Dimmer ↔ Strobo ↔ Luz de Cortesia ↔ Iluminação Emergência (Tier S); Atuador Linear ↔ Plataforma Popa ↔ Flap ↔ Davit ↔ Catraca ↔ Piloto Automático; Sistema de Alarme ↔ Sensores diversos (CO/GLP/Diesel/Água/MOB/BMS) ↔ Automação de Bordo ↔ Telemetria
+
+**Commit:** entregue em 2 partes (commit 8d25e44 part 1 — 5 notas iluminação; commit ec04289 part 2 — 6 notas restantes + YAML). YAML: `fase_6_onda_09_tier_a_cluster_iluminacao_automacao_20260426.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 137 notas (135 + 2 notas-filhas novas Onda 7)
+- Concluído: **97 / 137** (**70,8%**) — Tier S (44) + bônus Onda 4 (1) + Onda 5 (11) + Onda 6 (11) + Onda 7 (14) + Onda 8 (5) + Onda 9 (11)
+- Próxima: **Onda 10 — Tier A restante 10/30/40** (Fundamentos + Conversão + Distribuição que faltam — ~11 notas) + Tier B + Tier C closure
+- **Marco Onda 9:** clusters Iluminação + Automação concluídos com nota mestre cross-referenciada (Tipos de Lâmpadas e LEDs Náuticos); >70% do Caminho B atingido; cadência (a) auto-contínua mantida sem decisão estrutural nova.
+
+**Cadência (a) — AUTO-CONTÍNUA (DEC-33 em vigor):** Onda 9 entregue; próxima onda prossegue sem pausa humana obrigatória. Gates preservados (commit + YAML + atualização de plano). Se qualquer escolha estrutural nova surgir (novo DEC, nova sub-fase, mudança de escopo), pausa imediata.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
