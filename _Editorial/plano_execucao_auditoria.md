@@ -1397,6 +1397,63 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 10 CONCLUÍDA — 2026-04-26
+
+**Comando de continuidade:** cadência (a) auto-contínua em vigor (DEC-33). Cluster selecionado: **domínio 10_Fundamentos_e_Projeto + domínio 30_Energia_e_Conversao** (10 notas Tier A — 7 de fundamentos teóricos+procedurais + 3 de geração/partida).
+
+**Onda 10 executada (10 notas Tier A — todas retrofits — clusters Fundamentos + Conversão):**
+
+| # | Nota | Domínio | fase_6 | Destaques |
+|---|------|---------|--------|-----------|
+| 95 | Lei de Ohm e Cálculos Básicos | 10 | 95 | DEC-11 + DEC-14, V=I×R + P=V×I + Kirchhoff KVL/KCL, ABYC E-11.4.4.1.b queda ≤3% + E-11.5 fusível 125%, DC × AC (RMS × pico × PF × impedância × harmônicas), tabela AWG × queda × comprimento, IEC 60364 + ISO 28848/13297, calor por efeito Joule (P=I²R), cargas não-ôhmicas (motor LRA/FLA, LED com driver) |
+| 96 | Princípios Náuticos | 10 | 96 | DEC-11 + DEC-14, classificação operacional (recreio × comercial × SOLAS × militar), ambiente marine vs residencial, 3 mecanismos corrosão (galvânica × eletrólise × stray currents), estrutura regulatória global (IMO → ISO/IEC/ITU → ABYC/EU MED/DPC NORMAM → ABNT/ANATEL/IBAMA/Marinha), classification societies (ABS, DNV, Lloyd's, RINA, BV, ClassNK, KR, CCS, RS) + LY3/PYC, fail-safe + redundância + override + EMC + surge + marine-grade |
+| 97 | Tipos de Embarcação | 10 | 97 | DEC-11 + DEC-14, classificação por uso (recreio × comercial × SOLAS × mega-iate × HSC × militar) + casco (mono × cat × tri × planning × deslocamento) + propulsão (motor × vela × híbrido × full electric) + material (fibra × Al × aço × madeira × inox), RCD categorias A/B/C/D explicitadas (Bft + ondas), implicações elétricas por tipo, NORMAM-201/211/08 + LESTA Lei 9.537 |
+| 98 | Simbologia Elétrica Náutica | 10 | 98 | DEC-11 + DEC-14, 3 padrões (IEC 60617 × ANSI/IEEE 315 × ABNT NBR 5444 + 14728), tabelas comparativas IEC × ANSI (fontes/proteção/comutação/cargas/aterramento/conectores/semicondutores), convenção de cores ABYC E-11.4 vs IEC vs ABNT, distinção crítica Terra × Chassi × PE × Bonding |
+| 99 | Leitura de Diagramas e Esquemas Elétricos | 10 | 99 | DEC-11 + DEC-14, procedimento estruturado em 7 passos, 4 tipos documento (unifilar × multifilar × esquema × planta), aplicação em troubleshooting via diagrama, software (AutoCAD Electrical, EPLAN, Eagle, KiCad, BoatED Diagrams) |
+| 100 | Referência Rápida — Valores de Campo | 10 | 100 | DEC-11 + DEC-14, **cheat sheet técnico** consolidando: tensões DC (12/24/48V) × AC (110/220/380V) × queda × AWG × fusível × disjuntor × cabo × isolação × bonding × ânodo × Ag/AgCl × banco × inversor × carregador × consumo típico × Beaufort × MARPOL/NORMAM × RPM motor × checklist inspeção × ferramentas mínimas — 100+ valores de referência |
+| 101 | Ferramentas do Eletricista Náutico | 10 | 101 | DEC-11 + DEC-14, toolkit profissional (Fluke 87V/179/T6/376/393 FC + Hioki + Klein + Knipex + Wera + FTZ + Ancor + T&B + Burndy), EPI NFPA 70E + NR-10 + IEC 61010-1/-2-030/-2-032/60900/61243/61482 + ANSI Z89.1/Z87.1, software (AutoCAD Electrical, EPLAN, Fluke Connect, Maretron N2KView), recomendação por nível profissional 1-4, calibração periódica documentada |
+| 102 | Arranque | 30 | 102 | DEC-11 + DEC-14, sistema de partida (banco + chave + solenoide + motor partida + cabos), ignition protection MANDATÓRIO em gasolina (ISO 8846 + SAE J1171 + UL 1500 + USCG 33 CFR 183.610), CCA × MCA × RC, bitola 2/0-4/0 AWG queda ≤5% LRA pico 200-1500A, MRBF/Class T fusível ≤7" (ABYC E-11.5.4), Bosch/Delco/Mitsubishi/Hitachi/Iskra marine starters |
+| 103 | Eólico (DC) | 30 | 103 | DEC-11 + DEC-14, aerogerador marine (rotor + PMDC/PMSG + tail vane + regulador + brake + cabling), IEC 61400-1/-2/-12/-21/-24 (small wind turbines) + ABYC E-11 + IEC 60092, curva potência (cut-in 4-6 nós, rated 25-30, cut-out 35-40), MPPT × shunt regulator (eficiência 15-30% maior em vento variável), Silentwind 400W + Air Breeze (Primus) + Ampair + Eclectic D400 + Rutland + Aerogen, lightning protection ABYC TE-04 + IEC 61400-24 mandatório |
+| 104 | Carregador Elétrico para Tender e Jet Ski | 30 | 104 | DEC-11 + DEC-14, tender elétrico (Torqeedo/Bellmarine/Oceanvolt) banco LFP 24V/48V/72V vs tender combustão (RIB) bateria 12V vs jet ski 12V/20-30Ah, multi-stage charger (Bulk-Absorption-Float chumbo / Bulk-Absorption LFP), ELCI 30 mA/100 ms obrigatório (ABYC E-11.11.1.6), ABYC E-13 emergente (hybrid/electric propulsion), CTEK + Mastervolt + Victron + Sterling + ProMariner + Noco + OEM (Torqeedo/Yamaha/Sea-Doo/Kawasaki) |
+
+**Métricas Onda 10:**
+- **10 notas** processadas (10 retrofits + 0 novas)
+- **20 callouts novos** (10 tip + 10 danger)
+- **~600 termos de glossário** (média **~60/nota**)
+- **~450 normas expandidas/canonicalizadas** (média **~45/nota** — densidade premium-l3)
+- **10 notas com `normas_citadas`** (DEC-14 aplicada em 100%)
+- **0 novas decisões documentadas** (cluster coerente, sem decisão estrutural nova)
+
+**Padrões reforçados nos clusters Onda 10 (16 padrões):**
+- **ABYC E-11 + E-11.4 + E-11.5 + E-11.16 + TE-04 + TE-30** stack elétrico marine canonicalizado em 100% das notas
+- **IEC 60617 + ANSI/IEEE 315 + ABNT NBR 5444 + 14728 + 5410** stack simbologia/instalação
+- **ISO 13297 + 28848 + 22090 + 8846 + 8849** stack marine ISO
+- **IEC 60092 family** (-507 pleasure craft, -202 starting, -353 cable) stack marine IEC
+- **IEC 60364** (instalações BT) + **IEC 60364-7-709** (marinas) stack instalação geral
+- **SAE J1171** (ignition protection) + **J1127/J1128** (battery cable) + **J537** (marine batteries) + **J930** (marine cable) stack SAE marine
+- **UL 1426 BC5W2 + UL 1500 + UL 1598 + UL 8750** stack USA listing
+- **USCG 33 CFR 183** (Subpart J nav lights, Subpart I electrical, Subpart K ventilation, 183.610 gasoline) + **46 CFR** (commercial) stack USCG
+- **COLREGS Rules 5/7/8** (lookout/risk/action) + Rule 22 (visibility) + Rule 36 (signals attention) + Annex IV (distress) referência cruzada
+- **SOLAS V/19/22/24** + IMO MSC.232/252/401 + Resolution A.694(17)
+- **Classification societies** (ABS, DNV, Lloyd's, RINA, BV, ClassNK, KR, CCS, RS) + LY3/PYC referência
+- **EU MED 2014/90 + RCD 2013/53 + LVD 2014/35 + EMC 2014/30 + RED 2014/53 + EcoDesign 2019/2020** stack europeu
+- **ABNT NBR 14728 + 5410** + ISO adoções + INMETRO Portaria 144/2015 + ANATEL Resolução 715/2019 stack brasileiro
+- **DPC NORMAM-01/02/04/05/08/201/204/211** stack DPC completo
+- **IEC 61010-1/-2-030/-2-032** (instrumentos) + **IEC 60900** (isolated tools) + **IEC 61243** (voltage detector) + **IEC 61482 / ASTM F1506 / NFPA 70E / NR-10** stack EPI/ferramentas
+- **Backlinks cruzados densos:** Lei de Ohm ↔ Princípios Náuticos ↔ Tipos de Embarcação ↔ Simbologia ↔ Leitura de Diagramas ↔ Referência Rápida ↔ Ferramentas (cluster fundamentos coerente); Arranque ↔ Bancos de Bateria ↔ Alternador (cluster partida); Eólico ↔ Solar ↔ Banco (cluster geração alternativa); Carregador Tender ↔ Davit ↔ Tender combustível/elétrico
+
+**Commit:** entregue em 3 partes (commit a214801 part 1 — Lei de Ohm + Princípios; commit 521c99a part 2 — Tipos de Embarcação + Simbologia + Leitura de Diagramas; commit 2ebebff part 3 — Referência Rápida + Ferramentas + Arranque + Eólico DC + Carregador Tender). YAML: `fase_6_onda_10_tier_a_cluster_fundamentos_conversao_20260426.yaml`.
+
+**Estado do Caminho B (Fase 6):**
+- Total planejado: 137 notas (135 + 2 notas-filhas novas Onda 7)
+- Concluído: **107 / 137** (**78,1%**) — Tier S (44) + bônus Onda 4 (1) + Onda 5 (11) + Onda 6 (11) + Onda 7 (14) + Onda 8 (5) + Onda 9 (11) + Onda 10 (10)
+- Próxima: **Onda 11 — Tier B + Tier C closure** (~26 notas — Tier B 18 + Tier C 17 - mas Tier C predominantemente MOCs/índices que requerem só normalização de frontmatter)
+- **Marco Onda 10:** Tier A do domínio Fundamentos + Conversão concluído; Lei de Ohm + Princípios Náuticos + Referência Rápida + Ferramentas formam o **núcleo procedimental do vault**; **>78% do Caminho B atingido**; cadência (a) auto-contínua mantida sem decisão estrutural nova; **Tier A da Fase 6 essencialmente completo** (resta apenas Tier B + Tier C para fechamento total).
+
+**Cadência (a) — AUTO-CONTÍNUA (DEC-33 em vigor):** Onda 10 entregue; próxima onda prossegue sem pausa humana obrigatória. Gates preservados (commit + YAML + atualização de plano). Se qualquer escolha estrutural nova surgir (novo DEC, nova sub-fase, mudança de escopo), pausa imediata.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
