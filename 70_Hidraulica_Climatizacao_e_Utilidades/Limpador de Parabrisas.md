@@ -3,9 +3,19 @@ title: "Limpador de Parabrisas"
 note_type: "technical-note"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "LIMPADOR DE PARABRISAS 9f419734f7fb83199e2301a78b4b5d06.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 131
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "IEC 60945"
+  - "IEC 60529 (IP)"
+  - "ISO 8846 (Ignition protection)"
+  - "ISO 11591 (Field of vision from helm) — referência cruzada"
+  - "ABNT NBR 14728"
+  - "Manual técnico AFI Marine / Doga / Speich Marine / Roca / Wynn"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://abycinc.org/standards/"
@@ -36,6 +46,21 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > O limpador de parabrisas náutico é um sistema simples na aparência, mas crítico para visibilidade e segurança. O conjunto depende de motor vedado, mecanismo de transmissão, posição de repouso, palheta adequada, alimentação correta e resistência ao ambiente salino.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Motor marine-grade vedado** (AFI, Doga, Speich, Roca, Wynn) com IPX5+ — wiper automotivo falha em 6-12 meses.
+> 2. **Park position (retorno automático ao repouso)** — sem isso, lâmina fica em vista atrapalhando visão.
+> 3. **Palheta adequada (silicone marine)** — borracha automotiva degrada com UV + sal em meses.
+> 4. **Alimentação ABYC E-11** com fusível dedicado + bonding; cabo dimensionado para corrente de pico (5-15A típico).
+
+> [!info] Glossário rápido
+> - **Wiper:** limpador de parabrisas.
+> - **Park position:** posição de repouso (motor retorna).
+> - **Pantográfico:** mecanismo de paralelogramo (limpa área retangular).
+> - **Tandem:** dois braços paralelos.
+> - **Palheta silicone:** resistente a UV/sal.
+> - **Washer pump:** bomba de água do limpador.
+> - **AFI Marine / Doga / Speich:** referências marine.
 
 ## O que é
 

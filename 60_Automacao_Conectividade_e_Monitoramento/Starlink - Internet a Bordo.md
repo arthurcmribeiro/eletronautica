@@ -3,9 +3,22 @@ title: "Starlink / Internet a Bordo"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "STARLINK INTERNET A BORDO 33a19734f7fb81018482d2332b9c9d34.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 127
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "ABYC TE-04 (Lightning protection)"
+  - "IEC 60945"
+  - "IEC 60529 (IP)"
+  - "ITU-R M.1747"
+  - "FCC Part 25 (Satellite communication)"
+  - "ANATEL Resolução 715/2019"
+  - "ANATEL Ato 14.448/2021 (Starlink BR homologação)"
+  - "Manual técnico Starlink Maritime / Mini / Standard"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -37,6 +50,21 @@ related_notes:
 ---
 
 # Starlink / Internet a Bordo
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Starlink Maritime / Mini / Standard** — escolher conforme cobertura + uso (Maritime tem cobertura oceânica + ROAM Global; Standard limitado a área fixa).
+> 2. **Antena (Dishy) requer linha de vista clara** — montagem em mastro / local sem obstrução; consumo ~50-110W (12V → 4-9A) em uso.
+> 3. **Surge protection** (ABYC TE-04) + bonding da carcaça — antena alta = antena para raio.
+> 4. **ANATEL homologado** no Brasil (Ato 14.448/2021); plano Maritime/ROAM cobre BR + costa.
+
+> [!info] Glossário rápido
+> - **Dishy:** antena Starlink (phased array Ku-band).
+> - **LEO:** Low Earth Orbit (satélites Starlink ~550 km altitude).
+> - **Latência:** ~25-40 ms (LEO) vs 600+ ms (GEO).
+> - **Maritime:** plano oceânico premium.
+> - **ROAM Global:** plano nômade global.
+> - **Standard:** plano residencial/fixo.
+> - **VSAT:** Very Small Aperture Terminal (legacy GEO).
 
 > [!abstract] Resumo técnico
 > STARLINK / INTERNET A BORDO — Solução de conectividade via satélite LEO para uso remoto, costeiro e marítimo, dependendo do hardware e do plano contratados. Cobertura, uso em movimento e acesso em águas costeiras ou oceânicas devem sempre ser confirmados na documentação oficial vigente.

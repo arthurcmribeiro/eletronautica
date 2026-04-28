@@ -3,10 +3,27 @@ title: "Monitoramento Remoto — VRM / Telemetria"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "MONITORAMENTO REMOTO — VRM TELEMETRIA 33a19734f7fb8100b1c2cbedc98aedd6.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
-review_jurisdiction:
-  - "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 125
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "IEC 60945"
+  - "IEC 61162-1/-3/-450 (NMEA)"
+  - "IEC 62443 (Cybersecurity industrial)"
+  - "ISO 27001 (Information security)"
+  - "EU GDPR 2016/679"
+  - "LGPD Lei 13.709/2018 (BR)"
+  - "ANATEL Resolução 715/2019"
+  - "DPC NORMAM-211/DPC"
+  - "Manual técnico Victron VRM / Cerbo GX / GlobalLink 520"
+  - "Manual técnico Garmin OneHelm / ActiveCaptain"
+  - "Manual técnico Maretron N2KView Cloud"
+  - "Manual técnico Yacht Devices YDNG / YDNB"
+  - "Manual técnico Siren Marine MTC"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -42,6 +59,20 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > MONITORAMENTO REMOTO — VRM / TELEMETRIA — Plataforma de monitoramento remoto da Victron para sistemas conectados a um GX device com internet. Permite monitorar, alertar, diagnosticar e, em certos casos, controlar dispositivos compatíveis remotamente.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **VRM (Victron) é referência** mas não-exclusivo — alternativas: Maretron N2KView Cloud, Garmin ActiveCaptain, Yacht Devices YDNG, Siren Marine MTC.
+> 2. **Cybersecurity é crítica:** IEC 62443 + ISO 27001 + senha forte + 2FA + firmware atualizado. Sistema crítico (bomba, alarme) deve ter override OFFLINE.
+> 3. **Conectividade necessária:** Wi-Fi marina, celular 4G/5G (CAT-M IoT), ou Starlink — escolha por área de operação. Vide [[Wi-Fi a Bordo — Roteador Marine e Conectividade]] + [[Starlink - Internet a Bordo]].
+> 4. **Privacidade regulada:** GDPR (UE) + LGPD Lei 13.709/2018 (BR) — dados pessoais (localização GPS, identificação) precisam consentimento + retenção limitada.
+
+> [!info] Glossário rápido
+> - **VRM (Victron Remote Management):** plataforma cloud Victron.
+> - **GX device:** Cerbo GX, Color Control, Venus GX (gateway Victron).
+> - **N2KView Cloud:** plataforma Maretron.
+> - **CAT-M / NB-IoT:** celular para IoT (baixo consumo).
+> - **2FA:** Two-Factor Authentication.
+> - **Telemetria:** transmissão automática de dados a distância.
 
 ## O que é
 

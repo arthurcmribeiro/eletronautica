@@ -3,9 +3,22 @@ title: "Wi-Fi a Bordo — Roteador Marine e Conectividade"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "WI-FI A BORDO — ROTEADOR MARINE E CONECTIVIDADE 33a19734f7fb8139a6d9c3aa78b1c688.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 130
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "IEC 60945"
+  - "IEEE 802.11 a/b/g/n/ac/ax/be (Wi-Fi 1-7)"
+  - "IEC 60529 (IP)"
+  - "IEC 61547 (EMC)"
+  - "ANATEL Resolução 715/2019 + Portaria 14.448 (2,4/5GHz/6GHz)"
+  - "FCC Part 15"
+  - "EU Directive 2014/53/EU (RED)"
+  - "Manual técnico Peplink Pepwave / WirelessHaven / Mikrotik / Ubiquiti / GL.iNet"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -37,6 +50,22 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > WI-FI A BORDO — Rede local sem fio usada para distribuir conectividade e integrar dispositivos a bordo. Wi-Fi não é sinônimo de internet: a rede local pode existir sem acesso externo, e a internet pode vir de 4G/5G, Starlink, Wi-Fi de marina ou outras fontes WAN.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Roteador marine-grade** (Peplink Pepwave MAX BR1/HD2/Transit, Mikrotik LtAP, Ubiquiti UniFi, GL.iNet) com IP rated + EMC + multi-WAN (4G/5G + Starlink + Wi-Fi marina).
+> 2. **Multi-WAN failover** essencial: Wi-Fi marina (rápido + grátis) → 4G/5G (em movimento) → Starlink (oceânico) — switch automático.
+> 3. **Wi-Fi 6/6E (802.11ax/be)** preferível em yacht moderno — múltiplos dispositivos simultâneos sem congestionar.
+> 4. **Cybersecurity** — senha forte WPA3 + segregação de rede (instrumentos NMEA isolados de dispositivos guest) + firmware atualizado.
+
+> [!info] Glossário rápido
+> - **WAN:** Wide Area Network (internet externa).
+> - **LAN:** Local Area Network (rede interna).
+> - **Multi-WAN:** múltiplas conexões WAN com balanceamento.
+> - **Failover:** mudança automática de WAN ativa.
+> - **WPA3:** padrão de segurança Wi-Fi atual.
+> - **VLAN:** Virtual LAN (segregação de rede).
+> - **Pepwave / Peplink:** referência marine multi-WAN.
+> - **Wi-Fi 6/6E/7:** padrões IEEE 802.11ax/ax/be.
 
 ## O que é
 

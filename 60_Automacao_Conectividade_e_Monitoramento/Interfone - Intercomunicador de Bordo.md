@@ -3,9 +3,20 @@ title: "Interfone / Intercomunicador de Bordo"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "INTERFONE INTERCOMUNICADOR DE BORDO 33a19734f7fb8108897aec76ca245eb2.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 124
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "IEC 60945"
+  - "IEC 60529 (IP)"
+  - "IEC 61010-1"
+  - "ISO 9009 (HDMI/audio)"
+  - "ABNT NBR 14728"
+  - "ANATEL Resolução 715/2019"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -37,6 +48,20 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Interfone de bordo é um sistema de comunicação interna entre estações fixas ou móveis da embarcação. O valor técnico está em permitir coordenação clara em manobras, operação de máquinas e atendimento interno sem depender de celular, grito ou do uso indevido do VHF.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Distinguir interfone vs VHF:** VHF é regulado (ITU-R / ANATEL) e usado para fora; interfone é uso interno + manobra (ponte ↔ casa de máquinas ↔ popa ↔ cabines).
+> 2. **Casa de máquinas → ponte é o ramal mais crítico** — em emergência, comunicação clara salva equipamento e vida. Cabo blindado + alto-falante de alta intensidade IP67.
+> 3. **Tecnologias:** PoE (Power over Ethernet, Cisco SPA-Series, Grandstream, Yealink) × wireless DECT (Panasonic) × analog clássico marine (Phontech, Vingtor-Stentofon).
+> 4. **Intelligibilidade > volume** — alto-falante calibrado para Speech Transmission Index (STI) >0,55 em casa de máquinas barulhenta.
+
+> [!info] Glossário rápido
+> - **PA (Public Address):** sistema de notificação geral.
+> - **PABX:** central telefônica.
+> - **PoE:** Power over Ethernet (IEEE 802.3af/at).
+> - **DECT:** Digital Enhanced Cordless Telecommunications.
+> - **STI (Speech Transmission Index):** métrica de inteligibilidade.
+> - **Vingtor-Stentofon / Phontech:** referências marine commercial.
 
 ## O que é
 

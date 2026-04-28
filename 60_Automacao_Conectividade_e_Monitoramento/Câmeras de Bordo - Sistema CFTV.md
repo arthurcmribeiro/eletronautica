@@ -3,9 +3,22 @@ title: "Câmeras de Bordo / Sistema CFTV"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "CÂMERAS DE BORDO SISTEMA CFTV 33a19734f7fb813ebf9ece9616f73405.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 123
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11 (AC and DC Electrical Systems on Boats)"
+  - "ABYC TE-30 (Electronic Equipment Installation)"
+  - "IEC 60945 (Maritime navigation equipment)"
+  - "IEC 60529 (IP)"
+  - "IEC 61010-1 (Safety of measurement equipment)"
+  - "IEC 62676-1/-2 (Video surveillance systems)"
+  - "ONVIF (Open Network Video Interface Forum)"
+  - "ABNT NBR 14728"
+  - "LGPD Lei 13.709/2018 (Brasil — privacidade gravação)"
+  - "GDPR (UE — privacidade)"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -38,6 +51,22 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > CÂMERAS DE BORDO — Sistema de monitoramento visual para manobra, segurança e vigilância. A escolha correta depende da função: câmera de ré, câmera IP, gravação contínua e acesso remoto não são a mesma coisa e não devem ser projetados como se fossem.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Diferenciar função:** câmera de ré (ManobrAuto, baixa latência, tela do MFD) ≠ câmera IP de vigilância (gravação NVR/cloud, ONVIF, alta resolução) ≠ térmica/FLIR (M-Series).
+> 2. **IP67+ obrigatório** em câmera externa — IEC 60529. Câmera residencial IP44 falha em 6-12 meses.
+> 3. **Privacidade regulada** — LGPD Lei 13.709/2018 (BR) + GDPR (UE) em embarcação charter / comercial: aviso visível + retenção limitada + acesso restrito.
+> 4. **Integração com MFD** (Garmin OneHelm, Raymarine LightHouse, Furuno NavNet) ou NVR dedicado (Hikvision, Dahua, Axis marine-grade).
+
+> [!info] Glossário rápido
+> - **CFTV:** Circuito Fechado de TV.
+> - **NVR:** Network Video Recorder.
+> - **DVR:** Digital Video Recorder.
+> - **IP camera:** câmera de rede.
+> - **ONVIF:** padrão de interoperabilidade.
+> - **PoE:** Power over Ethernet (até 30W per IEEE 802.3at).
+> - **FLIR:** câmera térmica infravermelha.
+> - **MFD:** Multifunction Display.
 
 ## O que é
 
