@@ -2,10 +2,12 @@
 title: "MOC — Diagnóstico e Manutenção"
 note_type: "moc"
 domain: "00_Mapas"
-status: "technical-review-l1"
-reviewed_on: "2026-04-17"
-review_jurisdiction:
-  - "Brasil"
+status: "moc-curated"
+fase_6_reescrita: 116
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 aliases:
   - "Hub de Diagnóstico e Manutenção"
 seo_title: "MOC de diagnóstico e manutenção da elétrica náutica"

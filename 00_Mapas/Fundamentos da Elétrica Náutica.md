@@ -3,8 +3,12 @@ title: "Fundamentos da Elétrica Náutica"
 note_type: "moc"
 domain: "00_Mapas"
 source_file: "FUNDAMENTOS DA ELETRICA NÁUTICA 1e419734f7fb80f9abe4d621dcf45570.md"
-status: "technical-review-l1"
-review_level: "engineering-curated"
+status: "moc-curated"
+fase_6_reescrita: 120
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 aliases:
   - "FUNDAMENTOS DA ELETRICA NÁUTICA"
   - "Mapa central da elétrica náutica"

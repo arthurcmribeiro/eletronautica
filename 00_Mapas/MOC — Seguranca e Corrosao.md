@@ -2,6 +2,12 @@
 title: "MOC — Seguranca e Corrosao"
 note_type: "moc"
 domain: "80_Seguranca_e_Corrosao"
+status: "moc-curated"
+fase_6_reescrita: 114
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 ---
 
 # MOC — Seguranca e Corrosao

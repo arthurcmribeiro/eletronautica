@@ -2,6 +2,12 @@
 title: "MOC — Iluminacao e Sinalizacao"
 note_type: "moc"
 domain: "55_Iluminacao_e_Sinalizacao"
+status: "moc-curated"
+fase_6_reescrita: 112
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 ---
 
 # MOC — Iluminacao e Sinalizacao

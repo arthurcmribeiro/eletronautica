@@ -2,6 +2,12 @@
 title: "MOC — Distribuicao Protecao e Aterramento"
 note_type: "moc"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
+status: "moc-curated"
+fase_6_reescrita: 110
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 ---
 
 # MOC — Distribuicao Protecao e Aterramento

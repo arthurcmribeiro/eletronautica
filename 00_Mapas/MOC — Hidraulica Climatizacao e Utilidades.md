@@ -2,6 +2,12 @@
 title: "MOC — Hidraulica Climatizacao e Utilidades"
 note_type: "moc"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
+status: "moc-curated"
+fase_6_reescrita: 105
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 ---
 
 # MOC — Hidraulica Climatizacao e Utilidades
@@ -9,6 +15,7 @@ domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 ## Notas
 
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Aquecedor de Bordo - Cabin Heater|Aquecedor de Bordo / Cabin Heater]]
+- [[70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Chiller - Chilled Water Marine|Ar-Condicionado Chiller / Chilled Water Marine]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Marine — Sistema Completo|Ar-Condicionado Marine — Sistema Completo]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Blower|Blower]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Boiler|Boiler]]
@@ -32,4 +39,6 @@ domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Macerador - Bomba de Águas Negras|Macerador / Bomba de Águas Negras]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Plataforma de Popa Elétrica - Hidráulica|Plataforma de Popa Elétrica / Hidráulica]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Sensor de Nível de Água|Sensor de Nível de Água]]
+- [[70_Hidraulica_Climatizacao_e_Utilidades/Sistema Sanitário a Vácuo - VacuFlush - SailVAC|Sistema Sanitário a Vácuo / VacuFlush / SailVAC]]
 - [[70_Hidraulica_Climatizacao_e_Utilidades/Thruster|Thruster]]
+- [[70_Hidraulica_Climatizacao_e_Utilidades/Óleos Hidráulicos Marine — Guia Completo|Óleos Hidráulicos Marine — Guia Completo]]
