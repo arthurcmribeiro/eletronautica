@@ -1454,6 +1454,82 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 
 ---
 
+## 🌊 FASE 6 (Caminho B) — ONDA 11 CONCLUÍDA — 2026-04-26 — **CAMINHO B 100% FECHADO**
+
+**Comando de continuidade:** cadência (a) auto-contínua em vigor (DEC-33). Cluster selecionado: **Tier B (12 notas operacionais) + Tier C (16 MOCs/guias)** — encerramento total da Fase 6.
+
+**Onda 11 executada (28 notas — 16 Tier C frontmatter normalizado + 12 Tier B DEC-11 light):**
+
+### Tier C — 16 MOCs/guias frontmatter normalizado (fase 105-120)
+
+| # | Nota | Domínio | fase_6 | Destaque |
+|---|------|---------|--------|----------|
+| 105 | MOC — Hidraulica Climatizacao e Utilidades | 00/70 | 105 | + daughter notes Wave 7 (Sistema Sanitário a Vácuo + Ar-Condicionado Chiller) + Óleos Hidráulicos Marine |
+| 106 | MOC — Mapas | 00 | 106 | Mapa dos mapas |
+| 107 | MOC — Fundamentos e Projeto | 00/10 | 107 | Hub fundamentos |
+| 108 | MOC — Baterias e Armazenamento | 00/20 | 108 | Hub baterias |
+| 109 | MOC — Energia e Conversao | 00/30 | 109 | Hub energia |
+| 110 | MOC — Distribuicao Protecao e Aterramento | 00/40 | 110 | Hub distribuição |
+| 111 | MOC — Navegacao Instrumentacao e Comunicacao | 00/50 | 111 | Hub navegação |
+| 112 | MOC — Iluminacao e Sinalizacao | 00/55 | 112 | Hub iluminação |
+| 113 | MOC — Automacao Conectividade e Monitoramento | 00/60 | 113 | Hub automação |
+| 114 | MOC — Seguranca e Corrosao | 00/80 | 114 | Hub segurança |
+| 115 | MOC — Revisao Manual | 00/90 | 115 | Hub revisão manual |
+| 116 | MOC — Diagnóstico e Manutenção | 00 | 116 | Hub transversal diagnóstico |
+| 117 | MOC — Segurança Integrada | 00 | 117 | Hub transversal segurança |
+| 118 | Atlas Técnico | 00 | 118 | Mapa central |
+| 119 | Guia da Vault Curada | 00 | 119 | Convenções editoriais |
+| 120 | Fundamentos da Elétrica Náutica | 00 | 120 | Mapa central de estudo |
+
+### Tier B — 12 notas operacionais com DEC-11 light (fase 121-132)
+
+| # | Nota | Domínio | fase_6 | Destaque |
+|---|------|---------|--------|----------|
+| 121 | Buzina | 50 | 121 | COLREGS Rules 33-35 + Annex III, sinais por porte |
+| 122 | Luzes Internas Teto | 55 | 122 | LED 12V/24V marine-grade, IP44+, vermelho 620nm |
+| 123 | Câmeras de Bordo / Sistema CFTV | 60 | 123 | Diferenciação ré × IP × FLIR, LGPD/GDPR, ONVIF |
+| 124 | Interfone / Intercomunicador de Bordo | 60 | 124 | VHF vs interfone, STI ≥0,55, Vingtor-Stentofon/Phontech |
+| 125 | Monitoramento Remoto — VRM / Telemetria | 60 | 125 | Victron VRM + Maretron + Garmin + Yacht Devices, IEC 62443 |
+| 126 | Som | 60 | 126 | Marine-grade Fusion/JL/Sony/Pioneer/Kicker, NMEA 0400 |
+| 127 | Starlink / Internet a Bordo | 60 | 127 | Maritime/Mini/Standard, ANATEL Ato 14.448/2021 |
+| 128 | TV a Bordo / Entretenimento | 60 | 128 | Marine-grade Samsung/LG/Furrion/Jensen, anti-vibração |
+| 129 | USB 12V (Power) | 60 | 129 | Blue Sea/Marinco/Furrion/Hella, USB-C PD 240W (PD 3.1 EPR) |
+| 130 | Wi-Fi a Bordo — Roteador Marine | 60 | 130 | Peplink/Mikrotik/Ubiquiti/GL.iNet, Wi-Fi 6/6E, multi-WAN failover |
+| 131 | Limpador de Parabrisas | 70 | 131 | Marine IPX5+ AFI/Doga/Speich/Roca, ISO 11591 field of vision |
+| 132 | Sensor de Nível de Água | 70 | 132 | Desambiguação tanque doce × porão × cinzas/negras, NMEA PGN 127505 |
+
+**Métricas Onda 11:**
+- **28 notas** processadas (16 Tier C + 12 Tier B)
+- **12 callouts novos** (12 tip — Tier B only)
+- **~80 termos de glossário** (Tier B 4-8 × 12 notas)
+- **~130 normas expandidas/canonicalizadas** (Tier B 8-15 × 12 notas; Tier C [] vazio)
+- **12 notas com `normas_citadas`** (DEC-14 aplicada apenas em Tier B; Tier C vazio por design)
+- **0 novas decisões documentadas** (closure — sem decisão estrutural)
+
+**Padrões Onda 11:**
+- **Tier C MOCs com `normas_citadas: []`** (MOCs são guia de navegação, não citam normas técnicas)
+- **Tier B com escopo proporcional**: TL;DR 4 regras + glossário 4-8 termos + sem danger callout (componente operacional)
+- **Two-tier closure** consolidado (Tier C frontmatter only + Tier B DEC-11 light)
+- **Stack ABYC + IEC + ABNT + DPC NORMAM + EU + INMETRO + ANATEL** mantido proporcional ao escopo
+
+**Commit:** entregue em 2 partes (commit 9633d58 part 1 — 16 MOCs Tier C; commit b7f4c3c part 2 — 12 Tier B). YAML: `fase_6_onda_11_tier_b_e_c_closure_20260426.yaml`.
+
+**🏁 ESTADO FINAL DO CAMINHO B (Fase 6) — 100% FECHADO:**
+
+| Tier | Notas | Template | Status |
+|------|-------|----------|--------|
+| **Tier S** (premium full DEC-11) | 44 + 1 bônus = 45 | TL;DR 9 + Danger 5-9 + Glossário 15-25 + normas canonicalizadas | ✅ |
+| **Tier A** (premium recalibrado) | 49 (Onda 5: 11 + Onda 6: 11 + Onda 7: 14 + Onda 8: 5 + Onda 9: 11 - sobrep + Onda 10: 10) + 2 daughter notes Onda 7 = 51 | TL;DR 9-10 + Danger 9-10 + Glossário 50-90 + normas 30-65 | ✅ |
+| **Tier B** (DEC-11 light) | 12 | TL;DR 4 + Glossário 4-8 + frontmatter normalizado | ✅ |
+| **Tier C** (frontmatter only) | 16 MOCs + 1 README | status bump + normas vazio | ✅ |
+| **Total** | **137 notas** | **100%** | **✅ 100%** |
+
+**🎯 Marco final Onda 11:** Caminho B encerrado em 100% (137/137); cadência (a) auto-contínua executada com sucesso desde Onda 5 (DEC-33); 8 ondas Tier S/A executadas em série + 1 onda final closure (Tier B + C); template DEC-11 demonstrou robustez em 4 variantes (Tier S full / Tier A premium / Tier B light / Tier C frontmatter); 8 novos DECs documentados ao longo da Fase 6 (DEC-30 a DEC-41); regulação multi-jurisdição canonicalizada (ABYC + IEC + ISO + IMO + COLREGS + SOLAS + ABNT + DPC NORMAM + EU + INMETRO + ANATEL + USCG + classification societies).
+
+**Cadência (a) — AUTO-CONTÍNUA encerrada com sucesso.** Próxima Fase: Fase 7 (post-Caminho B — manutenção contínua + Visual Layer + Skills + integração editorial) — pausa para revisão humana e definição de escopo.
+
+---
+
 
 > **Base:** Prompt Mestre v2 (`01_prompt_mestre_v2.md`) + Schema de Auditoria (`02_schema_auditoria_nota.json`) + Schedules Claude Code (`03_claude_code_schedules.md`)
 >
