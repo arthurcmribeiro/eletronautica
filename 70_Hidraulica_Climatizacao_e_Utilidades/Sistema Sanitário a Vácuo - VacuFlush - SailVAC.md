@@ -526,7 +526,7 @@ ELÉTRICO:
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação + proteção.
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]] — dimensionamento.
 - [[Disjuntores (DC) e (AC)]] — proteção do ramal AC.
-- [[DR (Dispositivo Diferencial Residual)]] — DR 30 mA obrigatório em AC.
+- [[Proteção Dr]] — DR 30 mA obrigatório em AC.
 - [[Bonding — Sistema de Interligação de Massas]] — bonding contínuo.
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos.
 

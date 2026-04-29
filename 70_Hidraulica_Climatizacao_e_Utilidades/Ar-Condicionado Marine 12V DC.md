@@ -414,7 +414,7 @@ AC 12 V DC marine fica na interseção de **elétrica DC de baixa tensão com al
 
 - [[Ar-Condicionado Marine — Sistema Completo]] (nota-mãe, AC 220 V)
 - [[CAIS (Pier) (AC)]]
-- [[Fusíveis Gerais DC]]
+- [[Fusíveis DC — Proteção Contra Sobrecorrente]]
 - [[Gerador (AC)]]
 - [[Hotline (DC)]]
 - [[Inversora (DC To AC)]]

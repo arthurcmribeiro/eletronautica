@@ -222,7 +222,7 @@ O **sistema de alarme geral** consolida múltiplos sensores em **painel central*
 | Alarme | Severidade | Sensor | Ação típica |
 |--------|------------|--------|-------------|
 | **Alagamento crítico** | Critical | Float + capacitivo + sensor de água em casa máquinas | Audible + visual + bomba ON + chama tripulação |
-| **CO (Carbon Monoxide)** | Critical | Eletroquímico (vide [[Detector de CO]]) | Audible + ventilação + chama tripulação |
+| **CO (Carbon Monoxide)** | Critical | Eletroquímico (vide [[Detector de CO — Monóxido de Carbono]]) | Audible + ventilação + chama tripulação |
 | **GLP (LPG leak)** | Critical | Catalítico / IR (vide [[Detector de Gás GLP - GN]]) | Audible + solenoid OFF + ventilação |
 | **Fumaça / Fogo** | Critical | Fotoelétrico / iônico (ISO 21927) | Audible + sistema FFE (extintor automatico) |
 | **MOB** | Critical | Cordão / strobe | Audible + STANDBY piloto + Williamson turn |

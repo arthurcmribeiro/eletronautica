@@ -577,18 +577,18 @@ related_notes:
 - [[Detector de Gás GLP GN]] — sensor obrigatório em qualquer instalação GLP/CNG.
 - [[Detector de CO — Monóxido de Carbono]] — obrigatório em galley fechada (qualquer combustível).
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — proteção e seleção de fonte para indução.
-- [[DR (Dispositivo Diferencial Residual)]] — 30 mA AC obrigatório.
-- [[Inversor (DC To AC)]] — alimenta indução em embarcação sem gerador.
+- [[Proteção Dr]] — 30 mA AC obrigatório.
+- [[Inversora (DC To AC)]] — alimenta indução em embarcação sem gerador.
 - [[Gerador (AC)]] — fonte preferida para indução / cooktop AC alta carga.
 - [[Carregador de Bateria (AC To DC)]] — recarga durante uso AC.
-- [[Bateria Náutica]] — banco DC; relevante quando alimentação é via inversor.
+- [[Bancos de Bateria]] — banco DC; relevante quando alimentação é via inversor.
 - [[Disjuntores (DC) e (AC)]] — curva C ou D para indução (inrush bobina).
 - [[Casa de Máquinas e Paiol]] — local típico do compartimento de gás OU do gerador.
 - [[Bomba de Água Pressurizada]] — alimentação da pia da galley.
 - [[Boiler]] — produção de água quente para pia.
 - [[Geladeira - Freezer de Bordo]] — outro consumidor relevante AC/DC.
-- [[Microondas - Forno]] — outra carga AC alta a coordenar.
-- [[Soft Starter]] — partida suave de cargas indutivas grandes.
+- microondas/forno — outra carga AC alta a coordenar.
+- soft starter — partida suave de cargas indutivas grandes.
 - [[Bonding — Sistema de Interligação de Massas]] — proteção elétrica.
 - [[Aquecedor de Bordo - Cabin Heater]] — quando há sistema diesel comum (ex: Wallas combinado).
 

@@ -396,7 +396,7 @@ Todas simplificam demais e induzem instalação ruim — algumas são **ilegais*
 - **[[Proteção Dr]]** — DR/RCBO/GFCI/ELCI detalhado.
 - **[[Quadro Elétrico e Painel de Distribuição AC-DC]]** — estrutura onde linha leve vive.
 - **[[Hotline (DC)]]** — exemplo de circuito "always-on" em DC; linha leve AC em geral **não** deve ter tomadas sempre energizadas sem justificativa.
-- **[[Aterramento - Negativo - Terra]]** — referência de terra compartilhada com linha leve.
+- **[[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]]** — referência de terra compartilhada com linha leve.
 
 ## Normas e referências
 
@@ -534,7 +534,7 @@ Depende do dimensionamento. Inversor 2 kVA ≈ 8,7 A em 230 V ≈ 16,7 A em 120 
 - [[Linha Pesada (AC)]]
 - [[Proteção Dr]]
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]]
-- [[Aterramento - Negativo - Terra]]
+- [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]]
 - [[Hotline (DC)]]
 
 ## Perguntas que esta nota responde

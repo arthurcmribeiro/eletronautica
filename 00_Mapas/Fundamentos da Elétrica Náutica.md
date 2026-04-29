@@ -160,7 +160,7 @@ Leia este bloco quando a pergunta envolver navegação noturna, visibilidade, co
 - [[Iluminação de Emergência a Bordo]]
 - [[Farol de Busca]]
 - [[Tipos de Lâmpadas e LEDs Náuticos]]
-- [[Fitas LED Iluminação LED]]
+- [[Fitas Led - Iluminação Led]]
 - [[Dimmer — Controle de Intensidade Luminosa]]
 
 ## Trilha 8 — Automação, conectividade e monitoramento

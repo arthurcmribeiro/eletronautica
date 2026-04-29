@@ -351,7 +351,7 @@ Usar **torquímetro calibrado** — aperto excessivo amassa filamento de cobre (
 - **[[Barramento DC - Bus Bar - Distribuição DC]]** — pontos críticos de conexão.
 - **[[Banco de Baterias]]** — terminais de alta corrente e baixa tolerância a erro.
 - **[[Inspeção de Cabos Terminais e Conexões]]** — manutenção e auditoria.
-- **[[Fusíveis DC - Proteção Contra Sobrecorrente]]** e **[[Disjuntores (DC) e (AC)]]** — consequências de mau contato na proteção.
+- **[[Fusíveis DC — Proteção Contra Sobrecorrente]]** e **[[Disjuntores (DC) e (AC)]]** — consequências de mau contato na proteção.
 - **[[Aterramento]]** — terminais do PE exigem mesma disciplina.
 - **[[Quadro Elétrico e Painel de Distribuição AC-DC]]** — onde a maior parte dos terminais convive.
 - **[[Chaves Gerais (DC)]]**, **[[Chaves Seletoras (AC)]]**, **[[Relés e Relés de Estado Sólido]]**, **[[Contatores (AC)]]** — bornes de saída exigem terminais adequados.
@@ -491,7 +491,7 @@ Três camadas em sequência: (1) **crimpagem** com butt splice estanhado Ancor o
 - [[Barramento DC - Bus Bar - Distribuição DC]]
 - [[Banco de Baterias]]
 - [[Inspeção de Cabos Terminais e Conexões]]
-- [[Fusíveis DC - Proteção Contra Sobrecorrente]]
+- [[Fusíveis DC — Proteção Contra Sobrecorrente]]
 - [[Disjuntores (DC) e (AC)]]
 - [[Aterramento]]
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]]

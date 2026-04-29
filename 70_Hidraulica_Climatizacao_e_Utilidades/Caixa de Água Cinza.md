@@ -434,7 +434,7 @@ ABYC H-23.7 + ANVISA Portaria 888/2021 + ASSE 1001:
 - [[Bomba de Porão]] — circuito DIFERENTE; não confundir.
 - [[Boiler]] — chuveiro alimenta gray water tank; volume típico do boiler dimensiona pico de uso.
 - [[Dessanilizador]] — quando há watermaker, há descarga de salmoura de rejeição; rota separada (overboard direto, NUNCA gray water tank).
-- [[DR (Dispositivo Diferencial Residual)]] — proteção de circuitos AC da bomba.
+- [[Proteção Dr]] — proteção de circuitos AC da bomba.
 
 ## Perguntas que esta nota responde
 

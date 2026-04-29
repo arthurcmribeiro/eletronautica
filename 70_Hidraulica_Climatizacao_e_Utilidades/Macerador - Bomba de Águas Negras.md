@@ -560,7 +560,7 @@ LIGAR APENAS PARA MEDIÇÃO ELÉTRICA, COM EPI E ÁREA SECA.
 - [[Cabeamento Náutico]] — bitola e tinned-copper.
 - [[Dimensionamento de Cabos DC — Cálculo Prático]] — queda de tensão sob carga.
 - [[Bonding — Sistema de Interligação de Massas]] — aterramento da carcaça.
-- [[DR (Dispositivo Diferencial Residual)]] — quando macerador AC (raro).
+- [[Proteção Dr]] — quando macerador AC (raro).
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimento estruturado.
 - [[Multímetro e Instrumentos de Medição]] — tensão sob carga, corrente, resistência.
 

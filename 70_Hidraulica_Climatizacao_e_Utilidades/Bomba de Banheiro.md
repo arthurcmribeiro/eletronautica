@@ -500,7 +500,7 @@ ELÉTRICO:
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação + proteção do circuito.
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]] — dimensionamento.
 - [[Disjuntores (DC) e (AC)]] — proteção do ramal.
-- [[DR (Dispositivo Diferencial Residual)]] — para versões AC.
+- [[Proteção Dr]] — para versões AC.
 - [[Bonding — Sistema de Interligação de Massas]] — bonding da carcaça.
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos.
 

@@ -406,7 +406,7 @@ Ar-condicionado marine é o ponto onde **instalação elétrica**, **equipamento
 - [[Contatores (AC)]]
 - [[Gerador (AC)]]
 - [[Linha Pesada (AC)]]
-- [[Soft Starter]]
+- soft starter
 - [[Proteção Dr]]
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]]
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]]

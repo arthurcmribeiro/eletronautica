@@ -475,7 +475,7 @@ Os mais perigosos são:
 - [[Extintor Automático — Combate a Incêndio na Casa de Máquinas]] — última camada de defesa após explosão
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação do blower e da chave dedicada
 - [[Sistema de Alarme Geral - Painel de Alarmes]] — integração com sensores e blower automático
-- [[Tanque de Combustível Diesel]] — sistema diesel não exige blower mas a nota contém referências cruzadas
+- [[Sensor de Nível Diesel]] — sistema diesel não exige blower mas a nota contém referências cruzadas
 - [[Cabeamento Náutico]] — fiação tinned copper UL 1426 para alimentação
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos de diagnóstico
 

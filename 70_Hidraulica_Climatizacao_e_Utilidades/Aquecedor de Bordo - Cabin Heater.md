@@ -364,7 +364,7 @@ Quando o aquecimento é feito por combustão, o sistema precisa de:
 Ver também:
 - [[Detector de CO — Monóxido de Carbono]]
 - [[Casa de Máquinas e Paiol]]
-- [[Tanque de Combustível Diesel]]
+- [[Sensor de Nível Diesel]]
 
 ## Resistência elétrica: quando faz sentido
 
@@ -538,7 +538,7 @@ O diagnóstico deve separar:
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação AC e DC do equipamento
 - [[Blower]] — ventilação do compartimento (NÃO é o ventilador do hot-air)
 - [[Bomba Ar Condicionado]] — circuito de água do mar que serve ciclo reverso
-- [[Tanque de Combustível Diesel]] — tomada dedicada e filtro 10 µm
+- [[Sensor de Nível Diesel]] — tomada dedicada e filtro 10 µm
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos de diagnóstico
 - [[Bancos de Bateria]] — partida do glow-plug exige bateria saudável
 

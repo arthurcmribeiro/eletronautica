@@ -546,7 +546,7 @@ A **diferença fundamental para self-contained / DX** é que **o refrigerante N�
 - [[Gerador (AC)]] — capacidade do gerador; sequenciamento de partida em cluster.
 - [[Linha Pesada (AC)]] — onde o chiller é cablado; dimensionamento de cabos.
 - [[Contatores (AC)]] — comando do compressor + bombas.
-- [[Soft Starter]] — redução de inrush para 2-3× FLA.
+- soft starter — redução de inrush para 2-3× FLA.
 - [[Proteção Dr]] — DR/ELCI 30 mA obrigatório (ABYC E-11 / IEC 60364-7-709).
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — disjuntores MOCP por chiller.
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos sistemáticos.

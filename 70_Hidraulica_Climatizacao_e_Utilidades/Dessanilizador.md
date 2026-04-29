@@ -613,11 +613,11 @@ related_notes:
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — proteção e seleção de fonte.
 - [[Carregador de Bateria (AC To DC)]] — recarga durante operação AC.
 - [[Gerador (AC)]] — alimentação principal de sistemas AC.
-- [[Inversor (DC To AC)]] — alimenta sistemas pequenos AC a partir de banco DC.
-- [[Bateria Náutica]] — banco DC; capacidade limitante para sistema sem ERD.
-- [[Soft Starter]] — partida suave de sistemas AC grandes.
+- [[Inversora (DC To AC)]] — alimenta sistemas pequenos AC a partir de banco DC.
+- [[Bancos de Bateria]] — banco DC; capacidade limitante para sistema sem ERD.
+- soft starter — partida suave de sistemas AC grandes.
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]] — proteção do circuito DC.
-- [[DR (Dispositivo Diferencial Residual)]] — proteção AC.
+- [[Proteção Dr]] — proteção AC.
 - [[Bonding — Sistema de Interligação de Massas]] — segurança elétrica em sistema com seacocks.
 
 ## Perguntas que esta nota responde

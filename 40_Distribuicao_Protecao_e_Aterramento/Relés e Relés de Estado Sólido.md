@@ -376,7 +376,7 @@ Vantagens sobre relé: zero desgaste, cutoff programável (LVC, OVC, térmico), 
 - **[[Chaves Gerais (DC)]]** — seccionamento manual vs. relé automático.
 - **[[Atuador Linear]]** — exemplo prático de comando de movimento com relé reversível (DPDT).
 - **[[Sistema de Alarme Geral - Painel de Alarmes]]** — saídas de sirene, sinalização e intertravamento via relé.
-- **[[Automação de Bordo - Sistemas Domoticos]]** — lógica de controle e supervisão (CZone, EmpirBus, Garmin Digital Switching).
+- **[[Automação de Bordo — Sistemas Domoticos]]** — lógica de controle e supervisão (CZone, EmpirBus, Garmin Digital Switching).
 - **[[Disjuntores (DC) e (AC)]]** — proteção do circuito comutado (relé não substitui disjuntor).
 - **[[Hotline (DC)]]** — relés de comando em circuitos sempre-energizados precisam ter falha segura definida.
 - **[[Bomba de Porão]]** — uso clássico de relé marine DPDT para manual + automático.
@@ -515,7 +515,7 @@ Três causas típicas: (i) **inrush não previsto** — lâmpada halógena ou mo
 - [[Chaves Gerais (DC)]]
 - [[Atuador Linear]]
 - [[Sistema de Alarme Geral - Painel de Alarmes]]
-- [[Automação de Bordo - Sistemas Domoticos]]
+- [[Automação de Bordo — Sistemas Domoticos]]
 - [[Disjuntores (DC) e (AC)]]
 - [[Hotline (DC)]]
 - [[Bomba de Porão]]

@@ -426,8 +426,8 @@ ELÉTRICO:
 - [[Caixa de Água Cinza]] — destino do efluente; arquitetura geral do sistema hídrico.
 - [[Sensor de Nível de Água]] — leitura do tanque que alimenta a bomba; protege contra dry-run quando integrado.
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação DC e proteção do circuito.
-- [[Disjuntores e Fusíveis]] — dimensionamento ABYC E-11.5.4 (≤125% da corrente nominal, <7" da bateria).
-- [[DR (Dispositivo Diferencial Residual)]] — quando bomba é AC, ELCI 30 mA obrigatório.
+- [[Disjuntores (DC) e (AC)]] — dimensionamento ABYC E-11.5.4 (≤125% da corrente nominal, <7" da bateria).
+- [[Proteção Dr]] — quando bomba é AC, ELCI 30 mA obrigatório.
 - [[Terminais Conectores e Emendas]] — terminação correta evita queda de tensão.
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos sistemáticos.
 - [[Bomba de Banheiro]] e [[Bomba de Porão]] — bombas correlatas com tipologias diferentes.

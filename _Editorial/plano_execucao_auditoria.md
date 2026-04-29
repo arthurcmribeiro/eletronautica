@@ -1,3 +1,12 @@
+---
+title: "Plano de Execução — Auditoria Técnica Eletronautica"
+note_type: "editorial"
+domain: "_Editorial"
+status: "operational"
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+---
+
 # PLANO DE EXECUÇÃO — AUDITORIA TÉCNICA ELETRONAUTICA
 ## Todas as Fases | Gerado em 2026-04-16 | Revisão Opus v2 | Fase 1 Rodada 01 EXECUTADA
 
@@ -1303,7 +1312,7 @@ Cada uma das 5 specs e dos 5 scripts foi conferida contra o inventário existent
 | 79 | Bússola Eletrônica (Compass / HDG Sensor) | 79 | premium-l3 | DEC-11 + DEC-14, 3 tecnologias canonicalizadas (fluxgate ISO 22090-2 × AHRS × GPS compass dual-antenna ISO 22090-3), IMO MSC.116(73) THD, IEC 60945 + 60533 EMC, procedimento swinging documentado + deviation card, declinação magnética WMM/NCEI, fabricantes (Garmin GPS 19x/24xd HVS, Simrad HS70, Furuno SC-50/SCX, B&G Precision-9, Raymarine EV-1, ComNav G2/Vector G5, Airmar H2183B) |
 | 80 | Chartplotter / GPS / MFD | 80 | premium-l3 | DEC-11 + DEC-14, distinção MFD ≠ ECDIS (IMO MSC.232(82) só SOLAS; recreativo via MSC.401(95)), GNSS multi-constelação (GPS+GLONASS+Galileo+BeiDou+QZSS+IRNSS) + SBAS (WAAS/EGNOS/MSAS/GAGAN), cartografia IHO S-57/S-63/S-100 + DHN + Navionics/C-MAP/BlueChart/TimeZero, NORMAM-204 + ANATEL 715/2019, CCRP IMO MSC.467(101), fabricantes (Garmin, Simrad/B&G/Lowrance, Raymarine, Furuno) |
 | 81 | Estação de Vento / Anemômetro | 81 | premium-l3 | DEC-11 + DEC-14, cup × sonic 2D × sonic 3D (ISO 17713-1 × ISO 16622), cálculo vetorial AW × TW com BSW (não COG), conector base do mastro = ponto de falha #1, wireless (RED 2014/53/EU + FCC Part 15 + ANATEL), fabricantes (B&G WS320/WS700, Garmin GWS 10/gWind, Raymarine MastView, Calypso Ultrasonic, Gill WindSonic, Airmar PB200/120WX) |
-| 82 | Piloto Automático | 82 | premium-l3 | DEC-11 + DEC-14, IMO MSC.64(67) + 74(69) Annex 2 (HCS) + IEC 62065 (TCS) + ISO 11674/16329, 4 tipos atuador (linear × rotativo × hidráulico × drive-by-wire), 8 modos canonicalizados (Standby/Auto/Track/Wind/Dodge/Pattern/Power Steer/No Drift), PID + sea state + rudder gain + counter rudder, MOB força STANDBY (treinamento), atuador hidráulico exige fluido específico (vide [[Óleos Hidráulicos Marine]]), fabricantes (Raymarine Evolution EV, Garmin Reactor, Simrad AP44/70/80, Furuno NavPilot, B&G H5000, ComNav P-Series) |
+| 82 | Piloto Automático | 82 | premium-l3 | DEC-11 + DEC-14, IMO MSC.64(67) + 74(69) Annex 2 (HCS) + IEC 62065 (TCS) + ISO 11674/16329, 4 tipos atuador (linear × rotativo × hidráulico × drive-by-wire), 8 modos canonicalizados (Standby/Auto/Track/Wind/Dodge/Pattern/Power Steer/No Drift), PID + sea state + rudder gain + counter rudder, MOB força STANDBY (treinamento), atuador hidráulico exige fluido específico (vide [[Óleos Hidráulicos Marine — Guia Completo]]), fabricantes (Raymarine Evolution EV, Garmin Reactor, Simrad AP44/70/80, Furuno NavPilot, B&G H5000, ComNav P-Series) |
 | 83 | Sonda / Profundímetro / Sonar | 83 | premium-l3 | DEC-11 + DEC-14, IMO MSC.74(69) Annex 4 + IEC 61088 + ISO 13076, 8 tecnologias canonicalizadas (Conventional × CHIRP × Side Imaging × Down Imaging × 3D × Live × Forward-looking × Searchlight Sonar), 5 tipos transdutor (transom × thru-hull × in-hull × pod × Smart Sensor Airmar DST810), ABYC H-27 + ISO 9093 (passe-casco) + bonding E-11.16 + surge TE-04, configuração crítica "Depth Below Keel" com offset (default fábrica é Below Transducer = inseguro), TODO-citação ABYC H-27 RESOLVIDO, fabricantes (Garmin LiveScope, Lowrance ActiveTarget, Humminbird MEGA Live 2, Furuno DFF/FCV/Searchlight, Simrad S5100, Raymarine RVX1000, Airmar OEM) |
 
 **Métricas Onda 8:**

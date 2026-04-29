@@ -287,7 +287,7 @@ O **carregador para tender / jet ski embarcado** é o equipamento de **conversã
 - [[Cabeamento Náutico]] / [[Dimensionamento de Cabos DC — Cálculo Prático]].
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]] / [[Disjuntores (DC) e (AC)]].
 - [[Bonding — Sistema de Interligação de Massas]].
-- [[DR (Dispositivo Diferencial Residual)]] — proteção AC.
+- [[Proteção Dr]] — proteção AC.
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]].
 - [[Davit - Munk - Guindaste de Bote - Tender Lift]] — manuseio do tender.
 

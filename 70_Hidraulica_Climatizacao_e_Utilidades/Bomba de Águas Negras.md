@@ -474,7 +474,7 @@ CRÍTICO: bonding da carcaça da bomba ao bus equipotencial (corrosão galvânic
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação + proteção do ramal.
 - [[Fusíveis DC — Proteção Contra Sobrecorrente]] — dimensionamento.
 - [[Disjuntores (DC) e (AC)]] — proteção do ramal.
-- [[DR (Dispositivo Diferencial Residual)]] — para versões AC.
+- [[Proteção Dr]] — para versões AC.
 - [[Bonding — Sistema de Interligação de Massas]] — bonding da carcaça (corrosão galvânica).
 - [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — procedimentos.
 

@@ -542,7 +542,7 @@ Cada função tem componentes específicos que precisam estar **harmonicamente d
 - [[Bomba de Porão]] — circuito DIFERENTE; não confundir.
 - [[Bomba de Água Pressurizada]] — rede a montante; air gap obrigatório.
 - [[Quadro Elétrico e Painel de Distribuição AC-DC]] — alimentação dos sistemas elétricos sanitários.
-- [[DR (Dispositivo Diferencial Residual)]] — proteção AC.
+- [[Proteção Dr]] — proteção AC.
 - [[Bonding — Sistema de Interligação de Massas]] — segurança.
 
 ## Perguntas que esta nota responde
