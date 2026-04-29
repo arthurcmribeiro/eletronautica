@@ -135,7 +135,7 @@ class Candidate:
 def load_json(path: Path, default: Any) -> Any:
     if not path.exists():
         return default
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def rel(path: Path) -> str:
@@ -162,7 +162,7 @@ def note_path_for_pdf(pdf: dict[str, Any]) -> Path | None:
 
 
 def read_note(path: Path) -> tuple[str, dict[str, Any], str]:
-    text = path.read_text(encoding="utf-8")
+    text = path.read_text(encoding="utf-8-sig")
     frontmatter_raw, body = extract_frontmatter(text)
     return text, parse_frontmatter(frontmatter_raw), body
 

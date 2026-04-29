@@ -3,7 +3,7 @@ title: "Pipeline PDF - Ultima Execucao"
 note_type: "audit"
 domain: "90_Revisao_Manual"
 status: "auto-generated"
-reviewed_on: "2026-04-26"
+reviewed_on: "2026-04-27"
 review_jurisdiction: "Brasil"
 related_notes:
   - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local - Indice Gerado"
@@ -20,31 +20,31 @@ related_notes:
 ## Resultado
 
 - status geral: `ok`
-- iniciado em: `2026-04-26T09:05:00.497697+00:00`
-- finalizado em: `2026-04-26T09:06:18.581833+00:00`
-- duracao total: `78.084` s
+- iniciado em: `2026-04-27T06:34:52.642018+00:00`
+- finalizado em: `2026-04-27T06:35:23.163085+00:00`
+- duracao total: `30.521` s
 - dry-run: `False`
 - manifesto: `manifest/pdf-pipeline-last-run.json`
 
 ## Contagem por status
 
-- `ok`: `7`
-- `skipped`: `2`
+- `ok`: `5`
+- `skipped`: `4`
 
 ## Passos
 
 ### Empacotar/atualizar staging humano tecnico
 
-- status: `ok`
+- status: `skipped`
 - retorno: `0`
-- duracao: `34.558` s
+- duracao: `0.0` s
 - comando: `C:\Python314\python.exe scripts/acervo/package_human_technical_archive.py`
 
 ### Reconstruir indice local do acervo principal
 
-- status: `ok`
+- status: `skipped`
 - retorno: `0`
-- duracao: `7.25` s
+- duracao: `0.0` s
 - comando: `C:\Python314\python.exe scripts/acervo/build_local_index.py`
 
 ### Auditar PDFs com toolchain externo
@@ -65,7 +65,7 @@ related_notes:
 
 - status: `ok`
 - retorno: `0`
-- duracao: `30.894` s
+- duracao: `26.056` s
 - comando: `C:\Python314\python.exe scripts/acervo/build_pdf_companion_notes.py`
 
 ### Construir painel de curadoria do acervo
@@ -79,21 +79,21 @@ related_notes:
 
 - status: `ok`
 - retorno: `0`
-- duracao: `0.721` s
+- duracao: `0.549` s
 - comando: `C:\Python314\python.exe scripts/check_python_scripts.py`
 
 ### Validar vault Markdown
 
 - status: `ok`
 - retorno: `0`
-- duracao: `1.877` s
+- duracao: `1.468` s
 - comando: `C:\Python314\python.exe scripts/validate_vault.py`
 
 ### Reconstruir manifesto geral
 
 - status: `ok`
 - retorno: `0`
-- duracao: `1.828` s
+- duracao: `1.493` s
 - comando: `C:\Python314\python.exe scripts/build_manifest.py`
 
 ## Uso recomendado

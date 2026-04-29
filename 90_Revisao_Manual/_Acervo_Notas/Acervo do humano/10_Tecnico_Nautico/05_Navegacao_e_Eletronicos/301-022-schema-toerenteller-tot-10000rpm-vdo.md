@@ -17,7 +17,7 @@ acervo_brand: "A revisar"
 acervo_family: "SCHEMA"
 extraction_method: "tesseract-ocr-por+eng"
 text_extractable: "sim"
-extracted_text_chars: 887
+extracted_text_chars: 872
 indexed_text_path: "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/05_Navegacao_e_Eletronicos/301-022-schema-toerenteller-tot-10000rpm-vdo.txt"
 duplicate_status: "unique"
 duplicate_group_sha256: ""
@@ -50,7 +50,7 @@ related_notes:
 - tamanho do arquivo: `88.5 KB`
 - texto extraivel detectado: `sim`
 - metodo de extracao: `tesseract-ocr-por+eng`
-- caracteres extraidos: `887`
+- caracteres extraidos: `872`
 - texto integral auxiliar: `90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/05_Navegacao_e_Eletronicos/301-022-schema-toerenteller-tot-10000rpm-vdo.txt`
 
 ## Sinais principais
@@ -108,15 +108,15 @@ related_notes:
 ## Trechos indexaveis
 
 - `Drehzahimesser, Tachometer,`
-- `Gehause © 80/ 100mm housing dia. 80 / 100mm`
-- `‘AbmaBe (mm): Dimensions (mm):`
+- `Gehause © 80 / 100mm housing dia. 80 / 100mm`
+- `Abmafe (mm): Dimensions (mm):`
 - `91 max. 8 Kodierschalter / Coding switch`
-- `+ La fr E $ wo 8`
-- `| et t=4 q 6`
-- `— — — Sif ae Gea`
-- `iil = Papstt}`
-- `as dil s\|\ Ae ies) J`
-- `ar 8| ee O 0 //3`
+- `[Ta fr E 4 wo <`
+- `| et E ed ( 6`
+- `— — is Sif ae Gea`
+- `== Il sil Ae E J`
+- `ar sic O o js`
+- `EE ja 342 1 8`
 
 ## Texto extraido para busca
 
@@ -125,37 +125,37 @@ related_notes:
 
 ```text
 Drehzahimesser, Tachometer,
-Gehause © 80/ 100mm housing dia. 80 / 100mm
-‘AbmaBe (mm): Dimensions (mm):
+Gehause © 80 / 100mm housing dia. 80 / 100mm
+Abmafe (mm): Dimensions (mm):
 91 max. 8 Kodierschalter / Coding switch
 15— |]
 SS
-+ La fr E $ wo 8
-| et t=4 q 6
-me | at
-— — — Sif ae Gea
-iil = Papstt}
-as dil s\|\ Ae ies) J
-ar 8| ee O 0 //3
-SF 2) 5
-ll ! [a s@2 4 8
+[Ta fr E 4 wo <
+| et E ed ( 6
+a Ms! al
+— — is Sif ae Gea
+iil = reto)
+== Il sil Ae E J
+ar sic O o js
+= E) 5
+EE ja 342 1 8
 i 4 Soi
 Potentiometer
 Klemmbereich 0,5 ... 12
 ‘Clamping width
 6 bis 25 Impulse/Umdrehung
 Gewinde fur Schraubring (Option) einstellbar
-‘Thread for clamp ring (option) 6 to 25 pulses/revolution
+Thread for clamp ring (option) 6 to 25 pulses/revolution
 Klemmbereich / Clamping width: adjustable
-0.5 ... 12mm oderlor 12 ... 23mm
-‘Anschlussbelegung / Pin assignment:
+0.5 ... 12mm oderior 12 ... 23mm
+Anschlussbelegung / Pin assignment:
 Gluhlampe / Light bulb: 12V 2W
-indedlor Pint: +24V (fur 24V Instrument /
-av 2W for 24V gauge)
+odeio Pint: +24V (fur 24V Instrument /
+244 2W for 24V gauge)
 Pin2: +12V (for 12V Instrument /
 for 12V gauge)
 Pin 3: Masse / Ground
-(Kl. — 31 / terminal ~ 31)
+(Kl. = 31 / terminal ~ 31)
 Pin 4: Signal Eingang / Signal input
 (KL. 1 oder W/ terminal 1 or W)
 Pin... 8: nicht belegt / not assigned

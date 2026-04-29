@@ -17,7 +17,7 @@ acervo_brand: "A revisar"
 acervo_family: "A revisar"
 extraction_method: "tesseract-ocr-por+eng"
 text_extractable: "nao"
-extracted_text_chars: 3
+extracted_text_chars: 2
 indexed_text_path: ""
 duplicate_status: "unique"
 duplicate_group_sha256: ""
@@ -53,7 +53,7 @@ related_notes:
 - tamanho do arquivo: `4.3 KB`
 - texto extraivel detectado: `nao`
 - metodo de extracao: `tesseract-ocr-por+eng`
-- caracteres extraidos: `3`
+- caracteres extraidos: `2`
 - texto integral auxiliar: `n/a`
 
 ## Sinais principais

@@ -22,7 +22,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "nao",
-      "extracted_text_chars": 34,
+      "extracted_text_chars": 35,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpeg-cc280bad.txt",
       "sha256": "cc280bad13da8f59e0f28f7976979a3c3ffe069dbee8a5a52e379420f9d37ca1"
     },
@@ -36,7 +36,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "nao",
-      "extracted_text_chars": 65,
+      "extracted_text_chars": 59,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-0ac165cc.txt",
       "sha256": "0ac165cc48674f48a09c52ed9e59f57ac99f0905924a567918029de6c2e73f7a"
     },
@@ -50,7 +50,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "sim",
-      "extracted_text_chars": 301,
+      "extracted_text_chars": 295,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-14bf9ab3.txt",
       "sha256": "14bf9ab329532a1d8b32bca3865444ff9b6a825489281b4b13c793645c5372cb"
     },
@@ -64,7 +64,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "nao",
-      "extracted_text_chars": 51,
+      "extracted_text_chars": 57,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-afcb97c4.txt",
       "sha256": "afcb97c411f40a7e0261ccd8b995bdbd1ad72fd8d6e8d6cc358ab53ad61a2dd4"
     },
@@ -78,7 +78,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "sim",
-      "extracted_text_chars": 280,
+      "extracted_text_chars": 281,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-ce76738a.txt",
       "sha256": "ce76738abe5a1de16f62876b894cad3c39ebfc3b754caa014229636e16dc4ed8"
     },
@@ -400,7 +400,7 @@
       "curation_priority": "alta",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "sim",
-      "extracted_text_chars": 887,
+      "extracted_text_chars": 872,
       "indexed_text_path": "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/05_Navegacao_e_Eletronicos/301-022-schema-toerenteller-tot-10000rpm-vdo.txt",
       "sha256": "fafd3506d1490360f0461b2f96fc1b1528aa395053cfc676be232f08719c5d9a"
     },
@@ -792,7 +792,7 @@
       "curation_priority": "media",
       "extraction_method": "tesseract-ocr-por+eng",
       "text_extractable": "nao",
-      "extracted_text_chars": 3,
+      "extracted_text_chars": 2,
       "indexed_text_path": "",
       "sha256": "9cb9977e83c5fb9adf13532b0b65e656aad71445ba3d5eb83f65ac23b3cd3075"
     },

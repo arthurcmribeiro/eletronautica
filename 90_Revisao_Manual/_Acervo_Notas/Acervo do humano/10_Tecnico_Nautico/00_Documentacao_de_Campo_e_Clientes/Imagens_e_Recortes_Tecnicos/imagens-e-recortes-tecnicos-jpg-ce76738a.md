@@ -17,7 +17,7 @@ acervo_brand: "A revisar"
 acervo_family: "A revisar"
 extraction_method: "tesseract-ocr-por+eng"
 text_extractable: "sim"
-extracted_text_chars: 280
+extracted_text_chars: 281
 indexed_text_path: "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-ce76738a.txt"
 duplicate_status: "unique"
 duplicate_group_sha256: ""
@@ -50,7 +50,7 @@ related_notes:
 - tamanho do arquivo: `28.0 KB`
 - texto extraivel detectado: `sim`
 - metodo de extracao: `tesseract-ocr-por+eng`
-- caracteres extraidos: `280`
+- caracteres extraidos: `281`
 - texto integral auxiliar: `90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-ce76738a.txt`
 
 ## Sinais principais
@@ -106,11 +106,11 @@ related_notes:
 ## Trechos indexaveis
 
 - `THIAGUINHO -`
-- `FESTIVAL DE VERAO`
-- `Praga de Eventos Ubatuba`
+- `FESTIVAL DE VERÃO`
+- `Praça de Eventos Ubatuba`
 - `Pista - Ingresso`
 - `Social Gratuito`
-- `[a] F in : :`
+- `[a] E in : a`
 - `8198-5cea-666a`
 - `1 de 1 24/12/2025 23:48:57`
 - `PDV - Site de venda`
@@ -123,21 +123,21 @@ related_notes:
 
 ```text
 THIAGUINHO -
-FESTIVAL DE VERAO
+FESTIVAL DE VERÃO
 DE UBATUBA
 28/12/2025
-Praga de Eventos Ubatuba
+Praça de Eventos Ubatuba
 Pista - Ingresso
 Social Gratuito
 Cortesia
-| \]
-ai ee st
-a F .
-a oe
-ee Lh
+| |
+a E TA
+a F a,
+E oe
+[EE Ms N,
 a = Go
-[a] F in : :
-: I i"
+[a] E in : a
+E I E
 8198-5cea-666a
 1 de 1 24/12/2025 23:48:57
 PDV - Site de venda

@@ -1,0 +1,443 @@
+OCR text generated at: 2026-04-26T08:57:34.155837+00:00
+source_pdf: 90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/MACS/macs.pdf
+source_sha256: df8a266135f11dde47542935c2737643c502244e648b42a7a6b52f47c4580c6b
+language: por+eng
+dpi: 150
+psm: 3
+status: partial
+
+--- PAGE 1 [ok] ---
+MACS
+MARINE AIR CONDITIONING SYSTEMS
+
+--- PAGE 2 [ok] ---
+MARINE AIR CONDITIONING
+SYSTEMS
+Rotatable high velocity blower
+Ventilatore specifico per la
+canalizzazione dellaria trattata, con
+bocca di mandata orientabile
+Heat exchanger with copper tubes and
+stainless steel chassis
+Evaporatore con tubi in rame e
+carenatura in acciaio inox
+High efficiency tube-in-tube sea water
+condenser with cupronickel inner tube
+and copper outer shell
+Condensatore tubo in tubo, con
+tubazione interna (ato acqua) in
+cupronikel ed estema (lato refrigerante)
+inrame
+Stainless steel chassis with two
+opposite drain connections
+Vaschetta raccogli condensa in acciaio
+inox dotata di doppio scarico
+Remotable stainless steel electrical box
+Quadro elettrico in acciaio inox
+installabile in posizione remota
+OVERSEAS | 123 |
+SISTEMI DI CLIMATIZZAZIONE
+DELVARIA
+Self contained uni
+Chill-water systems
+Air distributio
+New Self Contained Unit
+NUOVE UNITA MONOBLOCCO
+or multiple cabins, available in
+a water condenser,
+for all si
+unit is ally suitable for onboard installations,
+ducting and into the
+namento di un
+prodotti in 3 mot
+.000 BTU/h
+struttura monoblocco
+
+--- PAGE 3 [ok] ---
+1124 MACS
+KIT MACS 7000
+0700-0001
+KIT MACS 12000
+0700-0002
+KIT MACS 16000
+0700-0003
+CONTROL BOX
+Air supply diameter
+Diametro mandata aria
+Drain hose diameter
+Diametro tubo di scarico condensa
+Weight
+Peso
+Voltage/frequency/ohase
+Alimentazione
+Nominal cooling capacity
+Capacita nomninale (mod. rafreddamento)
+Norrinal heating capacity
+Capacita nominate (mod. riscaldamento)
+Norrinal power consuption (cool mode)
+Potenza nom. di consumo {rnod. rafreddamento)
+Nominal power consuption (heat mod)
+Potenza nom. di consumo (mod. riscaldamento)
+Nominal Amperage (cool mode)
+Assorbimento nominale (mod, rafeddamento)
+Norninal Amperage (heat mode)
+Assorbimento nominale (mod riscaldamento)
+Air fow
+Portata aria trattata
+Recommended pump flow
+Capacita pompa consigiata
+mm.
+mm.
+Kg.
+BTU/h
+BTU/h
+kW
+KW
+me/h
+102
+18
+23
+230V/50Hz
+7000
+7800
+0,6
+07
+26
+3
+400
+600
+Air supply diameter
+Diametro mandata aria
+Drain hose diameter
+Diametro tubo di scarico condensa
+Weight
+Peso
+Voltage/frequency/ohase
+Alimentazione
+Nominal cooing capacity
+Capacita nominale (mod. rafreddamento)
+Nominal heating capacity
+Capacita nominale (mod. riscaldamento)
+Nominal power consuption (cool rode}
+Potenza nom. di consumo (rod. rafreddamento)
+Nominal power consuption (heat mod)
+Potenza nom. di consumo (mod. riscaldamento)
+Nominal Amperage (cool mode)
+Assorbimento nominale (mod. rafreddamento)
+Nominal Amperage (heat mod)
+Assorbimento nominale (mod, riscaldamento)
+Air flow
+Portata ara trattata
+Recommended pump flow
+Capacitá pompa consiglata
+mm.
+mm.
+kg.
+BTU/h
+BTU/h
+mesh
+152
+18
+26
+230V/50Hz
+12000
+13000
+0,9
+11
+4
+47
+540
+900
+‘Ar supply diameter
+Diametro mandata aria
+Drain hose diameter
+Diametro tubo di scarico condensa
+Weight
+Peso
+Voltage/frequency/ohase
+Alimentazione
+Nominal cooling capacity
+Capacita nominals (mod. rafreddamento)
+Norrinal heating capacity
+Capacita nominale (mod. riscaldamento)
+Nominal power consuption (cool mode}
+Potenza nom. di consumo (rod. rafreddamento)
+Nominal power consuption (heat mode)
+Potenza nom. di consumo (mod. riscaldamento)
+Nominal Amperage (cool mode)
+Assorbimento nominale (mod, rafeddamento)
+Nominal Amperage (heat mode)
+Assorbimento nominele (mod. riscaldamento)
+Air flow
+Portata aria trattata
+Recommended pump flow
+Capacita pompa consiglata
+mm.
+mm.
+Kg.
+BTU/h
+BTU/h
+kW
+me/h
+152
+18
+31
+230V/50Hz
+16000
+18000
+141
+13
+5
+5,5
+640
+1500
+
+--- PAGE 4 [ok] ---
+Easy to use control panel
+PANNELLO DI CONTROLLO ELETTRONICO
+It can be integrated into all of the major switch component manufacturers
+GEWISS, VIMAR). Infrared remote control (optional).
+(B-TICINO,
+Pannello di controlo elettronico di facile utilizzo, adattabile ad ogni ambiente e progettato
+per essere inserito nelle cornici standard delle marche pit conosciute (B-TICINO,
+GEWISS, VIMAR). Disponibile come optional il telecomando ad infrarossi.
+MACS 7000 ACCESSORIES KIT - 0702-0001
+Q{in) —In- Out O(mm) Lim)
+MACS 12000 ACCESSORIES KIT - 0702-0002
+@iin) In-Out Oimm) Lim)
+Visa mo Er
+Ea eae 34 FF LxH (in}
+Putgormenbiacea ~— 20S4M Criados 12X12
+MACS 16000 ACCESSORIES KIT - 0702-0003
+Din) In-Out (mm) Lim)
+o PO MO inda % 10
+Thru-hull 1 M PVC insulated . 152 5
+Scarico a mare Condotta PVC isolata
+Von asia 1 OFF
+Sea-water fiter | ELF |
+Fitro acqua di mare LxH (in)
+Porra STM Gringo 12x12
++ Mm Seely gle 10x6
+qua di mare
+Grigla di mandata
+SECOND SUPPLY GRILLE KIT - KIT SECONDA GRIGLIA DI MANDATA- 0702-0010
+LXxH fin)
+Supply grile - Grigia di mandata 10X4
+O(mm) Lim)
+PVC insulated duct - Condotta PVC isolata 102 5
+mm)
+Y Air divider 664 - Plenum a Y 664 152/152/102
+OVERSEAS | 125 |
+Torutut
+Ratu sr
+ile
+—
+cmi E 4 7
+R e ® 4
+fom ‘
+Bal Seavatr Trrutul Seauater ass
+va ines —_comecton “ter
+==
+a =
+E
+===
+Return air ‘Supply grile
+re
+Return air
+ole
+Ai dhiders
+Yplenun
+
+--- PAGE 5 [ok] ---
+AIR DISTRIBUTION ACCESSORIES
+Return air grilles, ABS frame and fins, assembled air filter.
+Griglie di aspirazione, telaio e alette in ABS, filtro aria pre-assemblato
+Limm) Himm)
+0702-0004 254 254
+0702-0006 305 305
+Supply grilles, ABS frame
+Griglie di mandata, telaio in ABS
+Limm) Himm)
+>——— 5
+=———= 0702-0005 254 102
+===
+Eau 24 127
+=——=——
+— 0702-0008 305 152
+Return air grilles, teak frame, aluminium fins, assembled air filter
+Griglie di aspirazione, telaio in teak, alette in aluminio, filtro aria pre-assemblato
+WPMSLRAT 10X10
+WPMSL RAT 12X12
+L(mm) Hmm)
+254 254
+305 305
+Supply grilles, teak frame, controlled dumping alluminium fins
+Griglie di mandata, telaio in teak, alette in alluminio a smorzamento controllato
+WPMSI_VMLT 8X4
+WPMSI VMLT 10X4
+WPMSI VMLT 10X5
+WPMSI_VMLT 10X6
+Standard transition plenums
+Plenum di transizione standard
+= WPMSI_TB105
+WPMSI_TB106
+Air flow transition plenums back molded ring
+L (mm) H (mm)
+208 102
+254 102
+254 127
+254 152
+Limm) Himno)
+254 127
+254 152
+Plenum di transizione con anello fissatubo formato sul retro
+Limm) H (mm) 8 (mm)
+WPMSI_TB84-4B
+() 2 Tubo - Hose
+WPMSI TB64-4B** 152
+102 102
+102 102
+ACCESSORI DISTRIBUZIONE ARIA OVERSEAS | 129 |
+Flat oval hose ring to be mounted on plenums
+Anello fissatubo ovale piatto da montare sui plenum
+2 (mm)
+WPMSI_HRF4 102
+WPMSI_HRF5 127
+WPMSI_HRF6 152
+WPMSI_HRF7 178
+() 9 Hose - Tubo
+Air dividers (1) T plenum, (2) Y plenum
+Plenum di divisione flusso d’aria, (1) plenum a T, (2) plenum a Y
+QIN (mm) GOUT (mm
+WPMSI_HT544** 127 102+102
+WPMSI_HT644. 152 102+102
+WPMSLHT755 178 = 127+127
+WPMSI_HY644 152 102+102
+WPMSL HY755 178 127+127
+0702-0009 152 102+152
+(9 Hose - Tubo
+Air distribution insulated ducts. Thermal and
+acoustic insulation guaranteed. Double-walled
+flexible PVC pipe. Colour: grey.
+Tubi di distribuzione aria. Garantisce un
+adeguato isolamento termico e acustico. Tubo
+flessibile in PVC a doppia parete, Colore grígio.
+@ Air duct
+© Condotta aria
+(mm)
+0702-0011 102
+0702-0012 127
+0702-0013 152
+WP518006** 180
+(2 Hose - Tubo
+Fire class 1
+Classe di reazione al fuoco
+Temperature range 20°C
+Temperatura di esercizio +90°C
+Max air speed 30 m/sec.
+Velocita max aria 2.500 Pa
+
+--- PAGE 6 [ok] ---
+1130 SEA WATER DISTRIBUTION ACCESSORIES accessor pistRIBUZIONE ACQUA DI MARE
+Sea-water pumps “Magnetic drive”
+Pompe acqua mare tipo “magnetic drive”
+Weter ow Pomersupoh AMPIN Dimensions Weght Water Inlet Water Outlet
+Portatamax Alimentazione Comass. Dimensoni Peso Entrataacqua Uscita acqua
+tm, V/Pn/E A LxDxH (mm) kg. mm. mm.
+WPPMD371.230/ 50 1.416 230V/1ph/50Hz 0,19 179x104x108 1,7 17 17
+WPPMD421.230/ 50 2.220 230V/ iph/50Hz 0,38 240x120x130 3,4 20 20
+WPPMD641.230/ 50 3.360 230V/iph/50Hz 0,60 230x115x155 48 26 26
+Sea-water pumps, close-coupled centrifugal with open impeller
+Pompe acqua mare centrifughe monoblocco con girante aperta
+Water flow Power supply AMPIN Dimensions Weight Water Inlet Water Outlet
+Portata max Almentazione Corr. ass, Dimensioni Peso Entrata acqua Uscita acqua
+tn V/Ph/F A LxDxH (mm) kg. in. in.
+1.500/12,2m
+WPB-CM20E 3.000/11,5m 2300/1ph/50Hz 28 303x177x161 9,1 1 1
+4800/9m
+1.500/21m
+WPB-CM22E 4800/17,5m 230V/1ph/50Hz 45 303x177x161 9,6 1 1
+6.600/7,5m
+Pump relay boxes for installations of multiple AC units with a single water pump Sea water intakes. Brass sea water intakes
+Quadri relé comando pompa per installazioni di pili unita AC con una sola pompa acqua Prese acqua mare. Prese acqua mare in
+mare q ottone inches
+. o WP56003087 2 units/unita AC 230V/ 1ph / SOHz WP5189503 1/2
+q WP56003088 3 units/unita AC 230V/ tph / 50Hz WP5189504 3/4
+SS
+a WP56003089 4 units/unita AC 230V/ tph /50Hz WP5189505 1
+Brass sea-water manifolds Chromium-plated brass thru-hull
+Collettore di distribuzione in ottone connections
+inches
+WP529012 1 inlet- ingresso 2 outlets - uscite - WP519503 1/2
+WP529013 1 inlet-ingresso 3 outlets - uscite WP519504 3/4
+WP529014 1 inlet - ingresso 4 outlets - uscite WP519505 1
+Ball valve for sea-water circuit
+Valvola a sfera per intercettazione circuito acqua mare
+inches
+WP519723 142
+com Wester E
+o wpst9725 1
+Sea water strainer. Nickel-plated brass (bronze for the 1” model), with nichel
+finish and locking dish made of transparent polycarbonate
+Filtro depurazione acqua in ottone (bronzo per il modello da 1”), con finitura CE,
+nichelata e disco di chiusura in policarbonato trasparente
+inches
+WP519443 12
+WP519444 3/4
+WP519435 1
+Straight brass hose connectors
+Portagomma tubi acqua
+Tasparm PVC hose External diameter Thread
+Tubo in PVC trasparente con armatura Diametro esterno(mm.) _Filettatura (in.)
+Internal diameter - Diametro interno (mm) Cos wo
+WP519911 16 » aa
+WP519912 20
+25 1
+WP519914 25
+
+--- PAGE 7 [ok] ---
+FANCOIL DISTRIBUTION ACCESSORIES CADA CIRCUITO LANG OVERSEAS | 131 |
+Water circulations pumps. Close-coupled centrifugal pumps with open impeller. Cast iron pump/brass impeller
+Pompe di circolazione. Pompe centrifughe con girante aperta. Corpo pompa in ghisa e girante in ottone
+Water flow Power supply AMP IN Dimensions Weight Water Inlet Water Outlet
+Portata max Almentazione Corr.ass. Dimensoni Peso Entrataacqua Uscita acqua
+Ih V/Ph/F A LxDxH mm) kg. in. in.
+1.500 / 12,2 m
+WPCM20E 3.000/11,5m 230V/1ph/50Hz 25 263x149x153 6,8 Gt Gt
+4.800 / 9 m
+1.500/ 21 m
+WPCM22E 4800/175m 230V/iph/S0Hz 35 263x171x173 83 Gt a
+6.600/ 7,5 m
+Deaerator. Continuous air removal device for fancoil circuits. Brass built, inside brass and Water expansion tanks
+stainless steel Vasi d’espansione
+Disaeratore. Dispositivo per l'eliminazione continua dell'aria presente allinterno dei circuiti
+acqua fancoil. Corpo in ottone, parti interne in ottone e acciaio inox
+Volume Connection
+Waterflow Waterconnect Dimensions. Weight Cepactã Attacco
+Porta max Altacchiaoqua Dimension Peso I in.
+tun in DOM) Ig wpsi9900 2 1/2
+WP519894 23 3/4 110 x 146 17 WP519901 5 3/4
+WP519895 35 1 H0x146 47 wpsi9902 E 3/4
+WP519896 58 1/4 124x166 22 wp519903 12 3/4
+Brass sea-water manifolds. You can mate them to get more outputs
+Collettore di distribuzione in ottone. | collettori sono modulari: accoppiandoli si possono ottenere pit uscite.
+WP529002 1 inlet - ingresso 2 outlets - uscite
+WP529003 1 inlet - ingresso 3 outlets - uscite
+WP529005 1 inlet - ingresso 5 outlets - uscite
+WP529006 1 inlet - ingresso 6 outlets - uscite
+Water pipes Gauge manifolds
+Tubazioni acqua Gruppi manometrici
+Diametro interno - Internal diameter (mm.)
+[sea] WP519990 12x17 WP529022
+WP519991
+16x23
+WP519992 20x30
+WP519994 25x35
+Water hoses insulation. Synthetic-rubber-based elastomer foam with closed cell internal structure.
+Isolamento per tubazione acqua. Guaina isolante in elastomero espanso, a base di gornma sintetica con struttura interna a celle chiuse.
+@ Hose - Tubo Thick - Spessore
+(mm) (mm)
+WPD15 12x17 6
+WPG22 16x23 9
+WPG28 20x30 9
+WPH35 25x35, 13

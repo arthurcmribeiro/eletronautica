@@ -16,7 +16,7 @@ Este diretorio concentra a automacao da frente `90_Revisao_Manual`. Nao limpar p
 - `run_pdf_pipeline.py`: orquestra auditoria, OCR controlado, indices, notas companheiras, manifesto e validacao operacional.
 - `audit_pdf_toolchain.py`: audita PDFs, paginas, metadados, integridade `qpdf`, texto pesquisavel e fila de OCR.
 - `ocr_priority_pdfs.py`: gera OCR auxiliar em sidecars sem alterar PDFs originais.
-- `build_pdf_companion_notes.py`: cria/atualiza notas `.md` para PDFs curados do acervo principal.
+- `build_pdf_companion_notes.py`: cria/atualiza notas `.md` para PDFs curados do acervo principal, extraindo titulos, codigos documentais, modelos, topicos, secoes e linhas tecnicas curtas para busca e curadoria.
 - `build_curation_dashboard.py`: separa acervo humano/tecnico em manifesto, prioriza fila de curadoria e enriquece notas prioritarias sem sobrescrever curadoria humana.
 - `build_local_index.py`: gera o indice humano e JSON do acervo principal.
 - `package_human_technical_archive.py`: empacota o staging humano e preserva curadoria humana ja feita.
@@ -38,6 +38,8 @@ Este diretorio concentra a automacao da frente `90_Revisao_Manual`. Nao limpar p
 - `archive_human_duplicate_groups.py`: arquiva duplicatas/excedentes de forma reversivel.
 - `promote_human_archive_to_main.py`: base legada de promocoes pontuais; ainda e importada por outros scripts.
 - `rename_acervo_files_for_search.py`: renomeia arquivos do acervo para busca forte.
+- `rename_promoted_pdf_files_readably.py`: migra PDFs promovidos em massa de nomes tecnicos com hash para nomes legiveis baseados no arquivo original.
+- `rename_pdf_companion_names_from_content.py`: limpa nomes remanescentes com `__`, hash ou `legacy-espelho`, mantendo PDFs, notas companheiras e sidecars OCR sincronizados.
 
 ## Regra de limpeza
 

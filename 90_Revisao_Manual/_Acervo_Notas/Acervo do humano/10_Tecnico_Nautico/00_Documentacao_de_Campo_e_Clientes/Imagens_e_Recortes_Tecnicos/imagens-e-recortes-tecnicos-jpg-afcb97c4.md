@@ -17,7 +17,7 @@ acervo_brand: "A revisar"
 acervo_family: "A revisar"
 extraction_method: "tesseract-ocr-por+eng"
 text_extractable: "nao"
-extracted_text_chars: 51
+extracted_text_chars: 57
 indexed_text_path: "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-afcb97c4.txt"
 duplicate_status: "unique"
 duplicate_group_sha256: ""
@@ -53,7 +53,7 @@ related_notes:
 - tamanho do arquivo: `379.5 KB`
 - texto extraivel detectado: `nao`
 - metodo de extracao: `tesseract-ocr-por+eng`
-- caracteres extraidos: `51`
+- caracteres extraidos: `57`
 - texto integral auxiliar: `90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-afcb97c4.txt`
 
 ## Sinais principais
@@ -116,13 +116,13 @@ related_notes:
 > Este bloco existe para busca local e triagem. Nao usar como resumo tecnico definitivo sem revisar a fonte original.
 
 ```text
-mae i
-a; jes
-id _ ' “0 s
-Bo
-fo ea 1 ae 3
-\ £
-~ %, i
+dio i
+a; jes k
+e _ ' “id
+a,
+fo ea | ae E
+| q E' Me
+* %, i
 ```
 
 ## Observacoes

@@ -31,6 +31,7 @@ REPORT_PATH = ROOT / "_Editorial" / "Promocao Integral do Acervo Humano Tecnico.
 
 PDF_EXTENSION = ".pdf"
 SOURCE_PREFIX_FOR_MAIN_INDEX = "Acervo do humano/"
+MAX_ABSOLUTE_PATH_LENGTH = 238
 
 CATEGORY_SYSTEM_MAP = {
     "00_Documentacao_de_Campo_e_Clientes": "Campo-Clientes",
@@ -202,6 +203,13 @@ def file_slug(value: str, *, default: str, max_length: int = 120) -> str:
     return folder_slug(value.lower(), default=default, max_length=max_length).lower()
 
 
+def target_file_slug(value: str, parent: Path, *, default: str = "documento") -> str:
+    parent_length = len(str(parent.resolve()))
+    max_length = MAX_ABSOLUTE_PATH_LENGTH - parent_length - len("\\") - len(PDF_EXTENSION)
+    max_length = max(32, min(96, max_length))
+    return file_slug(value, default=default, max_length=max_length)
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with open(path_arg(path), "rb") as handle:
@@ -347,22 +355,9 @@ def build_target_path(source: Path, file_hash: str) -> tuple[Path, str, str, str
 
     brand_folder = folder_slug(brand, default="Referencia-Tecnica", max_length=28)
     family_folder = folder_slug(family, default="Geral", max_length=24)
-    brand_part = file_slug(brand, default="referencia", max_length=16)
-    family_part = file_slug(family, default="geral", max_length=20)
-    kind_part = {
-        "catalog-brochure": "catalog",
-        "documento-tecnico": "doc",
-        "installation-manual": "install",
-        "operation-manual": "operation",
-        "parts-manual": "parts",
-        "service-manual": "service",
-        "technical-reference": "techref",
-        "troubleshooting-guide": "trouble",
-    }.get(document_kind, "doc")
-    target_name = (
-        f"{brand_part}__{family_part}__{kind_part}__h-{file_hash[:12]}.pdf"
-    )
-    target_path = ACERVO_ROOT / system / brand_folder / family_folder / target_name
+    target_parent = ACERVO_ROOT / system / brand_folder / family_folder
+    target_name = f"{target_file_slug(source.stem, target_parent)}.pdf"
+    target_path = target_parent / target_name
     return target_path, system, brand_folder, family_folder, document_kind
 
 
@@ -496,6 +491,7 @@ def render_report(records: list[PromotionRecord], non_pdfs: list[Path], *, appli
             "## Regra operacional",
             "",
             "- PDFs sao promovidos para `Sistema/Marca/Familia/arquivo.pdf`, que e o padrao exigido pelo acervo principal e pela camada de notas companheiras.",
+            "- O nome do arquivo preserva o titulo original limpo para leitura humana; SHA-256 e origem ficam no manifesto e nas notas, nao no nome do PDF.",
             "- O script evita duplicacao por hash: se o PDF ja existe no acervo principal, ele registra `already-present` em vez de copiar outra vez.",
             "- HTML, JPG, JPEG e PNG nao foram misturados ao acervo principal porque ainda precisam de conversao para PDF, captura limpa ou nota tecnica curada.",
             "",

@@ -17,7 +17,7 @@ acervo_brand: "A revisar"
 acervo_family: "A revisar"
 extraction_method: "tesseract-ocr-por+eng"
 text_extractable: "sim"
-extracted_text_chars: 301
+extracted_text_chars: 295
 indexed_text_path: "90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-14bf9ab3.txt"
 duplicate_status: "unique"
 duplicate_group_sha256: ""
@@ -50,7 +50,7 @@ related_notes:
 - tamanho do arquivo: `27.6 KB`
 - texto extraivel detectado: `sim`
 - metodo de extracao: `tesseract-ocr-por+eng`
-- caracteres extraidos: `301`
+- caracteres extraidos: `295`
 - texto integral auxiliar: `90_Revisao_Manual/_Dados_Acervo/non_pdf_texts/00_Documentacao_de_Campo_e_Clientes/Imagens_e_Recortes_Tecnicos/imagens-e-recortes-tecnicos-jpg-14bf9ab3.txt`
 
 ## Sinais principais
@@ -109,7 +109,7 @@ related_notes:
 - `Praga de Eventos Ubatuba`
 - `Pista - Ingresso`
 - `Social Gratuito`
-- `a | ee ae eal .`
+- `a | ee ae no .`
 - `Oaee-8829-1859`
 - `1 de 1 24/12/2025 23:48:49`
 - `PDV - Site de venda`
@@ -132,15 +132,15 @@ Social Gratuito
 Cortesia
 =
 a
-[fm] a Late
+[n] a El
 a a
-at ra :
-i 7 1
-a | ee ae eal .
-1 a a
-ro Togs at
+at ra z
+q 7 dy
+a | ee ae no .
+| a a
+ro pet E
 a ag
-FF
+F
 L'. wit
 Oaee-8829-1859
 1 de 1 24/12/2025 23:48:49

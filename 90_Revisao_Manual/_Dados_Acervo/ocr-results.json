@@ -13,10 +13,10 @@
   },
   "results": [
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/referencia-bomba__91095466-mini-pressu__techref__h-b6d3ca86776f.pdf",
-      "acervo_relative_path": "Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/referencia-bomba__91095466-mini-pressu__techref__h-b6d3ca86776f.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/91095466-mini-pressurizador-pressostato-eletronico.pdf",
+      "acervo_relative_path": "Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/91095466-mini-pressurizador-pressostato-eletronico.pdf",
       "source_sha256": "b6d3ca86776f3d9f150c85559a58bd6a82f00953f7ca75d1a8eec1edb026e065",
-      "file_name": "referencia-bomba__91095466-mini-pressu__techref__h-b6d3ca86776f.pdf",
+      "file_name": "91095466-mini-pressurizador-pressostato-eletronico.pdf",
       "status": "completed",
       "pages_total": 12,
       "pages_completed": 12,
@@ -27,15 +27,15 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:41:42.695198+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/referencia-bomba__91095466-mini-pressu__techref__h-b6d3ca86776f.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/referencia-bomba__91095466-mini-pressu__techref__h-b6d3ca86776f.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/91095466-mini-pressurizador-pressostato-eletronico.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Referencia-Bombas-Utilidades/91095466-mini-pressuriza/91095466-mini-pressurizador-pressostato-eletronico.ocr.md",
       "failed_pages": []
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.pdf",
-      "acervo_relative_path": "Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Bombas-Utilidades/Whale/WHALE-2023/whale-2023.pdf",
+      "acervo_relative_path": "Bombas-Utilidades/Whale/WHALE-2023/whale-2023.pdf",
       "source_sha256": "b0b5ae3b5e456384d76675d1129915ef68bc7ca115483b1cf2b9d1af8a3184ab",
-      "file_name": "whale__whale-2023__techref__h-b0b5ae3b5e45.pdf",
+      "file_name": "whale-2023.pdf",
       "status": "partial",
       "pages_total": 128,
       "pages_completed": 128,
@@ -46,8 +46,8 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:42:10.867016+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Whale/WHALE-2023/whale__whale-2023__techref__h-b0b5ae3b5e45.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Bombas-Utilidades/Whale/WHALE-2023/whale-2023.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Bombas-Utilidades/Whale/WHALE-2023/whale-2023.ocr.md",
       "failed_pages": [
         {
           "page": 1,
@@ -117,10 +117,10 @@
       ]
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf",
-      "acervo_relative_path": "Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/00206bf595ae240412115759.pdf",
+      "acervo_relative_path": "Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/00206bf595ae240412115759.pdf",
       "source_sha256": "4f030a8a25918f79f9b7add080c5f94a02c0b6d03c97c175cb428f51c97dd63d",
-      "file_name": "referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.pdf",
+      "file_name": "00206bf595ae240412115759.pdf",
       "status": "completed",
       "pages_total": 5,
       "pages_completed": 5,
@@ -131,15 +131,15 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:48:02.037211+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/referencia-campo__00206bf595ae24041211__techref__h-4f030a8a2591.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/00206bf595ae240412115759.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/00206BF595AE240412115759/00206bf595ae240412115759.ocr.md",
       "failed_pages": []
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.pdf",
-      "acervo_relative_path": "Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.pdf",
+      "acervo_relative_path": "Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.pdf",
       "source_sha256": "aa138d8c87745d80f57224bba8e5d76afc4d2f09696242e5a05d23ab853d31a1",
-      "file_name": "referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.pdf",
+      "file_name": "c-users-nalmeida-appdata-local-temp-26-46885c42.pdf",
       "status": "completed",
       "pages_total": 3,
       "pages_completed": 3,
@@ -150,15 +150,15 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:48:22.967545+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/referencia-campo__imagens-e-recortes-t__techref__h-aa138d8c8774.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.md",
       "failed_pages": []
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.pdf",
-      "acervo_relative_path": "Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Climatizacao/Dometic/Self-Contained/dometic-marine-air-conditioners-price-list-2024.pdf",
+      "acervo_relative_path": "Climatizacao/Dometic/Self-Contained/dometic-marine-air-conditioners-price-list-2024.pdf",
       "source_sha256": "6a5287a55b9b173bb0ddbb1cb8135b3c4e9feac174bdd8bcecd1f10172ab6f12",
-      "file_name": "dometic__marine-air-conditioners__price-list__2024.pdf",
+      "file_name": "dometic-marine-air-conditioners-price-list-2024.pdf",
       "status": "partial",
       "pages_total": 98,
       "pages_completed": 98,
@@ -169,8 +169,8 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T02:06:21.795165+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Climatizacao/Dometic/Self-Contained/dometic-marine-air-conditioners-price-list-2024.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Climatizacao/Dometic/Self-Contained/dometic-marine-air-conditioners-price-list-2024.ocr.md",
       "failed_pages": [
         {
           "page": 1,
@@ -190,10 +190,10 @@
       ]
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
-      "acervo_relative_path": "Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Navegacao/Raymarine/SeaTalk/raymarine-seatalk-cabling-and-connections-a06033.pdf",
+      "acervo_relative_path": "Navegacao/Raymarine/SeaTalk/raymarine-seatalk-cabling-and-connections-a06033.pdf",
       "source_sha256": "4bcd9af75d0d74cbeaa7c46ea7c9f06f91af78ad7ffad78b210d7a47cd67d6db",
-      "file_name": "raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "file_name": "raymarine-seatalk-cabling-and-connections-a06033.pdf",
       "status": "completed",
       "pages_total": 3,
       "pages_completed": 3,
@@ -204,15 +204,15 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T02:06:05.181304+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Raymarine/SeaTalk/raymarine-seatalk-cabling-and-connections-a06033.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Raymarine/SeaTalk/raymarine-seatalk-cabling-and-connections-a06033.ocr.md",
       "failed_pages": []
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.pdf",
-      "acervo_relative_path": "Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Navegacao/Referencia-Navegacao/Interbus/interbus.pdf",
+      "acervo_relative_path": "Navegacao/Referencia-Navegacao/Interbus/interbus.pdf",
       "source_sha256": "03d72ce8f84e075bf8e3a98e643894f71495c5dc9716d9efaebb5ed7064894c0",
-      "file_name": "referencia-naveg__interbus__techref__h-03d72ce8f84e.pdf",
+      "file_name": "interbus.pdf",
       "status": "partial",
       "pages_total": 274,
       "pages_completed": 274,
@@ -223,8 +223,8 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:48:34.987494+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Referencia-Navegacao/Interbus/referencia-naveg__interbus__techref__h-03d72ce8f84e.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Navegacao/Referencia-Navegacao/Interbus/interbus.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Navegacao/Referencia-Navegacao/Interbus/interbus.ocr.md",
       "failed_pages": [
         {
           "page": 2,
@@ -309,10 +309,10 @@
       ]
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.pdf",
-      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/MACS/macs.pdf",
+      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/MACS/macs.pdf",
       "source_sha256": "df8a266135f11dde47542935c2737643c502244e648b42a7a6b52f47c4580c6b",
-      "file_name": "referencia-propu__macs__techref__h-df8a266135f1.pdf",
+      "file_name": "macs.pdf",
       "status": "partial",
       "pages_total": 7,
       "pages_completed": 7,
@@ -323,8 +323,8 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:57:34.155837+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MACS/referencia-propu__macs__techref__h-df8a266135f1.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MACS/macs.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MACS/macs.ocr.md",
       "failed_pages": [
         {
           "page": 1,
@@ -334,10 +334,10 @@
       ]
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.pdf",
-      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/manual-telecomandos.pdf",
+      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/manual-telecomandos.pdf",
       "source_sha256": "87450d33d6716d5614e2d149d1b198a40d2dd936e64b36a80c9c63b2896a504c",
-      "file_name": "referencia-propu__manual-telecomandos__techref__h-87450d33d671.pdf",
+      "file_name": "manual-telecomandos.pdf",
       "status": "completed",
       "pages_total": 8,
       "pages_completed": 8,
@@ -348,15 +348,15 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:57:57.185613+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/referencia-propu__manual-telecomandos__techref__h-87450d33d671.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/manual-telecomandos.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/MANUAL-TELECOMANDOS/manual-telecomandos.ocr.md",
       "failed_pages": []
     },
     {
-      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.pdf",
-      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.pdf",
+      "source_pdf": "90_Revisao_Manual/_Acervo_Local/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/propulsao-motores-e-turbo-547726ed.pdf",
+      "acervo_relative_path": "Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/propulsao-motores-e-turbo-547726ed.pdf",
       "source_sha256": "547726ed710b66b90aa9ade2429f57262dbe72efec1c78de329c67b8559d97db",
-      "file_name": "referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.pdf",
+      "file_name": "propulsao-motores-e-turbo-547726ed.pdf",
       "status": "completed",
       "pages_total": 12,
       "pages_completed": 12,
@@ -367,8 +367,8 @@
       "dpi": 150,
       "psm": 3,
       "generated_at": "2026-04-26T08:58:18.403608+00:00",
-      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.txt",
-      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/referencia-propu__propulsao-motores-tu__techref__h-547726ed710b.ocr.md",
+      "output_text": "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/propulsao-motores-e-turbo-547726ed.ocr.txt",
+      "output_note": "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Propulsao-Motores/Referencia-Propulsao/propulsao-motores-turbo/propulsao-motores-e-turbo-547726ed.ocr.md",
       "failed_pages": []
     }
   ]

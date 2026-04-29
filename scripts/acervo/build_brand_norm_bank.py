@@ -15,7 +15,7 @@ SCRIPTS_ROOT = SCRIPT_DIR.parent
 if str(SCRIPTS_ROOT) not in sys.path:
     sys.path.append(str(SCRIPTS_ROOT))
 
-from vault_tools import EXCLUDED_PARTS, ROOT, write_json  # noqa: E402
+from vault_tools import ROOT, is_excluded_path, write_json  # noqa: E402
 
 
 TAXONOMY_PATH = SCRIPT_DIR / "acervo_taxonomy.json"
@@ -87,7 +87,7 @@ def load_taxonomy() -> dict[str, list[dict[str, object]]]:
 def corpus_files() -> list[Path]:
     paths: list[Path] = []
     for path in ROOT.rglob("*.md"):
-        if any(part in EXCLUDED_PARTS for part in path.parts):
+        if is_excluded_path(path):
             continue
         if path.name in GENERATED_NOTE_NAMES:
             continue

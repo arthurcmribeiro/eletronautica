@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import date
@@ -30,6 +31,8 @@ INDEX_NOTE_PATH = (
 )
 PDF_TOOLCHAIN_AUDIT_PATH = ROOT / "manifest" / "acervo-pdf-toolchain-audit.json"
 OCR_RESULTS_PATH = ROOT / "90_Revisao_Manual" / "_Dados_Acervo" / "ocr-results.json"
+MAX_ANALYSIS_PAGES = 12
+EXTRACTION_TIMEOUT_SECONDS = 45
 
 CURATION_BLOCK_RE = re.compile(
     r"<!-- CURADORIA-HUMANA:START -->.*?<!-- CURADORIA-HUMANA:END -->",
@@ -248,6 +251,85 @@ TERM_KEYWORDS = (
     "voltage",
     "wiring",
 )
+DOCUMENT_KIND_LABELS = {
+    "catalog-brochure": "Catalogo / brochure",
+    "documento-tecnico": "Documento tecnico",
+    "installation-manual": "Manual de instalacao",
+    "operation-manual": "Manual de operacao",
+    "parts-manual": "Manual de pecas",
+    "service-manual": "Manual de servico",
+    "technical-reference": "Referencia tecnica",
+    "troubleshooting-guide": "Guia de diagnostico",
+}
+NOISE_LINE_PATTERNS = (
+    re.compile(r"redistribution|publication of this document", re.I),
+    re.compile(r"proposition\s+65|printed in u\.?s\.?a\.?", re.I),
+    re.compile(r"copyright|all rights reserved", re.I),
+    re.compile(r"this document contains mixed page sizes", re.I),
+    re.compile(r"please adjust your printer settings", re.I),
+    re.compile(r"^\s*(page|pagina)\s+\d+\s*$", re.I),
+)
+DOCUMENT_CODE_RE = re.compile(
+    r"\b(?:"
+    r"\d{3,4}-\d{4}[A-Z]?"
+    r"|TP[-\s]?\d{4}[A-Z]?"
+    r"|A\d{3,}[A-Z0-9]*"
+    r"|[A-Z]{2,10}\d{4,}[A-Z0-9.-]*"
+    r"|[A-Z]{2,6}-\d{4,6}[A-Z0-9.-]*"
+    r")\b",
+    re.I,
+)
+DATE_SIGNAL_RE = re.compile(
+    r"\b(?:"
+    r"\d{1,2}[/-]\d{1,2}[/-]\d{2,4}"
+    r"|\d{4}[/-]\d{1,2}[/-]\d{1,2}"
+    r"|(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|"
+    r"janeiro|fevereiro|marco|março|abril|maio|junho|julho|agosto|"
+    r"setembro|outubro|novembro|dezembro)[a-z]*\.?\s+\d{4}"
+    r")\b",
+    re.I,
+)
+TECHNICAL_UNIT_RE = re.compile(
+    r"\b\d+(?:[.,]\d+)?\s*(?:"
+    r"vdc|vac|v\s*dc|v\s*ac|volt(?:s)?|a|amp(?:s|ere|eres)?|hz|khz|kw|w|"
+    r"awg|mm2|mm²|mcm|rpm|nm|n\s*m|psi|bar|gpm|lpm|l/min|"
+    r"cubic\s*feet|cfm|btu|°c|deg\s*c|c\b|°f|deg\s*f"
+    r")\b",
+    re.I,
+)
+TECHNICAL_KEYWORD_RE = re.compile(
+    r"\b(?:"
+    r"battery|bateria|alternator|alternador|charger|carregador|breaker|disjuntor|"
+    r"fuse|fusivel|fusível|wire|cable|cabo|conductor|condutor|ground|terra|"
+    r"bonding|torque|current|corrente|voltage|tensao|tensão|frequency|frequencia|"
+    r"pump|bomba|pressure|pressao|pressão|flow|fluxo|cooling|refrigeracao|"
+    r"installation|instalacao|instalação|wiring|ligacao|ligação|alarm|alarme|"
+    r"fault|falha|diagnostic|diagnostico|diagnóstico|maintenance|manutencao|manutenção"
+    r")\b",
+    re.I,
+)
+SECTION_KEYWORD_RE = re.compile(
+    r"\b(?:"
+    r"installation|instalacao|instalação|operation|operacao|operação|service|servico|serviço|"
+    r"maintenance|manutencao|manutenção|troubleshooting|diagnostic|diagnostico|diagnóstico|"
+    r"specification|specifications|especificacao|especificações|wiring|ligacao|ligação|"
+    r"parts|pecas|peças|safety|seguranca|segurança|cooling|refrigeracao|"
+    r"battery|bateria|generator|gerador|control|controle|network|nmea"
+    r")\b",
+    re.I,
+)
+TOPIC_KEYWORDS = (
+    ("alimentacao eletrica", ("battery", "bateria", "voltage", "tensao", "tensão", "charger", "carregador")),
+    ("protecao e seccionamento", ("fuse", "fusivel", "fusível", "breaker", "disjuntor", "switch", "seccion")),
+    ("cabos e ligacoes", ("wire", "wiring", "cable", "cabo", "conductor", "ligacao", "ligação")),
+    ("aterramento/bonding", ("ground", "terra", "bonding", "galvanic", "galvanica", "galvânica")),
+    ("instalacao fisica", ("installation", "instalacao", "instalação", "mounting", "montagem")),
+    ("operacao", ("operation", "operacao", "operação", "start", "stop", "partida")),
+    ("manutencao", ("maintenance", "manutencao", "manutenção", "service", "servico", "serviço")),
+    ("diagnostico de falhas", ("troubleshooting", "diagnostic", "diagnostico", "diagnóstico", "fault", "falha")),
+    ("resfriamento/agua", ("cooling", "water", "agua", "água", "pump", "bomba", "flow", "fluxo")),
+    ("redes e comunicacao", ("nmea", "can bus", "network", "seatalk", "interbus", "ethernet")),
+)
 
 MODEL_STOPWORDS = {
     "AC",
@@ -418,6 +500,11 @@ class NoteRecord:
     detected_brands: list[str]
     detected_models: list[str]
     detected_terms: list[str]
+    document_codes: list[str]
+    revision_signals: list[str]
+    technical_specs: list[str]
+    technical_sections: list[str]
+    curation_topics: list[str]
     snippets: list[str]
     curation_block: str
 
@@ -445,8 +532,211 @@ def normalize_whitespace(value: str) -> str:
     return " ".join(value.replace("\xa0", " ").split())
 
 
+def strip_accents(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    return normalized.encode("ascii", "ignore").decode("ascii")
+
+
+def display_label(value: str) -> str:
+    cleaned = value.replace("__", " ").replace("_", " ").replace("-", " ")
+    return normalize_whitespace(cleaned)
+
+
 def title_from_stem(stem: str) -> str:
     return stem.replace("__", " - ").replace("_", " ").strip()
+
+
+def is_noise_line(line: str) -> bool:
+    compact = normalize_whitespace(line)
+    if not compact:
+        return True
+    if len(compact) < 4:
+        return True
+    if any(pattern.search(compact) for pattern in NOISE_LINE_PATTERNS):
+        return True
+    alpha_count = sum(char.isalpha() for char in compact)
+    return alpha_count < 3
+
+
+def clean_signal_line(line: str, *, max_length: int = 180) -> str:
+    compact = normalize_whitespace(line).replace("`", "'")
+    if len(compact) <= max_length:
+        return compact
+    return compact[: max_length - 3].rstrip() + "..."
+
+
+def push_unique(items: list[str], seen: set[str], value: str, *, limit: int) -> None:
+    cleaned = clean_signal_line(value)
+    if not cleaned or is_noise_line(cleaned):
+        return
+    key = cleaned.casefold()
+    if key in seen:
+        return
+    seen.add(key)
+    items.append(cleaned)
+    del items[limit:]
+
+
+def technical_line_score(line: str) -> int:
+    compact = normalize_whitespace(line)
+    if is_noise_line(compact):
+        return -100
+
+    score = 0
+    if TECHNICAL_UNIT_RE.search(compact):
+        score += 8
+    if TECHNICAL_KEYWORD_RE.search(compact):
+        score += 6
+    if DOCUMENT_CODE_RE.search(compact):
+        score += 3
+    if re.search(r"\b(?:12|24|48|110|115|120|220|230|240|50|60)\b", compact):
+        score += 2
+    if 20 <= len(compact) <= 160:
+        score += 2
+    if len(compact) > 220:
+        score -= 4
+    return score
+
+
+def extract_document_codes(*, stem: str, metadata_title: str, text: str) -> list[str]:
+    candidates = "\n".join(
+        part
+        for part in (
+            stem,
+            stem.replace("-", " "),
+            metadata_title if metadata_title != "n/a" else "",
+            text,
+        )
+        if part
+    )
+    results: list[str] = []
+    seen: set[str] = set()
+    for match in DOCUMENT_CODE_RE.finditer(candidates):
+        token = normalize_model_token(match.group(0)).upper()
+        if len(token) < 4 or token in MODEL_STOPWORDS:
+            continue
+        if token.isdigit():
+            continue
+        key = token.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append(token)
+        if len(results) >= 10:
+            break
+    return results
+
+
+def extract_revision_signals(text: str) -> list[str]:
+    results: list[str] = []
+    seen: set[str] = set()
+    for line in text.splitlines():
+        compact = normalize_whitespace(line)
+        if is_noise_line(compact):
+            continue
+        if not DATE_SIGNAL_RE.search(compact):
+            continue
+        if not re.search(r"rev|revision|revised|issue|printed|date|data|edicao|edição", compact, re.I):
+            continue
+        push_unique(results, seen, compact, limit=8)
+        if len(results) >= 8:
+            break
+    return results
+
+
+def extract_technical_specs(text: str) -> list[str]:
+    scored: list[tuple[int, int, str]] = []
+    seen: set[str] = set()
+    for index, raw_line in enumerate(text.splitlines()):
+        line = clean_signal_line(raw_line)
+        if len(line) < 10:
+            continue
+        score = technical_line_score(line)
+        if score < 8:
+            continue
+        key = line.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        scored.append((score, -index, line))
+
+    scored.sort(reverse=True)
+    return [line for _score, _index, line in scored[:14]]
+
+
+def extract_technical_sections(text: str) -> list[str]:
+    results: list[str] = []
+    seen: set[str] = set()
+    for raw_line in text.splitlines():
+        line = clean_signal_line(raw_line, max_length=110)
+        if len(line) < 5 or len(line) > 110:
+            continue
+        if is_noise_line(line):
+            continue
+        if not SECTION_KEYWORD_RE.search(line):
+            continue
+        if TECHNICAL_UNIT_RE.search(line) and len(line.split()) > 8:
+            continue
+        if line.endswith(".") and len(line.split()) > 6:
+            continue
+        push_unique(results, seen, line, limit=14)
+        if len(results) >= 14:
+            break
+    return results
+
+
+def detect_curation_topics(text: str, system: str, document_kind: str) -> list[str]:
+    blob = f"{system} {document_kind} {text}".casefold()
+    topics: list[str] = []
+    for label, keywords in TOPIC_KEYWORDS:
+        if any(keyword.casefold() in blob for keyword in keywords):
+            topics.append(label)
+        if len(topics) >= 8:
+            break
+    return topics
+
+
+def build_human_title(
+    *,
+    stem: str,
+    brand: str,
+    family: str,
+    document_kind: str,
+    document_codes: list[str],
+    detected_models: list[str],
+    metadata_title: str,
+) -> str:
+    kind_label = DOCUMENT_KIND_LABELS.get(document_kind, "Documento tecnico")
+    brand_label = display_label(brand)
+    family_label = display_label(family)
+    model_label = ", ".join(detected_models[:4]) if detected_models else family_label
+    code = ""
+    if document_kind != "catalog-brochure":
+        code = next(
+            (
+                candidate
+                for candidate in document_codes
+                if candidate.casefold() not in {model.casefold() for model in detected_models}
+            ),
+            "",
+        )
+
+    if brand.casefold().startswith("referencia-"):
+        base = f"{family_label} - {kind_label}"
+    elif model_label and model_label.casefold() != family_label.casefold():
+        base = f"{brand_label} {model_label} - {kind_label}"
+    else:
+        base = f"{brand_label} {family_label} - {kind_label}"
+
+    if code and code.casefold() not in base.casefold():
+        base = f"{base} - {code}"
+    elif metadata_title and metadata_title != "n/a" and metadata_title.casefold() not in base.casefold():
+        short_metadata = clean_signal_line(metadata_title, max_length=48)
+        if short_metadata and not is_noise_line(short_metadata):
+            base = f"{base} - {short_metadata}"
+
+    fallback = title_from_stem(stem)
+    return normalize_whitespace(base) or fallback
 
 
 def absolute_link(path: Path) -> str:
@@ -716,19 +1006,31 @@ def detect_term_signals(text: str) -> list[str]:
 
 
 def build_snippets(text: str) -> list[str]:
-    snippets: list[str] = []
+    candidates: list[tuple[int, int, str]] = []
     seen: set[str] = set()
-    for raw_line in text.splitlines():
-        line = normalize_whitespace(raw_line)
-        if len(line) < 12:
+    for index, raw_line in enumerate(text.splitlines()):
+        line = clean_signal_line(raw_line, max_length=200)
+        if len(line) < 12 or is_noise_line(line):
             continue
-        if len(line) > 200:
-            line = line[:197].rstrip() + "..."
         key = line.casefold()
         if key in seen:
             continue
         seen.add(key)
-        snippets.append(line.replace("`", "'"))
+        score = technical_line_score(line)
+        if score < 2 and not SECTION_KEYWORD_RE.search(line):
+            continue
+        candidates.append((score, -index, line))
+
+    candidates.sort(reverse=True)
+    snippets = [line for _score, _index, line in candidates[:12]]
+    if snippets:
+        return snippets
+
+    for raw_line in text.splitlines():
+        line = clean_signal_line(raw_line, max_length=200)
+        if len(line) < 12 or is_noise_line(line):
+            continue
+        snippets.append(line)
         if len(snippets) >= 10:
             break
     return snippets
@@ -975,7 +1277,11 @@ def collect_pdf_records() -> list[NoteRecord]:
         stem = pdf_path.stem
 
         existing = parse_existing_note(note_path)
-        extraction = extract_pdf_text(pdf_path)
+        extraction = extract_pdf_text(
+            pdf_path,
+            max_pages=MAX_ANALYSIS_PAGES,
+            timeout=EXTRACTION_TIMEOUT_SECONDS,
+        )
         ocr_text = read_ocr_text(ocr_record)
         analysis_text = extraction.text if extraction.useful_text else ocr_text
         analysis_source = extraction.method if extraction.useful_text else (
@@ -983,10 +1289,34 @@ def collect_pdf_records() -> list[NoteRecord]:
         )
         text_extractable = "sim" if extraction.useful_text else "nao"
         seed_text = f"{brand}\n{family}\n{stem}\n{analysis_text}"
+        metadata_title = metadata_title_from_audit(audit_record)
 
         detected_models = detect_model_signals(stem=stem, family=family, text=analysis_text)
         detected_terms = detect_term_signals(seed_text)
         detected_brands = detect_brand_signals(seed_text)
+        document_kind = detect_document_kind(stem)
+        document_codes = extract_document_codes(
+            stem=stem,
+            metadata_title=metadata_title,
+            text=analysis_text,
+        )
+        revision_signals = extract_revision_signals(analysis_text)
+        technical_specs = extract_technical_specs(analysis_text)
+        technical_sections = extract_technical_sections(analysis_text)
+        curation_topics = detect_curation_topics(
+            seed_text,
+            system=system,
+            document_kind=document_kind,
+        )
+        title = build_human_title(
+            stem=stem,
+            brand=brand,
+            family=family,
+            document_kind=document_kind,
+            document_codes=document_codes,
+            detected_models=detected_models,
+            metadata_title=metadata_title,
+        )
 
         record = NoteRecord(
             pdf_path=pdf_path,
@@ -996,8 +1326,8 @@ def collect_pdf_records() -> list[NoteRecord]:
             system=system,
             brand=brand,
             family=family,
-            title=title_from_stem(stem),
-            document_kind=detect_document_kind(stem),
+            title=title,
+            document_kind=document_kind,
             curation_priority=detect_curation_priority(stem, existing),
             curation_stage=detect_curation_stage(existing),
             source_sha256=sha256(pdf_path),
@@ -1033,10 +1363,15 @@ def collect_pdf_records() -> list[NoteRecord]:
                 "0",
             ),
             analysis_source=analysis_source,
-            metadata_title=metadata_title_from_audit(audit_record),
+            metadata_title=metadata_title,
             detected_brands=detected_brands,
             detected_models=detected_models,
             detected_terms=detected_terms,
+            document_codes=document_codes,
+            revision_signals=revision_signals,
+            technical_specs=technical_specs,
+            technical_sections=technical_sections,
+            curation_topics=curation_topics,
             snippets=build_snippets(analysis_text),
             curation_block="",
         )
@@ -1095,6 +1430,8 @@ def render_note(record: NoteRecord, reviewed_on: str) -> str:
         f'ocr_note_path: "{record.ocr_note_path}"',
         f'ocr_text_chars: "{record.ocr_text_chars}"',
         f'analysis_source: "{record.analysis_source}"',
+        f'detected_document_codes: "{join_or_na(record.document_codes)}"',
+        f'curation_topics: "{join_or_na(record.curation_topics)}"',
         "aliases:",
         f'  - "{record.pdf_path.name}"',
         "related_notes:",
@@ -1165,7 +1502,42 @@ def render_note(record: NoteRecord, reviewed_on: str) -> str:
             f"- familia: `{record.family}`",
             f"- marcas detectadas: `{join_or_na(record.detected_brands)}`",
             f"- codigos/modelos detectados: `{join_or_na(record.detected_models)}`",
+            f"- codigos tecnicos/documentais detectados: `{join_or_na(record.document_codes)}`",
+            f"- datas/revisoes detectadas: `{join_or_na(record.revision_signals)}`",
             f"- termos uteis detectados: `{join_or_na(record.detected_terms)}`",
+            f"- topicos de curadoria: `{join_or_na(record.curation_topics)}`",
+            "",
+            "## Extracao tecnica automatica",
+            "",
+            "### Secoes e assuntos provaveis",
+            "",
+        ]
+    )
+    if record.technical_sections:
+        body.extend(f"- `{line}`" for line in record.technical_sections)
+    else:
+        body.append("- `n/a`")
+    body.extend(
+        [
+            "",
+            "### Especificacoes e linhas de valor tecnico",
+            "",
+        ]
+    )
+    if record.technical_specs:
+        body.extend(f"- `{line}`" for line in record.technical_specs)
+    else:
+        body.append("- `nenhuma especificacao curta foi extraida automaticamente`")
+    body.extend(
+        [
+            "",
+            "### Leitura operacional sugerida",
+            "",
+        ]
+    )
+    body.extend(f"- {topic}" for topic in (record.curation_topics or ["confirmar escopo diretamente no PDF"]))
+    body.extend(
+        [
             "",
             "## Aplicacao e integracoes sugeridas",
             "",

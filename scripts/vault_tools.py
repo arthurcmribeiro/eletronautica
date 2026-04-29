@@ -12,6 +12,7 @@ WIKILINK_RE = re.compile(r"\[\[([^\]|#]+)")
 EXCLUDED_PARTS = {".git", ".obsidian", ".claude", "_visuals"}
 EXCLUDED_RELATIVE_PREFIXES = {
     "90_Revisao_Manual/_Acervo_Local/Acervo do humano/",
+    "90_Revisao_Manual/_Dados_Acervo/",
 }
 
 

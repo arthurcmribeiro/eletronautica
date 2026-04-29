@@ -1,0 +1,164 @@
+---
+title: "Imagens e Recortes Tecni - Referencia tecnica - C:\Users\nalmeida\AppData\Local\Temp\26\print..."
+note_type: "acervo-companion"
+domain: "90_Revisao_Manual"
+status: "auto-extracted"
+acervo_origin: "acervo-principal"
+document_kind: "technical-reference"
+curation_priority: "alta"
+curation_stage: "triagem-automatica"
+reviewed_on: "2026-04-28"
+review_jurisdiction: "Brasil"
+source_pdf: "Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.pdf"
+source_sha256: "aa138d8c87745d80f57224bba8e5d76afc4d2f09696242e5a05d23ab853d31a1"
+acervo_system: "Campo-Clientes"
+acervo_brand: "Referencia-Campo"
+acervo_family: "Imagens-e-Recortes-Tecni"
+extraction_method: "pdf-stream-strings-low-confidence"
+text_extractable: "nao"
+pdf_pages: "3"
+pdf_version: "1.4"
+pdf_encrypted: "nao"
+qpdf_status: "ok"
+ocr_priority: "concluido"
+ocr_status: "completed"
+ocr_text_path: "90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.txt"
+ocr_note_path: "90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.md"
+ocr_text_chars: "2375"
+analysis_source: "ocr-sidecar"
+detected_document_codes: "n/a"
+curation_topics: "manutencao"
+aliases:
+  - "c-users-nalmeida-appdata-local-temp-26-46885c42.pdf"
+related_notes:
+  - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local - Indice Gerado"
+  - "Tabela-Mestre do Acervo - Biblioteca de Referencia"
+  - "90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado"
+---
+
+# Imagens e Recortes Tecni - Referencia tecnica - C:\Users\nalmeida\AppData\Local\Temp\26\print...
+
+> [!abstract] Resumo tecnico
+> Nota companheira gerada automaticamente a partir do PDF do acervo local.
+> Ela serve como camada de rastreio rapido, busca textual e preparo de curadoria editorial.
+
+> [!success] OCR auxiliar disponivel
+> O PDF original nao tem texto extraivel confiavel, mas ha OCR `completed` em `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.md`.
+
+## Fonte
+
+- PDF: [c-users-nalmeida-appdata-local-temp-26-46885c42.pdf](</C:/Users/User/Desktop/ELETRO NAUTICA OBSIDIAN/ELETRO NAUTICA/90_Revisao_Manual/_Acervo_Local/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.pdf>)
+- caminho relativo: `Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.pdf`
+- nota companheira: `90_Revisao_Manual/_Acervo_Notas/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.md`
+- tamanho do arquivo: `88.4 KB`
+- paginas detectadas: `3`
+- versao PDF: `1.4`
+- PDF criptografado: `nao`
+- titulo em metadados: `C:\Users\nalmeida\AppData\Local\Temp\26\printout.tif`
+- texto extraivel detectado: `nao`
+- tipo documental detectado: `technical-reference`
+- metodo de extracao: `pdf-stream-strings-low-confidence`
+- status qpdf: `ok`
+- prioridade OCR: `concluido`
+- status OCR auxiliar: `completed`
+- nota OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_notes/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.md`
+- texto OCR auxiliar: `90_Revisao_Manual/_Dados_Acervo/ocr_texts/Campo-Clientes/Referencia-Campo/Imagens-e-Recortes-Tecni/c-users-nalmeida-appdata-local-temp-26-46885c42.ocr.txt`
+- caracteres OCR auxiliares: `2375`
+- fonte de analise automatica: `ocr-sidecar`
+
+## Sinais principais
+
+- sistema: `Campo-Clientes`
+- marca: `Referencia-Campo`
+- familia: `Imagens-e-Recortes-Tecni`
+- marcas detectadas: `Rehlko / Kohler`
+- codigos/modelos detectados: `Imagens, Recortes, Tecni, O.01KG`
+- codigos tecnicos/documentais detectados: `n/a`
+- datas/revisoes detectadas: `n/a`
+- termos uteis detectados: `air, generator, service`
+- topicos de curadoria: `manutencao`
+
+## Extracao tecnica automatica
+
+### Secoes e assuntos provaveis
+
+- `e" USED KOALEM GENERATOR RUA.`
+- `1 1 USED KOHLER GENERATOR BAVA 0.01 KG BRAZIL 1 PCE 2.676,00 |2.676,00`
+- `Duty “tax billing service:`
+
+### Especificacoes e linhas de valor tecnico
+
+- `RUA ANCRA DO HEROÍSMO, 3 A`
+
+### Leitura operacional sugerida
+
+- manutencao
+
+## Aplicacao e integracoes sugeridas
+
+- usar esta nota para rastrear evidencia de campo, fotos convertidas, documentos recebidos e contexto de cliente sem misturar com manual de fabricante
+
+## Links internos sugeridos
+
+- `Tabela-Mestre do Acervo - Biblioteca de Referencia`
+- `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local - Indice Gerado`
+- `90_Revisao_Manual/00_Entrada_e_Controle/Portal do Acervo - Biblioteca de Referencia`
+- `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Humano Tecnico - Indice Gerado`
+
+<!-- CURADORIA-HUMANA:START -->
+## Curadoria humana
+
+### Resumo humano
+- pendente
+
+### Aplicacao de oficina
+- pendente
+
+### Modelos cobertos confirmados
+- `Imagens`
+- `Recortes`
+- `Tecni`
+
+### Pontos de atencao
+- pendente
+
+### Integracoes e links internos
+- sistema-base: `Campo-Clientes`
+- marca/familia: `Referencia-Campo / Imagens-e-Recortes-Tecni`
+- notas relacionadas: pendente
+
+### Status de curadoria
+- tipo documental confirmado: `technical-reference`
+- curadoria humana: pendente
+- pronto para ensino/SEO: nao
+<!-- CURADORIA-HUMANA:END -->
+
+## Trechos indexaveis
+
+- `RUA ANCRA DO HEROÍSMO, 3 A`
+- `EXPRESS WORLDWIDE | TI =) 4 Rasa DHL EXPRESS TERMOS E CONDIÇÕES DE TRANSPORTE`
+- `panes Termas 2 Condições)`
+- `Fre: SPEEDYLION- LDA em 1`
+- `RUA ANGRA DO HEROISMO, 3`
+- `LISBOA FREGUESIA - ARROIOS`
+- `Yalu fo Ineuranes, 2876 USD`
+- `Sligo :GN2y / GP; 28258009006109 Ik / =: TG" 474758" "9`
+- `SYBIL 52 $12 1835`
+- `yPT1 1502004 48000001`
+- `(Wy JD01 4600 0122 4128 8307`
+- `AURANGAR DO HEROIEMO. 98`
+
+## Perguntas de curadoria
+
+- este documento e evidencia de campo, material de cliente ou referencia tecnica reutilizavel?
+- ha dados pessoais, comerciais ou sensiveis que exigem restricao antes de reaproveitar em aula ou SEO?
+
+## Acoes sugeridas
+
+- revisar a classificacao desta nota e completar contexto tecnico se necessario
+- vincular esta nota aos PDFs principais da mesma familia quando houver
+
+## Observacoes
+
+- esta nota e automatica; revisar manualmente antes de usar como resumo definitivo
+- quando este PDF for relevante para ensino, oficina ou SEO, vale evoluir para nota humana curada

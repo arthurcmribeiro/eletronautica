@@ -892,6 +892,103 @@ review_jurisdiction: "Brasil"
   - `python scripts/build_manifest.py`;
   - `python scripts/validate_vault.py`.
 
+## 2026-04-27 - Lote 64 - Separacao de _Dados_Acervo da camada editorial
+
+- Reclassificada a pasta `90_Revisao_Manual/_Dados_Acervo/` como camada tecnica gerada por scripts, nao como conteudo editorial do vault.
+- Configurado o Obsidian para ignorar `90_Revisao_Manual/_Dados_Acervo/`, reduzindo ruido visual de OCR bruto, sidecars `.txt` e JSONs operacionais.
+- Atualizado `scripts/vault_tools.py` para excluir `_Dados_Acervo` dos scanners centrais de notas.
+- Atualizado `scripts/acervo/build_brand_norm_bank.py` para usar a mesma regra de exclusao dos scanners centrais, evitando que OCR bruto e notas auxiliares contaminem o banco de marcas/normas.
+- Criado `90_Revisao_Manual/_Dados_Acervo/README.md` documentando a regra: a pasta serve a automacao; conteudo util para leitura deve ficar em `_Acervo_Notas/` ou nas notas editoriais curadas.
+- Regenerados derivados afetados:
+  - `90_Revisao_Manual/_Dados_Acervo/brand-norm-bank.json`;
+  - `90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Banco de Marcas e Normas Citadas — Corpus Integral.md`;
+  - `90_Revisao_Manual/_Dados_Acervo/manual-resolution-queue.json`;
+  - `90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Preparação Source-First — Resolver de Links Oficiais.md`;
+  - `manifest/content-manifest.json`.
+- Validacao desta passada:
+  - `python scripts/acervo/build_brand_norm_bank.py`;
+  - `python scripts/acervo/build_manual_resolution_queue.py`;
+  - `python scripts/check_python_scripts.py`;
+  - `python scripts/build_manifest.py`;
+  - `python scripts/validate_vault.py`.
+- Resultado pratico:
+  - `_Dados_Acervo` deixa de aparecer no manifesto editorial;
+  - `744` notas analisadas;
+  - `0` erros;
+  - `0` avisos.
+
+## 2026-04-28 - Lote 65 - Extracao tecnica ampliada e nomes finais do acervo PDF
+
+- Ampliado `scripts/acervo/build_pdf_companion_notes.py` para extrair mais informacao util dos PDFs principais sem transformar manual inteiro em Markdown:
+  - analise de ate `12` paginas quando houver texto pesquisavel;
+  - titulos humanos a partir de marca, familia, tipo documental e codigo forte do documento;
+  - codigos tecnicos/documentais detectados;
+  - datas/revisoes detectadas;
+  - topicos de curadoria;
+  - secoes provaveis;
+  - linhas tecnicas curtas com tensao, corrente, cabos, protecao, diagnostico, manutencao, agua/resfriamento e redes.
+- Ajustada a selecao de `Trechos indexaveis` para priorizar linhas tecnicas e reduzir lixo de capa/copyright.
+- Criado `scripts/acervo/rename_pdf_companion_names_from_content.py` para limpar nomes remanescentes com `__`, `legacy-espelho` ou hash, mantendo sincronizados:
+  - PDFs em `_Acervo_Local`;
+  - notas espelhadas em `_Acervo_Notas`;
+  - sidecars OCR em `_Dados_Acervo`;
+  - JSONs de rastreabilidade.
+- Renomeados `46` PDFs e `46` notas companheiras remanescentes.
+- Movidos junto `2` textos OCR e `2` notas OCR auxiliares.
+- Gerado `manifest/acervo-content-based-renames.json` com o mapa completo da migracao.
+- Regenerados derivados principais:
+  - `90_Revisao_Manual/_Acervo_Local/acervo-local-index.json`;
+  - `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local — Índice Gerado.md`;
+  - `manifest/acervo-pdf-toolchain-audit.json`;
+  - `_Editorial/Auditoria Operacional PDF - Toolchain.md`;
+  - `90_Revisao_Manual/_Acervo_Notas/`;
+  - `90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado.md`;
+  - `manifest/acervo-curation-dashboard.json`;
+  - `90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo.md`;
+  - `90_Revisao_Manual/_Dados_Acervo/brand-norm-bank.json`;
+  - `90_Revisao_Manual/_Dados_Acervo/manual-resolution-queue.json`;
+  - `manifest/content-manifest.json`.
+- Validacao desta passada:
+  - `python scripts/acervo/rename_pdf_companion_names_from_content.py --apply`;
+  - `python scripts/acervo/build_local_index.py`;
+  - `python scripts/acervo/audit_pdf_toolchain.py --scope main --ocr-sample-limit 0 --max-text-pages 2`;
+  - `python scripts/acervo/build_pdf_companion_notes.py`;
+  - `python scripts/acervo/build_curation_dashboard.py`;
+  - `python scripts/acervo/build_brand_norm_bank.py`;
+  - `python scripts/acervo/build_manual_resolution_queue.py`;
+  - `python scripts/check_python_scripts.py`;
+  - `python scripts/validate_vault.py`;
+  - `python scripts/build_manifest.py`.
+- Resultado pratico:
+  - `248` notas companheiras regeneradas com camada tecnica mais rica;
+  - `248` PDFs auditados no acervo principal;
+  - nenhum PDF principal restante com `__`, `legacy-espelho` ou hash no nome;
+  - `744` notas analisadas;
+  - `0` erros;
+  - `0` avisos.
+
+## 2026-04-27 - Lote 51 - Renomeacao legivel dos PDFs promovidos do 90_Revisao_Manual
+
+- Corrigida a nomenclatura dos PDFs promovidos em massa para o acervo principal: o padrao com `marca__familia__tipo__h-hash.pdf` foi substituido por nomes baseados no arquivo original limpo.
+- Regra editorial adotada:
+  - caminho de organizacao continua `Sistema/Marca/Familia/arquivo.pdf`;
+  - nome do PDF fica humano e pesquisavel;
+  - SHA-256, origem e rastreabilidade ficam nos manifestos e nas notas companheiras, nao no nome do arquivo.
+- Migrados `202` PDFs principais, `202` notas companheiras e `8` pares de sidecars OCR (`.ocr.txt` + `.ocr.md`).
+- Adicionado `scripts/acervo/rename_promoted_pdf_files_readably.py` para repetir a migracao ou reparar nomes longos de forma controlada.
+- Ajustado `scripts/acervo/promote_all_human_pdfs_to_main.py` para que novas promocoes ja usem nomes legiveis com limite de caminho seguro no Windows.
+- Ajustado `scripts/acervo/build_curation_dashboard.py` para ler JSON/Markdown com `utf-8-sig`, evitando falha quando algum arquivo gerado externamente vier com BOM.
+- Gerado `manifest/acervo-readable-pdf-renames.json` com mapa completo `old_target -> new_target`.
+- Validacao final desta passada:
+  - `python scripts/acervo/build_local_index.py`;
+  - `python scripts/acervo/build_pdf_companion_notes.py`;
+  - `python scripts/acervo/build_curation_dashboard.py`;
+  - `python scripts/acervo/build_brand_norm_bank.py`;
+  - `python scripts/acervo/run_pdf_pipeline.py --skip-package --skip-local-index --skip-audit --skip-ocr --keep-going`;
+  - `python scripts/check_python_scripts.py`;
+  - `python scripts/validate_vault.py`;
+  - `python scripts/build_manifest.py`.
+
 ## 2026-04-26 - Lote 63 - Automacao completa dos proximos passos do acervo PDF
 
 - Criado checkpoint Git antes das novas automacoes:

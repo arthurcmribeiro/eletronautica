@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-04-29T01:12:16.683830+00:00",
+  "applied": true,
+  "rename_count": 46,
+  "moved_counts": {
+    "pdf": 46,
+    "note": 46,
+    "ocr_text": 2,
+    "ocr_note": 2
+  },
+  "records": [
+    {
+      "old_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair__marine-air-conditioners__price-list__2015.pdf",
+      "new_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair-marine-air-conditioners-price-list-2015.pdf",
+      "title": "Dometic R410A, R417A, EQ24-410A, EQ30-410A - Catalogo / brochure - 786-621",
+      "source_sha256": "cc259fa0437f7e80a479babf2ccd9e6dc2e7e2ac003a2239731a0ea00d2d3432"
+    },
+    {
+      "old_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair__self-contained-air-conditioner__installation-manual__dx-remote-legacy-espelho.pdf",
+      "new_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair-self-contained-air-conditioner-installation-manual-dx-remote-804-746.pdf",
+      "title": "Dometic PR3X, PR8X - Manual de instalacao - 804-746",
+      "source_sha256": "0ca46dcdba293e8e08033180aab86fbd32f9bb05fbb4a49a7eb2e83068aa4941"
+    },
+    {
+      "old_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair__self-contained-air-conditioner__troubleshooting-guide__legacy-espelho.pdf",
+      "new_target": "Climatizacao/Dometic/Self-Contained/dometic-cruisair-self-contained-air-conditioner-troubleshooting-guide.pdf",
+      "title": "Dometic Self Contained - Guia de diagnostico",
+      "source_sha256": "0b38d83d6d12814a821794152a437a2cef09be4aa59a8564deec9f88ba1cc3f0"
+    },
+    {
+      "old_target": "Climatizacao/Dometic/Self-Contained/dometic__marine-air-conditioners__price-list__2024.pdf",
+      "new_target": "Climatizacao/Dometic/Self-Contained/dometic-marine-air-conditioners-price-list-2024.pdf",
+      "title": "Dometic R410A, DEUX48-410, DEUX60-410, R417A - Catalogo / brochure - TX10",
+      "source_sha256": "6a5287a55b9b173bb0ddbb1cb8135b3c4e9feac174bdd8bcecd1f10172ab6f12"
+    },
+    {
+      "old_target": "Climatizacao/H-Tec/HFC-Acqua/h-tec__hfc-acqua__catalogo-brochure__on-board.pdf",
+      "new_target": "Climatizacao/H-Tec/HFC-Acqua/h-tec-hfc-acqua-catalogo-on-board.pdf",
+      "title": "H Tec HFC Acqua - Catalogo / brochure",
+      "source_sha256": "49ff2f92ba5a0793c5d6628a5cf973547a62e50fac7e77f0e8591bc5a3f1739a"
+    },
+    {
+      "old_target": "Climatizacao/Mabru/Self-Contained-DC-VI/mabru__self-contained-dc-vi__installation-manual__2025.pdf",
+      "new_target": "Climatizacao/Mabru/Self-Contained-DC-VI/mabru-self-contained-dc-vi-installation-manual-2025.pdf",
+      "title": "Mabru SC5DC, SC7DC, SC12DC - Manual de instalacao - MBR250801MNLPDFP11",
+      "source_sha256": "49196f6780421c2bf1b82c01a4496aee5b6bd53c7bc7da6fa9f3d4451153d1e1"
+    },
+    {
+      "old_target": "Complementar-Brasil/Corrosao/DPH-DPR-IPS/referencia-tecnica__corrosao-eletrolise-dph-dpr-ips__medicoes.pdf",
+      "new_target": "Complementar-Brasil/Corrosao/DPH-DPR-IPS/corrosao-eletrolise-dph-dpr-ips-medicoes.pdf",
+      "title": "Corrosao DPH-DPR-IPS - Referencia tecnica",
+      "source_sha256": "6868a575a33a314acbec5e8cacb8581af36001847713b152407ad58af3df4e9c"
+    },
+    {
+      "old_target": "Complementar-Brasil/Referencias-Gerais/12V/referencia-geral__12-volt-doctors__handbook__practical-12v-systems.pdf",
+      "new_target": "Complementar-Brasil/Referencias-Gerais/12V/12-volt-doctors-handbook-practical-12v-systems.pdf",
+      "title": "Referencias Gerais 12V - Referencia tecnica - 267-6565",
+      "source_sha256": "59ed52a6fe6446f7c707620dcbcdc2d7626eaa6f2f567ab1975fce9f4d17bc0f"
+    },
+    {
+      "old_target": "Complementar-Brasil/Volvo-Penta/Catalogo-GP-Boats/referencia-comercial__volvo-penta__catalogo-pecas-gp-boats.pdf",
+      "new_target": "Complementar-Brasil/Volvo-Penta/Catalogo-GP-Boats/volvo-penta-catalogo-pecas-gp-boats.pdf",
+      "title": "Volvo Penta KAD42, KAD43, KAMD42, TAMD31 - Catalogo / brochure - AD31",
+      "source_sha256": "19234b42fdf9ada85c40a3b2e4c6f18873d8ac626e0a88ec18df8ed13f6d4b03"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBK-MDKBN/cummins-onan__mdkbk-mdkbl-mdkbm-mdkbn__operator-manual__981-0181-2008-03.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBK-MDKBN/cummins-onan-mdkbk-mdkbl-mdkbm-mdkbn-operator-manual-981-0181-2008-03.pdf",
+      "title": "Cummins Onan MDKBK, MDKBN, MDKBL, MDKBM - Manual de operacao - TH-22",
+      "source_sha256": "5f97f11c68dc6306eaf227a15deba3303f1f1193c20d33146ef0523e36f15233"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBK-MDKBN/cummins-onan__mdkbk-mdkbl-mdkbm-mdkbn__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBK-MDKBN/cummins-onan-mdkbk-mdkbl-mdkbm-mdkbn-service-manual-981-0543.pdf",
+      "title": "Cummins Onan MDKBK, MDKBN, MDKBL, MDKBM - Manual de servico - 981-0543",
+      "source_sha256": "1a505c22df00afc1b5bbbbb3b6f368ed5564c036e01ba6537072e082d179aed1"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan__mdkbp-mdkbr-mdkbs__operator-manual__981-0181-2008-03.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan-mdkbp-mdkbr-mdkbs-operator-manual-981-0181-2008-03.pdf",
+      "title": "Cummins Onan MDKBP, MDKBS, MDKBR - Manual de operacao - TH-22",
+      "source_sha256": "5f97f11c68dc6306eaf227a15deba3303f1f1193c20d33146ef0523e36f15233"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan__mdkbp-mdkbr-mdkbs__parts-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan-mdkbp-mdkbr-mdkbs-parts-manual-0981-0281.pdf",
+      "title": "Cummins Onan MDKBP, MDKBS, MDKBR - Manual de pecas - 0981-0281",
+      "source_sha256": "b0df461c94d3ba19c08920266dfe2fe9b16147fc769547205a78a6ae20af7dd2"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan__mdkbp-mdkbr-mdkbs__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBP-MDKBS/cummins-onan-mdkbp-mdkbr-mdkbs-service-manual-981-0543.pdf",
+      "title": "Cummins Onan MDKBP, MDKBS, MDKBR - Manual de servico - 981-0543",
+      "source_sha256": "1a505c22df00afc1b5bbbbb3b6f368ed5564c036e01ba6537072e082d179aed1"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBT-MDKBV/cummins-onan__mdkbt-mdkbu-mdkbv__operator-manual__981-0181-2008-03.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBT-MDKBV/cummins-onan-mdkbt-mdkbu-mdkbv-operator-manual-981-0181-2008-03.pdf",
+      "title": "Cummins Onan MDKBT, MDKBV, MDKBU - Manual de operacao - TH-22",
+      "source_sha256": "5f97f11c68dc6306eaf227a15deba3303f1f1193c20d33146ef0523e36f15233"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/Legacy-MDKBT-MDKBV/cummins-onan__mdkbt-mdkbu-mdkbv__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/Legacy-MDKBT-MDKBV/cummins-onan-mdkbt-mdkbu-mdkbv-service-manual-981-0543.pdf",
+      "title": "Cummins Onan MDKBT, MDKBV, MDKBU - Manual de servico - 981-0543",
+      "source_sha256": "1a505c22df00afc1b5bbbbb3b6f368ed5564c036e01ba6537072e082d179aed1"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan__mdkad-mdkae-mdkaf__operator-manual__981-0140-1996-02.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan-mdkad-mdkae-mdkaf-operator-manual-981-0140-1996-02.pdf",
+      "title": "Cummins Onan MDKAD, MDKAE, MDKAF - Manual de operacao - 981-0140",
+      "source_sha256": "1a79566b0e5ada3edb690c510793016dc59b3190e1d72ed9fb635abbe4881731"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan__mdkad-mdkae-mdkaf__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan-mdkad-mdkae-mdkaf-service-manual-981-0520b.pdf",
+      "title": "Cummins Onan MDKAD, MDKAE, MDKAF - Manual de servico - 981-0520B",
+      "source_sha256": "437245942da150426c095a0fd90cd1889b3cbbb359470a7c8b06a5547ebdae29"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan__mdkad-mdkae__parts-manual__981-0264-1999-01.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKAD-MDKAE-MDKAF/cummins-onan-mdkad-mdkae-parts-manual-981-0264-1999-01.pdf",
+      "title": "Cummins Onan MDKAD, MDKAE, MDKAF - Manual de pecas",
+      "source_sha256": "9ca5a7ef81708ce7559e2895d8d5acf4556b08af1c555025939a20191cf8fa52"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKBH/cummins-onan__mdkbh__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKBH/cummins-onan-mdkbh-service-manual-981-0542.pdf",
+      "title": "Cummins Onan MDKBH - Manual de servico - 981-0542",
+      "source_sha256": "a791141a566bce49f6c912adeb1eb780b174c7586684a295f38c02f13441405b"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDK/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__operator-manual__a052j727.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDK/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-operator-manual-a052j727.pdf",
+      "title": "Cummins Onan MDKDK, MDKDL, MDKDM, MDKDN - Manual de operacao - TH-22",
+      "source_sha256": "54a3d0cea3e225bc581e7e9f7214e9dc22b7bd7cf92da070bd3e7bbb52eff776"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDK/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDK/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-service-manual-a052j731.pdf",
+      "title": "Cummins Onan MDKDK, MDKDL, MDKDM, MDKDN - Manual de servico - 300-5512",
+      "source_sha256": "21b643a8b1b709d550880e8e2e435ced3768f3db1778f987786533e969a572f8"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDL/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__operator-manual__a052j727.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDL/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-operator-manual-a052j727.pdf",
+      "title": "Cummins Onan MDKDL, MDKDK, MDKDM, MDKDN - Manual de operacao - TH-22",
+      "source_sha256": "54a3d0cea3e225bc581e7e9f7214e9dc22b7bd7cf92da070bd3e7bbb52eff776"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDL/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDL/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-service-manual-a052j731.pdf",
+      "title": "Cummins Onan MDKDL, MDKDK, MDKDM, MDKDN - Manual de servico - 300-5512",
+      "source_sha256": "21b643a8b1b709d550880e8e2e435ced3768f3db1778f987786533e969a572f8"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDM-MDKDN/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__operator-manual__a052j727.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDM-MDKDN/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-operator-manual-a052j727.pdf",
+      "title": "Cummins Onan MDKDM, MDKDN, MDKDK, MDKDL - Manual de operacao - TH-22",
+      "source_sha256": "54a3d0cea3e225bc581e7e9f7214e9dc22b7bd7cf92da070bd3e7bbb52eff776"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDM-MDKDN/cummins-onan__mdkdk-mdkdl-mdkdm-mdkdn__service-manual__legacy-espelho.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDM-MDKDN/cummins-onan-mdkdk-mdkdl-mdkdm-mdkdn-service-manual-a052j731.pdf",
+      "title": "Cummins Onan MDKDM, MDKDN, MDKDK, MDKDL - Manual de servico - 300-5512",
+      "source_sha256": "21b643a8b1b709d550880e8e2e435ced3768f3db1778f987786533e969a572f8"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__installation-manual__a046j598.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan-mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv-installation-manual-a046j598.pdf",
+      "title": "Cummins Onan MDKDP, MDKDR, MDKDV, MDKDS - Manual de instalacao - H647",
+      "source_sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__service-manual__a046j602.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan-mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv-service-manual-a046j602.pdf",
+      "title": "Cummins Onan MDKDP, MDKDR, MDKDV, MDKDS - Manual de servico - 300-5512",
+      "source_sha256": "3e936560c78cf45a877326a72c27a78f5e0c1b9c522c73290a6fc1da622143fb"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan__mdkdp-mdkdr-mdkdv__parts-manual__a046l892.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDP-MDKDR-MDKDV/cummins-onan-mdkdp-mdkdr-mdkdv-parts-manual-a046l892.pdf",
+      "title": "Cummins Onan MDKDP, MDKDR, MDKDV, A046L892 - Manual de pecas - A049H027",
+      "source_sha256": "087b478f3a8d0ebae4e1c09cb5af15c86c0e54d778108cb31ebe614f4c0abf94"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv__service-manual__a046j602.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan-mdkdp-mdkdr-mdkds-mdkdt-mdkdu-mdkdv-service-manual-a046j602.pdf",
+      "title": "Cummins Onan MDKDS, MDKDT, MDKDU, MDKDP - Manual de servico - 300-5512",
+      "source_sha256": "3e936560c78cf45a877326a72c27a78f5e0c1b9c522c73290a6fc1da622143fb"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__installation-manual__a046j598.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan-mdkds-mdkdt-mdkdu-installation-manual-a046j598.pdf",
+      "title": "Cummins Onan MDKDS, MDKDT, MDKDU, A046J598 - Manual de instalacao - H647",
+      "source_sha256": "3feca22ec4e2362058f9f44ff7e895b5b63ee1157ca4ccd45fc8ac08d2adefa3"
+    },
+    {
+      "old_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan__mdkds-mdkdt-mdkdu__parts-manual__a046j604.pdf",
+      "new_target": "Geradores/Cummins-Onan/MDKDS-MDKDT-MDKDU/cummins-onan-mdkds-mdkdt-mdkdu-parts-manual-a046j604.pdf",
+      "title": "Cummins Onan MDKDS, MDKDT, MDKDU, A046J604 - Manual de pecas - A049H027",
+      "source_sha256": "fae9fd5e57a8e43d574bab41ca9414b91200ccb9fdb8776b1b3b7dc65e466c60"
+    },
+    {
+      "old_target": "Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf",
+      "new_target": "Geradores/Rehlko-Kohler/5EFKOD/rehlko-kohler-5efkod-6ekod-9-11ekozd-7-9efkozd-service-manual-tp-6774-2014-02a.pdf",
+      "title": "Rehlko Kohler 5EFKOD, 6EKOD, 11EKOZD, 9EFKOZD - Manual de servico - GM83745",
+      "source_sha256": "25c5a7676eea2a076c470a1550daa6d8ea673d536e2d0ff4ef11f80c89d3e09f"
+    },
+    {
+      "old_target": "Geradores/Rehlko-Kohler/6EKOD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf",
+      "new_target": "Geradores/Rehlko-Kohler/6EKOD/rehlko-kohler-5efkod-6ekod-9-11ekozd-7-9efkozd-service-manual-tp-6774-2014-02a.pdf",
+      "title": "Rehlko Kohler 6EKOD, 5EFKOD, 11EKOZD, 9EFKOZD - Manual de servico - GM83745",
+      "source_sha256": "25c5a7676eea2a076c470a1550daa6d8ea673d536e2d0ff4ef11f80c89d3e09f"
+    },
+    {
+      "old_target": "Geradores/Rehlko-Kohler/7EFKOZD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf",
+      "new_target": "Geradores/Rehlko-Kohler/7EFKOZD/rehlko-kohler-5efkod-6ekod-9-11ekozd-7-9efkozd-service-manual-tp-6774-2014-02a.pdf",
+      "title": "Rehlko Kohler 7EFKOZD, 5EFKOD, 6EKOD, 11EKOZD - Manual de servico - TP-6774",
+      "source_sha256": "25c5a7676eea2a076c470a1550daa6d8ea673d536e2d0ff4ef11f80c89d3e09f"
+    },
+    {
+      "old_target": "Geradores/Rehlko-Kohler/9-13.5-EKOZD-EFKOZD/rehlko-kohler__5efkod-6ekod-9-11ekozd-7-9efkozd__service-manual__tp-6774-2014-02a.pdf",
+      "new_target": "Geradores/Rehlko-Kohler/9-13.5-EKOZD-EFKOZD/rehlko-kohler-5efkod-6ekod-9-11ekozd-7-9efkozd-service-manual-tp-6774-2014-02a.pdf",
+      "title": "Rehlko Kohler EKOZD, EFKOZD, 13.5-EKOZD, 5EFKOD - Manual de servico - TP-6774",
+      "source_sha256": "25c5a7676eea2a076c470a1550daa6d8ea673d536e2d0ff4ef11f80c89d3e09f"
+    },
+    {
+      "old_target": "Navegacao/Furuno/CAN-Bus/furuno__can-bus__network-design-guide__legacy-espelho.pdf",
+      "new_target": "Navegacao/Furuno/CAN-Bus/furuno-can-bus-network-design-guide-000-167.pdf",
+      "title": "Furuno CAN-Bus, FI-50, NMEA2000, NMEA0183 - Referencia tecnica - TIE-00170-B",
+      "source_sha256": "4d757d2c1a7dff724b6645aca7fd1a0a664efe1c6ff6b792ffbc489e2dfd6118"
+    },
+    {
+      "old_target": "Navegacao/Furuno/FI-5002/furuno__fi-5002__installation-manual__rev-a.pdf",
+      "new_target": "Navegacao/Furuno/FI-5002/furuno-fi-5002-installation-manual-rev-a.pdf",
+      "title": "Furuno FI-5002, FI-50, SUS304, T18R - Manual de instalacao - FI-5002-POWERCABLE",
+      "source_sha256": "b2baab940a875e230a037ebe3312745f83edc4c92149a7286f09f16b80b71f14"
+    },
+    {
+      "old_target": "Navegacao/Furuno/FI-5002/furuno__fi-5002__supplemental-instructions__legacy-espelho.pdf",
+      "new_target": "Navegacao/Furuno/FI-5002/furuno-fi-5002-supplemental-instructions-410-479.pdf",
+      "title": "Furuno FI-5002, FI5002 - Manual de instalacao - 410-479",
+      "source_sha256": "97663dc66b1add3a48233eaae9378ca9de8c19c3b53ca932f1b5dc61a2a6db8f"
+    },
+    {
+      "old_target": "Navegacao/Garmin/GHC-50/garmin__ghc-50__display-cutout-template__legacy-espelho.pdf",
+      "new_target": "Navegacao/Garmin/GHC-50/garmin-ghc-50-display-cutout-template.pdf",
+      "title": "Garmin GHC-50 - Documento tecnico - GHC 50 and TD 50 Mounting Template",
+      "source_sha256": "a3ef36f782be1f2c3fbccdf4615fd0939ddbb54117d446085afb0de2a91e61cc"
+    },
+    {
+      "old_target": "Navegacao/Garmin/GPS-17x-HVS/garmin__gps-17x-hvs__technical-specifications__legacy-espelho.pdf",
+      "new_target": "Navegacao/Garmin/GPS-17x-HVS/garmin-gps-17x-hvs-technical-specifications.pdf",
+      "title": "Garmin GPS-17x-HVS, PGRMC1, IPX7, RS-232 - Manual de operacao - SO40",
+      "source_sha256": "bc429e98748dfeed57421caab9ce48164fd17ac9fc087669750c1282977e20f6"
+    },
+    {
+      "old_target": "Navegacao/Garmin/GPSMAP-4000-5000/garmin__gpsmap-4000-5000__installation-manual__en.pdf",
+      "new_target": "Navegacao/Garmin/GPSMAP-4000-5000/garmin-gpsmap-4000-5000-installation-manual-en.pdf",
+      "title": "Garmin GPSMAP - Manual de instalacao - DIN7981",
+      "source_sha256": "f8a3c18f958ba9fb5591615563667b878e69dd231a8a430d8091606bc7f73bec"
+    },
+    {
+      "old_target": "Navegacao/Raymarine/Quantum/raymarine__quantum-radar__manual__portugues-legacy-espelho.pdf",
+      "new_target": "Navegacao/Raymarine/Quantum/raymarine-quantum-radar-manual-portugues.pdf",
+      "title": "Raymarine W/m2 - Referencia tecnica - RJ45",
+      "source_sha256": "323f97e9598369bf02eb9acdf2c4dd82817e6aefcece40ad58f1d2adcf35c0ff"
+    },
+    {
+      "old_target": "Navegacao/Raymarine/SeaTalk/raymarine__seatalk__cabling-and-connections__legacy-espelho.pdf",
+      "new_target": "Navegacao/Raymarine/SeaTalk/raymarine-seatalk-cabling-and-connections-a06033.pdf",
+      "title": "Raymarine NMEA2000 - Documento tecnico - A06033",
+      "source_sha256": "4bcd9af75d0d74cbeaa7c46ea7c9f06f91af78ad7ffad78b210d7a47cd67d6db"
+    },
+    {
+      "old_target": "Navegacao/Raymarine/SmartPilot-ST6002/raymarine__smartpilot-st6002__operation-manual__legacy-espelho.pdf",
+      "new_target": "Navegacao/Raymarine/SmartPilot-ST6002/raymarine-smartpilot-st6002-operation-manual.pdf",
+      "title": "Raymarine ST6002 - Manual de operacao - 81269_1.book",
+      "source_sha256": "af5bab3a75f942f104a704a84f7dd3404fd329e051a390c999df72901fde2bc4"
+    },
+    {
+      "old_target": "Navegacao/Standard-Horizon/GX2000-GX2150/standard-horizon__gx2000-gx2150__operation-manual__em044n160-5292013.pdf",
+      "new_target": "Navegacao/Standard-Horizon/GX2000-GX2150/standard-horizon-gx2000-gx2150-operation-manual-em044n160-5292013.pdf",
+      "title": "Standard Horizon GX2000, GX2150, EM044N160-5292013, EM044N160 - Manual de operacao - GX2000_GX2150_OM_USA_EM044N160.pdf",
+      "source_sha256": "b10aa04e9fed6e3306e8f4271f2d431e703f211476a5f3ddafe128a38e2b54e4"
+    }
+  ]
+}
