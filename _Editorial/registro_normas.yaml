@@ -1,0 +1,299 @@
+# ============================================================================
+# REGISTRO CENTRAL DE NORMAS — Eletronautica Vault
+# ============================================================================
+# Fonte única de verdade para citações normativas no vault.
+# Uso:
+#   1. Qualquer citação de norma em nota deve bater com "status" aqui.
+#   2. Scripts de validação consultam este YAML (ver _Editorial/convencao_citacao_normativa.md).
+#   3. Atualizações exigem verificação da publicação oficial (link em "fonte_oficial").
+#
+# Taxonomia de status:
+#   - vigente         : publicação ativa e em uso.
+#   - vigente_revisao : ativa mas em processo conhecido de revisão; verificar antes de citar.
+#   - aposentada      : retirada pelo órgão emissor; NÃO citar como ativa.
+#   - substituida     : retirada E com sucessor explícito; citar apenas como histórico.
+#   - desconhecido    : placeholder; auditar antes de primeira citação.
+#
+# Revisão: sempre que uma nota for auditada na Fase 1-4, atualizar "ultima_verificacao"
+# para a norma citada. Revisão geral: schedule #13 (proposto).
+# ============================================================================
+
+meta:
+  versao: "1.0"
+  criado_em: "2026-04-16"
+  mantenedor: "Responsável Editorial Eletronautica"
+  revisao_schedule: "13_drift_publicacoes_oficiais (proposto)"
+
+# ----------------------------------------------------------------------------
+# ABYC (American Boat and Yacht Council)
+# ----------------------------------------------------------------------------
+ABYC E-11:
+  titulo_completo: "AC & DC Electrical Systems on Boats"
+  edicao_vigente: "2023"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [embarcacao_recreio, AC, DC]
+  fonte_oficial: "https://abycinc.org/page/Standards"
+  citada_em:
+    - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+    - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+  ultima_verificacao: "2026-04-16"
+  observacao: "Citar sempre com edição e cláusula (ex: §11.4.1.2)."
+
+ABYC E-2:
+  titulo_completo: "Prevention of Galvanic Corrosion"
+  edicao_vigente: "2020"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [corrosao_galvanica, bonding]
+  fonte_oficial: "https://abycinc.org/page/Standards"
+  citada_em:
+    - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+  ultima_verificacao: "2026-04-16"
+
+ABYC E-10:
+  titulo_completo: "Storage Batteries"
+  edicao_vigente: "2023"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [baterias, bancos]
+  fonte_oficial: "https://abycinc.org/page/Standards"
+  citada_em:
+    - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    - "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+  ultima_verificacao: "2026-04-16"
+
+ABYC E-13:
+  titulo_completo: "Lithium Ion Batteries"
+  edicao_vigente: "2022"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [LiFePO4, litio]
+  fonte_oficial: "https://abycinc.org/page/Standards"
+  citada_em: []
+  ultima_verificacao: "2026-04-16"
+  observacao: "Antigo padrão TE-13 virou E-13 em 2022. validate_vault.py já bloqueia 'ABYC TE-13'."
+
+ABYC A-28:
+  titulo_completo: "(a verificar — possivelmente Galvanic Isolators)"
+  status: desconhecido
+  jurisdicao: [EUA]
+  aplicabilidade: [a_confirmar]
+  ultima_verificacao: "2026-04-16"
+  observacao: |
+    Criado inicialmente como 'Galley Stoves' sem fonte verificada (erro meu).
+    Possivelmente Galvanic Isolators conforme uso em Normas e Regulamentações.md original.
+    AUDITAR contra catálogo ABYC antes de primeira citação viva.
+
+ABYC A-31:
+  titulo_completo: "Lightning Protection"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [bonding, raios]
+  citada_em:
+    - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+  ultima_verificacao: "2026-04-16"
+
+ABYC A-33:
+  titulo_completo: "Emergency Engine/Propulsion Cutoff Devices"
+  status: vigente
+  jurisdicao: [EUA]
+  ultima_verificacao: "2026-04-16"
+
+ABYC A-7:
+  titulo_completo: "Boat Heating Systems"
+  status: vigente
+  jurisdicao: [EUA]
+  ultima_verificacao: "2026-04-16"
+
+# ----------------------------------------------------------------------------
+# ISO (International Organization for Standardization)
+# ----------------------------------------------------------------------------
+ISO 13297:
+  titulo_completo: "Small craft — Electrical systems — Alternating and direct current installations"
+  edicao_vigente: "2020"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [embarcacao_pequena, AC, DC]
+  fonte_oficial: "https://www.iso.org/standard/69551.html"
+  citada_em:
+    - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+    - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+    - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    - "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+  ultima_verificacao: "2026-04-16"
+  observacao: "Sucede ISO 10133 (retirada). Referência viva para instalações AC/DC em pequenas embarcações."
+
+ISO 10133:
+  titulo_completo: "Small craft — Electrical systems — Extra-low-voltage DC installations"
+  edicao_vigente: "2012 (retirada)"
+  status: substituida
+  substituida_por: "ISO 13297:2020"
+  jurisdicao: [internacional]
+  fonte_oficial: "https://www.iso.org/standard/45867.html"
+  citada_em:
+    - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+  ultima_verificacao: "2026-04-16"
+  observacao: |
+    NÃO citar como referência viva. A própria ISO indica migração para ISO 13297:2020.
+    Corrigida em 2026-04-16 em Bonding, Bancos de Bateria, Tipos de Bateria.
+    Permitida apenas em contexto histórico ou na nota mestre explicando a transição.
+
+ISO 16180:
+  titulo_completo: "Small craft — Navigation lights — Installation, placement and visibility"
+  edicao_vigente: "2011"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [iluminacao_sinalizacao]
+  ultima_verificacao: "2026-04-16"
+
+ISO 11606:
+  titulo_completo: "Small craft — Magnetic compass — Binnacles and related equipment"
+  status: vigente
+  jurisdicao: [internacional]
+  ultima_verificacao: "2026-04-16"
+
+# ----------------------------------------------------------------------------
+# IEC (International Electrotechnical Commission)
+# ----------------------------------------------------------------------------
+IEC 60092:
+  titulo_completo: "Electrical installations in ships"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [embarcacao_grande, comercial]
+  ultima_verificacao: "2026-04-16"
+  observacao: "Série com múltiplas partes (60092-101, -201, etc). Citar parte específica."
+
+IEC 62619:
+  titulo_completo: "Secondary cells and batteries containing alkaline or other non-acid electrolytes — Safety requirements for lithium batteries"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [litio, seguranca]
+  ultima_verificacao: "2026-04-16"
+
+IEC 60945:
+  titulo_completo: "Maritime navigation and radiocommunication equipment and systems — General requirements"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [navegacao, radiocomunicacao]
+  ultima_verificacao: "2026-04-16"
+
+IEC 61162:
+  titulo_completo: "Maritime navigation and radiocommunication equipment and systems — Digital interfaces"
+  status: vigente
+  partes:
+    "-1": "NMEA 0183 (single talker multi listener)"
+    "-3": "NMEA 2000 / CANbus marítimo"
+  jurisdicao: [internacional]
+  aplicabilidade: [navegacao, dados]
+  ultima_verificacao: "2026-04-16"
+
+# ----------------------------------------------------------------------------
+# NFPA / USCG
+# ----------------------------------------------------------------------------
+NFPA 302:
+  titulo_completo: "Fire Protection Standard for Pleasure and Commercial Motor Craft"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [incendio, motor]
+  ultima_verificacao: "2026-04-16"
+
+NFPA 303:
+  titulo_completo: "Fire Protection Standard for Marinas and Boatyards"
+  status: vigente
+  jurisdicao: [EUA]
+  aplicabilidade: [marina, shore_power]
+  ultima_verificacao: "2026-04-16"
+
+USCG 33 CFR:
+  titulo_completo: "Title 33 CFR — Navigation and Navigable Waters"
+  status: vigente
+  jurisdicao: [EUA]
+  ultima_verificacao: "2026-04-16"
+
+USCG 46 CFR:
+  titulo_completo: "Title 46 CFR — Shipping"
+  status: vigente
+  jurisdicao: [EUA]
+  ultima_verificacao: "2026-04-16"
+
+# ----------------------------------------------------------------------------
+# BRASIL — DPC (Marinha) / ABNT / ANATEL
+# ----------------------------------------------------------------------------
+NORMAM-211:
+  titulo_completo: "Normas da Autoridade Marítima para Embarcações Nacionais (ex-NORMAM-02 para esporte e recreio após reestruturação de 2022)"
+  edicao_vigente: "2022 (rev. aplicável via DPC)"
+  status: vigente
+  jurisdicao: [Brasil]
+  aplicabilidade: [embarcacao_recreio, habilitacao, seguranca_minima]
+  fonte_oficial: "https://www.marinha.mil.br/dpc/normas"
+  ultima_verificacao: "2026-04-16"
+  observacao: "Sucede NORMAM-02 para esporte e recreio. validate_vault.py já sinaliza 'NORMAM-02'."
+
+NORMAM-01:
+  titulo_completo: "Normas da Autoridade Marítima — Embarcações Empregadas na Navegação em Mar Aberto"
+  status: vigente
+  jurisdicao: [Brasil]
+  aplicabilidade: [embarcacao_comercial, mar_aberto]
+  ultima_verificacao: "2026-04-16"
+
+NORMAM-02:
+  titulo_completo: "(ex) Esporte e Recreio"
+  status: substituida
+  substituida_por: "NORMAM-211"
+  jurisdicao: [Brasil]
+  observacao: "Reestruturação DPC 2022. NÃO citar como base vigente para esporte/recreio."
+  ultima_verificacao: "2026-04-16"
+
+COLREGS/RIPEAM:
+  titulo_completo: "International Regulations for Preventing Collisions at Sea (COLREGS) / Regulamento Internacional para Evitar Abalroamentos no Mar (RIPEAM)"
+  status: vigente
+  jurisdicao: [internacional, Brasil]
+  aplicabilidade: [navegacao, sinalizacao, luzes]
+  ultima_verificacao: "2026-04-16"
+
+SOLAS:
+  titulo_completo: "International Convention for the Safety of Life at Sea"
+  status: vigente
+  jurisdicao: [internacional]
+  aplicabilidade: [embarcacao_comercial]
+  ultima_verificacao: "2026-04-16"
+
+ABNT NBR 5410:
+  titulo_completo: "Instalações elétricas de baixa tensão"
+  edicao_vigente: "2004 (+ emendas)"
+  status: vigente
+  jurisdicao: [Brasil]
+  aplicabilidade: [AC_terra, shore_power_side_terra]
+  observacao: "Aplica ao lado terra do shore power. Não cobre instalação embarcada."
+  ultima_verificacao: "2026-04-16"
+
+ABNT NBR 13885:
+  titulo_completo: "(a validar — código reportado em notas)"
+  status: desconhecido
+  jurisdicao: [Brasil]
+  observacao: "validate_vault.py já sinaliza este código. Auditar antes de primeira citação viva."
+  ultima_verificacao: "2026-04-16"
+
+ABNT NBR 16033:
+  titulo_completo: "(a validar — código reportado em notas)"
+  status: desconhecido
+  jurisdicao: [Brasil]
+  observacao: "validate_vault.py já sinaliza este código. Auditar antes de primeira citação viva."
+  ultima_verificacao: "2026-04-16"
+
+ANATEL:
+  titulo_completo: "Agência Nacional de Telecomunicações — Resoluções e atos"
+  status: vigente
+  jurisdicao: [Brasil]
+  aplicabilidade: [VHF, AIS, radiocomunicacao, homologacao]
+  observacao: "Citar número da Resolução/Ato específico. Vigilância contínua recomendada (schedule 13)."
+  ultima_verificacao: "2026-04-16"
+
+# ----------------------------------------------------------------------------
+# Aposentadas/substituídas — lista de bloqueio (NÃO citar como vivas)
+# ----------------------------------------------------------------------------
+_blocklist_ativas:
+  - "ISO 10133"
+  - "NORMAM-02"
+  - "ABYC TE-13"

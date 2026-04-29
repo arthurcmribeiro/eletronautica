@@ -1,0 +1,496 @@
+---
+title: "Source URLs — Scanner (2026-04-17)"
+note_type: "editorial-report"
+reviewed_on: "2026-04-17"
+---
+
+# Source URLs — Scanner (2026-04-17)
+
+Gerado por `scripts/check_source_urls.py`.
+
+- Arquivos varridos: **154**
+- URLs totais no frontmatter: **459**
+- URLs únicas: **13**
+- URLs duplicadas entre notas: **10**
+- URLs malformadas: **0**
+- URLs contaminadas por TODO (bug 0005): **0**
+- Verificações HTTP: **0**
+
+## URLs duplicadas entre notas diferentes
+
+### `https://abycinc.org/news/standardsupdatewebinar/` (6 ocorrências)
+- `20_Baterias_e_Armazenamento\Bancos de Bateria.md` L17
+- `20_Baterias_e_Armazenamento\BMS — Battery Management System.md` L16
+- `20_Baterias_e_Armazenamento\Carregador de Bateria (AC To DC).md` L17
+- `20_Baterias_e_Armazenamento\Lítio LiFePO4 — Instalação e Cuidados Específicos.md` L11
+- `20_Baterias_e_Armazenamento\Monitor de Bateria - BMV - Shunt.md` L15
+- `20_Baterias_e_Armazenamento\Tipos de Bateria.md` L15
+
+### `https://abycinc.org/standards/` (112 ocorrências)
+- `10_Fundamentos_e_Projeto\DC vs AC — Corrente Contínua e Alternada.md` L19
+- `10_Fundamentos_e_Projeto\Diagrama Unifilar — Documentação do Sistema Elétrico.md` L20
+- `10_Fundamentos_e_Projeto\Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md` L19
+- `10_Fundamentos_e_Projeto\Dimensionamento de Cabos DC — Cálculo Prático.md` L19
+- `10_Fundamentos_e_Projeto\Fase e Neutro.md` L19
+- `10_Fundamentos_e_Projeto\Ferramentas do Eletricista Náutico.md` L12
+- `10_Fundamentos_e_Projeto\Inspeção de Cabos Terminais e Conexões.md` L21
+- `10_Fundamentos_e_Projeto\Lei de Ohm e Cálculos Básicos.md` L12
+- `10_Fundamentos_e_Projeto\Leitura de Diagramas e Esquemas Elétricos.md` L12
+- `10_Fundamentos_e_Projeto\Manutenção Preventiva Elétrica — Checklist.md` L12
+- `10_Fundamentos_e_Projeto\Multímetro e Instrumentos de Medição.md` L12
+- `10_Fundamentos_e_Projeto\Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md` L22
+- `10_Fundamentos_e_Projeto\Normas e Regulamentações — Abyc Iso e Brasil.md` L32
+- `10_Fundamentos_e_Projeto\Princípios Náuticos.md` L12
+- `10_Fundamentos_e_Projeto\Projeto Elétrico de Embarcação — Passo a Passo.md` L21
+- `10_Fundamentos_e_Projeto\Referência Rápida — Valores de Campo.md` L16
+- `10_Fundamentos_e_Projeto\Simbologia Elétrica Náutica.md` L12
+- `10_Fundamentos_e_Projeto\Tipos de Embarcação.md` L12
+- `10_Fundamentos_e_Projeto\Troubleshooting — Diagnóstico de Falhas Elétricas.md` L12
+- `10_Fundamentos_e_Projeto\Voltímetro - Amperímetro (DC e AC).md` L12
+- `20_Baterias_e_Armazenamento\Bancos de Bateria.md` L16
+- `20_Baterias_e_Armazenamento\BMS — Battery Management System.md` L15
+- `20_Baterias_e_Armazenamento\Carregador de Bateria (AC To DC).md` L16
+- `20_Baterias_e_Armazenamento\Lítio LiFePO4 — Instalação e Cuidados Específicos.md` L10
+- `20_Baterias_e_Armazenamento\Monitor de Bateria - BMV - Shunt.md` L14
+- `20_Baterias_e_Armazenamento\Tipos de Bateria.md` L14
+- `30_Energia_e_Conversao\Alternador (DC).md` L12
+- `30_Energia_e_Conversao\Arranque.md` L12
+- `30_Energia_e_Conversao\CAIS (Pier) (AC).md` L21
+- `30_Energia_e_Conversao\Carregador Elétrico para Tender e Jet Ski.md` L12
+- `30_Energia_e_Conversao\Eólico (DC).md` L12
+- `30_Energia_e_Conversao\Gerador (AC).md` L12
+- `30_Energia_e_Conversao\Gerador (DC).md` L12
+- `30_Energia_e_Conversao\Inversora (DC To AC).md` L16
+- `30_Energia_e_Conversao\Placa Solar (DC).md` L13
+- `30_Energia_e_Conversao\Transformador Bivolt.md` L12
+- `30_Energia_e_Conversao\Transformador Entrada.md` L19
+- `40_Distribuicao_Protecao_e_Aterramento\Aterramento.md` L21
+- `40_Distribuicao_Protecao_e_Aterramento\Barramento DC - Bus Bar - Distribuição DC.md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Bonding — Sistema de Interligação de Massas.md` L20
+- `40_Distribuicao_Protecao_e_Aterramento\Cabeamento Náutico.md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Gerais (DC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Seletoras (AC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Contatores (AC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Disjuntores (DC) e (AC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Divisores de Carga (DC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Fusíveis DC — Proteção Contra Sobrecorrente.md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Hotline (DC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Isolador Galvânico - Transformador de Isolamento.md` L20
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Leve (AC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Pesada (AC).md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Proteção Dr.md` L21
+- `40_Distribuicao_Protecao_e_Aterramento\Quadro Elétrico e Painel de Distribuição AC-DC.md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Relés e Relés de Estado Sólido.md` L12
+- `40_Distribuicao_Protecao_e_Aterramento\Terminais Conectores e Emendas.md` L12
+- `55_Iluminacao_e_Sinalizacao\Dimmer — Controle de Intensidade Luminosa.md` L12
+- `55_Iluminacao_e_Sinalizacao\Farol de Busca.md` L12
+- `55_Iluminacao_e_Sinalizacao\Fitas Led - Iluminação Led.md` L12
+- `55_Iluminacao_e_Sinalizacao\Iluminação de Emergência a Bordo.md` L12
+- `55_Iluminacao_e_Sinalizacao\Luz de Cortesia.md` L12
+- `55_Iluminacao_e_Sinalizacao\Luz de Tope.md` L19
+- `55_Iluminacao_e_Sinalizacao\Luz de Âncora.md` L12
+- `55_Iluminacao_e_Sinalizacao\Luz Subaquática.md` L12
+- `55_Iluminacao_e_Sinalizacao\Luzes Internas Teto.md` L12
+- `55_Iluminacao_e_Sinalizacao\Strobo.md` L12
+- `55_Iluminacao_e_Sinalizacao\Tipos de Lâmpadas e LEDs Náuticos.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Atuador Linear.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Automação de Bordo — Sistemas Domoticos.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Câmeras de Bordo - Sistema CFTV.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Interfone - Intercomunicador de Bordo.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Monitoramento Remoto — VRM - Telemetria.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Sensor de Nível Diesel.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Sistema de Alarme Geral - Painel de Alarmes.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Som.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Starlink - Internet a Bordo.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\TV a Bordo - Entretenimento.md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\USB 12V (Power).md` L10
+- `60_Automacao_Conectividade_e_Monitoramento\Wi-Fi a Bordo — Roteador Marine e Conectividade.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Aquecedor de Bordo - Cabin Heater.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine — Sistema Completo.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Blower.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Boiler.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba Ar Condicionado.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Banheiro.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Porão.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Água Pressurizada.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Águas Negras.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Caixa de Água Cinza.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Casa de Máquinas e Paiol.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Catraca.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Davit - Munk - Guindaste de Bote - Tender Lift.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Dessanilizador.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Flap.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Fogão - Cooktop Elétrico - Galley.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Geladeira - Freezer de Bordo.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Guincho.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Holding Tank - Y-Valve - Sistema de Esgoto.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Icemaker - Máquina de Gelo.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Limpador de Parabrisas.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Macerador - Bomba de Águas Negras.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Plataforma de Popa Elétrica - Hidráulica.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Sensor de Nível de Água.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Thruster.md` L11
+- `80_Seguranca_e_Corrosao\Alarme de Alagamento - Sensor de Porão.md` L12
+- `80_Seguranca_e_Corrosao\Anôdo.md` L12
+- `80_Seguranca_e_Corrosao\Correntes Parasitas — Stray Currents.md` L13
+- `80_Seguranca_e_Corrosao\Detector de CO — Monóxido de Carbono.md` L12
+- `80_Seguranca_e_Corrosao\Detector de Gás GLP - GN.md` L12
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L12
+- `80_Seguranca_e_Corrosao\Extintor Automático — Combate a Incêndio na Casa de Máquinas.md` L12
+- `90_Revisao_Manual\Estabilizador.md` L12
+- `90_Revisao_Manual\Motor de Trim - Tilt.md` L11
+
+### `https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo` (14 ocorrências)
+- `50_Navegacao_Instrumentacao_e_Comunicacao\AIS (Automatic Identification System).md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Buzina.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Bússola Eletrônica (Compass - HDG Sensor).md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Chartplotter - GPS - MFD.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Dsc — Chamada Seletiva Digital.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\EPIRB - Beacon de Emergência.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Estação de Vento - Anemômetro.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Mob — Man Overboard — Sistema de Detecção.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NAVEGAÇÃO (BB, BE e Alcançado).md` L20
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md` L21
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Piloto Automático.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Radar.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Sonda - Profundímetro - Sonar.md` L13
+- `50_Navegacao_Instrumentacao_e_Comunicacao\VHF.md` L13
+
+### `https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes` (48 ocorrências)
+- `10_Fundamentos_e_Projeto\DC vs AC — Corrente Contínua e Alternada.md` L17
+- `10_Fundamentos_e_Projeto\Diagrama Unifilar — Documentação do Sistema Elétrico.md` L18
+- `10_Fundamentos_e_Projeto\Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md` L17
+- `10_Fundamentos_e_Projeto\Dimensionamento de Cabos DC — Cálculo Prático.md` L17
+- `10_Fundamentos_e_Projeto\Fase e Neutro.md` L17
+- `10_Fundamentos_e_Projeto\Ferramentas do Eletricista Náutico.md` L10
+- `10_Fundamentos_e_Projeto\Inspeção de Cabos Terminais e Conexões.md` L19
+- `10_Fundamentos_e_Projeto\Lei de Ohm e Cálculos Básicos.md` L10
+- `10_Fundamentos_e_Projeto\Leitura de Diagramas e Esquemas Elétricos.md` L10
+- `10_Fundamentos_e_Projeto\Manutenção Preventiva Elétrica — Checklist.md` L10
+- `10_Fundamentos_e_Projeto\Multímetro e Instrumentos de Medição.md` L10
+- `10_Fundamentos_e_Projeto\Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md` L20
+- `10_Fundamentos_e_Projeto\Normas e Regulamentações — Abyc Iso e Brasil.md` L28
+- `10_Fundamentos_e_Projeto\Princípios Náuticos.md` L10
+- `10_Fundamentos_e_Projeto\Projeto Elétrico de Embarcação — Passo a Passo.md` L19
+- `10_Fundamentos_e_Projeto\Simbologia Elétrica Náutica.md` L10
+- `10_Fundamentos_e_Projeto\Tipos de Embarcação.md` L10
+- `10_Fundamentos_e_Projeto\Troubleshooting — Diagnóstico de Falhas Elétricas.md` L10
+- `10_Fundamentos_e_Projeto\Voltímetro - Amperímetro (DC e AC).md` L10
+- `30_Energia_e_Conversao\Alternador (DC).md` L10
+- `30_Energia_e_Conversao\Arranque.md` L10
+- `30_Energia_e_Conversao\CAIS (Pier) (AC).md` L19
+- `30_Energia_e_Conversao\Carregador Elétrico para Tender e Jet Ski.md` L10
+- `30_Energia_e_Conversao\Eólico (DC).md` L10
+- `30_Energia_e_Conversao\Gerador (AC).md` L10
+- `30_Energia_e_Conversao\Gerador (DC).md` L10
+- `30_Energia_e_Conversao\Inversora (DC To AC).md` L14
+- `30_Energia_e_Conversao\Placa Solar (DC).md` L11
+- `30_Energia_e_Conversao\Transformador Bivolt.md` L10
+- `30_Energia_e_Conversao\Transformador Entrada.md` L17
+- `40_Distribuicao_Protecao_e_Aterramento\Aterramento.md` L19
+- `40_Distribuicao_Protecao_e_Aterramento\Barramento DC - Bus Bar - Distribuição DC.md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Bonding — Sistema de Interligação de Massas.md` L18
+- `40_Distribuicao_Protecao_e_Aterramento\Cabeamento Náutico.md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Gerais (DC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Seletoras (AC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Contatores (AC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Disjuntores (DC) e (AC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Divisores de Carga (DC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Fusíveis DC — Proteção Contra Sobrecorrente.md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Hotline (DC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Isolador Galvânico - Transformador de Isolamento.md` L18
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Leve (AC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Pesada (AC).md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Proteção Dr.md` L18
+- `40_Distribuicao_Protecao_e_Aterramento\Quadro Elétrico e Painel de Distribuição AC-DC.md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Relés e Relés de Estado Sólido.md` L10
+- `40_Distribuicao_Protecao_e_Aterramento\Terminais Conectores e Emendas.md` L10
+
+### `https://www.iso.org/standard/83643.html` (98 ocorrências)
+- `10_Fundamentos_e_Projeto\DC vs AC — Corrente Contínua e Alternada.md` L20
+- `10_Fundamentos_e_Projeto\Diagrama Unifilar — Documentação do Sistema Elétrico.md` L21
+- `10_Fundamentos_e_Projeto\Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md` L20
+- `10_Fundamentos_e_Projeto\Dimensionamento de Cabos DC — Cálculo Prático.md` L20
+- `10_Fundamentos_e_Projeto\Fase e Neutro.md` L20
+- `10_Fundamentos_e_Projeto\Ferramentas do Eletricista Náutico.md` L13
+- `10_Fundamentos_e_Projeto\Inspeção de Cabos Terminais e Conexões.md` L22
+- `10_Fundamentos_e_Projeto\Lei de Ohm e Cálculos Básicos.md` L13
+- `10_Fundamentos_e_Projeto\Leitura de Diagramas e Esquemas Elétricos.md` L13
+- `10_Fundamentos_e_Projeto\Manutenção Preventiva Elétrica — Checklist.md` L13
+- `10_Fundamentos_e_Projeto\Multímetro e Instrumentos de Medição.md` L13
+- `10_Fundamentos_e_Projeto\Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md` L23
+- `10_Fundamentos_e_Projeto\Normas e Regulamentações — Abyc Iso e Brasil.md` L31
+- `10_Fundamentos_e_Projeto\Princípios Náuticos.md` L13
+- `10_Fundamentos_e_Projeto\Referência Rápida — Valores de Campo.md` L17
+- `10_Fundamentos_e_Projeto\Simbologia Elétrica Náutica.md` L13
+- `10_Fundamentos_e_Projeto\Tipos de Embarcação.md` L13
+- `10_Fundamentos_e_Projeto\Troubleshooting — Diagnóstico de Falhas Elétricas.md` L13
+- `10_Fundamentos_e_Projeto\Voltímetro - Amperímetro (DC e AC).md` L13
+- `20_Baterias_e_Armazenamento\Bancos de Bateria.md` L18
+- `20_Baterias_e_Armazenamento\BMS — Battery Management System.md` L17
+- `20_Baterias_e_Armazenamento\Carregador de Bateria (AC To DC).md` L18
+- `20_Baterias_e_Armazenamento\Monitor de Bateria - BMV - Shunt.md` L16
+- `20_Baterias_e_Armazenamento\Tipos de Bateria.md` L16
+- `30_Energia_e_Conversao\Alternador (DC).md` L13
+- `30_Energia_e_Conversao\Arranque.md` L13
+- `30_Energia_e_Conversao\CAIS (Pier) (AC).md` L22
+- `30_Energia_e_Conversao\Carregador Elétrico para Tender e Jet Ski.md` L13
+- `30_Energia_e_Conversao\Eólico (DC).md` L13
+- `30_Energia_e_Conversao\Gerador (AC).md` L13
+- `30_Energia_e_Conversao\Gerador (DC).md` L13
+- `30_Energia_e_Conversao\Inversora (DC To AC).md` L17
+- `30_Energia_e_Conversao\Placa Solar (DC).md` L14
+- `30_Energia_e_Conversao\Transformador Bivolt.md` L13
+- `30_Energia_e_Conversao\Transformador Entrada.md` L20
+- `40_Distribuicao_Protecao_e_Aterramento\Aterramento.md` L22
+- `40_Distribuicao_Protecao_e_Aterramento\Barramento DC - Bus Bar - Distribuição DC.md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Bonding — Sistema de Interligação de Massas.md` L21
+- `40_Distribuicao_Protecao_e_Aterramento\Cabeamento Náutico.md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Gerais (DC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Seletoras (AC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Contatores (AC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Disjuntores (DC) e (AC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Divisores de Carga (DC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Fusíveis DC — Proteção Contra Sobrecorrente.md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Hotline (DC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Isolador Galvânico - Transformador de Isolamento.md` L21
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Leve (AC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Pesada (AC).md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Quadro Elétrico e Painel de Distribuição AC-DC.md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Relés e Relés de Estado Sólido.md` L13
+- `40_Distribuicao_Protecao_e_Aterramento\Terminais Conectores e Emendas.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Atuador Linear.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Automação de Bordo — Sistemas Domoticos.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Câmeras de Bordo - Sistema CFTV.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Interfone - Intercomunicador de Bordo.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Monitoramento Remoto — VRM - Telemetria.md` L14
+- `60_Automacao_Conectividade_e_Monitoramento\Sensor de Nível Diesel.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Sistema de Alarme Geral - Painel de Alarmes.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Som.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Starlink - Internet a Bordo.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\TV a Bordo - Entretenimento.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\USB 12V (Power).md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Wi-Fi a Bordo — Roteador Marine e Conectividade.md` L13
+- `70_Hidraulica_Climatizacao_e_Utilidades\Aquecedor de Bordo - Cabin Heater.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine — Sistema Completo.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Blower.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Boiler.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba Ar Condicionado.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Banheiro.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Porão.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Água Pressurizada.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Águas Negras.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Caixa de Água Cinza.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Casa de Máquinas e Paiol.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Catraca.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Davit - Munk - Guindaste de Bote - Tender Lift.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Dessanilizador.md` L13
+- `70_Hidraulica_Climatizacao_e_Utilidades\Flap.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Fogão - Cooktop Elétrico - Galley.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Geladeira - Freezer de Bordo.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Guincho.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Holding Tank - Y-Valve - Sistema de Esgoto.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Icemaker - Máquina de Gelo.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Limpador de Parabrisas.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Macerador - Bomba de Águas Negras.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Plataforma de Popa Elétrica - Hidráulica.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Sensor de Nível de Água.md` L12
+- `70_Hidraulica_Climatizacao_e_Utilidades\Thruster.md` L12
+- `80_Seguranca_e_Corrosao\Alarme de Alagamento - Sensor de Porão.md` L13
+- `80_Seguranca_e_Corrosao\Anôdo.md` L13
+- `80_Seguranca_e_Corrosao\Correntes Parasitas — Stray Currents.md` L14
+- `80_Seguranca_e_Corrosao\Detector de CO — Monóxido de Carbono.md` L13
+- `80_Seguranca_e_Corrosao\Detector de Gás GLP - GN.md` L13
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L13
+- `80_Seguranca_e_Corrosao\Extintor Automático — Combate a Incêndio na Casa de Máquinas.md` L13
+- `90_Revisao_Manual\Estabilizador.md` L13
+- `90_Revisao_Manual\Motor de Trim - Tilt.md` L12
+
+### `https://www.marinha.mil.br/dpc/normam-204` (32 ocorrências)
+- `50_Navegacao_Instrumentacao_e_Comunicacao\AIS (Automatic Identification System).md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Buzina.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Bússola Eletrônica (Compass - HDG Sensor).md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Chartplotter - GPS - MFD.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Dsc — Chamada Seletiva Digital.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\EPIRB - Beacon de Emergência.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Estação de Vento - Anemômetro.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Mob — Man Overboard — Sistema de Detecção.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NAVEGAÇÃO (BB, BE e Alcançado).md` L18
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md` L19
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Piloto Automático.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Radar.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Sonda - Profundímetro - Sonar.md` L11
+- `50_Navegacao_Instrumentacao_e_Comunicacao\VHF.md` L11
+- `55_Iluminacao_e_Sinalizacao\Dimmer — Controle de Intensidade Luminosa.md` L11
+- `55_Iluminacao_e_Sinalizacao\Farol de Busca.md` L11
+- `55_Iluminacao_e_Sinalizacao\Fitas Led - Iluminação Led.md` L11
+- `55_Iluminacao_e_Sinalizacao\Iluminação de Emergência a Bordo.md` L11
+- `55_Iluminacao_e_Sinalizacao\Luz de Cortesia.md` L11
+- `55_Iluminacao_e_Sinalizacao\Luz de Tope.md` L18
+- `55_Iluminacao_e_Sinalizacao\Luz de Âncora.md` L11
+- `55_Iluminacao_e_Sinalizacao\Luz Subaquática.md` L11
+- `55_Iluminacao_e_Sinalizacao\Luzes Internas Teto.md` L11
+- `55_Iluminacao_e_Sinalizacao\Strobo.md` L11
+- `55_Iluminacao_e_Sinalizacao\Tipos de Lâmpadas e LEDs Náuticos.md` L11
+- `80_Seguranca_e_Corrosao\Alarme de Alagamento - Sensor de Porão.md` L11
+- `80_Seguranca_e_Corrosao\Anôdo.md` L11
+- `80_Seguranca_e_Corrosao\Correntes Parasitas — Stray Currents.md` L12
+- `80_Seguranca_e_Corrosao\Detector de CO — Monóxido de Carbono.md` L11
+- `80_Seguranca_e_Corrosao\Detector de Gás GLP - GN.md` L11
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L11
+- `80_Seguranca_e_Corrosao\Extintor Automático — Combate a Incêndio na Casa de Máquinas.md` L11
+
+### `https://www.marinha.mil.br/dpc/normas` (48 ocorrências)
+- `10_Fundamentos_e_Projeto\DC vs AC — Corrente Contínua e Alternada.md` L18
+- `10_Fundamentos_e_Projeto\Diagrama Unifilar — Documentação do Sistema Elétrico.md` L19
+- `10_Fundamentos_e_Projeto\Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md` L18
+- `10_Fundamentos_e_Projeto\Dimensionamento de Cabos DC — Cálculo Prático.md` L18
+- `10_Fundamentos_e_Projeto\Fase e Neutro.md` L18
+- `10_Fundamentos_e_Projeto\Ferramentas do Eletricista Náutico.md` L11
+- `10_Fundamentos_e_Projeto\Inspeção de Cabos Terminais e Conexões.md` L20
+- `10_Fundamentos_e_Projeto\Lei de Ohm e Cálculos Básicos.md` L11
+- `10_Fundamentos_e_Projeto\Leitura de Diagramas e Esquemas Elétricos.md` L11
+- `10_Fundamentos_e_Projeto\Manutenção Preventiva Elétrica — Checklist.md` L11
+- `10_Fundamentos_e_Projeto\Multímetro e Instrumentos de Medição.md` L11
+- `10_Fundamentos_e_Projeto\Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md` L21
+- `10_Fundamentos_e_Projeto\Normas e Regulamentações — Abyc Iso e Brasil.md` L29
+- `10_Fundamentos_e_Projeto\Princípios Náuticos.md` L11
+- `10_Fundamentos_e_Projeto\Projeto Elétrico de Embarcação — Passo a Passo.md` L20
+- `10_Fundamentos_e_Projeto\Simbologia Elétrica Náutica.md` L11
+- `10_Fundamentos_e_Projeto\Tipos de Embarcação.md` L11
+- `10_Fundamentos_e_Projeto\Troubleshooting — Diagnóstico de Falhas Elétricas.md` L11
+- `10_Fundamentos_e_Projeto\Voltímetro - Amperímetro (DC e AC).md` L11
+- `30_Energia_e_Conversao\Alternador (DC).md` L11
+- `30_Energia_e_Conversao\Arranque.md` L11
+- `30_Energia_e_Conversao\CAIS (Pier) (AC).md` L20
+- `30_Energia_e_Conversao\Carregador Elétrico para Tender e Jet Ski.md` L11
+- `30_Energia_e_Conversao\Eólico (DC).md` L11
+- `30_Energia_e_Conversao\Gerador (AC).md` L11
+- `30_Energia_e_Conversao\Gerador (DC).md` L11
+- `30_Energia_e_Conversao\Inversora (DC To AC).md` L15
+- `30_Energia_e_Conversao\Placa Solar (DC).md` L12
+- `30_Energia_e_Conversao\Transformador Bivolt.md` L11
+- `30_Energia_e_Conversao\Transformador Entrada.md` L18
+- `40_Distribuicao_Protecao_e_Aterramento\Aterramento.md` L20
+- `40_Distribuicao_Protecao_e_Aterramento\Barramento DC - Bus Bar - Distribuição DC.md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Bonding — Sistema de Interligação de Massas.md` L19
+- `40_Distribuicao_Protecao_e_Aterramento\Cabeamento Náutico.md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Gerais (DC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Chaves Seletoras (AC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Contatores (AC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Disjuntores (DC) e (AC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Divisores de Carga (DC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Fusíveis DC — Proteção Contra Sobrecorrente.md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Hotline (DC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Isolador Galvânico - Transformador de Isolamento.md` L19
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Leve (AC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Linha Pesada (AC).md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Proteção Dr.md` L19
+- `40_Distribuicao_Protecao_e_Aterramento\Quadro Elétrico e Painel de Distribuição AC-DC.md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Relés e Relés de Estado Sólido.md` L11
+- `40_Distribuicao_Protecao_e_Aterramento\Terminais Conectores e Emendas.md` L11
+
+### `https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira` (60 ocorrências)
+- `10_Fundamentos_e_Projeto\Referência Rápida — Valores de Campo.md` L15
+- `50_Navegacao_Instrumentacao_e_Comunicacao\AIS (Automatic Identification System).md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Buzina.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Bússola Eletrônica (Compass - HDG Sensor).md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Chartplotter - GPS - MFD.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Dsc — Chamada Seletiva Digital.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\EPIRB - Beacon de Emergência.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Estação de Vento - Anemômetro.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Mob — Man Overboard — Sistema de Detecção.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NAVEGAÇÃO (BB, BE e Alcançado).md` L17
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md` L18
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Piloto Automático.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Radar.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Sonda - Profundímetro - Sonar.md` L10
+- `50_Navegacao_Instrumentacao_e_Comunicacao\VHF.md` L10
+- `55_Iluminacao_e_Sinalizacao\Dimmer — Controle de Intensidade Luminosa.md` L10
+- `55_Iluminacao_e_Sinalizacao\Farol de Busca.md` L10
+- `55_Iluminacao_e_Sinalizacao\Fitas Led - Iluminação Led.md` L10
+- `55_Iluminacao_e_Sinalizacao\Iluminação de Emergência a Bordo.md` L10
+- `55_Iluminacao_e_Sinalizacao\Luz de Cortesia.md` L10
+- `55_Iluminacao_e_Sinalizacao\Luz de Tope.md` L17
+- `55_Iluminacao_e_Sinalizacao\Luz de Âncora.md` L10
+- `55_Iluminacao_e_Sinalizacao\Luz Subaquática.md` L10
+- `55_Iluminacao_e_Sinalizacao\Luzes Internas Teto.md` L10
+- `55_Iluminacao_e_Sinalizacao\Strobo.md` L10
+- `55_Iluminacao_e_Sinalizacao\Tipos de Lâmpadas e LEDs Náuticos.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Aquecedor de Bordo - Cabin Heater.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine — Sistema Completo.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Blower.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Boiler.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba Ar Condicionado.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Banheiro.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Porão.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Água Pressurizada.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Águas Negras.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Caixa de Água Cinza.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Casa de Máquinas e Paiol.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Catraca.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Davit - Munk - Guindaste de Bote - Tender Lift.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Dessanilizador.md` L11
+- `70_Hidraulica_Climatizacao_e_Utilidades\Flap.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Fogão - Cooktop Elétrico - Galley.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Geladeira - Freezer de Bordo.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Guincho.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Holding Tank - Y-Valve - Sistema de Esgoto.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Icemaker - Máquina de Gelo.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Limpador de Parabrisas.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Macerador - Bomba de Águas Negras.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Plataforma de Popa Elétrica - Hidráulica.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Sensor de Nível de Água.md` L10
+- `70_Hidraulica_Climatizacao_e_Utilidades\Thruster.md` L10
+- `80_Seguranca_e_Corrosao\Alarme de Alagamento - Sensor de Porão.md` L10
+- `80_Seguranca_e_Corrosao\Anôdo.md` L10
+- `80_Seguranca_e_Corrosao\Correntes Parasitas — Stray Currents.md` L11
+- `80_Seguranca_e_Corrosao\Detector de CO — Monóxido de Carbono.md` L10
+- `80_Seguranca_e_Corrosao\Detector de Gás GLP - GN.md` L10
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L10
+- `80_Seguranca_e_Corrosao\Extintor Automático — Combate a Incêndio na Casa de Máquinas.md` L10
+- `90_Revisao_Manual\Estabilizador.md` L11
+- `90_Revisao_Manual\Motor de Trim - Tilt.md` L10
+
+### `https://www.nmea.org/nmea-0400.html` (12 ocorrências)
+- `60_Automacao_Conectividade_e_Monitoramento\Atuador Linear.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Automação de Bordo — Sistemas Domoticos.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Câmeras de Bordo - Sistema CFTV.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Interfone - Intercomunicador de Bordo.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Monitoramento Remoto — VRM - Telemetria.md` L13
+- `60_Automacao_Conectividade_e_Monitoramento\Sensor de Nível Diesel.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Sistema de Alarme Geral - Painel de Alarmes.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Som.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Starlink - Internet a Bordo.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\TV a Bordo - Entretenimento.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\USB 12V (Power).md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Wi-Fi a Bordo — Roteador Marine e Conectividade.md` L12
+
+### `https://www.nmea.org/standards.html` (26 ocorrências)
+- `50_Navegacao_Instrumentacao_e_Comunicacao\AIS (Automatic Identification System).md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Buzina.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Bússola Eletrônica (Compass - HDG Sensor).md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Chartplotter - GPS - MFD.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Dsc — Chamada Seletiva Digital.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\EPIRB - Beacon de Emergência.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Estação de Vento - Anemômetro.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Mob — Man Overboard — Sistema de Detecção.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NAVEGAÇÃO (BB, BE e Alcançado).md` L19
+- `50_Navegacao_Instrumentacao_e_Comunicacao\NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md` L20
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Piloto Automático.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Radar.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\Sonda - Profundímetro - Sonar.md` L12
+- `50_Navegacao_Instrumentacao_e_Comunicacao\VHF.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Atuador Linear.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Automação de Bordo — Sistemas Domoticos.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Câmeras de Bordo - Sistema CFTV.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Interfone - Intercomunicador de Bordo.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Monitoramento Remoto — VRM - Telemetria.md` L12
+- `60_Automacao_Conectividade_e_Monitoramento\Sensor de Nível Diesel.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Sistema de Alarme Geral - Painel de Alarmes.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Som.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Starlink - Internet a Bordo.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\TV a Bordo - Entretenimento.md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\USB 12V (Power).md` L11
+- `60_Automacao_Conectividade_e_Monitoramento\Wi-Fi a Bordo — Roteador Marine e Conectividade.md` L11
+

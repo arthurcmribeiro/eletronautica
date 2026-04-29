@@ -1,0 +1,231 @@
+---
+wave: 11
+phase: 6
+sprint: "Caminho B — Tier B + Tier C closure (encerramento da Fase 6)"
+date: "2026-04-26"
+cadence: "a (auto-continuous)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier C (16 MOCs/guias — frontmatter normalizado) + Tier B (12 notas operacionais — DEC-11 light template) — encerramento total da Fase 6 Caminho B"
+template_recalibrated:
+  tier_c_template:
+    - "status: moc-curated"
+    - "fase_6_reescrita: 105-120"
+    - "reviewed_on: 2026-04-26"
+    - "review_jurisdiction: Brasil"
+    - "review_level: moc-curated"
+    - "normas_citadas: [] (MOCs não citam normas técnicas)"
+    - "Manter conteúdo (lista de notas / navegação)"
+    - "Refinamento de wikilinks se detectado link quebrado"
+  tier_b_template:
+    - "status: tier-b-curated"
+    - "fase_6_reescrita: 121-132"
+    - "reviewed_on: 2026-04-26"
+    - "review_jurisdiction: Brasil + Internacional"
+    - "review_level: tier-b-curated"
+    - "normas_citadas: lista plana 8-15 itens (escopo proporcional)"
+    - "TL;DR tip callout — 4 regras (não 9 como Tier S/A)"
+    - "Glossário rápido — 4-8 termos (não 50+ como Tier S/A)"
+    - "Sem danger callout (componente operacional, não regulatório)"
+
+tier_c_notes:
+  - n: "01/16"
+    title: "MOC — Hidraulica Climatizacao e Utilidades"
+    fase_6_reescrita: 105
+    extras: "Adicionou daughter notes Wave 7 (Sistema Sanitário a Vácuo + Ar-Condicionado Chiller) + nota-mãe Óleos Hidráulicos Marine"
+  - n: "02/16"
+    title: "MOC — Mapas"
+    fase_6_reescrita: 106
+  - n: "03/16"
+    title: "MOC — Fundamentos e Projeto"
+    fase_6_reescrita: 107
+  - n: "04/16"
+    title: "MOC — Baterias e Armazenamento"
+    fase_6_reescrita: 108
+  - n: "05/16"
+    title: "MOC — Energia e Conversao"
+    fase_6_reescrita: 109
+  - n: "06/16"
+    title: "MOC — Distribuicao Protecao e Aterramento"
+    fase_6_reescrita: 110
+  - n: "07/16"
+    title: "MOC — Navegacao Instrumentacao e Comunicacao"
+    fase_6_reescrita: 111
+  - n: "08/16"
+    title: "MOC — Iluminacao e Sinalizacao"
+    fase_6_reescrita: 112
+  - n: "09/16"
+    title: "MOC — Automacao Conectividade e Monitoramento"
+    fase_6_reescrita: 113
+  - n: "10/16"
+    title: "MOC — Seguranca e Corrosao"
+    fase_6_reescrita: 114
+  - n: "11/16"
+    title: "MOC — Revisao Manual"
+    fase_6_reescrita: 115
+  - n: "12/16"
+    title: "MOC — Diagnóstico e Manutenção"
+    fase_6_reescrita: 116
+  - n: "13/16"
+    title: "MOC — Segurança Integrada"
+    fase_6_reescrita: 117
+  - n: "14/16"
+    title: "Atlas Técnico"
+    fase_6_reescrita: 118
+  - n: "15/16"
+    title: "Guia da Vault Curada"
+    fase_6_reescrita: 119
+  - n: "16/16"
+    title: "Fundamentos da Elétrica Náutica"
+    fase_6_reescrita: 120
+
+tier_b_notes:
+  - n: "01/12"
+    title: "Buzina"
+    domain: "50"
+    fase_6_reescrita: 121
+    dec_flags: "COLREGS Rules 33-35 + Annex III, sinais sonoros por porte (whistle <12m, +bell 12-20m, +gong >20m)"
+
+  - n: "02/12"
+    title: "Luzes Internas Teto"
+    domain: "55"
+    fase_6_reescrita: 122
+    dec_flags: "LED 12V/24V DC marine-grade, IP44+ interior, CCT por aplicação, vermelho 620nm para night vision"
+
+  - n: "03/12"
+    title: "Câmeras de Bordo / Sistema CFTV"
+    domain: "60"
+    fase_6_reescrita: 123
+    dec_flags: "Diferenciar câmera de ré × IP vigilância × FLIR térmica, IP67+ externo, LGPD/GDPR privacidade, ONVIF"
+
+  - n: "04/12"
+    title: "Interfone / Intercomunicador de Bordo"
+    domain: "60"
+    fase_6_reescrita: 124
+    dec_flags: "Distinguir VHF (regulado, externo) vs interfone (uso interno), STI ≥0,55, PoE/DECT/analog (Vingtor-Stentofon, Phontech)"
+
+  - n: "05/12"
+    title: "Monitoramento Remoto — VRM / Telemetria"
+    domain: "60"
+    fase_6_reescrita: 125
+    dec_flags: "Victron VRM + Maretron N2KView Cloud + Garmin ActiveCaptain + Yacht Devices + Siren Marine, IEC 62443 cybersecurity, LGPD/GDPR"
+
+  - n: "06/12"
+    title: "Som"
+    domain: "60"
+    fase_6_reescrita: 126
+    dec_flags: "Marine-grade obrigatório (Fusion/JL Audio/Sony/Pioneer/Kicker), EMC IEC 61547+60945+NMEA 0400, consumo banco/cabo/fusível"
+
+  - n: "07/12"
+    title: "Starlink / Internet a Bordo"
+    domain: "60"
+    fase_6_reescrita: 127
+    dec_flags: "Starlink Maritime/Mini/Standard, antena LEO Ku-band, surge protection ABYC TE-04, ANATEL Ato 14.448/2021"
+
+  - n: "08/12"
+    title: "TV a Bordo / Entretenimento"
+    domain: "60"
+    fase_6_reescrita: 128
+    dec_flags: "TV marine-grade IP56+ (Samsung/LG Marine, Furrion, Jensen Marine), Loctite anti-vibração, pure sine wave inverter"
+
+  - n: "09/12"
+    title: "USB 12V (Power)"
+    domain: "60"
+    fase_6_reescrita: 129
+    dec_flags: "Marine-grade Blue Sea Systems/Marinco/Furrion/Hella, USB-C PD até 240W (PD 3.1 EPR), EMC IEC 61547, INMETRO Portaria 197/2019"
+
+  - n: "10/12"
+    title: "Wi-Fi a Bordo — Roteador Marine e Conectividade"
+    domain: "60"
+    fase_6_reescrita: 130
+    dec_flags: "Roteador marine-grade multi-WAN (Peplink Pepwave + Mikrotik + Ubiquiti + GL.iNet), Wi-Fi 6/6E (802.11ax/be), WPA3 + VLAN segregação"
+
+  - n: "11/12"
+    title: "Limpador de Parabrisas"
+    domain: "70"
+    fase_6_reescrita: 131
+    dec_flags: "Motor marine-grade IPX5+ vedado (AFI/Doga/Speich/Roca/Wynn), park position obrigatório, palheta silicone marine, ISO 11591 field of vision"
+
+  - n: "12/12"
+    title: "Sensor de Nível de Água"
+    domain: "70"
+    fase_6_reescrita: 132
+    dec_flags: "Desambiguação: tanque água doce (conforto) × porão alta-água (segurança) × cinzas/negras (cumprimento normativo). NMEA 2000 PGN 127505 + tank instances 0-15"
+
+metrics:
+  total_notes: 28  # 16 Tier C + 12 Tier B
+  tier_c_notes: 16
+  tier_b_notes: 12
+  callouts_added: "12 tip callouts (Tier B only) — Tier C MOCs sem callouts adicionais"
+  glossary_terms_total: "≈ 80 (Tier B 4-8 termos × 12 notas)"
+  normas_total: "≈ 130 (Tier B 8-15 itens × 12 notas, Tier C [] vazio)"
+  dec_14_notes: 12  # apenas Tier B com normas_citadas; Tier C com [] vazio
+  dec_11_notes: 12  # apenas Tier B com TL;DR + glossário
+  fase_6_range: "105-132"
+  status_distribution:
+    moc-curated: 16
+    tier-b-curated: 12
+
+new_decisions: []  # Wave 11 é closure, não introduz decisão estrutural nova
+
+intra_wave_coherence_patterns:
+  - pattern: "Tier C MOCs todos com normas_citadas vazio (MOCs são guia de navegação, não citam normas)"
+  - pattern: "Tier B com normas_citadas proporcional (8-15 itens) — não a profundidade total dos Tier S/A (50+)"
+  - pattern: "Tier B com TL;DR de 4 regras + Glossário de 4-8 termos (não 9 + 50+ dos Tier superiores)"
+  - pattern: "Sem danger callout em Tier B — componente operacional vs regulatório"
+  - pattern: "Stack ABYC + IEC + ABNT + DPC NORMAM + EU mantido proporcional ao escopo da nota"
+
+todos_resolved_this_wave: []
+
+user_feedback_applied_in_wave: []  # Sem feedback explícito — execução direta da cadência (a) DEC-33 + closure de Tier B + C
+
+milestone:
+  total_processed: 137
+  total_planned: 137
+  percentage: 100.0
+  caminho_b_status: "FECHADO 100% — todas as 137 notas vault-wide processadas (Tier S 44 + Tier A 49 + Tier B 12 + Tier C 16 + bônus Onda 4-7 daughter notes 16)"
+  fases_completas:
+    - "Fase 0 (inventário)"
+    - "Fase 1 (auditoria 9 rodadas)"
+    - "Fase 2 (consolidado + governança)"
+    - "Fase 3 (fichas + scaffolds)"
+    - "Fase 4 (arquitetura)"
+    - "Fase 5 (10 reescritas premium iniciais)"
+    - "Fase 5 estendido (10 reescritas adicionais)"
+    - "Fase 6 (Caminho B — DEC-11 premium em 137 notas — total vault)"
+
+commit_message_draft: |
+  Phase 6 Wave 11: Tier B + Tier C closure (137/137 notes — 100% Caminho B)
+
+  Wave 11 é o encerramento da Fase 6:
+  - Tier C (16 notas — MOCs/guias) frontmatter normalizado: fase 105-120
+  - Tier B (12 notas operacionais) DEC-11 light template: fase 121-132
+
+  Tier C — 16 MOCs/guias frontmatter normalized:
+  - 13 MOCs por domínio (Atlas Técnico, Fundamentos da Elétrica Náutica,
+    Guia da Vault, MOC Mapas/Fundamentos/Baterias/Energia/Distribuicao/
+    Navegacao/Iluminacao/Automacao/Seguranca/Revisao/Diagnostico/Seguranca Integrada
+    + 3 hubs especiais)
+  - normas_citadas: [] (MOCs são guia de navegação, não citam normas)
+  - moc-curated status
+
+  Tier B — 12 notas operacionais com DEC-11 light:
+  - Buzina, Luzes Internas Teto, Câmeras CFTV, Interfone, Monitoramento Remoto,
+    Som, Starlink, TV a Bordo, USB 12V, Wi-Fi a Bordo, Limpador, Sensor Nível Água
+  - TL;DR 4 regras + Glossário 4-8 termos + frontmatter completo
+  - normas_citadas proporcional (8-15 itens)
+  - Sem danger callout (componente operacional)
+
+  Métricas Wave 11:
+  - 28 notas processadas (16 Tier C + 12 Tier B)
+  - 12 callouts adicionados (12 tip — Tier B only)
+  - ~80 termos glossário (Tier B 4-8 × 12)
+  - ~130 normas expandidas (Tier B 8-15 × 12)
+  - 0 novos DECs (closure — sem decisão estrutural)
+
+  CADÊNCIA FINAL:
+  - Caminho B (Fase 6) FECHADO em 100%: 137/137 notas
+  - Tier S 44 + Tier A 49 + Tier B 12 + Tier C 16 + bônus daughter notes 16
+  - Fases 0-6 completas
+
+  YAML: fase_6_onda_11_tier_b_e_c_closure_20260426.yaml
+---

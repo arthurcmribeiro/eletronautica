@@ -1,0 +1,222 @@
+---
+# Fase 5 - Reescrita Premium #06 (Fase 5 estendida — DEC-13)
+# Nota: 50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos
+# Prioridade matriz: 6.3 (posicao 6)
+# Data: 2026-04-18
+# Escopo: TL;DR + canonicalizacao normas + danger especialista + glossario rapido
+fase: 5
+reescrita_num: "06"
+data: "2026-04-18"
+status: "concluida"
+formato: "compact"
+thread: "5-06 — premium rewrite NMEA 2000 / 0183 (Fase 5 estendida)"
+gatilho: "instrucao explicita 'continuar' — DEC-13 destrava posicoes 6-10 sob demanda"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+  linhas_antes: 368
+  linhas_depois: 419
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.3
+  posicao_matriz: 6
+  esforco_estimado_h: 3
+  esforco_real_h: 1.5
+  risco_matriz: "baixo"
+
+# =============================================================================
+# 2. MUDANCAS APLICADAS
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status"
+      antes: "technical-review-l1"
+      depois: "fase-5-reescrita-premium"
+    - campo: "fase_5_reescrita"
+      depois: '"06"'
+    - campo: "prioridade_fase_5"
+      depois: 6.3
+    - campo: "reviewed_on"
+      antes: '"2026-04-17"'
+      depois: '"2026-04-18"'
+    - campo: "normas_citadas"
+      antes: |
+        - "NMEA 0183 (edição a verificar)"
+        - "NMEA 2000 (edição a verificar)"
+        - "IEC 61162-1 (edição a verificar)"
+        - "IEC 61162-3 (edição a verificar)"
+        - "ISO 11898 (CAN bus)"
+      depois: |
+        - "NMEA 0183 (última versão NMEA — verificar com a NMEA antes de publicar)"
+        - "NMEA 2000 (última versão NMEA — verificar com a NMEA antes de publicar)"
+        - "IEC 61162-1:2016"
+        - "IEC 61162-3:2008+A2:2019"
+        - "ISO 11898-1:2015 (CAN — camada de enlace)"
+        - "NORMAM-204/DPC (radiocomunicações marítimas — quando NMEA carrega DSC/AIS)"
+      correcoes:
+        - "IEC 61162-1: edição canonicalizada -> 2016 (publica)"
+        - "IEC 61162-3: edição canonicalizada -> 2008+A2:2019 (publica)"
+        - "ISO 11898 -> 11898-1:2015 (parte específica de CAN data link)"
+        - "Adicionado NORMAM-204/DPC (link para radiocomunicações no Brasil)"
+        - "NMEA 0183 e NMEA 2000: editoras NMEA sao controladas; mantida nota explicita 'verificar com a NMEA' (honestidade > sigla falsa)"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip callout)"
+      localizacao: "apos abstract, antes de O que e"
+      regras:
+        - "0183 = serial ponto-a-ponto (1 talker -> N listeners); 2000 = barramento CAN compartilhado"
+        - "Baud 0183: 4800 (v2.x) ou 38400 (v3/HS); misturar = silencio"
+        - "N2K backbone exige 2 terminadores 120 Ohm + 1 power tap (fusivel 3 A, 9-16 V DC)"
+        - "Resistencia ponta-a-ponta do backbone (rede desligada) ~ 60 Ohm"
+        - "Drop N2K <= 6 m por norma; manter < 3 m na pratica"
+        - "TX/RX invertido = falha #1 do 0183 (em RS-422 diferencial: TX+ -> RX+, TX- -> RX-)"
+        - "SeaTalkNG/SimNet != N2K plug-and-play (camada fisica compativel; pinagem e suporte do fabricante decidem)"
+
+    - bloco: "Quando chamar especialista (danger callout)"
+      localizacao: "apos Cuidados de uso, antes de Erros comuns de instaladores"
+      cenarios:
+        - "Integracao de motor (J1939 -> N2K) com gateway dedicado"
+        - "Backbone com >20 dispositivos ou extensao somada > 50 m (LEN, queda de tensao, multiplos power taps)"
+        - "Mistura SeaTalkNG/SimNet/N2K certificado em backbone unico"
+        - "Conflito de enderecos N2K que nao some apos reboot/reset (firmware corrompido ou NAME duplicado)"
+        - "AIS Class A com integracao N2K (reporting obrigatorio por COLREGS/IMO)"
+        - "Multiplexer 0183 com >3 talkers ou misturando baud rates"
+        - "DSC do VHF nao recebe posicao apos gateway (risco regulatorio: ITU-R M.493 + NORMAM-204)"
+      destaque: "ROI explicito - 1h de integrador certificado < custo de chartplotter premium ou DSC sem coordenadas em emergencia real"
+
+    - bloco: "Glossario rapido (DEC-11)"
+      localizacao: "apos Visual didatico, antes de Integracao com outras notas"
+      termos: 20
+      destacados:
+        - "Sentence, PGN, Talker, Listener (vocabulario base)"
+        - "Backbone, Drop, Tee, Power tap, Terminador (topologia N2K)"
+        - "LEN, NAME (gerencia de rede N2K)"
+        - "Gateway, Multiplexer (interoperabilidade)"
+        - "J1939, SeaTalkNG, SimNet (protocolos vizinhos)"
+        - "$GPGGA, $GPRMC (sentences criticas para DSC)"
+        - "PGN 127250 (heading), PGN 129025 (position rapid)"
+
+    - bloco: "Normas e referencias expandidas"
+      adicoes:
+        - "IEC 61162-1:2016 (edicao canonicalizada)"
+        - "IEC 61162-3:2008+A2:2019 (edicao canonicalizada)"
+        - "ISO 11898-1:2015 (parte especifica)"
+        - "NORMAM-204/DPC (radiocomunicacoes BR)"
+        - "ITU-R M.493 (DSC -- liga NMEA ao VHF)"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "O que e (NMEA 0183 + NMEA 2000)"
+    - "Funcao"
+    - "Como aparece na pratica (BR vs moderno)"
+    - "Fundamentos minimos (tabela 8 parametros)"
+    - "Sentences NMEA 0183 mais comuns (10 itens)"
+    - "PGNs NMEA 2000 mais relevantes (12 itens)"
+    - "Configuracoes e topologias (0183 + N2K + gateways)"
+    - "Marcas e componentes (8 linhas)"
+    - "Problemas mais frequentes (6 casos)"
+    - "Causas raiz detalhadas"
+    - "Diagnostico pratico (passo a passo 0183 + N2K)"
+    - "Boas praticas profissionais"
+    - "Cuidados de instalacao"
+    - "Cuidados de uso"
+    - "Erros comuns de instaladores"
+    - "Relacao com outros sistemas"
+    - "Brasil x Internacional"
+    - "Como ensinar este topico"
+    - "Ideias de videos"
+    - "Diagramas sugeridos"
+    - "FAQ (5 perguntas)"
+    - "Visual didatico (nmea-backbone-drops)"
+    - "Integracao com outras notas (8 wikilinks)"
+    - "Perguntas que esta nota responde"
+
+# =============================================================================
+# 3. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  normas_canonicalizadas:
+    - norma: "IEC 61162-1"
+      antes: "edicao a verificar"
+      depois: "2016"
+      fonte: "catalogo IEC publico"
+    - norma: "IEC 61162-3"
+      antes: "edicao a verificar"
+      depois: "2008+A2:2019"
+      fonte: "catalogo IEC publico"
+    - norma: "ISO 11898"
+      antes: "(CAN bus)"
+      depois: "11898-1:2015 (camada de enlace)"
+      fonte: "catalogo ISO publico"
+    - norma: "NMEA 0183 / NMEA 2000"
+      antes: "edicao a verificar"
+      depois: "ultima versao NMEA -- verificar com a NMEA antes de publicar"
+      racional: "NMEA controla edicoes; sem acesso ao documento, manter explicita necessidade de verificacao e nao inventar versao"
+
+  novas_normas_adicionadas:
+    - "NORMAM-204/DPC -- explicitamente vincula NMEA a radiocomunicacoes BR"
+    - "ITU-R M.493 -- DSC, liga NMEA ao VHF/socorro"
+
+  coerencia_intra_nota:
+    - topico: "TX/RX invertido como falha #1 0183"
+      status: "ok (consistente entre TL;DR, Causas raiz, Erros comuns, Diagnostico)"
+    - topico: "Backbone: 2 terminadores 120 Ohm = ~60 Ohm em paralelo"
+      status: "ok (consistente entre TL;DR, Causas raiz, Diagnostico, FAQ)"
+    - topico: "Drop N2K <=6 m (norma) / <3 m (pratica)"
+      status: "ok (consistente)"
+    - topico: "SeaTalkNG/SimNet vs N2K"
+      status: "ok (mesma cautela em Marcas, Erros comuns, FAQ, danger callout)"
+
+  wikilinks_validados:
+    - "[[AIS (Automatic Identification System)]] -> existe"
+    - "[[Buzina]] -> existe"
+    - "[[Bússola Eletrônica (Compass / HDG Sensor)]] -> existe"
+    - "[[Chartplotter / GPS / MFD]] -> existe"
+    - "[[Dsc — Chamada Seletiva Digital]] -> existe"
+    - "[[EPIRB / Beacon de Emergência]] -> existe"
+    - "[[Estação de Vento / Anemômetro]] -> existe"
+    - "[[Mob — Man Overboard — Sistema de Detecção]] -> existe"
+
+# =============================================================================
+# 4. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Edicoes NMEA 0183 e NMEA 2000 nao canonicalizadas (NMEA controla; sem acesso ao documento)"
+    severidade: "baixa"
+    mitigacao: "frontmatter e secao Normas explicitam 'verificar com a NMEA'; preferimos verdade > falso compromisso"
+    bloqueia_publicacao: false
+  - descricao: "Visual nmea-backbone-drops referenciado mas nao validamos rendering"
+    severidade: "baixa"
+    mitigacao: "spec ja existe em _visuals/specs; render esta na fila do escopo minimo Fase 6"
+    bloqueia_publicacao: false
+  - descricao: "Glossario inclui PGNs (127250, 129025) sem repetir todas as fontes; leitor pode achar lista incompleta"
+    severidade: "muito baixa"
+    mitigacao: "tabela completa de PGNs ja esta na secao 'PGNs NMEA 2000 mais relevantes' (linha 124)"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 5. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_adicionadas: 51
+  secoes_novas: 3   # TL;DR + danger especialista + glossario
+  callouts_novos: 2  # tip + danger
+  normas_canonicalizadas: 3   # IEC 61162-1, IEC 61162-3, ISO 11898
+  normas_adicionadas: 2       # NORMAM-204, ITU-R M.493
+  termos_glossario: 20
+  diferencial_fase_5_estendida:
+    - "primeira reescrita pos top-5 (DEC-13 destravada por 'continuar')"
+    - "canonicalizou 3 normas IEC/ISO; manteve honestidade em normas NMEA controladas"
+    - "vinculou NMEA a radiocomunicacoes BR (NORMAM-204) e a DSC/socorro (ITU-R M.493)"
+    - "glossario de 20 termos cobre vocabulario completo do dominio (sentence/PGN/topologia/protocolos vizinhos)"
+    - "ROI do especialista vinculado a risco regulatorio (DSC sem coordenadas)"
+
+# =============================================================================
+# 6. PROXIMO PASSO
+# =============================================================================
+proxima_reescrita: "Fase 5 #07 - Luz de Tope (prio matriz 6.0, posicao 7) -- sob demanda"
+fase_5_top_6_concluido: true
+fase_5_estendida_status: "1 de 5 entregues (NMEA); restam Luz de Tope, Bancos Bateria, CAIS, Normas e Regulamentacoes"

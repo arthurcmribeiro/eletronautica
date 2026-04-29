@@ -1,0 +1,161 @@
+---
+# Fase 5 - Reescrita Premium #10 (Fase 5 estendida) -- ULTIMA
+# Nota: 10_Fundamentos_e_Projeto/Normas e Regulamentacoes -- Abyc Iso e Brasil
+# Prioridade matriz: 5.5 (posicao 10, ULTIMA)
+# Data: 2026-04-18
+fase: 5
+reescrita_num: "10"
+data: "2026-04-18"
+status: "concluida"
+formato: "compact"
+thread: "5-10 — premium rewrite Normas e Regulamentacoes (Fase 5 estendida, FINAL)"
+
+nota:
+  caminho: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+  linhas_antes: 311
+  linhas_depois: 401
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 5.5
+  posicao_matriz: 10
+  esforco_estimado_h: 4
+  esforco_real_h: 1.0
+  observacao: "nota-mestra normativa do vault; maior risco regulatorio; entregue por ultimo"
+
+mudancas:
+  frontmatter:
+    - status -> fase-5-reescrita-premium
+    - fase_5_reescrita "10"
+    - prioridade_fase_5 5.5
+    - reviewed_on 2026-04-18
+    - normas_citadas expandidas de 15 para 29 itens
+    - "Adicionadas todas as ABYC A-series relevantes (A-16, A-33)"
+    - "Adicionadas ISO 16180, ISO 16315"
+    - "Adicionadas IEC 60364-7-709, IEC 61162-1/3, IEC 60092"
+    - "Adicionadas NEC 555, NFPA 302, NFPA 303"
+    - "Adicionadas COLREGS 72, UN 38.3"
+    - "Adicionadas NORMAM-01/DPC, NORMAM-204/DPC"
+    - "Titulos completos em E-11, E-2, E-10, E-13, A-31, ISO 13297, IEC 61008/61009"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos (tip)"
+      regras:
+        - "Regulatorio != engenharia != produto (NORMAM obriga; ABYC/ISO orientam; IEC especifica)"
+        - "ABYC nao eh lei brasileira"
+        - "NORMAM-211/DPC (recreio), 204/DPC (radio), 01/DPC (geral); 02 substituida"
+        - "ISO 10133 retirada -> usar ISO 13297:2020"
+        - "NBR 5410 eh complementar, nao substitui norma nautica"
+        - "Edicao 'a verificar' nao vai para laudo assinado"
+        - "Citacao valida = documento + edicao/ano + clausula + contexto"
+        - "SOLAS/classificadas (ABS/DNV/BV) -> regime diferente"
+
+    - bloco: "Quando chamar especialista (danger)"
+      cenarios:
+        - "Sinistro eletrico com ferido/morte (perito criminal + norma vigente no momento)"
+        - "Laudo tecnico para seguradora/Marinha/Justica (ART/CREA)"
+        - "Embarcacao SOLAS ou classificada (ABS/DNV/BV/Lloyd's/RINA)"
+        - "Entrada em operacao comercial/passageiro (NORMAM-01 != 211)"
+        - "Importacao com homologacao ANATEL/INMETRO/UN 38.3"
+        - "Divergencia entre edicao ABYC/ISO citada e vigente"
+        - "Retrofit/conversao que altere topologia AC (sistema derivado)"
+        - "Instalacao em marina comercial (NBR 5410 + NR-10 + convencao)"
+        - "Norma citada foi revogada/substituida sem atualizacao"
+      destaque: "Custo 2-10h engenheiro senior << laudo reprovado / processo / autuacao"
+
+    - bloco: "Glossario rapido (DEC-11)"
+      termos: 31
+      cobertura:
+        - "Tipos de norma: regulatoria, engenharia voluntaria, produto, fabricante"
+        - "Orgaos: ABYC, ISO, IEC, NFPA, ABNT, IMO, IACS"
+        - "Brasil: DPC, NORMAM-01/204/211, INMETRO, ANATEL, ART, CREA/CONFEA"
+        - "US: PE (Professional Engineer)"
+        - "Familias ABYC: E-series (eletrica), A-series (acessorios), H-series (casco)"
+        - "Small craft (ISO): 8846, 13297, 16180, 16315"
+        - "Conceitos: edicao vigente, TODO-CITACAO, canonicalizacao"
+        - "UE: CE, MED, RED"
+        - "Internacional: SOLAS"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "Como esta nota deve ser usada (4 perguntas)"
+    - "Primeiro principio: regulatorio != engenharia (4 camadas)"
+    - "Ecossistema brasileiro (NORMAM + ABNT/NBR + IEC adotadas)"
+    - "Ecossistema internacional (ABYC + ISO/IEC small craft)"
+    - "Comparacao pratica ABYC x ISO x Brasil (visao estrategica + tabela 12 aspectos)"
+    - "Identificacao de condutores (tabela 3 convencoes)"
+    - "Caso brasileiro de ABYC mal utilizada (220V fase-fase sem neutro)"
+    - "Vademecum por assunto (tabela 10 temas)"
+    - "O que a NORMAM faz e nao faz"
+    - "Como citar normas sem se comprometer tecnicamente"
+    - "Regras praticas para a base tecnica"
+    - "Fontes institucionais (links)"
+    - "FAQ (5 perguntas)"
+    - "Integracao com outras notas (7 wikilinks)"
+    - "Perguntas que esta nota responde (10)"
+
+validacao:
+  normas_canonicalizadas:
+    - "ABYC E-11/E-2/E-10/E-13 com titulos completos"
+    - "ABYC A-16 adicionado (nav lights)"
+    - "ABYC A-33 adicionado (shore power inlets)"
+    - "ABYC A-31 atualizado para (2024)"
+    - "ISO 13297:2020 com titulo"
+    - "ISO 16180:2011 adicionado"
+    - "ISO 16315:2016 adicionado"
+    - "IEC 60364-7-709 adicionado"
+    - "IEC 61162-1/3 adicionados"
+    - "IEC 60092 adicionado"
+    - "NEC 555, NFPA 302, NFPA 303 adicionados"
+    - "COLREGS 72 adicionado"
+    - "UN 38.3 adicionado"
+    - "NORMAM-01/DPC e NORMAM-204/DPC adicionados"
+
+  coerencia_intra_nota:
+    - "Regulatorio != engenharia != produto (consistente: TL;DR, Primeiro principio, Glossario, FAQ)"
+    - "NORMAM nao substitui engenharia (consistente: TL;DR, Ecossistema BR, danger, FAQ)"
+    - "ISO 10133 retirada (consistente: TL;DR, Ecossistema internacional, Regras praticas)"
+    - "Citacao valida precisa de edicao/ano/clausula (consistente: TL;DR, Como citar, Glossario TODO-CITACAO)"
+
+riscos_residuais:
+  - "Muitas edicoes marcadas 'a verificar' permanecem"
+  - "Nao foi feita consulta ativa ao portal ABYC/ISO -- mantida postura conservadora"
+  - "NORMAM-01 citada genericamente; edicao especifica nao atualizada"
+  - "Convencao de identificacao de condutores pode variar por pais/norma"
+
+metricas:
+  linhas_adicionadas: 90
+  callouts_novos: 2
+  termos_glossario: 31
+  normas_canonicalizadas_ou_adicionadas: 14
+  diferencial:
+    - "maior glossario da Fase 5 (31 termos)"
+    - "primeira nota com SOLAS explicitado (regime fora de escopo)"
+    - "ART/CREA entra no vocabulario (vinculo juridico)"
+    - "UN 38.3 formalmente registrada (transporte litio)"
+    - "Familias ABYC (E/A/H) cristalizadas como conceito"
+    - "danger cobre 9 cenarios juridicos (mais robusta da Fase 5)"
+    - "meta-nota: agora o vault tem referencia unica para 'qual norma usar em cada caso'"
+
+proxima_reescrita: "Fase 5 estendida COMPLETA (5 de 5 entregues)"
+fase_5_estendida_progresso: "5 de 5 (NMEA + Luz Tope + Bancos Bateria + CAIS + Normas concluidos)"
+
+fase_5_consolidado:
+  total_reescritas: 10
+  top_5_original:
+    - "01 Bateria (prio 10)"
+    - "02 Capacidade de Bateria (prio 10)"
+    - "03 Cabeamento Eletrico (prio 10)"
+    - "04 Bombeamento de Porao (prio 10)"
+    - "05 Gerador AC (prio 10)"
+  estendida_6_10:
+    - "06 NMEA 2000 / NMEA 0183 (prio 6.3)"
+    - "07 Luz de Tope (prio 6.1)"
+    - "08 Bancos de Bateria (prio 6.0)"
+    - "09 CAIS (Pier) (AC) (prio 5.6)"
+    - "10 Normas e Regulamentacoes (prio 5.5)"
+  esforco_total_estimado_h: 29
+  esforco_total_real_h: 14
+  ratio_eficiencia: "2.1x mais rapido que estimativa"
+  total_callouts_adicionados: 20
+  total_termos_glossario: 184
+  total_normas_canonicalizadas: "60+"

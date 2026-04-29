@@ -1,0 +1,77 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 06
+# Data: 2026-04-17
+# Escopo: 1-E restante (editorial + MOCs)
+rodada: 6
+data: "2026-04-17"
+notas_auditadas: 6
+thread: "1-E restante"
+formato: "compacto"
+
+notas:
+  - arquivo: "_Editorial/Auditoria Geral da Base.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-01
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "relatório editorial base histórica; sem normas citadas (OK)"
+
+  - arquivo: "_Editorial/Log de Evolução.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-02
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "log vivo, cronologia coerente"
+
+  - arquivo: "00_Mapas/MOC — Mapas.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-03
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "MOC entrypoint correto; seo/related_notes estáveis"
+
+  - arquivo: "00_Mapas/MOC — Segurança Integrada.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-04
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "hub transversal; não cita normas diretamente (delega aos nós técnicos)"
+
+  - arquivo: "00_Mapas/MOC — Diagnóstico e Manutenção.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-05
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "hub transversal diagnóstico; estrutura OK"
+
+  - arquivo: "00_Mapas/Atlas Técnico.md"
+    thread: "1-E"
+    achados:
+      - id: P1-R06-06
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista + reviewed_on atualizado"
+        status: "aplicado"
+    veredito: "atlas mestre; mapa de domínios coerente com estrutura real"
+
+sinais_de_risco:
+  P0: 0
+  P1: 6
+  P2: 0
+
+observacoes_sistemicas:
+  - "Convenção confirmada: notas `_Editorial/` e MOCs `00_Mapas/` recebem `review_jurisdiction` mas NÃO `normas_citadas` (delegam aos nós técnicos). Registrar na convenção_citacao_normativa.md."
+  - "Todos os MOCs têm camada seo_title/seo_description/geo_queries/related_notes estável desde a onda editorial de 2026-04-14 — não requer reescrita."
+
+proxima_rodada:
+  numero: 7
+  thread: "1-F especializados — Bancos Bateria revalidação, Correntes Parasitas, Inversora, Monitoramento VRM, Dessalinizador, Estabilizador"

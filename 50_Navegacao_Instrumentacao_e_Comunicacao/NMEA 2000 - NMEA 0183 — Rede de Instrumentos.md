@@ -3,9 +3,20 @@ title: "NMEA 2000 / NMEA 0183 — Rede de Instrumentos"
 note_type: "system"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "NMEA 2000 NMEA 0183 — REDE DE INSTRUMENTOS 33a19734f7fb81769c8be9e14765b8fc.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_5_reescrita: "06"
+prioridade_fase_5: 6.3
+reviewed_on: "2026-04-18"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "NMEA 0183 (última versão NMEA — verificar com a NMEA antes de publicar)"
+  - "NMEA 2000 (última versão NMEA — verificar com a NMEA antes de publicar)"
+  - "IEC 61162-1:2016"
+  - "IEC 61162-3:2008+A2:2019"
+  - "ISO 11898-1:2015 (CAN — camada de enlace)"
+  - "NORMAM-204/DPC (radiocomunicações marítimas — quando NMEA carrega DSC/AIS)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
@@ -41,6 +52,15 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > NMEA 2000 / NMEA 0183 — REDE DE INSTRUMENTOS — Protocolos padrão de comunicação entre instrumentos náuticos. NMEA 0183 é serial ponto a ponto, ainda muito presente em retrofit e integrações legadas. NMEA 2000 é rede em barramento CAN com compartilhamento estruturado de dados, mas exige topologia, alimentação e terminação corretas.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **0183 = serial ponto-a-ponto** (1 talker → N listeners); **2000 = barramento CAN compartilhado** (todos enxergam todos).
+> - **Baud 0183:** 4800 (v2.x, padrão histórico) ou 38400 (v3/HS — AIS, instrumentos rápidos). Misturar = silêncio.
+> - **N2K backbone exige 2 terminadores 120Ω** + 1 power tap (fusível 3A, 9–16 V DC).
+> - **Resistência ponta-a-ponta do backbone (rede desligada) ≈ 60Ω** — diferente disso = problema antes de ligar nada.
+> - **Drop N2K ≤ 6 m por norma; manter < 3 m na prática** (reflexão de sinal corrompe dados).
+> - **TX/RX invertido é a falha #1 do 0183.** Em RS-422 diferencial, TX+ → RX+ e TX- → RX-.
+> - **SeaTalkNG / SimNet ≠ N2K plug-and-play.** Camada física compatível, mas pinagem, alimentação e suporte do fabricante decidem a interoperabilidade real.
 
 ## O que é
 
@@ -238,6 +258,18 @@ Passo 5: Verificar se o dispositivo problemático aparece na lista de devices
 - Manter os conectores Micro-C travados (têm anel de travamento)
 - Verificar periodicamente se os terminadores N2K estão presentes (podem ser retirados acidentalmente)
 
+> [!danger] Quando chamar especialista
+> Há cenários onde insistir no DIY transforma um pequeno erro de rede em parada operacional, equipamento queimado ou risco de comunicação de emergência mal interpretada. Pare e procure profissional/integrador certificado quando:
+> - **Integração de motor (J1939 → N2K)** com gateway dedicado — pinagem proprietária do fabricante do motor + risco de injetar PGNs incorretos no backbone.
+> - **Backbone com mais de ~20 dispositivos** ou extensão somada > 50 m — entra em território de cálculo de LEN, queda de tensão no backbone e múltiplos power taps.
+> - **Mistura de SeaTalkNG, SimNet e N2K certificado** num backbone único — adaptadores físicos resolvem a conexão, não a interoperabilidade lógica.
+> - **Conflito de endereços N2K que não some após reboot/reset** — pode indicar firmware corrompido ou dispositivo com NAME duplicado de fábrica.
+> - **AIS Class A com integração N2K** — reporting de posição é obrigatório por COLREGS / IMO; erro de timing ou PGN errado vira não-conformidade regulatória.
+> - **Multiplexer 0183 com mais de 3 talkers** ou misturando baud rates diferentes na mesma saída — começa a exigir filtragem de sentences por prioridade.
+> - **DSC do VHF não recebe posição** após inserção de gateway — risco de chamada de socorro sem coordenadas (vai contra ITU-R M.493 e NORMAM-204/DPC).
+>
+> Custo de uma hora de integrador certificado é uma fração do custo de um chartplotter premium ou de uma chamada de DSC sem coordenadas em emergência real.
+
 ## Erros comuns de instaladores
 
 - Inverter TX e RX no NMEA 0183 (o mais comum de todos)
@@ -273,11 +305,13 @@ Passo 5: Verificar se o dispositivo problemático aparece na lista de devices
 
 ## Normas e referências
 
-- **NMEA 0183 Standard:** verificar a edição oficial aplicável junto à NMEA ([NMEA.org](http://NMEA.org))
-- **NMEA 2000 Standard:** verificar a edição oficial e requisitos de certificação/licenciamento junto à NMEA ([NMEA.org](http://NMEA.org))
-- **IEC 61162-1:** NMEA 0183 (versão ISO)
-- **IEC 61162-3:** NMEA 2000 (versão ISO)
-- **CAN bus ISO 11898:** Base elétrica do NMEA 2000
+- **NMEA 0183 Standard:** documento controlado pela NMEA — a edição em vigor (e o licenciamento para implementadores) é verificável junto à NMEA ([NMEA.org](https://www.nmea.org/standards.html)). A versão pública mais citada é 4.x (HS define 38400 baud).
+- **NMEA 2000 Standard:** documento controlado pela NMEA — edição e certificação verificáveis junto à NMEA. Não confundir com o protocolo CAN puro: NMEA 2000 define PGNs, conector Micro-C, alimentação do backbone e regras de LEN.
+- **IEC 61162-1:2016** — equivalente internacional do NMEA 0183 (Maritime navigation and radiocommunication equipment and systems — Digital interfaces — Part 1: Single talker and multiple listeners).
+- **IEC 61162-3:2008+A2:2019** — equivalente internacional do NMEA 2000 (Part 3: Serial data instrument network).
+- **ISO 11898-1:2015** — base elétrica e camada de enlace do CAN bus que NMEA 2000 utiliza.
+- **NORMAM-204/DPC** — radiocomunicações marítimas no Brasil; entra em jogo quando a rede NMEA carrega dados para DSC/AIS/EPIRB.
+- **ITU-R M.493** — DSC; a posição GPS levada por NMEA até o VHF/DSC tem que estar correta para chamadas de socorro.
 
 ## Como ensinar este tópico
 
@@ -341,6 +375,31 @@ Mostrar NMEA 2000 como rede estruturada, nao como extensao livre de cabos.
 **Cautela:** Comprimentos, topologia e carga de rede devem seguir especificacoes NMEA e manuais dos fabricantes.
 
 Material de apoio: [NMEA 2000: backbone e drops](../_visuals/generated/nmea-backbone-drops.md)
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Sentence** | Linha ASCII NMEA 0183 começando com `$` (ex.: `$GPGGA`) |
+| **PGN** | Parameter Group Number — pacote binário NMEA 2000 identificado por número (ex.: 127250 = heading) |
+| **Talker** | Dispositivo que **transmite** dados na rede (GPS, anemômetro, sonda) |
+| **Listener** | Dispositivo que **recebe** dados (chartplotter, piloto, VHF) |
+| **Backbone** | Cabo principal da rede N2K, com terminadores nas duas pontas |
+| **Drop** | Cabo curto (≤ 6 m) que liga um dispositivo ao backbone via tee |
+| **Tee** | Conector em "T" (Micro-C) que insere drops no backbone |
+| **Power tap** | Componente que injeta 12 V no backbone (com fusível 3 A) |
+| **Terminador** | Resistor 120 Ω plugado em cada extremidade do backbone |
+| **LEN** | Load Equivalency Number — quantos "amperes-equivalentes" um dispositivo consome do backbone (cada LEN ≈ 50 mA) |
+| **NAME** | Identificador único de 64 bits que cada dispositivo N2K anuncia ao se conectar |
+| **Gateway** | Bridge: 0183 ↔ 2000, ou N2K ↔ proprietário (Actisense NGT-1, Garmin GND 10) |
+| **Multiplexer** | Combina vários talkers 0183 em uma única saída para um listener |
+| **J1939** | Protocolo CAN para motores diesel pesados; precisa gateway dedicado para entrar no N2K |
+| **SeaTalkNG** | Protocolo CAN proprietário Raymarine; base física compatível com N2K via adaptador |
+| **SimNet** | Protocolo CAN proprietário Simrad/Lowrance; base física compatível com N2K via adaptador |
+| **`$GPGGA`** | Posição GPS principal (lat, lon, qualidade do fix) |
+| **`$GPRMC`** | Posição + velocidade + data — sentence mínima exigida por DSC |
+| **PGN 129025** | Position Rapid Update (N2K, ~10 Hz) |
+| **PGN 127250** | Vessel Heading (N2K, ~10 Hz) — dado obrigatório para piloto automático |
 
 ## Integração com outras notas
 

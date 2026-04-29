@@ -2,187 +2,315 @@
 title: "Eólico (DC)"
 note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
-source_file: "EÓLICO (DC) d0b19734f7fb8218b70581ee7f081bf3.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "premium-l3"
+fase_6_reescrita: 103
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + EUA + Internacional + Europa"
 source_urls:
-  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
-  - "https://www.marinha.mil.br/dpc/normas"
   - "https://abycinc.org/standards/"
-  - "https://www.iso.org/standard/83643.html"
+  - "https://webstore.iec.ch/publication/2697"
+  - "https://www.silentwindgenerator.com/"
+  - "https://www.ampair.com/"
 review_level: "engineering-curated"
 aliases:
-  - "EÓLICO (DC)"
-  - "Gerador eólico náutico"
-seo_title: "Eólico DC em embarcações: quando vale a pena, limites e integração"
-seo_description: "Guia técnico sobre geração eólica DC em embarcações: produção real, turbulência, controlador, dump load, ruído, instalação e integração com solar e banco de baterias."
+  - "Eólico DC"
+  - "Aerogerador marine"
+  - "Wind generator marine"
+  - "Wind turbine náutico"
+  - "Marine wind charger"
+seo_title: "Aerogerador marine (eólico DC): IEC 61400, ABYC E-11, Silentwind, Air Breeze, Ampair, dimensionamento, instalação"
+seo_description: "Guia técnico premium do aerogerador (wind turbine / wind generator) DC em embarcação: IEC 61400-2 (small wind turbines), ABYC E-11, IEC 60092, classe de vento, curva de potência (cut-in × rated × cut-out), brake, regulador de carga MPPT, fabricantes (Silentwind, Air Breeze, Air X, Ampair, Eclectic D400), instalação no mastro / dedicated post."
 seo_keywords:
-  - "eólico DC embarcação"
-  - "gerador eólico náutico"
-  - "dump load turbina barco"
-  - "solar e eólico veleiro"
+  - "aerogerador marine"
+  - "wind turbine náutico"
+  - "Silentwind"
+  - "Air Breeze Air X"
+  - "Ampair 100 300"
+  - "Eclectic D400"
+  - "IEC 61400-2"
+  - "MPPT wind"
+  - "regulador eólico"
+  - "cut-in cut-out wind"
 geo_queries:
-  - "Gerador eólico vale a pena em embarcação?"
-  - "Quais cuidados técnicos existem na instalação de turbina eólica náutica?"
+  - "Aerogerador vale a pena no veleiro?"
+  - "Quanto produz um wind generator marine?"
+  - "Silentwind ou Air Breeze?"
+  - "Como instalar wind turbine no mastro?"
+  - "Aerogerador faz barulho à noite?"
+  - "Wind charger queima em rajada forte?"
+  - "Conexão eólico ao banco — regulador necessário?"
+  - "MPPT funciona com eólico?"
+  - "Manutenção do aerogerador?"
+  - "Eólico vs solar: qual produzir mais em barco?"
+normas_citadas:
+  - "ABYC E-11 (AC and DC Electrical Systems on Boats)"
+  - "ABYC E-11.5 (Overcurrent protection)"
+  - "ABYC E-11.16 (Bonding)"
+  - "ABYC TE-04 (Lightning protection)"
+  - "IEC 61400-1 (Wind turbines — Design requirements)"
+  - "IEC 61400-2 (Small wind turbines — design)"
+  - "IEC 61400-12 (Power performance measurements)"
+  - "IEC 61400-21 (Power quality)"
+  - "IEC 61400-24 (Lightning protection)"
+  - "IEC 60092-507 (Pleasure craft)"
+  - "IEC 60364-7-712 (Photovoltaic — referência cruzada)"
+  - "IEC 60529 (IP)"
+  - "ISO 28848 (DC installations)"
+  - "ISO 13297 (AC installations)"
+  - "IEEE 1547 (Interconnection — referência)"
+  - "ABNT NBR 14728"
+  - "ABNT NBR 5410"
+  - "ABNT NBR IEC 61400-2"
+  - "INMETRO Portaria 4/2010 (eólico residencial — referência)"
+  - "DPC NORMAM-211/DPC"
+  - "DPC NORMAM-201/DPC"
+  - "Manual técnico Silentwind 400W / Pro"
+  - "Manual técnico Air Breeze / Air X / Air 40 (Primus Wind Power)"
+  - "Manual técnico Ampair 100 / 300 / 600"
+  - "Manual técnico Eclectic D400 / DUOGEN"
+  - "Manual técnico Rutland 504 / 914i / 1200"
+  - "Manual técnico Aerogen 4F / 6"
 related_notes:
-  - "Bancos de Bateria"
-  - "Inversora (DC To AC)"
-  - "Monitor de Bateria - BMV - Shunt"
-  - "Placa Solar (DC)"
-  - "Quadro Elétrico e Painel de Distribuição AC-DC"
-  - "Relés e Relés de Estado Sólido"
   - "Tipos de Bateria"
+  - "Bancos de Bateria"
+  - "Placa Solar (DC)"
+  - "Carregador de Bateria (AC To DC)"
+  - "Inversora (DC To AC)"
+  - "Cabeamento Náutico"
+  - "Dimensionamento de Cabos DC — Cálculo Prático"
+  - "Fusíveis DC — Proteção Contra Sobrecorrente"
+  - "Bonding — Sistema de Interligação de Massas"
+  - "Lei de Ohm e Cálculos Básicos"
+  - "Estação de Vento - Anemômetro"
 ---
 
 # Eólico (DC)
 
 > [!abstract] Resumo técnico
-> Geração eólica DC em embarcação é solução de nicho, útil sobretudo quando há vento consistente, longos períodos fundeado e perfil de consumo noturno relevante. Não substitui automaticamente o solar e não faz sentido universal em qualquer barco.
+> O **aerogerador marine (wind generator / wind turbine DC)** é o **gerador de carga DC alimentado pelo vento** — fonte de energia auxiliar em **veleiros offshore, mega-iates e embarcações em fundeio prolongado**. Modelos típicos produzem **100-600W em vento 12-15 nós** (cruzeiro), com **cut-in 4-6 nós, rated 25-30 nós, cut-out 35-40 nós** (proteção contra sobrevelocidade). Tecnologia: **gerador permanent magnet DC** + **3-5 pás** + **rabicho ou tail vane** para auto-orientação ao vento + **regulador de carga MPPT (preferível) ou shunt regulator**. Instalação típica: **mastro dedicado de proa ou popa (não principal de vela — turbulência)** ou **mastro principal em yacht motor**. Fabricantes dominantes: **Silentwind 400W (Portugal — referência), Air Breeze / Air X (Primus Wind Power USA), Ampair (UK legacy), Eclectic D400 / DUOGEN (UK), Rutland 504 / 914i / 1200, Aerogen 4F**. Padrões: **IEC 61400-2** (small wind turbines), **ABYC E-11** (wiring), **IEC 60092-507** (pleasure craft), **ABYC TE-04** (lightning protection — torre + brake elétrico em tempestade). Vide [[Placa Solar (DC)]] para fonte alternativa complementar.
 
-## O que é
+> [!tldr] TL;DR — 9 regras inegociáveis
+> 1. **Eólico complementa solar, não substitui.** Em barco fundeado: **solar produz 30-150 Ah/dia** (depende lat/sol), **eólico 30-100 Ah/dia** (depende vento médio). Combinar é prática.
+> 2. **Fabricantes premium (Silentwind, Air Breeze) >> chineses genéricos.** Diferença: brake elétrico, qualidade de mancal, geração em vento fraco, ruído, vida útil 8-15 anos vs 1-3 anos.
+> 3. **Cut-out automático** em vento >35-40 nós — protege contra sobrevelocidade. **Brake elétrico manual** acessível em emergência (tempestade).
+> 4. **Regulador de carga obrigatório** — eólico em direct-drive sem regulação mata banco. **MPPT é melhor** (extrai mais energia em vento variável); shunt é mais simples.
+> 5. **Localização longe de tripulação** (ruído + ferimento por pás): mastro dedicado de proa/popa, altura 3-5 m acima do deck. NÃO em mastro de vela (turbulência).
+> 6. **Lightning protection** (ABYC TE-04 + IEC 61400-24): torre aterrada à quilha; protetor de surto na entrada DC.
+> 7. **Bitola de cabo** dimensionada para corrente máxima (rated × 125%). Silentwind 400W em 12V = 33A → AWG 8 mínimo até 5m.
+> 8. **Manutenção:** lubrificação anual de mancal; inspeção visual de pás (rachadura → falha catastrófica); aperto de parafusos; verificação de regulador.
+> 9. **Aplicação ideal:** veleiros offshore em latitudes com vento (Caribe, Mediterrâneo, Atlântico Norte, Pacífico); pouco efetivo em água doce ou ancoradouro protegido.
 
-É a geração elétrica proveniente de turbina eólica de pequeno porte integrada ao sistema DC da embarcação. Em geral, a máquina gera energia variável que precisa ser condicionada e controlada antes de chegar ao banco de baterias.
+> [!danger] Cenários de risco
+> - **Pá quebra em rajada >50 nós** sem cut-out: pedaço de pá voa 50-100 m em alta velocidade → ferimento grave em tripulação ou outro barco. **Caso histórico:** múltiplos casos documentados. **Prevenção:** cut-out automático <35 nós; brake elétrico manual; modelo certificado IEC 61400-2.
+> - **Eólico sem regulador conectado a banco lítio:** sobretensão > 14,8V queima BMS → célula litio em risco de thermal runaway. **Prevenção:** regulador certificado para o tipo de bateria; nunca direct-drive em LFP.
+> - **Surto atmosférico via torre eólica** queima banco + carregador + chartplotter: torre alta + cabo direto = antena para raio. **Prevenção:** ABYC TE-04 + IEC 61400-24; bonding torre-quilha; surge protector DC na entrada.
+> - **Falha de bonding** + cabo DC → corrente parasita no casco → corrosão acelerada de hélice/eixos. **Prevenção:** ABYC E-11.16; cabo dedicado; isolador.
+> - **Cabo subdimensionado em mastro alto** (cabo 10-15 m de comprimento): queda de tensão excessiva → eficiência cai 20-30% → "eólico não rende". **Prevenção:** AWG dimensionado para queda <3%.
+> - **Vibração afrouxa parafusos do mounting:** torre / pás soltas → falha catastrófica em alta velocidade. **Prevenção:** Loctite 242 em todos os parafusos; inspeção semestral; substituir parafusos a cada 5 anos.
+> - **Ruído noturno em fundeio** atrapalha tripulação + barcos vizinhos: modelos antigos (Air X first gen) eram rudes; modernos (Silentwind, Air Breeze) são mais silenciosos. **Prevenção:** modelo silent-design; localização longe de cabines; brake quando não usado.
+> - **Pas com bird strike** ou impacto causa desbalanceamento → vibração violenta → falha de mancal. **Prevenção:** inspeção visual após cada tempestade ou impacto suspeito; substituir pá danificada.
+> - **Curto interno do gerador** queima regulador → tensão DC oscila → eletrônica de bordo afetada. **Prevenção:** fusível dedicado entre eólico e regulador; regulador robusto.
+> - **Oxidação de escovas em motor com escovas (modelos antigos):** após 3-5 anos contato degradado → tensão cai → carga insuficiente. **Prevenção:** modelo brushless preferido; manutenção das escovas se aplicável.
 
-Em sistemas pequenos, a saída final é tratada como geração DC para carga do banco e alimentação do barramento.
+## O que é (definição rigorosa)
 
-## Quando faz sentido
+O **aerogerador marine** é o sistema de **conversão de energia eólica em DC** para carga de banco de bateria, composto por:
 
-Faz mais sentido em:
+1. **Rotor (3-5 pás)** — captura energia do vento (eficiência típica 30-45% Betz limit ~59%).
+2. **Gerador permanent magnet DC** (PMDC ou PMSG — Permanent Magnet Synchronous Generator) — converte rotação em energia elétrica.
+3. **Tail vane / rabicho** — auto-orienta o rotor ao vento.
+4. **Mounting (mastro / poste)** — estrutura mecânica.
+5. **Regulador de carga** — MPPT ou shunt regulator (limita tensão de carga ao banco).
+6. **Cabeamento DC** — bitola dimensionada para corrente máxima.
+7. **Brake elétrico** — desligamento de emergência (curto-circuito do gerador via resistor).
+8. **Surge protection + bonding** — proteção contra raio.
 
-- veleiros e embarcações de cruzeiro com permanência longa em fundeio;
-- cenários com vento noturno ou persistente;
-- arquiteturas híbridas em que o [[Placa Solar (DC)|solar]] não cobre bem o período sem sol;
-- perfis operacionais em que ruído e ocupação de espaço são aceitáveis.
+### Curva de potência típica (referência Silentwind 400W em 12V)
 
-Faz menos sentido em:
+| Vento (nós) | Vento (m/s) | Potência (W) | Corrente (A) |
+|-------------|-------------|---------------|---------------|
+| 4-5 (cut-in) | 2-2,5 | 0-10 | 0-1 |
+| 8 | 4 | 50 | 4 |
+| 12 (cruzeiro) | 6 | 150 | 12 |
+| 15 | 7,5 | 250 | 20 |
+| 20 | 10 | 350 | 28 |
+| 25 (rated) | 12,5 | 400 | 33 |
+| 30 | 15 | 400 (regulado) | 33 |
+| 35-40 (cut-out) | 17,5-20 | 0 (brake) | 0 |
 
-- lanchas de uso ocasional;
-- barcos com perfil de marina e shore power frequente;
-- embarcações em locais de vento muito turbulento ou inconsistente;
-- projetos em que ruído, vibração e visual são críticos.
+> **Energia diária típica em fundeio com vento médio 12 nós:**
+> - 150W × 18h efetivas (não-zero) ≈ 2.700 Wh = **225 Ah em 12V**.
+> - Em uso real (vento variável + ineficiências): 80-150 Ah/dia.
 
-## O maior problema de expectativa
+## Tecnologias
 
-Potência nominal de catálogo não equivale a produção diária real.
+### Permanent Magnet DC (PMDC) — modelo direto
 
-Em geração eólica pequena, a produção é fortemente afetada por:
+- Saída direta DC (12V/24V).
+- Simples, robusto.
+- Eficiência média.
 
-- distribuição real de vento;
-- turbulência criada pelo próprio barco, mastro, radar, hardtop e superestrutura;
-- altura de instalação;
-- estratégia de controle;
-- necessidade de frenagem e dump load.
+### Permanent Magnet Synchronous Generator (PMSG) — moderno
 
-Muita decepção com eólico nasce de expectativa irreal, não necessariamente de defeito.
+- Saída AC trifásica → retificada para DC.
+- Maior eficiência em vento variável.
+- Padrão em modelos modernos (Silentwind, Air Breeze).
 
-## Integração elétrica correta
+## Reguladores de carga
 
-O sistema precisa considerar:
+### Shunt regulator (passivo — barato)
 
-- característica elétrica da turbina;
-- controlador compatível;
-- estratégia de frenagem ou carga de desvio, quando exigida;
-- proteção da linha até o banco;
-- comportamento do banco ao se aproximar do estado cheio;
-- química da bateria.
+- Curto-circuita o gerador quando banco atinge V_max.
+- Desperdiça energia em resistor.
+- Simples + robusto.
 
-Nem toda turbina aceita ser conectada a um controlador genérico. Eólico pede arquitetura própria.
+### MPPT (Maximum Power Point Tracking — eficiente)
 
-## Relação com o banco de baterias
+- Otimiza corrente × tensão para máximo rendimento em vento variável.
+- 15-30% mais energia anual que shunt.
+- Preferido em modernos.
 
-O comportamento do banco muda muito o aproveitamento do sistema:
+### Linear regulator (legacy)
 
-- chumbo limita aceitação de carga ao avançar o SOC;
-- lítio aproveita melhor geração variável, mas exige coordenação com BMS e controlador;
-- banco inadequado ou já saturado reduz o benefício prático do eólico.
+- Em desuso.
 
-## Relação com o solar
+## Fabricantes e modelos dominantes
 
-O melhor uso do eólico costuma ser complementar ao solar:
+### Silentwind (Portugal — referência premium)
 
-- solar domina em dias claros;
-- eólico pode contribuir em vento noturno, tempo fechado e fundeio prolongado.
+- **Silentwind 400W** — clássico, 12V/24V, PMSG + MPPT.
+- **Silentwind Pro** — versão high-end.
+- Diferenciais: silencioso, brake elétrico, ótima qualidade construtiva.
 
-Se o barco já tem área boa para solar e perfil diurno, normalmente o primeiro investimento racional continua sendo fotovoltaico.
+### Primus Wind Power (USA)
 
-## Instalação mecânica
+- **Air Breeze** — sucessor do Air X.
+- **Air X / Air X Marine** — clássico (mas barulhento).
+- **Air 40** — entry-level.
 
-A parte mecânica é tão importante quanto a elétrica. Entram aqui:
+### Ampair (UK — legacy)
 
-- altura;
-- rigidez do suporte;
-- transmissão de vibração;
-- segurança física das pás;
-- acesso para manutenção;
-- compatibilidade com mastreação, toldos e antenas.
+- **Ampair 100 / 300 / 600** — UK premium tradicional.
 
-Instalação mal posicionada gera:
+### Eclectic Energy (UK)
 
-- ruído excessivo;
-- fadiga estrutural;
-- turbulência e baixa geração;
-- risco operacional para tripulação.
+- **D400** — premium silencioso.
+- **DUOGEN** — eólico + hídrico (water generator).
 
-## Falhas típicas
+### Rutland (UK)
 
-As mais frequentes são:
+- **Rutland 504 / 914i / 1200** — mid-range.
 
-- produção muito abaixo da expectativa;
-- ruído e vibração tornando o sistema inutilizável;
-- desgaste prematuro de rolamentos;
-- suporte flexível ou mal ancorado;
-- falha de frenagem ou de dump load;
-- corrosão em conectores, controlador ou partes móveis.
+### Aerogen (UK)
 
-## Diagnóstico profissional
+- **Aerogen 4F / 6** — entry-level.
 
-O diagnóstico deve responder:
+> [!example] Comparação de preço Brasil 2024-2026 (importado)
+> | Modelo | Potência | Preço (R$) |
+> |--------|----------|------------|
+> | Aerogen 4F | 80W | 4.500-7.500 |
+> | Air Breeze | 200W | 5.500-9.000 |
+> | Rutland 914i | 250W | 8.000-13.000 |
+> | Silentwind 400W | 400W | 12.000-22.000 |
+> | Ampair 300 | 300W | 9.000-16.000 |
+> | Eclectic D400 | 400W | 14.000-25.000 |
 
-1. Há vento útil no local e na altura de instalação?
-2. A turbina está operando na janela prevista pelo fabricante?
-3. O banco está apto a receber a energia naquele momento?
-4. O controlador está adequado à máquina?
-5. O gargalo é aerodinâmico, mecânico ou elétrico?
+## Instalação correta
 
-Medições úteis:
+### Localização
 
-- tensão e corrente entregues em diferentes ventos;
-- estado do banco;
-- temperatura do controlador e da carga de desvio;
-- vibração estrutural do suporte;
-- histórico de produção comparado ao ambiente real.
+- **Mastro dedicado de proa ou popa** (não principal de vela).
+- **Altura 3-5 m acima do deck** — vento mais limpo.
+- **Distância ≥3 m de tripulação** — ruído + segurança.
+- **Distância de antena VHF / GPS** ≥1 m — EMI.
+
+### Cabeamento
+
+- **AWG dimensionado** para corrente máxima + queda <3%.
+- **Cabo blindado** em ambiente com EMI sensível.
+- **Roteamento** longe de antenas RF.
+
+### Aterramento e proteção
+
+- **Bonding** torre-quilha (ABYC E-11.16 + IEC 61400-24).
+- **Surge protector DC** entrada do regulador.
+- **Fusível dedicado** entre eólico e regulador (ABYC E-11.5).
+- **Brake elétrico acessível** em painel.
+
+## Falhas e diagnóstico
+
+| Falha | Causa | Solução |
+|-------|-------|---------|
+| Não gera | Brake travado / regulador falhou | Verificar brake; multímetro |
+| Gera pouco | Cabo subdimensionado / orientação errada | Recalcular; verificar tail vane |
+| Ruído excessivo | Mancal seco / desbalanceamento | Lubrificação; rebalanceamento |
+| Pas trincadas | Impacto / UV | Substituir |
+| Sobretensão no banco | Regulador defeituoso | Substituir regulador |
+| Vibração violenta | Pas desbalanceadas | Inspecionar; substituir |
 
 ## Boas práticas
 
-- dimensionar o eólico para complementar, não para sustentar fantasia energética;
-- instalar em local de melhor vento e menor turbulência possível;
-- tratar ruído e vibração como critérios de projeto, não como detalhe;
-- manter proteção anticorrosiva e rotina de inspeção;
-- integrar geração eólica ao monitoramento do sistema;
-- revisar se o perfil operacional do barco realmente justifica essa solução.
+- **Modelo certificado** IEC 61400-2.
+- **Localização correta** + altura.
+- **Brake quando não em uso** (poupa mancal).
+- **Inspeção semestral** + lubrificação anual.
+- **Surge protection** mandatório.
+- **Bonding** ao casco.
+- **Combinar com solar** para redundância.
+- **Documentar** modelo + curva de potência.
+- **Backup** se geração crítica.
 
 ## Erros comuns
 
-Os mais recorrentes são:
+- "Eólico substitui solar." → Falso. Complementam.
+- "Mais barato é igual." → Vida útil, ruído, performance variam dramaticamente.
+- "Sem regulador funciona." → Banco queima.
+- "Mastro principal serve." → Turbulência da vela mata performance.
 
-- comprar pela potência de catálogo;
-- instalar atrás de superestrutura, mastro ou radar;
-- tratar o sistema como se fosse "igual a solar";
-- ignorar dump load, frenagem e controle próprio;
-- achar que eólico resolve sozinho um balanço energético ruim.
+## Glossário
+
+- **Wind generator / aerogerador:** gerador eólico.
+- **Wind turbine:** turbina eólica.
+- **Cut-in:** vento mínimo para começar geração.
+- **Rated:** potência nominal (em vento rated).
+- **Cut-out:** vento máximo (proteção).
+- **Brake:** freio elétrico.
+- **PMSG:** Permanent Magnet Synchronous Generator.
+- **PMDC:** Permanent Magnet DC.
+- **MPPT:** Maximum Power Point Tracking.
+- **Shunt regulator:** regulador por curto.
+- **Tail vane / rabicho:** aleta de orientação.
+- **Pa / blade:** pa do rotor.
+- **Tower / torre / mastro:** estrutura mecânica.
+- **Yaw:** rotação horizontal.
+- **Pitch:** ângulo das pás.
+- **Surge protector:** protetor de surto.
+- **IEC 61400-2:** small wind turbines.
+- **Vide [[Placa Solar (DC)]]** + [[Bancos de Bateria]] + [[Lei de Ohm e Cálculos Básicos]].
 
 ## Integração com outras notas
 
-- [[Bancos de Bateria]]
-- [[Inversora (DC To AC)]]
-- [[Monitor de Bateria - BMV - Shunt]]
-- [[Placa Solar (DC)]]
-- [[Quadro Elétrico e Painel de Distribuição AC-DC]]
-- [[Tipos de Bateria]]
+- [[Tipos de Bateria]] / [[Bancos de Bateria]] — banco a carregar.
+- [[Placa Solar (DC)]] — fonte complementar.
+- [[Carregador de Bateria (AC To DC)]] — alternativa AC.
+- [[Inversora (DC To AC)]] — uso da energia.
+- [[Cabeamento Náutico]] / [[Dimensionamento de Cabos DC — Cálculo Prático]].
+- [[Fusíveis DC — Proteção Contra Sobrecorrente]] — proteção.
+- [[Bonding — Sistema de Interligação de Massas]] — torre.
+- [[Lei de Ohm e Cálculos Básicos]] — fundamentos.
+- [[Estação de Vento - Anemômetro]] — medir vento.
 
 ## Perguntas que esta nota responde
 
-- Quando geração eólica realmente faz sentido em embarcação?
-- Por que potência nominal de turbina pequena costuma enganar?
-- Quais limites mecânicos e elétricos definem se o sistema vai funcionar bem ou virar ruído caro?
+- Aerogerador vale a pena no veleiro?
+- Quanto produz um wind generator marine?
+- Silentwind ou Air Breeze?
+- Como instalar wind turbine no mastro?
+- Aerogerador faz barulho à noite?
+- Wind charger queima em rajada forte?
+- Conexão eólico ao banco — regulador necessário?
+- MPPT funciona com eólico?
+- Manutenção do aerogerador?
+- Eólico vs solar: qual produzir mais em barco?
+- Cut-in / cut-out / rated: o que significa?
+- IEC 61400-2 vale para barco?

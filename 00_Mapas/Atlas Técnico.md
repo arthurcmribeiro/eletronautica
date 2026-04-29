@@ -2,9 +2,12 @@
 title: "Atlas Técnico da Vault"
 note_type: "moc"
 domain: "00_Mapas"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
+status: "moc-curated"
+fase_6_reescrita: 118
+reviewed_on: "2026-04-26"
 review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 aliases:
   - "Atlas Técnico"
   - "Atlas da Vault"

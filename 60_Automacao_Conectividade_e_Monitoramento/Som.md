@@ -3,9 +3,23 @@ title: "Som"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "SOM 99519734f7fb82afa0ef81e230098bb2.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 126
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "IEC 60945"
+  - "IEC 60529 (IP)"
+  - "IEC 61547 (EMC for lighting)"
+  - "ISO 11898 (CAN)"
+  - "NMEA 0400 (Marine entertainment)"
+  - "ABNT NBR 14728"
+  - "Manual técnico Fusion (Garmin) — referência marine"
+  - "Manual técnico JL Audio Marine"
+  - "Manual técnico Sony Marine / Pioneer Marine / Kicker Marine"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -36,6 +50,20 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Sistema de som a bordo é uma instalação de entretenimento que convive com vibração, névoa salina, restrição energética e forte sensibilidade a EMC. O erro recorrente é tratar áudio como acessório isolado, sem considerar banco de baterias, proteção, cabeamento, zonas de uso e impacto sobre equipamentos de navegação.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Equipamentos marine-grade obrigatórios** em externa: Fusion (Garmin), JL Audio Marine, Sony Marine, Pioneer Marine, Kicker Marine — IPX5/X6/X7 + EMC certificada.
+> 2. **EMC crítica** — amplificador chinês não-certificado mata VHF/GPS/AIS. NMEA 0400 + IEC 61547 + IEC 60945 EMC standards.
+> 3. **Consumo elétrico real** — amplificador 500W RMS pode puxar 60-100A pico em 12V; dimensionar banco + cabo + fusível corretamente.
+> 4. **Zonas separadas** com volume independente (cockpit × cabine × salão) + fade automático em manobra (integração MFD em premium).
+
+> [!info] Glossário rápido
+> - **NMEA 0400:** padrão marine entertainment.
+> - **CMRR (Common Mode Rejection Ratio):** rejeição de ruído.
+> - **THD (Total Harmonic Distortion):** distorção.
+> - **SPL (Sound Pressure Level):** nível sonoro (dB).
+> - **Marine-grade speaker:** alto-falante IPX5+ resistente a UV + sal.
+> - **Subwoofer marine:** sealed box com bonding ao casco.
 
 ## O que é
 

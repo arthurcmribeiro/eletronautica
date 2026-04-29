@@ -2,9 +2,12 @@
 title: "MOC — Fundamentos e Projeto"
 note_type: "moc"
 domain: "10_Fundamentos_e_Projeto"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
+status: "moc-curated"
+fase_6_reescrita: 107
+reviewed_on: "2026-04-26"
 review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 aliases:
   - "Mapa de Fundamentos e Projeto"
 seo_title: "MOC de fundamentos e projeto da elétrica náutica"

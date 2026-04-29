@@ -3,9 +3,24 @@ title: "Aterramento"
 note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "ATERRAMENTO 62019734f7fb83ed822d818740bfe4cb.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "02"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-2 (2020) — Cathodic Protection"
+  - "ABYC A-28 (Galvanic Isolators) — edição a verificar"
+  - "ABYC A-33 (Shore Power Inlets) — edição a verificar"
+  - "ISO 13297:2020 — Small craft — Electrical systems — Alternating and direct current installations"
+  - "IEC 60364-7-709 — Marinas and similar locations"
+  - "IEC 60092 (série) — Electrical installations in ships (edição a verificar)"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar"
+  - "NEC 555 (NFPA 70 art. 555) — Marinas and Boatyards"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -41,6 +56,16 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Aterramento, em contexto náutico, é o arranjo de condutores de proteção, pontos de referência e equipotencialização que controla tensões de toque e permite a atuação correta das proteções. Negativo DC, PE do sistema AC e bonding podem se relacionar, mas não são sinônimos e não devem ser interligados de forma arbitrária.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Três sistemas distintos**: negativo DC, PE (terra AC) e bonding têm funções diferentes e não são o mesmo circuito.
+> - **SPOG é único**: existe **um** ponto de referência em que eles se encontram, definido em projeto — nunca em vários pontos.
+> - **Bond N-PE segue a fonte ativa**: shore power (no pedestal ou arranjo derivado), gerador (no gerador, se derivado), inversor (conforme modelo), transformador de isolamento (no secundário). Nunca em dois lugares ao mesmo tempo.
+> - **Bitola do PE ≥ bitola da fase**: PE subdimensionado queima antes de proteger.
+> - **Continuidade > resistência isolada**: um valor ≤ 1 Ω sem arquitetura correta não protege nada.
+> - **Antes do shore power**: medir polaridade, continuidade do PE e tensão neutro-PE no pedestal. Marina duvidosa → transformador de isolamento.
+> - **Embarcação de fibra**: mesmo sem casco condutivo, PE é obrigatório para todo equipamento AC com carcaça metálica.
+> - **Loop de terra não é "só ruído"**: circulação de corrente no PE/bonding acelera corrosão galvânica e mascara falhas reais.
 
 ## O que é
 
@@ -237,6 +262,20 @@ Valores anormais pedem investigação de fuga, bond neutro-PE indevido ou falha 
 - Inspecionar conexões de terra anualmente
 - Não usar o barco como aterramento para ferramentas elétricas externas
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Laudo técnico para seguradora, Marinha ou Justiça envolvendo aterramento (exige ART/CREA).
+> - Sinistro com choque elétrico, eletrocussão ou **ESD** (Electric Shock Drowning) suspeito.
+> - Conversão de topologia AC (L+N+PE ↔ L1+L2+PE) sem diagrama de fonte derivada aprovado.
+> - Embarcação conectada em marina sem PE confiável por períodos prolongados (avaliar transformador de isolamento).
+> - Inversor ou gerador com bond N-PE comutado automaticamente cujo manual não descreve a lógica de forma clara.
+> - Múltiplas fontes AC (shore + gerador + inversor) sem chave de transferência com intertravamento.
+> - Corrente persistente medida no PE ou no bonding que não se explica circuito a circuito.
+> - Divergência entre diagrama do barco e instalação física no ponto de referência.
+> - Arco ou carbonização em barra de terra / PE — indica falha sistêmica, não conexão frouxa pontual.
+>
+> Custo de 2–10 h de engenheiro senior sempre é menor que um acidente com vítima, perda do casco ou perda de cobertura de seguro.
+
 ## Erros comuns
 
 **Interligar negativo DC e terra AC em múltiplos pontos:**
@@ -278,17 +317,18 @@ Cria diferença de potencial entre sistemas — risco de arco e danos a equipame
 | Tensão AC | 220V monofásico | 120V (EUA) / 230V (Europa) |
 | Terra em pedestais de marina | Frequentemente ausente | Obrigatório e fiscalizado |
 | Fiscalização de instalação | Praticamente inexistente | Inspeção por seguradora |
-| GFCI obrigatório | Não regulamentado em náutica | ABYC E-11 exige em shore power |
+| GFCI obrigatório | Não regulamentado em náutica | ABYC E-11 (2023) exige em shore power |
 
 **Realidade brasileira:** A maioria das embarcações de recreio no Brasil tem instalações AC sem terra adequado. O risco de choque é real e subestimado. A solução mais segura é o transformador de isolamento, que elimina a dependência do terra da marina.
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats (referência primária)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **IEC 60092** — Electrical installations in ships
-- **ABNT NBR 5410** — Instalações elétricas de baixa tensão (base comparativa)
-- **NORMAM-211** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (referência primária)
+- **ABYC E-2 (2020)** — Cathodic Protection (interface com bonding e controle de potencial das massas)
+- **ISO 13297:2020** — sistemas elétricos AC e DC em pequenas embarcações (sucessora de ISO 10133)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **IEC 60092 (edição a verificar)** — Electrical installations in ships
+- **NORMAM-211 (2022 rev. aplicável via DPC)** — referencial regulatório brasileiro a ser confirmado primeiro para amadores, embarcações de esporte e recreio e universo correlato
 
 ## Como ensinar este tópico
 
@@ -342,6 +382,30 @@ O bloco do motor pode participar do sistema de referência e do bonding, mas nã
 **Como saber se meu barco tem terra AC correto?**
 
 É preciso validar quatro pontos: continuidade do PE, posição correta do bond neutro-PE, coerência das tensões medidas na entrada e atuação das proteções diferenciais/leakage. Uma única medição isolada não fecha o diagnóstico.
+
+## Glossário rápido
+
+- **PE (Protective Earth)** — condutor de proteção do sistema AC (fio verde ou verde/amarelo); carrega corrente de falha até a proteção atuar. Não transporta corrente de operação.
+- **Negativo DC** — retorno funcional do sistema de corrente contínua (12/24/48 V). Referência de zero para as cargas DC.
+- **Bonding** — malha de equipotencialização entre massas metálicas selecionadas; protege contra corrosão galvânica e tensão de toque, não é caminho de retorno.
+- **SPOG (Single Point of Grounding)** — ponto único onde negativo DC, PE e bonding convergem quando a topologia assim exigir; nunca existem vários SPOGs.
+- **Bond N-PE** — ligação entre neutro e condutor de proteção; existe no ponto de origem do sistema (pedestal da marina, gerador derivado, secundário de transformador). Múltiplos bonds criam loop.
+- **Sistema derivado** — fonte AC a bordo (gerador, inversor, secundário de transformador) que estabelece novo N-PE independente do cais.
+- **Shore power** — alimentação AC do cais via cabo e pedestal; traz o PE da infraestrutura, mas não garante sua qualidade.
+- **Pedestal** — tomada de marina; pode ter PE ausente, invertido ou com alta impedância mesmo quando parece correto.
+- **L+N+PE** — topologia com fase, neutro e PE separados (230 V europeu típico; 127 V BR alguns estados).
+- **L1+L2+PE** — topologia entre dois condutores ativos e PE, sem neutro funcional (220 V BR comum; 240 V EUA split-phase).
+- **Split-phase 120/240 V** — sistema americano com dois ativos de 120 V em oposição e neutro central, gerando 240 V entre ativos.
+- **Loop de terra** — caminho paralelo formado por múltiplas ligações negativo DC ↔ PE ↔ bonding; gera corrente parasita contínua.
+- **ESD (Electric Shock Drowning)** — afogamento por corrente AC em água doce vazando do barco ou do cais; proteção diferencial/ELCI é a defesa primária.
+- **GFCI (Ground Fault Circuit Interrupter)** — dispositivo diferencial residencial US (~5 mA); usado em circuitos AC finais a bordo.
+- **ELCI (Equipment Leakage Circuit Interrupter)** — diferencial ABYC na entrada do shore power (~30 mA); desarme geral por fuga.
+- **DR / IDR / RCD** — dispositivos diferenciais equivalentes na norma brasileira/IEC; 30 mA em circuitos de tomadas/banheiro.
+- **Isolador galvânico** — bloqueia DC na linha de PE do shore power (ABYC A-28); reduz corrosão sem isolar a referência.
+- **Transformador de isolamento** — cria secundário eletricamente separado; a bordo, o barco passa a ter seu próprio N-PE e não depende do PE da marina.
+- **Terra de segurança** — sinônimo operacional de PE; foco em choque.
+- **Terra equipotencial** — foco em equalização de massas (bonding); não é função de proteção individual.
+- **Baixa impedância do caminho de falha** — métrica mais relevante que resistência pontual; garante que a proteção atue em tempo útil.
 
 ## Integração com outras notas
 

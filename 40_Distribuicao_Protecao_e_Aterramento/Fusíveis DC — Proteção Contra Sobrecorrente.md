@@ -3,9 +3,23 @@ title: "Fusíveis DC — Proteção Contra Sobrecorrente"
 note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "FUSÍVEIS DC — PROTEÇÃO CONTRA SOBRECORRENTE 33a19734f7fb816a9ebde48e6f0a601e.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "06"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats (overcurrent, distância ≤ 7 in / 178 mm)"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-13 (2022) — Lithium Ion Batteries"
+  - "ISO 13297:2020 — Small craft — Electrical systems"
+  - "SAE J1284 — Blade type electric fuses"
+  - "UL 248 (série) — Low-Voltage Fuses"
+  - "IEC 60269 (série) — Low-voltage fuses"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -42,6 +56,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Fusíveis DC são elementos de proteção contra sobrecorrente usados para limitar a energia de falha e proteger condutores, barramentos e alguns equipamentos. Quase todo condutor energizado precisa de proteção próxima à fonte, salvo exceções definidas por norma ou pelo fabricante.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Fusível protege o CABO**, não a carga. Calibre máximo = ampacidade real do condutor (tipo, temperatura, agrupamento).
+> - **≤ 178 mm (7 in) do polo positivo** (ABYC E-11) para a proteção principal — com exceções bem definidas (40 in para trechos em conduit). Medir no projeto.
+> - **Tensão nominal do fusível ≥ tensão do sistema**: muitos blade fuses automotivos são 32 V máx — inadequados em 48 V sem verificação.
+> - **Capacidade de interrupção (AIC / Icn)** é crítica em bancos de lítio e AGM grandes: Isc pode ser 10–30 kA. Blade comum não cobre; use ANL, MRBF, Class T.
+> - **Lento vs rápido**: motor/bomba/inversor = retardado (Class T, ANL); eletrônico sensível = rápido (ATC/AGC adequado à tensão).
+> - **Substituir por valor maior "porque queima" = incêndio programado**. Investigar causa.
+> - **Paralelismo de bancos** aumenta Isc disponível — reavaliar capacidade de interrupção.
+> - **Fusível em cada condutor energizado** (positivo, fase). Negativo DC e PE NÃO recebem fusível.
+> - **Spare a bordo** dos calibres instalados; ANL e Class T sem spare = dia da viagem comprometido.
 
 ## O que é
 
@@ -198,6 +223,20 @@ Se entrada tem tensão e saída não → fusível queimado ou mau contato no sup
 - Manter estoque de fusíveis de reposição a bordo (todos os valores instalados)
 - Em circuitos de alta energia, verificar a capacidade de interrupção antes de escolher a família do fusível
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Banco de íon-lítio, LFP ou químicas avançadas — ABYC E-13 exige coordenação BMS + Class T/MRBF + contator; dimensionamento é projeto, não retrofit.
+> - Corrente de curto presumida (Isc) no ponto de instalação desconhecida — bancos grandes entregam dezenas de kA; escolha errada do fusível explode o próprio dispositivo.
+> - Paralelismo de bancos de bateria heterogêneos ou de tecnologias diferentes (AGM + lítio) — corrente de equalização e Isc combinados exigem análise.
+> - Sistema de inversão de alta potência (> 3 kVA em 12 V, > 5 kVA em 24 V, > 10 kVA em 48 V) — cabo principal + fusível dedicado com memória de cálculo.
+> - Conversão de topologia (12 ↔ 24 V, 24 ↔ 48 V) — todos os fusíveis precisam ser reespecificados (tensão, Icn).
+> - Incêndio ou carbonização suspeita envolvendo fusível (queimado, "explodido", porta-fusível fundido) — investigar causa antes de substituir; pode ser erro sistêmico.
+> - Laudo técnico para seguradora, Marinha ou Justiça — ART/CREA obrigatórios.
+> - Retrofit de painel antigo sem diagrama ou identificação — reconstruir topologia antes de repor dispositivos.
+> - Integração de sistema fotovoltaico, hidrogerador ou eólico com o banco existente — nova fonte de curto a coordenar.
+>
+> Custo de 2–10 h de engenheiro senior é sempre menor que um incêndio no banco, perda total do barco ou acidente com vítima.
+
 ## Erros comuns
 
 **"O disjuntor do painel já protege."**
@@ -230,8 +269,8 @@ Em bancos de lítio, grandes AGM ou conjuntos próximos à bateria, o problema n
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — seção de proteção de circuitos (referência primária)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para coordenação de proteção e princípios de baixa tensão
+- **ABYC E-11 (2023)** — seção de proteção de circuitos (referência primária)
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para coordenação de proteção e princípios de baixa tensão
 - **SAE J1284** — blade type electric fuses (padrão para fusíveis de lâmina)
 
 ## Como ensinar este tópico
@@ -275,6 +314,30 @@ Fixar que fusivel protege o condutor contra sobrecorrente e curto, nao apenas o 
 **Cautela:** Distancias, classes de fusivel e capacidade de interrupcao devem seguir projeto, norma e fabricante.
 
 Material de apoio: [Fusivel DC: protege o cabo](../_visuals/generated/fusivel-protege-cabo.md)
+
+## Glossário rápido
+
+- **Fusível** — dispositivo de proteção contra sobrecorrente que funde elemento interno e interrompe o circuito; descartável.
+- **In (corrente nominal)** — valor até o qual o fusível conduz sem fundir em regime permanente.
+- **If (corrente de fusão)** — valor a partir do qual inicia o processo de fusão; depende do tempo (curva I×t).
+- **Curva I²t** — energia específica de atuação do fusível; dita a coordenação com o condutor e com dispositivos a jusante.
+- **AIC / Icn (capacidade de interrupção)** — máxima corrente de curto que o fusível interrompe com segurança; excedê-la pode causar explosão do dispositivo.
+- **Isc (corrente de curto presumida)** — corrente que fluiria em curto franco no ponto do circuito; depende da fonte (banco de bateria) e do cabeamento.
+- **ANL / ANN** — fusível blade de alta corrente (50–500 A) para cabos principais de banco/inversor; versões N (rápida) e L (lenta).
+- **Class T** — fusível de alta capacidade de interrupção (20 kA @ 125 V DC típico); preferido em bancos de lítio e sistemas acima de 48 V.
+- **MRBF (Marine Rated Battery Fuse)** — fusível terminal que parafusa direto no polo positivo; elimina cabo extra entre bateria e fusível.
+- **MIDI / AMI** — fusível intermediário (30–200 A); substitui ANL em correntes menores com menor tamanho.
+- **MAXI** — blade grande para até ~80 A, 32 V; automotivo.
+- **ATO / ATC** — blade padrão automotivo 5–30 A, 32 V; não usar acima de 24 V sem verificar.
+- **MINI / Micro** — blade compactos para circuitos de painel; 2–30 A.
+- **AGC** — fusível de vidro cilíndrico (6,3×32 mm); baixa capacidade de interrupção, legado.
+- **Cerâmico** — fusível cilíndrico com corpo cerâmico; maior AIC que o AGC, preferível em eletrônica DC.
+- **Porta-fusível (fuse holder)** — suporte que recebe o fusível; deve ser estanque e com torque correto.
+- **Tempo de fusão** — intervalo entre aplicar a sobrecorrente e o fusível interromper; depende de múltiplo de In.
+- **Rápido (fast-acting)** — abertura em < 10 ms em curto; eletrônica sensível.
+- **Retardado (slow-blow / time-delay)** — tolera inrush por dezenas a centenas de ms; motores, bombas, inversores.
+- **Coordenação seletiva** — dimensionar fusíveis em cascata (maior a montante, menor a jusante) para isolar só o ramo afetado.
+- **Derating de temperatura** — redução do In conforme temperatura ambiente sobe; casa de máquinas exige correção.
 
 ## Integração com outras notas
 

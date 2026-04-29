@@ -2,6 +2,12 @@
 title: "MOC — Energia e Conversao"
 note_type: "moc"
 domain: "30_Energia_e_Conversao"
+status: "moc-curated"
+fase_6_reescrita: 109
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 ---
 
 # MOC — Energia e Conversao

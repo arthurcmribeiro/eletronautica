@@ -1,0 +1,228 @@
+---
+# Fase 6 - Onda 1 - Tier S Topologia AC/DC
+# 8 notas Tier S do cluster topologia/protecao AC/DC
+# Data: 2026-04-19
+# Autor: Claude Opus 4.7 + responsavel editorial
+fase: 6
+onda: 1
+tema: "Tier S -- Topologia AC/DC (fundamentos + protecao AC/DC)"
+data: "2026-04-19"
+status: "concluida"
+template_aplicado: "DEC-11 full (mesmo padrao Fase 5 premium)"
+pausa_revisao: "humana antes de Onda 2 (cadencia b)"
+
+caminho_b:
+  origem: "Fase 5 estendida finalizada + solicitacao usuario de extensao a todas as notas"
+  decisao_previa: "Caminho B -- triagem S/A/B/C + template adaptado por tier"
+  estrategia_commit: "direct commits em claude/optimistic-jepsen (cadencia c)"
+
+notas_processadas:
+  "01":
+    caminho: "10_Fundamentos_e_Projeto/Fase e Neutro.md"
+    tier: "S"
+    prioridade_triagem: "alta (topologia AC -- fundamento)"
+    linhas_antes: 264
+    linhas_depois: "~365"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 4
+    normas_expandidas_para: 8
+    callouts_novos: 2
+    termos_glossario: 20
+    destaque: "Distincao L+N+PE vs L1+L2+PE vs split-phase 120/240V; nunca criar neutro falso"
+
+  "02":
+    caminho: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+    tier: "S"
+    prioridade_triagem: "alta (tres sistemas: negativo DC, PE, bonding)"
+    linhas_antes: 373
+    linhas_depois: "~460"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 6
+    normas_expandidas_para: 10
+    callouts_novos: 2
+    termos_glossario: 22
+    destaque: "SPOG unico; bond N-PE segue fonte ativa; ESD introduzido"
+
+  "03":
+    caminho: "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+    tier: "S"
+    prioridade_triagem: "alta (decisao de interface com shore power)"
+    linhas_antes: 404
+    linhas_depois: "~495"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 5
+    normas_expandidas_para: 10
+    callouts_novos: 2
+    termos_glossario: 21
+    destaque: "Diferenca isolador vs transformador; ABYC A-28 fail-safe; sistema derivado explicitado"
+
+  "04":
+    caminho: "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+    tier: "S"
+    prioridade_triagem: "alta (protecao primaria contra ESD)"
+    linhas_antes: 362
+    linhas_depois: "~460"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 5
+    normas_expandidas_para: 11
+    callouts_novos: 2
+    termos_glossario: 21
+    destaque: "Distincao DR/RCD/GFCI/ELCI; classes A/AC/F/B; ESD como risco primario"
+
+  "05":
+    caminho: "40_Distribuicao_Protecao_e_Aterramento/Disjuntores (DC) e (AC).md"
+    tier: "S"
+    prioridade_triagem: "alta (protecao de circuito + separacao DC/AC)"
+    linhas_antes: 357
+    linhas_depois: "~460"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 11
+    callouts_novos: 2
+    termos_glossario: 21
+    destaque: "Arco DC vs AC; capacidade de interrupcao em kA; MCB vs MCCB; termico vs hidraulico-magnetico"
+
+  "06":
+    caminho: "40_Distribuicao_Protecao_e_Aterramento/Fusíveis DC — Proteção Contra Sobrecorrente.md"
+    tier: "S"
+    prioridade_triagem: "alta (proximidade ao banco + Isc em litio)"
+    linhas_antes: 297
+    linhas_depois: "~395"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 0
+    normas_expandidas_para: 9
+    callouts_novos: 2
+    termos_glossario: 22
+    destaque: "ABYC E-11 regra 178 mm; AIC/Icn; Class T para litio; coordenacao seletiva"
+
+  "07":
+    caminho: "10_Fundamentos_e_Projeto/DC vs AC — Corrente Contínua e Alternada.md"
+    tier: "S"
+    prioridade_triagem: "alta (fundamento transversal)"
+    linhas_antes: 278
+    linhas_depois: "~375"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 4
+    normas_expandidas_para: 10
+    callouts_novos: 2
+    termos_glossario: 23
+    destaque: "Separacao fisica DC/AC; frequencia != tensao; custo eficiencia do inversor"
+
+  "08":
+    caminho: "10_Fundamentos_e_Projeto/Diagrama Unifilar — Documentação do Sistema Elétrico.md"
+    tier: "S"
+    prioridade_triagem: "alta (documentacao central do sistema)"
+    linhas_antes: 337
+    linhas_depois: "~445"
+    status_antes: "technical-review-l1"
+    status_depois: "fase-5-reescrita-premium"
+    normas_expandidas_de: 5
+    normas_expandidas_para: 10
+    callouts_novos: 2
+    termos_glossario: 22
+    destaque: "Diagrama como contrato tecnico; retroengenharia; IEC 60617/81346; as-built vs as-designed"
+
+metricas_onda_1:
+  notas_processadas: 8
+  total_linhas_antes: 2672
+  total_linhas_depois: "~3455"
+  total_linhas_adicionadas: "~783"
+  total_callouts_adicionados: 16  # 8 tip + 8 danger
+  total_termos_glossario: 172
+  total_normas_expandidas: "~57 itens normativos novos ou canonicalizados"
+  esforco_estimado_h: 12
+  esforco_real_h: 4.5
+  ratio_eficiencia: "2.67x mais rapido que estimativa"
+
+decisoes_aplicadas:
+  DEC_11_full:
+    descricao: "Template premium completo em todas as 8 notas Tier S"
+    componentes: ["TL;DR tip 8-9 regras", "danger 8-9 cenarios", "glossario 20-23 termos"]
+  DEC_14_adicionar_normas_ausentes:
+    descricao: "Notas 05 e 06 nao tinham normas_citadas no frontmatter -- adicionadas do zero"
+    notas_afetadas: ["Disjuntores (DC) e (AC)", "Fusíveis DC"]
+    impacto: "padronizacao do vault (100% das notas Tier S agora tem normas_citadas)"
+  DEC_15_ESD_como_conceito_transversal:
+    descricao: "ESD (Electric Shock Drowning) introduzido consistentemente em Aterramento, Isolador, Protecao DR"
+    impacto: "vault agora tem linguagem unificada para risco em agua doce"
+  DEC_16_ABYC_families_cristalizadas:
+    descricao: "E-11, E-10, E-13, E-2, A-28, A-31, A-33 referenciadas de forma cruzada nas 8 notas"
+    impacto: "coerencia normativa ABYC ao longo do cluster topologia"
+
+coerencia_intra_onda:
+  - "L+N+PE vs L1+L2+PE vs split-phase 120/240V: tratado consistentemente em Fase e Neutro, Aterramento, DC vs AC"
+  - "Sistema derivado: Isolador/Transformador, Aterramento, Protecao DR usam a mesma definicao"
+  - "SPOG unico: Aterramento, Isolador, Diagrama Unifilar reforcam"
+  - "ESD: Aterramento, Isolador, Protecao DR trazem o termo"
+  - "Arco DC: Disjuntores, Fusiveis, DC vs AC explicam a fisica do arco DC"
+  - "Capacidade de interrupcao (AIC/Icn/kA): Disjuntores e Fusiveis usam mesmo vocabulario"
+
+riscos_residuais_onda_1:
+  - "Algumas edicoes normativas ainda marcadas 'a verificar' (ABYC A-28, IEC 60092, UL)"
+  - "Nao foi feita consulta ativa aos portais normativos -- postura conservadora mantida"
+  - "NORMAM-01 nao foi citada onde aplicavel (foco em NORMAM-211 para recreio)"
+  - "Alguns visuais SVG referenciados permanecem pendentes de renderizacao"
+
+proximas_etapas:
+  aguardar_revisao_humana:
+    motivo: "Cadencia b acordada -- pausa apos Onda 1 para validar padrao adaptado"
+    pontos_para_usuario_validar:
+      - "Template DEC-11 full esta funcionando bem em notas medianas (264-400 linhas)?"
+      - "Glossario de 20-25 termos e o tamanho certo para Tier S nao-fundacional?"
+      - "Danger com 8-9 cenarios esta alinhado com o apetite editorial?"
+      - "Nivel de expansao de normas (5-11 itens) esta adequado?"
+      - "TL;DR com 8-9 regras -- manter ou reduzir para 5-6 em notas menos criticas?"
+    caso_aprovado: "Prosseguir Onda 2 (9 notas Tier S baterias/geracao) com mesmo template"
+    caso_ajustar: "Aplicar feedback antes de Onda 2"
+
+  se_prosseguir_onda_2:
+    escopo: "9 notas Tier S do cluster baterias/geracao/carga"
+    notas_previstas:
+      - "20_Baterias_e_Armazenamento/Alternador.md"
+      - "20_Baterias_e_Armazenamento/Carregador De Bateria (Charger).md"
+      - "20_Baterias_e_Armazenamento/Inversora (DC To AC).md"
+      - "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+      - "20_Baterias_e_Armazenamento/Bateria de Lítio - Ion-Lítio Ferro-Fosfato (LiFePO4).md"
+      - "20_Baterias_e_Armazenamento/Bateria AGM.md"
+      - "30_Energia_e_Conversao/Painel Solar Fotovoltaico.md"
+      - "30_Energia_e_Conversao/Inversora Solar - MPPT.md"
+      - "30_Energia_e_Conversao/Hidrogerador.md"
+    esforco_estimado_h: "11-13 (ritmo Onda 1)"
+
+branches_e_commits:
+  branch_ativa: "claude/optimistic-jepsen"
+  commit_onda_1: "a criar -- mensagem abaixo"
+  mensagem_commit: |
+    Fase 6 Onda 1: DEC-11 em 8 notas Tier S topologia AC/DC
+
+    Aplica template premium (TL;DR + danger + glossario + normas)
+    em cluster fundacional de topologia AC/DC e protecao:
+
+    - Fase e Neutro (264->~365 linhas)
+    - Aterramento (373->~460)
+    - Isolador Galvanico / Transformador de Isolamento (404->~495)
+    - Protecao DR (362->~460)
+    - Disjuntores DC e AC (357->~460) [frontmatter normas criado]
+    - Fusiveis DC (297->~395) [frontmatter normas criado]
+    - DC vs AC (278->~375)
+    - Diagrama Unifilar (337->~445)
+
+    Metricas:
+    - 8 notas, ~783 linhas adicionadas
+    - 16 callouts novos (8 tip + 8 danger)
+    - 172 termos de glossario
+    - ~57 normas expandidas/canonicalizadas
+
+    Padroes reforcados: L+N+PE vs L1+L2+PE, sistema derivado,
+    SPOG, ESD, arco DC, AIC/Icn, ABYC E-series.
+
+    Proxima etapa: pausa para revisao humana antes de Onda 2.
+
+    Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>

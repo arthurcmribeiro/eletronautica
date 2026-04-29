@@ -3,9 +3,23 @@ title: "Bancos de Bateria"
 note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "BANCOS DE BATERIA 8ec19734f7fb83e584780174466db4de.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_5_reescrita: "08"
+prioridade_fase_5: 6.0
+reviewed_on: "2026-04-18"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-13 (Lithium-Ion Batteries — verificar última edição)"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ISO 13297:2020 (substituiu ISO 10133)"
+  - "ISO 16315:2016 — Small craft — Electrical propulsion system"
+  - "UN 38.3 — Transporte de baterias de lítio"
+  - "NFPA 302 (Pleasure & Commercial Motor Craft — Cap. baterias)"
+  - "NMEA 2000 (PGNs de monitoramento de bateria)"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
@@ -37,6 +51,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Banco de baterias é um subsistema de armazenamento e distribuição de energia. Seu desempenho depende da química, da função do banco, do arranjo série/paralelo, da proteção, do método de carga e do monitoramento. Somar capacidade sem coordenar esses fatores produz autonomia ilusória e baixa confiabilidade.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Banco ≠ pilha de baterias.** Função (partida vs serviço) + química + arranjo + proteção + monitoramento — soma só de Ah é autoengano.
+> - **Paralelo exige mesma química, mesmo lote, mesma idade, mesmo SoC.** Misturar = corrente de equalização permanente.
+> - **Série soma tensão, paralelo soma capacidade.** 12V → 24V (série) ou 100Ah → 200Ah (paralelo).
+> - **Profundidade de descarga (DoD) prática:** AGM ≤ 50%, GEL ≤ 50%, FLA ≤ 50%, LiFePO4 ≤ 80% (capacidade útil ≈ DoD × Ah nominal).
+> - **Fusível de banco obrigatório** próximo ao terminal positivo (ABYC E-10: ≤ 7 inch / 18 cm). Protege o cabo, não a carga.
+> - **Cabos de interligação devem ter mesmo comprimento e seção** — corrente desigual = vida útil reduzida.
+> - **NUNCA abrir chave seletora com alternador girando** (sem proteção anti-transiente) — pico de tensão queima diodo.
+> - **LiFePO4 não vai junto com chumbo no mesmo banco** — perfis de tensão diferentes; coexistência só por arquitetura de carregamento separada.
+> - **Voltímetro NÃO mede SoC.** Banco de serviço sério precisa de shunt + monitor (BMV).
 
 ## O que é
 
@@ -303,6 +328,19 @@ Etiquetar cada bateria do banco com número e data de instalação. Etiquetar ca
 - Não combinar bancos de tecnologias diferentes no mesmo barramento sem sistema de gerenciamento específico
 - Inspecionar terminais e interligações a cada 3-6 meses — ambiente marinho é agressivo
 
+> [!danger] Quando chamar especialista
+> Banco de bateria reúne maior densidade de energia armazenada da embarcação — erro vira incêndio, explosão (lítio em thermal runaway) ou perda de propulsão. Pare e procure especialista certificado quando:
+> - **Banco LiFePO4 acima de 200 Ah** ou com mais de 4 baterias em paralelo — exige BMS coordenado, gestão de equalização, e estratégia de carga específica (ABYC E-13).
+> - **Conversão de chumbo para lítio** mantendo o resto do sistema — alternador, regulador, carregador, perfis de tensão, fiação e fusíveis precisam ser revistos juntos, não isoladamente.
+> - **Banco em embarcação com propulsão elétrica** (motor elétrico ou híbrido) — entra em jogo ISO 16315 + cálculo térmico + isolamento de contator de emergência.
+> - **Banco maior que 600 Ah em paralelo** — a coordenação de cabos, fusíveis, contatores de banco e proteção contra falta de PE cresce em complexidade não-linear.
+> - **Sintoma de "thermal event" passado** (cheiro doce de eletrólito, célula inchada, calor anormal no compartimento) — descomissionar o banco antes de qualquer troubleshooting; risco de propagação.
+> - **Sistema com gerador AC + carregador automático + solar + alternador** carregando o mesmo banco — coordenação de múltiplas fontes exige projeto, não tentativa-e-erro.
+> - **Lítio importado sem certificação UN 38.3** ou sem datasheet em inglês/português — recusar instalação; risco regulatório (transporte, seguro) e técnico (BMS desconhecido).
+> - **Compartimento sem ventilação adequada** em banco AGM/FLA — gases hidrogênio liberados em sobrecarga; ABYC E-10 exige ventilação calculada.
+>
+> Custo de um projeto de banco lítio bem feito (3-5h de engenheiro) é uma fração do custo de um incêndio em casco — sem falar em vidas.
+
 ## Erros comuns
 
 ❌ **Conectar baterias de idades diferentes em paralelo** — desequilíbrio permanente desde o primeiro ciclo.
@@ -338,11 +376,11 @@ Etiquetar cada bateria do banco com número e data de instalação. Etiquetar ca
 
 Banco único sem separação partida/serviço é a norma em embarcações menores. Dimensionamento feito empiricamente ("coube dois, então dois"). Ausência de monitor de banco na grande maioria das instalações. Fusível de banco ausente em ~70% das instalações observadas em marinas.
 
-**Referência ABYC E-10:**
+**Referência ABYC E-10 (2023):**
 
 Exige fusível de banco no máximo a 72 polegadas (versões antigas) ou 18 polegadas (versões mais recentes) do terminal positivo. Define que o banco deve ser adequado para a demanda real da embarcação. Requer fixação que resista a 1G de aceleração lateral.
 
-**Referência ABYC E-11 (sistemas AC):**
+**Referência ABYC E-11 (2023) (sistemas AC):**
 
 Para embarcações com sistema AC, complementa E-10 na definição de proteção e interação entre sistemas.
 
@@ -358,8 +396,8 @@ Adotar os princípios técnicos da ABYC — fusível de banco, dimensionamento p
 
 | Referência | O que orienta | Aplicação prática |
 | --- | --- | --- |
-| ABYC E-10 | Sistemas de bateria — separação, proteção, fixação | Fusível de banco, separação partida/serviço, ventilação |
-| ISO 10133 | Instalações elétricas DC em embarcações menores | Proteção, bitolamento, instalação de banco |
+| ABYC E-10 (2023) | Sistemas de bateria — separação, proteção, fixação | Fusível de banco, separação partida/serviço, ventilação |
+| ISO 13297:2020 | Pequenas embarcações — instalações AC e DC | Proteção, bitolamento, instalação de banco (sucede a ISO 10133, retirada) |
 | Victron Energy — application notes | Dimensionamento, integração, boas práticas | Documento prático de alta qualidade para bancos AGM e LiFePO4 |
 | Trojan Battery — tech specs | Parâmetros de ciclo profundo | Referência útil para dimensionamento e condições de carga |
 
@@ -422,6 +460,35 @@ Não há prazo fixo. Troca quando a capacidade real cair abaixo de 70-80% da nom
 **Monitor de banco é realmente necessário?**
 
 Para banco de serviço: sim. Voltímetro simples não fornece informação confiável de SoC para chumbo-ácido fora de repouso prolongado. Monitor com shunt é o único jeito de saber com precisão quanto de energia ainda há disponível.
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Ah (Amper-hora)** | Capacidade nominal: 100 Ah = 100 A por 1 h (em regime de ensaio do fabricante) |
+| **C-rate** | Corrente normalizada à capacidade: 0,5 C em 100 Ah = 50 A |
+| **SoC (State of Charge)** | Estado de carga real (0–100%); medido por shunt + integração, não por tensão |
+| **DoD (Depth of Discharge)** | Profundidade de descarga = 100% – SoC; AGM ≤ 50%, LiFePO4 ≤ 80% |
+| **CCA (Cold Cranking Amps)** | Corrente de partida a frio (–18 °C) — relevante só para banco de partida |
+| **AGM** | Absorbed Glass Mat — chumbo selado com fibra de vidro; sem manutenção |
+| **GEL** | Eletrólito gelificado; tolera ciclo profundo, mas exige perfil de carga próprio |
+| **FLA / Inundada** | Chumbo-ácido com tampão removível; precisa reposição de água |
+| **LiFePO4** | Lítio-ferro-fosfato; química mais estável do lítio para uso náutico |
+| **BMS** | Battery Management System — exigido em qualquer banco de lítio |
+| **Banco de partida** | Dedicado ao motor (alta corrente curta, baixo ciclo) |
+| **Banco de serviço** | Sustenta cargas de bordo (ciclo profundo repetido) |
+| **Chave seletora 1/2/Ambos/Off** | Roteamento manual entre bancos; nunca girar com alternador ligado |
+| **ACR / VSR** | Auto-Charging Relay / Voltage Sensitive Relay — combinador automático |
+| **DC-DC charger** | Conversor que carrega banco B com perfil próprio a partir do banco A |
+| **Isolador de carga** | Diodos que separam bancos (perda de tensão, hoje obsoleto vs ACR) |
+| **Shunt** | Resistor de precisão na linha negativa para medir corrente |
+| **BMV** | Battery Monitor (Victron BMV-712, SmartShunt) — calcula SoC real |
+| **Peukert** | Lei que descreve perda de capacidade com aumento da taxa de descarga (chumbo) |
+| **Equalização (chumbo)** | Sobrecarga controlada para reequilibrar células de FLA/GEL — NÃO se aplica a AGM/lítio |
+| **Equalização (lítio, balancing)** | BMS dreno passivo/ativo das células mais carregadas para equilibrar o pack |
+| **Thermal runaway** | Reação exotérmica em cascata em lítio danificado/sobrecarregado — incêndio severo |
+| **NMEA 2000 PGN 127506** | DC Detailed Status (SoC, tempo restante, etc.) |
+| **NMEA 2000 PGN 127508** | Battery Status (V, A, T) |
 
 ## Visual didático
 

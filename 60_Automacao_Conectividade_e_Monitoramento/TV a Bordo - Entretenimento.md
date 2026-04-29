@@ -3,9 +3,21 @@ title: "TV a Bordo / Entretenimento"
 note_type: "system"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "TV A BORDO ENTRETENIMENTO 33a19734f7fb810d8cd4c12edad5eef8.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 128
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC TE-30"
+  - "IEC 60945"
+  - "IEC 60529 (IP)"
+  - "NMEA 0400"
+  - "HDMI 2.0/2.1"
+  - "DLNA / UPnP"
+  - "ANATEL Resolução 715/2019"
+  - "Manual técnico Samsung Marine / LG Marine / Furrion / Jensen Marine"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -37,6 +49,20 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > TV a bordo é um sistema de vídeo de entretenimento cujo desempenho depende menos da tela em si e mais da arquitetura ao redor: fixação mecânica, energia disponível, qualidade da fonte AC/DC, proteção contra vibração, ambiente de instalação e conectividade para conteúdo.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **TV marine-grade** (Samsung Marine, LG Marine, Furrion, Jensen Marine) tem IP56+ + suporte vibração + bivolt 12V/110V/220V. TV residencial falha em 1-2 anos.
+> 2. **Suporte mecânico anti-vibração** + Loctite em parafusos — em mar agitado, TV mal-fixada cai e quebra.
+> 3. **Inversor pure sine wave** se TV é AC — TV LED moderna é tolerante mas amplificador embutido pode oscilar com onda quasi-senoidal.
+> 4. **Streaming via Starlink/4G + Apple TV/Chromecast** padrão atual; satélite TV (Glomex) em mega-iate via tracking antenna estabilizada.
+
+> [!info] Glossário rápido
+> - **Marine-grade TV:** IP56+ + bivolt + tropicalizada.
+> - **Tracking antenna:** antena satélite estabilizada (Glomex, KVH).
+> - **HDMI 2.1:** padrão high-bandwidth video.
+> - **DLNA/UPnP:** protocolo streaming local.
+> - **Pure sine wave inverter:** onda senoidal verdadeira.
+> - **Mounting articulado:** suporte VESA com pivô.
 
 ## O que é
 

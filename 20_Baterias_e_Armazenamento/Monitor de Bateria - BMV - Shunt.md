@@ -3,13 +3,30 @@ title: "Monitor de Bateria / BMV / Shunt"
 note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "MONITOR DE BATERIA BMV SHUNT 33a19734f7fb81f68a94d4b415eafa95.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "13"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries"
+  - "ISO 13297:2020 — Small craft — AC and DC installations"
+  - "ISO 16315:2016 — Electric propulsion system"
+  - "NMEA 2000 (IEC 61162-3) — Comunicação de rede marítima"
+  - "NMEA 0183 — Protocolo legado de instrumentação marítima"
+  - "IEC 60051 — Direct acting indicating analogue electrical measuring instruments"
+  - "IEC 61010-1 — Safety requirements for electrical equipment for measurement"
+  - "ABNT NBR 5410:2004 — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.nmea.org/"
+  - "https://www.iec.ch/"
 aliases:
   - "MONITOR DE BATERIA BMV SHUNT"
   - "MONITOR DE BATERIA / BMV / SHUNT"
@@ -37,6 +54,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Monitor de bateria com shunt mede corrente, tensão e balanço acumulado de carga/descarga do banco para estimar SoC e autonomia. É uma ferramenta de gestão, não um oráculo: a qualidade do resultado depende da instalação do shunt, da parametrização e da rotina de sincronização.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Voltímetro não é monitor.** Tensão em repouso estima SoC em chumbo com ±10 %; sob carga ou logo após carga, erro passa de 30 %. Em LiFePO4, a curva é plana e voltímetro é inútil. Shunt + coulomb counting é o padrão técnico.
+> 2. **Shunt sempre no cabo NEGATIVO, entre o banco e o barramento negativo.** Todo retorno passa pelo shunt — qualquer cabo negativo que desvie o shunt corrompe a medição.
+> 3. **Configure a capacidade REAL, não a nominal.** Banco de 200 Ah com 5 anos pode ter 130 Ah reais; usar 200 Ah no monitor leva SoC a indicar 65 % quando já está vazio.
+> 4. **Fator Peukert + eficiência de carga + tail current são parâmetros obrigatórios,** ajustados por química. LFP: Peukert 1,05, eficiência 95-98 %, tail current 2-4 %. Chumbo: Peukert 1,15-1,25, eficiência 80-85 %, tail current 2-4 %.
+> 5. **Sincronização é rotina, não evento único.** Sem atingir 100 % com tail current baixa periodicamente, o SoC do monitor deriva. Em embarcação com consumo > geração, recalibrar manualmente.
+> 6. **Instalação em posição acessível** para inspeção de terminal; shunt com parafusos frouxos gera resistência variável que distorce leitura de corrente.
+> 7. **Monitor é complementar ao BMS**, não substituto. BMS mede tensão por célula e protege; monitor mede balanço do banco e reporta. Em lítio, são dois sistemas diferentes operando em paralelo.
+> 8. **Dados históricos (mínimo SoC, ciclos profundos, tempo em float)** são o insumo para laudo de degradação e renegociação de garantia. Salvar em NMEA 2000, VRM ou app regularmente.
+> 9. **Um monitor por banco.** SoC de banco de partida é irrelevante para banco de serviço e vice-versa. Embarcação com 3 bancos precisa de 3 shunts ou de monitor multi-bank (Simarine PICO).
+
+> [!danger] Quando chamar um especialista
+> - **SoC do monitor discordando sistematicamente do comportamento real do banco.** Exemplo: monitor indica 70 % mas inversor já corta por subtensão, ou monitor indica 40 % mas banco aguenta 8 horas de consumo alto. Pode ser capacidade mal configurada, célula em falha, cabo bypass, shunt com terminal frouxo, eficiência errada. Diagnóstico metódico com amperímetro de referência e ciclo controlado.
+> - **Retrofit de monitor em instalação antiga sem diagrama unifilar.** Identificar onde cada cabo negativo termina, se há bond N-PE, se o alternador tem retorno direto ao banco ou passa por barramento. Sem mapear a rede DC, é inviável garantir que o shunt lê a corrente real.
+> - **Integração de múltiplos monitores** (SmartShunt banco serviço + BMV banco partida + Wakespeed no alternador) em NMEA 2000 ou VE.Can. Conflito de IDs, duplicação de PGNs, latência e coerência de dados exigem configuração assistida.
+> - **Banco lítio com BMS reportando SoC diferente do monitor.** BMS usa algoritmo próprio; monitor usa coulomb counting. Divergência > 10 % persistente indica problema em um dos dois — análise com datasheet da célula, versão de firmware do BMS e parâmetros do monitor.
+> - **Eletropropulsão com múltiplos bancos em série-paralelo 48/96 V.** Shunts de 1000 A+, isolação galvânica, ground fault detection integrada. Monitor recreativo não cobre; exige sistema industrial com amperímetro de Hall isolado.
+> - **Laudo pericial em sinistro com banco lítio.** Extrair histórico do monitor, do BMS e do VRM; reconstituir cadeia de eventos (corrente, tensão, temperatura, alarmes) no minuto da falha. Responsável técnico com ART/CREA.
+> - **Consumo anormal de standby** (> 2 % ao dia) com monitor indicando descarga lenta sem causa aparente. Pode ser fuga à massa, equipamento sem chave de desligamento, iluminação LED mal projetada, BMS consumindo > 50 mA. Diagnóstico com amperímetro alicate e desligamento setor por setor.
+> - **Conversão de banco 12 V → 24 V ou 24 V → 48 V mantendo monitor antigo.** Shunt pode ter faixa insuficiente, tensão de alimentação do monitor pode precisar ser reconfigurada, cabos de sense e alimentação precisam ser reavaliados.
+> - **Monitor "desenhando" SoC fictício** em embarcação com consumo cíclico alto e geração solar intermitente. Sem sincronização em 100 % por semanas, o coulomb counter deriva — recalibrar com carga controlada no shore ou trocar o algoritmo para baseado em OCV (Open Circuit Voltage).
 
 ## O que é
 
@@ -207,10 +246,62 @@ Instalar e não usar os dados. O monitor só agrega valor se consultado regularm
 - **BMS (lítio):** BMS monitora células individuais; shunt monitora o banco como um todo — complementares
 - **NMEA 2000:** SmartShunt com adaptador publica dados no barramento de instrumentos
 
+## Glossário rápido
+
+- **Monitor de bateria / BMV (Battery Monitor)** — instrumento que mede corrente, tensão e integra no tempo para calcular SoC.
+- **Shunt** — resistor calibrado de baixíssimo valor (0,0001 Ω = 500 A/50 mV) em série com o cabo negativo.
+- **Queda de tensão no shunt** — proporcional à corrente (V = R × I); monitor lê em microvolts e calcula corrente.
+- **Coulomb counting** — método de cálculo de SoC por integração de corrente no tempo (Ah in − Ah out).
+- **SoC (State of Charge)** — percentual de carga atual em relação à capacidade.
+- **SoH (State of Health)** — percentual de capacidade remanescente em relação à nova.
+- **DoD (Depth of Discharge)** — complemento do SoC (DoD = 100 − SoC).
+- **Ah (Ampère-hora)** — unidade de carga; base do coulomb counting.
+- **Wh (Watt-hora)** — unidade de energia; Ah × V nominal.
+- **Tail current** — corrente abaixo da qual o monitor considera "carga completa" (~2-4 % da nominal).
+- **Sincronização (sync)** — evento em que o monitor zera contador e recalibra para 100 %; requer absorção completa + tail current atingida.
+- **Fator Peukert** — coeficiente que corrige capacidade sob diferentes taxas de descarga. Chumbo 1,15-1,25; LFP 1,05.
+- **Eficiência de carga (charge efficiency)** — Ah recuperado / Ah injetado; LFP 95-98 %, AGM 80-85 %, FLA 75-80 %.
+- **OCV (Open Circuit Voltage)** — tensão em repouso (sem carga > 1-2 h); base para estimativa alternativa de SoC.
+- **Drift do SoC** — erro acumulado do coulomb counter sem sincronização; corrigido por sync.
+- **Multi-bank** — monitor com múltiplos shunts para 2+ bancos independentes.
+- **Hall sensor** — alternativa ao shunt; mede corrente por campo magnético, sem resistor na linha.
+- **Shunt de precisão (Class 0,1 / 0,5 / 1,0)** — classe de precisão IEC; náutico típico é 0,5-1,0 %.
+- **Barramento negativo (negative bus bar)** — ponto de consolidação de todos os retornos; shunt fica entre banco e barramento.
+- **Cabo negativo principal** — cabo de maior bitola do banco ao barramento; shunt em série.
+- **Cabo de sense / sensor** — realimentação de tensão do monitor; mede a tensão real no banco, não no monitor.
+- **Alimentação do monitor** — cabo dedicado fino que alimenta a eletrônica do monitor; protegido por fusível separado.
+- **BMV-712 / SmartShunt / BMV-700** — linha Victron, referência de mercado náutico.
+- **Simarine PICO / NAUT / SCQ25** — monitor naval premium com touchscreen e multi-bank.
+- **Wakespeed WS500** — monitor de alternador com comunicação CAN.
+- **VE.Direct** — interface serial Victron para SmartShunt → Cerbo GX → VRM.
+- **VE.Can** — CAN bus Victron para integração entre monitor, inversor, MPPT.
+- **NMEA 2000 (PGN 127508 / 127506)** — mensagens padrão de bateria na rede marítima.
+- **VRM (Victron Remote Management)** — portal em nuvem que recebe dados de SmartShunt/Cerbo.
+- **Cerbo GX** — gateway Victron que agrega dados de shunt, MPPT, inversor, gerador e publica em VRM.
+- **Amperímetro alicate** — instrumento para verificar independentemente a corrente; base de calibração do monitor.
+- **Multímetro** — voltímetro digital para validar tensão indicada pelo monitor.
+- **Registrar de dados (data logger)** — função interna do monitor que grava histórico de SoC, V, I, T.
+- **Alarme de SoC baixo** — configurável; aciona buzzer, relé, alarme NMEA.
+- **Relé programável** — saída do monitor que comanda gerador auto-start, chave seletora, iluminação crítica.
+- **Calibração de zero** — ajuste de offset do monitor com banco em repouso total.
+- **Bias térmico** — erro do shunt por variação de temperatura; relevante em shunts de alta corrente.
+- **BMS vs Monitor** — BMS mede célula, protege banco; monitor mede banco, gerencia autonomia.
+- **OCV lookup table** — tabela de tensão em repouso vs SoC; fallback quando coulomb counter desvia.
+
 ## Normas aplicáveis
 
-- **ABYC E-11** — medição e monitoramento de sistemas DC
-- **Manuais dos fabricantes** — configuração específica por modelo
+- **ABYC E-11 (2023)** — Medição e monitoramento de sistemas DC; localização do shunt, bitolagem do cabo negativo.
+- **ABYC E-10 (2023)** — Storage batteries; identificação e rotulagem do banco; relevante para documentação.
+- **ABYC E-13 (2023)** — Lithium ion batteries; exigências específicas para monitoramento de lítio.
+- **ISO 13297:2020** — Small craft AC e DC; inclusive medição e instrumentação.
+- **ISO 16315:2016** — Electric propulsion; monitoramento em bancos de alta potência.
+- **NMEA 2000 (IEC 61162-3)** — Protocolo de rede marítima; PGNs específicos para bateria (127506, 127508, 127513).
+- **NMEA 0183** — Protocolo legado; ainda presente em instrumentos antigos integrados.
+- **IEC 60051** — Instrumentos analógicos indicadores; base histórica para amperímetros/voltímetros.
+- **IEC 61010-1** — Requisitos de segurança para equipamentos de medição; aplicável à eletrônica do monitor.
+- **ABNT NBR 5410:2004** — Instalações elétricas de baixa tensão; aplicável ao barramento e proteção.
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio; exigências brasileiras.
+- **Manuais dos fabricantes** — configuração específica por modelo; parâmetros obrigatórios para precisão.
 
 ## Como ensinar este tópico
 

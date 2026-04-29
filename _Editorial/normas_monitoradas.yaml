@@ -1,0 +1,220 @@
+---
+# Normas sob monitoramento — estado pós-Fase 1
+# Data: 2026-04-17
+# Fonte: consolidação dos 9 YAMLs de auditoria + bugs_conhecidos.md + registro_normas.yaml
+#
+# Este arquivo rastreia normas com status AMBÍGUO, EM VERIFICAÇÃO EXTERNA ou
+# em REVISÃO ATIVA que podem causar contradição inter-notas no vault.
+# Serve como "watch list" para o próximo ciclo editorial e como input para
+# scripts de validação que devem SINALIZAR (não corrigir) essas citações.
+
+versao: 1
+data_criacao: "2026-04-17"
+proxima_revisao: "2026-05-17"
+
+# =============================================================================
+# CATEGORIAS DE MONITORAMENTO
+# =============================================================================
+# - external_verification_pending: esperando consulta a catálogo oficial
+# - edition_unknown: padrão é ativo, mas ano/edição específica precisa confirmar
+# - retired_watch_citations: norma aposentada; monitorar citações que ressurjam
+# - new_family_evaluation: padrão recém-descoberto, consolidar em família
+# - contradiction_resolved_watch: resolvido mas observar regressão
+
+normas:
+
+  # --------------------------------------------------------------------------
+  # EXTERNAL VERIFICATION PENDING (bloqueia citações ativas)
+  # --------------------------------------------------------------------------
+  - codigo: "ABYC A-28"
+    categoria: "external_verification_pending"
+    status_registro: "desconhecido"
+    historico_labels_errados:
+      - "Galley Stoves (hipótese Fase 0 sem fonte)"
+      - "thruhull fittings (Sonda pré-R04)"
+      - "marine electrical circuit diagrams (Inspeção de Cabos pré-R04)"
+    acao_pendente: "consulta oficial a https://abycinc.org/page/Standards"
+    bug_id: "bug-0003"
+    prioridade: "P1 (blocker para script)"
+    notas_com_hedge_ativo:
+      - "10_Fundamentos_e_Projeto/Inspeção de Cabos Terminais e Conexões.md"
+    notas_corrigidas_removendo_citacao:
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/Sonda - Profundímetro - Sonar.md"
+    observacao: |
+      A-28 NUNCA deve ser citado em nova nota até o registro central ser atualizado.
+      Script validador deve sinalizar ocorrência como WARNING.
+
+  - codigo: "ABYC A-31"
+    categoria: "contradiction_resolved_watch"
+    status_registro: "Lightning Protection"
+    historico_labels_errados:
+      - "Battery Chargers (nota mestre, Carregador, Alternador pré-R04)"
+    acao_pendente: "monitorar regressão — se aparecer como 'chargers' novamente, alertar"
+    bug_id: "resolvido-em-R04"
+    prioridade: "P2 (vigilância passiva)"
+    notas_corrigidas:
+      - "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+      - "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+      - "30_Energia_e_Conversao/Alternador (DC).md"
+
+  - codigo: "ABYC (padrão para battery chargers / inverter-chargers)"
+    categoria: "external_verification_pending"
+    status_registro: "não-identificado"
+    acao_pendente: "consultar catálogo ABYC — pode ser E-11 seção específica, ou padrão próprio"
+    bug_id: "bug-0004"
+    prioridade: "P2 (hedge aceito nas 2 notas afetadas)"
+    notas_com_hedge_ativo:
+      - "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+      - "30_Energia_e_Conversao/Inversora (DC To AC).md"
+
+  - codigo: "ABNT NBR 13885"
+    categoria: "external_verification_pending"
+    status_registro: "desconhecido"
+    acao_pendente: "consulta ao catálogo ABNT"
+    bug_id: "bug-0001 (NBR família)"
+    prioridade: "P2 (não citada ativamente)"
+
+  - codigo: "ABNT NBR 16033"
+    categoria: "external_verification_pending"
+    status_registro: "desconhecido"
+    acao_pendente: "consulta ao catálogo ABNT"
+    bug_id: "bug-0001 (NBR família)"
+    prioridade: "P2 (não citada ativamente)"
+
+  # --------------------------------------------------------------------------
+  # EDITION UNKNOWN (padrão ativo, edição a confirmar)
+  # --------------------------------------------------------------------------
+  - codigo: "IEC 61008"
+    categoria: "edition_unknown"
+    status_registro: "ativo — Residual Current Operated Circuit-Breakers (RCCB)"
+    acao_pendente: "confirmar edição (provável ed.3 2010+emendas)"
+    prioridade: "P2"
+    notas_afetadas:
+      - "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+
+  - codigo: "IEC 61009"
+    categoria: "edition_unknown"
+    status_registro: "ativo — RCBO"
+    acao_pendente: "confirmar edição"
+    prioridade: "P2"
+    notas_afetadas:
+      - "40_Distribuicao_Protecao_e_Aterramento/Proteção Dr.md"
+
+  - codigo: "IEC 61162-1"
+    categoria: "edition_unknown"
+    status_registro: "ativo — Digital interfaces (NMEA 0183 base)"
+    acao_pendente: "ed.5 2016 provável; confirmar"
+    prioridade: "P2"
+    notas_afetadas:
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+
+  - codigo: "IEC 61162-3"
+    categoria: "edition_unknown"
+    status_registro: "ativo — NMEA 2000 equivalent"
+    acao_pendente: "confirmar edição"
+    prioridade: "P2"
+    notas_afetadas:
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+
+  - codigo: "IEC 62619"
+    categoria: "edition_unknown"
+    status_registro: "ativo — Safety for secondary cells in industrial apps (inclui BMS)"
+    acao_pendente: "confirmar edição; padrão tem revisões"
+    prioridade: "P2"
+    notas_afetadas:
+      - "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+
+  - codigo: "NFPA 303"
+    categoria: "edition_unknown"
+    status_registro: "ativo — Fire Protection Standard for Marinas and Boatyards"
+    acao_pendente: "confirmar ed. 2021 ou 2026"
+    prioridade: "P2"
+    notas_afetadas:
+      - "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+
+  - codigo: "NMEA 2000"
+    categoria: "edition_unknown"
+    status_registro: "ativo"
+    acao_pendente: "confirmar versão corrente da NMEA; há minor updates"
+    prioridade: "P2"
+    notas_afetadas: "múltiplas em 20/50/60"
+
+  - codigo: "USCG 33 CFR 183"
+    categoria: "edition_unknown"
+    status_registro: "ativo"
+    acao_pendente: "confirmar revisão atual do CFR"
+    prioridade: "P2"
+    notas_afetadas:
+      - "50_Navegacao_Instrumentacao_e_Comunicacao/NAVEGAÇÃO (BB, BE e Alcançado).md"
+      - "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+
+  - codigo: "NORMAM-211"
+    categoria: "edition_unknown"
+    status_registro: "ativo — DPC/Marinha 2022+"
+    acao_pendente: "confirmar revisão corrente"
+    prioridade: "P2"
+    notas_afetadas:
+      - "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+
+  # --------------------------------------------------------------------------
+  # RETIRED WATCH CITATIONS
+  # --------------------------------------------------------------------------
+  - codigo: "ISO 10133"
+    categoria: "retired_watch_citations"
+    status_registro: "APOSENTADA — sucedida por ISO 13297:2020"
+    acao_pendente: "alertar se reaparecer em nova citação; NUNCA usar"
+    prioridade: "P0 se ressurgir"
+    notas_corrigidas_no_ciclo:
+      - "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+      - "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+      - "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+
+  # --------------------------------------------------------------------------
+  # NEW FAMILY EVALUATION (consolidar em família explícita)
+  # --------------------------------------------------------------------------
+  - codigo: "ABYC família E (E-10, E-11)"
+    categoria: "new_family_evaluation"
+    status_registro: "colunas-vertebrais"
+    observacao: |
+      E-10 (Storage Batteries) e E-11 (AC & DC Electrical Systems on Boats) são
+      citados em ~80% das notas técnicas de 20_Baterias e 30_Energia. Candidato
+      a "nota mestre de família" explícita + tabela de equivalência.
+    acao_pendente: "criar nota `Normas ABYC Família E.md` em próxima onda didática"
+    prioridade: "P3 (roadmap editorial)"
+
+  - codigo: "ABYC A-33"
+    categoria: "new_family_evaluation"
+    status_registro: "a registrar — Exhaust Systems"
+    acao_pendente: "atualizar `registro_normas.yaml` com A-33"
+    prioridade: "P2"
+    notas_que_citam: "TBD via grep em próxima passada"
+
+# =============================================================================
+# CONVENÇÃO DE CITAÇÃO (resumida)
+# =============================================================================
+convencao:
+  padrao_hedge_externo: |
+    Citação de norma em `external_verification_pending`:
+    `ABYC X-## (edição a verificar)` no frontmatter `normas_citadas` +
+    HTML comment no corpo: `<!-- TODO-CITAÇÃO: ver _Editorial/registro_normas.yaml -->`
+
+  padrao_retired: |
+    NUNCA citar norma em `retired_watch_citations`. Se detectada, sinalizar P0.
+
+  padrao_edition_unknown: |
+    `CÓDIGO (edição a verificar)` é aceitável temporariamente.
+    Preferência: sempre citar edição quando conhecida.
+
+# =============================================================================
+# PROCESSO DE ATUALIZAÇÃO
+# =============================================================================
+processo:
+  quando_verificacao_externa_conclui: |
+    1. Atualizar `_Editorial/registro_normas.yaml` (move de 'desconhecido' para status real)
+    2. Remover TODO-CITAÇÃO das notas com hedge
+    3. Atualizar este arquivo: categoria vira `contradiction_resolved_watch`
+    4. Commit descrevendo a resolução
+    5. Rodar grep do código para garantir que nenhuma citação órfã permanece
+
+  frequencia_revisao: "mensal"
+  responsavel: "editorial + claude-code"

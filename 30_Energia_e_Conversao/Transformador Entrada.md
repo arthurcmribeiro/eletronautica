@@ -3,9 +3,45 @@ title: "Transformador Entrada"
 note_type: "technical-note"
 domain: "30_Energia_e_Conversao"
 source_file: "TRANSFORMADOR ENTRADA 58419734f7fb83baae88811eb7c459cf.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "40"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats"
+  - "ABYC A-22 — Marinas and Boatyards"
+  - "ISO 13297:2020 — Small craft — Electrical systems — AC and DC"
+  - "ISO 8846:2020 — Small craft — Electrical devices — Protection against ignition"
+  - "IEC 60076-1:2011 — Power transformers — General"
+  - "IEC 60076-5:2006 — Ability to withstand short circuit"
+  - "IEC 60076-11:2018 — Dry-type transformers"
+  - "IEC 61558-1:2017 — Safety of transformers, reactors, power supply units"
+  - "IEC 61558-2-1 — Particular requirements for isolating transformers"
+  - "IEC 61558-2-4 — Isolating transformers for general applications"
+  - "IEC 60092-201 — System design (comercial)"
+  - "IEC 60092-301 — Equipment — transformers (comercial)"
+  - "UL 1561 — Dry-Type General Purpose and Power Transformers"
+  - "UL 506 — Specialty Transformers"
+  - "NEC Art. 250.30 — Grounding (separately derived systems)"
+  - "NEC Art. 450 — Transformers and Transformer Vaults"
+  - "NEC Art. 555 — Marinas, Boatyards, Boat Basins"
+  - "NEMA ST 20 — Dry-Type Transformers for General Applications"
+  - "NEMA TP 1 — Guide for Determining Energy Efficiency for Distribution Transformers"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "NBR 5356-1/-2/-3 — Transformadores de potência"
+  - "NBR 10295 — Transformadores de potência secos"
+  - "NBR IEC 61558-1/-2 — Segurança de transformadores"
+  - "INMETRO Portaria 637/2014 — Regulamentação de transformadores"
+  - "DNV-RU-SHIP Pt 4 Ch 8 — Electrical installations"
+  - "Lloyd's Register Rules Pt 6 — Electrical"
+  - "EN 61558-1 / EN 61558-2-4 — Safety of transformers (Europa)"
+  - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
+  - "NORMAM-211/DPC — Esporte e recreio"
+  - "NORMAM-201/204/DPC — Comercial / SMM"
+review_level: "engineering-curated"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -39,6 +75,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Transformador de entrada adapta a tensão do shore power ao padrão elétrico da embarcação, mas não deve ser confundido automaticamente com solução completa de topologia. Em muitos cenários brasileiros o problema não é só `quanto volts entram`, e sim `como eles entram`; nesses casos, a nota complementar correta é [[Transformador Bivolt]].
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Transformador de entrada = adaptação de TENSÃO; isolamento galvânico = outra função** — nem todo transformador step-down/up isola galvanicamente; autotransformador NÃO isola.
+> 2. **Frequência NÃO se converte com transformador comum** — 50 Hz ↔ 60 Hz requer retificação + inversão (inverter); transformador 60 Hz em marina 50 Hz aquece e satura.
+> 3. **Dimensionamento em VA (não W)** — carga total simultânea + fator partida motor (3–6× running) + margem 25 %; não somar plaqueta-watts.
+> 4. **Tap CORRETO antes de energizar** — tap errado = tensão dobrada no secundário = equipamentos destruídos; erro mais caro e evitável.
+> 5. **Cenários brasileiros típicos**: barco americano 120 V em marina BR 220 V → step-down 220→120; barco europeu 230 V/50 Hz em marina BR 220 V/60 Hz → step-down + inverter para freq; barco BR 220 V em marina EUA 120 V → step-up 120→220.
+> 6. **Barcos americanos importados sem step-down = dano imediato** — ligar 120 V direto em 220 V destrói tudo em segundos; auditoria antes da primeira conexão.
+> 7. **Inversor/carregador com entrada universal (80–265 V AC) dispensa transformador para a função de carregamento** — mas não para cargas 120 V fixas do barco (tomadas, equipamentos); Victron MultiPlus, Mastervolt Mass Combi.
+> 8. **Step-down ≠ isolador galvânico** — step-down adapta tensão; isolador galvânico (diodo) ou transformador de isolamento bloqueia loop galvânico; funções distintas, podem coexistir.
+> 9. **ABYC E-11 + IEC 61558-2-4 + NEC 450/555 + NBR IEC 61558 + INMETRO Portaria 637** são a família normativa; comercial > 24 m segue IEC 60092-301 + classificadora.
+
+> [!danger] Quando chamar engenheiro elétrico / surveyor
+> 1. **Tap configurado errado e equipamentos 120 V queimados (dano imediato)** — stop imediato, não ligar mais shore power, substituir equipamentos queimados, revisar configuração, medir tensão de saída com transformador desligado (multímetro VAC) antes de reenergizar.
+> 2. **Transformador superaquecendo ou cheiro de queimado** — EMERGÊNCIA: desligar shore power, não tocar (risco choque + queimadura), aguardar resfriamento, desmontagem e análise por técnico; provável classe isolação excedida (B > 130 °C, F > 155 °C) ou sobrecarga sistemática.
+> 3. **Disjuntor de entrada disparando ao conectar cargas normais** — sobrecarga ou curto; medir corrente com alicate amperímetro na entrada; se I > In, redistribuir cargas ou aumentar transformador; se não, há curto interno em carga conectada.
+> 4. **Barco americano importado sem step-down identificado** — PARAR operação antes da próxima conexão shore; inventário completo de equipamentos 120 V; especificação + aquisição de step-down adequado + laudo CREA.
+> 5. **Retrofit de transformador em compartimento sem ventilação** — classe de isolação será excedida; reinstalar com ventilação forçada (blower) ou relocar para compartimento com fluxo de ar natural adequado.
+> 6. **Uso em frequência errada (60 Hz em marina Europa 50 Hz)** — transformador opera fora da curva B-H; saturação, aquecimento, tensão anormal; solução = inverter 50→60 Hz de potência adequada antes do transformador.
+> 7. **Transformador sem certificação INMETRO (Portaria 637/2014) em charter/aluguel** — não conformidade regulatória; responsabilidade civil; substituir por equipamento certificado.
+> 8. **Confusão entre step-down e isolador galvânico vendido pelo estaleiro** — cliente acha que tem proteção galvânica quando não tem; corrosão progressiva; isolador galvânico adicional ou troca para transformador de isolamento.
+> 9. **Perícia pós-incêndio / pós-sinistro com transformador suspeito** — preservar como evidência, não desmontar; IEC 60076-18 (FRA) + IBAPE; avaliação de dielétrico + termografia + etiqueta INMETRO para rastreabilidade.
 
 ## O que é
 
@@ -279,12 +337,154 @@ Transformador especificado para 60Hz ligado a marina europeia de 50Hz — zumbid
 
 **Realidade brasileira:** A maioria dos importadores de embarcações americanas não instala o transformador step-down adequado. O proprietário conecta o shore power de 220V direto em um barco de 120V — resultado: destruição imediata dos equipamentos. É um dos erros mais caros e mais evitáveis na elétrica náutica.
 
-## Normas aplicáveis
+## Normas aplicáveis (organizadas por família)
 
-- **ABYC E-11** — AC Electrical Systems (dimensionamento, proteção, instalação)
-- **NEMA** — padrões americanos de conectores e tensões
-- **IEC 60076** — transformadores de potência (referência técnica)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+Transformador de entrada cruza quatro áreas normativas: **shore power marinho** (ABYC E-11, NEC 555, ISO 13297), **transformador propriamente dito** (IEC 60076, IEC 61558, UL 1561, NBR 5356), **embarcação comercial** (IEC 60092, classificadoras), **jurisdição local** (NBR 5410, INMETRO, NEMA).
+
+### ABYC (recreio USA)
+
+- **ABYC E-11 (2023) — AC & DC Electrical Systems on Boats** — norma central; dimensionamento, proteção, aterramento, taps.
+- **ABYC A-22 — Marinas and Boatyards** — lado da marina; pedestal, ELCI, aterramento.
+
+### ISO (pequena embarcação internacional)
+
+- **ISO 13297:2020 — Small craft — Electrical systems — AC and DC** — obrigatório CE.
+- **ISO 8846:2020 — Small craft — Electrical devices — Protection against ignition** — proteção de ignição em áreas com vapor.
+
+### IEC (transformador — referência universal)
+
+- **IEC 60076-1:2011 — Power transformers — General** — terminologia e requisitos.
+- **IEC 60076-5:2006 — Ability to withstand short circuit** — curto-circuito.
+- **IEC 60076-11:2018 — Dry-type transformers** — transformador seco (padrão marinho).
+- **IEC 61558-1:2017 — Safety of transformers** — segurança; aplicável a step-up/down.
+- **IEC 61558-2-1 — Isolating transformers** — requisitos de isolação.
+- **IEC 61558-2-4 — Isolating transformers for general applications** — específico para isolamento geral.
+
+### IEC comercial (> 24 m / SOLAS)
+
+- **IEC 60092-201 — System design** — arquitetura elétrica em navio.
+- **IEC 60092-301 — Equipment — transformers** — transformadores comerciais.
+
+### UL / NEMA (USA — certificação)
+
+- **UL 1561 — Dry-Type General Purpose and Power Transformers** — certificação USA padrão.
+- **UL 506 — Specialty Transformers** — transformadores especializados.
+- **NEMA ST 20 — Dry-Type Transformers for General Applications** — padrão de referência americano.
+- **NEMA TP 1 — Guide for Determining Energy Efficiency** — eficiência energética.
+
+### NEC (USA — instalação)
+
+- **NEC Art. 250.30 — Grounding of separately derived systems** — aterramento de sistema derivado.
+- **NEC Art. 450 — Transformers and Transformer Vaults** — instalação.
+- **NEC Art. 555 — Marinas, Boatyards, Boat Basins** — pedestal + ELCI.
+
+### Brasil (normas técnicas e regulamentares)
+
+- **NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão** — norma guarda-chuva BT Brasil.
+- **NBR 5356-1/-2/-3 — Transformadores de potência** — especificação BT.
+- **NBR 10295 — Transformadores de potência secos** — seco.
+- **NBR IEC 61558-1/-2 — Segurança de transformadores** — adoção brasileira.
+- **INMETRO Portaria 637/2014 — Regulamentação de transformadores** — certificação compulsória.
+
+### Sociedades classificadoras (comercial)
+
+- **DNV-RU-SHIP Pt 4 Ch 8 — Electrical installations** — regras DNV.
+- **Lloyd's Register Rules Pt 6 — Electrical** — regras LR.
+- **ABS Steel Vessel Rules Pt 4 Ch 8** — regras ABS.
+- **Bureau Veritas NR 467 Pt C Ch 2** — regras BV.
+
+### Europa (RCD + EN)
+
+- **EN 61558-1 / EN 61558-2-4 — Safety of transformers** — adoção europeia.
+- **CE-RCD Directive 2013/53/EU** — embarcação CE exige conformidade a ISO 13297 + EN 61558.
+
+### Brasil (marítimo)
+
+- **NORMAM-211/DPC — Esporte e recreio** — recreio.
+- **NORMAM-201/204/DPC — Comercial / SMM** — comercial.
+
+### Como usar este conjunto normativo na prática
+
+| Situação | Norma-chave |
+|---|---|
+| Projeto recreio USA | ABYC E-11 + NEC 555 + UL 1561 |
+| Projeto recreio Brasil | ABYC E-11 + NBR IEC 61558 + INMETRO |
+| Projeto comercial classificado | IEC 60092-301 + classificadora |
+| Certificação CE Europa | EN 61558 + RCD + ISO 13297 |
+| Seleção de step-down 120/220 V | ABYC E-11 + manual fabricante |
+| Retrofit em barco americano importado | ABYC E-11 + laudo CREA + audit completa |
+| Fabricante sob encomenda Brasil | NBR 5356 + NBR 10295 + INMETRO Portaria 637 |
+| Perícia pós-incêndio transformador | IEC 60076-18 FRA + IBAPE + NR-10 |
+
+## Glossário rápido
+
+### Tipos de transformador de entrada
+
+- **Step-down transformer (abaixador)** — reduz tensão do shore power; ex: 220 → 120 V para barco americano em marina brasileira.
+- **Step-up transformer (elevador)** — aumenta tensão; ex: 120 → 220 V para barco brasileiro em marina americana.
+- **Autotransformador (autotransformer)** — enrolamento único com taps; sem isolação galvânica; mais leve.
+- **Two-winding transformer (duplo enrolamento)** — primário e secundário separados; isolação galvânica possível.
+- **Transformador com taps ajustáveis (multi-tap)** — múltiplas derivações para diferentes tensões de entrada; ideal para embarcação internacional.
+- **Transformador toroidal** — núcleo toroidal; baixa radiação + alta eficiência; premium.
+- **Transformador portátil** — modelo móvel plugado no pedestal; solução temporária para visitante.
+
+### Parâmetros críticos
+
+- **Relação de transformação (turns ratio)** — razão entre espiras primário/secundário; define razão de tensão.
+- **Tap** — derivação intermediária do enrolamento; ajusta relação.
+- **kVA (potência aparente nominal)** — capacidade de potência; dimensionamento correto.
+- **Corrente nominal (In)** — corrente nominal de operação contínua.
+- **Fator de potência (cos φ)** — ângulo V-I; define kVA/kW.
+- **Inrush current** — pico na energização.
+- **Regulação de tensão** — queda V vazio → plena carga; idealmente < 5 %.
+
+### Térmico e isolação
+
+- **Classe de isolação** — A (105 °C), B (130 °C), F (155 °C), H (180 °C).
+- **Elevação térmica (ΔT)** — tipicamente 80–90 K sobre ambiente 40 °C para classe B.
+- **Dry-type (seco)** — sem óleo; padrão marinho.
+- **IP rating** — grau de proteção; IP23 ambiente seco, IP44 com respingos.
+- **Hot spot** — ponto mais quente do enrolamento; limite da classe.
+
+### Frequência
+
+- **50 Hz (Europa)** — frequência europeia e muitos países.
+- **60 Hz (Brasil, EUA, Japão 50 Hz partes)** — frequência americana.
+- **Adaptação de frequência** — requer retificação + inversão (não é função do transformador linear).
+
+### Configurações típicas
+
+- **120 V / 60 Hz (USA, Japão partes)** — padrão americano.
+- **208 V / 60 Hz (USA — parte comercial)** — 3-fase L-L.
+- **220 V / 60 Hz (Brasil)** — padrão brasileiro.
+- **230 V / 50 Hz (Europa)** — padrão europeu.
+- **240 V / 50 Hz (UK, Austrália)** — padrão britânico.
+- **120/240 V split-phase (USA recreio)** — duas fases 180° defasadas; neutro central.
+
+### Marcas e certificações
+
+- **Charles Industries (USA)** — referência em transformadores marinhos.
+- **Victron Energy (Holanda)** — linha de isolation + step-down.
+- **Mastervolt (Holanda)** — linha MaraTron.
+- **Hubbell Marine (USA)** — embarcação trabalho/recreio.
+- **Toroid (USA/Europa)** — toroidal marinho.
+- **UL Listed / CE Marked / INMETRO** — certificações de conformidade.
+
+### Problemas comuns
+
+- **Tap errado** — tensão de saída incorreta; queima equipamentos.
+- **Sobrecarga** — kVA excedido; aquecimento, redução de vida.
+- **Frequência errada** — 50 Hz em projeto 60 Hz; saturação.
+- **Ventilação inadequada** — temperatura excede classe; falha.
+- **Vibração** — núcleo E-I vibra; afrouxa conexões.
+- **Umidade salina** — corrosão terminais; IP44 mínimo.
+
+### Relação com outros conceitos
+
+- **Isolador galvânico (diodo anti-paralelo)** — não é transformador; só bloqueia DC no PE; complemento possível.
+- **Transformador de isolamento** — transformador 1:1 com isolação galvânica; pode integrar step-down.
+- **Inversor carregador com entrada universal (80–265 V)** — alternativa parcial ao step-down; serve para função de carregamento, não para cargas AC fixas 120 V.
+- **Sistema derivado (separately derived system)** — conceito NEC 250.30; aplicável quando transformador de isolamento cria referência nova.
 
 ## Como ensinar este tópico
 

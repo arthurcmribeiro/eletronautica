@@ -1,0 +1,60 @@
+{
+  "slug": "mmsi-dsc-epirb-cartilha",
+  "kind": "cartilha_processo",
+  "title": "MMSI, DSC e EPIRB — Cartilha do Socorro Maritimo",
+  "summary": "Cartilha visual que separa MMSI (identificador), DSC (chamada seletiva digital no VHF) e EPIRB (baliza de emergencia), mostrando o papel de cada um na cadeia de socorro.",
+  "didactic_goal": "Quebrar a confusao comum entre registro administrativo (MMSI), canal de pedido de socorro rotineiro (DSC via VHF) e baliza autonoma por satelite (EPIRB) acionada apenas em emergencia grave.",
+  "format": "cartilha-processo",
+  "priority": "alta",
+  "hero_label": "MMSI E IDENTIDADE — DSC E CHAMADA NO VHF — EPIRB E BALIZA POR SATELITE",
+  "notes": [
+    "MMSI e o numero unico da embarcacao/radio, concedido pela autoridade competente; e pre-requisito para DSC.",
+    "DSC e a funcao digital no radio VHF que envia alerta automatico com posicao e MMSI; canal 70 e reservado.",
+    "EPIRB e baliza independente por satelite Cospas-Sarsat (406 MHz); nao depende do VHF nem da energia principal."
+  ],
+  "caution": "Cautela regulatoria: no Brasil, MMSI e concedido pela ANATEL. DSC exige MMSI programado. EPIRB deve estar registrada e com bateria em prazo. Este visual e didatico; consulte NORMAM-01 e procedimento oficial antes de registrar.",
+  "target_notes": [
+    "50_Navegacao_Instrumentacao_e_Comunicacao/Dsc — Chamada Seletiva Digital.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/EPIRB - Beacon de Emergência.md",
+    "50_Navegacao_Instrumentacao_e_Comunicacao/VHF.md"
+  ],
+  "panels": [
+    {
+      "label": "MMSI",
+      "tag": "Identificador unico do radio/embarcacao; pre-requisito de DSC",
+      "color": "#1D6FD8"
+    },
+    {
+      "label": "DSC (canal 70)",
+      "tag": "Alerta digital no VHF com posicao + MMSI; ate ~30 mn de costa",
+      "color": "#E0A100"
+    },
+    {
+      "label": "EPIRB (406 MHz)",
+      "tag": "Baliza autonoma por satelite; alcance global; emergencia grave",
+      "color": "#D9534F"
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Quando usar DSC",
+      "detail": "Emergencia com cobertura VHF; avaria, pane ou pedido de assistencia em area costeira.",
+      "color": "#E0A100"
+    },
+    {
+      "title": "Quando usar EPIRB",
+      "detail": "Emergencia grave (abandono, afundamento); sem depender da energia ou radio da embarcacao.",
+      "color": "#D9534F"
+    },
+    {
+      "title": "Cadeia de socorro",
+      "detail": "DSC dispara para autoridades MRCC por VHF; EPIRB dispara pela Cospas-Sarsat; MMSI liga a emergencia ao registro.",
+      "color": "#2A9D57"
+    },
+    {
+      "title": "Teste e registro",
+      "detail": "EPIRB exige registro na ANATEL/ANAC conforme escopo; bateria tem vida util; DSC precisa MMSI correto.",
+      "color": "#1D6FD8"
+    }
+  ]
+}

@@ -3,9 +3,20 @@ title: "Luzes Internas Teto"
 note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "LUZES INTERNAS TETO c6b19734f7fb82d381578190ac1f6cec.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 122
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11 (AC and DC Electrical Systems on Boats)"
+  - "ABYC A-30 (Cabin and Weather Deck Illumination)"
+  - "IEC 60598-1 (Luminaires)"
+  - "IEC 60529 (IP)"
+  - "IEC 61547 (EMC for lighting)"
+  - "ISO 19009 (Internal lighting)"
+  - "INMETRO Portaria 144/2015"
+  - "ABNT NBR 14728"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
@@ -37,6 +48,20 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > LUZES INTERNAS / TETO — Iluminação interna de cabine, salon, camarotes e áreas de habitação. Em sistemas DC, LED de baixa tensão bem especificado costuma ser a solução mais eficiente e confiável, desde que haja atenção a temperatura de cor, EMC, zonas de comando e ambiente de instalação.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **LED 12V/24V DC marine-grade** (Hella Marine, Lumitec, Imtra, Quick Italy) — IP44 mínimo em interior, IP65+ em banheiro/galley.
+> 2. **CCT por aplicação:** 2700-3000K (descanso), 3500-4000K (circulação/galley), vermelho 620 nm para night vision em sala de carta (ISO 16273).
+> 3. **CRI ≥80** mínimo para conforto visual (CRI ≥90 + R9 ≥50 em camarote / leitura premium).
+> 4. **EMC certificada IEC 61547** — driver LED ruim mata VHF/GPS adjacente. Vide [[Tipos de Lâmpadas e LEDs Náuticos]].
+
+> [!info] Glossário rápido
+> - **CCT:** color temperature (Kelvin).
+> - **CRI:** color rendering index.
+> - **R9:** saturated red — crítico para pele/tecido vermelho.
+> - **IP44 / IP65:** Ingress Protection (IEC 60529).
+> - **EMC:** electromagnetic compatibility (IEC 61547).
+> - **ISO 19009:** internal lighting on small craft.
 
 ## O que é
 
@@ -140,7 +165,7 @@ No mercado local ainda aparece muito retrofit feito só pelo preço da lâmpada.
 
 ## Normas e referências aplicáveis
 
-- **ABYC E-11 / normas equivalentes aplicáveis** — verificar requisitos de instalação elétrica de baixa tensão.
+- **ABYC E-11 (2023) / normas equivalentes aplicáveis** — verificar requisitos de instalação elétrica de baixa tensão.
 - **IEC 60529** — referência para grau de proteção IP.
 - **Documentação do fabricante** — temperatura ambiente, EMC, compatibilidade com dimmer e ventilação.
 

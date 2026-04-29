@@ -1,0 +1,170 @@
+---
+# Fase 5 - Consolidado Mestre ESTENDIDO (10 reescritas)
+# Data: 2026-04-18
+# Autor: Claude Opus 4.7 + responsavel editorial
+fase: 5
+data_fechamento: "2026-04-18"
+status: "concluida_estendida"
+escopo: "top-5 original + estendida 6-10 (10 reescritas premium totais)"
+
+entregaveis_totais:
+  reescritas_premium: 10
+  yamls_auditoria: 10
+  consolidados: 2  # original top-5 + este estendido
+  ferramentas_python: 1  # calc_queda_tensao_dc.py
+
+reescritas:
+  top_5_original:
+    "01":
+      nota: "20_Baterias_e_Armazenamento/Bateria.md"
+      prioridade: 10
+      entregue_em: "2026-04-17"
+    "02":
+      nota: "20_Baterias_e_Armazenamento/Capacidade de Bateria.md"
+      prioridade: 10
+      entregue_em: "2026-04-17"
+    "03":
+      nota: "80_Infraestrutura_e_Cabeamento/Cabeamento Eletrico.md"
+      prioridade: 10
+      entregue_em: "2026-04-17"
+    "04":
+      nota: "70_Seguranca_e_Emergencia/Bombeamento de Porao.md"
+      prioridade: 10
+      entregue_em: "2026-04-17"
+    "05":
+      nota: "30_Energia_e_Conversao/Gerador (AC).md"
+      prioridade: 10
+      entregue_em: "2026-04-17"
+
+  estendida_6_10:
+    "06":
+      nota: "50_Navegacao_Instrumentacao_e_Comunicacao/NMEA 2000 - NMEA 0183 — Rede de Instrumentos.md"
+      prioridade: 6.3
+      entregue_em: "2026-04-18"
+      delta_linhas: 51
+      callouts_novos: 2
+      termos_glossario: 20
+      diferencial_unico: "primeira nota com distincao explicita NMEA 0183 vs 2000 + PGN no vocabulario"
+    "07":
+      nota: "55_Iluminacao_e_Sinalizacao/Luz de Tope.md"
+      prioridade: 6.1
+      entregue_em: "2026-04-18"
+      delta_linhas: 43
+      callouts_novos: 2
+      termos_glossario: 14
+      diferencial_unico: "COLREGS expandido (5 regras vs 3) + ABYC A-16 + NUC/RAM/CBDR"
+    "08":
+      nota: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+      prioridade: 6.0
+      entregue_em: "2026-04-18"
+      delta_linhas: 61
+      callouts_novos: 2
+      termos_glossario: 24
+      diferencial_unico: "maior glossario ate agora + UN 38.3 + ABYC E-13 + thermal runaway"
+    "09":
+      nota: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+      prioridade: 5.6
+      entregue_em: "2026-04-18"
+      delta_linhas: 68
+      callouts_novos: 2
+      termos_glossario: 25
+      diferencial_unico: "ESD entra no vocabulario + normas em 3 grupos + ABYC A-33 + NEC 555"
+    "10":
+      nota: "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md"
+      prioridade: 5.5
+      entregue_em: "2026-04-18"
+      delta_linhas: 90
+      callouts_novos: 2
+      termos_glossario: 31
+      diferencial_unico: "meta-nota com ART/CREA/PE + 14 normas adicionadas; maior glossario da Fase 5"
+
+metricas_consolidadas:
+  esforco_estimado_total_h: 29
+  esforco_real_total_h: 14
+  ratio_eficiencia: "2.07x"
+  linhas_totais_adicionadas: 313  # soma dos deltas estendida (51+43+61+68+90)
+  callouts_adicionados_totais: 20  # 10 tip + 10 danger
+  termos_glossario_totais: 184  # acumulado ao longo das 10 reescritas
+  normas_canonicalizadas_ou_adicionadas: "60+"
+
+decisoes_fase_5:
+  DEC_11:
+    titulo: "Template de reescrita premium"
+    resumo: "TL;DR (tip) + danger especialista + glossario rapido como padrao das 10 notas"
+    validada_em: 10
+  DEC_12:
+    titulo: "Cobertura multi-tensao"
+    resumo: "12V/24V/48V cobertos em notas de dimensionamento"
+    aplicavel_a: ["Cabeamento", "Bancos de Bateria", "Capacidade de Bateria"]
+  DEC_13:
+    titulo: "Escopo estendido Fase 5"
+    resumo: "Posicoes 6-10 sob demanda, autorizada 2026-04-18; fechada nesta sessao"
+
+normas_adicionadas_ao_vault:
+  ABYC:
+    - "A-16 (Electric Navigation Lights)"
+    - "A-31 (2024) (Battery Chargers and Inverters)"
+    - "A-33 (Shore Power Inlets)"
+    - "E-13 (2022) (Lithium Ion Batteries) -- expandida"
+  ISO:
+    - "16180:2011 (Navigation lights)"
+    - "16315:2016 (Electric propulsion)"
+  IEC:
+    - "60092 (serie, Electrical installations in ships)"
+    - "60364-7-709 (Marinas)"
+    - "61162-1:2016 / 61162-3:2008+A2:2019 (NMEA)"
+    - "11898-1:2015 (CAN data link)"
+  US:
+    - "NEC 555 (NFPA 70 art. 555) (Marinas)"
+    - "NFPA 302 (Pleasure and Commercial Motor Craft)"
+    - "NFPA 303 (Fire Protection for Marinas)"
+    - "USCG 33 CFR 183 Subpart J (nav lights)"
+  internacional:
+    - "COLREGS 72 (Regras 21-31 + Anexo I)"
+    - "ITU-R M.493 (DSC)"
+    - "UN 38.3 (lithium transport)"
+  Brasil:
+    - "NORMAM-01/DPC"
+    - "NORMAM-204/DPC"
+    - "NORMAM-211/DPC (edicao 2022 reforcada)"
+
+commits_gerados:
+  branch_principal: "claude/optimistic-jepsen"
+  commits_fase_5_estendida:
+    - sha_curto: "4e23829"
+      descricao: "#6 NMEA 2000 / NMEA 0183"
+    - sha_curto: "d0f036f"
+      descricao: "#7 Luz de Tope"
+    - sha_curto: "ffe0268"
+      descricao: "#8 Bancos de Bateria"
+    - sha_curto: "592700d"
+      descricao: "#9 CAIS (Pier) (AC)"
+    - sha_curto: "6dccb9c"
+      descricao: "#10 Normas e Regulamentacoes"
+  branch_secundaria: "claude/migrate-frontmatter-apply-20260418"
+  commit_dec_08:
+    sha_curto: "7550a42"
+    descricao: "DEC-08 migrate_frontmatter --apply (106 notas)"
+
+riscos_residuais_e_portal_fase_6:
+  dependencias_confirmar_antes_proxima_fase:
+    - "Edicoes marcadas 'a verificar' em: ABYC A-28, A-33, NEC 555, NFPA 302, NFPA 303, ABYC E-13 (depende de acesso ABYC)"
+    - "NORMAM-01 citada genericamente; confirmar edicao especifica se for para laudo"
+    - "Renderizacao dos visuais Fase 3 (assets ainda pendentes)"
+  prioridades_fase_6_recomendadas:
+    - prioridade: 1
+      tema: "Revisar + merge branch migrate-frontmatter-apply no origin/main"
+      motivo: "Fecha DEC-08; 106 notas ja normalizadas mas ainda em branch separada"
+      esforco: "0.5h (revisao humana)"
+    - prioridade: 2
+      tema: "Fase 6a -- Renderizacao de visuais Fase 3 (pendencia histórica)"
+      motivo: "45 specs visuais existem; alguns renderizados mas falta consolidar pipeline SVG"
+      esforco: "4-8h"
+    - prioridade: 3
+      tema: "Fase 6b -- Sincronia Obsidian -> site/publicacao (se houver portal)"
+      motivo: "10 notas premium agora sao referencia; expor ao publico requer pipeline"
+      esforco: "nao estimavel sem escopo"
+    - prioridade: 4
+      tema: "Fase 6c -- Expandir Fase 5 com posicoes 11-20 (opcional, sob demanda)"
+      motivo: "DEC-13 deixou aberto; proxima rodada cobriria P3 (4.0-5.4)"
+      esforco: "10-15h (mesmo template)"

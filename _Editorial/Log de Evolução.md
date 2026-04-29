@@ -3,8 +3,9 @@ title: "Log de Evolução"
 note_type: "audit-report"
 domain: "_Editorial"
 status: "active-log"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+reviewed_on: "2026-04-17"
+review_jurisdiction:
+  - "Brasil"
 ---
 
 # Log de Evolução

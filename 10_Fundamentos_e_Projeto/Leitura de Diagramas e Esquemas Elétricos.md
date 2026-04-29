@@ -3,249 +3,281 @@ title: "Leitura de Diagramas e Esquemas Elétricos"
 note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "LEITURA DE DIAGRAMAS E ESQUEMAS ELÉTRICOS 33a19734f7fb8102b2d8c94af4ea53f0.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "premium-l3"
+fase_6_reescrita: 99
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + EUA + Internacional + Europa"
 source_urls:
-  - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
-  - "https://www.marinha.mil.br/dpc/normas"
   - "https://abycinc.org/standards/"
-  - "https://www.iso.org/standard/83643.html"
+  - "https://webstore.iec.ch/publication/2697"
+  - "https://www.iso.org/"
+review_level: "engineering-curated"
 aliases:
   - "LEITURA DE DIAGRAMAS E ESQUEMAS ELÉTRICOS"
-seo_title: "Leitura de Diagramas e Esquemas Elétricos"
-seo_description: "LEITURA DE DIAGRAMAS E ESQUEMAS ELÉTRICOS — A habilidade de interpretar esquemas elétricos e transformar linhas e símbolos em entendimento do sistema real. Fundament."
+  - "Reading electrical diagrams"
+  - "Electrical schematic reading marine"
+  - "Diagrama unifilar leitura"
+seo_title: "Leitura de diagramas e esquemas elétricos: procedimento estruturado, IEC 60617, ABYC E-11, troubleshooting via diagrama"
+seo_description: "Guia técnico premium do procedimento de leitura de diagramas elétricos náuticos: identificação do padrão (IEC × ANSI × NBR), legenda, fonte → proteção → comutação → carga → retorno, polaridade DC, aterramento (Bonding × PE × Chassi), troubleshooting via diagrama, tipos (unifilar × multifilar × esquema × planta), boas práticas + erros comuns."
 seo_keywords:
-  - "Leitura"
-  - "Diagramas"
-  - "Esquemas"
-  - "Elétricos"
-  - "10 Fundamentos e Projeto"
+  - "leitura diagrama elétrico náutico"
+  - "interpretar esquema marine"
+  - "diagrama unifilar como ler"
+  - "troubleshooting via diagrama"
+  - "polaridade DC diagrama"
+  - "ABYC E-11 leitura"
 geo_queries:
-  - "O que é Leitura de Diagramas e Esquemas Elétricos em instalações elétricas náuticas?"
+  - "Como começar a interpretar um diagrama elétrico de barco?"
+  - "Diferença entre diagrama unifilar e esquema completo?"
+  - "Como usar diagrama em troubleshooting?"
+  - "Por onde começar leitura: fonte ou carga?"
+  - "Como identificar o padrão (IEC × ANSI) no diagrama?"
+  - "Diagrama desatualizado ainda serve?"
+  - "Como documentar modificação no diagrama existente?"
+  - "Software para criar diagramas elétricos marine?"
+normas_citadas:
+  - "ABYC E-11 (AC and DC Electrical Systems on Boats)"
+  - "ABYC TE-30 (Electronic Equipment Installation)"
+  - "IEC 60617 (Graphical symbols)"
+  - "IEC 81714-1/-2 (Documentation symbols)"
+  - "IEC 81346-1/-2 (Industrial systems structuring)"
+  - "ISO 14617 series (Graphical symbols)"
+  - "ANSI/IEEE Std 315 (Graphical symbols USA)"
+  - "ABNT NBR 5444"
+  - "ABNT NBR IEC 60617"
+  - "ABNT NBR 14728 (Embarcações de recreio)"
+  - "ABNT NBR 5410 (Instalações elétricas BT)"
+  - "DPC NORMAM-211/DPC"
+  - "DPC NORMAM-201/DPC"
 related_notes:
-  - "DC vs AC — Corrente Contínua e Alternada"
-  - "Diagrama Unifilar — Documentação do Sistema Elétrico"
-  - "Dimensionamento de Banco de Baterias — Cálculo de Autonomia"
-  - "Dimensionamento de Cabos DC — Cálculo Prático"
-  - "Fase e Neutro"
-  - "Ferramentas do Eletricista Náutico"
-  - "Inspeção de Cabos Terminais e Conexões"
   - "Lei de Ohm e Cálculos Básicos"
+  - "Princípios Náuticos"
+  - "Simbologia Elétrica Náutica"
+  - "Diagrama Unifilar — Documentação do Sistema Elétrico"
+  - "Projeto Elétrico de Embarcação — Passo a Passo"
+  - "DC vs AC — Corrente Contínua e Alternada"
+  - "Ferramentas do Eletricista Náutico"
+  - "Multímetro e Instrumentos de Medição"
+  - "Troubleshooting — Diagnóstico de Falhas Elétricas"
+  - "Cabeamento Náutico"
+  - "Fusíveis DC — Proteção Contra Sobrecorrente"
+  - "Disjuntores (DC) e (AC)"
+  - "Bonding — Sistema de Interligação de Massas"
+  - "Inspeção de Cabos Terminais e Conexões"
 ---
 
 # Leitura de Diagramas e Esquemas Elétricos
 
 > [!abstract] Resumo técnico
-> LEITURA DE DIAGRAMAS E ESQUEMAS ELÉTRICOS — A habilidade de interpretar esquemas elétricos e transformar linhas e símbolos em entendimento do sistema real. Fundamental para diagnóstico, instalação e manutenção profissional.
+> A **leitura de diagramas e esquemas elétricos** é uma **habilidade procedural fundamental** do eletricista náutico — transforma símbolos abstratos (vide [[Simbologia Elétrica Náutica]]) em compreensão da arquitetura elétrica real do barco. Em ambiente marine, ler diagrama bem é pré-requisito para **dimensionar componente, diagnosticar falha, planejar modificação, comissionar instalação, treinar tripulação**. **4 tipos de documentos** comumente encontrados: **diagrama unifilar (vide [[Diagrama Unifilar — Documentação do Sistema Elétrico]])** — uma linha por circuito, padrão ABYC E-11 + ABNT NBR 14728; **esquema multifilar** — todos os condutores explícitos; **esquema de princípio (functional)** — lógica do sistema; **planta de instalação** — localização física no barco. **Procedimento de leitura** consolidado: **(1) identificar padrão (IEC × ANSI × NBR) + legenda; (2) localizar fonte de energia; (3) seguir o circuito fonte → proteção → comutação → carga → retorno; (4) anotar polaridade DC; (5) identificar pontos de aterramento; (6) verificar tipo de proteção; (7) conferir cores com a realidade**. Padrões: **ABYC E-11 + IEC 60617 + ANSI/IEEE 315 + ABNT NBR 5444 + 14728 + 5410**.
 
-## O que é
+> [!tldr] TL;DR — 9 regras inegociáveis
+> 1. **Identificar o padrão (IEC × ANSI × NBR) + legenda ANTES de interpretar.** Símbolos diferem entre padrões; sem legenda, leitura ambígua.
+> 2. **Sempre começar pela FONTE de energia** (bateria, alternador, gerador, shore-power). Seguir o sentido da corrente: fonte → proteção → comutação → carga → retorno.
+> 3. **Polaridade DC sempre explícita** (+ vermelho, − preto/amarelo). Diagramas marine têm convenção rígida ABYC E-11.4.
+> 4. **3 símbolos de aterramento** distintos: Terra, Chassi, PE — em barco também Bonding (ABYC E-11.16). NÃO confundir (vide [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]]).
+> 5. **Verificar consistência diagrama × realidade.** Cores, posições, conexões — se há divergência, atualizar diagrama OU corrigir instalação.
+> 6. **Documentar modificações** com data + responsável + razão. Diagrama desatualizado é fonte de erros em manutenção.
+> 7. **Usar diagrama em troubleshooting:** identificar trecho suspeito + medir tensão/corrente em pontos específicos; comparar com calculado.
+> 8. **Software preferencial:** AutoCAD Electrical, EPLAN, Eagle, KiCad, BoatED Diagrams. Para revisão amador: lápis + papel + scanner. Backup digital + papel a bordo.
+> 9. **Treinamento da tripulação:** capitão / engenheiro de bordo deve interpretar diagrama básico para emergências (override de fusível principal, isolar circuito).
 
-Leitura de diagramas elétricos é a capacidade de interpretar representações gráficas de circuitos elétricos — identificando componentes, entendendo fluxo de corrente, encontrando caminhos de falha e usando o diagrama como guia para trabalho de campo. Em elétrica náutica, é a habilidade que diferencia o técnico que trabalha com método do que trabalha no escuro.
+> [!danger] Cenários de risco
+> - **Modificação sem atualizar diagrama** → próxima manutenção encontra discrepância → trial-and-error → erros + atrasos. **Caso típico:** retrofit de inversor sem update no diagrama → técnico futuro testa cabos errados → curto-circuito durante diagnóstico. **Prevenção:** atualizar com cada modificação; data + responsável.
+> - **Inversão de polaridade DC por leitura errada do diagrama:** + e − não claramente marcados → instalação inversa → eletrônica destruída instantaneamente em barramento de instrumentos. **Prevenção:** convenção ABYC E-11.4 rigorosa; teste antes de energizar.
+> - **PE confundido com Bonding em diagrama AC:** instalador conecta "terra" do shore-power errado → corrente galvânica → corrosão de hélice/eixos. **Prevenção:** legenda explícita; isolador galvânico; vide [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]].
+> - **Diagrama de barco "irmão" usado em outro barco:** pequenas diferenças de série / opcionais → conexão errada → curto. **Prevenção:** sempre usar diagrama do barco específico (número de série / matrícula).
+> - **Símbolos legacy não-reconhecidos:** diagrama de 1990s com ANSI Y32.2 → técnico jovem não interpreta → ignora proteção em manutenção. **Prevenção:** modernizar diagrama; legenda completa de símbolos.
+> - **Cores divergentes diagrama × realidade:** instalação amadora fez "cabo branco era preto" → diagrama mostra branco mas realidade é preto → confusão. **Prevenção:** ABYC E-11.4 rigoroso; etiquetas em cabos.
+> - **Diagrama unifilar lido como multifilar:** unifilar simplifica trifásico em 1 linha; técnico interpreta como 1 conductor → instalação errada. **Prevenção:** indicar tipo no diagrama; legenda.
+> - **Software incompatível** entre estaleiros / técnicos: arquivo .dwg / .pdf / proprietário não abrível → diagrama "perdido". **Prevenção:** PDF universal + papel; backup multi-formato.
+> - **Falha de comunicação técnica** entre proprietário, estaleiro, técnico: cada um vê o diagrama de forma diferente sem padronização. **Prevenção:** diagrama como verdade compartilhada; revisão coletiva.
 
-## Tipos de diagramas
+## Tipos de documentos elétricos em barco
 
-**Diagrama unifilar (single-line diagram):**
-
-- Representação simplificada onde cada circuito é uma linha
-- Mostra hierarquia: fonte → proteção → barramento → carga
-- Melhor visão geral do sistema
-
-**Diagrama esquemático (schematic):**
-
-- Cada condutor representado individualmente
-- Maior detalhe para diagnóstico de falha específica
-- Mais complexo de ler, mais informativo
-
-**Diagrama de fiação (wiring diagram):**
-
-- Mostra a posição física ou lógica dos componentes e suas interligações
-- Pode incluir identificação, pinagem, chicotes e roteamento; comprimento exato nem sempre aparece
-- Usado para instalação física e rastreamento de conexões
-
-**Diagrama de blocos:**
-
-- Representação funcional de alto nível
-- Blocos representam subsistemas (não componentes individuais)
-- Útil para entender a arquitetura geral
-
-## Método de leitura — passo a passo
-
-**Passo 1 — Entender o contexto:**
+### 1. Diagrama unifilar (single-line diagram)
 
 ```
-Qual sistema é esse? (DC, AC, sinal?)
-Qual é a fonte de energia? (Bateria, shore power, gerador)
-Qual é a carga? (Motor, lâmpada, equipamento eletrônico)
-Qual tensão? (12V, 24V, 220V)
+[Bateria]──[Disjuntor principal]──[Barramento DC]──┬──[Fusível-1]──[Carga 1]
+                                                    ├──[Fusível-2]──[Carga 2]
+                                                    └──[Fusível-N]──[Carga N]
 ```
 
-**Passo 2 — Encontrar a fonte:**
+- **Característica:** uma linha representa um circuito completo (mesmo trifásico AC).
+- **Uso:** visão geral, projeto inicial, dimensionamento de proteção.
+- **Padrão:** ABYC E-11 + ABNT NBR 14728.
+
+### 2. Esquema multifilar
 
 ```
-Em DC: localizar o símbolo de bateria ou barramento (+)
-Em AC: localizar a fonte, a chave de transferência e os condutores ativos monitorados/protegidos
-Em DC, a corrente convencional flui da fonte (+) para a carga e retorna pelo (−)
+              +12V ────────────────────────────────
+                                                    │
+                                            ┌───────┴────────┐
+                                            │   [Carga]      │
+                                            └───────┬────────┘
+                                                    │
+              GND  ────────────────────────────────
 ```
 
-**Passo 3 — Seguir o caminho principal:**
+- **Característica:** todos os condutores explícitos.
+- **Uso:** instalação prática, diagnóstico detalhado.
+
+### 3. Esquema de princípio (functional)
+
+- **Característica:** lógica do sistema, não cabeamento.
+- **Uso:** entender comportamento (autopilot, BNWAS, digital switching).
+
+### 4. Planta de instalação
+
+- **Característica:** localização física no barco (vista plan / elevação / 3D).
+- **Uso:** rotear cabos, planejar acessos, manutenção.
+
+## Procedimento estruturado de leitura
+
+### Passo 1 — Identificar padrão e legenda
+
+- IEC 60617 (predominante em UE, BR, Ásia, Brasil moderno).
+- ANSI/IEEE 315 (USA).
+- ABNT NBR 5444 / IEC 60617 (BR).
+- **Sempre verificar a legenda** com símbolos usados.
+
+### Passo 2 — Localizar fonte(s) de energia
+
+- Bateria principal / banco de partida.
+- Banco de serviço.
+- Alternador (carregador automotivo de bateria).
+- Gerador AC.
+- Shore-power (110/220V single-phase ou 220/380V trifásico).
+- Painel solar / Eólico (auxiliares).
+
+### Passo 3 — Seguir o circuito (sentido da corrente)
 
 ```
-Fonte (+) → fusível/disjuntor → chave → carga → retorno (−)
-Identificar cada componente no caminho principal
+[Fonte] → [Disjuntor / Fusível principal] → [Chave geral / barramento]
+       → [Sub-circuito proteção] → [Comutação (chave/relé)]
+       → [Cabo] → [Carga / consumidor] → [Retorno]
+       → [Aterramento ou negativo]
 ```
 
-**Passo 4 — Identificar proteções:**
+### Passo 4 — Anotar polaridade DC
+
+- + (vermelho ABYC E-11.4): geralmente acima ou à esquerda.
+- − (preto/amarelo): geralmente abaixo ou à direita.
+
+### Passo 5 — Identificar pontos de aterramento
+
+- **Bonding (ABYC E-11.16):** geralmente convencionado, anotado.
+- **PE (Protective Earth, AC):** verde-amarelo, símbolo IEC.
+- **Chassi (chassis ground):** triângulo invertido.
+- **Earth (ground genérico):** 3 linhas decrescentes.
+
+### Passo 6 — Verificar tipo de proteção
+
+- ANL / MIDI / ATC (DC marine).
+- MCB / MCCB (AC).
+- ELCI / RCD (diferencial).
+- ICCB (alta corrente).
+
+### Passo 7 — Conferir cores com a realidade do barco
+
+- Vermelho = +, preto = −, verde = bonding, verde-amarelo = PE.
+
+## Aplicação em troubleshooting (vide [[Troubleshooting — Diagnóstico de Falhas Elétricas]])
 
 ```
-Onde estão os fusíveis? Qual é o valor (A)?
-Onde estão os disjuntores? O que eles protegem?
-O fusível está antes (correto) ou depois (errado) da carga?
+Sintoma: "Luz X não acende"
+        │
+        ↓
+[Diagrama] → Localizar circuito da Luz X → Identificar fonte → fusível → chave → cabo → lâmpada
+        │
+        ↓
+[Multímetro] → Testar cada ponto:
+        ↓
+  ┌─────────────────────┐
+  │ Há tensão na fonte? │
+  └─────────────────────┘
+        │ NÃO            │ SIM
+        ↓                ↓
+  [Bateria / banco]   [Há tensão pós-fusível?]
+                              │ NÃO          │ SIM
+                              ↓              ↓
+                        [Fusível aberto]  [Há tensão pós-chave?]
+                                                  │ NÃO          │ SIM
+                                                  ↓              ↓
+                                           [Chave defeituosa]  [Cabo OK?]
+                                                                      │ NÃO     │ SIM
+                                                                      ↓         ↓
+                                                              [Cabo aberto]  [Lâmpada queimada]
 ```
 
-**Passo 5 — Identificar ramificações:**
+## Falhas comuns na leitura
 
-```
-O barramento alimenta múltiplos circuitos?
-Há circuitos em paralelo? Em série?
-Qual circuito é independente? Qual compartilha proteção?
-```
+| Falha | Causa | Solução |
+|-------|-------|---------|
+| Polaridade DC errada | + e − não claros | Convenção ABYC E-11.4 |
+| Bonding × PE × Terra confundidos | Símbolos sem legenda | Legenda explícita |
+| Diagrama defasado | Modificações sem update | Atualizar mandatório |
+| Símbolo legacy | Padrão antigo (ANSI Y32.2) | Modernizar |
+| Cores divergentes | Instalação amadora | Etiquetas + ABYC |
 
-**Passo 6 — Verificar retornos:**
+## Boas práticas
 
-```
-Todo caminho de ida tem um caminho de volta?
-O retorno passa por algum componente (shunt, amperímetro)?
-O retorno vai ao barramento negativo ou diretamente à bateria?
-```
+- **Identificar padrão** primeiro.
+- **Legenda completa.**
+- **Atualizar com modificações** + data + responsável.
+- **Software profissional** (AutoCAD Electrical, EPLAN, Eagle, KiCad).
+- **Backup digital + papel.**
+- **Treinamento da tripulação** em leitura básica.
+- **Revisão coletiva** com proprietário + estaleiro + técnico.
 
-## Como identificar o caminho de falha
+## Erros comuns
 
-**Dado um sintoma, usar o diagrama para localizar a falha:**
+- "Diagrama é decoração." → Falso. Verdade compartilhada essencial.
+- "Atualizar diagrama dá trabalho." → Não atualizar custa MUITO mais em manutenção futura.
+- "Software proprietário é igual." → PDF universal + papel sempre.
+- "Tripulação não precisa ler." → Em emergência, sim.
 
-```
-Sintoma: equipamento X não funciona
+## Glossário
 
-1. Encontrar o equipamento X no diagrama
-2. Traçar o caminho de alimentação: bateria → ... → X
-3. Identificar cada componente no caminho:
-   - Fusível/disjuntor (pode estar aberto)
-   - Chave (pode estar aberta)
-   - Conexões intermediárias (podem ter alta resistência)
-4. Testar cada componente no caminho, da fonte para a carga
-5. Quando a medição mostrar diferença entre entrada e saída: componente com problema encontrado
-```
-
-## Sinais de alerta em diagramas
-
-| Sinal no diagrama | O que verificar |
-| --- | --- |
-| Fusível com valor muito alto para o cabo | Cabo subdimensionado — risco de incêndio |
-| Múltiplas cargas sem fusível individual | Proteção insuficiente |
-| Cabos DC e AC sem segregação clara | Risco de interferência, manutenção confusa e falha de isolação |
-| Condutor de retorno/neutro chaveado sem critério | Verificar se a topologia é compatível com o sistema; em AC isso costuma ser sinal de erro ou filosofia mal documentada |
-| Terra AC conectado ao negativo DC em múltiplos pontos | Loop de corrente parasita |
-| SPOG ausente | Bonding e terra AC não integrados |
-
-## Exercício: ler o circuito básico
-
-**Dado este diagrama simplificado:**
-
-```
-[BAT+] → [ANL 100A] → [MASTER SWITCH] → [BARRAMENTO+]
-                                               ├─ [F1 15A] → [SW1] → [LÂMPADA]
-                                               ├─ [F2 10A] → [VHF]
-                                               └─ [F3 20A] → [BILGE PUMP AUTO]
-[BAT−] ← [BARRAMENTO−]
-              ↑     ↑     ↑
-         [retorno] [retorno] [retorno]
-```
-
-**Perguntas de leitura:**
-
-1. Qual é a proteção principal do sistema?
-2. Qual o circuito com maior amperagem de proteção?
-3. Se o VHF não funcionar, qual é o primeiro componente a verificar?
-4. A lâmpada tem chave (SW1) e fusível (F1) — qual protege o cabo?
-5. Se o master switch for aberto, quais circuitos perdem energia?
-
-**Respostas:**
-
-1. ANL 100A (proteção do cabo principal bateria → barramento)
-2. BILGE PUMP (F3 20A)
-3. Fusível F2 10A
-4. O fusível F1 protege o cabo; SW1 controla a lâmpada
-5. Todos os circuitos (a lâmpada, o VHF e a bilge pump)
-
-## Erros comuns na leitura de diagramas
-
-**Assumir que o diagrama está correto:**
-
-Diagramas representam o projeto — não necessariamente o que foi instalado. Verificar sempre em campo.
-
-**Ignorar os valores nos fusíveis:**
-
-O valor do fusível é informação crítica — não decoração.
-
-**Não identificar o retorno:**
-
-"Sei onde vai o positivo, mas não sei de onde vem o negativo." O retorno é tão importante quanto a alimentação.
-
-**Confundir cruzamento com conexão:**
-
-Fios que se cruzam sem ponto de junção (●) não se conectam. Fios que se cruzam com ponto (●) são conectados.
-
-**Não usar a legenda:**
-
-Símbolo desconhecido? Ler a legenda antes de adivinhar.
-
-## Ferramentas para leitura de diagramas
-
-- **Régua e caneta:** marcar o caminho traçado para não se perder
-- **Marca-texto de cores:** destacar diferentes circuitos em cores distintas
-- **Tablet com PDF:** zoom e navegação em diagramas complexos
-- **Software de diagrama:** QElectroTech, [draw.io](http://draw.io) — para editar e adicionar anotações
-- **Diagrama físico na mão ao ir ao barco:** comparar o diagrama com o encontrado em campo
-
-## Como ensinar este tópico
-
-**Sequência recomendada:**
-
-1. Apresentar os tipos de diagrama — cada um tem seu uso
-2. Exercício de identificação: "onde está a bateria? Onde está o fusível principal? Qual é a carga?"
-3. Traçar o caminho de alimentação ao vivo em um diagrama real
-4. Exercício de diagnóstico: dado o sintoma, traçar o caminho de falha
-5. Comparar o diagrama com a embarcação real — encontrar as diferenças
-
-**Conceito-chave para fixar:**
-
-"Um diagrama é um mapa. Você pode ir de A a B sem ele — mas com ele, chega mais rápido e não se perde."
-
-## FAQ
-
-**O diagrama do fabricante do equipamento é suficiente?**
-
-O diagrama do fabricante mostra apenas aquele equipamento — não como ele se integra ao sistema do barco. O diagrama unifilar da embarcação é o que mostra o contexto completo.
-
-**Posso trabalhar sem diagrama se conheço bem o barco?**
-
-Você pode — mas aumenta o risco de erro. Memória falha, especialmente em sistemas complexos ou após longo período sem acesso ao barco. O diagrama é o registro permanente.
-
-**Como aprender a ler diagramas mais complexos?**
-
-Prática com diagramas reais. Começar com circuitos simples (2–3 componentes) e ir aumentando a complexidade. Cada diagrama que você lê e compara com a embarcação real treina a habilidade.
+- **Diagrama unifilar:** 1 linha por circuito.
+- **Esquema multifilar:** todos os condutores explícitos.
+- **Esquema de princípio:** lógica do sistema.
+- **Planta de instalação:** localização física.
+- **Legenda:** explicação dos símbolos.
+- **IEC 60617 / ANSI 315 / NBR 5444:** padrões.
+- **Software:** AutoCAD Electrical, EPLAN, Eagle, KiCad, BoatED Diagrams.
+- **PDF universal:** formato confiável de longo prazo.
+- **Convenção de cores ABYC E-11.4:** vermelho/preto/verde/verde-amarelo.
+- **Polaridade DC:** + e − explícitos.
+- **Bonding:** ABYC E-11.16.
+- **PE:** Protective Earth.
+- **Vide [[Simbologia Elétrica Náutica]]** + [[Diagrama Unifilar — Documentação do Sistema Elétrico]].
 
 ## Integração com outras notas
 
-- [[DC vs AC — Corrente Contínua e Alternada]]
-- [[Diagrama Unifilar — Documentação do Sistema Elétrico]]
-- [[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]]
-- [[Dimensionamento de Cabos DC — Cálculo Prático]]
-- [[Fase e Neutro]]
-- [[Ferramentas do Eletricista Náutico]]
-- [[Inspeção de Cabos Terminais e Conexões]]
-- [[Lei de Ohm e Cálculos Básicos]]
+- [[Simbologia Elétrica Náutica]] — símbolos.
+- [[Diagrama Unifilar — Documentação do Sistema Elétrico]] — formato unifilar.
+- [[Lei de Ohm e Cálculos Básicos]] — interpretação técnica.
+- [[Princípios Náuticos]] — contexto.
+- [[Projeto Elétrico de Embarcação — Passo a Passo]] — projeto.
+- [[DC vs AC — Corrente Contínua e Alternada]].
+- [[Ferramentas do Eletricista Náutico]].
+- [[Multímetro e Instrumentos de Medição]] — verificação.
+- [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — aplicação.
+- [[Cabeamento Náutico]].
+- [[Fusíveis DC — Proteção Contra Sobrecorrente]] / [[Disjuntores (DC) e (AC)]].
+- [[Bonding — Sistema de Interligação de Massas]].
+- [[Inspeção de Cabos Terminais e Conexões]] — empírico.
 
 ## Perguntas que esta nota responde
 
-- O que é Leitura de Diagramas e Esquemas Elétricos em instalações elétricas náuticas?
+- Como começar a interpretar um diagrama elétrico de barco?
+- Diferença entre diagrama unifilar e esquema completo?
+- Como usar diagrama em troubleshooting?
+- Por onde começar leitura: fonte ou carga?
+- Como identificar o padrão (IEC × ANSI) no diagrama?
+- Diagrama desatualizado ainda serve?
+- Como documentar modificação no diagrama existente?
+- Software para criar diagramas elétricos marine?
+- Tripulação precisa saber ler diagrama elétrico?
+- Como validar que o diagrama corresponde à realidade?

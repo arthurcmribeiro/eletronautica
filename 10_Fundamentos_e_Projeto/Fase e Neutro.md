@@ -3,9 +3,22 @@ title: "Fase e Neutro"
 note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "FASE E NEUTRO 3fc19734f7fb8307932d81f9a93b33b1.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "01"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-28 (edição a verificar) — Galvanic Isolators"
+  - "ABYC A-33 (edição a verificar) — Shore Power Inlets"
+  - "ISO 13297:2020 — Small craft — AC electrical installations"
+  - "IEC 60364-7-709 — Electrical installations — Marinas"
+  - "ABNT NBR 5410 (2004 + emendas) — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC (2022) — esporte e recreio"
+  - "NEC 555 (NFPA 70 art. 555, edição a verificar) — Marinas"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -44,6 +57,16 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Fase e neutro são funções elétricas, não apelidos de fio. Em embarcações, a interpretação correta depende da topologia da fonte ativa: cais, gerador, inversor ou secundário derivado. No Brasil, o erro mais grave é assumir que todo 220 V já traz neutro; em muitas marinas o barco recebe 220 V entre dois condutores ativos, e transformar um deles em "neutro" por ligação ao PE, ao negativo DC ou ao bonding é um defeito de projeto com potencial para disparos erráticos, circulação indevida de corrente, dano eletrônico e incêndio.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Fase e neutro são funções, não cor de fio nem convenção do instalador.**
+> - **220 V no Brasil pode ser `L + N + PE` ou `L1 + L2 + PE`** — medir 220 V entre dois bornes NÃO prova que há neutro.
+> - **NUNCA criar "neutro" bondando um ativo ao PE, ao negativo DC ou ao bonding.** Essa é a raiz de incêndios e eletrocussões em marinas brasileiras.
+> - **Neutro só existe** se (a) a topologia da fonte fornece ou (b) um sistema derivado (transformador de isolamento, gerador, inversor) o cria por projeto.
+> - **Bond N-PE acontece na origem** (fonte ou ponto único do sistema derivado) — duplicar bond a bordo é defeito.
+> - **Ensaio de 4 medições antes de energizar:** tensão L-L + L1-PE + L2-PE + continuidade PE até o barramento de proteção.
+> - **Topologia incerta ou mista entre regiões** → transformador de isolamento a bordo cria sistema derivado previsível.
+> - **DR disparando errático em uma marina e não em outra** = sintoma de topologia errada, não de DR defeituoso.
 
 ## O que é
 
@@ -175,6 +198,19 @@ Em motores e módulos eletrônicos modernos, isso é particularmente grave porqu
 - revisar o projeto inteiro quando a embarcação mudar de região, pedestal ou filosofia de shore power;
 - ensaiar a entrada do cais antes da primeira conexão, não depois da primeira queima.
 
+> [!danger] Quando chamar especialista
+> Erro de topologia AC não é problema de DIY — é o tipo de falha que aparece como "intermitente" até o dia do sinistro. Pare e procure engenheiro eletricista naval com ART/CREA quando:
+> - **Laudo de aceitação AC em marina nova ou desconhecida** sem projeto de entrada documentado (qual topologia o barco aceita).
+> - **Conversão de embarcação `L + N + PE` → `L1 + L2 + PE`** (ou vice-versa) sem projeto de sistema derivado com transformador de isolamento.
+> - **Instalação de transformador de isolamento a bordo criando novo neutro** — projeto de sistema derivado é responsabilidade de engenheiro, não de instalador.
+> - **Barco com múltiplas fontes** (gerador + shore + inversor) e bond N-PE em mais de um ponto — coordenação é projeto de engenharia.
+> - **Divergência confirmada entre diagrama e realidade** (neutro no papel, `L1 + L2` na entrega) — redesenhar, não improvisar.
+> - **Sintomas de "DR errático"** em diferentes marinas — o DR está OK; a topologia está errada. Diagnóstico pede fotômetro/instrumentação.
+> - **Eletrocussão em banhista próximo à embarcação ou à marina** — chamar autoridades antes de mexer no sistema (cadeia de custódia normativa).
+> - **Arco, cheiro de queimado ou carbonização em condutor de proteção (PE)** — corrente circulando onde não deveria; parar tudo.
+>
+> Custo de 3-6 h de engenheiro para revalidar topologia é irrisório frente a perda de casco por incêndio elétrico, processo por eletrocussão ou perda de seguro por laudo inconsistente.
+
 ## Erros comuns
 
 **Assumir que 220 V significa automaticamente fase-neutro:**
@@ -205,10 +241,10 @@ Quando o falso neutro encosta no universo `PE/DC/bonding`, a embarcação perde 
 
 ## Normas e referências de engenharia
 
-- **ABYC E-11**: referência forte para arquitetura AC/DC, mas deve ser aplicada com adaptação à topologia brasileira de alimentação.
-- **ISO 13297**: trata sistemas elétricos AC monofásicos em pequenas embarcações e reforça a importância de definir a arquitetura da fonte.
-- **ABNT NBR 5410**: referência complementar de baixa tensão para identificação de condutores e princípios de proteção, sem substituir norma náutica.
-- **NORMAM-211**: referência regulatória brasileira para o ambiente de embarcações de esporte e recreio; não substitui a engenharia de projeto.
+- **ABYC E-11 (2023)**: referência forte para arquitetura AC/DC, mas deve ser aplicada com adaptação à topologia brasileira de alimentação.
+- **ISO 13297:2020**: trata sistemas elétricos AC monofásicos em pequenas embarcações e reforça a importância de definir a arquitetura da fonte.
+- **ABNT NBR 5410 (2004 + emendas)**: referência complementar de baixa tensão para identificação de condutores e princípios de proteção, sem substituir norma náutica.
+- **NORMAM-211 (2022 rev. aplicável via DPC)**: referência regulatória brasileira para o ambiente de embarcações de esporte e recreio; não substitui a engenharia de projeto.
 
 ## FAQ
 
@@ -231,6 +267,31 @@ Nem sempre do jeito esperado. DR mal aplicado em topologia mal entendida pode di
 **ABYC está errada para o Brasil?**
 
 Não. Errado é importar a solução sem refazer a leitura da alimentação local, do esquema de aterramento e do objetivo real do projeto.
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Fase (L)** | Condutor ativo AC com diferença de potencial em relação a outro ativo ou ao neutro |
+| **Neutro (N)** | Condutor funcional de retorno — só existe se a topologia da fonte ou um sistema derivado o definir |
+| **PE (Protective Earth)** | Condutor de proteção (verde/amarelo) — segurança, não retorno operacional |
+| **Bonding** | Interligação equipotencial de massas metálicas — anticorrosão/equipotencialidade, NÃO retorno AC |
+| **Negativo DC** | Condutor de retorno do sistema DC — não é neutro AC nem PE |
+| **L + N + PE** | Topologia monofásica clássica com neutro funcional |
+| **L1 + L2 + PE** | Topologia fase-fase: dois ativos + PE, sem neutro entregue |
+| **Split-phase 120/240 V** | Padrão US: dois ativos defasados 180° + neutro central + PE |
+| **220 V brasileiro** | Valor nominal — pode ser `L + N + PE` OU `L1 + L2 + PE` conforme região/marina |
+| **Sistema derivado** | Fonte secundária a bordo (transformador, gerador, inversor) que cria nova referência de neutro |
+| **Transformador de isolamento** | Cria sistema derivado com neutro próprio, elimina vínculo galvânico com a marina |
+| **N-PE bond** | Ligação ponto único entre neutro e PE — feita na fonte, NUNCA duplicada a bordo |
+| **Ponto único de bond** | Único local autorizado para o N-PE bond em todo o sistema |
+| **Topologia da fonte** | Arquitetura dos condutores entregues pela fonte ativa naquele instante |
+| **Neutro funcional** | Condutor neutro real, fornecido pela topologia |
+| **Neutro falso** | Ativo promovido artificialmente a neutro por bond indevido — defeito grave |
+| **DR / RCD** | Dispositivo diferencial residual — protege contra fuga, mede L vs N (ou L1 vs L2) |
+| **ELCI** | Equipment Leakage Circuit Interrupter — DR de bordo padrão ABYC (30 mA) |
+| **Shore power** | Energia AC fornecida pela marina — sua topologia define o que o barco recebe |
+| **Bond múltiplo** | Erro grave: bond N-PE em mais de um ponto (cria laço de corrente no PE) |
 
 ## Integração com outras notas
 

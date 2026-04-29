@@ -3,14 +3,38 @@ title: "Dsc — Chamada Seletiva Digital"
 note_type: "technical-note"
 domain: "50_Navegacao_Instrumentacao_e_Comunicacao"
 source_file: "DSC — CHAMADA SELETIVA DIGITAL 33a19734f7fb81b9a8a4c4bd78298cb7.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "19"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "GMDSS (IMO) — Global Maritime Distress and Safety System"
+  - "SOLAS Cap. IV — Radiocommunications"
+  - "ITU-R M.493 — Digital Selective Calling system for use in the maritime mobile service"
+  - "ITU-R M.541 — Operational procedures for the use of DSC equipment in the maritime mobile service"
+  - "ITU-R M.821 — Optional expansion of the Digital Selective-Calling system for use in the maritime mobile service"
+  - "ITU Radio Regulations — Appendix 18 (alocação do Canal 70 DSC)"
+  - "IEC 62238 — Maritime VHF radiotelephone equipment and systems with integrated Class D DSC"
+  - "IEC 61097-3 — DSC equipment operating in MF, MF/HF and VHF bands"
+  - "IEC 61097-7 — Shipborne VHF radiotelephone transmitter and receiver"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 61162-1/-2 (NMEA 0183) — Digital interfaces for navigational devices"
+  - "IEC 61162-3 (NMEA 2000) — Network-based digital interface"
+  - "NORMAM-204/DPC — Serviço Móvel Marítimo e Serviço Móvel Marítimo por Satélite"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "Resoluções ANATEL aplicáveis — Serviço Móvel Marítimo e registro de MMSI"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats (alimentação do VHF/DSC)"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://www.nmea.org/standards.html"
   - "https://www.gov.br/anatel/pt-br/regulado/outorga/servico-movel-maritimo"
+  - "https://www.itu.int/pub/R-REC"
+  - "https://www.imo.org/en/OurWork/Safety/Pages/GMDSS.aspx"
 aliases:
   - "DSC — CHAMADA SELETIVA DIGITAL"
 seo_title: "Dsc — Chamada Seletiva Digital"
@@ -38,7 +62,29 @@ related_notes:
 # Dsc — Chamada Seletiva Digital
 
 > [!abstract] Resumo técnico
-> DSC — CHAMADA SELETIVA DIGITAL — Sistema de chamada seletiva e socorro digital integrado ao rádio VHF. Permite transmitir identidade e, quando corretamente integrado, posição GNSS ao acionar uma chamada de emergência. Requisitos de porte e configuração devem ser confirmados conforme o enquadramento regulatório aplicável.
+> DSC — CHAMADA SELETIVA DIGITAL — Sistema de chamada seletiva e socorro digital integrado ao rádio VHF. Permite transmitir identidade e, quando corretamente integrado, posição GNSS ao acionar uma chamada de emergência. Requisitos de porte e configuração devem ser confirmados conforme o enquadramento regulatório aplicável. Sem MMSI válido e sem GPS integrado, o DSC é apenas um botão vermelho decorativo.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **DSC = MMSI + GPS. Faltou um, não é DSC — é rádio de voz.** Distress acionado sem GPS transmite apenas MMSI e natureza da emergência; socorro chega sem posição. Distress sem MMSI programado é ignorado pelas estações costeiras (sem identificação válida).
+> 2. **Canal 70 é exclusivo para DSC — nunca voz.** 156,525 MHz é canal digital reservado mundialmente. Transmitir voz no Canal 70 = interferência no socorro de outras embarcações + violação regulatória.
+> 3. **Distress acionado acidentalmente é falso alerta — tem protocolo obrigatório.** Assim que perceber: Canal 16 → "CANCEL DISTRESS — FALSE ALERT — MMSI XXXXXXXXX — nome do barco — posição". Não cancelar agrava (multa + investigação de desvio de recursos SAR).
+> 4. **MMSI só se programa 1× em Classe D típica.** O segundo reset exige laboratório autorizado ou substituição do rádio. Programar sem certeza do número **oficial** = perder o rádio para o DSC.
+> 5. **NMEA 0183 para DSC: pinos e sentenças certas.** GPS TX+ → VHF NMEA IN+ / GPS TX− → VHF NMEA IN− / baud 4800 / sentença **$GPRMC** (ou RMC + GLL). Muitos instaladores invertem TX/RX ou usam só GLL — resultado: "No position data".
+> 6. **NMEA 2000 é mais simples e mais confiável para DSC moderno.** Um cabo Micro-C em backbone ativo entrega PGN 129025/129029 automaticamente. Não exige cabeamento seriado ponto-a-ponto.
+> 7. **Dual Watch / Tri Watch deve estar sempre ligado.** O DSC do Canal 70 é monitorado em background pelo rádio, mesmo enquanto você escuta outro canal. Desativar para "economizar bateria" = cegueira digital.
+> 8. **Chamada individual DSC é o telefone marítimo.** Em vez de gritar no Canal 16 e escolher canal de trabalho, chama o MMSI destino com canal sugerido → o outro rádio toca e propõe aceitar. Uso profissional reduz poluição no Canal 16.
+> 9. **Registro oficial do MMSI no Brasil é via ANATEL + base DPC/GMDSS.** Número "tirado da internet" ou "mesmo do rádio anterior" → não consta no ITU MARS nem em SAR database → socorro demora. Registro regular leva alguns dias; pagar taxa e manter atualizado vale a segurança.
+
+> [!danger] Quando chamar um especialista
+> - **Rádio classe D com MMSI travado pelo instalador anterior:** laboratório autorizado do fabricante (Standard Horizon, Icom, Garmin). Nunca abrir o rádio para "resetar" — a reprogramação é por software proprietário com senha.
+> - **Acidente com Distress não cancelado:** após 24–48h, o SAR/Salvamar registra falso alerta, abre investigação e pode aplicar multa. Se a emergência real ocorreu e o rádio perdeu a chamada, perícia precisa do log do equipamento.
+> - **Registro MMSI em embarcação com histórico fiscal/regulatório complexo (mudança de bandeira, cessão, frota comercial):** despachante naval ou corretora marítima. Erro no cadastro impede liberação da estação de navio.
+> - **Instalação de DSC em barco com múltiplas antenas RF próximas (VHF dual, radar, HF-SSB, satcom):** o rádio pode receber falsos alertas ou falhar ao transmitir por intermodulação. Engenheiro de RF naval com analisador de espectro.
+> - **Falha sistemática de chamadas individuais DSC (nenhuma outra embarcação responde):** verificar código de país do MMSI, compatibilidade Classe D×Classe B, atualização de firmware, senha de DSC, tabela de MMSIs cadastrados no rádio. Técnico com bancada de teste.
+> - **Embarcação SOLAS ou em missão de trabalho offshore:** Class A DSC + GMDSS área A1/A2/A3/A4, redundância, fonte reserva, gravador de dados. Instalação e inspeção por prestador homologado DPC + órgão de bandeira.
+> - **Importação de rádio de outro país sem homologação Anatel:** equipamento pode funcionar mas não terá suporte legal em emergência — autoridades podem rastrear o MMSI e identificar irregularidade na homologação. Consultar despachante/advogado.
+> - **DSC disparando distress sozinho (botão preso, relé interno):** risco de arresto pela Capitania e perda de confiança da rede SAR. Desligar o rádio, remover antena, procurar assistência. Não desconectar apenas a alimentação sem comunicação — o log continua.
+> - **Teste real de distress em barco novo (comissionamento):** somente com coordenação prévia com MRCC/Salvamar. Nunca acionar o Distress "para testar" sem aviso — a cadeia de resposta é acionada e recursos SAR são mobilizados.
 
 ## O que é
 
@@ -129,7 +175,7 @@ Rádios modernos com Micro-C conector recebem posição diretamente do backbone 
 | **Classe D** | Lazer e recreio | Distress + individual + Canal 70 watch |
 | **Classe C** | Legado (raro) | Sem watch automático no C70 |
 | **Classe B** | Comercial menor | Mais funções que D |
-| **Classe A** | Comercial / SOLAS | Funcionalidade completa, GMDSS |
+| **Classe A** | Comercial / SOLAS (edição a verificar) | Funcionalidade completa, GMDSS |
 
 Para embarcações de esporte e recreio: Classe D é o padrão e o suficiente.
 
@@ -212,7 +258,7 @@ Verificação completa do DSC:
 
 - Instalar o VHF sem conectar o GPS (DSC inútil)
 - Não programar o MMSI (DSC inútil)
-- Programar MMSI mas não registrar na Anatel
+- Programar MMSI mas não registrar na ANATEL (edição a verificar)
 - Usar cabo de antena RG-58 em vez de RG-8X (perda de sinal)
 - Inverter TX/RX do NMEA (GPS não chega ao VHF)
 - Instalar a antena VHF próxima à antena de GPS (interferência)
@@ -229,7 +275,7 @@ Verificação completa do DSC:
 
 | Aspecto | Brasil | Internacional |
 | --- | --- | --- |
-| Obrigatoriedade VHF | NORMAM-01 (embarcações ≥8m offshore) | Varies por bandeira |
+| Obrigatoriedade VHF | NORMAM-01 (edição a verificar) (embarcações ≥8m offshore) | Varies por bandeira |
 | MMSI registrado | Maioria não fez | Padrão nos EUA/Europa |
 | GPS integrado ao VHF | Raramente feito por instaladores | Considerado básico |
 | Conhecimento de acionamento DSC | Muito baixo | Maior (treinamento obrigatório) |
@@ -239,13 +285,75 @@ Verificação completa do DSC:
 
 **Mais presente em embarcações maiores/premium:** Icom IC-M510 com N2K, VHF duplo (painel + flybridge).
 
+## Glossário rápido
+
+- **DSC (Digital Selective Calling):** chamada seletiva digital definida pela ITU-R M.493. Protocolo digital para distress, urgência, segurança, chamadas individuais, de grupo e geográficas.
+- **Canal 70 (156,525 MHz):** canal VHF exclusivo para tráfego DSC. Zero voz.
+- **Canal 16 (156,800 MHz):** canal de voz para socorro, urgência, segurança e chamada. DSC chama → confirmação e voz acontecem no 16.
+- **MMSI (Maritime Mobile Service Identity):** identificador numérico de 9 dígitos da estação marítima.
+- **MID (Maritime Identification Digits):** 3 primeiros dígitos do MMSI que identificam o país. Brasil: 710–719.
+- **Classe A DSC:** conjunto completo exigido em navios SOLAS. Todas as categorias de chamada, múltiplos canais, integração GMDSS total.
+- **Classe B DSC:** legado, menos comum. Mais recursos que Classe D, menos que Classe A.
+- **Classe C DSC:** legado/aposentada. Sem watch automático no Canal 70.
+- **Classe D DSC:** padrão em rádio de recreio. IEC 62238. Distress + individual + watch Canal 70.
+- **Classe E DSC:** legado associado ao SSB/HF.
+- **Distress Alert:** chamada de socorro digital com MMSI + posição (se GPS integrado) + natureza da emergência.
+- **Distress Relay:** retransmissão automática do alerta por outras estações que ouviram o distress.
+- **Distress Ack (Acknowledgement):** confirmação de recebimento emitida pela estação costeira / Coast Guard.
+- **All Ships Call:** chamada DSC para todas as estações em alcance. Usada para avisos gerais não-emergency.
+- **Individual Call:** chamada DSC ponto-a-ponto pelo MMSI destino — equivalente ao "telefone" marítimo.
+- **Group Call:** chamada a um MMSI de grupo (frota, clube).
+- **Geographic Area Call:** chamada DSC a todas as estações em uma área geográfica (lat/lon + raio).
+- **Position Request:** solicitação DSC da posição de outra embarcação (autorização pode ser requerida).
+- **Position Report:** resposta à Position Request ou envio voluntário de posição.
+- **Urgency Call:** prioridade 2 (Pan-Pan).
+- **Safety Call:** prioridade 3 (Sécurité — aviso à navegação).
+- **Routine Call:** prioridade 4 (chamadas operacionais comuns).
+- **Natureza da emergência (Distress Nature):** código escolhido no menu do Distress — Fire/Explosion, Flooding, Collision, Grounding, Listing, Sinking, Disabled and adrift, Abandoning ship, Piracy, Man overboard, Undesignated.
+- **Self-ID:** identificação automática do MMSI + nome programado no rádio.
+- **Watch mode:** escuta do Canal 70 DSC em segundo plano mesmo quando rádio está em outro canal.
+- **Dual Watch:** monitora Canal 16 + 1 canal de trabalho.
+- **Tri Watch:** monitora Canal 16 + Canal 70 + 1 canal de trabalho.
+- **GMDSS (Global Maritime Distress and Safety System):** sistema IMO integrando DSC, EPIRB, SART, NAVTEX, Inmarsat.
+- **Área A1/A2/A3/A4:** cobertura GMDSS (A1 = VHF DSC costeiro).
+- **MRCC (Maritime Rescue Coordination Centre):** centro coordenador SAR. Brasil: Salvamar Brasil (Marinha do Brasil).
+- **SAR (Search and Rescue):** busca e salvamento marítimo.
+- **ITU MARS (Maritime mobile Access and Retrieval System):** base de dados ITU que lista MMSIs registrados mundialmente.
+- **EPIRB (Emergency Position-Indicating Radio Beacon):** rádio-baliza 406 MHz via satélite (Cospas-Sarsat) — complementar ao DSC em alto-mar.
+- **SART (Search And Rescue Transponder):** respondedor radar 9 GHz para localização de sobreviventes.
+- **NAVTEX:** serviço de boletins meteorológicos e de segurança em texto (MF 518 kHz).
+- **Posição via NMEA:** o VHF/DSC obtém lat/lon via NMEA 0183 ($GPRMC, $GPGLL) ou NMEA 2000 (PGN 129025/129029).
+- **Sentença $GPRMC:** posição + velocidade + data + hora UTC — base mínima para o DSC.
+- **PGN 129808 (NMEA 2000):** DSC Call Information — o chartplotter exibe o distress recebido em tempo real.
+- **Heartbeat NMEA:** periodicidade em que o VHF verifica se o GPS ainda está fornecendo posição válida.
+- **No Position Data:** mensagem indicando que o VHF não recebe posição — DSC transmitirá distress sem lat/lon.
+- **Botão Distress / tampa protetora:** botão vermelho protegido; pressionar 3–5 s envia o distress.
+- **Canal 13 Bridge-to-Bridge:** canal operacional para comunicação entre pontes de navios (complemento, não DSC).
+- **Anatel — Serviço Móvel Marítimo:** atribuição de MMSI, indicativo e licenciamento no Brasil.
+- **ROC (Restricted Operator Certificate):** certificado de operador restrito VHF — exigido em várias jurisdições; no Brasil, consulte regulamentação vigente.
+- **GOC / LRC:** certificados para operador GMDSS (comercial/profissional).
+- **ATIS:** identificação automática exigida em hidrovias europeias — distinto de DSC.
+
 ## Normas e referências
 
-- **ITU-R M.493:** Padrão internacional DSC
-- **ITU-R M.541:** Manutenção de escuta no Canal 70
-- **NORMAM-01/DPC:** Regulamento brasileiro para equipamentos de comunicação
-- **GMDSS (Global Maritime Distress and Safety System):** Sistema global onde o DSC está inserido
-- **Anatel:** órgão responsável pelo registro de MMSI no Brasil
+- **GMDSS (IMO — Global Maritime Distress and Safety System)** — arcabouço global onde o DSC está inserido.
+- **SOLAS, Cap. IV — Radiocommunications** — convenção IMO para equipamentos de comunicação em navios.
+- **ITU-R M.493** — *Digital Selective Calling system for use in the maritime mobile service.* Especificação técnica do protocolo DSC.
+- **ITU-R M.541** — *Operational procedures for the use of DSC equipment.* Procedimentos operacionais, obrigações de escuta.
+- **ITU-R M.821** — *Optional expansion of the DSC system.* Extensões e chamadas adicionais.
+- **ITU Radio Regulations, Apêndice 18** — alocação do Canal 70 e demais canais VHF marítimos.
+- **IEC 62238** — *Maritime VHF radiotelephone equipment and systems with integrated Class D DSC.* Referência para rádio de recreio.
+- **IEC 61097-3** — *DSC equipment operating in MF, MF/HF and VHF bands.*
+- **IEC 61097-7** — *Shipborne VHF radiotelephone transmitter and receiver.*
+- **IEC 60945** — *Maritime navigation and radiocommunication equipment — General requirements.*
+- **IEC 61162-1/-2 (NMEA 0183)** — interface serial para integração GPS ↔ VHF/DSC.
+- **IEC 61162-3 (NMEA 2000)** — rede CAN-based com PGN 129808 (DSC Call Information).
+- **NORMAM-204/DPC** — *Serviço Móvel Marítimo e Serviço Móvel Marítimo por Satélite.*
+- **NORMAM-201/DPC** — *Tráfego e Permanência de Embarcações.*
+- **NORMAM-211/DPC** — *Embarcações de esporte e recreio.*
+- **Resoluções ANATEL aplicáveis** — Serviço Móvel Marítimo, registro de MMSI, indicativo de chamada. Verificar edição vigente caso a caso.
+- **ABYC E-11 (2023)** — *AC and DC Electrical Systems on Boats.* Base para alimentação e proteção do VHF/DSC.
+- **ABNT NBR 5410:2004 + emendas** — *Instalações elétricas de baixa tensão.* Complemento nacional.
 
 ## Como ensinar este tópico
 
@@ -261,7 +369,7 @@ Verificação completa do DSC:
 
 ## Ideias de vídeos
 
-- "Como registrar seu MMSI na Anatel — passo a passo"
+- "Como registrar seu MMSI na ANATEL (edição a verificar) — passo a passo"
 - "Por que seu VHF não vai te salvar se não tiver GPS conectado"
 - "Configurando DSC no VHF: MMSI + integração GPS"
 - "Teste de DSC: o que acontece quando você aperta o botão MAYDAY"
@@ -284,7 +392,7 @@ Sim. Rádios com dual/tri-watch monitoram simultaneamente o Canal 16 e o Canal 7
 
 **Posso registrar o MMSI eu mesmo?**
 
-Sim, diretamente no site da Anatel (gratuito para embarcações de lazer). Em alguns países, associações náuticas também fazem o registro.
+Sim, diretamente no site da ANATEL (edição a verificar) (gratuito para embarcações de lazer). Em alguns países, associações náuticas também fazem o registro.
 
 **Se eu vender minha embarcação, o MMSI vai junto?**
 

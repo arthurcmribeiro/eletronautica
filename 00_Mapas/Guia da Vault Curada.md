@@ -2,9 +2,12 @@
 title: "Guia da Vault Curada"
 note_type: "guide"
 domain: "00_Mapas"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
+status: "moc-curated"
+fase_6_reescrita: 119
+reviewed_on: "2026-04-26"
 review_jurisdiction: "Brasil"
+review_level: "moc-curated"
+normas_citadas: []
 aliases:
   - "Guia da Vault"
 seo_title: "Guia da vault curada de elétrica náutica"

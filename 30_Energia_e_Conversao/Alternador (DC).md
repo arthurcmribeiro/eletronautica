@@ -3,14 +3,31 @@ title: "Alternador (DC)"
 note_type: "component"
 domain: "30_Energia_e_Conversao"
 source_file: "ALTERNADOR (DC) e2819734f7fb8224ab728189f1ab5518.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "14"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
 review_jurisdiction: "Brasil"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries (interface com alternador)"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC H-25 (2023) — Power feeds for engine-mounted accessories"
+  - "ISO 13297:2020 — Small craft — AC and DC installations"
+  - "ISO 8846:2022 — Small craft — Electrical devices — Protection against ignition of surrounding flammable gases"
+  - "ISO 8849:2003 — Electrically operated DC bilge pumps (referência de motor DC marinizado)"
+  - "SAE J1171 — Marine ignition protection for alternators and starters"
+  - "UL 1500 — Ignition-protected marine products"
+  - "NMEA 2000 (IEC 61162-3) — Comunicação de rede marítima"
+  - "ABNT NBR 5410:2004 — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
   - "https://abycinc.org/standards/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.sae.org/"
+  - "https://www.ul.com/"
 aliases:
   - "ALTERNADOR (DC)"
 seo_title: "Alternador (DC)"
@@ -39,6 +56,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Alternador é a principal fonte de recarga DC em embarcações motorizadas, mas seu desempenho e sua sobrevivência dependem de correia, polias, regulador, temperatura, banco conectado e estratégia de proteção. Em sistemas com lítio e alta demanda, o alternador deixa de ser "peça simples" e vira ponto crítico de arquitetura.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Alternador em barco é sistema, não peça.** Correia, polias, regulador, temperatura, banco conectado, proteção e ventilação compõem o sistema — trocar só o "alternador" sem olhar o resto é reincidir na mesma falha.
+> 2. **Marinização não é opcional** — ABYC H-24, SAE J1171, UL 1500, ISO 8846 tratam ignition protection como requisito em motor a gasolina. Alternador automotivo em motor a gasolina é fonte de ignição próxima a vapores de combustível.
+> 3. **Nunca desconecte a bateria com o motor ligado.** O campo indutor do rotor, sem carga no B+, gera pico de tensão > 50 V que destrói a ponte de diodos em milissegundos. Mesmo com voltímetro a postos — não faça.
+> 4. **Banco lítio + alternador original sem regulador externo = queima programada.** BMS desconecta o banco, alternador perde carga, pico indutor queima diodos. Regulador externo programável (Balmar MC-614, Wakespeed WS500) ou DC-DC charger (Victron Orion-Tr, Sterling BB) é mandatório.
+> 5. **Regulador externo com sonda NTC na carcaça do alternador** é rotina em instalação séria. Limitação térmica protege o alternador em banco muito descarregado com longa navegação contínua.
+> 6. **Fusível no cabo B+ ≤ 178 mm do banco, dimensionado para o cabo e com AIC compatível com a Isc do banco.** ABYC E-11 é explícita — cabo B+ sem proteção em curto é tocha.
+> 7. **Ratio de polia define RPM mínimo útil.** Alternador precisa girar 4.000-6.000 RPM para entregar corrente nominal; em marcha lenta pode produzir menos de 30 % do nominal.
+> 8. **Dois alternadores em paralelo não se somam magicamente.** Reguladores conflitam; bancos separados ou sincronização explícita via Wakespeed / Balmar dual-alternator setup.
+> 9. **Documente: modelo, Ah gerados por hora em cruzeiro, temperatura em carga máxima, versão de firmware do regulador.** Sem essa linha base, diagnóstico futuro é chute.
+
+> [!danger] Quando chamar um especialista
+> - **Retrofit de banco AGM → lítio mantendo alternador original com regulador interno.** A arquitetura toda precisa ser repensada: regulador externo ou DC-DC charger, cabeamento, fusível com AIC compatível, comunicação com BMS, ventilação. Não é troca de peça; é reprojeto. ART/CREA obrigatório.
+> - **Alternador queimado imediatamente após instalação de banco lítio.** Diagnóstico: pico indutor no momento de desconexão do BMS. Exige substituir alternador + instalar regulador externo + reavaliar todo o sistema de carga. Seguradora pode cobrir se houver projeto; não cobre "improviso".
+> - **Dois alternadores em sistema bimotor ou com banco único grande.** Sincronização, divisão de carga, proteção coordenada, fusível em cada B+, alternador HO com Wakespeed dual-alternator setup. Projeto eletromecânico com responsável técnico.
+> - **Motor a gasolina com alternador não marinizado** (automotivo sem ignition protection). ISO 8846 + ABYC H-24 + UL 1500 + SAE J1171 como base. Risco de ignição de vapores. Substituir por alternador marítimo com ignition protection.
+> - **Superaquecimento recorrente do alternador** com casa de máquinas ventilada e correia correta. Causa pode ser banco com célula em falha puxando corrente indefinidamente, regulador travado em alta tensão, sonda NTC desconectada. Não operar até diagnóstico.
+> - **Correia derretendo ou soltando repetidamente.** Desalinhamento de polia > 1 mm, tensor defeituoso, polia desgastada, correia sub-dimensionada para a potência do alternador HO. Ajuste com régua, torquímetro, catálogo do fabricante.
+> - **Interferência elétrica generalizada no barco** (VHF, plotter, NMEA 2000) acompanhando RPM. Diodo retificador com falha parcial deixa AC vazar no DC. Osciloscópio confirma; substituição de ponte retificadora.
+> - **Diagnóstico pós-sinistro** (incêndio em casa de máquinas, pane elétrica total após navegação). Responsável técnico com ART/CREA; preservar alternador, regulador, cabeamento, fusível para análise. Seguradora pede laudo.
+> - **Eletropropulsão híbrida diesel + bancos lítio + alternador HO 300-500 A.** Domínio industrial; ISO 16315 + IEC 62619 + ABYC E-30 (draft) + especificação do fabricante como base. Projeto integrado com teste em bancada.
 
 ## O que é
 
@@ -277,7 +316,7 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 | Aspecto | Brasil | Internacional (ABYC/Europa) |
 | --- | --- | --- |
 | Alternadores comuns | Automotivos 50–90A, regulador interno | Náuticos HO 100–200A com regulador externo |
-| Fusível no cabo B+ | Frequentemente ausente | Obrigatório por ABYC E-11 |
+| Fusível no cabo B+ | Frequentemente ausente | Obrigatório por ABYC E-11 (2023) |
 | Uso com lítio | Crescendo — muitos erros de instalação | Bem estabelecido (Wakespeed + BMS) |
 | Reguladores externos | Raros, exceto instalações premium | Comuns em barcos >35 pés |
 | Manutenção preventiva | Reativa | Programada por horas de uso |
@@ -285,13 +324,68 @@ Em bancos grandes, perfis cíclicos intensos ou químicas mais exigentes, o regu
 
 **Ponto crítico no Brasil:** a transição para bancos de lítio está acelerada no mercado brasileiro (2023–2025), mas a maioria das instalações ainda não usa regulador externo compatível. Isso está gerando um volume crescente de queimas de alternadores — problema real de campo.
 
+## Glossário rápido
+
+- **Alternador** — máquina eletromecânica que converte energia mecânica do motor em corrente contínua (internamente gera AC trifásico retificado).
+- **Gerador DC / dínamo** — máquina DC pura com comutador de carbonos; obsoleta, substituída pelo alternador na década de 1960.
+- **Rotor** — parte girante que recebe corrente de excitação e cria o campo magnético.
+- **Estator** — parte fixa com enrolamentos trifásicos onde é induzida a tensão AC.
+- **Ponte retificadora (6 diodos)** — converte AC trifásico em DC pulsado na saída B+.
+- **Regulador de tensão** — controla a excitação do rotor para manter tensão de saída estável.
+- **Regulador interno** — integrado ao alternador; curva fixa (~14,4 V), sem compensação.
+- **Regulador externo programável** — Balmar MC-614, Wakespeed WS500, Victron Alternator Controller; bulk/absorção/float configurável, sonda térmica.
+- **Terminal B+** — saída positiva de alta corrente; vai ao banco via fusível.
+- **Terminal D+ / FR / I** — sinal de excitação; sem ele, alternador não inicia carga (lâmpada "bateria" apaga).
+- **Terminal W / STA** — sinal de rotação para tacômetro do motor.
+- **Terminal L / IG** — alimentação do regulador via chave de ignição.
+- **Correia / belt** — transmissão mecânica entre motor e alternador. Trapezoidal clássica ou poly-V moderna.
+- **Polia / pulley** — define ratio de rotação alternador/motor; ratio típico 1:2-1:3.
+- **Tensor / idler pulley** — mantém tensão correta na correia; automático em motores modernos.
+- **Correia poly-V / serpentina** — multi-nervuras em V; padrão em motores modernos HP.
+- **Ratio de polias** — proporção entre diâmetros; define RPM do alternador vs motor.
+- **RPM útil mínimo** — rotação abaixo da qual o alternador não entrega corrente significativa.
+- **Corrente nominal (A)** — corrente máxima contínua em cruzeiro (ex: 90 A, 120 A, 200 A).
+- **HO (High Output)** — alternador aftermarket com corrente nominal elevada (Balmar 200 A+).
+- **Alternador de pólo externo** — estator ligado externamente, permite regulador externo comandar excitação.
+- **Marinização** — adaptação para ambiente marinho: proteção contra umidade, salinidade, ignição de gases.
+- **Ignition protection (IP marine)** — certificação SAE J1171 / UL 1500 / ISO 8846 para não gerar faísca em vapores de combustível.
+- **Curva de carga** — perfil de tensão/corrente ao longo do tempo de carga.
+- **Bulk / absorção / float** — três estágios: corrente máxima, tensão constante, manutenção.
+- **Sonda NTC / termistor** — sensor de temperatura na carcaça do alternador, conectado ao regulador externo.
+- **Proteção térmica** — redução automática da corrente ao atingir temperatura limite (~80-100 °C).
+- **Pico indutor (load dump)** — pico de tensão gerado quando o banco é desconectado com alternador em carga; pode ultrapassar 50 V.
+- **Load dump transient** — padrão ISO 16750-2 / ISO 7637-2 que descreve este pico.
+- **TVS diode (Transient Voltage Suppressor)** — diodo de supressão que protege eletrônicos contra load dump.
+- **Divisor de carga** — diodo tradicional com queda de 0,6-1,0 V; divide corrente entre bancos.
+- **FET isolator / ACR (Automatic Charging Relay)** — alternativa moderna sem queda de tensão.
+- **VSR (Voltage Sensitive Relay)** — relé que fecha quando tensão ultrapassa limiar; divide bancos por proximidade.
+- **DC-DC charger (B2B)** — conversor isolado que carrega banco de serviço a partir do banco de partida ou do alternador.
+- **BMS (Battery Management System)** — em banco lítio, pode desconectar banco e expor alternador ao load dump.
+- **NMEA 2000 / VE.Can / CAN bus** — protocolos de comunicação entre regulador externo moderno e BMS.
+- **Field current** — corrente de excitação do rotor; controlada pelo regulador.
+- **Excitation voltage** — tensão aplicada ao rotor para criar campo.
+- **Tensão de absorção** — alvo do bulk/CV; 14,2-14,7 V chumbo, 14,2-14,6 V lítio em 12 V.
+- **Tensão de float** — manutenção; 13,2-13,8 V chumbo; LFP pode dispensar float contínuo.
+- **Amp-hour output** — Ah entregues por hora em condição de cruzeiro; base de dimensionamento.
+- **Duty cycle** — percentual do tempo em máxima corrente; alternador aguenta se ventilado.
+- **Slip ring / escovas de carbono** — contatos móveis entre campo fixo e rotor; desgaste comum.
+- **Bearing (rolamento)** — mecânico; ruído metálico indica substituição iminente.
+
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: fusível no cabo B+, separação de bancos, proteção de cabeamento
-- **ABYC A-31** — Battery Chargers: aplicável ao carregamento inteligente via alternador
-- **ISO 13297** — Electrical systems on recreational craft
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
-- **Compatibilidade com lítio:** não coberta explicitamente por normas antigas — é engenharia de sistema; fabricantes de BMS e reguladores externos publicam guias de instalação específicos
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: fusível no cabo B+ ≤ 178 mm, bitolagem, proteção de cabeamento, separação de bancos.
+- **ABYC E-13 (2023)** — Lithium Ion Batteries: interface alternador-BMS, requisitos de proteção contra load dump.
+- **ABYC E-10 (2023)** — Storage Batteries: separação de bancos (start/house), ventilação, proteção.
+- **ABYC H-25 (2023)** — Power feeds for engine-mounted accessories: cabeamento e proteção de circuitos do motor.
+- **ISO 13297:2020** — Electrical systems on recreational craft AC e DC.
+- **ISO 8846:2022** — Protection against ignition of surrounding flammable gases: ignition protection obrigatório em motor a gasolina.
+- **SAE J1171** — Marine ignition protection for alternators and starters: requisito americano para alternador em motor a gasolina.
+- **UL 1500** — Ignition-protected marine products: certificação equivalente.
+- **ISO 16750-2 / ISO 7637-2** — Environmental conditions for electrical/electronic equipment: caracterização de load dump.
+- **NMEA 2000 (IEC 61162-3)** — Comunicação de rede marítima; regulador externo moderno publica PGNs de carga.
+- **ABNT NBR 5410 (2004 + emendas)** — Base brasileira para baixa tensão; aplicável ao circuito DC do barramento.
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio: exigências administrativas e de segurança brasileiras.
+- **Compatibilidade com lítio** — não coberta explicitamente por normas antigas; é engenharia de sistema. Fabricantes de BMS (Victron, REC, Lithionics, Battle Born) e de regulador (Balmar, Wakespeed, Victron) publicam guias de instalação que integram os requisitos das normas acima.
 
 ## Como ensinar este tópico
 

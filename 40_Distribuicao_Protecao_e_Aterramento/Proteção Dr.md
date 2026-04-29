@@ -3,9 +3,25 @@ title: "Proteção DR"
 note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "PROTEÇÃO DR 6f319734f7fb82f6b80301582816022e.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-13"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "04"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-33 (Shore Power Inlets) — edição a verificar"
+  - "IEC 61008-1:2010+A2:2020 — RCCBs without integral overcurrent protection"
+  - "IEC 61009-1:2010+A2:2020 — RCBOs with integral overcurrent protection"
+  - "IEC 62423 — Type F and Type B RCDs"
+  - "IEC 60364-7-709 — Marinas and similar locations"
+  - "ISO 13297:2020 — Small craft — Electrical systems"
+  - "NEC 555 (NFPA 70 art. 555) — Marinas (ELCI requirements)"
+  - "UL 943 — Ground Fault Circuit Interrupters (GFCI)"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -39,6 +55,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Proteção DR é a camada diferencial do sistema AC. Ela compara a corrente que sai pelos condutores ativos com a que retorna e atua quando a diferença indica fuga incompatível com a operação normal. Em embarcações, a seleção do tipo, do limiar e do ponto de instalação precisa respeitar a topologia do shore power e das fontes derivadas.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **DR/RCD/GFCI/ELCI são primos, não iguais**: 30 mA = pessoas (choque); 100 mA (ELCI ABYC) = entrada shore; 300 mA = incêndio. Nunca substituir um pelo outro.
+> - **DR não protege contra sobrecorrente**: disjuntor e DR são camadas distintas. RCBO = ambos em um só dispositivo.
+> - **Classe A no mínimo** em qualquer barco com carregador, inversor ou conversor moderno (componente DC residual). Classe AC é aceitável apenas em circuitos puramente resistivos.
+> - **DR desarma ao conectar shore power**: existe fuga real — não é "defeito do DR". Investigar, nunca bypassar.
+> - **Topologia define instalação**: em 220 V BR fase-fase, o DR monitora **os dois ativos**; não inventar neutro falso só para "fazer DR de residência funcionar".
+> - **Teste mensal com botão TEST** é obrigatório; mecanismo trava por oxidação em ambiente marinho.
+> - **Transformador de isolamento + DR** é a combinação robusta: isolação galvânica do cais + proteção de fuga interna.
+> - **DR só no PE verde-amarelo** não existe — se o dispositivo não monitora os ativos, provavelmente é isolador galvânico ou monitor.
+> - **Laudo ou seguro**: DR ausente em shore power AC hoje é caracterizável como falha sistêmica, não "detalhe".
 
 ## O que é
 
@@ -225,6 +252,20 @@ Se o componente atua somente no condutor de proteção e os condutores ativos n�
 - Ao conectar shore power em nova marina: testar polaridade e terra do cais antes de ligar o DR
 - Se DR disparar ao conectar nova marina: pode ser problema do aterramento do cais — não usar o cais e notificar a administração da marina
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Incidente com choque, vítima ou suspeita de ESD (Electric Shock Drowning) — perito técnico + laudo com ART/CREA.
+> - DR disparando de forma intermitente sem causa identificável após teste sistemático (múltiplas fontes de fuga somadas exigem análise de topologia completa).
+> - Sistema com inversor bidirecional, gerador e shore power coexistindo — seleção de classe (A, F, B) e coordenação com chave de transferência precisa de projeto.
+> - Barco com eletropropulsão, IMU de 48/96V ou sistemas híbridos — DR classe B pode ser exigido e a seleção não é trivial.
+> - Marina nova ou desconhecida onde DR dispara imediatamente ao conectar — não forçar operação; ir ao fundo da causa antes de energizar.
+> - Retrofit de DR em embarcação antiga cujo diagrama não existe — reconstruir topologia antes de especificar dispositivo.
+> - Conversão 127/220 V ou L+N+PE ↔ L1+L2+PE — DR precisa ser reespecificado para a nova topologia.
+> - Laudo técnico para seguradora, Marinha ou Justiça envolvendo proteção diferencial (ausência, remoção, falha).
+> - DR que não dispara no teste, mesmo após substituição — pode indicar problema de cabeamento, conexão ou topologia pré-DR.
+>
+> Custo de 2–10 h de engenheiro senior é sempre menor que um choque fatal, uma perda total por incêndio ou a perda de cobertura do seguro.
+
 ## Erros comuns de instaladores
 
 - **Não instalar proteção diferencial/leakage no shore power** — o mais grave; sistema AC de cais sem essa camada eleva o risco de choque
@@ -257,10 +298,10 @@ Se o componente atua somente no condutor de proteção e os condutores ativos n�
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: proteção diferencial, aterramento, shore power
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: proteção diferencial, aterramento, shore power
 - **IEC 61008** — Residual current operated circuit-breakers (RCCBs): norma de produto do DR
 - **IEC 61009** — Residual current operated circuit-breakers with overcurrent protection (RCBOs)
-- **ISO 13297** — Electrical systems on recreational craft
+- **ISO 13297:2020** — Electrical systems on recreational craft
 - **NBR 5410** — Instalações elétricas de baixa tensão: referência complementar para proteção diferencial em baixa tensão
 - **Documentação do fabricante do DR / RCBO aplicado** — obrigatória para classe, curva, sensibilidade e ensaio corretos
 
@@ -332,6 +373,30 @@ Explicar DR como comparador de corrente, nao como disjuntor de sobrecarga.
 **Cautela:** Corrente diferencial nominal, seletividade, ELCI/GFCI/DR e topologia variam conforme aplicacao e referencial adotado.
 
 Material de apoio: [DR: desequilibrio de corrente](../_visuals/generated/dr-desequilibrio-corrente.md)
+
+## Glossário rápido
+
+- **DR (Dispositivo de corrente Residual)** — termo BR/IEC para o diferencial AC; detecta corrente que "vaza" para fora do circuito monitorado.
+- **RCD (Residual Current Device)** — sinônimo internacional de DR; termo usado em IEC/ISO.
+- **RCCB (Residual-current Circuit Breaker)** — DR "puro", sem proteção de sobrecorrente. Precisa de disjuntor a montante.
+- **RCBO (RCCB with Overcurrent)** — DR + disjuntor em um único módulo; cada circuito com sua proteção diferencial.
+- **GFCI (Ground Fault Circuit Interrupter)** — equivalente americano (UL 943); nominal ~5 mA em tomadas finais.
+- **ELCI (Equipment Leakage Circuit Interrupter)** — diferencial ABYC de entrada de shore power; 30 mA (edições recentes) ou 100 mA (edições anteriores), tempo ≤ 100 ms.
+- **Corrente residual** — diferença vetorial entre correntes de entrada e retorno; o que o DR mede.
+- **Iₙ (corrente nominal de disparo)** — valor a partir do qual o DR **deve** disparar; típicos 10/30/100/300/500 mA.
+- **Classe AC** — detecta apenas AC senoidal puro; insuficiente com eletrônica de potência.
+- **Classe A** — detecta AC + DC pulsante; mínimo recomendado em barcos com carregador/inversor moderno.
+- **Classe F** — Classe A + frequências múltiplas (VFD, inversores avançados).
+- **Classe B** — AC + DC puro + alta frequência; sistemas de eletropropulsão e grandes industriais.
+- **Nuisance tripping** — disparo espúrio por soma de fugas pequenas legítimas; investigar e, se necessário, reparticionar circuitos.
+- **Seletividade** — coordenação entre DRs em série (p.ex. 300 mA a montante + 30 mA a jusante) para desarmar só o circuito afetado.
+- **Tipo S (seletivo)** — DR com retardo intencional para dar tempo ao DR a jusante atuar primeiro.
+- **Toroide / transformador de corrente** — núcleo toroidal dentro do DR que compara as correntes; todos os ativos passam por ele, o PE não.
+- **Botão TEST** — simula fuga interna via resistor; valida mecanismo, não a sensibilidade real.
+- **Megôhmetro (insulation tester)** — instrumento para medir resistência de isolamento em MΩ; identifica equipamento com fuga real.
+- **ESD (Electric Shock Drowning)** — afogamento por corrente AC em água doce; DR/ELCI é defesa primária de pessoas na água.
+- **Fibrilação ventricular** — efeito cardíaco de correntes ~30–80 mA por tempo > 100 ms; justifica limiar de 30 mA.
+- **Fuga distribuída** — soma de pequenas fugas legítimas de vários equipamentos; pode ultrapassar 30 mA sem falha única.
 
 ## Integração com outras notas
 

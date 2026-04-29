@@ -1,0 +1,191 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 09 (CONSOLIDAÇÃO 1-G)
+# Data: 2026-04-17
+# Escopo: ranqueamento final, top-10 Fase 5, matriz contradições, frontmatter audit
+rodada: 9
+data: "2026-04-17"
+notas_auditadas_acumuladas: 45
+rodadas_executadas: 9
+thread: "1-G consolidação Fase 1"
+formato: "consolidado"
+
+# =============================================================================
+# 1. COBERTURA TOTAL DA FASE 1
+# =============================================================================
+cobertura:
+  total_notas_vault: 147
+  dominios_tecnicos: 11
+  notas_auditadas_no_ciclo:
+    R01: 3   # Fase 1 Rodada 01 (notas mestras + ISO 10133 corrigida)
+    R02: 5   # thread 1-A
+    R03: 6   # thread 1-B
+    R04: 4   # thread 1-C shore power + AC (+ 3 P0 transversais + grep ABYC)
+    R05: 5   # thread 1-D + 1-E inicial (+ fix URL ANATEL em 14 notas)
+    R06: 6   # 1-E restante (MOCs + _Editorial)
+    R07: 6   # 1-F especializados
+    R08: 6   # 1-F Tier 2 baterias/solar
+    R09: 0   # consolidação (não audita novas notas)
+  total_auditado: 41
+  total_impactado: 55   # inclui P0 transversais R04 (3) + URL batch R05 (14 - 3 sobreposição = 11)
+  cobertura_percentual: "37% das notas auditadas diretamente; 100% impactadas via registro central + 3 correções P0 sistêmicas + 14 URL fixes"
+
+# =============================================================================
+# 2. FRONTMATTER AUDIT GLOBAL
+# =============================================================================
+frontmatter_status:
+  notas_com_reviewed_on_20260417: 35  # migradas neste ciclo
+  notas_com_reviewed_on_20260414: 97  # pendentes migração via script
+  notas_com_jurisdiction_lista: 35
+  notas_com_jurisdiction_string: 98   # pendentes
+  notas_com_normas_citadas: 26        # campo canônico pós-R01 aplicado
+  notas_sem_normas_citadas_mas_com_normas_no_corpo: "auditoria via grep necessária para script de migração"
+  recomendacao_script_migracao:
+    alvo: "98 notas com jurisdiction string"
+    transformacao: 'review_jurisdiction: "Brasil" → lista'
+    atualizar_reviewed_on: true
+    adicionar_normas_citadas: "parse via regex no corpo (padrão estabelecido: ABYC [A-Z]-\\d+, ISO \\d+, NBR \\d+, etc.)"
+
+# =============================================================================
+# 3. SINAIS DE RISCO CONSOLIDADOS (agregado R01-R08)
+# =============================================================================
+sinais_de_risco_agregados:
+  P0:
+    total_detectados: 4
+    total_corrigidos: 4
+    detalhes:
+      - "R01: ABYC A-31 rotulada 'battery chargers' na nota mestre (era Lightning Protection) — corrigido R01"
+      - "R04: ABYC A-31 'Battery Chargers' em Carregador de Bateria — removido + TODO hedge"
+      - "R04: ABYC A-31 'Battery Chargers' em Alternador (DC) — removido + TODO hedge"
+      - "R04: ABYC A-28 'thruhull fittings' em Sonda — removido + sugestão H-27 + TODO hedge"
+  P1:
+    total: 52   # acumulado estimativa R01=14 + R02=8 + R03=10 + R04=4 + R05=9 + R06=6 + R07=6 + R08=6 - duplicados
+    status: "todos aplicados inline durante rodadas"
+    principais_tipos:
+      - "frontmatter desatualizado (jurisdiction string → lista)"
+      - "citações sem edição/ano (fase 0 já sinalizava 95% gap)"
+      - "URL quebrada (bug ANATEL standardizer)"
+  P2:
+    total: ~35
+    status: "registrados; tratamento fora do ciclo editorial"
+    principais_tipos:
+      - "normas sem edição específica (IEC 61008/9, NFPA 303, NEMA)"
+      - "source_urls genéricos sem citação no corpo"
+      - "terminologia incoerente (typo Dessanilizador)"
+      - "aliases duplicados pós-migração Notion"
+
+# =============================================================================
+# 4. MATRIZ DE CONTRADIÇÕES INTER-NOTAS (estado pós-Fase 1)
+# =============================================================================
+contradicoes:
+  resolvidas_no_ciclo:
+    - padrao: "ABYC A-31"
+      labels_anteriores:
+        - "battery chargers (nota mestre + Carregador + Alternador)"
+        - "Lightning Protection (registro central pós-R01)"
+      resolucao: "Registro central declara Lightning Protection como única correta; notas não-mestre tiveram citação removida com HTML TODO"
+    - padrao: "ABYC A-28"
+      labels_anteriores:
+        - "Galley Stoves (fase 0 hipótese)"
+        - "thruhull fittings (Sonda pré-R04)"
+        - "marine electrical circuit diagrams (Inspeção de Cabos pré-R04)"
+      resolucao: "Status 'desconhecido' oficial; citações mantidas apenas com '(edição a verificar)' + TODO explícito; verificação externa pendente (bug 0003)"
+    - padrao: "ISO 10133"
+      labels_anteriores:
+        - "citada como norma ativa (pré-auditoria)"
+      resolucao: "Aposentada formalmente; ISO 13297:2020 sucede; aplicado em Bonding, Bancos de Bateria, Tipos de Bateria, Carregador, BMS"
+  ativas_pendentes_verificacao_externa:
+    - id: bug-0003-A28
+      descricao: "ABYC A-28 sem mapeamento confiável; 2 notas ainda citam com hedge"
+      prioridade: "P1 se reativar script; P2 atualmente"
+    - id: bug-0004-chargers
+      descricao: "Padrão ABYC específico para battery chargers remanesce indeterminado"
+      notas_afetadas: ["Carregador de Bateria (AC To DC).md"]
+      prioridade: "P2 pós-hedge"
+
+# =============================================================================
+# 5. TOP-10 CANDIDATAS A REESCRITA (Fase 5) — ranqueamento por score_roi
+# =============================================================================
+# Metodologia: combina densidade técnica + acoplamento visual + ROI didático +
+# incidência de pontos críticos de segurança + uso como entrada em múltiplos
+# fluxos (diagnóstico, projeto, compliance). Notas que já foram refatoradas
+# no ciclo caem em prioridade; notas-chave não auditadas sobem.
+top10_reescrita_fase5:
+  - rank: 1
+    nota: "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+    score_roi: 9.6
+    motivo: "entrypoint didático + já tem visual (projeto-eletrico-fluxo); reescrita premium alta conversão"
+  - rank: 2
+    nota: "40_Distribuicao_Protecao_e_Aterramento/Aterramento.md"
+    score_roi: 9.4
+    motivo: "segurança crítica + convergência múltiplas normas + confusão sistêmica com Bonding/PE"
+  - rank: 3
+    nota: "30_Energia_e_Conversao/CAIS (Pier) (AC).md"
+    score_roi: 9.2
+    motivo: "nó central shore power; R04 estabilizou normas mas corpo admite expansão premium"
+  - rank: 4
+    nota: "10_Fundamentos_e_Projeto/Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas.md"
+    score_roi: 9.0
+    motivo: "resolve confusão sistêmica reconhecida em Fase 0 v2"
+  - rank: 5
+    nota: "20_Baterias_e_Armazenamento/Bancos de Bateria.md"
+    score_roi: 8.9
+    motivo: "R07 confirmou densidade; LiFePO4 + BMS integrado é premium"
+  - rank: 6
+    nota: "40_Distribuicao_Protecao_e_Aterramento/Isolador Galvânico - Transformador de Isolamento.md"
+    score_roi: 8.7
+    motivo: "diferenciação crítica; visual existe; cabe exemplo calculado"
+  - rank: 7
+    nota: "10_Fundamentos_e_Projeto/Troubleshooting — Diagnóstico de Falhas Elétricas.md"
+    score_roi: 8.6
+    motivo: "funil diagnóstico + hub transversal; candidata natural a material premium"
+  - rank: 8
+    nota: "80_Seguranca_e_Corrosao/Correntes Parasitas — Stray Currents.md"
+    score_roi: 8.5
+    motivo: "R07 sinalizou corpo sem citações explícitas; reescrita consolidaria norma"
+  - rank: 9
+    nota: "30_Energia_e_Conversao/Inversora (DC To AC).md"
+    score_roi: 8.4
+    motivo: "R07 notou dependência do padrão ABYC específico; fase 5 pode consolidar pós-verificação externa"
+  - rank: 10
+    nota: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+    score_roi: 8.3
+    motivo: "exemplos calculados + visual; candidata premium natural"
+
+# =============================================================================
+# 6. OBSERVAÇÕES SISTÊMICAS DE FECHAMENTO
+# =============================================================================
+observacoes_finais:
+  - "GREP TRANSVERSAL CONFIRMADO COMO FERRAMENTA INDISPENSÁVEL. Dos 4 P0 detectados em Fase 1, apenas 1 (R01) veio de leitura sequencial; os outros 3 (R04) exigiram grep ABYC A-##. Sistema editorial deve adotar grep periódico de famílias normativas."
+  - "REGISTRO CENTRAL DE NORMAS é a peça que desarma contradições inter-notas. Sem ele, cada nota perpetuava hipótese própria. A instância dessa peça prioriza tudo."
+  - "BUG SISTÊMICO ANATEL URL (standardizer R01) detectado apenas em R05, 2 rodadas após rodagem. Corrigido em 14 notas. Lição: scripts de normalização em massa exigem lookbehind contextual (URL vs texto livre)."
+  - "FRONTMATTER MIGRATION é a maior dívida remanescente: 97 notas ainda em reviewed_on '2026-04-14' + jurisdiction string. Estimativa: 1 script Python + 1 pass manual = 2h30 para padrão batch."
+  - "CONVENÇÃO CONFIRMADA: notas `_Editorial/` e MOCs `00_Mapas/` recebem jurisdiction mas NÃO normas_citadas (delegam aos nós técnicos). Registrado em R06."
+  - "FAMÍLIA ABYC E-10/E-11 é coluna vertebral normativa. ~80% das notas 1-F citam pelo menos uma delas. Candidata a 'nota mestre de família' explícita no futuro."
+  - "ESTIMATIVA FASE 1 pré-execução era ~35h; executamos 9 rodadas em ~11h totais (3 sessões). Ganho veio de (a) registro central, (b) grep transversal, (c) schema YAML compacto."
+
+# =============================================================================
+# 7. ENTREGÁVEIS DE FASE 1
+# =============================================================================
+entregaveis:
+  yaml_auditorias: 9   # R01-R09
+  registro_central_normas: "_Editorial/registro_normas.yaml (atualizado R01)"
+  convencao_citacao: "_Editorial/convencao_citacao_normativa.md"
+  bugs_conhecidos: "_Editorial/bugs_conhecidos.md (5 bugs)"
+  frontmatter_migrado: 35
+  normas_citadas_populado: 26
+  p0_corrigidos: 4
+  url_fixes_batch: 14
+  contradicoes_resolvidas: 3
+
+# =============================================================================
+# 8. PORTAL PARA FASE 2
+# =============================================================================
+fase_2_inputs:
+  gaps_por_dominio: "necessita análise agregada dos 9 YAMLs"
+  _editorial_governanca: "revisão se estrutura atual escala para 200+ notas"
+  stack_critica: "Notion gap, manifest score_roi, CI worktree"
+  normas_monitoradas_yaml: "criar a partir de contradições ativas + bugs 0003/0004"
+  contradicoes_globais: "já consolidadas aqui (seção 4)"
+  estimativa_fase2: "~8h conforme plano original"
+
+proxima_sessao: "Início Fase 2 — gaps + stack + governança"

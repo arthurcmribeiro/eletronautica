@@ -3,9 +3,25 @@ title: "Disjuntores (DC) e (AC)"
 note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "DISJUNTORES (DC) e (AC) 61f19734f7fb820eb39881eaf8483db4.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "05"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC E-13 (2022) — Lithium Ion Batteries (breaker at main)"
+  - "UL 489 — Molded-Case Circuit Breakers (AC/DC commercial)"
+  - "UL 1077 — Supplementary Protectors"
+  - "UL 1500 — Ignition Protection (motor gasoline spaces)"
+  - "IEC 60947-2 — Low-voltage switchgear: circuit-breakers"
+  - "IEC 60898-1 / 60898-2 — Circuit-breakers AC / DC for household"
+  - "ISO 13297:2020 — Small craft — Electrical systems"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar para AC"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -39,6 +55,17 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Disjuntores AC e DC são dispositivos de proteção e seccionamento rearmáveis. Em ambiente náutico, o ponto decisivo não é apenas a corrente nominal: é a compatibilidade com a tensão, a capacidade de interrupção, a curva de disparo e a resistência do conjunto ao ambiente marinho.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Disjuntor AC ≠ Disjuntor DC**: arco DC não se extingue em zero crossing; câmara de arco do AC **pode não apagar** em curto DC → contatos fundidos, incêndio.
+> - **Protege o CABO, não a carga**: dimensionar pela ampacidade real do condutor (tipo, temperatura, agrupamento), não pelo consumo nominal do equipamento.
+> - **Capacidade de interrupção (kA)** importa em banco de bateria com baixa impedância: corrente de curto presumida pode ser dezenas de kA.
+> - **Curva de disparo**: B (resistiva), C (padrão), D (motores com inrush 3–6× nominal). Bomba/thruster = curva C ou D.
+> - **Térmico em casa de máquinas (>45 °C)** dispara com corrente abaixo do nominal → hidráulico-magnético é melhor escolha em ambiente quente.
+> - **Etiquetagem obrigatória**: painel sem identificação é risco em emergência; ABYC E-11 exige.
+> - **Disjuntor que não abre (contatos soldados)** = substituir imediatamente, não tentar "limpar".
+> - **Disparo repetitivo = sinal, não ruído**: investigar; nunca aumentar amperagem "para resolver".
+> - **Spare a bordo** nas amperagens mais usadas (10/15/20 A) — viagem longa sem peça é risco.
 
 ## O que é
 
@@ -237,6 +264,20 @@ Um RCBO em cada circuito AC — proteção de sobrecorrente + diferencial indivi
 - Religar e disparar novamente: não insistir — há problema real no circuito
 - Verificar todos os disjuntores manualmente (on/off) na revisão anual — contatos que nunca operam oxidam e podem não abrir em emergência
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Sistema com banco de bateria de íon-lítio, LFP ou químicas avançadas — ABYC E-13 exige coordenação específica (disjuntor principal, fusível, BMS).
+> - Corrente de curto presumida (Isc) no ponto de instalação desconhecida — especialmente em bancos acima de ~600 Ah@12 V ou paralelismo de múltiplos bancos.
+> - Conversão de topologia (12 ↔ 24 V, 24 ↔ 48 V) sem reespecificação completa dos disjuntores (tensão DC nominal, kA, curva).
+> - Incêndio, contatos fundidos ou carbonização em qualquer disjuntor — investigar ANTES de substituir; causa pode estar a montante.
+> - Eletropropulsão, sistema de 48/96/144 V DC ou inversor bidirecional de alta potência — arco DC nessas tensões exige ICs especiais certificados.
+> - Laudo técnico para seguradora, Marinha, Justiça ou processo de sinistro — ART/CREA obrigatórios.
+> - Painel antigo sem diagrama nem identificação sendo retrofitado — reconstruir topologia antes de repor dispositivos.
+> - Disjuntor "não repositório" (descontinuado, sem substituto direto) — projeto de substituição requer engenheiro.
+> - Embarcação comercial, para passageiros ou SOLAS — regime regulatório diferente (IEC 60092, classe).
+>
+> Custo de 2–10 h de engenheiro senior é sempre menor que um incêndio no painel principal, perda do barco ou perda do seguro.
+
 ## Erros comuns de instaladores
 
 - **Disjuntor AC em circuito DC** — o mais perigoso; instalação incorreta em sistemas 24V/48V pode resultar em arco sustentado e incêndio
@@ -261,18 +302,18 @@ Um RCBO em cada circuito AC — proteção de sobrecorrente + diferencial indivi
 | Disjuntores DC mais usados | Genéricos térmicos AC/DC, Blue Sea Systems em instalações de qualidade | Blue Sea Systems, Carlingswitch hidráulico-magnético |
 | Disjuntores residenciais em DC | Comum (prática de risco) | Não aceitável — especificação DC obrigatória |
 | Dimensionamento | Frequentemente por carga, não por cabo | Por cabo — regra fundamental |
-| Identificação de painel | Frequentemente ausente | Exigida por ABYC E-11 |
+| Identificação de painel | Frequentemente ausente | Exigida por ABYC E-11 (2023) |
 | Hidráulico-magnético | Raro | Padrão em instalações de qualidade |
 
 **Realidade brasileira:** o uso de disjuntores residenciais ou de origem predial em circuitos DC ainda é comum, mas isso não o torna prática correta. Em qualquer circuito DC, sobretudo com baterias de baixa impedância, o disjuntor deve ter especificação explícita para tensão DC, orientação de montagem e capacidade de interrupção compatível com a energia disponível no ponto.
 
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: requisitos de proteção de circuitos, capacidade de interrupção, identificação de painéis
-- **ABYC E-10** — Storage Batteries: proteção de cabos de bateria
-- **ISO 13297** — Electrical systems on recreational craft
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: requisitos de proteção de circuitos, capacidade de interrupção, identificação de painéis
+- **ABYC E-10 (2023)** — Storage Batteries: proteção de cabos de bateria
+- **ISO 13297:2020** — Electrical systems on recreational craft
 - **IEC 60947-2** — Low-voltage switchgear: disjuntores industriais
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
 - **NBR 5410** — Instalações elétricas de baixa tensão: base para aplicação náutica de proteções AC
 
 ## Como ensinar este tópico
@@ -335,6 +376,30 @@ Evitar troca indevida entre disjuntor AC e DC e reforcar que o arco DC e mais di
 **Cautela:** Use somente dispositivos especificados para tensao, corrente, curva e capacidade de interrupcao do circuito.
 
 Material de apoio: [Disjuntores DC e AC: diferencas criticas](../_visuals/generated/disjuntores-dc-ac-diferencas.md)
+
+## Glossário rápido
+
+- **Disjuntor (circuit breaker)** — dispositivo de proteção rearmável contra sobrecorrente e curto-circuito; reseta após causa removida.
+- **In (corrente nominal)** — valor até o qual o disjuntor conduz continuamente sem disparar.
+- **Ir (corrente de disparo)** — valor a partir do qual o disjuntor atua por sobrecarga (curva térmica).
+- **Im (corrente magnética)** — valor a partir do qual atua a proteção instantânea (magnética) contra curto-circuito.
+- **Icu / Icn (capacidade de interrupção)** — máxima corrente de curto que o disjuntor interrompe sem destruir-se; expresso em kA.
+- **Curva B** — disparo magnético 3–5× In; circuitos resistivos (iluminação, tomadas sem motor).
+- **Curva C** — disparo magnético 5–10× In; padrão residencial/naval para motores pequenos.
+- **Curva D** — disparo magnético 10–20× In; motores grandes, compressores, thrusters com alto inrush.
+- **Disjuntor térmico** — lâmina bimetálica aquecida pela corrente; sensível à temperatura ambiente.
+- **Disjuntor hidráulico-magnético** — combinação de bobina com pistão em óleo + solenoide; insensível à temperatura; padrão náutico ABYC.
+- **Disjuntor magnetotérmico** — combina térmico (sobrecarga) + magnético (curto); padrão residencial AC.
+- **RCBO** — disjuntor + DR (proteção diferencial) em um só módulo; cada circuito com proteção completa.
+- **Câmara de extinção de arco** — componente interno que resfria e alonga o arco elétrico até extinguir; dimensionada por tensão e tipo de corrente.
+- **Arco DC** — arco elétrico em corrente contínua; não se extingue em zero crossing (não existe); exige câmara específica.
+- **Zero crossing** — passagem por zero da senoide AC (120 vezes/s em 60 Hz); permite extinção natural do arco.
+- **Inrush current** — pico de corrente na partida de motor ou transformador; 3–20× corrente nominal por 10–100 ms.
+- **Seletividade** — coordenação entre disjuntor a montante (maior, retardado) e a jusante (menor, rápido) para desarmar só o afetado.
+- **Trip-free** — característica que impede religar enquanto a falha persiste mesmo forçando a alavanca.
+- **Ignition protection (UL 1500)** — certificação para operação em compartimento com vapor de gasolina; obrigatória em áreas ignivíveis.
+- **MCB (Miniature Circuit Breaker)** — disjuntor modular residencial IEC 60898; AC ou DC (especificação explícita).
+- **MCCB (Molded-Case Circuit Breaker)** — disjuntor em caixa moldada UL 489/IEC 60947-2; alta corrente e kA.
 
 ## Integração com outras notas
 

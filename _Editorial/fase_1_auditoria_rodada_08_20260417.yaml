@@ -1,0 +1,98 @@
+---
+# Fase 1 — Auditoria técnica — Rodada 08
+# Data: 2026-04-17
+# Escopo: thread 1-F Tier 2 (baterias, solar, carregador, inspeção)
+rodada: 8
+data: "2026-04-17"
+notas_auditadas: 6
+thread: "1-F Tier 2"
+formato: "compacto"
+
+notas:
+  - arquivo: "20_Baterias_e_Armazenamento/Monitor de Bateria - BMV - Shunt.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R08-01
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 2 normas (ABYC E-11, NMEA 2000)"
+        status: "aplicado"
+      - id: P2-R08-02
+        tipo: "NMEA 2000 sem edição"
+        status: "registrado"
+    veredito: "nota exemplar de integração; shunt + SoC + comunicação"
+
+  - arquivo: "20_Baterias_e_Armazenamento/Tipos de Bateria.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R08-03
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 2 normas (ABYC E-10 2023, ISO 13297:2020)"
+        status: "aplicado"
+    veredito: "nota comparativa densa; ISO 10133 já migrada em R01 (ver bonding e bancos)"
+
+  - arquivo: "20_Baterias_e_Armazenamento/BMS — Battery Management System.md"
+    thread: "1-F"
+    achados:
+      - id: P1-R08-04
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 3 normas (ABYC E-11, IEC 62619, NMEA 2000)"
+        status: "aplicado"
+      - id: P2-R08-05
+        tipo: "IEC 62619 sem edição confirmada"
+        descricao: "corpo já registra '(edição a verificar)' — padrão é ativo mas tem revisões"
+        status: "registrado"
+    veredito: "nota técnica com boa cobertura LiFePO4; BMS integrado bem tratado"
+
+  - arquivo: "30_Energia_e_Conversao/Placa Solar (DC).md"
+    thread: "1-F"
+    achados:
+      - id: P1-R08-06
+        tipo: "frontmatter desatualizado"
+        acao: "jurisdiction lista; sem normas explícitas no corpo"
+        status: "aplicado"
+      - id: P2-R08-07
+        tipo: "source_urls genéricos"
+        descricao: "inclui marinha.mil.br/dpc/normas e abycinc.org/standards/ sem citação explícita no corpo"
+        status: "registrado"
+    veredito: "nota didática sobre solar + MPPT; integra bem com banco de baterias"
+
+  - arquivo: "10_Fundamentos_e_Projeto/Inspeção de Cabos Terminais e Conexões.md"
+    thread: "1-F"
+    achados:
+      - id: P0-R08-08
+        tipo: "A-28 no normas_citadas"
+        descricao: "frontmatter inclui 'ABYC A-28 (edição a verificar)' e corpo linha 311 idem. A-28 tem status 'desconhecido' no registro central (bug 0003). Decisão: manter com hedge explícito (padrão editorial) mas NÃO é contradição dado o TODO-CITAÇÃO e o '(edição a verificar)'"
+        acao: "mantido (hedge já aplicado); aguardar verificação externa A-28"
+        status: "aceito-com-hedge"
+      - id: P2-R08-09
+        tipo: "jurisdiction dupla"
+        descricao: "já tem Brasil + internacional; único caso no corpus até agora"
+        status: "registrado como precedente"
+    veredito: "nota já migrada para padrão pós-R01; hedge A-28 é válido até verificação"
+
+  - arquivo: "20_Baterias_e_Armazenamento/Carregador de Bateria (AC To DC).md"
+    thread: "1-F"
+    achados:
+      - id: P1-R08-10
+        tipo: "frontmatter desatualizado"
+        acao: "lista + 4 normas (ABYC E-11, ISO 13297:2020, IEC 60335-2-29, ABNT NBR 5410)"
+        status: "aplicado"
+      - id: P2-R08-11
+        tipo: "padrão ABYC específico para chargers permanece sob verificação"
+        descricao: "A-31 removido em R04 (bug 0003); IEC 60335-2-29 é referência de segurança mas não é nautical-specific"
+        status: "registrado"
+    veredito: "nota crítica para shore power + carga; ponto de integração com CAIS"
+
+sinais_de_risco:
+  P0: 0 # A-28 em Inspeção de Cabos classificado como aceito-com-hedge (não é P0 efetivo)
+  P1: 6
+  P2: 5
+
+observacoes_sistemicas:
+  - "Convenção reforçada: quando padrão ABYC está sob verificação externa (registro = 'desconhecido'), a prática pós-R04 é manter citação com '(edição a verificar)' + HTML TODO-CITAÇÃO apontando para registro central. Padrão editorial válido até completar auditoria externa."
+  - "Placa Solar é candidato a elevação editorial: nota relevante sem normas explícitas citadas — ou adicionar normas (IEC 62548, IEC 61215 se fotovoltaico) ou simplificar source_urls."
+  - "Família ABYC E-10/E-11 é o esqueleto normativo central do domínio de baterias/carga — ~80% das notas 1-F citam pelo menos uma delas."
+
+proxima_rodada:
+  numero: 9
+  thread: "1-G consolidação — tabela ranqueada por score_roi, top-10, matriz de contradições, frontmatter audit final"

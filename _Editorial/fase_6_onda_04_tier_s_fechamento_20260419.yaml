@@ -1,0 +1,396 @@
+---
+wave: 4
+phase: 6
+sprint: "Caminho B — aplicação DEC-11 premium em Tier S (fechamento)"
+date: "2026-04-19"
+cadence: "b (pause after wave)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier S — 18 notas Projeto + Diagnóstico + Fundamentos + Segurança + Transformadores + Distribuição AC + Climatização + Porão (+ 1 bônus extra)"
+template_recalibrated:
+  tldr_rules: 9
+  danger_scenarios: 9
+  glossary_terms: "42-60 (média ≈ 52)"
+  normas_expanded: "17-55 (média ≈ 33)"
+  decision: "Vademecum da elétrica náutica — todas as normas cabíveis + regulação ambiental de refrigerantes"
+
+notes_processed:
+  - n: "01/18"
+    title: "Projeto Elétrico de Embarcação — Passo a Passo"
+    path: "10_Fundamentos_e_Projeto/Projeto Elétrico de Embarcação — Passo a Passo.md"
+    fase_6_reescrita: "27"
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Projeto integrado DC + AC + distribuição + proteção + sinalização"
+      - "ABYC E-11 + NBR 5410 + IEC 60092 como trio-referência do projeto"
+      - "Passo-a-passo canonicalizado: levantamento → dimensionamento → diagrama → proteção → documentação"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 28
+
+  - n: "02/18"
+    title: "Dimensionamento de Banco de Baterias — Cálculo de Autonomia"
+    path: "10_Fundamentos_e_Projeto/Dimensionamento de Banco de Baterias — Cálculo de Autonomia.md"
+    fase_6_reescrita: "28"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ABYC E-11/E-13 + ISO 16315 + IEC 62619"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 25
+
+  - n: "03/18"
+    title: "Manutenção Preventiva Elétrica — Checklist"
+    path: "10_Fundamentos_e_Projeto/Manutenção Preventiva Elétrica — Checklist.md"
+    fase_6_reescrita: "29"
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "Checklist alinhado ABYC + NBR 5410 + NORMAM"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 48
+    normas_after: 22
+
+  - n: "04/18"
+    title: "Inspeção de Cabos Terminais e Conexões"
+    path: "10_Fundamentos_e_Projeto/Inspeção de Cabos Terminais e Conexões.md"
+    fase_6_reescrita: "30"
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "UL 1426 + ABYC E-11 + NBR 14039 + torque specs"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 24
+
+  - n: "05/18"
+    title: "Multímetro e Instrumentos de Medição"
+    path: "10_Fundamentos_e_Projeto/Multímetro e Instrumentos de Medição.md"
+    fase_6_reescrita: "31"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "IEC 61010-1 + categorias CAT II/III/IV explícitas"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 52
+    normas_after: 24
+
+  - n: "06/18"
+    title: "Voltímetro - Amperímetro (DC e AC)"
+    path: "10_Fundamentos_e_Projeto/Voltímetro - Amperímetro (DC e AC).md"
+    fase_6_reescrita: "32"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "IEC 61010-1/61557 + shunt calibração"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 48
+    normas_after: 22
+
+  - n: "07/18"
+    title: "Anôdo"
+    path: "80_Seguranca_e_Corrosao/Anôdo.md"
+    fase_6_reescrita: "33"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "NACE SP0176/TM0497/SP0169/CP1-CP4 + ASTM B418 explícitas"
+      - "ISO 15589-2 + ISO 13174 citadas"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 54
+    normas_after: 30
+
+  - n: "08/18"
+    title: "Eletrólise"
+    path: "80_Seguranca_e_Corrosao/Eletrólise.md"
+    fase_6_reescrita: "34"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ASTM G71/G82 + ISO 11845 + NACE TM0497 explícitas"
+      - "ISO 8044 (corrosão eletroquímica) citada"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 57
+    normas_after: 32
+
+  - n: "09/18"
+    title: "Detector de CO — Monóxido de Carbono"
+    path: "80_Seguranca_e_Corrosao/Detector de CO — Monóxido de Carbono.md"
+    fase_6_reescrita: "35"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "UL 2034 + UL 2075 + EN 50291-1/-2 + ABYC A-24 explícitas"
+      - "Station wagon effect + COHb% physiology documentada"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 56
+    normas_after: 26
+
+  - n: "10/18"
+    title: "Detector de Gás GLP - GN"
+    path: "80_Seguranca_e_Corrosao/Detector de Gás GLP - GN.md"
+    fase_6_reescrita: "36"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "UL 1484 + EN 50194-1 + EN 50244 + ABYC A-1 explícitas"
+      - "GLP pesado (baixo) vs GN leve (alto) documentado"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 27
+
+  - n: "11/18"
+    title: "Extintor Automático — Combate a Incêndio na Casa de Máquinas"
+    path: "80_Seguranca_e_Corrosao/Extintor Automático — Combate a Incêndio na Casa de Máquinas.md"
+    fase_6_reescrita: "37"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "NFPA 10/12/17/2001 + ISO 14520 + EN 15004 + SOLAS II-2 + FSS Code explícitas"
+      - "Agent-specific (FM-200/Novec/CO₂/HFC-227ea) + GWP/ODP documentados"
+      - "Maior normas_citadas da onda (40+)"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 42
+
+  - n: "12/18"
+    title: "Alarme de Alagamento - Sensor de Porão"
+    path: "80_Seguranca_e_Corrosao/Alarme de Alagamento - Sensor de Porão.md"
+    fase_6_reescrita: "38"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ABYC H-22 + ISO 15083 + USCG 33 CFR 183 + SOLAS II-1 Reg 21"
+      - "Distinção alarme ≠ bomba explicitada"
+      - "NMEA 2000 PGN 130310/130311/130316 integração"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 26
+
+  - n: "13/18"
+    title: "Transformador Bivolt"
+    path: "30_Energia_e_Conversao/Transformador Bivolt.md"
+    fase_6_reescrita: "39"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "IEC 60076-1/-5/-11/-18 + 61558-1/-2-1/-2-4 explícitas"
+      - "Autotransformador ≠ isolação documentado"
+      - "INMETRO 637/2014 (ATS bivolt) citada"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 34
+
+  - n: "14/18"
+    title: "Transformador Entrada"
+    path: "30_Energia_e_Conversao/Transformador Entrada.md"
+    fase_6_reescrita: "40"
+    dec_14: false
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "TODO 'IEC 60076 (edição a verificar)' resolvido → 60076-1/5/11 + 61558-1/-2-1/-2-4"
+      - "Step-up/step-down + frequency conversion distinguidos"
+      - "NBR 5356-1/3/4/5/12 + INMETRO 27/195/637 explícitas"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 31
+
+  - n: "15/18"
+    title: "Linha Pesada (AC)"
+    path: "40_Distribuicao_Protecao_e_Aterramento/Linha Pesada (AC).md"
+    fase_6_reescrita: "41"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ABYC E-11 + NEC Art 430/440/555 + IEC 60364-7-709 + IEC 60092-series"
+      - "MCA + MOCP (NEC 440) documentados"
+      - "ATS sem múltiplos bonds N-PE (ABYC E-11)"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 50
+    normas_after: 40
+
+  - n: "16/18"
+    title: "Ar-Condicionado Marine — Sistema Completo"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Marine — Sistema Completo.md"
+    fase_6_reescrita: "42"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "NEC Art 440 (MCA/MOCP/RLA/LRA) + ASHRAE 15/34/62.1 explícitas"
+      - "Regulação ambiental de refrigerantes: Montreal + Kigali + EPA SNAP + AIM Act + F-gas 517/2014 + CONAMA 267 + EPA Section 608"
+      - "Quatro subsistemas (frigorífico + SW + ar + elétrico) estruturados"
+      - "Maior normas_citadas da onda (55)"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 60
+    normas_after: 55
+
+  - n: "17/18"
+    title: "Bomba de Porão"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Bomba de Porão.md"
+    fase_6_reescrita: "43"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 recalibrado"
+      - "DEC-14 normas_citadas"
+      - "ABYC H-22 + ISO 15083 + USCG 33 CFR 183 + SOLAS II-1 Reg 21/35-1"
+      - "USCG NVIC 7-82 + 46 CFR Subchapter K/T citados"
+      - "Hotline (DC) arquitetura explícita"
+      - "NMEA 2000 PGN 130310/130311/130316 integração"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 48
+    normas_after: 38
+
+  - n: "18/18 + bônus"
+    title: "Ar-Condicionado Marine 12V DC (nota nova)"
+    path: "70_Hidraulica_Climatizacao_e_Utilidades/Ar-Condicionado Marine 12V DC.md"
+    fase_6_reescrita: "44"
+    dec_14: true
+    dec_flags:
+      - "NOTA NOVA — criada integralmente nesta onda (fora do plano original)"
+      - "DEC-14 normas_citadas"
+      - "DEC-11 recalibrado"
+      - "Compressor BLDC inverter + driver eletrônico documentado"
+      - "Integração banco lítio LFP + BMS + Class T/MRBF fuse"
+      - "IEC 60335-2-40 + EN 14511 + EN 378 + UL 60335-2-40 citadas"
+      - "Paridade regulatória de refrigerante com AC 220V"
+      - "Tabela orientativa cabo/fusível por BTU/h"
+      - "ECE R10 (EMC) incluído"
+    tldr_rules: 9
+    danger_scenarios: 9
+    glossary_terms: 55
+    normas_after: 47
+
+metrics:
+  total_notes: 19  # 18 Tier S + 1 bônus (incluindo Projeto Elétrico de Embarcação, iniciado em sessão anterior)
+  callouts_added: 38  # 19 tip + 19 danger
+  glossary_terms_total: 1003  # avg ≈ 52.8
+  normas_total: 621  # avg ≈ 32.7
+  dec_14_notes: 13
+  dec_11_notes: 19
+  todos_resolved: 3
+  average_glossary_per_note: 52.8
+  average_normas_per_note: 32.7
+  new_notes_created: 1  # Ar-Condicionado Marine 12V DC
+
+new_decisions:
+  - id: "DEC-26"
+    title: "Regulação ambiental de refrigerantes como camada normativa obrigatória"
+    statement: "Toda nota que trate de sistema frigorífico (AC 220V, AC 12V DC, refrigerador, freezer, chiller) deve incluir a camada de regulação ambiental de refrigerantes como família normativa explícita: Protocolo de Montreal + Emenda de Kigali (2016) + EPA SNAP Program + AIM Act (2020) nos EUA + EU F-gas Regulation 517/2014 + Resolução CONAMA 267/2000 + EPA Section 608 Technician Certification. Não se trata apenas de 'meio ambiente' — é conformidade regulatória técnica que afeta projeto, manutenção e perícia."
+    rationale: "Alinha as notas de refrigeração ao mesmo rigor normativo das notas elétricas. Evita que 'refrigerante' seja tratado como detalhe operacional quando na verdade é item regulado com técnico certificado obrigatório."
+    scope: "Todas as notas de sistema frigorífico, HVAC, refrigeração"
+
+  - id: "DEC-27"
+    title: "ABYC H-22 + ISO 15083 como par primário para bomba de porão e alarme de alagamento"
+    statement: "Notas de bomba de porão, sensor de alagamento e alarme de alta água devem citar ABYC H-22 (2023) + ISO 15083:2020 como par primário, com USCG 33 CFR 183 + SOLAS II-1 Reg 21/35-1 como camadas complementares. Diferenciar claramente bomba (atuação) e alarme (alerta) em todas as notas aplicáveis."
+    rationale: "Consolida família normativa e estabelece distinção arquitetural obrigatória."
+    scope: "Bomba de porão, alarme de alagamento, sensor de nível d'água"
+
+  - id: "DEC-28"
+    title: "NEC Art. 440 como referência dimensional para AC marine"
+    statement: "Toda nota de ar-condicionado marine (220V ou 12V DC) deve citar explicitamente NEC Art. 440 — Air-conditioning and refrigerating equipment, documentando os conceitos MCA (Minimum Circuit Ampacity) e MOCP (Maximum Overcurrent Protection) como ponto de partida do dimensionamento elétrico."
+    rationale: "Elimina o erro comum de dimensionar AC 'por watts'; ancora a prática no padrão internacional reconhecido."
+    scope: "Ar-condicionado marine 220V, 12V DC, chillers"
+
+  - id: "DEC-29"
+    title: "Transformador isolador vs autotransformador — distinção obrigatória"
+    statement: "Notas sobre transformadores bivolt, transformador de entrada ou transformador isolador devem explicitar que autotransformador NÃO oferece isolação galvânica, não apresenta a mesma função de bonding do neutro secundário, e é frequentemente vendido (incorretamente) como solução de isolação. IEC 60076 + IEC 61558 (para transformadores de segurança/isolação) + INMETRO 637/2014 devem ser citados."
+    rationale: "Correção de erro recorrente em retrofits e importações de equipamento."
+    scope: "Transformadores em geral no domínio 30"
+
+  - id: "DEC-30"
+    title: "Nota bônus fora do plano — formalização de práticas de expansão"
+    statement: "Quando durante a reescrita surgir tema tecnicamente adjacente ao plano original (ex.: AC 12V DC surgindo a partir de AC 220V), a criação de nota extra é permitida e deve ser registrada no YAML da onda como 'nota nova' com fase_6_reescrita própria e documentação do contexto. Limite: 1-2 notas bônus por onda, sempre com backlink na nota-mãe."
+    rationale: "Permite crescimento orgânico do vademecum sem descontrole do plano; registra exceções de forma auditável."
+    scope: "Meta — governança da fase 6"
+
+intra_wave_coherence_patterns:
+  - pattern: "Todas as notas de segurança (CO, GLP/GN, Extintor, Alarme Alagamento) citam ABYC A-series + ISO 9094 + UL series + NFPA série como conjunto consistente"
+  - pattern: "Todas as notas de refrigeração (AC 220V, AC 12V DC) citam regulação ambiental completa (Montreal + Kigali + EPA + F-gas + CONAMA + Section 608)"
+  - pattern: "Todas as notas elétricas AC citam ABYC E-11 + NEC + NBR 5410 + IEC 60364 como conjunto"
+  - pattern: "Todas as notas envolvendo lítio citam ABYC E-13 + IEC 62619 + UL 1973"
+  - pattern: "NMEA 2000 + PGNs específicos referenciados em notas com integração de rede (alarme, AIS, AC DC)"
+  - pattern: "Glossários médios em 48-60 termos (cumprindo feedback Q2 do usuário — 'vademecum')"
+  - pattern: "TL;DR com 9 regras estruturadas (arquitetura → projeto → operação → manutenção → normas)"
+  - pattern: "Danger com 9 cenários mapeados (perícia, regulatório, operacional crítico, retrofit, charter/comercial)"
+  - pattern: "Normas aplicáveis em 4-6 sub-famílias + tabela comparativa por jurisdição (EUA vs Brasil vs Internacional vs Europa)"
+
+todos_resolved_this_wave:
+  - "'IEC 60076 (edição a verificar)' em Transformador Entrada.md — resolvido para IEC 60076-1/5/11 + IEC 61558-1/-2-1/-2-4 específicas"
+  - "normas_citadas ausentes em 13 notas — DEC-14 aplicada"
+  - "review_jurisdiction escalar → lista ['Brasil', 'internacional'] em todas as notas da onda"
+
+commit_message_draft: |
+  Phase 6 Wave 4: DEC-11 recalibrated on 18 Tier S notes + 1 bonus note (AC 12V DC)
+
+  Notes (19 total): Projeto Elétrico de Embarcação — Passo a Passo, Dimensionamento
+  Banco Baterias, Manutenção Preventiva, Inspeção Cabos Terminais, Multímetro,
+  Voltímetro-Amperímetro, Anôdo, Eletrólise, Detector CO, Detector GLP/GN,
+  Extintor Automático, Alarme Alagamento, Transformador Bivolt, Transformador
+  Entrada, Linha Pesada AC, Ar-Condicionado Marine (220V), Bomba de Porão
+  + nova nota Ar-Condicionado Marine 12V DC.
+
+  Each note received:
+  - TL;DR tip callout with 9 decision rules (30-second read)
+  - Danger callout with 9 scenarios requiring specialist intervention
+  - Glossário rápido with 48-60 technical terms (target 40-60, avg 52.9)
+  - Normas section expanded from 0-10 items to 22-55 items (avg 33.0)
+
+  New decisions documented:
+  - DEC-26: Refrigerant environmental regulation as mandatory normative layer
+  - DEC-27: ABYC H-22 + ISO 15083 as primary pair for bilge pump / flood alarm
+  - DEC-28: NEC Art. 440 as dimensional reference for marine AC (220V + 12V DC)
+  - DEC-29: Isolation transformer vs autotransformer — mandatory distinction
+  - DEC-30: Bonus-note policy — formalization of in-wave expansion
+
+  TODOs resolved (3):
+  - "IEC 60076 (edição a verificar)" in Transformador Entrada
+    → resolved to IEC 60076-1/5/11 + IEC 61558-1/-2-1/-2-4
+  - normas_citadas absent in 13 notes — DEC-14 applied
+  - review_jurisdiction scalar → list in all 18 notes
+
+  New note created (bonus):
+  - Ar-Condicionado Marine 12V DC (70_Hidraulica_Climatizacao_e_Utilidades)
+    — full DEC-11 premium template from scratch, backlinked from parent note.
+
+  Metrics:
+  - 19 notes processed (18 Tier S + 1 bonus)
+  - 38 callouts added (19 tip + 19 danger)
+  - ~1003 glossary terms (avg 52.8/note)
+  - ~621 norms expanded (avg 32.7/note)
+  - 13 notes with DEC-14 (normas_citadas created/rewritten integrally)
+  - Progress: 45/134 notes (33.6%) including bonus
+
+  Milestone: Tier S 100% complete (44 notes out of 43 planned + 1 bonus).
+
+  Cadence (b): pausing for human review before Wave 5 (Tier A starts).
+---

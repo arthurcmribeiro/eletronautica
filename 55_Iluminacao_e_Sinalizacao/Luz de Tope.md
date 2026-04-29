@@ -3,9 +3,19 @@ title: "Luz de Tope"
 note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "TOP 95519734f7fb82f593528121a72dcb4e.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_5_reescrita: "07"
+prioridade_fase_5: 6.1
+reviewed_on: "2026-04-18"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "COLREGS 72 (Regras 21, 22, 23, 25, 27)"
+  - "NORMAM-01/DPC (verificar última edição vigente junto à DPC)"
+  - "ISO 16180:2011 (Small craft — Navigation lights)"
+  - "USCG 33 CFR 183 Subpart J (Navigation lights)"
+  - "ABYC A-16 (Electric Navigation Lights — verificar última edição)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
@@ -37,6 +47,15 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > LUZ DE TOPE (MASTHEAD LIGHT) — Luz branca de 225° usada no arranjo de luzes de embarcações a motor em movimento, conforme porte e regra aplicável. Não se confunde com luz de âncora, embora ambas sejam brancas.
+
+> [!tip] Regra de decisão em 30 segundos
+> - **Tope = branca, 225°, centrada no plano longitudinal** (112,5° de cada lado da proa).
+> - **Embarcação a motor em movimento → liga tope.** Veleiro a vela pura → NÃO usa tope (usa tricolor de mastro ou bordo+popa).
+> - **Alcance mínimo:** 2 NM (< 12 m), 3 NM (12–50 m), 5 NM (≥ 50 m) — COLREGS Anexo I §8.
+> - **> 50 m exige dois topes** (proa mais alto, popa mais baixo).
+> - **Tope deve estar acima das luzes de bordo** — visibilidade superior é o princípio.
+> - **Não improvisar com lanterna LED** — fotometria/arco devem ser conformes ISO 16180:2011 / USCG 33 CFR 183.
+> - **Conector no topo é a falha #1** — vibração + UV + spray → exigir IP67 ou crimp-seal.
 
 ## O que é
 
@@ -170,7 +189,7 @@ Uma embarcação a motor visto à frente: luz de tope branca (centro) + verde (b
 
 ## Boas práticas
 
-- Usar LED homologado USCG ou ISO 16180 — não adaptar LED de outra aplicação
+- Usar LED homologado USCG ou ISO 16180:2011 — não adaptar LED de outra aplicação
 - Proteger o conector no topo com conector marinizado IP67 ou conector crimp-seal
 - Fixar o cabo ao longo de toda a estrutura com braçadeiras a cada 30–40cm
 - Inspecionar e limpar conector anualmente (início de temporada)
@@ -188,6 +207,18 @@ Uma embarcação a motor visto à frente: luz de tope branca (centro) + verde (b
 
 - Testar no checklist pré-saída junto com as demais luzes
 - Verificar visualmente da água (cais ou outro barco) — confirmar que a luz está acesa e visível
+
+> [!danger] Quando chamar especialista
+> Erros em luzes de navegação têm consequência regulatória direta — em colisão noturna, a investigação começa pela conformidade COLREGS. Pare e procure profissional/eletricista naval certificado quando:
+> - **Embarcação ≥ 20 m** — exigências de altura, separação entre topes e ângulos passam a ter cálculo geométrico (COLREGS Anexo I §2-§5).
+> - **Dois topes** (embarcação > 50 m) com diferença de altura na faixa-limite — precisa medição precisa (Anexo I §2(a)(ii)).
+> - **Veleiro com instrumentação no topo do mastro** — escolher entre tricolor + tope auxiliar quando a motor pode exigir cálculo de potencial bloqueio mútuo de arcos.
+> - **Substituir incandescente por LED em luminária antiga** sem certificação USCG/ISO específica para LED — o policarbonato e o refletor podem alterar o padrão fotométrico.
+> - **Inspeção AT (autoridade marítima) ou seguradora pediu laudo de conformidade** — assinatura técnica protege em caso de sinistro.
+> - **Antena de radar ou VHF compartilha o suporte** e há suspeita de bloqueio de arco — medição com fotômetro de campo, não estimativa visual.
+> - **Embarcação SOLAS / classificada** — entra em jogo IMO COLREGS + sociedade classificadora (ABS, DNV, BV) com requisitos próprios.
+>
+> Custo de uma medição certificada é inferior a uma multa de capitania ou agravamento de seguro em caso de colisão noturna.
 
 ## Erros comuns
 
@@ -214,7 +245,7 @@ Uma embarcação a motor visto à frente: luz de tope branca (centro) + verde (b
 
 Luz de tope frequentemente ausente em lanchas pequenas (< 12m), ou instalada em posição incorreta (descentrada, bloqueada). Verificação de conformidade ausente.
 
-### Referência COLREGS / NORMAM-01
+### Referência COLREGS / NORMAM-01 (edição a verificar)
 
 O uso, a altura de instalação e o alcance fotométrico devem ser lidos conforme o porte e a configuração da embarcação. O ponto técnico central é respeitar setor, posicionamento e conjunto correto com luzes de bordo e alcançado.
 
@@ -225,9 +256,9 @@ Para lanchas < 7m, a COLREGS permite alguma simplificação — mas a luz de top
 ## Normas e referências aplicáveis
 
 - **COLREGS Regra 21, 23 e 25** — definição, posicionamento e obrigações
-- **NORMAM-01** — aplicação nacional das COLREGS para embarcações miúdas
+- **NORMAM-01 (edição a verificar)** — aplicação nacional das COLREGS para embarcações miúdas
 - **ISO 16180:2011** — requisitos fotométricos
-- **USCG 33 CFR 183** — homologação americana
+- **USCG 33 CFR (edição a verificar) 183** — homologação americana
 
 ## Destaques para ensino
 
@@ -260,11 +291,30 @@ Deve estar centrada no plano longitudinal. Deslocar para o lado cria arco assim�
 
 **Posso usar um LED de lanterna branca adaptada?**
 
-Não. A fotometria, o arco de emissão e o alcance devem ser conformes à ISO 16180. Lanterna adaptada não garante os 2 milhas de alcance mínimo.
+Não. A fotometria, o arco de emissão e o alcance devem ser conformes à ISO 16180:2011. Lanterna adaptada não garante os 2 milhas de alcance mínimo.
 
 **Qual a diferença entre luz de tope e luz de âncora?**
 
 Mesmo que ambas sejam brancas: tope = 225°, usado em movimento. Âncora = 360°, usado fundeado. São funções e arcos completamente diferentes.
+
+## Glossário rápido
+
+| Termo | Significado |
+| --- | --- |
+| **Luz de tope** | Branca, 225°, embarcação a motor em movimento (COLREGS Regra 23) |
+| **Luz de bordo** | Verde 112,5° (boreste/BE) + Vermelha 112,5° (bombordo/BB) (Regra 21(b)) |
+| **Luz de alcançado** | Branca 135° na popa (Regra 21(c)) |
+| **Luz de âncora** | Branca 360°, fundeado (Regra 30) |
+| **Tricolor de mastro** | Combina tope + bordo num único conjunto no topo do mastro — só sob vela |
+| **Arco / setor** | Ângulo horizontal de visibilidade da luz (medido em graus) |
+| **NM (milha náutica)** | Unidade de distância: 1 NM = 1.852 m |
+| **Alcance fotométrico** | Distância em que a luz é detectável por observador padrão (varia com porte) |
+| **Anexo I COLREGS** | Detalha posicionamento, altura, intensidade luminosa e setores |
+| **Sector cut-off** | Transição angular entre o setor visível e o invisível (deve ser nítida) |
+| **MASTHEAD** | Tradução literal de "topo do mastro"; nome em inglês para luz de tope |
+| **NUC (Not Under Command)** | Embarcação sem governo — usa luzes específicas (Regra 27) |
+| **RAM (Restricted Ability to Maneuver)** | Capacidade restrita de manobra — luzes especiais (Regra 27) |
+| **CBDR** | Constant Bearing, Decreasing Range — risco de colisão (Regra 7) |
 
 ## Visual didático
 

@@ -3,9 +3,19 @@ title: "Correntes Parasitas — Stray Currents"
 note_type: "technical-note"
 domain: "80_Seguranca_e_Corrosao"
 source_file: "CORRENTES PARASITAS — STRAY CURRENTS 33a19734f7fb8174be22f7de6a4170ba.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+reviewed_on: "2026-04-17"
+fase_5_reescrita: "03"
+prioridade_fase_5: 6.4
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-2 (2020)"
+  - "ABYC A-28 (2020)"
+  - "ISO 13297:2020"
+  - "ISO 28679:2017 (proteção catódica de embarcações)"
+  - "NACE SP0169-2013 (referência de proteção catódica)"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
@@ -42,6 +52,14 @@ related_notes:
 > [!abstract] Resumo técnico
 > Corrente parasita é corrente elétrica que percorre caminhos não previstos e produz perda de metal em pontos de saída de corrente para a água ou para estruturas condutivas. Em linguagem de oficina, muita gente chama tudo de "eletrólise"; tecnicamente, isso é impreciso. Corrente parasita é uma forma específica e muito mais agressiva de corrosão eletroquímica.
 
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Três fenômenos distintos, três diagnósticos:** corrosão galvânica ≠ corrente parasita DC ≠ vazamento AC para a água. Tratá-los como sinônimos leva ao erro de arquitetura.
+> 2. **"Eletrólise" não é termo técnico neutro.** No vocabulário de oficina ele esconde todos os três. Em diagnóstico sério, nomear o mecanismo é o primeiro passo.
+> 3. **Anodo sumindo rápido é sinal, não diagnóstico.** Pode ser marina, barco vizinho, falha interna ou liga errada. Não trocar sem investigar.
+> 4. **Multímetro na água não é diagnóstico.** Eletrodo de referência Ag/AgCl é o instrumento padrão. Sem ele, qualquer leitura é orientativa.
+> 5. **Ao desconectar shore power, o sintoma muda?** Se sim, a origem é externa (marina, barco vizinho) ou interface AC. Se não, a origem é interna DC.
+> 6. **Ordem de grandeza importa:** corrosão galvânica trabalha em meses/anos; corrente parasita severa pode destruir hélice em dias. Velocidade do dano orienta a hipótese.
+
 ## O que são correntes parasitas
 
 Em termos práticos, há corrente parasita quando parte da corrente elétrica de um sistema DC ou de uma falha AC encontra um caminho indevido por:
@@ -70,6 +88,19 @@ Ocorre sem alimentação elétrica externa, por diferença natural de potencial 
 ### 3. Vazamento AC para a água
 
 É gravíssimo do ponto de vista de segurança de pessoas e pode coexistir com problemas de corrosão, mas seu principal risco imediato é choque elétrico em ambiente aquático. Não deve ser tratado como se fosse idêntico ao mecanismo clássico de corrosão por corrente parasita DC.
+
+### Quadro comparativo dos três fenômenos
+
+| Aspecto | Corrosão galvânica | Corrente parasita DC | Vazamento AC |
+| --- | --- | --- | --- |
+| **Força motriz** | diferença natural de potencial entre metais no eletrólito | fuga de corrente DC externa imposta ao sistema | fuga AC por PE, casco ou bonding |
+| **Fonte** | par galvânico (bronze + alumínio, aço + inox, etc.) | cabo DC danificado, arquitetura errada, barco vizinho | shore power com PE comprometido, equipamento AC defeituoso |
+| **Velocidade do dano** | meses a anos (com anodo ativo) | dias a semanas em casos severos | não é o risco primário — é segurança de pessoas |
+| **Risco principal** | perda progressiva de metal nobre | destruição rápida de hélice, eixo, rabeta | **choque elétrico em nadadores (ESD — Electric Shock Drowning)** |
+| **Diagnóstico** | eletrodo de referência Ag/AgCl + tabela galvânica | medir corrente em PE, bonding, derivações; observar ao desconectar shore | clamp meter de fuga AC no PE; DR/ELCI dispara |
+| **Mitigação** | anodo apropriado + par galvânico compatível | corrigir arquitetura, isolamento, bonding; isolador galvânico ou transformador de isolamento | corrigir o defeito na fonte + ELCI a montante + DR em cada circuito |
+| **Bonding ajuda?** | sim (equaliza metais protegidos) | sim se arquitetura certa; piora se errada | não resolve — ELCI/DR é a proteção correta |
+| **Shore power envolvido?** | indireta (via PE e bonding) | frequente (via PE comprometido) | direto |
 
 ## Fontes típicas
 
@@ -196,6 +227,36 @@ Os mais perigosos são:
 - usar leitura improvisada de multímetro como diagnóstico definitivo;
 - confundir corrente parasita DC com risco de choque por AC na água;
 - condenar o metal da peça quando o problema é a arquitetura elétrica.
+
+## Quando chamar especialista
+
+> [!danger] Situações que exigem análise qualificada
+> - Consumo de anodos em **semanas** em vez de temporada — indica corrente parasita DC severa, não desgaste normal.
+> - Corrosão destrutiva localizada em hélice, eixo, rabeta ou passa-casco metálico — dano mecânico iminente.
+> - DR da embarcação ou ELCI do shore power disparando em marina específica — pode haver **hot earth** ou vazamento AC na infraestrutura.
+> - Suspeita de **Electric Shock Drowning (ESD)** — corrente AC na água é risco imediato de morte para banhistas; **evacuar a área, desligar shore power, chamar a marina e eletricista certificado antes de qualquer inspeção**.
+> - Corrosão piora consistentemente ao entrar em determinada marina — pode ser embarcação vizinha injetando corrente.
+> - Casco de alumínio com pitting profundo em zona submersa — custo de reparo estrutural justifica diagnóstico completo antes de qualquer intervenção.
+>
+> Nesses casos, o diagnóstico exige eletrodo Ag/AgCl, clamp meter AC/DC de alta sensibilidade e possivelmente ensaio de isolação com megôhmetro. Eletricista naval certificado (ABYC E-2, ISO 13297:2020) deve conduzir o levantamento.
+
+## Glossário rápido
+
+| Termo | Definição | Por que importa no diagnóstico |
+| --- | --- | --- |
+| `Pitting` | corrosão localizada em forma de pites/poços | sinal característico de corrente parasita DC (não de corrosão galvânica uniforme) |
+| `Eletrodo de referência Ag/AgCl` | eletrodo prata/cloreto de prata em solução | padrão para medir potencial de proteção catódica em ambiente marinho |
+| `Potencial de proteção` | faixa de tensão em que o metal está cataódicamente protegido | para aço em água do mar: típico −800 mV a −1100 mV vs Ag/AgCl |
+| `Proteção catódica` | técnica de proteger metal tornando-o cátodo | via anodo galvânico (sacrifício) ou corrente imposta |
+| `Anodo galvânico / de sacrifício` | metal menos nobre que se corrói no lugar do protegido | zinco (salgada), alumínio (mista), magnésio (doce) |
+| `ESD` | Electric Shock Drowning | choque AC em nadador próximo à marina; fatal mesmo em baixa corrente (10-20 mA) |
+| `ELCI` | Equipment Leakage Circuit Interrupter | DR de entrada de shore power (ABYC — 30 mA, ≤100 ms); barreira contra ESD |
+| `Hot earth` | PE conduzindo corrente operacional AC | causa comum de ESD em marina |
+| `Megôhmetro / Megger` | ohmímetro de alta tensão (250V/500V) | mede resistência de isolação em cabos AC |
+| `Clamp meter DC` | alicate amperímetro com efeito Hall | mede corrente DC sem abrir circuito — essencial para bonding/PE |
+| `Baseline` | medições de referência do barco em condição saudável | tendência é mais informativa que valor absoluto isolado |
+| `Galvânica` (mesa) | ordenamento dos metais por nobreza em eletrólito | base para prever par galvânico problemático |
+| `Passivação` | filme protetor natural em inox, alumínio, etc. | corrente parasita pode romper passivação e acelerar ataque |
 
 ## Visual didático
 

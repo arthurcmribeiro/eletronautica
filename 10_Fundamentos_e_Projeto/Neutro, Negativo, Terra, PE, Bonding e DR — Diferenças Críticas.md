@@ -3,9 +3,21 @@ title: "Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas"
 note_type: "technical-note"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "editorial-addition-2026-04-13"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+reviewed_on: "2026-04-17"
+fase_5_reescrita: "01"
+prioridade_fase_5: 7.6
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023)"
+  - "ABYC E-2 (2020)"
+  - "ISO 13297:2020"
+  - "ABNT NBR 5410 (2004 + emendas)"
+  - "NORMAM-211 (2022 rev. aplicável via DPC)"
+  - "IEC 61008"
+  - "IEC 61009"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -43,6 +55,13 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Em elétrica náutica, a maioria dos erros graves nasce quando funções diferentes são tratadas como se fossem a mesma coisa. **Neutro AC**, **negativo DC**, **PE / terra de proteção**, **terra do pier**, **bonding** e **DR** podem se tocar em certos arranjos, mas não são equivalentes. Misturá-los fora da topologia correta produz fuga de corrente por caminhos indevidos, corrosão, disparos erráticos, danos eletrônicos e incêndio. Esta nota organiza essas diferenças por função, barramento, topologia, fonte ativa e cenário prático.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **PE ≠ Neutro ≠ Negativo DC ≠ Bonding** — cada um tem barramento, função e percurso próprios. Se eles se tocam, é **só** no ponto único previsto pelo projeto.
+> 2. **"220 V" não implica neutro.** No Brasil, a maior parte das marinas entrega `L1 + L2 + PE` (fase-fase). Rebatizar um ativo como neutro é o erro que contamina PE, bonding e DC.
+> 3. **Dispositivo em série apenas no verde-amarelo é quase sempre isolador galvânico** — não é DR. DR precisa dos ativos passando pelo toróide.
+> 4. **Quando a topologia da marina difere da projetada a bordo**, a solução correta é reorganizar a entrada AC (transformador de isolamento), não "um DR melhor".
+> 5. **Negativo DC não é terra universal.** Usá-lo como referência da entrada AC gera loop de terra, disparo errático e corrosão acelerada.
 
 ## Por que essa confusão é tão comum
 
@@ -267,19 +286,19 @@ O princípio não muda: o dispositivo monitora a soma das correntes nos **condut
 - não transforma fase em neutro;
 - não conserta topologia errada.
 
-## Sua dúvida da Hanse 575
+## Caso de campo: dispositivo em série com o verde-amarelo em embarcação europeia
 
-### Resposta curta
+Situação comum em embarcações europeias importadas (exemplo típico: veleiros de fabricantes como Hanse, Bavaria, Beneteau, Jeanneau em entrada de shore power 230 V): um componente no painel parece "um DR" à primeira vista, mas observado em detalhe **interrompe apenas o condutor verde-amarelo** da entrada do cais.
 
-Pela sua descrição, **isso provavelmente não era um DR**.
+### Leitura técnica
 
 Se o dispositivo do painel:
 
-- interrompia apenas os fios verde-amarelo;
-- não tinha os condutores ativos passando por ele para comparação;
-- estava associado à entrada de shore power,
+- interrompe apenas os fios verde-amarelo;
+- não tem os condutores ativos passando por ele para comparação vetorial;
+- está associado à entrada de shore power,
 
-a hipótese **mais provável** é que você tenha visto um **isolador galvânico** em série com o `PE` da marina, não um DR.
+a hipótese **mais provável** é **isolador galvânico** em série com o `PE` da marina, e **não DR**.
 
 ### Por que essa hipótese é a mais forte
 
@@ -287,18 +306,18 @@ A documentação oficial de fabricantes como a Victron descreve o **isolador gal
 
 Já o DR/RCD, por definição, precisa enxergar os **condutores ativos monitorados** dentro do toróide. Se só o verde-amarelo passa por aquele componente, ele não está funcionando como DR clássico.
 
-### O que ainda precisa para fechar 100%
+### O que confirma a identificação
 
-Para afirmar sem margem:
+Para afirmar sem margem, conferir em campo:
 
 - foto do componente;
 - marca/modelo;
-- ligação vista no diagrama elétrico;
-- presença de botão `TEST`, marcação em `mA`, classe `A/AC/B`, ou indicação de galvanic isolator.
+- ligação vista no diagrama elétrico da embarcação;
+- presença de botão `TEST`, marcação em `mA`, classe `A/AC/B` (DR); ou indicação explícita de "galvanic isolator".
 
-Sem isso, a conclusão correta é:
+Sem esses sinais, a conclusão correta é:
 
-> **inferencia técnica forte**: muito provavelmente isolador galvânico ou outro dispositivo ligado ao PE, e não DR.
+> **inferência técnica forte**: muito provavelmente isolador galvânico ou outro dispositivo ligado ao PE, e **não** um DR.
 
 ## Isolador galvânico: o que ele é e o que ele não é
 
@@ -348,6 +367,18 @@ Quando houver dúvida entre neutro, negativo, PE, terra do pier e bonding:
 8. localizar os barramentos de `N`, `PE`, negativo DC e bonding;
 9. conferir se há múltiplas interligações indevidas.
 
+## Quando chamar um especialista
+
+> [!danger] Situações que não são DIY
+> - Suspeita de corrente operacional no `PE` (hot earth) — pessoas na água correm risco imediato.
+> - DR da embarcação disparando mesmo com todas as cargas desligadas — pode ser vazamento estrutural.
+> - Casco metálico ou ânodo sumindo em ritmo anormal (semanas em vez de temporada).
+> - Entrada de shore power com barramento N improvisado ou dúvida sobre onde existe o bond `N-PE`.
+> - Equipamento europeu (Hanse, Bavaria, Beneteau, Jeanneau, etc.) com dispositivo no painel cujo papel não está claro no diagrama.
+> - Qualquer alteração em transformador de isolamento que envolva o jumper `N-PE` do secundário.
+>
+> Nesses casos a análise exige diagrama elétrico completo da embarcação, medição sob carga em modo shore + gerador + inversor, e checagem do ponto único de referência. Contato com eletricista naval certificado (ABYC / ISO 13297:2020 / NORMAM-211) é o caminho seguro.
+
 ## Erros mais perigosos
 
 - tratar `220 V` como sinônimo de `fase-neutro`;
@@ -367,6 +398,8 @@ Quando houver dúvida entre neutro, negativo, PE, terra do pier e bonding:
 
 ## Visual didático
 
+### Diagrama base — funções separadas
+
 ![Neutro, negativo, PE e bonding](../_visuals/generated/neutro-negativo-pe-bonding.svg)
 
 Evitar a simplificacao perigosa de chamar tudo de terra e misturar funcoes eletricas diferentes.
@@ -374,6 +407,26 @@ Evitar a simplificacao perigosa de chamar tudo de terra e misturar funcoes eletr
 **Cautela:** As conexoes permitidas dependem da topologia shore/gerador/inversor/transformador. Nao use este visual como diagrama de ligacao.
 
 Material de apoio: [Neutro, negativo, PE e bonding](../_visuals/generated/neutro-negativo-pe-bonding.md)
+
+### Analogia visual controlada — PE, Neutro, Negativo, Bonding
+
+Spec editorial (em renderização — sprint 1 pós-Fase 4): [`_visuals/specs/ac-dc-pe-bonding-analogia.json`](../_visuals/specs/ac-dc-pe-bonding-analogia.json)
+
+Quatro painéis em cores distintas reforçam a separação funcional, com três "erros comuns" catalogados:
+
+1. **Verde — PE (terra de segurança):** caminho de falha AC; não conduz em operação normal.
+2. **Azul — Neutro AC (retorno funcional):** carrega corrente de trabalho; no barco, sempre isolado do casco.
+3. **Amarelo — Negativo DC (retorno funcional):** carrega corrente de trabalho DC; referência do banco, não terra universal.
+4. **Vermelho — Bonding (equalização):** mantém massas metálicas no mesmo potencial; não é caminho de corrente de trabalho.
+
+**Erros catalogados no visual:**
+
+- **Erro 1** — conectar neutro AC ao bonding/casco gera corrente parasita no mar (risco elétrico para nadadores + corrosão acelerada).
+- **Erro 2** — assumir negativo DC como terra de segurança: DR não detecta falha e bonding vira caminho não previsto.
+- **Erro 3** — ligar bonding ao neutro para "aterrar" um equipamento inverte o papel das proteções e invalida o projeto.
+
+> [!warning] Cautela crítica
+> Conectar neutro AC ao bonding ou ao casco pode criar corrente parasita no mar (risco de corrosão acelerada e choque em nadadores). Conectar negativo DC ao PE sem critério gera loop de terra e falsos acionamentos de DR. Consultar **ABYC E-11 (2023)** e **ISO 13297:2020** antes de qualquer alteração.
 
 ## Integração com outras notas
 
@@ -400,11 +453,33 @@ Material de apoio: [Neutro, negativo, PE e bonding](../_visuals/generated/neutro
 - RCBO, RCCB e DR são a mesma coisa?
 - DR pode ficar só no fio verde-amarelo?
 - Um dispositivo no verde-amarelo pode ser o quê?
-- O caso descrito da Hanse 575 sugere qual componente?
+- Dispositivo em série apenas com o verde-amarelo em embarcação europeia — é DR ou isolador galvânico?
 - O que faz um isolador galvânico?
 - O que um isolador galvânico não faz?
 - Quando preciso de transformador de isolamento?
 - Quando preciso de transformador bivolt?
 - Onde existe neutro aterrado?
 - Onde o neutro não existe e não pode ser inventado?
+
+## Glossário rápido
+
+| Sigla | Expansão | Contexto |
+| --- | --- | --- |
+| `AC` | Alternating Current (corrente alternada) | shore power, gerador, inversor, saída de transformador |
+| `DC` | Direct Current (corrente contínua) | baterias, painéis solares, alternador, BMS, cargas 12/24/48 V |
+| `PE` | Protective Earth (terra de proteção) | condutor de proteção AC contra choque; não é retorno de carga |
+| `N` | Neutro | retorno funcional AC quando a topologia o entrega |
+| `N-PE bond` | Ligação ponto único entre neutro e PE | criada na fonte ativa ou sistema derivado (transformador de isolamento), não no painel |
+| `L / L1 / L2` | Fase ativa AC | condutor ativo que alimenta a carga; em 220 V fase-fase existem dois |
+| `DR` | Diferencial Residual (termo BR) | genérico para dispositivos de proteção por corrente residual |
+| `RCD` | Residual Current Device | termo guarda-chuva europeu para DR |
+| `RCCB` | Residual Current Circuit Breaker | RCD sem proteção contra sobrecorrente |
+| `RCBO` | Residual Current Breaker with Overcurrent | RCD + disjuntor no mesmo dispositivo |
+| `ELCI` | Equipment Leakage Circuit Interrupter | termo ABYC para DR de entrada de shore power (30 mA, ≤100 ms) |
+| `GFCI` | Ground Fault Circuit Interrupter | DR de tomada (termo norte-americano, 5 mA) |
+| `Bonding` | Interligação de massas metálicas | equalização de potencial anticorrosiva |
+| `Shore power` | Alimentação AC da marina via cabo de pier | entrada externa; topologia varia por jurisdição |
+| `Hot earth` | Condutor de proteção conduzindo corrente operacional | condição de falha grave; risco imediato para nadadores |
+| `Sistema derivado` | Fonte AC criada a bordo (transformador isolamento, inversor, gerador) | permite definir topologia própria e ponto único de bond |
+
 

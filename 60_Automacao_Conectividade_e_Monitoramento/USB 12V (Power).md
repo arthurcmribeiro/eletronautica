@@ -3,9 +3,22 @@ title: "USB 12V (Power)"
 note_type: "component"
 domain: "60_Automacao_Conectividade_e_Monitoramento"
 source_file: "USB (POWER 12V) 49619734f7fb82a48941010bf6384b31.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 129
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "USB 2.0/3.0/3.1/3.2"
+  - "USB Power Delivery (USB-C PD up to 240W)"
+  - "USB-IF (USB Implementers Forum)"
+  - "IEC 62680 (USB Type-C)"
+  - "IEC 60529 (IP)"
+  - "IEC 61547 (EMC)"
+  - "ABNT NBR 14728"
+  - "INMETRO Portaria 197/2019 (USB carregadores BR)"
+  - "Manual técnico Blue Sea Systems / Marinco / Furrion / Hella Marine USB"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://www.nmea.org/standards.html"
@@ -37,6 +50,21 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Ponto USB embarcado é um pequeno sistema de conversão DC-DC instalado para carregar dispositivos de baixa potência e, em alguns casos, equipamentos mais exigentes via USB-C. Apesar de parecer trivial, ele pode criar problemas de aquecimento, queda de tensão, interferência eletromagnética e corrosão se for tratado como acessório automotivo sem projeto.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **USB marine-grade** (Blue Sea Systems, Marinco, Furrion, Hella Marine) — IPX5+ + EMC certificada. USB automotivo falha em 1-2 anos em ambiente marine.
+> 2. **USB-C PD (Power Delivery) até 240W** (USB PD 3.1 EPR) — laptops, tablets premium; USB-A clássico até 12W (USB 2.0 BC) ou 15W (Quick Charge).
+> 3. **EMC certificada** (IEC 61547) — driver DC-DC switching ruim mata VHF/GPS adjacente. Fer rite cores no cabo se sintomas.
+> 4. **Fusível dedicado** (típico 5-10A para 1-4 portas USB) + cabo dimensionado + aterramento (bonding ABYC E-11.16).
+
+> [!info] Glossário rápido
+> - **USB-A:** padrão clássico (5V 0,5-2,4A).
+> - **USB-C:** novo padrão reversível (até 100W com PD 3.0; 240W com PD 3.1 EPR).
+> - **USB PD (Power Delivery):** protocolo USB-C de alta potência.
+> - **Quick Charge:** Qualcomm proprietário (5V/9V/12V dinâmico).
+> - **DC-DC switching:** conversor de eficiência alta (85-95%).
+> - **IEC 62680:** padrão USB Type-C.
+> - **INMETRO Portaria 197/2019:** etiquetagem USB BR.
 
 ## O que é
 

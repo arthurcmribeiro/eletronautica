@@ -3,9 +3,24 @@ title: "Isolador Galvânico / Transformador de Isolamento"
 note_type: "technical-note"
 domain: "40_Distribuicao_Protecao_e_Aterramento"
 source_file: "ISOLADOR GALVÂNICO TRANSFORMADOR DE ISOLAMENTO 33a19734f7fb810cb2dcc0a14fa26dbf.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "03"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC A-28 (Galvanic Isolators) — edição a verificar"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ABYC A-33 (Shore Power Inlets) — edição a verificar"
+  - "ISO 13297:2020 — Small craft — Electrical systems — Alternating and direct current installations"
+  - "IEC 60364-7-709 — Marinas and similar locations"
+  - "NEC 555 (NFPA 70 art. 555) — Marinas and Boatyards"
+  - "NFPA 303 — Fire Protection for Marinas (edição a verificar)"
+  - "ABNT NBR 5410 (2004 + emendas) — complementar"
+  - "NORMAM-211/DPC (2022 rev. aplicável) — embarcações de esporte e recreio"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -46,6 +61,17 @@ related_notes:
 > [!abstract] Resumo técnico
 > Isolador galvânico e transformador de isolamento tratam a interface com o shore power em níveis diferentes. O primeiro atua sobre potenciais galvânicos no condutor de proteção; o segundo cria separação elétrica entre marina e sistema interno. Nenhum dos dois substitui projeto correto de PE, proteção diferencial e coordenação das fontes AC.
 
+> [!tip] Regra de decisão em 30 segundos
+> - **Escolha por nível de problema**: isolador galvânico trata **potenciais galvânicos no PE**; transformador de isolamento cria **sistema AC derivado** independente do cais.
+> - **Isolador vai no PE — só no PE**: nunca na fase, nunca no neutro, nunca no negativo DC.
+> - **Marina duvidosa → transformador**: PE ausente, invertido, com alta impedância ou com topologia incerta exige transformador, não isolador.
+> - **Transformador ≠ solução mágica**: o secundário precisa de bond N-PE único, DR/ELCI, aterramento próprio e diagrama explícito do sistema derivado.
+> - **Nunca remover DR/GFCI ao instalar transformador**: ele expõe falhas internas que antes vazavam para o cais. Remover DR anula a proteção.
+> - **Isolador certificado ABYC A-28**: modelos fail-safe com monitor; genérico sem certificação pode estar em curto sem indicar.
+> - **Dimensionamento do transformador**: 125% da carga máxima simultânea; conforto térmico e vida útil.
+> - **220 V BR fase-fase**: isolador galvânico **não cria neutro** nem redefine topologia — ver [[Transformador Bivolt]].
+> - **Teste anual do isolador**: seguir procedimento do fabricante; leitura ôhmica simples é insuficiente.
+
 ## O que é
 
 São dois componentes distintos com funções complementares para proteção do sistema de shore power:
@@ -79,7 +105,7 @@ O isolador galvânico é mais barato e mais compacto — útil quando a instala�
 
 **Comum em barcos importados:**
 
-- Isolador galvânico certificado ABYC A-28 instalado no condutor de terra pelo fabricante
+- Isolador galvânico certificado ABYC A-28 (edição a verificar) instalado no condutor de terra pelo fabricante
 - Transformador de isolamento em veleiros de cruzeiro oceânico — independência total de infraestrutura de marina
 - Monitoramento de corrente no terra para detectar falha do isolador
 
@@ -128,7 +154,7 @@ No lado secundário, o projeto precisa definir explicitamente como serão tratad
 **Isolador galvânico (proteção básica):**
 
 - Instalado em série no condutor de terra do shore power, próximo ao inlet
-- Modelo certificado ABYC A-28 com monitor de falha (LED ou alarme)
+- Modelo certificado ABYC A-28 (edição a verificar) com monitor de falha (LED ou alarme)
 - Charles Industries, Promariner, Victron — modelos com teste integrado de continuidade
 
 **Transformador de isolamento fixo (proteção completa):**
@@ -149,7 +175,7 @@ No lado secundário, o projeto precisa definir explicitamente como serão tratad
 
 **Isoladores galvânicos:**
 
-- **Promariner (ProSafe)** — americana, certificada ABYC A-28, com LED de status e monitor de corrente
+- **Promariner (ProSafe)** — americana, certificada ABYC A-28 (edição a verificar), com LED de status e monitor de corrente
 - **Charles Industries (Guardian)** — referência americana, certificada, modelos com alarme integrado
 - **Victron Energy (Galvanic Isolator VGI)** — qualidade premium, com monitoramento via GX
 - **Yandina** — australiana, boa qualidade, menos encontrada no Brasil
@@ -233,7 +259,7 @@ Valor elevado pode indicar fuga real, falha no cais ou limitação do próprio c
 
 ## Boas práticas profissionais
 
-- Instalar no mínimo um isolador galvânico certificado ABYC A-28 em todo barco com shore power
+- Instalar no mínimo um isolador galvânico certificado ABYC A-28 (edição a verificar) em todo barco com shore power
 - Preferir transformador de isolamento em marinas com infraestrutura duvidosa (maioria das marinas brasileiras)
 - Incluir monitor de corrente no terra junto com o isolador galvânico — detecta falha do componente
 - Dimensionar o transformador de isolamento para 125% da carga máxima simultânea
@@ -263,6 +289,20 @@ Valor elevado pode indicar fuga real, falha no cais ou limitação do próprio c
 - Verificar temperatura do transformador de isolamento após as primeiras horas de uso em cada marina
 - Nunca conectar cargas que somem mais que 80% da capacidade nominal do transformador
 
+> [!danger] Quando chamar um especialista
+> Não assumir sozinho quando houver:
+> - Conversão de topologia AC (L+N+PE ↔ L1+L2+PE) ao instalar transformador — decisão de onde nasce o neutro derivado e o bond N-PE exige projeto com ART/CREA.
+> - Dimensionamento do secundário do transformador para cargas críticas (ar-condicionado + cozinha + carregador) sem memória de cálculo e margem térmica.
+> - Marina com sinistro recente (choque, eletrocussão, ESD) no barco ou em barco vizinho — revisar TODA a interface AC, não só o isolador.
+> - Isolador galvânico em barco antigo cujo certificado ou origem é desconhecida — tratar como não-certificado até prova documental.
+> - DR/ELCI desarmando repetidamente após transformador instalado — não é "defeito do DR": é falha de isolação interna exposta.
+> - Transformador sobreaquecendo com carga ≤ nominal — possível problema de tensão, harmônicos, frequência do cais ou saturação do núcleo.
+> - Barco com gerador a bordo + transformador de isolamento + inversor — coordenação das três fontes exige chave de transferência com intertravamento.
+> - Laudo técnico para seguradora/Marinha/Justiça envolvendo qualquer dos dois dispositivos.
+> - Modelo antigo de isolador sem monitor de fail-safe (versões pré-2008 da ABYC A-28) — substituição recomendada.
+>
+> Perda de zincos acelerada, corrosão no motor ou corrosão em hélice com isolador "ativo" é sinal de que o equipamento **não** está cumprindo função — investigar antes que vire dano estrutural.
+
 ## Erros comuns
 
 **Instalar isolador galvânico no neutro ou na fase:**
@@ -277,7 +317,7 @@ O isolador vai no terra — apenas no terra. No neutro ou na fase, bloqueia a co
 
 "Com o transformador, não preciso do GFCI." Errado. O transformador elimina a conexão com a marina — mas falhas de isolação internas do barco continuam acontecendo. O GFCI protege contra falhas internas.
 
-**Instalar isolador galvânico sem certificação ABYC A-28:**
+**Instalar isolador galvânico sem certificação ABYC A-28 (edição a verificar):**
 
 Isoladores sem certificação podem ter diodos de especificação inferior, sem capacidade de suportar correntes de falha de alta amplitude — potencial risco de choque.
 
@@ -296,7 +336,7 @@ O LED vermelho indica que o isolador está com falha — os diodos estão em cur
 
 ## Brasil x Internacional
 
-| Aspecto | Brasil | Internacional (ABYC A-28) |
+| Aspecto | Brasil | Internacional (ABYC A-28, edição a verificar) |
 | --- | --- | --- |
 | Isolador galvânico instalado | Raramente | Padrão em novos barcos americanos |
 | Transformador de isolamento | Apenas em premium | Comum em cruzeiros oceânicos |
@@ -308,11 +348,11 @@ O LED vermelho indica que o isolador está com falha — os diodos estão em cur
 
 ## Normas aplicáveis
 
-- **ABYC A-28** — Galvanic Isolators (especificação e certificação de isoladores galvânicos)
-- **ABYC E-11** — AC Electrical Systems (terra, GFCI, transformador de isolamento)
-- **NFPA 303** — Fire Protection for Marinas
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **ISO 13297** — Electrical systems — Alternating current installations
+- **ABYC A-28 (edição a verificar)** — Galvanic Isolators (especificação e certificação de isoladores galvânicos)
+- **ABYC E-11 (2023)** — AC Electrical Systems (terra, GFCI, transformador de isolamento)
+- **NFPA 303 (edição a verificar)** — Fire Protection for Marinas
+- **ABNT NBR 5410 (2004 + emendas)** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
+- **ISO 13297:2020** — Electrical systems — Alternating current installations
 
 ## Como ensinar este tópico
 
@@ -352,7 +392,7 @@ Não completamente. O isolador galvânico atua sobre a circulação de potenciai
 
 **O transformador de isolamento protege contra raio?**
 
-Não especificamente. O transformador reduz a probabilidade de dano por raio na marina chegar ao barco via shore power, mas não substitui um sistema de para-raios dedicado (ABYC A-31).
+Não especificamente. O transformador reduz a probabilidade de dano por raio na marina chegar ao barco via shore power, mas não substitui um sistema de para-raios dedicado (ABYC A-31, edição a verificar).
 
 **Posso instalar o isolador galvânico eu mesmo?**
 
@@ -375,6 +415,30 @@ Diferenciar mitigacao galvanica de barreira eletrica completa na interface com o
 **Cautela:** A aplicacao correta depende de norma, fabricante, aterramento, protecao diferencial e topologia de entrada.
 
 Material de apoio: [Isolador galvanico vs transformador de isolamento](../_visuals/generated/isolador-galvanico-vs-transformador-isolamento.md)
+
+## Glossário rápido
+
+- **Isolador galvânico** — dispositivo em série no PE do shore power; reduz circulação de potenciais galvânicos (< ~1,4 V DC); permite passagem de corrente de falha AC.
+- **Transformador de isolamento** — transformador com primário e secundário eletricamente separados; cria **sistema AC derivado** a bordo, independente do PE do cais.
+- **Sistema derivado (secundário do transformador)** — novo domínio AC gerado no secundário; precisa de bond N-PE próprio, único e documentado.
+- **PE do cais / PE derivado** — PE que vem da marina (shore) vs PE gerado pelo secundário do transformador; nunca ligar os dois depois do transformador.
+- **ABYC A-28** — norma americana de certificação de isoladores galvânicos (requisitos de fail-safe, monitor e capacidade de falta).
+- **Fail-safe do isolador** — capacidade de continuar permitindo corrente de falha mesmo em falha interna; ABYC A-28 (2008+) exige.
+- **Monitor do isolador** — LED, display ou saída de alarme que indica estado dos diodos; vermelho/alarme = substituir.
+- **Diodos em antiparalelo** — topologia interna clássica: dois ramos de diodos opostos, criam limiar de ~1,4 V DC para bloquear potenciais galvânicos pequenos.
+- **Potencial galvânico** — diferença de potencial entre metais diferentes em eletrólito (água salgada ou salobra); gera corrente galvânica pelo PE se houver caminho.
+- **Corrente galvânica (leakage)** — corrente DC de pequena amplitude que flui do barco para o cais (ou vice-versa) e consome zincos aceleradamente.
+- **Corrente parasita** — qualquer corrente anômala no PE ou no bonding, galvânica ou externa (falha no cais, fuga em equipamento vizinho).
+- **Zincos** — ânodos de sacrifício que protegem o barco contra corrosão galvânica; consumo acelerado é sintoma-chave.
+- **Primário** — enrolamento do transformador conectado ao shore power (marina).
+- **Secundário** — enrolamento do transformador que alimenta o barco; define o domínio isolado.
+- **Acoplamento magnético** — mecanismo de transferência de energia primário↔secundário sem conexão elétrica direta.
+- **Tap ajustável** — derivação no enrolamento que permite adaptar tensão (p.ex. entrada 120/230 V, saída 220 V).
+- **Transformador toroidal** — núcleo em formato de rosca; menor campo magnético disperso, menos peso, mais caro.
+- **SPOG (Single Point of Grounding)** — ponto único onde o secundário do transformador aterra seu neutro ao casco/bonding.
+- **ESD (Electric Shock Drowning)** — afogamento por corrente AC em água doce; transformador de isolamento é defesa robusta quando marina é incerta.
+- **ELCI / GFCI / DR** — proteções diferenciais; continuam obrigatórias mesmo com transformador instalado.
+- **Saturação do núcleo** — perda de linearidade do transformador sob carga ou tensão excessiva; sintoma: zumbido alto, aquecimento, distorção.
 
 ## Integração com outras notas
 

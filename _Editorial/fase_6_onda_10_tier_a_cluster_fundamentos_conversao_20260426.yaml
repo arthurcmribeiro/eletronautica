@@ -1,0 +1,262 @@
+---
+wave: 10
+phase: 6
+sprint: "Caminho B — DEC-11 premium em Tier A (cluster Fundamentos + Conversão — domínios 10 + 30, 10 notas Tier A)"
+date: "2026-04-26"
+cadence: "a (auto-continuous)"
+branch: "claude/optimistic-jepsen"
+scope: "Tier A — 10 notas: 7 do domínio 10_Fundamentos_e_Projeto (fundamentos teóricos + procedurais) + 3 do domínio 30_Energia_e_Conversao (Arranque + Eólico DC + Carregador Tender/Jet Ski)"
+template_recalibrated:
+  tldr_rules: "9 (média 9.0 — todos com 9 regras — cluster fundamentos é mais procedimental)"
+  danger_scenarios: "9-10"
+  glossary_terms: "40-90 (média ≈ 60)"
+  normas_expanded: "30-65 (média ≈ 45)"
+  decision: "Vademecum dos fundamentos elétrica náutica + arranque + geração alternativa — IEC 60617/61010/61347/61400 + ABYC E-11/A-30/A-16 + ISO 8846/13297/28848/22090/16622/17713/19009 + IEC 60092 + SAE J1171/J1127/J1128/J537 + UL 1426/1500/8750 + USCG 33 CFR 183/46 CFR + COLREGS + SOLAS + STCW + MLC + classification societies (ABS/DNV/Lloyd's/RINA/BV) + EU MED/RCD/LVD/EMC/RED + ABNT NBR 14728/5410 + INMETRO Portaria 144 + ANATEL Res. 715 + DPC NORMAM-201/211/08/04/05"
+
+notes_processed:
+  - n: "01/10"
+    title: "Lei de Ohm e Cálculos Básicos"
+    path: "10_Fundamentos_e_Projeto/Lei de Ohm e Cálculos Básicos.md"
+    fase_6_reescrita: 95
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 9 regras + Danger 10 cenários + Glossário 60+ termos)"
+      - "DEC-14 normas_citadas (lista plana 30+ itens)"
+      - "V=I×R + P=V×I + Kirchhoff KVL/KCL canonicalizados"
+      - "ABYC E-11.4.4.1.b (queda ≤3%) + E-11.5 (fusível 125%) + E-11.5.4 (≤7 polegadas)"
+      - "DC × AC: RMS × pico × PF × impedância × harmônicas + IEC 60364 + ISO 28848/13297"
+      - "Tabela AWG × comprimento × queda + cálculo prático"
+      - "Calor por efeito Joule (P=I²R) + cargas não-ôhmicas (motor LRA/FLA, LED com driver)"
+    tldr_rules: 9
+    danger_scenarios: 10
+    glossary_terms: 60
+    normas_after: 35
+
+  - n: "02/10"
+    title: "Princípios Náuticos"
+    path: "10_Fundamentos_e_Projeto/Princípios Náuticos.md"
+    fase_6_reescrita: 96
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 10 regras + Danger 10 cenários + Glossário 90+ termos)"
+      - "DEC-14 normas_citadas (lista plana 65+ itens — abrange IMO + ABYC + ISO + IEC + ABNT + DPC + EU + classification)"
+      - "Classificação operacional (recreio × comercial × SOLAS × militar)"
+      - "Ambiente marine vs residencial vs automotivo (salinidade × UV × vibração × EMI × umidade)"
+      - "3 mecanismos de corrosão (galvânica × eletrólise × stray currents) + sequência galvânica"
+      - "Estrutura regulatória global (IMO → ISO/IEC/ITU → ABYC/EU MED/DPC NORMAM → ABNT/ANATEL/IBAMA/Marinha)"
+      - "Classification societies (ABS, DNV, Lloyd's Register, RINA, Bureau Veritas, ClassNK, KR, CCS, RS) + LY3/PYC"
+      - "Princípios design elétrico marine (fail-safe + redundância + override + EMC + surge + marine-grade)"
+    tldr_rules: 10
+    danger_scenarios: 10
+    glossary_terms: 90
+    normas_after: 65
+
+  - n: "03/10"
+    title: "Tipos de Embarcação"
+    path: "10_Fundamentos_e_Projeto/Tipos de Embarcação.md"
+    fase_6_reescrita: 97
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (TL;DR 9 regras + Danger 10 cenários + Glossário 70+ termos)"
+      - "DEC-14 normas_citadas"
+      - "Classificação por uso (recreio × comercial × SOLAS × mega-iate × HSC × militar)"
+      - "Classificação por casco (mono × catamarã × trimarã × planning × deslocamento)"
+      - "Classificação por propulsão (motor × vela × híbrido × full electric)"
+      - "RCD categorias A/B/C/D explicitadas (Bft + ondas)"
+      - "Implicações elétricas por tipo (lancha × veleiro × catamarã × mega-iate × elétrica)"
+      - "Ratificação NORMAM-201/211/08 + LESTA Lei 9.537"
+
+  - n: "04/10"
+    title: "Simbologia Elétrica Náutica"
+    path: "10_Fundamentos_e_Projeto/Simbologia Elétrica Náutica.md"
+    fase_6_reescrita: 98
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "3 padrões dominantes (IEC 60617 × ANSI/IEEE 315 × ABNT NBR 5444 + 14728)"
+      - "Tabelas comparativas IEC × ANSI por categoria (fontes/proteção/comutação/cargas/aterramento/conectores/semicondutores)"
+      - "Convenção de cores ABYC E-11.4 vs IEC vs ABNT"
+      - "Distinção crítica: Terra × Chassi × PE × Bonding (símbolos diferentes)"
+
+  - n: "05/10"
+    title: "Leitura de Diagramas e Esquemas Elétricos"
+    path: "10_Fundamentos_e_Projeto/Leitura de Diagramas e Esquemas Elétricos.md"
+    fase_6_reescrita: 99
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "Procedimento estruturado em 7 passos (padrão → fonte → circuito → polaridade → aterramento → proteção → cores)"
+      - "4 tipos de documento (unifilar × multifilar × esquema × planta)"
+      - "Aplicação em troubleshooting via diagrama"
+      - "Software profissional (AutoCAD Electrical, EPLAN, Eagle, KiCad, BoatED Diagrams)"
+
+  - n: "06/10"
+    title: "Referência Rápida — Valores de Campo"
+    path: "10_Fundamentos_e_Projeto/Referência Rápida — Valores de Campo.md"
+    fase_6_reescrita: 100
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo (cheat sheet técnico)"
+      - "DEC-14 normas_citadas"
+      - "Tabelas consolidadas: tensões DC (12/24/48V) × AC (110/220/380V) × queda × AWG × fusível × disjuntor × cabo × isolação × bonding × ânodo × Ag/AgCl × banco × inversor × carregador × consumo típico × Beaufort × MARPOL/NORMAM × RPM motor × checklist inspeção × ferramentas mínimas"
+      - "100+ valores de referência em formato compacto"
+
+  - n: "07/10"
+    title: "Ferramentas do Eletricista Náutico"
+    path: "10_Fundamentos_e_Projeto/Ferramentas do Eletricista Náutico.md"
+    fase_6_reescrita: 101
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "Toolkit profissional: medição (Fluke 87V/179/T6/376/393 FC + Hioki + Klein), crimpagem (FTZ + Ancor + Klein + Knipex + T&B + Burndy), corte (Wera + Wiha), torque (Wera Click)"
+      - "EPI NFPA 70E + NR-10 + IEC 61010-1/-2-030/-2-032 + IEC 60900 (isolated tools) + IEC 61243 (voltage detector) + IEC 61482 / ASTM F1506 (arc flash) + ANSI Z89.1/Z87.1"
+      - "Software (AutoCAD Electrical, EPLAN, Fluke Connect, Maretron N2KView, Actisense)"
+      - "Recomendação por nível profissional (1-4)"
+      - "Calibração periódica documentada"
+
+  - n: "08/10"
+    title: "Arranque"
+    path: "30_Energia_e_Conversao/Arranque.md"
+    fase_6_reescrita: 102
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "Sistema de partida: banco partida + chave ignição + solenoide + motor partida + cabos"
+      - "Ignition protection MANDATÓRIO em gasolina: ISO 8846 + SAE J1171 + UL 1500 + USCG 33 CFR 183.610"
+      - "CCA × MCA × RC + tabela motor → CCA típico"
+      - "Bitola 2/0-4/0 AWG + queda ≤5% + LRA pico 200-1500A"
+      - "MRBF / Class T fusível ≤7 polegadas (ABYC E-11.5.4)"
+      - "Bosch / Delco / Mitsubishi / Hitachi / Iskra marine starters"
+
+  - n: "09/10"
+    title: "Eólico (DC)"
+    path: "30_Energia_e_Conversao/Eólico (DC).md"
+    fase_6_reescrita: 103
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "Aerogerador marine: rotor + PMDC/PMSG + tail vane + regulador + brake + cabling"
+      - "IEC 61400-1/-2/-12/-21/-24 (small wind turbines) + ABYC E-11 + IEC 60092"
+      - "Curva de potência: cut-in 4-6 nós, rated 25-30, cut-out 35-40 nós"
+      - "MPPT × shunt regulator (eficiência 15-30% maior em vento variável)"
+      - "Silentwind 400W + Air Breeze (Primus) + Ampair + Eclectic D400 + Rutland + Aerogen"
+      - "Lightning protection ABYC TE-04 + IEC 61400-24 mandatório (torre = antena raio)"
+      - "Eólico complementa solar (vide [[Placa Solar (DC)]])"
+
+  - n: "10/10"
+    title: "Carregador Elétrico para Tender e Jet Ski"
+    path: "30_Energia_e_Conversao/Carregador Elétrico para Tender e Jet Ski.md"
+    fase_6_reescrita: 104
+    status_after: "premium-l3"
+    dec_14: true
+    dec_flags:
+      - "DEC-11 premium-l3 completo"
+      - "DEC-14 normas_citadas"
+      - "Tender elétrico (Torqeedo/Bellmarine/Oceanvolt) banco LFP 24V/48V/72V vs tender combustão (RIB) bateria 12V vs jet ski 12V/20-30Ah"
+      - "Multi-stage charger (Bulk-Absorption-Float chumbo / Bulk-Absorption LFP)"
+      - "ELCI 30 mA / 100 ms obrigatório (ABYC E-11.11.1.6)"
+      - "ABYC E-13 emergente (hybrid/electric propulsion)"
+      - "CTEK + Mastervolt + Victron + Sterling + ProMariner + Noco generalistas + OEM (Torqeedo/Yamaha/Sea-Doo/Kawasaki)"
+      - "Bonding (ABYC E-11.16) + DR/ELCI + procedimento davit + ISO 6185"
+
+metrics:
+  total_notes: 10
+  retrofits: 10
+  new_notes: 0
+  callouts_added: "20 (10 tip + 10 danger)"
+  glossary_terms_total: "≈ 600 (avg ≈ 60)"
+  normas_total: "≈ 450 (avg ≈ 45)"
+  dec_14_notes: 10
+  dec_11_notes: 10
+  dec_26_retrofits: 0
+  todos_resolved: 0
+  fase_6_range: "95-104"
+  status_distribution:
+    premium-l3: 10
+
+new_decisions: []  # Cluster coerente, sem decisão estrutural nova
+
+intra_wave_coherence_patterns:
+  - pattern: "ABYC E-11 + E-11.4 + E-11.5 + E-11.16 + TE-04 + TE-30 stack elétrico marine canonicalizado em 100% das notas"
+  - pattern: "IEC 60617 + ANSI/IEEE 315 + ABNT NBR 5444 + 14728 + 5410 stack simbologia/instalação"
+  - pattern: "ISO 13297 + 28848 + 22090 + 8846 + 8849 stack marine ISO"
+  - pattern: "IEC 60092 family (-507 pleasure craft, -202 starting, -353 cable) stack marine IEC"
+  - pattern: "IEC 60364 (instalações BT) + IEC 60364-7-709 (marinas) stack instalação geral"
+  - pattern: "SAE J1171 (ignition protection) + J1127/J1128 (battery cable) + J537 (marine batteries) + J930 (marine cable) stack SAE marine"
+  - pattern: "UL 1426 BC5W2 + UL 1500 + UL 1598 + UL 8750 stack USA listing"
+  - pattern: "USCG 33 CFR 183 (Subpart J nav lights, Subpart I electrical, Subpart K ventilation, 183.610 gasoline) + 46 CFR (commercial) stack USCG"
+  - pattern: "COLREGS Rules 5/7/8 (lookout/risk/action) + Rule 22 (visibility) + Rule 36 (signals attention) + Annex IV (distress) referência cruzada"
+  - pattern: "SOLAS V/19/22/24 + IMO MSC.232/252/401 + Resolution A.694(17) referência cruzada"
+  - pattern: "Classification societies (ABS, DNV, Lloyd's, RINA, BV, ClassNK, KR, CCS, RS) + LY3/PYC referência"
+  - pattern: "EU MED 2014/90 + RCD 2013/53 + LVD 2014/35 + EMC 2014/30 + RED 2014/53 + EcoDesign 2019/2020 stack europeu"
+  - pattern: "ABNT NBR 14728 + 5410 + ISO adoções + INMETRO Portaria 144/2015 + ANATEL Resolução 715/2019 stack brasileiro"
+  - pattern: "DPC NORMAM-01 (mar aberto) + 02 (águas interiores) + 04 (hidrografia) + 05 (homologação) + 08 (tráfego) + 201 (comerciais) + 204 (cartas eletrônicas) + 211 (recreio) stack DPC completo"
+  - pattern: "IEC 61010-1/-2-030/-2-032 (instrumentos) + IEC 60900 (isolated tools) + IEC 61243 (voltage detector) + IEC 61482 / ASTM F1506 / NFPA 70E / NR-10 stack EPI/ferramentas"
+  - pattern: "Backlinks cruzados densos: Lei de Ohm ↔ Princípios Náuticos ↔ Tipos de Embarcação ↔ Simbologia ↔ Leitura de Diagramas ↔ Referência Rápida ↔ Ferramentas (cluster fundamentos coerente); Arranque ↔ Bancos de Bateria ↔ Alternador (cluster partida/recarga); Eólico ↔ Solar ↔ Banco (cluster geração alternativa); Carregador Tender ↔ Davit ↔ Tender combustível/elétrico"
+
+todos_resolved_this_wave: []
+
+user_feedback_applied_in_wave: []  # Sem feedback explícito do usuário nesta onda — execução direta da cadência (a) DEC-33
+
+commit_message_draft: |
+  Phase 6 Wave 10: DEC-11 premium on 10 Tier A notes (Fundamentos + Conversão clusters)
+
+  Notes (10 total — 7 Fundamentos + 3 Conversão, all retrofits):
+  Domínio 10 (Fundamentos):
+  - Lei de Ohm e Cálculos Básicos — premium-l3, fase 95
+  - Princípios Náuticos — premium-l3, fase 96
+  - Tipos de Embarcação — premium-l3, fase 97
+  - Simbologia Elétrica Náutica — premium-l3, fase 98
+  - Leitura de Diagramas e Esquemas Elétricos — premium-l3, fase 99
+  - Referência Rápida — Valores de Campo — premium-l3, fase 100
+  - Ferramentas do Eletricista Náutico — premium-l3, fase 101
+
+  Domínio 30 (Conversão):
+  - Arranque — premium-l3, fase 102
+  - Eólico (DC) — premium-l3, fase 103
+  - Carregador Elétrico para Tender e Jet Ski — premium-l3, fase 104
+
+  Each note received:
+  - TL;DR tip callout with 9-10 decision rules
+  - Danger callout with 9-10 risk scenarios
+  - Glossário with 40-90 technical terms (avg ~60)
+  - Normas section expanded to 30-65 items (avg ~45)
+  - Tabela comparativa por jurisdição (EUA/Internacional/Brasil/Europa)
+  - Cross-links across the cluster
+
+  Pattern reinforcement (cluster coherence):
+  - ABYC E-11 + ISO marine + IEC 60092 family stack
+  - SAE marine + UL listing + USCG 33 CFR / 46 CFR stack
+  - COLREGS + SOLAS + IMO MSC + classification societies stack
+  - EU MED/RCD/LVD/EMC/RED + ABNT NBR + INMETRO + ANATEL + DPC NORMAM stack
+  - Princípios Náuticos como nota panorâmica master para fundamentos marine
+  - Lei de Ohm como base teórica universal
+  - Referência Rápida como cheat sheet operacional
+  - Ferramentas como guia de toolkit profissional
+
+  Metrics:
+  - 10 notes processed (10 retrofits + 0 new)
+  - 20 callouts added (10 tip + 10 danger)
+  - ~600 glossary terms (avg ~60/note)
+  - ~450 norms expanded (avg ~45/note)
+  - 10 notes with DEC-14 (normas_citadas)
+  - 0 new DECs documented (cluster coerente)
+  - Progress: 107/137 notes (78.1%) — Tier A cluster Fundamentos + Conversão complete
+
+  Cadence: (a) auto-continuous per DEC-33. Next: Tier B + Tier C closure
+  (~26 notes remaining) for Wave 11 / final.
+---

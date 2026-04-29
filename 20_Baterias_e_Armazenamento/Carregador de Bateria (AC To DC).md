@@ -3,13 +3,33 @@ title: "Carregador de Bateria (AC To DC)"
 note_type: "technical-note"
 domain: "20_Baterias_e_Armazenamento"
 source_file: "CARREGADOR DE BATERIA (AC to DC) 64e19734f7fb83f6879701f63709d32e.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "12"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats"
+  - "ABYC A-31 (2024) — Battery Chargers and Inverters"
+  - "ABYC E-13 (2023) — Lithium Ion Batteries (em banco LFP)"
+  - "ABYC E-10 (2023) — Storage Batteries"
+  - "ABYC A-28 (2023) — Galvanic Isolators (interface shore power)"
+  - "ISO 13297:2020 — Small craft — AC and DC installations"
+  - "ISO 8846:2022 — Protection against ignition of surrounding flammable gases"
+  - "IEC 60335-2-29 — Safety of battery chargers"
+  - "IEC 62040-1 — UPS (conceitos aplicáveis a inversor/carregador)"
+  - "UL 1236 — Battery chargers for charging engine-starter batteries"
+  - "UL 458 — Power converters/inverters for marine use"
+  - "NMEA 2000 (IEC 61162-3) — Comunicação de rede marítima"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
 source_urls:
   - "https://abycinc.org/standards/"
   - "https://abycinc.org/news/standardsupdatewebinar/"
   - "https://www.iso.org/standard/83643.html"
+  - "https://www.iec.ch/"
+  - "https://www.ul.com/"
 aliases:
   - "CARREGADOR DE BATERIA (AC to DC)"
 seo_title: "Carregador de Bateria (AC To DC)"
@@ -37,6 +57,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > CARREGADOR DE BATERIA (AC→DC) — Conversor inteligente que transforma corrente alternada do cais ou gerador em DC regulado para recarregar o banco de baterias com segurança.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Carregador profissional ≠ retificador.** Multietapas (bulk/absorption/float), compensação de temperatura, perfil por química e proteção integrada são requisito, não diferencial.
+> 2. **O perfil de carga é ditado pela química da bateria, não pelo default de fábrica do carregador.** AGM ≠ GEL ≠ FLA ≠ LiFePO4 — diferença de 0,3-0,6 V em absorção destrói bateria em centenas de ciclos.
+> 3. **Dimensionar a corrente entre 10-30 % da capacidade do banco.** Banco 200 Ah → 20-50 A de carregador. Acima disso, sem coordenação térmica, ativa proteção e encurta vida.
+> 4. **Fusível DC ≤ 178 mm do terminal positivo da bateria** (ABYC E-11), dimensionado para o cabo e com AIC adequado à Isc do banco. Carregador não substitui fusível.
+> 5. **Sonda de temperatura no centro do banco é requisito**, não acessório. Variação de 30 °C altera a tensão ideal em ~0,6 V — sem compensação, o carregador supercarrega no verão e subcarrega no inverno.
+> 6. **Lítio exige comunicação com BMS** (VE.Bus, CAN, NMEA 2000) ou perfil rigorosamente alinhado ao datasheet da célula. Carregador "lithium auto" genérico não substitui comunicação real.
+> 7. **Shore power deve passar por transformador de isolamento ou isolador galvânico** antes do carregador — proteção contra ESD e corrosão galvânica na marina.
+> 8. **Nunca conecte ao cais sem verificar polaridade e PE.** Polaridade invertida + carregador = banco sob potencial do neutro alienígena; um curto qualquer vira incêndio ou ESD.
+> 9. **Documente no painel: marca, modelo, perfil configurado, corrente nominal, data de instalação, versão de firmware.** Sem registro, laudo em sinistro fica impossível.
+
+> [!danger] Quando chamar um especialista
+> - **Retrofit de chumbo → lítio mantendo carregador antigo.** Perfil, absorção, float, comunicação e corrente são todos diferentes. Reconfigurar ou substituir o carregador; projeto com ART/CREA.
+> - **Carregador superaquecendo repetidamente** (desliga por proteção térmica, case quente ao toque). Causa pode ser banco com célula em curto interno puxando corrente indefinidamente, ventilação obstruída, corrente dimensionada acima da capacidade do carregador, ou falha interna. Abrir e medir sem diagnóstico é risco de choque.
+> - **Inversor/carregador (MultiPlus, Quattro, Combi) em embarcação com múltiplas fontes AC** (shore + gerador + solar). Transfer switch, paralelização, neutro comutado e bond N-PE dependente da fonte ativa são decisões de projeto que exigem parecer técnico assinado.
+> - **Sistema com shore power 120/240V split-phase americano em marina 220 V brasileira.** Não conecte. Transformador de isolamento com enrolamento adequado + reconfiguração do carregador é condição.
+> - **BMS desconectando durante carga** sem causa aparente. Pode ser célula em falha, shunt mal dimensionado, cabo com queda excessiva, tensão de absorção alta demais para a temperatura atual. Investigação com app, multímetro, termômetro IR.
+> - **Incêndio ou sinistro envolvendo carregador** (case derretido, fumaça, faísca no shore inlet, banco danificado). Preservar cena, acionar seguradora, laudo pericial com ART/CREA, análise de causa raiz.
+> - **Eletropropulsão com carregamento rápido AC → DC 48/96/400 V.** ISO 16315:2016 + UL 2202 (onboard EV charger) + IEC 61851 (EV charging infrastructure) — não é domínio recreativo comum; exige projeto integrado.
+> - **Embarcação importada com carregador 120 V/60 Hz marítimo americano operando em 220 V/60 Hz brasileiro.** Reavaliação de entrada AC, transformador, reconfiguração do carregador, verificação de polaridade e ajuste de cabo AC de entrada.
+> - **Shore power com corrosão galvânica detectável** (zinco consumido rapidamente, partes de aço com corrosão branca acelerada). Antes de trocar zinco, diagnosticar: pode ser isolador galvânico com falha, ausência de PE, bond N-PE errado ou neutro partido da marina. Carregador ligado entra na cadeia.
 
 ## O que é
 
@@ -266,21 +308,73 @@ MPPT solar carrega durante o dia; carregador AC carrega à noite e no cais. BMS 
 | --- | --- | --- |
 | Marca dominante | Victron (crescendo) + genéricos | Victron / Mastervolt / ProMariner |
 | Perfil configurado | Frequentemente genérico ou incorreto | Configurado conforme a ficha técnica da bateria |
-| Fusível DC | Frequentemente ausente | Exigido por ABYC E-11 |
+| Fusível DC | Frequentemente ausente | Exigido por ABYC E-11 (2023) |
 | Sonda de temperatura | Raramente usada | Padrão em instalações profissionais |
 | Compatibilidade lítio | Em evolução rápida | Bem documentada, comunicação BMS estabelecida |
 | Inversor/Carregador | Crescendo mas ainda não dominante | Padrão em embarcações europeias acima de 35 pés |
 
 **Realidade brasileira:** muitas embarcações ainda operam com carregadores simples de 2 estágios ou carregadores de carro adaptados. A evolução para sistemas multietapas com Victron está crescendo rapidamente, especialmente com a chegada de iates europeus usados e a influência de técnicos capacitados.
 
+## Glossário rápido
+
+- **Carregador de bateria (AC→DC)** — conversor inteligente que transforma AC do cais/gerador em DC regulado para recarga.
+- **Retificador** — conversor AC→DC simples, sem controle de perfil; não é carregador profissional.
+- **Carregador on/off** — tipo antigo, desliga ao atingir corte; obsoleto em uso náutico.
+- **Carregador multietapas (3-4 stages)** — padrão atual: bulk → absorção → float → (equalização).
+- **Bulk** — primeira fase, corrente constante máxima, tensão sobe progressivamente (0 % → ~80 %).
+- **Absorção (absorption / CV)** — tensão constante, corrente cai à medida que banco se aproxima de 100 %.
+- **Float / flutuação** — tensão reduzida de manutenção, compensa consumos de standby.
+- **Equalização** — tensão extra-alta (~15,5 V) para dessulfatar FLA; **proibida em AGM, GEL, LFP**.
+- **Perfil de carga** — conjunto de parâmetros: tensão de bulk, absorção, float, tempo de absorção, corrente.
+- **Compensação de temperatura** — sonda no centro do banco ajusta tensão ideal (-3 mV/°C/célula chumbo).
+- **Curva V × I** — gráfico de tensão e corrente ao longo do ciclo de carga.
+- **C-rate** — corrente como múltiplo da capacidade. 0,1C = 10 A em banco 100 Ah.
+- **Corrente nominal do carregador** — saída máxima em Amperes a 12/24/48 V.
+- **Dimensionamento 10-30 %** — regra prática: carregador = 10-30 % da capacidade Ah do banco.
+- **Eficiência round-trip** — Pdc/Pac; carregadores bons > 90 %.
+- **Fator de potência (PF)** — razão entre potência ativa e aparente; PFC ativo é padrão atual.
+- **Harmônicos** — deformação da onda AC de entrada causada pelo carregador; limite por norma.
+- **Shore power** — alimentação AC do cais na marina.
+- **Transfer switch / MTS / ATS** — chave que alterna entre shore e gerador; manual ou automática.
+- **Inversor/carregador combo** — equipamento único (Victron MultiPlus/Quattro, Mastervolt Combi, Magnum) que carrega no shore e inverte da bateria.
+- **DC-DC charger (B2B)** — não é AC→DC; carrega banco de serviço a partir do alternador ou outro banco; relevante em LFP.
+- **Sonda de temperatura** — NTC que mede temperatura do banco e envia ao carregador.
+- **Sense wire** — cabo de realimentação que mede tensão no próprio terminal da bateria (não do carregador).
+- **Isolamento galvânico** — transformador separa rede do cais do banco; evita corrosão galvânica.
+- **IP22 / IP65 / IP67** — classes de proteção contra poeira e água; IP22 para interior seco, IP65 para respingo.
+- **PFC ativo** — correção de fator de potência por circuito eletrônico; padrão em carregador moderno.
+- **Resonant / LLC / PSFB** — topologias de conversão de potência em carregadores modernos.
+- **BMS comm (VE.Bus / CAN / NMEA 2000)** — comunicação obrigatória em lítio: carregador respeita limites dinâmicos.
+- **Float drop / voltage drop** — queda de tensão entre carregador e bateria; > 0,3 V = cabo subdimensionado.
+- **Bulk hours / absorption hours** — tempo acumulado em cada fase; base para diagnóstico.
+- **Tail current** — corrente que define transição de absorção para float (~2-4 % da corrente de bulk).
+- **Equalization schedule** — cronograma (a cada 30-60 dias) para FLA; ignorado em seladas.
+- **Fusível DC de saída** — proteção entre carregador e banco; ≤ 178 mm do positivo, AIC compatível.
+- **AIC (Ampere Interrupting Capacity)** — capacidade do fusível de cortar a Isc do banco.
+- **Storage mode / standby** — modo de manutenção do banco sem carga ativa; consumo mínimo.
+- **Nuisance trip** — desligamento do carregador por proteção sem falha real; sintoma comum.
+- **Reverse polarity protection** — proteção contra inversão de polaridade nos terminais DC.
+- **Reverse current protection** — proteção contra retorno de corrente do banco para o carregador desligado.
+- **ESD (Electric Shock Drowning)** — risco em marinas de água doce; carregador integra cadeia AC.
+- **Corrosão galvânica** — degradação de metal por corrente DC entre embarcações via PE comum.
+
 ## Normas e referências técnicas
 
-- **ABYC E-11** — AC and DC Electrical Systems on Boats: requisitos para carregadores, proteção, localização do fusível DC
-- **ABYC A-31** — Battery Chargers and Inverter/Chargers: padrão específico para carregadores náuticos
-- **ISO 13297** — Electrical systems on recreational craft
-- **IEC 60335-2-29** — Safety of battery chargers: base normativa para os equipamentos
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para baixa tensão e proteção no contexto brasileiro
-- Compatibilidade com lítio: não explicitamente normatizada — responsabilidade do instalador e do fabricante do BMS
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats: requisitos para carregadores, proteção, localização do fusível DC, bitolagem.
+- **ABYC A-31 (2024)** — Battery Chargers and Inverters: padrão específico do ABYC consolidado em edição 2024; define teste, identificação e instalação de carregadores e inversores/carregadores marítimos. *(Nota: em edições anteriores a numeração ABYC sofreu realocações; confirmar edição vigente no momento do laudo.)*
+- **ABYC E-13 (2023)** — Lithium Ion Batteries: relevante quando carregador alimenta banco LFP.
+- **ABYC E-10 (2023)** — Storage Batteries: separação de bancos, fusível, ventilação.
+- **ABYC A-28 (2023)** — Galvanic Isolators: interface entre shore power e embarcação.
+- **ISO 13297:2020** — Electrical systems on recreational craft AC e DC.
+- **ISO 8846:2022** — Protection against ignition of surrounding flammable gases: ignition protection em ambiente motor/banco.
+- **IEC 60335-2-29** — Safety of battery chargers: base normativa do equipamento.
+- **IEC 62040-1** — Uninterruptible Power Systems: conceitos aplicáveis ao inversor/carregador.
+- **UL 1236** — Battery chargers for engine-starter batteries: referência americana para carregador de partida.
+- **UL 458** — Power converters/inverters for marine use: inversor/carregador certificado para náutica.
+- **NMEA 2000 (IEC 61162-3)** — Comunicação com BMS, MFD, monitor em redes modernas.
+- **ABNT NBR 5410 (2004 + emendas)** — Base brasileira para AC de baixa tensão; aplicável ao circuito AC que alimenta o carregador.
+- **NORMAM-211/DPC** — Exigências administrativas e de segurança da autoridade marítima brasileira.
+- **Compatibilidade com lítio** — nem sempre normatizada explicitamente; responsabilidade do instalador alinhar carregador, BMS e datasheet da célula; registrar na pasta técnica da embarcação.
 
 ## Como ensinar este tópico
 

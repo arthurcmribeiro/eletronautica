@@ -1,0 +1,148 @@
+---
+# Fase 4 - Consolidado (MESTRE)
+# Data: 2026-04-17
+# Escopo: arquitetura de produto + rollout scaffolds + matriz de risco Fase 5
+# Fonte: agregacao de
+#   - _Editorial/fase_4_arquitetura_20260417.yaml
+#   - _Editorial/fase_4_matriz_riscos_20260417.yaml
+#   - _Editorial/fase_3_consolidado_20260417.yaml
+fase: 4
+data: "2026-04-17"
+status: "concluida"
+
+# =============================================================================
+# 1. ENTREGAVEIS DA FASE 4
+# =============================================================================
+entregaveis:
+  - "fase_4_arquitetura_20260417.yaml - diagnostico 7 camadas + rollout CI + roadmap"
+  - "fase_4_matriz_riscos_20260417.yaml - matriz esforco x impacto x risco Fase 5"
+  - "fase_4_consolidado_20260417.yaml (este arquivo)"
+
+# =============================================================================
+# 2. RESUMO EXECUTIVO
+# =============================================================================
+resumo:
+  arquitetura:
+    camadas_saudaveis: "1 (Obsidian), 4 (Ferramentas)"
+    camadas_medias: "2 (CI), 3 (Manifest)"
+    camadas_ausentes: "5 (Interativos), 6 (Base44), 7 (n8n)"
+    decisao_pivotal: "camada 6 precisa decisao ate 30d ou Fase 5 trava sem consumidor"
+
+  rollout_scaffolds:
+    sprint_1_pronto: 3        # migrate + validate + detect_abyc
+    sprint_2_pendente: 2      # generate_fase_indice CI + check_source_urls CI
+    bloqueador_unico: "branch policy para permitir commit automatico do indice"
+
+  matriz_fase_5:
+    top_5_ordem_recomendada:
+      - "Neutro/Negativo/PE/Bonding/DR (prio 7.6)"
+      - "Troubleshooting (prio 6.6)"
+      - "Correntes Parasitas (prio 6.4)"
+      - "Dimensionamento Cabos DC (prio 6.3)"
+      - "Bonding (prio 6.3)"
+    regra_de_corte: "Normas e Regulamentacoes e ULTIMA (maior risco normativo; espera migrate_frontmatter)"
+
+# =============================================================================
+# 3. DECISOES OBJETIVAS NOVAS (Fase 4)
+# =============================================================================
+decisoes_registradas:
+  DEC-06:
+    tema: "Ordem Fase 5"
+    decisao: "Usar ordem_recomendada da matriz_riscos (prioridade recalculada)"
+    impacto: "evita iniciar Fase 5 pela nota de maior risco (Normas e Regulamentacoes)"
+    esforco: "0h (decisao)"
+
+  DEC-07:
+    tema: "Camada 6 (Base44)"
+    decisao: "ESCALAR decisao ao responsavel editorial; prazo 30d"
+    impacto: "se Base44 for APOSENTADO, manifest precisa novo consumidor (static site, Publish)"
+    esforco: "depende da decisao"
+
+  DEC-08:
+    tema: "Rollout migrate_frontmatter"
+    decisao: "Rodar dry-run -> revisao editorial -> apply em branch separada antes de merge"
+    impacto: "protege 104 notas de migracao com bug potencial"
+    esforco: "2h aplicacao + 1h revisao"
+
+  DEC-09:
+    tema: "CI integration scaffolds"
+    decisao: "Adicionar validate_audit_yaml como job opt-in (nao bloqueante) em primeira iteracao"
+    impacto: "evita quebrar PRs por schema-legado (R01 meta:)"
+    esforco: "30min"
+
+  DEC-10:
+    tema: "Calculadoras P1 (queda tensao DC + autonomia banco)"
+    decisao: "Entregar em paralelo com Fase 5 item 4 (Dimensionamento Cabos DC)"
+    impacto: "agrupa reescrita + ferramenta; economia de contexto"
+    esforco: "4h calculadora + 3h integracao com reescrita"
+
+# =============================================================================
+# 4. ROADMAP CONSOLIDADO (pos-Fase 4)
+# =============================================================================
+roadmap_pos_fase_4:
+  sprint_1_imediato_7d:
+    nome: "Destravamento operacional Fase 3"
+    tarefas:
+      - "migrate_frontmatter --apply (revisao editorial incluida)"
+      - "Integrar validate_audit_yaml + detect_abyc no CI como jobs opt-in"
+      - "Renderizar as 5 novas specs via render_visuals"
+      - "Documentar convencao_frontmatter.md (formaliza o padrao migrado)"
+    esforco: "~8h"
+    output: "vault pronto para Fase 5; CI cobrindo 5 novos scaffolds"
+
+  sprint_2_30d:
+    nome: "Manifest dashboard + Fase 5 inicio"
+    tarefas:
+      - "Estender build_manifest.py (DEC-02 Fase 2)"
+      - "Reescrever Neutro/PE/Bonding/DR (posicao 1 matriz) — 2h"
+      - "Reescrever Troubleshooting (posicao 2) — 5h"
+      - "Decidir camada 6 (DEC-07)"
+    esforco: "~14h"
+    output: "manifest publicavel + 2 notas premium + decisao Base44/alternativa"
+
+  sprint_3_90d:
+    nome: "Fase 5 continua + interativos"
+    tarefas:
+      - "Reescrever posicoes 3-7 da matriz (Correntes Parasitas, Cabos DC, Bonding, NMEA, Luz de Tope)"
+      - "2 calculadoras P1 (queda tensao DC + autonomia banco) — DEC-10"
+      - "2 simuladores interativos (autonomia + queda tensao)"
+      - "Camada 5 operacional; camada 6 em piloto"
+    esforco: "~40h"
+    output: "top-7 reescrito, camada 5 viva, camada 6 em producao"
+
+# =============================================================================
+# 5. PORTAL PARA FASE 5
+# =============================================================================
+fase_5_inputs:
+  pre_requisitos_cumpridos:
+    - "Matriz de risco com ordem racional disponivel (DEC-06)"
+    - "Scaffolds Fase 3 smoke-tested e prontos para CI"
+    - "Visuais P1 emitidos para 4 das 5 notas de maior prioridade"
+  pre_requisitos_pendentes:
+    - "migrate_frontmatter --apply ainda nao rodou (DEC-08)"
+    - "Manifest sem score_roi (DEC-02 pendente)"
+    - "Camada 6 indefinida (DEC-07)"
+
+  escopo_minimo_fase_5:
+    - "Entregar top-5 da matriz (posicoes 1-5)"
+    - "Esforco estimado: ~14h"
+    - "Completar calculadoras P1 (DEC-10)"
+
+  escopo_completo_fase_5:
+    - "Entregar top-10 da matriz"
+    - "Esforco estimado: ~30h"
+    - "Ativar 2 simuladores P2"
+    - "Esforco adicional: ~6h"
+
+  estimativa_fase_5: "14h (minima) ate 36h (completa + calculadoras + simuladores)"
+
+# =============================================================================
+# 6. OBSERVACOES FINAIS FASE 4
+# =============================================================================
+observacoes:
+  - "Fase 4 foi leve (6h) porque Fases 1-3 ja haviam mapeado o territorio"
+  - "A unica decisao pendente que bloqueia horizonte 90d e a DEC-07 (camada 6)"
+  - "A matriz de risco reordena o top-10 original do plano; 'Normas e Regulamentacoes' cai da #1 para #10 por maior risco normativo"
+  - "Os 5 scaffolds Fase 3 ja sao suficientes para rodar Fase 5 sem novos scripts"
+
+proxima_fase: "Fase 5 - reescritas guiadas (sob demanda; 14h-36h conforme escopo)"

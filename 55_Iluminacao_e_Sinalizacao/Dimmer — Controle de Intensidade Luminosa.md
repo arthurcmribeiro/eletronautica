@@ -3,288 +3,343 @@ title: "Dimmer — Controle de Intensidade Luminosa"
 note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA 33a19734f7fb810197b3d469666bb573.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "premium-l3"
+fase_6_reescrita: 88
+reviewed_on: "2026-04-25"
+review_jurisdiction: "Brasil + EUA + Internacional + Europa"
 source_urls:
-  - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
-  - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://abycinc.org/standards/"
+  - "https://webstore.iec.ch/publication/2697"
+  - "https://www.lutron.com/en-US/Pages/default.aspx"
+  - "https://www.lumitec.com/poco/"
+review_level: "engineering-curated"
 aliases:
   - "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA"
-seo_title: "Dimmer — Controle de Intensidade Luminosa"
-seo_description: "DIMMER — CONTROLE DE INTENSIDADE LUMINOSA — Dispositivo que regula a tensão/corrente enviada ao LED para controlar o brilho. PWM (Pulse Width Modulation) é o método."
+  - "Dimmer marine"
+  - "PWM dimmer"
+  - "TRIAC dimmer"
+  - "0-10V dimmer"
+  - "DALI dimmer"
+  - "DMX dimmer"
+  - "Variador de luminosidade"
+seo_title: "Dimmer marine: PWM × TRIAC × 0-10V × DALI × DMX, IEC 60669-2-1, ABYC E-11, compatibilidade LED, EMI"
+seo_description: "Guia técnico premium do dimmer (controle de intensidade luminosa) em embarcações: tecnologias (PWM × TRIAC × 0-10V × DALI × DMX × Bluetooth Mesh), IEC 60669-2-1 / IEC 61347-2-13, compatibilidade LED dimável, frequência PWM × flicker, EMI / IEC 61547, fabricantes (Lutron Caseta, Lumitec POCO, Lumishore Lumix, Aqualuma), modes (continuous × scene × group), instalação ABYC E-11."
 seo_keywords:
-  - "Dimmer"
-  - "Controle"
-  - "Intensidade"
-  - "Luminosa"
-  - "55 Iluminacao e Sinalizacao"
+  - "dimmer náutico"
+  - "PWM dimmer marine"
+  - "LED dimmer"
+  - "TRIAC dimmer LED"
+  - "0-10V dimmer"
+  - "DALI marine"
+  - "DMX512"
+  - "Lutron Caseta"
+  - "Lumitec POCO"
+  - "Bluetooth Mesh lighting"
+  - "compatibilidade LED dimável"
+  - "flicker LED"
+  - "EMI dimmer"
 geo_queries:
-  - "O que é Dimmer — Controle de Intensidade Luminosa em instalações elétricas náuticas?"
-  - "Qual é a função de Dimmer — Controle de Intensidade Luminosa na embarcação?"
+  - "Por que LED pisca com dimmer existente?"
+  - "PWM ou TRIAC dimmer para LED em barco?"
+  - "Como integrar dimmer ao sistema de automação?"
+  - "Dimmer wireless Bluetooth funciona em ambiente marine?"
+  - "Como evitar zumbido do dimmer com fita LED?"
+  - "Frequência PWM ideal para evitar flicker?"
+  - "Dimmer DALI vs DMX: qual usar em yacht?"
+  - "Dimmer compatível com fita LED 12V — qual escolher?"
+  - "Dimmer rotativo versus toque versus app: qual melhor?"
+  - "Como dimensionar carga máxima do dimmer?"
+normas_citadas:
+  - "ABYC E-11 (AC and DC Electrical Systems on Boats)"
+  - "ABYC A-30 (Cabin and Weather Deck Illumination)"
+  - "IEC 60669-1 (Switches for household and similar fixed electrical installations)"
+  - "IEC 60669-2-1 (Electronic switches — dimmer)"
+  - "IEC 61347-2-13 (LED driver — DC/AC)"
+  - "IEC 62386 (DALI — Digital Addressable Lighting Interface)"
+  - "IEC 60598-1 (Luminaires — General)"
+  - "IEC 60529 (IP)"
+  - "IEC 61547 (EMC for lighting)"
+  - "IEC 61000-3-2 (Harmonics)"
+  - "IEC 61000-6-1/-3 (EMC)"
+  - "ISO 11898 (CAN bus — referência cruzada para sistemas digitais)"
+  - "USITT DMX512-A (DMX protocol)"
+  - "ANSI E1.20 (RDM — Remote Device Management)"
+  - "ANSI E1.11 / E1.20 (DMX/RDM USA)"
+  - "UL 1472 (Solid-State Dimming Controls)"
+  - "UL 8750 (LED equipment)"
+  - "EU Directive 2014/35/EU (LVD)"
+  - "EU Directive 2014/30/EU (EMC)"
+  - "EU Regulation 2019/2020 (EcoDesign)"
+  - "ABNT NBR 5410"
+  - "ABNT NBR 14728"
+  - "INMETRO Portaria 144/2015"
+  - "ANATEL Resolução 715/2019"
+  - "DPC NORMAM-211/DPC"
+  - "DPC NORMAM-05/DPC"
+  - "Manual técnico Lutron Caseta / Vive / RA2 Select"
+  - "Manual técnico Lumitec POCO / Lighting Control System"
+  - "Manual técnico Lumishore Lumix Sense / Eclipse"
+  - "Manual técnico Aqualuma EZ-Connect"
+  - "Manual técnico CZone (Power Products) — digital switching"
+  - "Manual técnico EmpirBus NG / NG2 — digital switching"
+  - "Manual técnico Garmin OneHelm / Empirbus integration"
+  - "Manual técnico DMX512 controllers (Pathway Connectivity, ENTTEC)"
 related_notes:
-  - "Farol de Busca"
-  - "Fitas Led / Iluminação Led"
-  - "Iluminação de Emergência a Bordo"
+  - "Tipos de Lâmpadas e LEDs Náuticos"
+  - "Fitas Led - Iluminação Led"
   - "Luz de Cortesia"
-  - "Luz de Âncora"
-  - "Luz Subaquática"
   - "Luzes Internas Teto"
-  - "Strobo"
+  - "Iluminação de Emergência a Bordo"
+  - "Automação de Bordo — Sistemas Domoticos"
+  - "Bonding — Sistema de Interligação de Massas"
+  - "Cabeamento Náutico"
+  - "Quadro Elétrico e Painel de Distribuição AC-DC"
+  - "Fusíveis DC — Proteção Contra Sobrecorrente"
+  - "Troubleshooting — Diagnóstico de Falhas Elétricas"
 ---
 
 # Dimmer — Controle de Intensidade Luminosa
 
 > [!abstract] Resumo técnico
-> DIMMER — CONTROLE DE INTENSIDADE LUMINOSA — Dispositivo usado para controlar a potência luminosa entregue à carga. Em iluminação DC a bordo, PWM é uma das soluções mais comuns, mas a compatibilidade real depende da luminária, do driver e da arquitetura do circuito.
+> O **dimmer (controle de intensidade luminosa)** regula o **fluxo luminoso (lumens)** entregue à luminária, modulando a **potência elétrica** entregue ao emissor. Em iluminação náutica moderna **predomina LED**, e o dimmer LED não é trivial: **diferentes tecnologias de dimmer não são intercambiáveis** com diferentes tecnologias de driver LED. Cinco famílias dominantes: **PWM (Pulse Width Modulation — DC native, padrão em fitas LED 12V/24V)**, **TRIAC (corte de fase AC — padrão residencial 220V; em LED requer driver dimável TRIAC-compatible)**, **0-10V (sinal analógico de controle, padrão industrial)**, **DALI (IEC 62386 — digital addressable, scene/group/zone)**, **DMX512 (USITT — controle profissional iluminação cênica/RGB)** + **Bluetooth Mesh / Wi-Fi / proprietário** (Lutron Caseta, Lumitec POCO, CZone, EmpirBus). Falha #1 em barco: **LED não-dimável + dimmer existente = piscar / zumbido / queima**. Padrões: **IEC 60669-2-1** (dimmer eletrônico), **IEC 61347-2-13** (LED driver), **IEC 61547** (EMC), **ABYC E-11** (wiring), **ABYC A-30** (cabin illumination). Sistemas modernos integram dimmer ao **digital switching** (CZone, EmpirBus, Garmin OneHelm) — múltiplas zonas, scenes, integração NMEA 2000. Vide [[Tipos de Lâmpadas e LEDs Náuticos]] para fundamentos LED + [[Fitas Led - Iluminação Led]] para aplicação típica de PWM.
 
-## O que é
+> [!tldr] TL;DR — 9 regras inegociáveis
+> 1. **Compatibilidade dimmer-LED é a falha #1.** Etiqueta "dimmable" no LED + tipo de dimmer (TRIAC, 0-10V, PWM, DALI). Mismatch = pisca / zumbe / queima driver. Verificar TODAS as combinações antes de instalar.
+> 2. **PWM em DC nativo é a solução mais simples e robusta** para fita LED 12V/24V em barco. Frequência ≥1 kHz para evitar flicker visível; ≥10 kHz para eliminar flicker em câmera.
+> 3. **TRIAC dimmer + LED genérico NÃO-dimável = não funciona.** TRIAC corta a onda AC; LED sem driver compatível interpreta como tensão errada → piscar / queima. Trocar para LED dimmable + TRIAC compatível OU dimmer 0-10V.
+> 4. **0-10V é padrão industrial** — separação de potência (12/24V para luminária) e sinal (0-10V em par dedicado). Driver LED com entrada 0-10V responde linear de 1-100%. Padrão em luminárias profissionais marine.
+> 5. **DALI (IEC 62386)** permite endereçamento individual + scenes + grupos + dimming logarítmico (mais natural para o olho). **Cabo de 2 fios bidirecional** — instalação relativamente simples para sistemas grandes.
+> 6. **DMX512** é overkill em residencial mas padrão em iluminação cênica + RGB + barcos com show lighting. Cada canal = 1 byte (0-255 níveis); até 512 canais por universo.
+> 7. **EMI / flicker é problema comum** em PWM mal projetado — drivers chineses geram harmônicas que poluem VHF/GPS adjacente (vide [[Tipos de Lâmpadas e LEDs Náuticos]]). IEC 61547 + EU 2014/30/EU EMC + IEC 61000-6-3.
+> 8. **Sistema digital switching** (CZone, EmpirBus, Garmin OneHelm, Lumitec POCO) — controle de iluminação + outras cargas via NMEA 2000 + app. Padrão emergente em yachts >40 ft.
+> 9. **Dimensionamento da carga:** dimmer rated para corrente total. Fita 14,4 W/m × 5 m × 12V = 6 A → dimmer com rated ≥10A com 30% margem. Subdimensionado = queima.
 
-O dimmer é o dispositivo que permite controlar a intensidade luminosa de LEDs e outras cargas de iluminação, variando o fluxo emitido conforme a necessidade. Em embarcações DC, o método mais comum é o **PWM (Pulse Width Modulation)**, que controla a potência média entregue à carga por chaveamento rápido. Isso não significa que qualquer luminária LED aceite qualquer dimmer: o comportamento final depende do driver interno e da compatibilidade do conjunto.
+> [!danger] Cenários de risco
+> - **LED queima imediatamente ao ligar dimmer:** TRIAC dimmer existente em circuito que recebeu LED não-dimável → spike de tensão na partida → driver explode + faísca + risco de fogo. **Prevenção:** verificar etiqueta dimmable; testar com 1 LED antes de instalar todos.
+> - **EMI severo do dimmer poluído mata VHF/GPS:** dimmer chinês PWM sem EMC + cabo paralelo a antena → GPS perde fix em manobra. **Prevenção:** dimmer certificado IEC 61547 + ferrite cores + cabo separado; Lutron / Lumitec / Lumishore / CZone / EmpirBus são EMC OK.
+> - **Flicker visível em movimento da câmera** (charter, vídeo, vlog): PWM frequência <200 Hz → faixas pretas em vídeo. **Prevenção:** PWM ≥10 kHz para imagem profissional; LED com driver "flicker-free".
+> - **Zumbido audível do dimmer/LED** em camarote noturno: TRIAC com LED genérico → ressonância 100/120 Hz audível. **Prevenção:** trocar para PWM ou 0-10V; substituir LED por dimmable verdadeiro.
+> - **Falha de scene em emergência:** sistema digital switching com falha de software / firmware → todas as luzes apagam ou ficam fixas em modo errado. **Prevenção:** redundância — dimmer manual local + override mecânico; testes mensais; backup firmware.
+> - **Curto em wireless dimmer com bateria descarregada:** Bluetooth dimmer com bateria CR2032 morta + módulo recebe gradualmente menos potência → comportamento errático → danifica driver LED. **Prevenção:** verificar bateria semestralmente; modelo com alimentação cabo + bateria backup.
+> - **Instalação dimmer AC sem aterramento + ambiente molhado:** banheiro / cockpit + AC 220V sem ELCI → choque ao tocar painel. **Prevenção:** ELCI 30 mA; bonding; preferir dimmer DC quando possível.
+> - **Sistema DALI com endereço duplicado:** dois dispositivos com mesmo endereço → conflito → comportamento aleatório. **Prevenção:** usar comissionamento DALI com software (DALI Commissioner); documentar endereços.
+> - **Surto atmosférico via cabo de controle DMX/DALI** queima eletrônica de bordo: cabo longo (10+ m) sem proteção captura energia de relâmpago próximo. **Prevenção:** ABYC TE-04 surge protection em cada extremo; cabo blindado; bonding.
+> - **Substituição de luminária dimável por não-dimável** sem trocar dimmer: nova luminária gerando harmônicas que dimmer não suporta → comportamento errático. **Prevenção:** documentar tipo de luminária; substituir conjunto.
 
-Diferente do ambiente residencial (onde dimmers para lâmpadas AC são simples), o dimmer DC para LED em embarcações tem especificidades de corrente, compatibilidade e interferência que precisam ser respeitadas.
+## O que é (definição rigorosa)
 
-## Função na embarcação
+O **dimmer** é o componente que regula a **potência elétrica** entregue à carga (luminária), permitindo controle do **fluxo luminoso emitido**. Em LED, a relação entre potência elétrica e fluxo é aproximadamente linear (com pequena curva logarítmica para conforto visual).
 
-- Controlar a intensidade da iluminação conforme a necessidade (ambiente, hora do dia, atividade)
-- Reduzir o consumo elétrico quando o brilho máximo não é necessário
-- Preservar a visão noturna do piloto (reduzir iluminação interna durante navegação)
-- Criar atmosfera adequada em diferentes situações (fundeio, navegação, entretenimento)
+Cinco tecnologias dominam o mercado marine:
 
-## Como aparece na prática
+### 1. PWM (Pulse Width Modulation) — DC native
 
-**Muito comum no Brasil:**
+```
+100%:  ████████████████████████████████
+ 75%:  ██████████░░░░██████████░░░░████
+ 50%:  ████░░░░████░░░░████░░░░████░░░░
+ 25%:  ██░░░░░░██░░░░░░██░░░░░░██░░░░░░
+       Frequência típica 200 Hz a 20 kHz
+```
 
-- Dimmer rotativo simples no painel de cabine
-- Um único dimmer controlando toda a iluminação interna
-- Marcas variadas, frequentemente sem verificação de compatibilidade com o LED
+- **Aplicação:** fita LED 12V/24V; LED com driver PWM-compatible.
+- **Vantagens:** simples, eficiente, sem perda térmica em corte.
+- **Desvantagens:** EMI se mal projetado; flicker se frequência <200 Hz.
+- **Frequência ideal:** ≥1 kHz olho humano; ≥10 kHz câmera de vídeo.
 
-**Comum em barcos importados:**
+### 2. TRIAC (Corte de Fase AC)
 
-- Dimmer por zona (salon, camarote, cockpit separados)
-- Dimmer de parede touch em iates europeus
-- Integração com controlador RGB para fitas LED
+```
+Onda senoidal AC: ──────╱╲────╱╲────╱╲──
+Corte 50%:        ──────_╲────_╲────_╲──   (corte na parte negativa)
+Corte 25%:        ──────___╲────___╲─────  (corte mais cedo)
+```
 
-**Mais presente em embarcações maiores/premium:**
+- **Aplicação:** dimmer residencial 110/220V AC; LED dimmable TRIAC-compatible.
+- **Vantagens:** tradicional, infraestrutura ampla.
+- **Desvantagens:** EMI; harmônicas; LED genérico NÃO funciona (precisa driver compatível).
 
-- Sistema de automação com dimmer digital por canal
-- Controle por touchscreen com cenas pré-programadas
-- Integração Victron ou sistema proprietário do fabricante do iate
+### 3. 0-10V (analógico industrial)
 
-## Fundamentos mínimos
+```
+[Driver com entrada de controle 0-10V]
+       │
+       ├─ 0V: 0% intensidade (off)
+       ├─ 1V: 1% intensidade (mínimo)
+       ├─ 5V: 50% intensidade
+       └─ 10V: 100% intensidade
+```
 
-**PWM (Pulse Width Modulation):** O dimmer comuta a alimentação em frequência alta e altera o duty cycle percebido pela carga. O olho humano percebe a média luminosa, não cada pulso individual. Frequências inadequadas podem produzir flicker visível, artefatos em câmera e, em alguns casos, interferência eletromagnética.
+- **Aplicação:** luminárias profissionais marine; estações industriais.
+- **Vantagens:** padrão consolidado; baixa EMI; cabo dedicado.
+- **Desvantagens:** mais cabos (potência + sinal).
 
-**Compatibilidade LED/dimmer:** Nem todo LED funciona corretamente com dimmer. LED com driver interno de corrente constante pode não responder ao PWM ou piscar em intensidades baixas. Verificar "dimmable" na especificação do LED antes de comprar.
+### 4. DALI (Digital Addressable Lighting Interface — IEC 62386)
 
-**Corrente máxima:** O dimmer tem uma corrente máxima suportada. Se a soma dos LEDs controlados exceder essa corrente, o dimmer superaquece e queima.
+```
+[Master controller] ── [Bus DALI 2 fios] ── [Drivers DALI individuais (até 64 endereços por bus)]
+                                                  │
+                                            [Cada driver = endereço único]
+                                            [Scenes / grupos / dimming log.]
+```
 
-**Cálculo:** Somar a potência das cargas da zona e converter para corrente na tensão de trabalho é um bom ponto de partida. O dimmer deve ser especificado com margem térmica e elétrica compatível com a instalação real, e não apenas pelo valor nominal mínimo.
+- **Aplicação:** sistemas grandes com múltiplas zonas.
+- **Vantagens:** endereçamento individual; scenes; bidirecional.
+- **Desvantagens:** complexidade; comissionamento.
 
-**Exemplo:** 10 LEDs de 5W em 12V = 50W ÷ 12V = 4,2A. Dimmer mínimo: 5A. Usar 8–10A para margem.
+### 5. DMX512 (USITT — controle cênico)
 
-## Características principais
+```
+[DMX controller] ── [Cabo DMX 5-pin XLR] ── [Driver 1 → 4 → 64 → 512 canais]
+                                                  │
+                                            [Cada canal = 1 byte (0-255)]
+                                            [RGB usa 3 canais; RGBW usa 4]
+                                            [Universo = 512 canais]
+```
 
-| Parâmetro | Valor típico |
-| --- | --- |
-| Tensão de trabalho | 12V ou 24V DC |
-| Corrente máxima | 5A / 10A / 20A (conforme modelo) |
-| Método de controle | PWM |
-| Frequência PWM | 500–20.000 Hz |
-| Interface | Rotativo, deslizante, touch, remoto |
-| Faixa de controle | 0–100% (alguns: 10–100%) |
+- **Aplicação:** RGB/RGBW + show lighting + iluminação subaquática profissional.
+- **Vantagens:** controle profissional; compatibilidade ampla.
+- **Desvantagens:** overkill em sistemas pequenos; cabo blindado dedicado.
 
-## Configurações e variações comuns
+### 6. Wireless / proprietário (mercado moderno)
 
-**Dimmer rotativo de painel (mais comum)**
+- **Lutron Caseta / Vive / RA2:** Bluetooth Mesh + Wi-Fi.
+- **Lumitec POCO:** controle proprietário Bluetooth.
+- **CZone (Power Products):** digital switching + NMEA 2000.
+- **EmpirBus NG / NG2:** digital switching mais novo.
+- **Garmin OneHelm:** integração via MFD.
 
-- Knob rotativo montado no painel de distribuição ou console
-- Simples e intuitivo
-- Corrente: 5–10A
-- Marcas: Blue Sea, Clipsal Marine, Carlingswitch
+## Comparação técnica entre tecnologias
 
-**Dimmer de parede táctil**
+| Tecnologia | Cabos | Resolução | EMI | Compatibilidade LED | Custo |
+|------------|-------|-----------|-----|---------------------|-------|
+| **PWM** | 2 (alimentação) | Análoga (∞) | Variável | Alta (driver PWM) | Baixo |
+| **TRIAC** | 2 (alimentação) | Análoga | Alta sem filtro | Baixa (precisa LED dim TRIAC) | Baixo |
+| **0-10V** | 4 (potência + sinal) | Análoga (1024) | Baixa | Alta (driver 0-10V) | Médio |
+| **DALI** | 2 (bidirecional) | 254 níveis | Baixa | Alta (driver DALI) | Médio-alto |
+| **DMX512** | 3 (1 par + GND) | 256 níveis × 512 canais | Baixa | Alta (driver DMX) | Médio-alto |
+| **Wireless RF** | Bateria/cabo | Variável | Variável | Alta (proprietário) | Médio-alto |
 
-- Montado na parede da cabine
-- Touch com memória de posição
-- Mais elegante, comum em iates europeus
-- Quick, Vitrifrigo, Garmin integração
+## Onde se encaixa
 
-**Dimmer para fitas LED RGB**
+```
+[Bateria 12V/24V] → [Disjuntor] → [Dimmer] → [Driver LED] → [Luminária]
+                                       │
+                                       └─ [Controle: rotativo / toque / app / scene]
+```
 
-- Controlador de 3 canais (R, G, B) com dimming independente por canal
-- Bluetooth ou WiFi + app
-- Corrente por canal: 5–8A
+## Fabricantes e modelos dominantes
 
-**Dimmer integrado ao painel de automação**
+### Marine-specific
 
-- Victron Venus GX, Garmin OneHelm ou sistemas proprietários
-- Controle digital por CAN bus ou NMEA 2000
-- Logging de consumo integrado
+- **Lumitec POCO** — controle wireless multi-luminária.
+- **Lumishore Lumix Sense** — touch + scene.
+- **Aqualuma EZ-Connect** — controle fácil.
+- **Hella Marine** — dimmer integrado.
 
-## Principais marcas
+### Generalista premium
 
-- **Blue Sea Systems** — dimmers de painel de qualidade, foco em náutica, boa disponibilidade
-- **Victron Energy** — dimming integrado ao sistema de gestão de energia
-- **Clipsal Marine** — linha de acessórios elétricos para ambientes marinhos
-- **Quick (Itália)** — dimmers de parede touch, acabamento premium para iates
-- **Lumitec** — dimmers compatíveis com a própria linha de luminárias
-- **Genéricos PWM** — disponíveis no mercado eletrônico — funcionam mas sem garantia de frequência e EMI
+- **Lutron Caseta / Vive / RA2 Select** — referência residencial premium adaptável.
 
-## Componentes e sistemas relacionados
+### Digital switching marine
 
-- **LEDs e luminárias** — compatibilidade de dimmable é pré-requisito
-- **Painel de distribuição DC** — dimmer instalado entre o painel e as luminárias
-- **Fitas LED** — aplicação mais comum com dimmer
-- **Controlador RGB** — combinação dimmer + cor para sistemas coloridos
-- **Sistema de automação** — integração para controle remoto e cenas
+- **CZone (Power Products)** — referência marine digital switching.
+- **EmpirBus NG / NG2** — concorrente premium.
+- **Garmin OneHelm** — integração via MFD.
 
-## Onde costuma dar problema
+### DMX professional
 
-| Problema | Sintoma | Causa |
-| --- | --- | --- |
-| LED piscando | Tremedeira visível em baixa intensidade | LED não compatível com dimmer PWM, frequência baixa |
-| Dimmer aquece | Temperatura alta, possível desligamento | Sobrecarga — corrente total dos LEDs acima da capacidade |
-| Range estreito | LED só regula de 40–100% (abaixo apaga) | LED com driver de corte — não adequado para dimming |
-| Interferência em VHF | Ruído quando dimmer ativo | EMI do PWM — frequência no range de rádio |
-| Dimmer não responde | Sem controle do brilho | Falha no circuito de controle, LED não dimmable |
+- **Pathway Connectivity** — interfaces DMX.
+- **ENTTEC** — controllers DMX USB / network.
 
-## Causas raiz
+> [!example] Comparação Brasil 2024-2026
+> | Equipamento | Tipo | Preço (R$) |
+> |-------------|------|------------|
+> | PWM dimmer 12V genérico 10A | Manual rotativo | 150-500 |
+> | Lutron Caseta starter kit | Bluetooth + Wi-Fi | 1.500-3.500 |
+> | Lumitec POCO 2-zone | Wireless marine | 2.500-5.000 |
+> | CZone Touch 5 + módulos | Digital switching | 8.000-25.000 |
+> | EmpirBus NG2 sistema completo | Digital switching | 15.000-50.000 |
+> | DMX512 controller 4-universe | Profissional | 3.000-12.000 |
 
-**LED piscando com dimmer:**
+## Falhas comuns
 
-- LED com driver interno de corrente constante que não responde ao PWM corretamente
-- Frequência PWM muito baixa (< 100 Hz) — piscamento perceptível
-- Solução: verificar "dimmable" na spec do LED, ou usar dimmer com frequência > 1 kHz
-
-**Dimmer superaquecendo:**
-
-- Corrente total das luminárias excede a especificação do dimmer
-- Sem margem de segurança — dimmer operando no limite
-
-**EMI em VHF:**
-
-- Frequência PWM do dimmer coincidindo com frequências de rádio (especialmente dimmers baratos com frequências variáveis)
-- Solução: filtros ferrite na saída do dimmer, ou dimmer com blindagem EMI
-
-**Causa raiz:** Comprar dimmer sem verificar compatibilidade com os LEDs específicos e sem calcular a corrente total.
-
-## Diagnóstico prático
-
-**Passo 1:** LED piscando → diminuir o brilho até 10% e observar. Se piscar somente em intensidades baixas: LED com comportamento limiar — trocar o LED ou ajustar a frequência do dimmer.
-
-**Passo 2:** Dimmer quente → medir corrente total dos LEDs. Se > 80% da capacidade do dimmer: subdimensionado.
-
-**Passo 3:** Ruído no VHF quando dimmer ligado → instalar filtro ferrite na entrada e saída do dimmer.
-
-**Passo 4:** Dimmer sem resposta → verificar continuidade no circuito e tensão na entrada.
+| # | Falha | Causa | Solução |
+|---|-------|-------|---------|
+| 1 | LED pisca | Não-dimável + dimmer | LED dimável compatible |
+| 2 | LED queima | Mismatch dimmer-driver | Trocar conjunto |
+| 3 | Zumbido audível | TRIAC harmônico | PWM ou 0-10V |
+| 4 | EMI no VHF | Driver sem EMC | Certificado + ferrite |
+| 5 | Dimmer queima | Sobrecarga | Calcular corrente + 30% |
+| 6 | Wireless intermitente | Bateria / interferência | Cabo backup |
+| 7 | Scene não responde | Comissionamento errado | Re-comissionar |
+| 8 | DALI duplo endereço | Address conflict | DALI Commissioner |
 
 ## Boas práticas
 
-- Verificar "dimmable" na especificação do LED antes de comprar
-- Dimensionar o dimmer para 120% da corrente total calculada
-- Preferir dimmers com especificação clara de frequência, curva de controle e desempenho EMC compatíveis com o ambiente náutico
-- Instalar filtros ferrite quando próximo de instrumentos de rádio
-- Não aplicar dimmer em circuitos de luzes de navegação ou outros conjuntos cuja fotometria certificada não admita alteração de intensidade em serviço
-- Dimmer por zona — não um único para toda a embarcação
-- Usar fio de seção adequada entre dimmer e luminárias (corrente total da zona)
-
-## Cuidados de instalação
-
-- Dimmer em local ventilado — não embutir em painel fechado sem dissipação
-- Temperatura máxima de operação: verificar no datasheet (geralmente 40–60°C)
-- Conexão do fio de controle (potenciômetro remoto) separada do cabeamento de potência
-- Teste de compatibilidade antes de instalar: ligar o LED com o dimmer antes de fixar tudo
+- **Verificar compatibilidade** antes de comprar.
+- **Testar com 1 LED** antes de instalar conjunto.
+- **EMC certificada** preferida.
+- **Documentar** tipo + modelo + zonas.
+- **Backup manual** se sistema digital.
+- **Teste mensal** de scenes + override.
+- **Bonding** da carcaça AC.
+- **Surge protection** em cabos longos.
 
 ## Erros comuns
 
-❌ **LED não dimmable com dimmer PWM** — pisca em intensidades baixas, causa desconforto
+- "Qualquer dimmer funciona com LED." → Falso.
+- "Mais barato é igual." → EMC variável.
+- "Frequência PWM não importa." → <200 Hz = flicker.
+- "Posso usar dimmer AC em LED 12V." → Falso. Sistemas separados.
 
-❌ **Dimmer subdimensionado** — superaquece, falha prematura
+## Glossário
 
-❌ **Dimmer genérico com frequência baixa** — piscamento visível + EMI
-
-❌ **Sem margem de corrente** — dimmer operando no limite queima mais rápido
-
-❌ **Um único dimmer para toda a embarcação** — ajuste único não serve para todos os ambientes
-
-## Relação com outros sistemas
-
-- **Fitas LED** — principal aplicação de dimmer em embarcações
-- **Luzes de cortesia** — dimmer essencial para controle de visão noturna
-- **Luzes internas** — conforto e economia de energia
-- **VHF/GPS** — risco de EMI de dimmers de baixa qualidade
-- **Sistema de automação** — dimming digital por canal
-
-## Brasil x referências internacionais
-
-### Prática comum no Brasil
-
-Dimmer genérico de 5A para toda a embarcação, sem verificação de compatibilidade, frequência desconhecida.
-
-### Referência internacional
-
-Dimmer por zona, frequência > 1 kHz, verificação de compatibilidade, integração com automação em iates maiores.
-
-### Leitura equilibrada
-
-Para uma lancha com iluminação básica: um dimmer de qualidade para a cabine (Blue Sea, Clipsal) com LED dimmable verificado resolve bem. Para embarcações com múltiplas zonas e fitas LED RGB: sistema por zona com controladores adequados é o caminho correto.
-
-## Normas e referências aplicáveis
-
-- **ABYC E-11** — Electrical Systems (proteção e bitola)
-- **IEC 61000** — Emissão EMI (base para filtros de compatibilidade)
-
-## Destaques para ensino
-
-- PWM: o conceito físico — como funcionar "ligando e desligando" controla o brilho
-- Frequência PWM: por que importa para o conforto visual e EMI
-- Cálculo de corrente: como dimensionar o dimmer corretamente
-- Compatibilidade: por que nem todo LED funciona com dimmer
-- O dimmer como ferramenta de segurança na navegação noturna
-
-## Ideias de vídeo, aula prática ou demonstração
-
-- Demonstração de PWM com osciloscópio: visualizando os pulsos
-- LED piscando com dimmer incompatível vs. compatível
-- Cálculo de corrente ao vivo: somando LEDs e escolhendo o dimmer certo
-- Instalação de dimmer Blue Sea no painel de distribuição
-
-## FAQ
-
-**Qualquer LED funciona com dimmer?**
-
-Não. LED deve ser especificamente "dimmable". LEDs com driver de corrente constante não dimmerizável piscarão ou não responderão. Verificar na especificação do produto.
-
-**O dimmer economiza energia?**
-
-Sim — proporcionalmente ao brilho reduzido. A 50% de brilho em PWM o consumo é ~50% do nominal. Pequena variação por perdas no dimmer (geralmente < 5%).
-
-**Posso usar dimmer de 220V residencial em 12V?**
-
-Não — são tecnologias completamente diferentes. Dimmer residencial AC não funciona em circuito DC. Usar sempre dimmer DC específico para 12V/24V.
-
-**Frequência de 50 Hz causa piscamento?**
-
-Frequência muito baixa (50–100 Hz) causa piscamento perceptível que cansa a vista. Frequências > 500 Hz são imperceptíveis. Acima de 1 kHz: sem problemas para qualquer uso.
-
-**O dimmer afeta a vida útil do LED?**
-
-Na faixa de dimming adequado (30–100%): não afeta. Em dimming muito baixo (< 10%): dependendo do LED, pode haver comportamento inconsistente. Dimmers de qualidade mantêm o LED estável em toda a faixa.
+- **Dimmer:** controlador de intensidade.
+- **PWM:** Pulse Width Modulation.
+- **TRIAC:** Triode for Alternating Current (corte de fase).
+- **0-10V:** sinal analógico de controle.
+- **DALI:** Digital Addressable Lighting Interface (IEC 62386).
+- **DMX512:** padrão USITT.
+- **Bluetooth Mesh:** rede BLE.
+- **Digital switching:** controle digital de cargas (CZone, EmpirBus).
+- **Scene:** cena pré-definida.
+- **Group:** grupo de luminárias.
+- **Universe (DMX):** 512 canais.
+- **Frequência PWM:** Hz.
+- **Flicker:** oscilação visível.
+- **Driver dimável:** compatível com sinal de controle.
+- **TRIAC-compatible:** LED com driver TRIAC.
+- **Compatibilidade leading-edge / trailing-edge:** TRIAC modos.
+- **Logarithmic dimming:** curva natural ao olho.
+- **Comissionamento DALI:** atribuição de endereços.
+- **EmpirBus / CZone:** digital switching marine.
+- **Lutron Caseta:** Bluetooth Mesh + Wi-Fi.
+- **Lumitec POCO:** wireless marine.
+- **Vide [[Tipos de Lâmpadas e LEDs Náuticos]]** + [[Fitas Led - Iluminação Led]] — fundamentos.
 
 ## Integração com outras notas
 
-- [[Farol de Busca]]
-- [[Fitas Led / Iluminação Led]]
-- [[Iluminação de Emergência a Bordo]]
-- [[Luz de Cortesia]]
-- [[Luz de Âncora]]
-- [[Luz Subaquática]]
-- [[Luzes Internas Teto]]
-- [[Strobo]]
+- [[Tipos de Lâmpadas e LEDs Náuticos]] — fundamentos.
+- [[Fitas Led - Iluminação Led]] — aplicação típica PWM.
+- [[Luz de Cortesia]] / [[Luzes Internas Teto]] — controle de cena.
+- [[Iluminação de Emergência a Bordo]] — backup independente.
+- [[Automação de Bordo — Sistemas Domoticos]] — integração total.
+- [[Bonding — Sistema de Interligação de Massas]] — aterramento AC.
+- [[Cabeamento Náutico]] — cabos.
+- [[Quadro Elétrico e Painel de Distribuição AC-DC]] — disjuntor.
+- [[Fusíveis DC — Proteção Contra Sobrecorrente]] — proteção.
+- [[Troubleshooting — Diagnóstico de Falhas Elétricas]] — diagnóstico.
 
 ## Perguntas que esta nota responde
 
-- O que é Dimmer — Controle de Intensidade Luminosa em instalações elétricas náuticas?
-- Qual é a função de Dimmer — Controle de Intensidade Luminosa na embarcação?
+- Por que LED pisca com dimmer existente?
+- PWM ou TRIAC dimmer para LED em barco?
+- Como integrar dimmer ao sistema de automação?
+- Dimmer wireless Bluetooth funciona em ambiente marine?
+- Como evitar zumbido do dimmer com fita LED?
+- Frequência PWM ideal para evitar flicker?
+- Dimmer DALI vs DMX: qual usar em yacht?
+- Dimmer compatível com fita LED 12V — qual escolher?
+- Dimmer rotativo versus toque versus app: qual melhor?
+- Como dimensionar carga máxima do dimmer?

@@ -3,13 +3,51 @@ title: "Iluminação de Emergência a Bordo"
 note_type: "technical-note"
 domain: "55_Iluminacao_e_Sinalizacao"
 source_file: "ILUMINAÇÃO DE EMERGÊNCIA A BORDO 33a19734f7fb8168b037e6556cf0b429.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "26"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "SOLAS Chapter II-1 Regulation 41 — Main source of electrical power and lighting"
+  - "SOLAS Chapter II-1 Regulation 42 — Emergency source of electrical power in passenger ships"
+  - "SOLAS Chapter II-1 Regulation 43 — Emergency source of electrical power in cargo ships"
+  - "SOLAS Chapter II-2 Regulation 13 — Means of escape (iluminação em saídas)"
+  - "IMO Resolution A.752(18) — Guidelines for safe working practices for ship personnel"
+  - "IMO MSC/Circ.1032 — Emergency lighting (referência técnica)"
+  - "IMO Resolution MSC.81(70) — Low location lighting (LLL)"
+  - "IMO Resolution A.654(16) — Graphical symbols for fire control plans"
+  - "IEC 60598-2-22 — Luminaires — Particular requirements — Luminaires for emergency lighting"
+  - "IEC 60945 — Maritime navigation and radiocommunication equipment — General requirements"
+  - "IEC 61508 / 61511 — Functional safety (quando integrado a sistema de controle)"
+  - "EN 1838 — Lighting applications — Emergency lighting (europeu)"
+  - "EN 50172 / IEC 62034 — Emergency escape lighting systems (testes automáticos)"
+  - "ISO 15370 — Low location lighting (fotoluminescente em navios passageiros)"
+  - "ISO 17631 — Ships and marine technology — Shipboard plans for fire protection, life-saving and escape"
+  - "ISO 24409 — Design, location and use of shipboard safety signs"
+  - "USCG 46 CFR Part 111 — Electrical engineering (iluminação emergência comercial)"
+  - "USCG 46 CFR Part 112 — Emergency lighting and power systems"
+  - "USCG 46 CFR Part 133 — Off-vessel survival craft equipment"
+  - "ABYC A-16 (2023) — Electric Navigation Lights (interface com navlights backup)"
+  - "ABYC E-11 (2023) — AC and DC Electrical Systems on Boats (hotline, fusível, bitola)"
+  - "ABYC A-4 — Fire fighting equipment (iluminação de extintores)"
+  - "NORMAM-201/DPC — Tráfego e Permanência de Embarcações"
+  - "NORMAM-205/DPC — Navios e embarcações empregadas na navegação interior (embarcações de passageiros)"
+  - "NORMAM-211/DPC — Embarcações de esporte e recreio"
+  - "NR-30 MTE — Segurança e saúde no trabalho aquaviário"
+  - "ABNT NBR 10898:2013 — Sistema de iluminação de emergência"
+  - "ABNT NBR IEC 60598-2-22:2017 — Luminárias para iluminação de emergência"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "ABNT NBR 13434 — Sinalização de segurança contra incêndio e pânico"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://www.marinha.mil.br/dpc/normam-204"
   - "https://abycinc.org/standards/"
+  - "https://www.imo.org/en/OurWork/Safety/Pages/SOLAS.aspx"
+  - "https://www.iso.org/standard/62326.html"
+  - "https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/inspecao-do-trabalho/seguranca-e-saude-no-trabalho/normas-regulamentadoras-nrs"
 aliases:
   - "ILUMINAÇÃO DE EMERGÊNCIA A BORDO"
 seo_title: "Iluminação de Emergência a Bordo"
@@ -36,6 +74,76 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > ILUMINAÇÃO DE EMERGÊNCIA — Sistema de iluminação destinado a manter orientação e segurança quando a energia principal falha. O arranjo adequado depende do porte, do uso da embarcação, das rotas de fuga e da filosofia de alimentação de contingência.
+
+> [!tip] TL;DR — Regra de decisão em 30 segundos
+> 1. **Iluminação de emergência é sistema, não luminária isolada** — inclui fonte alternativa de energia (bateria interna, hotline, gerador emergência), luminárias com autonomia, sinalização fotoluminescente e lanternas portáteis; em SOLAS Cap II-1 Reg 42 é arquitetura auditável.
+> 2. **Três camadas devem coexistir: automática elétrica + fotoluminescente passiva + portátil** — camada 1 garante acendimento automático ao blackout, camada 2 funciona sem energia nenhuma (low location lighting ISO 15370), camada 3 é a última linha de autonomia.
+> 3. **Autonomia mínima em luminária de emergência é definida por norma, não fabricante** — IMO MSC/Circ.1032 recomenda ≥ 3 h em navios passageiros; EN 1838 exige ≥ 1 h em edificações; para cruzeiro recreio offshore, 3 h é referência técnica válida.
+> 4. **Circuito de carga da luminária NÃO pode estar na chave geral** — ao desligar a chave, a bateria interna para de carregar e descarrega em dias/semanas; circuito dedicado permanente (hotline com fusível próprio ABYC E-11) é obrigatório para projeto correto.
+> 5. **Teste de autonomia anual é a única verificação confiável** — "acende quando aperto o botão" não é teste; teste correto: simular blackout completo e cronometrar até apagar; registrar em log de manutenção (exigido em charter/comercial).
+> 6. **Low Location Lighting (LLL, ISO 15370) é obrigatório em passageiros SOLAS** — faixa fotoluminescente a 15-30 cm do piso em corredores para evacuação em fumaça (fumaça sobe, visão abaixo dela é preservada); aplicação recreio é recomendação, não obrigação.
+> 7. **Bateria NiCd 3-5 anos, LiFePO4 8-10 anos, Pb-ácida selada 2-3 anos** — substituição preventiva por tempo, NÃO por aparência (luminária pode acender por 30 s apenas e parecer funcionar).
+> 8. **LED HOTLINE direto à bateria casa é a solução mais simples para recreio** — ABYC E-11 com fusível < 7 polegadas do banco, LED < 2 W consome < 0,15 A × 24 h = < 4 Ah/dia, desprezível se banco é mantido carregado.
+> 9. **Sinalização adesiva fotoluminescente (ABNT NBR 13434) marca rotas de saída, extintores, coletes** — charge em luz ambiente durante o dia, emite por 2-8 h no escuro; sem energia, sem manutenção elétrica; complemento obrigatório.
+
+> [!danger] Quando chamar um especialista (engenheiro elétrico/projetista de sistemas de segurança contra incêndio marítimo)
+> 1. **Projeto de emergência em navio passageiro SOLAS (≥ 36 passageiros)** — arquitetura de sistema emergência com transferência automática (ATS), fonte emergência dedicada (gerador emergência ABAIXO de linha d'água, não no fundo), luminárias em cada compartimento, LLL em corredores; escopo completo de engenharia de projeto naval.
+> 2. **Integração com sistema de detecção de incêndio e evacuação** — IMO/SOLAS Cap II-2 Reg 13 exige que detecção de fogo + alarme + iluminação emergência + portas corta-fogo operem em cadeia; projeto functional safety IEC 61508/61511.
+> 3. **Embarcação de charter brasileira em inspeção DPC** — NORMAM-205 exige plano de combate a incêndio, iluminação emergência com autonomia ≥ 30 min, luminárias em saída e corredor, sinalização fotoluminescente em rotas de fuga; projeto aprovado pela Capitania é mandatório.
+> 4. **Retrofit em embarcação de recreio > 12 m com uso comercial/charter** — mudança de NORMAM-211 (recreio) para NORMAM-201 (comercial) exige upgrade de iluminação emergência: ponto crítico em transição de uso.
+> 5. **Testes de autonomia com dispositivo de self-test** — luminárias modernas (IEC 62034) têm auto-teste semanal/mensal com LED indicador de status; comissionamento requer programação de cronograma de teste e registro em sistema de gerenciamento.
+> 6. **Embarcação com sistema AC 110/220 V e iluminação emergência AC** — sistemas > 12 V AC exigem proteção residual DR, aterramento conforme ABNT NBR 5410, separação de circuitos AC de emergência e normal; projeto elétrico AC com análise de falha.
+> 7. **Gerador de emergência com partida automática** — transferência automática (ATS) requer comissionamento profissional, teste mensal sob carga, manutenção preventiva, combustível independente do motor principal; escopo de marinha mercante.
+> 8. **Perícia pós-sinistro com alegação "iluminação emergência não funcionou"** — laudo forense envolvendo falha de evacuação noturna requer leitura de logs (se self-test), teste em laboratório das luminárias, verificação de manutenção; escopo jurídico.
+> 9. **Embarcação com lítio e risco de thermal event** — iluminação emergência em área de bateria lítio deve considerar BMS trip, supressão H2/VOCs na ventilação, manter iluminação sobre válvulas de desconexão e saída de emergência; projeto específico ABYC TE-13 e equivalentes.
+
+> [!info] Glossário rápido (≈ 46 termos)
+> - **Iluminação de emergência** — sistema autônomo ativado em blackout.
+> - **Emergency lighting (EM)** — categoria luminária IEC 60598-2-22.
+> - **Escape lighting** — iluminação específica de rotas de fuga (EN 1838).
+> - **Low Location Lighting (LLL)** — ISO 15370, faixa baixa em corredores.
+> - **Anti-panic lighting** — ilumina área aberta para evitar pânico.
+> - **Standby lighting** — ilumina operação essencial (sala de controle).
+> - **Central battery system (CBS)** — bateria centralizada para várias luminárias.
+> - **Self-contained luminaire** — luminária com bateria interna (mais comum recreio).
+> - **ATS (Automatic Transfer Switch)** — transferência automática entre fontes AC.
+> - **Emergency generator** — gerador de emergência dedicado.
+> - **Fonte primária** — fonte de energia normal da embarcação.
+> - **Fonte emergência** — fonte de energia alternativa (bateria ou gerador).
+> - **Blackout** — falha total da fonte primária.
+> - **Autonomia (backup time)** — tempo que a luminária opera sem fonte primária.
+> - **Self-test (IEC 62034)** — teste automático periódico da luminária.
+> - **Indicator LED** — LED de status (verde = OK; piscante = falha).
+> - **Fotoluminescente (photoluminescent)** — material que emite após absorver luz.
+> - **Fluorescente** — emite enquanto excitado (diferente de fotoluminescente).
+> - **Fosforescente (sinônimo aqui)** — emite após excitação por horas.
+> - **ISO 15370 low location** — faixa fotoluminescente em corredor passageiros.
+> - **ISO 17631** — planos de escape e proteção incêndio em navios.
+> - **ISO 24409** — sinais de segurança naval.
+> - **SOLAS Cap II-1 Reg 42** — emergency power passenger ships.
+> - **SOLAS Cap II-2 Reg 13** — means of escape.
+> - **MSC/Circ.1032** — emergency lighting guidance.
+> - **MSC.81(70)** — Low Location Lighting.
+> - **Hotline** — circuito permanente ao banco DC.
+> - **LED HOTLINE** — LED ligado direto à bateria (bypass chave geral).
+> - **Fusível ABYC E-11** — < 7" do banco, proteção contra curto.
+> - **IP-54 (interior)** — proteção ingress interna.
+> - **IP-67 (exterior/máquinas)** — proteção exterior marinha.
+> - **NiCd (nickel-cadmium)** — bateria tradicional de emergência, 3-5 anos.
+> - **LiFePO4** — bateria moderna de emergência, 8-10 anos.
+> - **Pb-ácida selada (SLA/VRLA)** — bateria standby, 2-3 anos.
+> - **Cronograma de teste** — registro anual de autonomia.
+> - **Lux** — unidade de iluminância (lm/m²); mínimo 1-5 lux em rota de escape.
+> - **Lumens (lm)** — fluxo luminoso total.
+> - **Luminária compacta** — unidade única com bateria + LED + drive.
+> - **Luminária bulkhead** — fixada na antepara (parede).
+> - **Exit sign (placa saída)** — sinalização luminosa fotoluminescente ou LED.
+> - **Pictogram ISO 7010** — símbolos padronizados de segurança.
+> - **NR-30 MTE** — norma brasileira trabalho aquaviário.
+> - **NBR 10898** — sistema iluminação emergência brasileira.
+> - **NBR 13434** — sinalização segurança incêndio e pânico.
+> - **MBR (marcação a bordo)** — reembarcação e rota de escape.
+> - **Checklist pré-viagem** — verificação periódica obrigatória.
 
 ## O que é
 
@@ -117,7 +225,7 @@ Bateria auxiliar → HOTLINE → fio sempre energizado → LED de baixo consumo
 
 | Marca | Produto | Tipo | Certificação |
 | --- | --- | --- | --- |
-| **Hella Marine** | EasyFit Emergency | LED bateria | IMO / SOLAS |
+| **Hella Marine** | EasyFit Emergency | LED bateria | IMO / SOLAS (edição a verificar) |
 | **Lumitec** | Emergency LED | LED bateria | IP67 |
 | **Fire Angel** | Emergency Light | LED bateria | EN 60598-2-22 |
 | **3M** | Safety Sign | Fosforescente | ISO 3864 |
@@ -213,12 +321,36 @@ Passo 3: Se apagou → não está em HOTLINE — corrigir a instalação
 
 ## Normas e referências
 
-- **SOLAS Chapter II-2 / Reg. 42:** Means of escape (iluminação de emergência — commercial)
-- **IMO MSC/Circ.1032:** Emergency lighting (referência técnica)
-- **IEC 60598-2-22:** Luminaires for emergency lighting
-- **EN 1838:** Lighting applications — Emergency lighting
-- **ISO 17631:** Retroreflective and fluorescent material (fosforescente)
-- **NORMAM-01:** equipamentos de segurança (inclui iluminação)
+- **SOLAS Chapter II-1 Regulation 41** — Main source of electrical power and lighting (fonte primária de energia e iluminação de bordo).
+- **SOLAS Chapter II-1 Regulation 42** — Emergency source of electrical power in passenger ships (fonte emergência obrigatória em passageiros).
+- **SOLAS Chapter II-1 Regulation 43** — Emergency source of electrical power in cargo ships (fonte emergência em navios de carga).
+- **SOLAS Chapter II-2 Regulation 13** — Means of escape (iluminação em saídas de fuga).
+- **IMO Resolution A.752(18)** — Guidelines for safe working practices for ship personnel (iluminação para trabalho seguro).
+- **IMO MSC/Circ.1032** — Emergency lighting (referência técnica detalhada).
+- **IMO Resolution MSC.81(70)** — Low location lighting (LLL) sistemas fotoluminescentes em corredores de passageiros.
+- **IMO Resolution A.654(16)** — Graphical symbols for fire control plans.
+- **IEC 60598-2-22** — Luminaires — Particular requirements — Luminaires for emergency lighting (padrão internacional de luminárias de emergência).
+- **IEC 60945** — Maritime navigation and radiocommunication equipment — General requirements (EMC, IP, vibração para ambientes marinhos).
+- **IEC 61508 / IEC 61511** — Functional safety of electrical/electronic systems (quando integrado a sistema de controle e incêndio).
+- **EN 1838** — Lighting applications — Emergency lighting (padrão europeu, 1 h autonomia mínima em edificações, aplicável como referência).
+- **EN 50172 / IEC 62034** — Emergency escape lighting systems — Automatic test systems (luminárias com auto-teste).
+- **ISO 15370** — Low location lighting on passenger ships (fotoluminescente a 15-30 cm do piso).
+- **ISO 17631** — Ships and marine technology — Shipboard plans for fire protection, life-saving appliances and means of escape.
+- **ISO 24409** — Design, location and use of shipboard safety signs.
+- **USCG 46 CFR Part 111** — Electrical engineering (iluminação emergência comercial norte-americana).
+- **USCG 46 CFR Part 112** — Emergency lighting and power systems.
+- **USCG 46 CFR Part 133** — Off-vessel survival craft equipment.
+- **ABYC A-16 (2023)** — Electric Navigation Lights (interface com navlights de backup).
+- **ABYC E-11 (2023)** — AC and DC Electrical Systems on Boats (hotline, fusíveis, bitola do circuito de emergência).
+- **ABYC A-4** — Fire fighting equipment (iluminação de extintores de incêndio).
+- **NORMAM-201/DPC** — Tráfego e Permanência de Embarcações (comerciais brasileiras).
+- **NORMAM-205/DPC** — Navios e embarcações empregadas na navegação interior (embarcações de passageiros; iluminação emergência obrigatória).
+- **NORMAM-211/DPC** — Embarcações de esporte e recreio.
+- **NR-30 MTE** — Segurança e saúde no trabalho aquaviário (iluminação de áreas de trabalho).
+- **ABNT NBR 10898:2013** — Sistema de iluminação de emergência (padrão brasileiro de referência para projeto).
+- **ABNT NBR IEC 60598-2-22:2017** — Luminárias para iluminação de emergência (adoção nacional do IEC 60598-2-22).
+- **ABNT NBR 5410:2004 + emendas** — Instalações elétricas de baixa tensão (aplicável ao sistema AC 110/220 V de emergência).
+- **ABNT NBR 13434** — Sinalização de segurança contra incêndio e pânico (rotas de fuga, sinais fotoluminescentes).
 
 ## Como ensinar este tópico
 

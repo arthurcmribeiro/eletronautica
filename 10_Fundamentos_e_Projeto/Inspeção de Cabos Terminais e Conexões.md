@@ -3,9 +3,42 @@ title: "Inspeção de Cabos Terminais e Conexões"
 note_type: "procedure"
 domain: "10_Fundamentos_e_Projeto"
 source_file: "INSPEÇÃO DE CABOS, TERMINAIS E CONEXÕES 33a19734f7fb818d95e7d8deb70ff9fb.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "fase-5-reescrita-premium"
+fase_6_reescrita: "30"
+tier_fase_6: "S"
+reviewed_on: "2026-04-19"
+review_jurisdiction:
+  - "Brasil"
+  - "internacional"
+normas_citadas:
+  - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats (cláusula 11.12 cabeamento)"
+  - "ABYC E-2 (2020) — Cathodic Protection / Bonding (cabos de bonding)"
+  - "ABYC E-9 (2019) — DC Electrical Systems / Alternators and Chargers (cabos de carga)"
+  - "ABYC E-10 (2023) — Storage Batteries (cabos de bateria, cable-tray)"
+  - "ISO 13297:2020 — Small craft — Electrical systems AC & DC (sucessora de ISO 10133)"
+  - "ISO 10133:2012 — Small craft — Electrical systems — Extra-low-voltage DC (retirada, sucedida por 13297)"
+  - "ISO 8846:1990 — Small craft — Electrical devices — Ignition protection"
+  - "IEC 60092-101 — Definitions and general requirements"
+  - "IEC 60092-352 — Choice and installation of electrical cables"
+  - "IEC 60092-353 — Power cables for rated voltages 1 kV and 3 kV"
+  - "IEC 60092-359 — Sheathing materials for shipboard power and telecommunication cables"
+  - "IEC 60092-376 — Cables for control and instrumentation circuits 150/250 V"
+  - "IEC 60228 — Conductors of insulated cables (classes de encordoamento)"
+  - "IEC 60332-1/-3 — Tests on electric cables — Flame spread (retardância)"
+  - "IEC 60754-1/-2 — Halogen acid gas and toxicity"
+  - "IEC 60945 — Marine navigation equipment (cabos de eletrônica marítima)"
+  - "IEC 61162-1/-2/-3 (NMEA 0183 / 2000) — Cabos digitais marinhos"
+  - "UL 1426 — Cables for use on boats (padrão de cabo náutico EUA)"
+  - "UL 1309 / Navy MIL-C-24640 — Boat/Navy shipboard cables (alta confiabilidade)"
+  - "SAE J1127 — Low-voltage battery cable"
+  - "SAE J1128 — Low-voltage primary cable (GPT, HDT, SXL, STX)"
+  - "SAE J378 — Marine propulsion system wiring (interface ignição/partida)"
+  - "ABNT NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
+  - "ABNT NBR NM 247-3 — Cabos isolados com PVC para tensões nominais até 450/750 V"
+  - "NORMAM-211/DPC — Esporte e recreio"
+  - "NORMAM-201/204/DPC — Tráfego comercial / SMM"
+  - "NR-10 (MTE) — Segurança em instalações e serviços em eletricidade"
+  - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
 source_urls:
   - "https://www.gov.br/pt-br/servicos/solicitar-inscricao-transferencia-de-propriedade-e-ou-jurisdicao-titulos-e-certidoes-de-embarcacoes"
   - "https://www.marinha.mil.br/dpc/normas"
@@ -40,6 +73,28 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > INSPEÇÃO DE CABOS — Verificação sistemática do estado físico, elétrico e mecânico do cabeamento da embarcação. Cabos são o sistema circulatório da elétrica náutica — quando falham, tudo falha.
+
+> [!tip] Regra de decisão em 30 segundos
+> 1. **Cabo náutico = cobre estanhado (tinned copper), NÃO automotivo** — ABYC E-11 + UL 1426 + SAE J1127; cobre nu corrói por capilaridade em ambiente salino, mesmo com isolação aparentemente íntegra.
+> 2. **Encordoamento flexível classe 5 ou 6 (IEC 60228)** — cabos rígidos fadigam em vibração; fios finos encordoados toleram balanço, movimento e curvatura repetida sem ruptura interna.
+> 3. **Inspeção visual em 4 camadas: isolação + terminal + roteamento + fixação** — problemas de cabo aparecem em uma dessas quatro; percorrer a rota completa, não "dar uma olhada" no painel.
+> 4. **Teste de tração em cada terminal** — segurar e puxar suavemente; movimento interno = crimp comprometido = recrimpar ou substituir.
+> 5. **Queda de tensão sob carga real** — ABYC E-11 3% críticos / 10% não-críticos; medir V no fusível vs V no equipamento em operação. Maior que o limite = cabo subdimensionado ou oxidado internamente.
+> 6. **Ponto quente sob carga = diagnóstico** — câmera termográfica ou termômetro IR; terminal ≥ 20 °C acima do entorno sinaliza mau contato ou cabo insuficiente; não ignorar.
+> 7. **Isolação AC com megôhmetro 500 V anual** — IEC 60092-401 + IEC 60092-352; valor ≥ 1 MΩ entre condutor e terra em embarcação de lazer; < 100 kΩ em qualquer circuito → investigar + substituir.
+> 8. **Cabos em bilge SUSPENSOS, nunca imersos** — conexões submersas estão fora de especificação; capilaridade por dentro do cabo é falha silenciosa que precede incêndio.
+> 9. **Identificação obrigatória em toda extremidade** — etiqueta ou marcação numerada correspondente ao diagrama unifilar; cabo sem ID = tempo perdido em troubleshooting.
+
+> [!danger] Quando chamar um especialista (eletricista náutico certificado / engenheiro / surveyor)
+> 1. **Ponto quente persistente em cabo-tronco (banco, alternador, inverter, inversor-solar)** — corrente alta + conexão comprometida = risco iminente de incêndio; isolar o circuito, diagnosticar e refazer a conexão com terminais classe T + tubo termorretrátil adesivo + torque conforme ABYC E-11 Tabela IX.
+> 2. **Deterioração generalizada em embarcação > 15 anos** — recabeamento parcial ou total exige projeto + ART; isolar, mapear, substituir por fases; surveyor avalia custo-benefício vs substituição pontual.
+> 3. **Cabo AC com isolação < 1 MΩ (teste megôhmetro)** — risco de choque fatal em água; desconectar shore power imediatamente, investigar ponto de falha (não basta substituir cabo sem identificar causa: geralmente infiltração em conector ou passagem).
+> 4. **Perícia pós-incêndio elétrico** — preservar cabos queimados, fotografar, não remover; laudo IBAPE/Abracem baseia seguro e responsabilização; substituir sem perícia = perda de direito indenização.
+> 5. **Embarcação comercial NORMAM-201/204/205 com não-conformidade de cabeamento** — reavaliação pelo RBNA/sociedade classificadora + possível mudança de classe; DPC pode suspender certificado de navegabilidade.
+> 6. **Retrofit para banco lítio exigindo upgrade de cabo-tronco** — LiFePO4 exige bitola maior + fusível classe T + conectores especiais (Mega Fuse, MRBF); cálculo dedicado ABYC E-13 + E-11.
+> 7. **Medição em cabo de bateria sob carga pesada (partida motor, guincho, inverter ≥ 3 kW)** — risco de arco elétrico e queimadura; EPI classe 0 + ferramenta isolada + sequência NR-10 obrigatória para profissional brasileiro.
+> 8. **Sistemas de eletrônica crítica com EMI (NMEA 2000 + radar + autopilot falhando juntos)** — cabo com shielding deteriorado ou aterramento ruim; requer técnico com instrumentação específica (analisador NMEA, osciloscópio, TDR).
+> 9. **Cabos em área classificada (compartimento de motor gasolina, GLP, tanques)** — ISO 8846 (ignition protection) + IEC 60079-series; cabo não certificado nessas áreas = risco de explosão.
 
 ## O que é
 
@@ -294,11 +349,100 @@ Cabo armazenado incorretamente (UV, calor) deteriora antes de ser instalado. Ver
 
 ## Normas aplicáveis
 
-- **ABYC E-11** — especificações de cabeamento náutico, inspeção periódica
-- **ABYC A-28** — marine electrical circuit diagrams (identificação de cabos)
-- **ABNT NBR 5410** e família **ABNT/IEC** aplicável — referência complementar para princípios de baixa tensão, identificação e proteção
-- **UL 1426** — cables for use on boats (padrão de qualidade para cabo náutico)
-- **SAE J1128** — Low Tension Primary Cable (referência para cabos náuticos)
+**ABYC — cabeamento náutico:**
+
+- **ABYC E-11 (2023)** — AC & DC Electrical Systems on Boats: especificações de cabo (cobre estanhado, encordoamento fino), identificação por cor (cláusula 11.12), torque de terminais (Tabela IX), proteção contra roçamento (passa-fios, brackets), fixação a cada 450 mm.
+- **ABYC E-2 (2020)** — Cathodic Protection: cabos de bonding exigem bitola compatível com corrente de falta + cobre estanhado para massas submersas.
+- **ABYC E-9 (2019)** — DC Alternators and Chargers: bitola do cabo de saída do alternador + proteção em caso de disconnect em carga.
+- **ABYC E-10 (2023)** — Storage Batteries: cabos do banco (positivo + negativo) com isolação resistente ao eletrólito + cable-tray com retenção mecânica.
+
+**ISO — embarcações de recreio (mercado CE):**
+
+- **ISO 13297:2020** — Small craft — Electrical systems AC & DC (sucessora de ISO 10133, unificada).
+- **ISO 10133:2012** — retirada, mas relevante para embarcações construídas na vigência.
+- **ISO 8846:1990** — Small craft — Electrical devices — Ignition protection: cabos em compartimento de motor gasolina exigem isolação certificada.
+
+**IEC — embarcações comerciais (SOLAS + IEC 60092-series):**
+
+- **IEC 60092-101** — Definitions and general requirements.
+- **IEC 60092-352** — Choice and installation of electrical cables: método de dimensionamento, roteamento, agrupamento, proteção mecânica.
+- **IEC 60092-353** — Power cables for rated voltages 1 kV and 3 kV.
+- **IEC 60092-359** — Sheathing materials for shipboard power and telecommunication cables (HEPR, XLPE, EPR).
+- **IEC 60092-376** — Cables for control and instrumentation circuits 150/250 V.
+- **IEC 60228** — Conductors of insulated cables: classes de encordoamento (1-6); náutico típico classe 5 ou 6 (flexível).
+- **IEC 60332-1/-3** — Tests on electric cables under fire — Flame spread (retardância); exigida em embarcação comercial.
+- **IEC 60754-1/-2** — Halogen acid gas / toxicity (LSZH — Low Smoke Zero Halogen).
+- **IEC 60945** — Marine navigation equipment: cabos de eletrônica marítima com requisitos EMC específicos.
+- **IEC 61162-1/-2/-3 (NMEA 0183 / 2000)** — Cabos digitais marinhos: shielded twisted pair + impedância controlada + CAN bus 250 kbps (2000).
+
+**UL / SAE — EUA:**
+
+- **UL 1426** — Cables for Use on Boats: padrão de cabo náutico de baixa tensão (≤ 600 V); cobre estanhado obrigatório, isolação resistente a combustível e óleo.
+- **UL 1309 / MIL-C-24640** — Boat/Navy shipboard cables: alta confiabilidade militar/comercial.
+- **SAE J1127** — Battery Cable: cabo especificamente para banco (isolação mais espessa, resistente a eletrólito).
+- **SAE J1128** — Low Voltage Primary Cable: tipos GPT, HDT, SXL, STX (automotivo/náutico leve).
+- **SAE J378** — Marine propulsion system wiring: interface de ignição/partida em motor náutico (rabeta, centro-raiador).
+
+**Brasil:**
+
+- **ABNT NBR 5410:2004 + emendas** — Instalações elétricas de baixa tensão.
+- **ABNT NBR NM 247-3** — Cabos isolados com PVC para tensões nominais até 450/750 V (adoção Mercosul).
+- **NORMAM-211/DPC** — Esporte e recreio.
+- **NORMAM-201/204/DPC** — Comercial / SMM (exige rastreabilidade de cabo + certificação).
+- **NR-10 (MTE)** — Segurança em instalações e serviços em eletricidade (profissional brasileiro).
+
+**Diretiva europeia:**
+
+- **CE-RCD Directive 2013/53/EU** — Recreational Craft Directive: marcação CE exige conformidade com harmonised standards (ISO 13297 + ISO 8846 + UL 1426 ou equivalente).
+
+## Glossário rápido
+
+- **Abrasion protection (passa-fios, cable tray, loom)** — proteção mecânica em passagem por bulkhead e borda metálica; ABYC E-11 exige.
+- **Adhesive heat-shrink (termorretrátil adesivo)** — tubo termorretrátil com cola interna que veda o terminal; padrão náutico (não usar termorretrátil seco em ambiente úmido).
+- **AWG (American Wire Gauge)** — escala de bitola usada em ABYC/UL/SAE; inverso: AWG menor = cabo mais grosso. Equivalências: AWG 10 ≈ 5,26 mm², AWG 4 ≈ 21,15 mm², AWG 4/0 ≈ 107,2 mm².
+- **Battery cable (ABYC E-10)** — cabo específico de banco com isolação resistente a ácido, alta flexibilidade, cobre estanhado; não confundir com SAE J1127.
+- **Bonding conductor** — cabo dedicado à interligação de massas metálicas submersas (ABYC E-2); bitola mínima AWG 8 (8,37 mm²) em cobre estanhado.
+- **Burnback (retrocesso de queima)** — retorno de chama ao cabeamento em caso de incêndio; IEC 60332 testa.
+- **Cable gland (prensa-cabo)** — conexão mecânica estanque de cabo em painel/caixa; IP-67/68 em ambiente externo.
+- **Cable tray (bandeja / canaleta)** — suporte contínuo para roteamento; exigido a cada 450 mm em cabo pesado (ABYC E-11).
+- **Capilaridade em cobre nu** — água salina penetra entre os fios do encordoamento e oxida de dentro para fora; falha silenciosa característica do cabo automotivo em ambiente náutico.
+- **Chafing (roçamento)** — desgaste mecânico por atrito; principal causa de falha externa de cabo.
+- **Classe de encordoamento IEC 60228** — classe 1 (sólido) a classe 6 (ultra-fino flexível); náutico típico classe 5 (flexível) ou 6 (muito flexível).
+- **Cobre estanhado (tinned copper)** — fios de cobre com camada de estanho eletrodeposta; resistente a corrosão salina; padrão náutico (ABYC E-11 + UL 1426).
+- **Cold flow (fluência a frio)** — deformação permanente do terminal sob vibração; típico em crimp mal executado.
+- **Color code ABYC E-11 (cláusula 11.12)** — vermelho positivo, preto ou amarelo negativo, verde bonding, amarelo-listra negativo (alternativo); sem cor padrão = sistema não auditável.
+- **Continuity test (teste de continuidade)** — multímetro modo buzzer; < 1 Ω = OK, OL = circuito aberto.
+- **Core (alma / núcleo do cabo)** — conjunto de fios condutores; monocore vs multicore.
+- **Crimp ratchet tool (alicate catraca)** — alicate com catraca que só libera após crimpe completo; único alicate aceitável em terminal náutico (ABYC).
+- **Dielectric grease (graxa dielétrica)** — protetor para terminal pós-limpeza; padrão: NoOx-A, Corrosion Block, Fluid Film.
+- **Drain wire** — fio de dreno em cabo blindado (NMEA 0183/2000); aterrar em UMA extremidade apenas.
+- **EPR / EPDM rubber** — isolação de borracha etileno-propileno; resistente a UV, ozônio, óleo; padrão IEC 60092-359.
+- **Fadiga mecânica (fatigue)** — ruptura progressiva de fios internos por vibração; invisível externamente.
+- **Fusível MRBF (Marine Rated Battery Fuse)** — fusível de alta AIC diretamente no polo da bateria; ABYC E-11.
+- **HSA (Heat Shrink Adhesive)** — termorretrátil adesivo (padrão náutico).
+- **Insulation resistance (IR)** — resistência entre condutor e terra em MΩ; teste com megôhmetro 500 V; ≥ 1 MΩ aceitável em embarcação de lazer.
+- **Jacket** — capa externa do cabo (proteção mecânica/ambiental); distinta da isolação do condutor.
+- **Loom (tubo corrugado)** — tubo flexível para agrupamento; apenas ordinariamente aceito (ABYC prefere cable tray).
+- **LSZH (Low Smoke Zero Halogen)** — isolação que não libera halogênios tóxicos em incêndio; IEC 60754-1/-2; padrão em passageiros.
+- **Lug (terminal de olhal)** — terminal com furo para parafuso; instalado com crimp ratchet + termorretrátil adesivo.
+- **Megger (megôhmetro)** — instrumento de teste de isolação 250/500/1000 V DC.
+- **Nominal voltage rating** — tensão máxima do cabo (600 V UL 1426 típico; 1 kV IEC 60092-353).
+- **Passa-fio / Grommet** — acessório de borracha ou plástico em furo de bulkhead para proteger a isolação.
+- **PVC (Polyvinyl Chloride)** — isolação mais comum; resistente a umidade mas libera HCl em incêndio; substituída por EPR/LSZH em comerciais.
+- **Ratchet crimp quality** — qualidade do crimp controlada pela catraca; aceitável = cabo não gira nem puxa no terminal.
+- **Shielding (blindagem)** — malha metálica em cabos de sinal (NMEA, radar, autopilot); aterrar em um ponto só.
+- **Strain relief (alívio de tração)** — dispositivo mecânico que transfere força do cabo para a estrutura (não para o terminal).
+- **Stranding (encordoamento)** — arranjo de fios dentro do condutor; classe IEC 60228.
+- **Surveyor marítimo** — profissional homologado para emitir laudo de cabeamento pós-sinistro ou pré-venda.
+- **Tape isolante de auto-fusão (self-amalgamating)** — fita que vulcaniza sozinha; uso emergencial + fita PVC por cima.
+- **TDR (Time Domain Reflectometer)** — instrumento que localiza falha em cabo longo sem abrir; avançado.
+- **Termografia IR** — câmera infravermelha para detectar ponto quente; padrão de inspeção semestral profissional.
+- **Tinned copper stranded wire** — síntese do cabo náutico: cobre + estanho + encordoamento flexível.
+- **Torque de terminal (ABYC E-11 Tabela IX)** — valor em in-lb por AWG; torquímetro obrigatório em cabo-tronco.
+- **UL 1426 marking** — selo UL estampado no cabo; autenticidade verificável via website UL.
+- **Voltage drop (ΔV sob carga)** — medida final da qualidade do cabo-tronco; 3% crítico / 10% geral (ABYC E-11 Tabela VI-A).
+- **Wear strip (reforço mecânico)** — tecido adesivo (cloth tape, Tesa) em pontos de roçamento recorrente.
+- **XLPE (Cross-Linked Polyethylene)** — isolação de polietileno reticulado; alta resistência térmica, padrão IEC 60092.
 
 ## Como ensinar este tópico
 

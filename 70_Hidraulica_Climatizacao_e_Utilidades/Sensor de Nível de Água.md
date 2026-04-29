@@ -3,9 +3,21 @@ title: "Sensor de Nível de Água"
 note_type: "concept-note"
 domain: "70_Hidraulica_Climatizacao_e_Utilidades"
 source_file: "SENSOR DE NIVEL ÁGUA fbf19734f7fb83aeb875017afe071612.md"
-status: "technical-review-l1"
-reviewed_on: "2026-04-14"
-review_jurisdiction: "Brasil"
+status: "tier-b-curated"
+fase_6_reescrita: 132
+reviewed_on: "2026-04-26"
+review_jurisdiction: "Brasil + Internacional"
+review_level: "tier-b-curated"
+normas_citadas:
+  - "ABYC E-11"
+  - "ABYC H-22 (Bilge pumps)"
+  - "ABYC H-23 (Pressurized fresh water systems)"
+  - "ISO 8849 (Bilge pumps DC)"
+  - "IEC 60529 (IP)"
+  - "NMEA 2000 PGN 127505 (Fluid Level)"
+  - "ANVISA Portaria 5/2017 (água potável)"
+  - "Portaria GM/MS 888/2021"
+  - "Manual técnico Maretron TLA100/TLM100/TLM150 + Wema Centroid + Airmar G2183 + Gobius"
 source_urls:
   - "https://www.marinha.mil.br/dpc/normas-autoridade-maritima-brasileira"
   - "https://abycinc.org/standards/"
@@ -37,6 +49,21 @@ related_notes:
 
 > [!abstract] Resumo técnico
 > Esta nota não trata de um único componente. Ela existe para separar três assuntos que o mercado costuma misturar com o mesmo nome: medição de nível de tanque de água doce, detecção de alta água/porão e sensores de nível de outros reservatórios. Sem essa separação, a taxonomia da base fica errada e o diagnóstico também.
+
+> [!tldr] TL;DR — 4 regras
+> 1. **Tanque de água doce (medição contínua):** sensor capacitivo / resistivo / ultrassônico (Maretron TLM100, Wema Centroid, Gobius). Conforto + planejamento de viagem. NÃO é segurança crítica.
+> 2. **Porão / alta água (detecção binária):** sensor float ou eletrodo (vide [[Alarme de Alagamento - Sensor de Porão]]). É **segurança crítica** — falha = afundamento.
+> 3. **Águas cinzas / negras:** sensor capacitivo dedicado (vide [[Caixa de Água Cinza]] + [[Holding Tank - Y-Valve - Sistema de Esgoto]]). Conforto + cumprimento normativo.
+> 4. **NMEA 2000 PGN 127505 (Fluid Level)** padrão moderno; instances 0-15 separam tanques (água doce, água quente, holding, cinzas, óleo, combustível, etc.).
+
+> [!info] Glossário rápido
+> - **Sensor float:** boia mecânica.
+> - **Sensor capacitivo:** mede dielétrico do líquido.
+> - **Sensor resistivo:** medição de resistência (240-33Ω SAE típico).
+> - **Sensor ultrassônico:** mede tempo de eco do nível.
+> - **PGN 127505:** Fluid Level NMEA 2000.
+> - **Tank instance 0-15:** identifica tipo de tanque.
+> - **Vide [[Alarme de Alagamento - Sensor de Porão]]** + [[Sensor de Nível Diesel]].
 
 ## Por que esta nota existe
 

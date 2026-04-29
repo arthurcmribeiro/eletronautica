@@ -1,0 +1,193 @@
+---
+# Fase 5 - Reescrita Premium #05
+# Nota: 40_Distribuicao_Protecao_e_Aterramento/Bonding - Sistema de Interligacao de Massas
+# Prioridade matriz: 6.3 (posicao 5)
+# Data: 2026-04-17
+# Escopo: TL;DR + canonicalizacao A-31 + visuais integrados + especialista
+fase: 5
+reescrita_num: "05"
+data: "2026-04-17"
+status: "concluida"
+formato: "compact"
+thread: "5-05 — premium rewrite Bonding - Interligacao de Massas"
+
+# =============================================================================
+# 1. CONTEXTO DA NOTA
+# =============================================================================
+nota:
+  caminho: "40_Distribuicao_Protecao_e_Aterramento/Bonding — Sistema de Interligação de Massas.md"
+  linhas_antes: 373
+  linhas_depois: 414
+  status_antes: "technical-review-l1"
+  status_depois: "fase-5-reescrita-premium"
+  prioridade_matriz: 6.3
+  posicao_matriz: 5
+  esforco_estimado_h: 3
+  esforco_real_h: 1.5
+  risco_matriz: 5
+
+# =============================================================================
+# 2. MUDANCAS APLICADAS
+# =============================================================================
+mudancas:
+  frontmatter:
+    - campo: "status"
+      depois: "fase-5-reescrita-premium"
+    - campo: "fase_5_reescrita"
+      depois: '"05"'
+    - campo: "prioridade_fase_5"
+      depois: "6.3"
+    - campo: "reviewed_on"
+      antes: '"2026-04-16"'
+      depois: '"2026-04-17"'
+    - campo: "normas_citadas"
+      antes: "[E-2 (2020), E-11 (2023), A-31 (edicao a verificar), NBR 5410, ISO 13297:2020]"
+      depois: "[E-2 (2020), E-11 (2023), A-28 (2020), A-31 (2024), NBR 5410, ISO 13297:2020, ISO 28679:2017]"
+      correcoes:
+        - "A-31: 'edicao a verificar' -> '2024' (canonicalizacao Fase 1)"
+        - "Adicionado A-28 (2020) - explicitamente cobrindo isolador galvanico"
+        - "Adicionado ISO 28679:2017 - protecao catodica internacional"
+
+  conteudo_adicionado:
+    - bloco: "Regra de decisao em 30 segundos"
+      localizacao: "apos abstract"
+      regras:
+        - "Bonding != PE != Negativo DC; convergem apenas no SPOG"
+        - "Verde de equalizacao vs verde-amarelo PE - confundir e erro estrutural"
+        - "Cabo minimo AWG 8 (8 mm2) para barramento principal"
+        - "Continuidade alvo < 1 ohm, > 3 ohm = conexao ruim"
+        - "Anodo correto por material (zinco sal / Al doce-mista / Mg doce)"
+        - "Corrente persistente no bonding = loop indevido; investigar"
+        - "Eixo e o componente mais esquecido"
+
+    - bloco: "Quando chamar especialista (danger callout)"
+      localizacao: "antes de Erros comuns"
+      cenarios_cobertos:
+        - "Casco metalico com pitting profundo"
+        - "Corrente persistente no cabo principal"
+        - "Anodos consumidos em semanas"
+        - "Integracao com pararaios (A-31)"
+        - "Transformador/isolador recem-instalado e mudou comportamento"
+        - "Casco aluminio fora de -0.90 a -1.10V vs Ag/AgCl"
+        - "Propulsao eletrica (litio/motor eletrico) com BMS"
+      destaque: "inclui justificativa de ROI (inspecao anual << custo de helice substituida)"
+
+    - bloco: "Visuais editoriais associados (Fase 3)"
+      localizacao: "apos Diagramas sugeridos, antes de FAQ"
+      specs_integrados:
+        - "ac-dc-pe-bonding-analogia - separacao PE/N/DC/bonding em 4 paineis"
+        - "iso-10133-vs-13297-sucessao - sucessao normativa"
+      fechamento_de_ciclo: "Fase 3 specs chegam agora em nota de alta prioridade"
+
+    - bloco: "Normas aplicaveis expandidas"
+      adicoes:
+        - "ABYC A-28 (2020) - Galvanic Isolators (faltava)"
+        - "ISO 28679:2017 - Cathodic Protection (faltava)"
+      correcao:
+        - "A-31 (edicao a verificar) -> A-31 (2024) canonicalizado"
+
+  conteudo_preservado:
+    - "Abstract"
+    - "O que e / Funcao"
+    - "Como aparece na pratica"
+    - "Fundamentos minimos (3 blocos)"
+    - "Caracteristicas (tabela 5 parametros)"
+    - "Potenciais de protecao catodica (tabela 4 metais)"
+    - "Comissionamento e teste (4 passos)"
+    - "Configuracoes comuns (fibra / aluminio / pararaios)"
+    - "Marcas e referencias (5 marcas)"
+    - "Componentes relacionados"
+    - "Problemas mais frequentes (tabela 6 casos)"
+    - "Causas raiz (4 casos)"
+    - "Diagnostico pratico (3 verificacoes)"
+    - "Boas praticas + Cuidados de instalacao + Cuidados de uso"
+    - "Erros comuns (6 casos)"
+    - "Relacao com outros sistemas (6 itens)"
+    - "Brasil x Internacional (tabela 6 linhas)"
+    - "Como ensinar + Videos + Diagramas sugeridos"
+    - "FAQ (5 perguntas)"
+    - "Integracao com outras notas"
+
+# =============================================================================
+# 3. VALIDACAO TECNICA
+# =============================================================================
+validacao:
+  normas_citadas_conferidas:
+    - norma: "ABYC E-2 (2020)"
+      status: "vigente"
+      uso_nota: "bonding - Prevention of Galvanic Corrosion"
+    - norma: "ABYC E-11 (2023)"
+      status: "vigente"
+      uso_nota: "SPOG e cabo de bonding AWG 8"
+    - norma: "ABYC A-28 (2020)"
+      status: "vigente (canonicalizada Fase 1)"
+      uso_nota: "isolador galvanico; interação com PE de shore power"
+    - norma: "ABYC A-31 (2024)"
+      status: "vigente (canonicalizada Fase 1)"
+      uso_nota: "pararaios + bonding"
+      correcao_aplicada: "antes dizia 'edicao a verificar'; vault canoniza como 2024"
+    - norma: "ISO 13297:2020"
+      status: "vigente (substituiu ISO 10133)"
+      uso_nota: "sistemas AC/DC pequenas embarcacoes"
+    - norma: "ISO 28679:2017"
+      status: "vigente"
+      uso_nota: "protecao catodica internacional"
+
+  coerencia_intra_nota:
+    - topico: "ISO 10133 aposentada"
+      status: "ok (nota explicita como contexto historico)"
+      visual_integrado: "iso-10133-vs-13297-sucessao"
+    - topico: "SPOG como ponto unico"
+      status: "ok (consistente entre secoes)"
+    - topico: "AWG 8 minimo"
+      status: "ok (consistente na Regra 30s, Caracteristicas e Brasil x Internacional)"
+
+  wikilinks_validados:
+    - "[[Aterramento]] -> existe"
+    - "[[Ânodo]] -> existe"
+    - "[[Barramento DC / Bus Bar / Distribuição DC]] -> existe"
+    - "[[Cabeamento Náutico]] -> existe"
+    - "[[Chaves Gerais (DC)]] -> existe"
+    - "[[Chaves Seletoras (AC)]] -> existe"
+    - "[[Contatores (AC)]] -> existe"
+    - "[[Correntes Parasitárias — Stray Currents]] -> existe"
+    - "[[Disjuntores (DC) e (AC)]] -> existe"
+    - "[[Divisores de Carga (DC)]] -> existe"
+    - "[[Eletrólise]] -> existe"
+    - "[[Normas e Regulamentações — Abyc Iso e Brasil]] -> existe"
+    - "[[MOC — Diagnóstico e Manutenção]] -> validar (citada inline)"
+
+# =============================================================================
+# 4. RISCOS RESIDUAIS
+# =============================================================================
+riscos_residuais:
+  - descricao: "Specs visuais integrados ainda nao foram renderizados"
+    severidade: "baixa"
+    mitigacao: "referenciados como specs; sprint 1 pos-Fase 4 (DEC-02)"
+    bloqueia_publicacao: false
+  - descricao: "Wikilink [[MOC — Diagnóstico e Manutenção]] citado inline pode nao existir"
+    severidade: "baixa"
+    mitigacao: "validar na proxima rodada; se nao existir, remover referencia"
+    bloqueia_publicacao: false
+
+# =============================================================================
+# 5. METRICAS DA REESCRITA
+# =============================================================================
+metricas:
+  linhas_adicionadas: 41
+  secoes_novas: 3    # TL;DR + especialista + visuais editoriais
+  callouts_novos: 2  # tip (regra 30s), danger (especialista)
+  normas_adicionadas: 2   # A-28, ISO 28679
+  normas_corrigidas: 1    # A-31 canonicalizada
+  visuais_integrados: 2   # ac-dc-pe-bonding-analogia + iso-10133-vs-13297
+  diferencial_fase_5:
+    - "canonicalizacao A-31 fechada (era 'edicao a verificar')"
+    - "A-28 (isolador) e ISO 28679 (catodica) adicionadas ao frontmatter"
+    - "dois specs de visuais Fase 3 integrados"
+    - "callout de especialista com ROI financeiro explicito (inspecao vs helice)"
+
+# =============================================================================
+# 6. CONSOLIDACAO FASE 5 TOP-5
+# =============================================================================
+fase_5_top_5_concluido: true
+proxima_etapa: "Consolidar Fase 5 em artefato mestre + atualizar plano"
