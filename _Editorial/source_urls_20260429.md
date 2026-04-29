@@ -8,10 +8,10 @@ reviewed_on: "2026-04-29"
 
 Gerado por `scripts/check_source_urls.py`.
 
-- Arquivos varridos: **784**
-- URLs totais no frontmatter: **647**
-- URLs únicas: **182**
-- URLs duplicadas entre notas: **47**
+- Arquivos varridos: **786**
+- URLs totais no frontmatter: **692**
+- URLs únicas: **217**
+- URLs duplicadas entre notas: **51**
 - URLs malformadas: **0**
 - URLs contaminadas por TODO (bug 0005): **0**
 - Verificações HTTP: **0**
@@ -147,6 +147,21 @@ Gerado por `scripts/check_source_urls.py`.
 - `10_Fundamentos_e_Projeto\Normas e Regulamentações — Abyc Iso e Brasil.md` L534
 - `50_Navegacao_Instrumentacao_e_Comunicacao\Chartplotter - GPS - MFD.md` L14
 
+### `https://store.astm.org/Standards/G82.htm` (2 ocorrências)
+- `80_Seguranca_e_Corrosao\Anôdo.md` L42
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L43
+
+### `https://webstore.ansi.org/standards/abyc/abyc112025` (5 ocorrências)
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine 12V DC.md` L63
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine — Sistema Completo.md` L75
+- `70_Hidraulica_Climatizacao_e_Utilidades\Catraca.md` L63
+- `70_Hidraulica_Climatizacao_e_Utilidades\Davit - Munk - Guindaste de Bote - Tender Lift.md` L70
+- `70_Hidraulica_Climatizacao_e_Utilidades\Thruster.md` L64
+
+### `https://webstore.ansi.org/standards/abyc/abyc2025` (2 ocorrências)
+- `80_Seguranca_e_Corrosao\Anôdo.md` L39
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L41
+
 ### `https://webstore.iec.ch/publication/2697` (24 ocorrências)
 - `10_Fundamentos_e_Projeto\Ferramentas do Eletricista Náutico.md` L12
 - `10_Fundamentos_e_Projeto\Lei de Ohm e Cálculos Básicos.md` L12
@@ -172,6 +187,10 @@ Gerado por `scripts/check_source_urls.py`.
 - `60_Automacao_Conectividade_e_Monitoramento\Automação de Bordo — Sistemas Domoticos.md` L13
 - `60_Automacao_Conectividade_e_Monitoramento\Sensor de Nível Diesel.md` L13
 - `60_Automacao_Conectividade_e_Monitoramento\Sistema de Alarme Geral - Painel de Alarmes.md` L13
+
+### `https://www.ampp.org/technical-research/what-is-corrosion/cathodic-protection-for-corrosion-control` (2 ocorrências)
+- `80_Seguranca_e_Corrosao\Anôdo.md` L40
+- `80_Seguranca_e_Corrosao\Eletrólise.md` L42
 
 ### `https://www.cospas-sarsat.int/` (2 ocorrências)
 - `50_Navegacao_Instrumentacao_e_Comunicacao\EPIRB - Beacon de Emergência.md` L39
@@ -323,8 +342,11 @@ Gerado por `scripts/check_source_urls.py`.
 - `20_Baterias_e_Armazenamento\Lítio LiFePO4 — Instalação e Cuidados Específicos.md` L30
 - `20_Baterias_e_Armazenamento\Tipos de Bateria.md` L30
 
-### `https://www.iso.org/standard/69551.html` (2 ocorrências)
+### `https://www.iso.org/standard/69551.html` (5 ocorrências)
 - `40_Distribuicao_Protecao_e_Aterramento\Proteção Dr.md` L28
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine 12V DC.md` L62
+- `70_Hidraulica_Climatizacao_e_Utilidades\Ar-Condicionado Marine — Sistema Completo.md` L74
+- `70_Hidraulica_Climatizacao_e_Utilidades\Bomba de Porão.md` L56
 - `90_Revisao_Manual\20_Matrizes_Fontes_e_Links\Matriz de Normativas Citadas — Verificação Oficial.md` L20
 
 ### `https://www.iso.org/standard/72290.html` (2 ocorrências)
@@ -628,35 +650,47 @@ Gerado por `scripts/check_source_urls.py`.
 
 - `abycinc.org`: 124
 - `www.marinha.mil.br`: 110
-- `www.iso.org`: 96
+- `www.iso.org`: 101
 - `www.gov.br`: 58
 - `www.nmea.org`: 35
 - `webstore.iec.ch`: 31
 - `www.imo.org`: 20
 - `www.ul.com`: 12
 - `www.epa.gov`: 11
+- `webstore.ansi.org`: 9
 - `www.uscgboating.org`: 7
 - `www.iec.ch`: 7
-- `www.dometic.com`: 6
+- `www.dometic.com`: 7
 - `www.itu.int`: 5
 - `www.uscg.mil`: 4
 - `www.sae.org`: 4
 - `www.lumitec.com`: 4
+- `www.xylem.com`: 4
+- `www.quickitaly.com`: 4
+- `store.astm.org`: 4
+- `www.zotero.org`: 4
 - `www.nfpa.org`: 3
 - `www.helcom.fi`: 3
 - `www.airmar.com`: 3
+- `www.lewmar.com`: 3
+- `www.webasto.com`: 3
 - `www.nsf.org`: 3
-- `www.xylem.com`: 3
+- `webshop.vetus.com`: 3
 - `www.astm.org`: 3
 - `iho.int`: 2
 - `www.dhn.mar.mil.br`: 2
 - `www.cospas-sarsat.int`: 2
 - `www.garmin.com`: 2
 - `www.hellamarine.com`: 2
-- `www.lewmar.com`: 2
 - `www.maretron.com`: 2
 - `www.raritaneng.com`: 2
 - `www.whalepumps.com`: 2
+- `www.harken.com`: 2
+- `www.opacmare.com`: 2
+- `www.besenzoni.it`: 2
+- `www.ampp.org`: 2
+- `retorque.re`: 2
+- `docusaurus.io`: 2
 - `www.fluke.com`: 1
 - `www.klein-tools.com`: 1
 - `www.nist.gov`: 1
@@ -696,9 +730,9 @@ Gerado por `scripts/check_source_urls.py`.
 - `www.starlink.com`: 1
 - `webasto-comfort.com`: 1
 - `www.eberspaecher.com`: 1
-- `www.webasto.com`: 1
 - `www.climma.it`: 1
 - `www.frigomar.com`: 1
+- `www.mabrumarine.com`: 1
 - `isotemp.it`: 1
 - `quickusa.com`: 1
 - `marchpump.com`: 1
@@ -707,6 +741,7 @@ Gerado por `scripts/check_source_urls.py`.
 - `www.jabsco.com`: 1
 - `www.shurflo.com`: 1
 - `www.headhuntermarine.com`: 1
+- `nautical-structures.com`: 1
 - `www.dow.com`: 1
 - `www.who.int`: 1
 - `www.bennetttrimtabs.com`: 1
@@ -715,11 +750,8 @@ Gerado por `scripts/check_source_urls.py`.
 - `unep.org`: 1
 - `www.ibama.gov.br`: 1
 - `www.lofrans.com`: 1
-- `www.quickitaly.com`: 1
 - `www.maxwellmarine.com`: 1
 - `www.fda.gov`: 1
-- `www.opacmare.com`: 1
-- `www.besenzoni.it`: 1
 - `nauticalstructures.com`: 1
 - `www.evac.com`: 1
 - `www.headhunterinc.com`: 1

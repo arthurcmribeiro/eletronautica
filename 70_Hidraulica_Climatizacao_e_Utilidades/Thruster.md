@@ -56,6 +56,12 @@ related_notes:
   - "Guincho"
   - "Flap"
   - "Estabilizador"
+source_urls:
+  - "https://webshop.vetus.com/en/products/thruster-systems"
+  - "https://webshop.vetus.com/en/products/thruster-systems/bow-and-stern-thrusters/standard-dc-thrusters"
+  - "https://webshop.vetus.com/en/products/thruster-systems/bow-and-stern-thrusters/bow-pro-thrusters"
+  - "https://www.quickitaly.com/en/products/manoeuvring-systems/"
+  - "https://webstore.ansi.org/standards/abyc/abyc112025"
 aliases:
   - "THRUSTER"
   - "Bow thruster"

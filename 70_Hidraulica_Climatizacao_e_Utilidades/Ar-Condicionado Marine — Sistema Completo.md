@@ -67,6 +67,12 @@ normas_citadas:
   - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
   - "NORMAM-211/DPC — Esporte e recreio"
   - "NORMAM-201/204/DPC — Comercial / SMM"
+source_urls:
+  - "https://www.dometic.com/en-us/outdoor/boat/marine-air-conditioners"
+  - "https://www.webasto.com/en-us/cooling/marine-self-contained-air-conditioning-units.html"
+  - "https://www.webasto.com/en-us/cooling/marine-chiller-air-conditioning-units/bluecool-vx-series.html"
+  - "https://www.iso.org/standard/69551.html"
+  - "https://webstore.ansi.org/standards/abyc/abyc112025"
 review_level: "engineering-curated"
 aliases:
   - "AR-CONDICIONADO MARINE — SISTEMA COMPLETO"

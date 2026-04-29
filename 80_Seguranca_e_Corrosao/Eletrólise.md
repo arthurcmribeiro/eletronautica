@@ -14,7 +14,6 @@ normas_citadas:
   - "ABYC E-2 (2020) — Cathodic Protection (bonding + ânodos sacrificiais)"
   - "ABYC E-11 (2023) — AC & DC Electrical Systems (shore power + ELCI + isolador galvânico)"
   - "ABYC A-22 — Marinas and Boatyards"
-  - "ABYC TE-13 — Technical note corrosion control"
   - "ISO 13297:2020 — Small craft — Electrical systems AC & DC"
   - "ISO 10133:2012 — retirada, sucedida por 13297"
   - "ISO 17339:2009 — Sacrificial anode materials and testing methods"
@@ -38,6 +37,12 @@ normas_citadas:
   - "NORMAM-201/204/DPC — Comercial / SMM"
   - "NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
   - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
+source_urls:
+  - "https://webstore.ansi.org/standards/abyc/abyc2025"
+  - "https://www.ampp.org/technical-research/what-is-corrosion/cathodic-protection-for-corrosion-control"
+  - "https://store.astm.org/Standards/G82.htm"
+  - "https://store.astm.org/standards/g46"
+  - "https://www.iso.org/standard/80267.html"
 review_level: "engineering-curated"
 aliases:
   - "ELETRÓLISE"
@@ -209,8 +214,6 @@ O tratamento correto de "eletrólise" cruza três áreas normativas: **sistema e
 - **ABYC E-2 (2020) — Cathodic Protection** — dimensionamento de ânodos, bonding de proteção, potenciais de referência. Base para qualquer projeto de proteção catódica em pequena embarcação.
 - **ABYC E-11 (2023) — AC & DC Electrical Systems** — cobre ELCI (Equipment Leakage Circuit Interrupter), isolador galvânico, transformador de isolação, grounding de shore power. Conecta diretamente a segurança AC (ESD) à prevenção de correntes parasitas.
 - **ABYC A-22 — Marinas and Boatyards** — exposição coletiva: o barco ancorado em marina está sujeito a problemas de outros barcos e da rede do cais.
-- **ABYC TE-13 — Technical note on corrosion control** — nota técnica com estudo de casos e diagnóstico diferencial.
-
 ### ISO (embarcações de pequeno porte — interoperabilidade internacional)
 
 - **ISO 13297:2020 — Small craft — Electrical systems — AC & DC** — norma consolidada (unifica 13297-1/2 antigas).

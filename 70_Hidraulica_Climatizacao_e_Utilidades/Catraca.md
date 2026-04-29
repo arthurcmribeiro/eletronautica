@@ -55,6 +55,12 @@ related_notes:
   - "Thruster"
   - "Davit - Munk - Guindaste de Bote - Tender Lift"
   - "Troubleshooting — Diagnóstico de Falhas Elétricas"
+source_urls:
+  - "https://www.harken.com/en/support/tech-articles/choosing-winches/"
+  - "https://www.harken.com/en/shop/radial/60-electric-self-tailing-radial-aluminum-winch-3-speed/"
+  - "https://www.lewmar.com/evo-electric-winch-kit"
+  - "https://www.quickitaly.com/en/products/windlasses-and-capstans/capstans/"
+  - "https://webstore.ansi.org/standards/abyc/abyc112025"
 aliases:
   - "CATRACA"
   - "Capstan"

@@ -95,7 +95,7 @@ normas_citadas:
   - "EU Recreational Craft Directive 2013/53/EU"
   - "Polar Code Cap. 4 (águas polares)"
   - "NORMAM-01/DPC (mar aberto)"
-  - "NORMAM-02/DPC (águas interiores)"
+  - "NORMAM-201/DPC e NORMAM-211/DPC (conforme enquadramento)"
   - "NORMAM-08/DPC (tráfego e permanência)"
   - "NORMAM-201/DPC (comercial)"
   - "NORMAM-211/DPC (esporte e recreio)"

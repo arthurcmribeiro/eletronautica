@@ -107,7 +107,7 @@ normas_citadas:
   - "Decreto 4.136/2002 (Poluição em águas brasileiras)"
   - "Resolução CONAMA 357/2005 + 430/2011"
   - "DPC NORMAM-01/DPC (mar aberto)"
-  - "DPC NORMAM-02/DPC (águas interiores)"
+  - "DPC NORMAM-201/DPC e NORMAM-211/DPC (conforme enquadramento)"
   - "DPC NORMAM-08/DPC (tráfego e permanência)"
   - "DPC NORMAM-201/DPC (embarcações comerciais)"
   - "DPC NORMAM-211/DPC (esporte e recreio)"

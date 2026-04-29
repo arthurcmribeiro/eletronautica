@@ -57,6 +57,11 @@ normas_citadas:
   - "ECE R10 Rev.6 — Electromagnetic compatibility (cross-ref equipamento DC veicular/marine)"
   - "NORMAM-211/DPC — Esporte e recreio"
   - "NORMAM-201/204/DPC — Comercial / SMM"
+source_urls:
+  - "https://www.mabrumarine.com/dc-air-conditioning-units"
+  - "https://www.iso.org/standard/69551.html"
+  - "https://webstore.ansi.org/standards/abyc/abyc112025"
+  - "https://webstore.ansi.org/standards/abyc/abyc132025"
 review_level: "engineering-curated"
 aliases:
   - "AR-CONDICIONADO 12V"

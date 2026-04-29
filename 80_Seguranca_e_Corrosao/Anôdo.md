@@ -14,7 +14,6 @@ normas_citadas:
   - "ABYC E-2 (2020) — Cathodic Protection (bonding + ânodos sacrificiais + eletrodo de referência)"
   - "ABYC E-11 (2023) — AC & DC Electrical Systems (interface bonding + shore power)"
   - "ABYC A-22 — Marinas and Boatyards (referência cruzada ambiente)"
-  - "ABYC TE-13 — Technical note corrosion control"
   - "ISO 13297:2020 — Small craft — Electrical systems AC & DC"
   - "ISO 10133:2012 — retirada, sucedida por 13297"
   - "ISO 17339:2009 — Sacrificial anode materials and testing methods"
@@ -36,6 +35,11 @@ normas_citadas:
   - "NBR 5410:2004 + emendas — Instalações elétricas de baixa tensão"
   - "NBR ISO 12696:2016 — Proteção catódica de aço em concreto (referência cruzada)"
   - "CE-RCD Directive 2013/53/EU — Recreational Craft Directive"
+source_urls:
+  - "https://webstore.ansi.org/standards/abyc/abyc2025"
+  - "https://www.ampp.org/technical-research/what-is-corrosion/cathodic-protection-for-corrosion-control"
+  - "https://store.astm.org/standards/b418"
+  - "https://store.astm.org/Standards/G82.htm"
 review_level: "engineering-curated"
 aliases:
   - "ANÔDO"
@@ -239,8 +243,6 @@ Os mais frequentes são:
 - **ABYC E-2 (2020)** — *Cathodic Protection*: bonding + ânodos sacrificiais + eletrodo de referência + critério de potencial; documento mestre. Exige continuidade < 1 Ω entre massas metálicas submersas.
 - **ABYC E-11 (2023)** — *AC & DC Electrical Systems*: interface bonding + shore power + isolador galvânico + transformador de isolação.
 - **ABYC A-22** — Marinas and Boatyards: ambiente de marina (corrente parasita coletiva).
-- **ABYC TE-13** — Technical note corrosion control (complementa E-2).
-
 **ISO — padrões internacionais:**
 
 - **ISO 13297:2020** — Small craft — Electrical systems AC & DC: requisitos de bonding e proteção em recreio.

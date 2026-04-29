@@ -87,7 +87,7 @@ normas_citadas:
   - "Resolução CONAMA 430/2011 (lançamento de efluentes)"
   - "Lei 9.605/1998 (Lei de Crimes Ambientais)"
   - "NORMAM-01/DPC (embarcações empregadas na navegação em mar aberto)"
-  - "NORMAM-02/DPC (embarcações em águas interiores)"
+  - "NORMAM-201/DPC e NORMAM-211/DPC (conforme enquadramento)"
   - "NORMAM-08/DPC (tráfego e permanência)"
   - "NORMAM-201/DPC (comercial / transporte)"
   - "NORMAM-211/DPC (esporte e recreio)"

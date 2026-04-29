@@ -16,6 +16,9 @@
 # 7. Amostra ignorava notas densas: Aterramento, Fusíveis DC, Isolador Galvânico, Carregador, NAVEGAÇÃO
 # ─────────────────────────────────────────────────
 
+data: "2026-04-16"
+notas_totais: 147
+
 inventario:
   total_notas_md: 147  # verificado por contagem direta: find . -name "*.md" por domínio
   # Nota: _Editorial/Auditoria Geral da Base.md de 14/04 reporta 140 files — 7 notas adicionadas

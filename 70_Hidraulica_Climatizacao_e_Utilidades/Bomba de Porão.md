@@ -49,6 +49,11 @@ normas_citadas:
   - "NORMAM-211/DPC — Esporte e recreio"
   - "NORMAM-201/204/DPC — Comercial / SMM"
   - "NMEA 2000 PGN 130310/130311/130316 — Environmental parameters (integração)"
+source_urls:
+  - "https://webstore.ansi.org/standards/abyc/abyc222025"
+  - "https://www.iso.org/standard/72972.html"
+  - "https://www.xylem.com/en-us/brand/rule/"
+  - "https://www.iso.org/standard/69551.html"
 review_level: "engineering-curated"
 aliases:
   - "BOMBA DE PORÃO"

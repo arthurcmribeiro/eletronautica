@@ -118,7 +118,7 @@ normas_citadas:
   - id: "NORMAM-01/DPC"
     titulo: "Embarcações Empregadas na Navegação em Mar Aberto"
     edicao: "Mod 19 — 2023"
-  - id: "NORMAM-02/DPC"
+  - id: "NORMAM-201/DPC e NORMAM-211/DPC"
     titulo: "Embarcações Empregadas na Navegação Interior"
     edicao: "Mod 24 — 2023"
   - id: "NMMA Certification Standards"
@@ -226,7 +226,7 @@ Em **motores diesel**, a lógica muda. O blower pode continuar útil para extra�
 | Ignition protection | UL 1500 + SAE J1171 + ABYC E-11.7 + 33 CFR 183.410 | ISO 8846:1990 + IEC 60079-15 | NBR IEC 60079-0/15 + NORMAM-05 | EN ISO 8846 + ATEX 2014/34/EU |
 | Vazão mínima | ABYC H-2.4 + 33 CFR 183.610(b) | ISO 11105 §5 | NORMAM-05 (refere ABYC) | EN ISO 11105 |
 | Etiqueta de aviso obrigatória | 33 CFR 183.610(d) (warning label) | ISO 11105 §6 | NBR 14728 + NORMAM-05 | EN ISO 11105 |
-| Comercial classificada | USCG 46 CFR + ABS HSNC | IMO MSC.81(70) + SOLAS II-2 | NORMAM-01 + NORMAM-02 | DNV-GL Pt.6 Ch.5 + Lloyd's |
+| Comercial classificada | USCG 46 CFR + ABS HSNC | IMO MSC.81(70) + SOLAS II-2 | NORMAM-201/211 conforme enquadramento | DNV-GL Pt.6 Ch.5 + Lloyd's |
 | Mercado / certificação | NMMA Certification | CE marking + ISO 11105 | INMETRO (não-mandatório) + NMMA importado | CE + Notified Body |
 
 ## Requisitos de projeto que importam

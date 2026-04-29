@@ -15,6 +15,24 @@ SENSITIVE_PATTERNS = {
 SENSITIVE_PATTERN_EXCEPTIONS = {
     "NORMAM-02": {
         "10_Fundamentos_e_Projeto/Normas e Regulamentações — Abyc Iso e Brasil.md",
+        "_Editorial/convencao_citacao_normativa.md",
+        "_Editorial/frontmatter_migration_20260417.md",
+        "_Editorial/frontmatter_migration_20260418.md",
+        "_Editorial/plano_execucao_auditoria.md",
+    },
+    "ABYC TE-13": {
+        "_Editorial/convencao_citacao_normativa.md",
+    },
+    "NBR 13885": {
+        "_Editorial/bugs_conhecidos.md",
+        "_Editorial/convencao_citacao_normativa.md",
+        "_Editorial/frontmatter_migration_20260417.md",
+        "_Editorial/frontmatter_migration_20260418.md",
+    },
+    "ABNT NBR 16033": {
+        "_Editorial/convencao_citacao_normativa.md",
+        "_Editorial/frontmatter_migration_20260417.md",
+        "_Editorial/frontmatter_migration_20260418.md",
     },
 }
 

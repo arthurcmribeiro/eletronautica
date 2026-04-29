@@ -8,6 +8,12 @@
 #           registro_normas.yaml + convencao_citacao_normativa.md.
 # ============================================================================
 
+data: "2026-04-16"
+rodada: "01"
+thread: "1-A Arcabouco Normativo (parcial)"
+formato: "auditoria_rodada"
+notas_auditadas: 3
+
 meta:
   fase: "1"
   rodada: "01"

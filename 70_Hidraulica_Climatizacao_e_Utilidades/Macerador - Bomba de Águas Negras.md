@@ -100,7 +100,7 @@ normas_citadas:
   - "Resolução CONAMA 357/2005 (qualidade das águas)"
   - "Resolução CONAMA 430/2011 (lançamento de efluentes)"
   - "NORMAM-01/DPC (mar aberto)"
-  - "NORMAM-02/DPC (águas interiores)"
+  - "NORMAM-201/DPC e NORMAM-211/DPC (conforme enquadramento)"
   - "NORMAM-08/DPC (tráfego e permanência)"
   - "NORMAM-201/DPC (comercial)"
   - "NORMAM-211/DPC (esporte e recreio)"

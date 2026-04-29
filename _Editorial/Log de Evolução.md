@@ -3,12 +3,40 @@ title: "Log de Evolução"
 note_type: "audit-report"
 domain: "_Editorial"
 status: "active-log"
-reviewed_on: "2026-04-17"
+reviewed_on: "2026-04-29"
 review_jurisdiction:
   - "Brasil"
 ---
 
 # Log de Evolução
+
+## 2026-04-29 - Lote 61 - Auditoria premium Zotero para base vademecum
+
+- Criada a auditoria `_Editorial/Auditoria Premium Zotero - Base Vademecum.md` para orientar a entrada da base no Zotero sem transformar o Zotero em depósito duplicado de PDFs.
+- Decisão recomendada:
+  - `Zotero 9.x + Better BibTeX 9.x`;
+  - arquivos PDF vinculados ao `_Acervo_Local`;
+  - acervo físico permanecendo governado pelo vault;
+  - exportações versionáveis em `.bib`, CSL JSON e RDF para Obsidian, Docusaurus, apostilas e automações.
+- Fotografia operacional registrada:
+  - `248` PDFs no acervo principal;
+  - `1,2 GB` no acervo principal;
+  - `14.834` páginas conhecidas;
+  - `236/248` PDFs com texto pesquisável;
+  - `545` notas companheiras;
+  - `7` grupos de duplicatas no acervo principal;
+  - `0` erros bloqueantes na validação do vault.
+- Definidas convenções iniciais para:
+  - coleções Zotero;
+  - tipos de item;
+  - campos mínimos;
+  - citekeys;
+  - tags controladas;
+  - integração com Obsidian;
+  - ponte futura com Docusaurus.
+- Validação de baseline antes da edição:
+  - `python scripts/check_python_scripts.py` -> `35` scripts, `0` falhas;
+  - `python scripts/validate_vault.py` -> `765` notas, `0` erros, `37` avisos.
 
 ## 2026-04-21 — Lote 24 — Promoção do staging para o acervo principal
 
@@ -930,6 +958,32 @@ review_jurisdiction:
   - `check_source_urls.py`: `647` URLs totais, `182` únicas, `0` contaminadas, relatório `_Editorial/source_urls_20260429.md`;
   - `build_manifest.py`: manifesto regenerado.
 - Observação: `validate_audit_yaml.py` permanece com `3` erros antigos em YAMLs de 2026-04-16/18, sem relação com a rodada de MOCs.
+
+## 2026-04-29 - Lote 67 - Saneamento de avisos normativos e YAMLs antigos
+
+- Corrigidos os `3` erros antigos de `validate_audit_yaml.py` em:
+  - `_Editorial/fase_0_inventario_20260416.yaml`;
+  - `_Editorial/fase_1_auditoria_rodada_01_20260416.yaml`;
+  - `_Editorial/fase_5_consolidado_estendido_20260418.yaml`.
+- Limpas referencias normativas sensiveis em notas publicaveis:
+  - NORMAM antiga 02 substituida por enquadramento DPC vigente (`NORMAM-201/211`, conforme caso);
+  - referencia ABYC TE 13 substituida por `ABYC E-13` em litio e removida das notas de corrosao em favor de `ABYC E-2`.
+- Ajustado `scripts/validate_vault.py` para manter excecoes explicitas apenas em documentos historicos de governanca editorial, preservando rastreabilidade sem poluir a validacao publica.
+- Adicionados `source_urls` oficiais/primarios em `8` notas de maior risco:
+  - `Ar-Condicionado Marine 12V DC`;
+  - `Ar-Condicionado Marine — Sistema Completo`;
+  - `Bomba de Porão`;
+  - `Catraca`;
+  - `Davit - Munk - Guindaste de Bote - Tender Lift`;
+  - `Thruster`;
+  - `Anôdo`;
+  - `Eletrólise`.
+- Validacao final desta passada:
+  - `python scripts/validate_vault.py`: `766` notas analisadas, `0` erros, `0` avisos;
+  - `python scripts/validate_audit_yaml.py`: `42` arquivos validados, `0` erros, `28` avisos herdados nao bloqueantes;
+  - `python scripts/check_source_urls.py`: `684` URLs totais, `209` unicas, `0` contaminadas;
+  - `python scripts/check_python_scripts.py`: `35` scripts analisados, `0` falhas;
+  - `python scripts/build_manifest.py`: manifesto regenerado.
 
 ## 2026-04-27 - Lote 64 - Separacao de _Dados_Acervo da camada editorial
 

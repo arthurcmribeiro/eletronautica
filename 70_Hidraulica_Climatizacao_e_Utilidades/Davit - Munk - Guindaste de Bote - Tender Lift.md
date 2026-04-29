@@ -62,6 +62,12 @@ related_notes:
   - "Guincho"
   - "Thruster"
   - "Estabilizador"
+source_urls:
+  - "https://nautical-structures.com/luxury-yachts/"
+  - "https://www.opacmare.com/en/category/lifting-systems/tender-lift"
+  - "https://www.besenzoni.it/prodotti/gru-movimentazione-plancetta-varo-tender/movimentazione-plancetta/il-tender-lift-movimentazione-elettrica"
+  - "https://www.quickitaly.com/en/products/windlasses-and-capstans/multipurpose-capstans/ptg-pt/"
+  - "https://webstore.ansi.org/standards/abyc/abyc112025"
 aliases:
   - "DAVIT MUNK GUINDASTE DE BOTE TENDER LIFT"
   - "Davit"

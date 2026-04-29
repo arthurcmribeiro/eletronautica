@@ -305,7 +305,7 @@ Caldeira a diesel (Webasto Hydronic D5/D9/D10, Eberspächer Hydronic II) aquece 
 | GLP / propano | ABYC A-1 + NFPA 302 §6.6 | ISO 10239 | NBR 13523 + NBR 13932 + NORMAM-05 | EN ISO 10239 |
 | Resistência elétrica AC | UL 1995 + NFPA 70 art. 555 | IEC 60335-2-30 + IEC 60364-7-709 | NBR 14728 + NBR 5410 | EN 60335-2-30 + LVD 2014/35/EU |
 | Boiler / water heater | UL 174 + ABYC H-23 | IEC 60335-2-21 + ISO 8841 | NBR 14728 + NBR 12089 | EN 60335-2-21 |
-| Comercial classificada | USCG 46 CFR 56 + ABS HSNC | IMO MSC.81(70) + SOLAS II-2 | NORMAM-01 + NORMAM-02 | DNV-GL Pt.6 Ch.5 (Comfort) |
+| Comercial classificada | USCG 46 CFR 56 + ABS HSNC | IMO MSC.81(70) + SOLAS II-2 | NORMAM-201/211 conforme enquadramento | DNV-GL Pt.6 Ch.5 (Comfort) |
 | Eficiência energética | DOE 10 CFR 430 (electric) | ISO 5149 (refrig.) | INMETRO PBE Edif. | EU Ecodesign 2009/125/EC |
 
 ## Critérios reais de escolha

@@ -95,7 +95,7 @@ related_notes:
 > 6. **Embarcação com sistema AC 110/220 V e iluminação emergência AC** — sistemas > 12 V AC exigem proteção residual DR, aterramento conforme ABNT NBR 5410, separação de circuitos AC de emergência e normal; projeto elétrico AC com análise de falha.
 > 7. **Gerador de emergência com partida automática** — transferência automática (ATS) requer comissionamento profissional, teste mensal sob carga, manutenção preventiva, combustível independente do motor principal; escopo de marinha mercante.
 > 8. **Perícia pós-sinistro com alegação "iluminação emergência não funcionou"** — laudo forense envolvendo falha de evacuação noturna requer leitura de logs (se self-test), teste em laboratório das luminárias, verificação de manutenção; escopo jurídico.
-> 9. **Embarcação com lítio e risco de thermal event** — iluminação emergência em área de bateria lítio deve considerar BMS trip, supressão H2/VOCs na ventilação, manter iluminação sobre válvulas de desconexão e saída de emergência; projeto específico ABYC TE-13 e equivalentes.
+> 9. **Embarcação com lítio e risco de thermal event** — iluminação emergência em área de bateria lítio deve considerar BMS trip, supressão H2/VOCs na ventilação, manter iluminação sobre válvulas de desconexão e saída de emergência; projeto específico ABYC E-13 e equivalentes.
 
 > [!info] Glossário rápido (≈ 46 termos)
 > - **Iluminação de emergência** — sistema autônomo ativado em blackout.

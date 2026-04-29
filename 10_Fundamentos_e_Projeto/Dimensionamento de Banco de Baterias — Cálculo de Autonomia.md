@@ -15,7 +15,7 @@ normas_citadas:
   - "ABYC E-11 (2023) — AC & DC Electrical Systems on Boats"
   - "ABYC E-13 (2022) — Lithium Ion Batteries (LiFePO4 + químicas afins)"
   - "ABYC E-9 (2019) — DC Electrical Systems / Alternators and Chargers"
-  - "ABYC TE-13 — Lithium Ion Batteries (technical note)"
+  - "ABYC E-13 — Lithium Ion Batteries"
   - "ISO 13297:2020 — Small craft — Electrical systems — AC & DC installations"
   - "ISO 10133:2012 (retirada, sucedida por 13297)"
   - "ISO 8846:1990 — Small craft — Electrical devices — Protection against ignition of flammable gases"
@@ -291,7 +291,7 @@ R$3.000 / 2.880.000 Wh = R$0,001/Wh
 - **ABYC E-11 (2023)** — *AC and DC Electrical Systems on Boats*: interface do banco com barramento, proteção no positivo, bitola do cabo-tronco, chaves de isolamento (Bi-Banco, ACR, VSR).
 - **ABYC E-13 (2022)** — *Lithium Ion Batteries*: requisitos específicos LiFePO4/NMC/LFP: BMS obrigatório, localização, ventilação, fusível classe T, detecção de temperatura, estratégia de carga.
 - **ABYC E-9 (2019)** — *DC Electrical Systems — Alternators and Chargers*: dimensionamento do sistema de geração compatível com o banco.
-- **ABYC TE-13** — *Technical note sobre lítio*: complementa E-13 com orientações de campo e casos.
+- **ABYC E-13** — *Lithium Ion Batteries*: referência de projeto e instalação para bancos de lítio instalados a bordo.
 
 **ISO (embarcações de recreio mercado CE):**
 

@@ -80,7 +80,7 @@ normas_citadas:
   - "CONAMA Resolução 357/2005 (classificação de águas) — referência destino do efluente"
   - "EPA Safe Drinking Water Act (SDWA) — 40 CFR 141"
   - "NORMAM-01/DPC (embarcações empregadas na navegação em mar aberto)"
-  - "NORMAM-02/DPC (embarcações em águas interiores)"
+  - "NORMAM-201/DPC e NORMAM-211/DPC (conforme enquadramento)"
   - "NORMAM-05/DPC (homologação de equipamentos)"
   - "Manual técnico Shurflo (Pentair) 4008/4048/Aqua King Junior/Premium Plus"
   - "Manual técnico Jabsco (Xylem) Par-Max 4 / Sensor Max / V-FLO"
