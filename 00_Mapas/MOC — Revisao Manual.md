@@ -1,16 +1,38 @@
 ---
-title: "MOC - Revisao Manual"
+title: "MOC — Revisao Manual"
 note_type: "moc"
 domain: "90_Revisao_Manual"
-status: "moc-curated"
-fase_6_reescrita: 115
-reviewed_on: "2026-04-26"
+status: "moc-curated-plus"
+fase_6_reescrita: 148
+reviewed_on: "2026-04-29"
 review_jurisdiction: "Brasil"
-review_level: "moc-curated"
+review_level: "moc-curated-plus"
 normas_citadas: []
+aliases:
+  - "MOC Revisao Manual"
+  - "Hub acervo técnico"
+seo_title: "MOC Revisão Manual: acervo PDF, matrizes de fontes, OCR, índices e curadoria técnica"
+seo_description: "Hub operacional do acervo técnico em PDF e notas companheiras: entrada, controle, índices gerados, matrizes de fontes, links oficiais confirmados, OCR, duplicatas e notas técnicas de revisão."
+geo_queries:
+  - "Onde ficam os manuais e PDFs técnicos da vault?"
+  - "Como navegar pelo acervo técnico curado?"
+  - "Onde consultar links oficiais e matrizes de fontes?"
+related_notes:
+  - "Guia da Vault Curada"
+  - "Padrão da Biblioteca de Referência Técnica"
+  - "MOC — Mapas"
 ---
 
-# MOC - Revisao Manual
+# MOC — Revisao Manual
+
+> [!abstract] Sobre este domínio
+> `90_Revisao_Manual` é a camada de biblioteca técnica e curadoria source-first. Aqui ficam portal do acervo, índices gerados, matrizes de marcas/fontes, links oficiais confirmados, notas técnicas pontuais, histórico e ponte para PDFs/companion notes. **Venha aqui** quando a pergunta depender de manual OEM, fonte primária, OCR, duplicata ou rastreabilidade documental.
+
+> [!tip] Rotas rápidas
+> - **Operar acervo:** [[90_Revisao_Manual/README|README do 90_Revisao_Manual]] → [[90_Revisao_Manual/00_Entrada_e_Controle/Portal do Acervo — Biblioteca de Referência|Portal do Acervo]]
+> - **Abrir família nova:** [[90_Revisao_Manual/00_Entrada_e_Controle/Checklist Operacional — Abertura de Nova Família do Acervo|Checklist de Nova Família]]
+> - **Buscar fonte oficial:** [[90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Matriz de Fontes — Fabricantes e Repositórios|Matriz de Fontes]] → [[90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Preparação Source-First — Resolver de Links Oficiais|Resolver de Links Oficiais]]
+> - **Ver painéis gerados:** [[90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo|Painel de Curadoria]]
 
 ## Entrada e controle
 
@@ -22,10 +44,11 @@ normas_citadas: []
 - [[90_Revisao_Manual/00_Entrada_e_Controle/Checklist Operacional — Abertura de Nova Família do Acervo|Checklist de Nova Familia]]
 - [[_Editorial/Padrão da Biblioteca de Referência Técnica|Padrao da Biblioteca de Referencia Tecnica]]
 
-## Indices e paineis gerados
+## Índices e painéis gerados
 
 - [[90_Revisao_Manual/10_Indices_e_Paineis/Acervo Local — Índice Gerado|Acervo Local - Indice Gerado]]
 - [[90_Revisao_Manual/10_Indices_e_Paineis/Acervo Notas - Indice Gerado|Acervo Notas - Indice Gerado]]
+- [[90_Revisao_Manual/10_Indices_e_Paineis/Painel de Curadoria do Acervo|Painel de Curadoria do Acervo]]
 - [[90_Revisao_Manual/10_Indices_e_Paineis/Acervo Humano Tecnico - Indice Gerado|Acervo Humano Tecnico - Indice Gerado]]
 - [[90_Revisao_Manual/10_Indices_e_Paineis/Acervo Humano Tecnico - Nao PDF - Indice Gerado|Acervo Humano Tecnico - Nao PDF]]
 - [[90_Revisao_Manual/10_Indices_e_Paineis/Acervo Humano Tecnico - Manifesto de Duplicatas|Manifesto de Duplicatas]]
@@ -59,9 +82,23 @@ normas_citadas: []
 - [[90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Links Confirmados — Shore Power, Conversão AC e Conectores Marinhos|Shore Power e conectores]]
 - [[90_Revisao_Manual/20_Matrizes_Fontes_e_Links/Links Confirmados — Estabilização Náutica (Seakeeper Ride)|Estabilizacao nautica]]
 
-## Notas tecnicas e historico
+## Notas técnicas e histórico
 
 - [[90_Revisao_Manual/30_Notas_Tecnicas/Estabilizador|Estabilizador]]
 - [[90_Revisao_Manual/30_Notas_Tecnicas/Motor de Trim - Tilt|Motor de Trim / Tilt]]
 - [[90_Revisao_Manual/90_Arquivo_Historico/Acervo Local — Índice Inicial|Acervo Local - Indice Inicial]]
 - [[90_Revisao_Manual/90_Arquivo_Historico/Acervo Local — Geradores Iniciais (Cummins Onan)|Acervo Local - Geradores Iniciais]]
+
+## Quando NÃO entrar aqui
+
+- Para estudar elétrica náutica por ordem didática → [[Fundamentos da Elétrica Náutica]]
+- Para projetar sistema elétrico → [[MOC — Trilha do Projetista]]
+- Para diagnosticar pane → [[MOC — Trilha do Diagnosticador]]
+- Para criar nota técnica final sem fonte primária → volte ao fluxo source-first antes.
+
+## Perguntas que esta página responde
+
+- Onde estão os manuais, PDFs e índices do acervo?
+- Onde buscar links oficiais confirmados?
+- Como abrir uma nova família de acervo sem perder rastreabilidade?
+- Que painel mostra OCR, duplicatas e curadoria?

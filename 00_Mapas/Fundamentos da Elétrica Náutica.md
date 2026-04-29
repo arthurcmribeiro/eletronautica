@@ -3,269 +3,200 @@ title: "Fundamentos da Elétrica Náutica"
 note_type: "moc"
 domain: "00_Mapas"
 source_file: "FUNDAMENTOS DA ELETRICA NÁUTICA 1e419734f7fb80f9abe4d621dcf45570.md"
-status: "moc-curated"
-fase_6_reescrita: 120
-reviewed_on: "2026-04-26"
-review_jurisdiction: "Brasil"
-review_level: "moc-curated"
-normas_citadas: []
+status: "moc-curated-plus"
+fase_6_reescrita: 135
+reviewed_on: "2026-04-29"
+review_jurisdiction: "Brasil + EUA + Internacional + Europa"
+review_level: "moc-curated-plus"
 aliases:
   - "FUNDAMENTOS DA ELETRICA NÁUTICA"
   - "Mapa central da elétrica náutica"
-seo_title: "Fundamentos da elétrica náutica: mapa central de estudo, projeto e diagnóstico"
-seo_description: "Mapa central da vault técnica de elétrica náutica, com trilhas de estudo, arquitetura por domínios, notas nucleares e caminhos para projeto, operação, diagnóstico e segurança."
+  - "Hub de estudo principal"
+seo_title: "Fundamentos da elétrica náutica: trilha mestre de estudo, projeto, diagnóstico e segurança"
+seo_description: "Hub central da vault de elétrica náutica brasileira. Trilhas de estudo, projeto, diagnóstico e operação + arquitetura por domínios + norma mestre estrutural + padrão DEC-11."
 seo_keywords:
   - "fundamentos elétrica náutica"
-  - "moc elétrica náutica"
-  - "mapa estudo elétrica embarcação"
-  - "segundo cérebro elétrica náutica"
+  - "trilha estudo elétrica marine"
+  - "moc elétrica náutica brasil"
+  - "DEC-11 premium-l3"
+  - "Brasil-primeiro elétrica"
 geo_queries:
-  - "Por onde começar a estudar elétrica náutica de forma estruturada?"
-  - "Como navegar por uma base técnica de elétrica náutica no Obsidian?"
+  - "Por onde começar a estudar elétrica náutica?"
+  - "Qual a trilha de estudo recomendada?"
+  - "Como projetar instalação elétrica em barco?"
+  - "Como diagnosticar falha elétrica em embarcação?"
+  - "Quais são as notas críticas para comissionar barco?"
+normas_citadas: []
 related_notes:
   - "Atlas Técnico"
-  - "Guia da Vault Curada"
-  - "MOC — Fundamentos e Projeto"
-  - "MOC — Energia e Conversao"
-  - "MOC — Baterias e Armazenamento"
-  - "MOC — Distribuicao Protecao e Aterramento"
-  - "MOC — Navegacao Instrumentacao e Comunicacao"
-  - "MOC — Hidraulica Climatizacao e Utilidades"
-  - "MOC — Iluminacao e Sinalizacao"
-  - "MOC — Seguranca e Corrosao"
-  - "MOC — Automacao Conectividade e Monitoramento"
-  - "MOC — Revisao Manual"
+  - "MOC — Mapas"
+  - "MOC — Trilha do Iniciante"
+  - "MOC — Trilha do Projetista"
+  - "MOC — Trilha do Diagnosticador"
+  - "MOC — Trilha de Operação"
+  - "Normas e Regulamentações — Abyc Iso e Brasil"
+  - "Lei de Ohm e Cálculos Básicos"
+  - "Princípios Náuticos"
 ---
 
 # Fundamentos da Elétrica Náutica
 
-> [!abstract] Resumo técnico
-> Este é o mapa central da vault técnica. O objetivo desta nota não é repetir todo o conteúdo, mas organizar a navegação intelectual da base: onde estão os fundamentos, quais notas são nucleares, como estudar por trilha e quais domínios sustentam projeto, operação, diagnóstico e segurança.
+> [!abstract] Sobre este hub
+> Esta página é o **mapa central de estudo** da vault. Diferente do [[Atlas Técnico]] (visão administrativa), aqui está a **trilha de aprendizado em 5 camadas** — pensada para você dominar elétrica náutica do conceito ao retrofit. Use como cardápio: percorra na ordem se está começando, ou pule para a camada relevante se já tem base.
 
-## Como usar este mapa
+> [!tip] Decisão rápida — qual camada hoje?
+> - **Nunca toquei em elétrica de barco:** Camada 1 (Conceitos)
+> - **Sei elétrica residencial, mas barco é diferente:** Camada 2 (Adaptação ao marine)
+> - **Vou projetar / dimensionar:** Camada 3 (Projeto)
+> - **Vou diagnosticar / consertar:** Camada 4 (Diagnóstico)
+> - **Vou comissionar / operar:** Camada 5 (Operação)
+> - **Vou ensinar:** todas + visuais em `_visuals/generated/`
 
-Use esta nota como ponto de entrada quando a pergunta for:
+## Camada 1 — Conceitos fundamentais (vocabulário base)
 
-- por onde começar;
-- em que ordem estudar;
-- onde um tema se conecta com outro;
-- quais notas são estruturantes e quais são específicas.
+Antes de qualquer coisa, dominar vocabulário e relações de base.
 
-Para visão geral da vault:
+| # | Nota | Tier | Por que ler |
+|---|------|------|-------------|
+| 1 | [[Princípios Náuticos]] | 🔧 A | Vocabulário marine + classificação + ambiente agressivo + corrosão galvânica |
+| 2 | [[Tipos de Embarcação]] | 🔧 A | Recreio × comercial × SOLAS × mega-iate — define regime regulatório |
+| 3 | [[Lei de Ohm e Cálculos Básicos]] | 🔧 A | V=I×R + Kirchhoff + queda de tensão + AC vs DC + RMS |
+| 4 | [[DC vs AC — Corrente Contínua e Alternada]] | ⚡ S | Diferenças críticas em barco (frequência, RMS, harmônicas, segurança) |
+| 5 | [[Fase e Neutro]] | ⚡ S | AC marine — sistemas derivados, split-phase, neutro flutuante |
+| 6 | [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]] | ⚡ S | Erro #1 do eletricista residencial em barco: confundir esses 6 conceitos |
+| 7 | [[Simbologia Elétrica Náutica]] | 🔧 A | IEC 60617 × ANSI 315 × ABNT NBR 5444 — leitura de diagrama |
 
-- [[Atlas Técnico]]
-- [[Guia da Vault Curada]]
+## Camada 2 — Adaptação ao ambiente marine
 
-## Hubs transversais para consulta rápida
+Após a Camada 1, você sabe **eletricidade**. Agora aprenda **eletricidade no barco**.
 
-Use estes atalhos quando a pergunta atravessar mais de um domínio:
+| Nota | Tier | Por que ler |
+|------|------|-------------|
+| [[Cabeamento Náutico]] | 🔧 A | Tinned copper, UL 1426 BC5W2, IEC 60092-353 — não é cabo automotivo |
+| [[Bonding — Sistema de Interligação de Massas]] | ⚡ S | ABYC E-11.16 — interligação previne corrosão galvânica |
+| [[Aterramento]] | ⚡ S | Em barco "terra" não é estaca enterrada — é casco/bonding/shore-PE |
+| [[Correntes Parasitas — Stray Currents]] | ⚡ S | Fuga DC + casco metálico = corrosão acelerada → morte do casco |
+| [[Eletrólise]] | 🔧 A | Diferenciar eletrólise × galvânica × stray currents |
+| [[Anôdo]] | ⚡ S | Zinco/Al/Mg sacrificial protege hélice/eixos/leme |
+| [[Inspeção de Cabos Terminais e Conexões]] | ⚡ S | Crimpagem calibrada × solda — ABYC E-11.13 |
 
-- [[MOC — Diagnóstico e Manutenção]]
-- [[MOC — Segurança Integrada]]
-- [[Referência Rápida — Valores de Campo]]
+## Camada 3 — Projeto e dimensionamento
 
-Esses hubs não substituem os MOCs por domínio. Eles servem para encurtar o caminho quando a demanda é prática de campo, segurança operacional ou consulta rápida de valores típicos.
+Você sabe os fundamentos. Agora dimensione um sistema completo.
 
-## Trilha 1 — Base conceitual
+### Arquitetura
 
-Comece aqui se a meta for construir linguagem técnica sólida.
+- [[Projeto Elétrico de Embarcação — Passo a Passo]] (⚡ S) — workflow completo
+- [[Diagrama Unifilar — Documentação do Sistema Elétrico]] (⚡ S) — documentação obrigatória
+- [[Leitura de Diagramas e Esquemas Elétricos]] (🔧 A) — interpretar diagramas existentes
 
-- [[MOC — Fundamentos e Projeto]]
-- [[DC vs AC — Corrente Contínua e Alternada]]
-- [[Fase e Neutro]]
-- [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]]
-- [[Lei de Ohm e Cálculos Básicos]]
-- [[Tipos de Embarcação]]
-- [[Princípios Náuticos]]
+### Cálculo
 
-## Trilha 2 — Projeto e documentação
+- [[Dimensionamento de Cabos DC — Cálculo Prático]] (⚡ S) — bitola por queda (ABYC E-11.4)
+- [[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]] (⚡ S) — Ah × tempo × DOD × inversor
+- [[Lei de Ohm e Cálculos Básicos]] (🔧 A) — base matemática
 
-Comece aqui se a meta for projetar sistemas coerentes e auditáveis.
+### Decisão de equipamento
 
-- [[Projeto Elétrico de Embarcação — Passo a Passo]]
-- [[Diagrama Unifilar — Documentação do Sistema Elétrico]]
-- [[Leitura de Diagramas e Esquemas Elétricos]]
-- [[Simbologia Elétrica Náutica]]
-- [[Normas e Regulamentações — Abyc Iso e Brasil]]
-- [[MOC — Fundamentos e Projeto]]
+- [[Tipos de Bateria]] (⚡ S) — chumbo × AGM × Gel × LFP × NiMH
+- [[Bancos de Bateria]] (⚡ S) — partida × serviço, paralelo × série
+- [[Carregador de Bateria (AC To DC)]] (⚡ S) — multi-stage, AC-DC topology
+- [[Inversora (DC To AC)]] (⚡ S) — pure sine wave, fator de potência, dimensionamento VA
+- [[CAIS (Pier) (AC)]] (⚡ S) — interface marina (NEC Article 555 + IEC 60364-7-709)
+- [[Isolador Galvânico - Transformador de Isolamento]] (⚡ S) — isolação correta
+- [[Quadro Elétrico e Painel de Distribuição AC-DC]] (🔧 A) — distribuição central
 
-## Trilha 3 — Energia e conversão
+### Norma e conformidade
 
-Este bloco explica de onde a energia vem, como entra no barco e como é convertida.
+- [[Normas e Regulamentações — Abyc Iso e Brasil]] (⚡ S) — **norma mestre estrutural** (340+ docs)
+- [[Referência Rápida — Valores de Campo]] (🔧 A) — cheat sheet operacional
 
-- [[MOC — Energia e Conversao]]
-- [[CAIS (Pier) (AC)]]
-- [[Transformador Bivolt]]
-- [[Gerador (AC)]]
-- [[Transformador Entrada]]
-- [[Isolador Galvânico - Transformador de Isolamento]]
-- [[Inversora (DC To AC)]]
-- [[Alternador (DC)]]
-- [[Carregador de Bateria (AC To DC)]]
-- [[Placa Solar (DC)]]
-- [[Eólico (DC)]]
-- [[Gerador (DC)]]
+## Camada 4 — Diagnóstico e troubleshooting
 
-## Trilha 4 — Armazenamento e bateria
+Sistema instalado, algo dá problema. Trilha de detetive elétrico.
 
-Este bloco sustenta praticamente toda a autonomia do barco.
+| # | Nota | Tier | Quando usar |
+|---|------|------|-------------|
+| 1 | [[Troubleshooting — Diagnóstico de Falhas Elétricas]] | ⚡ S | Método estruturado — sempre comece aqui |
+| 2 | [[Multímetro e Instrumentos de Medição]] | ⚡ S | Ferramenta primária + categoria CAT II/III/IV |
+| 3 | [[Voltímetro - Amperímetro (DC e AC)]] | ⚡ S | Medições críticas + True RMS |
+| 4 | [[Ferramentas do Eletricista Náutico]] | 🔧 A | Toolkit completo (Fluke + Hioki + Knipex + EPI) |
+| 5 | [[Inspeção de Cabos Terminais e Conexões]] | ⚡ S | Diagnóstico empírico — termômetro IR + visual |
+| 6 | [[Manutenção Preventiva Elétrica — Checklist]] | ⚡ S | Antes de virar problema |
 
-- [[MOC — Baterias e Armazenamento]]
-- [[Tipos de Bateria]]
-- [[Bancos de Bateria]]
-- [[BMS — Battery Management System]]
-- [[Monitor de Bateria - BMV - Shunt]]
-- [[Dimensionamento de Banco de Baterias — Cálculo de Autonomia]]
-- [[Lítio LiFePO4 — Instalação e Cuidados Específicos]]
+**Trilha específica de diagnóstico:** [[MOC — Trilha do Diagnosticador]].
 
-## Trilha 5 — Distribuição, proteção e aterramento
+## Camada 5 — Operação e manutenção
 
-Este é o bloco mais crítico para confiabilidade e segurança elétrica.
+Barco em uso — rotina segura.
 
-- [[MOC — Distribuicao Protecao e Aterramento]]
-- [[Quadro Elétrico e Painel de Distribuição AC-DC]]
-- [[Disjuntores (DC) e (AC)]]
-- [[Fusíveis DC — Proteção Contra Sobrecorrente]]
-- [[Aterramento]]
-- [[Bonding — Sistema de Interligação de Massas]]
-- [[Proteção Dr]]
-- [[Barramento DC - Bus Bar - Distribuição DC]]
-- [[Cabeamento Náutico]]
-- [[Terminais Conectores e Emendas]]
-- [[Dimensionamento de Cabos DC — Cálculo Prático]]
+- [[Manutenção Preventiva Elétrica — Checklist]] (⚡ S) — checklist trimestral/semestral/anual
+- [[Bancos de Bateria]] + [[Monitor de Bateria - BMV - Shunt]] — gerenciamento de banco
+- [[Carregador de Bateria (AC To DC)]] + [[Inversora (DC To AC)]] — fluxo AC↔DC
+- [[Detector de CO — Monóxido de Carbono]] (⚡ S) — risco a vida
+- [[Detector de Gás GLP - GN]] (⚡ S) — risco explosão
+- [[Alarme de Alagamento - Sensor de Porão]] (⚡ S) — risco afundamento
+- [[Extintor Automático — Combate a Incêndio na Casa de Máquinas]] (⚡ S) — risco fogo
+- [[Iluminação de Emergência a Bordo]] (⚡ S) — IEC 60598-2-22 + IMO MSC.81(70)
 
-## Trilha 6 — Navegação, instrumentação e comunicação
+**Trilha específica de operação:** [[MOC — Trilha de Operação]].
 
-Este bloco organiza a eletrônica que orienta, informa e comunica.
+## Cross-references — entrar em outros domínios
 
-- [[MOC — Navegacao Instrumentacao e Comunicacao]]
-- [[Chartplotter - GPS - MFD]]
-- [[Radar]]
-- [[AIS (Automatic Identification System)]]
-- [[VHF]]
-- [[Dsc — Chamada Seletiva Digital]]
-- [[EPIRB - Beacon de Emergência]]
-- [[NMEA 2000 - NMEA 0183 — Rede de Instrumentos]]
-- [[Piloto Automático]]
-- [[Bússola Eletrônica (Compass - HDG Sensor)]]
-- [[Sonda - Profundímetro - Sonar]]
+| Para | Vá para |
+|------|---------|
+| Geração de energia | [[MOC — Energia e Conversao]] |
+| Distribuição AC/DC + proteção | [[MOC — Distribuicao Protecao e Aterramento]] |
+| Navegação eletrônica | [[MOC — Navegacao Instrumentacao e Comunicacao]] |
+| Iluminação | [[MOC — Iluminacao e Sinalizacao]] |
+| Automação de bordo | [[MOC — Automacao Conectividade e Monitoramento]] |
+| Hidráulica / climatização / sanitário | [[MOC — Hidraulica Climatizacao e Utilidades]] |
+| Segurança e corrosão | [[MOC — Seguranca e Corrosao]] |
+| Acervo de PDFs | [[MOC — Revisao Manual]] |
 
-## Trilha 7 — Iluminação e sinalização
+## Hubs transversais
 
-Leia este bloco quando a pergunta envolver navegação noturna, visibilidade, conforto ou emergência.
+- [[Atlas Técnico]] — visão administrativa
+- [[MOC — Diagnóstico e Manutenção]] — troubleshooting + manutenção
+- [[MOC — Segurança Integrada]] — risco elétrico + alarme + porão + corrosão
+- [[MOC — Trilha de Operação]] — rotina de uso, pré-saída, pernoite e retorno
+- [[Guia da Vault Curada]] — manual editorial de uso
 
-- [[MOC — Iluminacao e Sinalizacao]]
-- [[Luz de Tope]]
-- [[Luz de Âncora]]
-- [[Iluminação de Emergência a Bordo]]
-- [[Farol de Busca]]
-- [[Tipos de Lâmpadas e LEDs Náuticos]]
-- [[Fitas Led - Iluminação Led]]
-- [[Dimmer — Controle de Intensidade Luminosa]]
+## Quick-reference — top 6 dúvidas
 
-## Trilha 8 — Automação, conectividade e monitoramento
+1. **Pode usar cabo automotivo no barco?** NÃO. Vide [[Cabeamento Náutico]].
+2. **Bonding × Aterramento × PE — qual é qual?** [[Neutro, Negativo, Terra, PE, Bonding e DR — Diferenças Críticas]].
+3. **Como dimensionar fusível?** 125% da nominal. [[Fusíveis DC — Proteção Contra Sobrecorrente]] + [[Lei de Ohm e Cálculos Básicos]].
+4. **Que norma seguir no Brasil?** ABNT NBR 14728 + DPC NORMAM (211 amador / 201 comercial). [[Normas e Regulamentações — Abyc Iso e Brasil]].
+5. **Quando transformador de isolamento?** Em marina com topologia variável (típico BR). [[Isolador Galvânico - Transformador de Isolamento]].
+6. **Como começar troubleshooting?** [[Troubleshooting — Diagnóstico de Falhas Elétricas]].
 
-Este bloco cobre o barco conectado e a camada de supervisão digital.
+## Glossário rápido (termos básicos)
 
-- [[MOC — Automacao Conectividade e Monitoramento]]
-- [[Automação de Bordo — Sistemas Domoticos]]
-- [[Monitoramento Remoto — VRM - Telemetria]]
-- [[Wi-Fi a Bordo — Roteador Marine e Conectividade]]
-- [[Starlink Internet a Bordo]]
-- [[Sistema de Alarme Geral - Painel de Alarmes]]
-- [[Câmeras de Bordo - Sistema CFTV]]
+- **AC × DC:** corrente alternada × contínua. Barco usa ambos.
+- **CCA / MCA / RC:** Cold/Marine Cranking Amps / Reserve Capacity (SAE J537).
+- **DOD:** Depth of Discharge (FLA 50%, LFP 80%).
+- **ELCI / GFCI / DR:** diferenciais (30 mA marine / 5 mA pessoa / equiv. BR).
+- **Bonding:** ABYC E-11.16 — interligação de massas.
+- **PE:** Protective Earth (verde-amarelo) — diferente de bonding.
+- **Tinned copper:** cobre estanhado — padrão marine.
+- **Pure sine wave:** onda senoidal verdadeira (inversor premium).
+- **NMEA 0183 / 2000:** padrões de instrumentação.
+- **IP code:** Ingress Protection (IEC 60529).
 
-## Trilha 9 — Hidráulica, climatização e utilidades
+## Quando NÃO entrar aqui
 
-Este bloco reúne os sistemas de suporte à habitabilidade e muitos atuadores relevantes.
+- **Valor específico de campo** → [[Referência Rápida — Valores de Campo]]
+- **Citar norma agora** → [[Normas e Regulamentações — Abyc Iso e Brasil]]
+- **Resolver problema agora** → [[Troubleshooting — Diagnóstico de Falhas Elétricas]]
+- **Manual OEM de equipamento** → [[MOC — Revisao Manual]]
 
-- [[MOC — Hidraulica Climatizacao e Utilidades]]
-- [[Ar-Condicionado Marine — Sistema Completo]]
-- [[Bomba Ar Condicionado]]
-- [[Aquecedor de Bordo - Cabin Heater]]
-- [[Bomba de Água Pressurizada]]
-- [[Boiler]]
-- [[Caixa de Água Cinza]]
-- [[Holding Tank - Y-Valve - Sistema de Esgoto]]
-- [[Bomba de Banheiro]]
-- [[Bomba de Águas Negras]]
-- [[Macerador - Bomba de Águas Negras]]
-- [[Dessalinizador]]
-- [[Geladeira - Freezer de Bordo]]
-- [[Icemaker - Máquina de Gelo]]
-- [[Thruster]]
-- [[Guincho]]
-- [[Catraca]]
-- [[Plataforma de Popa Elétrica - Hidráulica]]
-- [[Flap]]
+## Perguntas que esta página responde
 
-## Trilha 10 — Segurança e corrosão
-
-Este bloco deve ser lido cedo por qualquer profissional que queira trabalhar com seriedade.
-
-- [[MOC — Seguranca e Corrosao]]
-- [[Detector de CO — Monóxido de Carbono]]
-- [[Detector de Gás GLP GN]]
-- [[Alarme de Alagamento - Sensor de Porão]]
-- [[Extintor Automático — Combate a Incêndio na Casa de Máquinas]]
-- [[Correntes Parasitas — Stray Currents]]
-- [[Eletrólise]]
-- [[Anôdo]]
-- [[Blower]]
-
-## Trilha 11 — Diagnóstico e manutenção
-
-Este é o caminho mais prático para campo e assistência técnica.
-
-- [[Troubleshooting — Diagnóstico de Falhas Elétricas]]
-- [[Inspeção de Cabos Terminais e Conexões]]
-- [[Manutenção Preventiva Elétrica — Checklist]]
-- [[Multímetro e Instrumentos de Medição]]
-- [[Voltímetro - Amperímetro (DC e AC)]]
-- [[Ferramentas do Eletricista Náutico]]
-
-## Bloco de revisão manual
-
-Alguns temas mais específicos ou de integração ainda merecem leitura como bloco de revisão avançada:
-
-- [[MOC — Revisao Manual]]
-- [[Motor de Trim - Tilt]]
-- [[Estabilizador]]
-
-## Notas centrais da base
-
-Se eu tivesse de escolher as notas mais estruturantes para transformar esta vault em material de curso, apostila e referência técnica, eu começaria por:
-
-- [[Projeto Elétrico de Embarcação — Passo a Passo]]
-- [[Diagrama Unifilar — Documentação do Sistema Elétrico]]
-- [[Bancos de Bateria]]
-- [[BMS — Battery Management System]]
-- [[Quadro Elétrico e Painel de Distribuição AC-DC]]
-- [[Aterramento]]
-- [[Bonding — Sistema de Interligação de Massas]]
-- [[CAIS (Pier) (AC)]]
-- [[Isolador Galvânico - Transformador de Isolamento]]
-- [[Troubleshooting — Diagnóstico de Falhas Elétricas]]
-
-## Lógica de estudo recomendada
-
-Para formação técnica sólida, a ordem mais coerente é:
-
-1. Base conceitual e projeto.
-2. Energia e conversão.
-3. Baterias e armazenamento.
-4. Distribuição, proteção e aterramento.
-5. Diagnóstico e manutenção.
-6. Domínios aplicados: navegação, utilidades, automação, iluminação e segurança.
-
-## Papel desta nota no segundo cérebro
-
-Esta nota funciona como:
-
-- índice de entrada;
-- mapa de trilhas;
-- orientação de estudo;
-- ponte entre domínios;
-- referência rápida para construir novos materiais derivados.
-
-Quando a base crescer, esta é a nota que deve continuar estável e inteligível.
+- Por onde começar a estudar elétrica náutica?
+- Qual a trilha de estudo recomendada?
+- Como projetar instalação elétrica em barco?
+- Como diagnosticar falha elétrica em embarcação?
+- Quais são as notas críticas para comissionar barco?
+- Em que ordem ler os domínios, hubs e trilhas principais?
+- Como mapear conceitos de elétrica residencial para marine?

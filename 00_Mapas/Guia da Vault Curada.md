@@ -2,11 +2,11 @@
 title: "Guia da Vault Curada"
 note_type: "guide"
 domain: "00_Mapas"
-status: "moc-curated"
+status: "moc-curated-plus"
 fase_6_reescrita: 119
-reviewed_on: "2026-04-26"
-review_jurisdiction: "Brasil"
-review_level: "moc-curated"
+reviewed_on: "2026-04-29"
+review_jurisdiction: "Brasil + EUA + Internacional + Europa"
+review_level: "moc-curated-plus"
 normas_citadas: []
 aliases:
   - "Guia da Vault"
@@ -22,6 +22,9 @@ related_notes:
 
 # Guia da Vault Curada
 
+> [!abstract] Como usar este guia
+> Este guia resume como navegar e manter a vault curada. Para visão macro use [[Atlas Técnico]], para mapa dos mapas use [[MOC — Mapas]], e para estudo prático use as trilhas por perfil.
+
 ## Convenções desta camada
 
 - O conteúdo principal é `Markdown-first`.
@@ -33,18 +36,22 @@ related_notes:
   - integração com notas correlatas;
   - utilidade prática de campo.
 - A base já foi preparada para governança editorial, manifesto JSON e validação automática.
+- MOCs agora seguem padrão **MOC Plus**: resumo de escopo, trilhas, agrupamento funcional, cross-links, quick-reference e fronteiras de escopo.
 
 ## Como navegar
 
 - Comece em [[Fundamentos da Elétrica Náutica]] para visão de conjunto.
 - Use [[Atlas Técnico]] quando quiser enxergar os hubs do projeto.
+- Use [[MOC — Mapas]] quando quiser escolher entre domínio, trilha, hub e acervo.
+- Use [[MOC — Trilha do Iniciante]], [[MOC — Trilha do Projetista]], [[MOC — Trilha do Diagnosticador]] e [[MOC — Trilha de Operação]] conforme a intenção.
 - Use [[MOC — Diagnóstico e Manutenção]] e [[MOC — Segurança Integrada]] quando o problema for transversal.
 - Use [[Referência Rápida — Valores de Campo]] quando precisar de triagem rápida, não de leitura longa.
 
 ## Próxima etapa recomendada
 
+- Manter MOCs com validação limpa e links sem destino quebrado.
+- Transformar trilhas em checklists operacionais reaproveitáveis para curso, Base44, Notion e atendimento técnico.
 - Expandir a camada visual versionável para notas de topologia, frequência, aterramento e proteção.
-- Continuar reforçando entrypoints e backlinks dos mapas principais.
 - Evoluir a mesma base para:
   - publicação web;
   - apostila/PDF;

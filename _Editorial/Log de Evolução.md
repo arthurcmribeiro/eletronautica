@@ -893,6 +893,44 @@ review_jurisdiction:
   - `python scripts/build_manifest.py`;
   - `python scripts/validate_vault.py`.
 
+## 2026-04-29 - Lote 66 - Consolidação profissional da rede de MOCs
+
+- Assumida a consolidação da camada `00_Mapas` após lote parcial gerado por Claude.
+- Criada a nova [[MOC — Trilha de Operação]], fechando o arco de navegação:
+  - [[MOC — Trilha do Iniciante]];
+  - [[MOC — Trilha do Projetista]];
+  - [[MOC — Trilha do Diagnosticador]];
+  - [[MOC — Trilha de Operação]].
+- Refeitas as MOCs que ainda estavam em padrão de lista simples:
+  - [[MOC — Automacao Conectividade e Monitoramento]];
+  - [[MOC — Navegacao Instrumentacao e Comunicacao]];
+  - [[MOC — Iluminacao e Sinalizacao]];
+  - [[MOC — Hidraulica Climatizacao e Utilidades]];
+  - [[MOC — Seguranca e Corrosao]];
+  - [[MOC — Diagnóstico e Manutenção]];
+  - [[MOC — Segurança Integrada]];
+  - [[MOC — Mapas]];
+  - [[MOC — Revisao Manual]].
+- Consolidado o padrão **MOC Plus**:
+  - abstract de escopo;
+  - trilhas de leitura por intenção;
+  - agrupamento funcional;
+  - cobertura das notas-filhas;
+  - links cruzados entre domínios;
+  - quick-reference;
+  - fronteiras de escopo;
+  - perguntas respondidas.
+- Atualizados [[Atlas Técnico]], [[Fundamentos da Elétrica Náutica]] e [[Guia da Vault Curada]] para refletirem a nova rede de mapas.
+- Auditados e ajustados `AGENTS.md`, `README.md` e `CLAUDE.md` para remover a instrução antiga de que Tier C/MOC seria apenas `frontmatter only`.
+- Resultado programático:
+  - `20` arquivos em `00_Mapas`, todos com `status: "moc-curated-plus"`;
+  - `9` MOCs de domínio com `100%` de cobertura das notas-filhas diretas;
+  - `validate_vault.py`: `764` notas analisadas, `0` erros, `37` avisos herdados;
+  - `check_python_scripts.py`: `35` scripts analisados, `0` falhas;
+  - `check_source_urls.py`: `647` URLs totais, `182` únicas, `0` contaminadas, relatório `_Editorial/source_urls_20260429.md`;
+  - `build_manifest.py`: manifesto regenerado.
+- Observação: `validate_audit_yaml.py` permanece com `3` erros antigos em YAMLs de 2026-04-16/18, sem relação com a rodada de MOCs.
+
 ## 2026-04-27 - Lote 64 - Separacao de _Dados_Acervo da camada editorial
 
 - Reclassificada a pasta `90_Revisao_Manual/_Dados_Acervo/` como camada tecnica gerada por scripts, nao como conteudo editorial do vault.

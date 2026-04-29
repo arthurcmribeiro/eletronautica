@@ -44,7 +44,7 @@ python scripts/acervo/run_pdf_pipeline.py
 - **Tier S:** vida/fogo/explosão/corrosão estrutural OU AC topology OU norma explícita → template full DEC-11 (TL;DR 9 + Danger 5-9 + Glossário 15-25 + normas canonicalizadas).
 - **Tier A:** componente operacional médio-risco, 180-300 linhas → premium recalibrado (TL;DR 9-10 + Danger 9-10 + Glossário 50-90 + normas 30-65).
 - **Tier B:** componente conveniência, escopo proporcional → DEC-11 light (TL;DR 4 + Glossário 4-8 + sem danger).
-- **Tier C:** MOC, índice, guia → frontmatter only (status + normas vazio + manter conteúdo).
+- **Tier C / MOC Plus:** MOC, índice, guia → frontmatter completo + resumo de escopo + trilhas de leitura + agrupamento funcional + cross-links + quick-reference. MOC não é nota técnica longa, mas também não deve ser lista flat.
 
 ## Convenções críticas (não esquecer!)
 
@@ -115,7 +115,7 @@ Sempre. Para qualquer norma, consultar a nota mestre:
 - Sempre incluir `source_urls` no frontmatter para notas técnicas.
 - Sempre incluir `reviewed_on` + `review_jurisdiction`.
 - Para **Tier B**: TL;DR 4 regras + Glossário 4-8 + frontmatter completo (sem danger callout).
-- Para **Tier C**: apenas normalizar frontmatter (status + normas vazio).
+- Para **Tier C / MOC Plus**: normalizar frontmatter e criar navegação inteligente: abstract, trilhas, categorias, cross-domain links, quick-reference, fronteiras de escopo e perguntas respondidas. Manter `normas_citadas: []` quando o MOC só aponta para notas técnicas.
 - Não transformar rascunho automático em material de ensino sem revisão humana.
 - Separar valor típico, referência prática e valor normativo.
 

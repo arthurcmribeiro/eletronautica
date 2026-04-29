@@ -60,7 +60,24 @@ Esta é uma base técnica em Markdown sobre elétrica náutica, pensada para Obs
 | **Tier S** (premium full DEC-11) | 45 notas | TL;DR 9 regras (tip callout) + Danger 5-9 cenários + Glossário 15-25 termos + normas canonicalizadas (titulo+ano+cláusula) | Risco vida/fogo/explosão/corrosão estrutural OU topologia AC OU sistema regulado por norma explícita |
 | **Tier A** (premium recalibrado) | 51 notas | TL;DR 9-10 regras + Danger 9-10 cenários + Glossário 50-90 termos + normas 30-65 itens | Componente operacional médio-risco, nota técnica padrão 180-300 linhas, regulação multi-jurisdição |
 | **Tier B** (DEC-11 light) | 12 notas | TL;DR 4 regras + Glossário 4-8 termos + frontmatter normalizado + sem danger callout | Nota-conceito curta, componente conveniência/acessório, escopo proporcional |
-| **Tier C** (frontmatter only) | 16 MOCs | status bump + normas_citadas vazio + manter conteúdo | MOCs, índices, guias, README |
+| **Tier C / MOC Plus** | mapas e MOCs | frontmatter normalizado + resumo de escopo + trilhas de leitura + agrupamento funcional + cross-links + quick-reference + fronteiras de escopo | MOCs, índices, guias e entrypoints |
+
+## Padrão atual para MOCs
+
+MOC não deve ser lista plana nem mini-apostila. O papel dele é reduzir tempo de decisão: orientar onde entrar, em que ordem ler, quando trocar de domínio e qual nota técnica resolve a pergunta.
+
+Estrutura recomendada:
+
+- frontmatter completo com `status: "moc-curated-plus"`;
+- abstract curto explicando o domínio e quando usar;
+- trilhas de leitura por intenção;
+- notas por categoria funcional;
+- links cruzados para domínios adjacentes;
+- quick-reference com dúvidas recorrentes;
+- "Quando NÃO entrar aqui" para evitar navegação errada;
+- perguntas que a página responde.
+
+Para MOCs, `normas_citadas: []` pode permanecer vazio quando a página apenas aponta para notas técnicas. Se o MOC trouxer prescrição normativa própria, preencher `normas_citadas` ou mover a prescrição para a nota técnica fonte.
 
 ## Template DEC-11 premium-l3 (referência)
 
@@ -256,7 +273,7 @@ python scripts/acervo/run_pdf_pipeline.py
 - Não misturar acervo principal curado com staging bruto.
 - Não promover PDF pessoal ou fora de escopo para o acervo principal.
 - Não tratar nota automática como curadoria humana final.
-- Não inflar Tier B/C com Danger callouts ou normas excessivas — escopo proporcional.
+- Não transformar MOC em nota técnica com Danger callouts e normas excessivas — escopo proporcional.
 - Não reescrever tudo sem motivo.
 - Não remover mudanças existentes que não foram feitas por você.
 - Não pushar com erros bloqueantes do `validate_vault.py` — CI vai falhar.

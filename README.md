@@ -49,7 +49,9 @@ A base usa 4 níveis hierárquicos para escopo proporcional ao risco/regulação
 | **Tier S** (premium full) | 45 notas | TL;DR 9 regras + Danger 5-9 cenários + Glossário 15-25 + normas canonicalizadas (titulo/ano/cláusula) | Risco vida/fogo/explosão/corrosão estrutural OU topologia AC OU sistema regulado por norma explícita |
 | **Tier A** (premium recalibrado) | 51 notas | TL;DR 9-10 + Danger 9-10 + Glossário 50-90 + normas 30-65 | Componente operacional médio-risco, nota técnica padrão 180-300 linhas |
 | **Tier B** (DEC-11 light) | 12 notas | TL;DR 4 regras + Glossário 4-8 + frontmatter completo | Nota-conceito curta, componente conveniência/acessório |
-| **Tier C** (frontmatter) | 16 MOCs | status + normas vazio + manter conteúdo | MOCs, índices, guias, README |
+| **Tier C / MOC Plus** | mapas e MOCs | frontmatter normalizado + resumo de escopo + trilhas + agrupamento funcional + cross-links + quick-reference | MOCs, índices, guias e entrypoints |
+
+MOCs não são notas técnicas longas. Eles funcionam como hubs de navegação: mostram quando usar cada domínio, ordem de leitura, fronteiras de escopo e conexões entre sistemas.
 
 ## Convenções editoriais
 
@@ -188,7 +190,7 @@ O workflow em `.github/workflows/vault-check.yml` roda a validação em `push`, 
 - **Fonte primária obrigatória** em notas normativas e sensíveis (sempre `source_urls` no frontmatter);
 - **Datas de revisão explícitas** nas notas críticas (`reviewed_on` no frontmatter);
 - **Em-dash (—) em títulos compostos**, não hífen, para consistência com convenções do vault;
-- **Tier proporcional ao escopo** — não inflar Tier B/C com Danger callouts ou normas excessivas.
+- **Tier proporcional ao escopo** — não inflar MOCs com Danger callouts ou normas excessivas; MOC bom orienta navegação e decisão.
 
 ## Próximos passos (pós-Fase 6)
 
